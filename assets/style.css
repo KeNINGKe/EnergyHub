@@ -125,14 +125,18 @@ code {
 }
 
 .view-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 1px solid transparent;
   color: var(--text-muted);
   padding: 9px 18px;
   border-radius: 99px;
-  font-family: var(--font-body);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.92rem;
   font-weight: 500;
+  line-height: 1.4;
   cursor: pointer;
   transition: all 0.2s;
 }
