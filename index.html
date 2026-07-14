@@ -3,97 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energy Info Hub · 能源情报仪表盘</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <title>Energy Info Hub · 能源 / 储能 / AIDC</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="ambient-grid" aria-hidden="true"></div>
-
-  <header class="hero">
-    <div class="hero-content">
-      <div class="hero-eyebrow">ENERGY INTELLIGENCE DASHBOARD</div>
-      <h1>电力 · 储能 · AIDC</h1>
-      <p class="hero-sub">追踪发电、储能、数据中心与算力的信息源与每日情报流。</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>Energy Info Hub</h1>
+      <p class="subtitle">电力 · 储能 · AIDC 信息聚合</p>
     </div>
-
-    <div class="hero-stats" id="heroStats">
-      <div class="stat-card">
-        <span class="stat-num" id="statSources">0</span>
-        <span class="stat-label">信息源</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num" id="statRSS">0</span>
-        <span class="stat-label">RSS 自动抓取</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-num" id="statToday">0</span>
-        <span class="stat-label">今日条目</span>
-      </div>
-    </div>
-
-    <svg class="waveform" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"></stop>
-          <stop offset="30%" stop-color="#38BDF8" stop-opacity="0.8"></stop>
-          <stop offset="70%" stop-color="#22D3EE" stop-opacity="0.8"></stop>
-          <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"></stop>
-        </linearGradient>
-      </defs>
-      <path class="wave-path" d="" fill="none" stroke="url(#waveGradient)" stroke-width="1.5" vector-effect="non-scaling-stroke"></path>
-    </svg>
   </header>
 
-  <div class="app-shell">
-    <nav class="view-tabs" aria-label="视图切换">
-      <button class="view-tab active" data-tab="nav">信息源</button>
-      <button class="view-tab" data-tab="daily">日报</button>
-      <button class="view-tab" data-tab="weekly">周报</button>
-      <button class="view-tab" data-tab="deep">深研</button>
-    </nav>
+  <nav class="view-tabs" aria-label="视图切换">
+    <button class="view-tab active" data-tab="nav">信息源</button>
+    <button class="view-tab" data-tab="daily">日报</button>
+    <button class="view-tab" data-tab="weekly">周报</button>
+    <button class="view-tab" data-tab="deep">深研</button>
+  </nav>
 
-    <main class="tab-panels">
-      <section id="nav" class="tab-panel active" aria-labelledby="tab-nav">
-        <div class="browse-layout">
-          <aside class="category-sidebar" id="categoryList">
-            <div class="loading-state">加载分类中…</div>
-          </aside>
-          <div class="sources-stage" id="sourcesArea">
-            <div class="loading-state">加载信息源中…</div>
-          </div>
+  <main class="container">
+    <section id="nav" class="tab-panel active" aria-labelledby="tab-nav">
+      <div class="browse-layout">
+        <aside class="category-sidebar" id="categoryList">
+          <div class="loading-state">加载中…</div>
+        </aside>
+        <div class="sources-stage" id="sourcesArea">
+          <div class="loading-state">加载中…</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="daily" class="tab-panel" aria-labelledby="tab-daily">
-        <div class="feed-meta-line" id="dailyMeta"></div>
-        <div class="feed-stream" id="dailyList">
-          <div class="loading-state">加载日报中…</div>
-        </div>
-      </section>
+    <section id="daily" class="tab-panel" aria-labelledby="tab-daily">
+      <div class="feed-header">
+        <h2>日报</h2>
+        <p id="dailyMeta"></p>
+      </div>
+      <div class="feed-list" id="dailyList">
+        <div class="loading-state">加载中…</div>
+      </div>
+    </section>
 
-      <section id="weekly" class="tab-panel" aria-labelledby="tab-weekly">
-        <div class="feed-meta-line" id="weeklyMeta"></div>
-        <div class="feed-stream" id="weeklyList">
-          <div class="loading-state">加载周报中…</div>
-        </div>
-      </section>
+    <section id="weekly" class="tab-panel" aria-labelledby="tab-weekly">
+      <div class="feed-header">
+        <h2>周报</h2>
+        <p id="weeklyMeta"></p>
+      </div>
+      <div class="feed-list" id="weeklyList">
+        <div class="loading-state">加载中…</div>
+      </div>
+    </section>
 
-      <section id="deep" class="tab-panel" aria-labelledby="tab-deep">
-        <div class="feed-meta-line" id="deepMeta"></div>
-        <div class="feed-stream" id="deepList">
-          <div class="loading-state">加载深研中…</div>
-        </div>
-      </section>
-    </main>
-  </div>
+    <section id="deep" class="tab-panel" aria-labelledby="tab-deep">
+      <div class="feed-header">
+        <h2>深研</h2>
+        <p id="deepMeta"></p>
+      </div>
+      <div class="feed-list" id="deepList">
+        <div class="loading-state">加载中…</div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <span id="updatedAt">-</span>
-    <span class="footer-pulse" aria-hidden="true"></span>
-    <span>本地预览: <code>python3 -m http.server 5173</code></span>
   </footer>
 
   <script src="assets/app.js"></script>
