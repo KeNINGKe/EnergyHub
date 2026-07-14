@@ -108,7 +108,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Energy Info Hub · 能源 / 储能 / AIDC</title>
+  <title>EnergyHub · 能源 / 储能 / AIDC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Anta:wght@400&display=swap" rel="stylesheet">
@@ -246,6 +246,8 @@
 ## 5. Git 提交记录（本次会话）
 
 ```
+e764c1b fix: update page title to EnergyHub
+9665a95 docs: add WORKLOG.md session summary
 9fcb1fb style: remove subtitle
 888ff79 style: use Anta for headings, revert accent to bright orange, rename to EnergyHub
 cc98adf style: switch to Fraunces serif + warm coral accent
