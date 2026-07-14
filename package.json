@@ -1,0 +1,15 @@
+{
+  "name": "energy-info-hub",
+  "version": "1.0.0",
+  "description": "能源/储能/AIDC 信息聚合导航站 - 纯静态 + GitHub Actions 自动抓 RSS",
+  "type": "module",
+  "scripts": {
+    "fetch": "node scripts/fetch-rss.mjs",
+    "fetch:daily": "node scripts/fetch-rss.mjs --mode=daily",
+    "fetch:weekly": "node scripts/fetch-rss.mjs --mode=weekly",
+    "preview": "npx --yes serve . -l 5173"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

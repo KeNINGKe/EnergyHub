@@ -1,0 +1,1820 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-07-14",
+  "categories": [
+    {
+      "id": "power-general",
+      "name": "电力 / 新能源综合",
+      "sources": [
+        {
+          "name": "国家能源局 NEA",
+          "url": "https://www.nea.gov.cn/",
+          "desc": "国务院能源主管部委，月度电力/EV/绿证数据一手源",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国家发改委",
+          "url": "https://www.ndrc.gov.cn/",
+          "desc": "电价、双碳、能源规划顶层政策",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中电联 CEC",
+          "url": "https://www.cec.org.cn/",
+          "desc": "CECI 电煤价格指数 + 电力行业统计研报",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "北极星电力网",
+          "url": "https://www.bjx.com.cn/",
+          "desc": "中文最全电力/新能源门户，含招投标频道",
+          "tags": [
+            "媒体",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国能源报",
+          "url": "http://paper.people.com.cn/zgnyb/",
+          "desc": "人民日报社主管，能源政策解读权威",
+          "tags": [
+            "官方",
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电联新媒",
+          "url": "https://www.ceppei.com/",
+          "desc": "中电联旗下深度分析平台",
+          "tags": [
+            "媒体",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "能见 Eknower",
+          "url": "https://www.nengjian.com/",
+          "desc": "能源转型深度报道 + 峰会 IP",
+          "tags": [
+            "媒体",
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "财新能源",
+          "url": "https://energy.caixin.com/",
+          "desc": "财新旗下能源+双碳调查报道",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "澎湃能源",
+          "url": "https://www.thepaper.cn/list_25635",
+          "desc": "快讯 + 专题深度均衡",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "界面新闻能源",
+          "url": "https://www.jiemian.com/lists/70.html",
+          "desc": "财经视角看能源",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "能源杂志",
+          "url": "https://www.nengyuan.com/",
+          "desc": "老牌能源产经杂志",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "无所不能",
+          "url": "https://www.wusuonengli.com/",
+          "desc": "财新能源短平快频道",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "IEA",
+          "url": "https://www.iea.org/",
+          "desc": "全球能源基准数据 + World Energy Outlook",
+          "tags": [
+            "官方",
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://www.iea.org/news/rss"
+        },
+        {
+          "name": "BloombergNEF",
+          "url": "https://about.bnef.com/",
+          "desc": "顶级能源转型付费研报，含 Data Centers 板块",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Wood Mackenzie",
+          "url": "https://www.woodmac.com/",
+          "desc": "全球电力/可再生/油气咨询",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "S&P Global Commodity Insights",
+          "url": "https://www.spglobal.com/commodityinsights/",
+          "desc": "前 Platts，电力/煤炭/LNG 报价与研究",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Reuters Energy",
+          "url": "https://www.reuters.com/business/energy/",
+          "desc": "全球能源快讯首选",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.reuters.com/arc/outboundfeeds/rss/?outputType=xml&category=business/energy"
+        },
+        {
+          "name": "Bloomberg Green",
+          "url": "https://www.bloomberg.com/green",
+          "desc": "气候 + 能源转型条线",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.bloomberg.com/green/rss"
+        },
+        {
+          "name": "Canary Media",
+          "url": "https://www.canarymedia.com/",
+          "desc": "深度清洁能源，免费 newsletter",
+          "tags": [
+            "媒体",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": "https://www.canarymedia.com/feed"
+        },
+        {
+          "name": "Utility Dive",
+          "url": "https://www.utilitydive.com/",
+          "desc": "北美电力公司视角，日报 newsletter 强",
+          "tags": [
+            "媒体",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": "https://www.utilitydive.com/feeds/news/"
+        },
+        {
+          "name": "Latitude Media",
+          "url": "https://www.latitudemedia.com/",
+          "desc": "能源转型 + AI/数据中心交叉，Catalyst 播客",
+          "tags": [
+            "媒体",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": "https://www.latitudemedia.com/rss"
+        },
+        {
+          "name": "Heatmap News",
+          "url": "https://heatmap.news/",
+          "desc": "气候 + AI 数据中心条线活跃，两档 newsletter",
+          "tags": [
+            "媒体",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "CleanTechnica",
+          "url": "https://cleantechnica.com/",
+          "desc": "光伏/EV/储能资讯量大",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://cleantechnica.com/feed/"
+        },
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/",
+          "desc": "EV + 光储日报，社区活跃",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://electrek.co/feed/"
+        }
+      ]
+    },
+    {
+      "id": "generation",
+      "name": "发电（分技术路线）",
+      "sources": [
+        {
+          "name": "中国煤炭工业协会",
+          "url": "http://www.coalchina.org.cn/",
+          "desc": "煤炭产业官方数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国煤炭资源网",
+          "url": "https://www.sxcoal.com/",
+          "desc": "煤价、库存、进口数据",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "S&P Global Coal / LNG",
+          "url": "https://www.spglobal.com/commodityinsights/",
+          "desc": "Platts 煤/气报价基准",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "GEM Coal/Gas Plant Tracker",
+          "url": "https://globalenergymonitor.org/projects/coal-plants/",
+          "desc": "全球煤电/气电项目级开放数据库",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "国家核安全局",
+          "url": "https://nnsa.mee.gov.cn/",
+          "desc": "中国核电审批与安全监管",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国核能行业协会 CNEA",
+          "url": "http://www.china-nea.cn/",
+          "desc": "国内核电行业数据与白皮书",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "World Nuclear Association",
+          "url": "https://world-nuclear.org/",
+          "desc": "全球核电装机/铀/SMR 权威",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IAEA PRIS",
+          "url": "https://pris.iaea.org/",
+          "desc": "全球反应堆开放数据库",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "NEI Nuclear Energy Institute",
+          "url": "https://www.nei.org/",
+          "desc": "美国核工业协会，AIDC+核电议题活跃",
+          "tags": [
+            "官方",
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.nei.org/news"
+        },
+        {
+          "name": "CWEA 中国风能专委会",
+          "url": "http://www.cwea.org.cn/",
+          "desc": "中国风电年度装机报告发布方",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "GWEC",
+          "url": "https://gwec.net/",
+          "desc": "全球风电年度 Report",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "WindEurope",
+          "url": "https://windeurope.org/",
+          "desc": "欧洲风电协会",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": "https://windeurope.org/feed/"
+        },
+        {
+          "name": "Recharge News",
+          "url": "https://www.rechargenews.com/",
+          "desc": "海上风电与氢能报道最强",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "4C Offshore",
+          "url": "https://www.4coffshore.com/",
+          "desc": "全球海上风电项目库",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "CPIA 中国光伏行业协会",
+          "url": "http://www.chinapv.org.cn/",
+          "desc": "国内光伏权威数据源",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "InfoLink Consulting",
+          "url": "https://www.infolink-group.com/",
+          "desc": "组件/电池/硅料周报价",
+          "tags": [
+            "数据",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "TrendForce 集邦新能源网",
+          "url": "https://www.energytrend.cn/",
+          "desc": "光储价格情报",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/",
+          "desc": "全球光伏首选媒体",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.pv-magazine.com/feed/"
+        },
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/",
+          "desc": "组件/电池技术条线",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.pv-tech.org/feed"
+        },
+        {
+          "name": "SolarPower Europe",
+          "url": "https://www.solarpowereurope.org/",
+          "desc": "欧洲光伏年度展望",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "索比光伏网",
+          "url": "https://www.solarbe.com/",
+          "desc": "中文光伏门户",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国水力发电工程学会",
+          "url": "http://www.hydropower.org.cn/",
+          "desc": "国内水电学术组织",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "International Hydropower Association",
+          "url": "https://www.hydropower.org/",
+          "desc": "全球水电年度报告",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "中国氢能联盟",
+          "url": "http://www.h2cn.org.cn/",
+          "desc": "国内氢能官方口径",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Hydrogen Council",
+          "url": "https://hydrogencouncil.com/",
+          "desc": "全球氢能行业联盟",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": "https://hydrogencouncil.com/feed"
+        },
+        {
+          "name": "香橙会研究院",
+          "url": "https://www.h2-ol.com/",
+          "desc": "中文氢能付费研报",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "势银 TrendBank",
+          "url": "https://www.trendbank.com.cn/",
+          "desc": "氢能/燃料电池数据",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "氢云链",
+          "url": "https://www.h2-cloud.com/",
+          "desc": "氢能项目库 + 快讯",
+          "tags": [
+            "数据",
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国产业发展促进会生物质能产业分会",
+          "url": "http://www.chinabioenergy.org.cn/",
+          "desc": "国内生物质行业协会",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "IEA Bioenergy",
+          "url": "https://www.ieabioenergy.com/",
+          "desc": "全球生物质技术协作平台",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    },
+    {
+      "id": "energy-storage",
+      "name": "储能（含电力市场/辅助服务）",
+      "sources": [
+        {
+          "name": "CNESA 中关村储能产业技术联盟",
+          "url": "http://www.cnesa.org/",
+          "desc": "国内储能白皮书 + 全球储能数据库",
+          "tags": [
+            "官方",
+            "研报",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "储能与电力市场",
+          "url": "https://mp.weixin.qq.com/s/chuneng_market",
+          "desc": "现货/辅助服务/储能项目分析 KOL",
+          "tags": [
+            "KOL",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "储能头条",
+          "url": "https://mp.weixin.qq.com/s/chuneng_zx",
+          "desc": "快讯 + 招标信息",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "储能100人",
+          "url": "https://mp.weixin.qq.com/s/chuneng100",
+          "desc": "储能行业人物 + 项目",
+          "tags": [
+            "媒体",
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国能源研究会储能专委会",
+          "url": "http://www.esrc.org.cn/",
+          "desc": "官方口径 + 年度报告",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "EESA 储能领跑者联盟",
+          "url": "https://www.eesa.top/",
+          "desc": "峰会 IP + 项目库",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "鑫椤锂电 ICC-Sino",
+          "url": "https://www.iccsino.com/",
+          "desc": "锂电池/材料价格数据龙头",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "SMM 上海有色网",
+          "url": "https://www.smm.cn/",
+          "desc": "锂/钴/镍/铜金属现货报价",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "上海钢联 Mysteel",
+          "url": "https://www.mysteel.com/",
+          "desc": "储能上游材料价格与产业链",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "高工锂电 GGII",
+          "url": "https://www.gg-lb.com/",
+          "desc": "锂电产业链数据咨询",
+          "tags": [
+            "媒体",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "北极星储能网",
+          "url": "https://chuneng.bjx.com.cn/",
+          "desc": "储能子站，含中标价库",
+          "tags": [
+            "媒体",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电池网",
+          "url": "https://www.itdcw.com/",
+          "desc": "锂电池行业门户",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/",
+          "desc": "全球储能第一大媒体",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.energy-storage.news/rss"
+        },
+        {
+          "name": "Modo Energy",
+          "url": "https://modoenergy.com/",
+          "desc": "英国 BESS 收益/调频市场数据",
+          "tags": [
+            "数据",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "BloombergNEF Energy Storage",
+          "url": "https://about.bnef.com/",
+          "desc": "全球电池成本调查年度基准",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEA Energy Storage",
+          "url": "https://www.iea.org/energy-system/electricity/grid-scale-storage",
+          "desc": "官方储能口径",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": "https://www.iea.org/news/rss"
+        },
+        {
+          "name": "DOE Energy Storage Database",
+          "url": "https://sandia.gov/ess-ssl/global-energy-storage-database/",
+          "desc": "全球储能项目开放库",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "EASE",
+          "url": "https://ease-storage.eu/",
+          "desc": "欧洲储能协会",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "CESA California Energy Storage Alliance",
+          "url": "https://storagealliance.org/",
+          "desc": "加州 BESS 市场重镇",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Volta Foundation Battery Report",
+          "url": "https://www.volta.foundation/",
+          "desc": "免费年度电池行业报告",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "国网能源研究院",
+          "url": "http://www.sgeri.sgcc.com.cn/",
+          "desc": "电网侧研究",
+          "tags": [
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中电联电力市场分会",
+          "url": "http://scfh.cec.org.cn/",
+          "desc": "现货市场官方",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "兰木达电力现货",
+          "url": "https://mp.weixin.qq.com/s/lanmuda_dianli",
+          "desc": "电力现货 KOL 号",
+          "tags": [
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "蓝海经研",
+          "url": "https://mp.weixin.qq.com/s/lanhaijingyan",
+          "desc": "电力市场 + 储能商业模式",
+          "tags": [
+            "KOL",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "EPEX SPOT",
+          "url": "https://www.epexspot.com/",
+          "desc": "欧洲电力现货",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Nord Pool",
+          "url": "https://www.nordpoolgroup.com/",
+          "desc": "北欧电力现货",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "EIA Electricity Data",
+          "url": "https://www.eia.gov/electricity/",
+          "desc": "美国电力数据基准",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://www.eia.gov/rss/todayinenergy.xml"
+        }
+      ]
+    },
+    {
+      "id": "aidc-industry",
+      "name": "AIDC – 数据中心行业本身",
+      "sources": [
+        {
+          "name": "中国信通院 CAICT",
+          "url": "http://www.caict.ac.cn/",
+          "desc": "《数据中心白皮书》《算力发展指数》权威",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国 IDC 圈",
+          "url": "https://www.idcquan.com/",
+          "desc": "中文最活跃 IDC 门户",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "CDCC 数据中心节能技术委员会",
+          "url": "https://www.cdcc.org.cn/",
+          "desc": "液冷/PUE 标准与年度大会",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "科智咨询",
+          "url": "https://www.idcquan.com/research/",
+          "desc": "IDC 市场规模报告",
+          "tags": [
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Uptime Institute Journal",
+          "url": "https://journal.uptimeinstitute.com/",
+          "desc": "AIDC 电气/液冷议题深度研究",
+          "tags": [
+            "研报",
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://journal.uptimeinstitute.com/feed/"
+        },
+        {
+          "name": "Data Center Dynamics",
+          "url": "https://www.datacenterdynamics.com/",
+          "desc": "全球 DC 行业 No.1 媒体 + 峰会",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.datacenterdynamics.com/rss"
+        },
+        {
+          "name": "Data Center Frontier",
+          "url": "https://www.datacenterfrontier.com/",
+          "desc": "北美 hyperscale 建设深度",
+          "tags": [
+            "媒体",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": "https://www.datacenterfrontier.com/rss"
+        },
+        {
+          "name": "Data Center Knowledge",
+          "url": "https://www.datacenterknowledge.com/",
+          "desc": "老牌 DC 新闻",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "The Register – On-Prem",
+          "url": "https://www.theregister.com/on_prem/",
+          "desc": "硬件/DC 尖锐视角",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "DGtl Infra",
+          "url": "https://dgtlinfra.com/",
+          "desc": "DC 地产 + 金融分析博客",
+          "tags": [
+            "研报",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Baxtel",
+          "url": "https://baxtel.com/",
+          "desc": "DC 地产情报平台",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "DC Byte",
+          "url": "https://dcbyte.com/",
+          "desc": "全球 DC 供应/管道数据库",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Data Center Map",
+          "url": "https://www.datacentermap.com/",
+          "desc": "全球 DC 免费地图",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "CBRE Data Center Reports",
+          "url": "https://www.cbre.com/insights/reports",
+          "desc": "北美/APAC 数据中心供需半年报",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "JLL Data Center Outlook",
+          "url": "https://www.jll.com/",
+          "desc": "商业地产视角数据中心",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Cushman & Wakefield DC Report",
+          "url": "https://www.cushmanwakefield.com/",
+          "desc": "全球 DC 市场对比",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Synergy Research Group",
+          "url": "https://www.srgresearch.com/",
+          "desc": "云/hyperscale 市场份额",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Structure Research",
+          "url": "https://www.structureresearch.net/",
+          "desc": "DC/云 IaaS 定量研究",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    },
+    {
+      "id": "aidc-energy",
+      "name": "AIDC – 能源供给（算电协同/绿电直供）",
+      "sources": [
+        {
+          "name": "国家能源局绿证核发平台",
+          "url": "https://www.renewable.org.cn/",
+          "desc": "绿证/绿电交易权威数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "北京电力交易中心",
+          "url": "https://www.bjpx.com.cn/",
+          "desc": "绿电交易一手数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "广州电力交易中心",
+          "url": "https://www.gzpx.com.cn/",
+          "desc": "南方区域绿电交易数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国电科院",
+          "url": "http://www.epri.sgcc.com.cn/",
+          "desc": "源网荷储 + 算力接入研究",
+          "tags": [
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电力规划总院",
+          "url": "https://www.eppei.com/",
+          "desc": "算电协同规划口径",
+          "tags": [
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电老虎网",
+          "url": "https://www.dianlaohu.com/",
+          "desc": "售电 + 绿电直供实操圈",
+          "tags": [
+            "社区",
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "EPRI",
+          "url": "https://www.epri.com/",
+          "desc": "《Powering Intelligence》AIDC 电力需求旗舰报告",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "LBNL Data Center Energy",
+          "url": "https://eta.lbl.gov/publications",
+          "desc": "美国 DC 用电基准",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Grid Strategies",
+          "url": "https://gridstrategiesllc.com/",
+          "desc": "美国负荷预测 + AIDC 冲击分析",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Latitude Media – Catalyst",
+          "url": "https://www.latitudemedia.com/catalyst",
+          "desc": "AI 电力供给专题最活跃",
+          "tags": [
+            "媒体",
+            "播客"
+          ],
+          "region": "global",
+          "rss": "https://www.latitudemedia.com/rss"
+        },
+        {
+          "name": "Utility Dive – Data Centers",
+          "url": "https://www.utilitydive.com/topic/data-centers/",
+          "desc": "北美 utility 视角 AIDC 供电",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.utilitydive.com/feeds/news/"
+        },
+        {
+          "name": "Wood Mackenzie Power & Renewables",
+          "url": "https://www.woodmac.com/",
+          "desc": "AIDC 长期负荷预测",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "DOE Grid Deployment Office",
+          "url": "https://www.energy.gov/gdo",
+          "desc": "美国算力/输电协同政策",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    },
+    {
+      "id": "aidc-chips",
+      "name": "AIDC – 芯片与算力",
+      "sources": [
+        {
+          "name": "老石谈芯",
+          "url": "https://space.bilibili.com/19129536",
+          "desc": "芯片科普 + 行业观察 KOL",
+          "tags": [
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "半导体行业观察",
+          "url": "https://www.icbank.cn/",
+          "desc": "半导体一线快讯",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "芯东西",
+          "url": "https://www.aichip001.com/",
+          "desc": "智东西旗下芯片子刊",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "智东西",
+          "url": "https://www.zhidx.com/",
+          "desc": "AI + 芯片 + 数据中心综合",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "量子位",
+          "url": "https://www.qbitai.com/",
+          "desc": "AI 大模型 + 算力条线",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": "https://www.qbitai.com/feed"
+        },
+        {
+          "name": "机器之心",
+          "url": "https://www.jiqizhixin.com/",
+          "desc": "AI 技术媒体，覆盖算力",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国家超算互联网平台",
+          "url": "https://www.scnet.cn/",
+          "desc": "国产算力租赁市场",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Semianalysis",
+          "url": "https://www.semianalysis.com/",
+          "desc": "GPU/HBM/超大规模 AIDC 最锋利研究",
+          "tags": [
+            "研报",
+            "newsletter"
+          ],
+          "region": "global",
+          "rss": "https://www.semianalysis.com/feed"
+        },
+        {
+          "name": "The Information",
+          "url": "https://www.theinformation.com/",
+          "desc": "硅谷云/AI/DC 独家",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "The Next Platform",
+          "url": "https://www.nextplatform.com/",
+          "desc": "HPC + AI 基础设施深度",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "HPCwire",
+          "url": "https://www.hpcwire.com/",
+          "desc": "超算与 AI 训练集群",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.hpcwire.com/feed/"
+        },
+        {
+          "name": "SemiWiki",
+          "url": "https://semiwiki.com/",
+          "desc": "半导体设计生态",
+          "tags": [
+            "媒体",
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://semiwiki.com/feed"
+        },
+        {
+          "name": "Chip Letter",
+          "url": "https://thechipletter.substack.com/",
+          "desc": "芯片史与架构 newsletter",
+          "tags": [
+            "newsletter",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": "https://thechipletter.substack.com/feed"
+        },
+        {
+          "name": "SemiEngineering",
+          "url": "https://semiengineering.com/",
+          "desc": "芯片设计/制造",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://semiengineering.com/feed/"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/",
+          "desc": "GPU/加速器评测",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.tomshardware.com/feeds/all"
+        },
+        {
+          "name": "Fabricated Knowledge",
+          "url": "https://www.fabricatedknowledge.com/",
+          "desc": "半导体投资 newsletter",
+          "tags": [
+            "newsletter",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": "https://www.fabricatedknowledge.com/feed"
+        }
+      ]
+    },
+    {
+      "id": "data-platforms",
+      "name": "综合数据平台 / 项目库 / 招投标",
+      "sources": [
+        {
+          "name": "中电联统计数据",
+          "url": "https://www.cec.org.cn/menu/index.html?110",
+          "desc": "电力全产业链月/年度数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "NEA 数据栏目",
+          "url": "https://www.nea.gov.cn/xxgk/",
+          "desc": "电力/EV/绿证月报",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Wind",
+          "url": "https://www.wind.com.cn/",
+          "desc": "券商标配终端",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "iFinD 同花顺",
+          "url": "https://www.51ifind.com/",
+          "desc": "金融数据终端",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "CEIC China Data",
+          "url": "https://www.ceicdata.com/",
+          "desc": "中国宏观 + 行业数据",
+          "tags": [
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国招标投标公共服务平台",
+          "url": "http://www.cebpubservice.com/",
+          "desc": "央采/央企招标一手源",
+          "tags": [
+            "官方",
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国政府采购网",
+          "url": "http://www.ccgp.gov.cn/",
+          "desc": "政采招标",
+          "tags": [
+            "官方",
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "千里马招标网",
+          "url": "https://www.qianlima.com/",
+          "desc": "商业化招标聚合",
+          "tags": [
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "北极星招标",
+          "url": "https://zhaobiao.bjx.com.cn/",
+          "desc": "储能中标价追踪",
+          "tags": [
+            "数据",
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "全国碳市场",
+          "url": "https://cets.mee.gov.cn/",
+          "desc": "全国碳排放权注册登记结算",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "上海环交所",
+          "url": "https://www.cneeex.com/",
+          "desc": "全国碳市场行情",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Ember",
+          "url": "https://ember-energy.org/data/",
+          "desc": "全球电力/排放开放数据",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://ember-energy.org/feed/"
+        },
+        {
+          "name": "Our World in Data – Energy",
+          "url": "https://ourworldindata.org/energy",
+          "desc": "可视化开放能源数据",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://ourworldindata.org/atom.xml"
+        },
+        {
+          "name": "EIA",
+          "url": "https://www.eia.gov/",
+          "desc": "美国能源全领域权威数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://www.eia.gov/rss/todayinenergy.xml"
+        },
+        {
+          "name": "Global Energy Monitor",
+          "url": "https://globalenergymonitor.org/",
+          "desc": "18万+能源设施开放项目库",
+          "tags": [
+            "数据",
+            "项目库"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IRENA Statistics",
+          "url": "https://www.irena.org/Data",
+          "desc": "全球可再生装机权威",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEA Data & Statistics",
+          "url": "https://www.iea.org/data-and-statistics",
+          "desc": "全球能源基准",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": "https://www.iea.org/news/rss"
+        },
+        {
+          "name": "ENTSO-E Transparency",
+          "url": "https://transparency.entsoe.eu/",
+          "desc": "欧洲电网实时开放数据",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Electricity Maps",
+          "url": "https://app.electricitymaps.com/",
+          "desc": "全球电网碳排实时地图",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "S&P Market Intelligence Power",
+          "url": "https://www.spglobal.com/marketintelligence/",
+          "desc": "北美电力项目 + 财务库",
+          "tags": [
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "name": "社区 / 论坛 / 社群 / KOL",
+      "sources": [
+        {
+          "name": "知识星球（储能/电力现货/AIDC）",
+          "url": "https://wx.zsxq.com/",
+          "desc": "行业深度交流圈子",
+          "tags": [
+            "社区"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "微信公众号矩阵",
+          "url": "https://weixin.qq.com/",
+          "desc": "中文能源/AIDC KOL 主阵地",
+          "tags": [
+            "KOL",
+            "社区"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "B站/视频号",
+          "url": "https://www.bilibili.com/",
+          "desc": "老石谈芯等科普/KOL",
+          "tags": [
+            "KOL"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "虎嗅 · 妙投能源",
+          "url": "https://www.huxiu.com/",
+          "desc": "商业视角能源产业解读",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "36氪 · 出海/碳中和",
+          "url": "https://www.36kr.com/",
+          "desc": "创投 + 能源交叉",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": "https://36kr.com/feed"
+        },
+        {
+          "name": "雪球新能源",
+          "url": "https://xueqiu.com/",
+          "desc": "二级市场投资者视角",
+          "tags": [
+            "社区"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Reddit r/energy",
+          "url": "https://www.reddit.com/r/energy/",
+          "desc": "广域能源讨论",
+          "tags": [
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://www.reddit.com/r/energy/.rss"
+        },
+        {
+          "name": "Reddit r/RenewableEnergy",
+          "url": "https://www.reddit.com/r/RenewableEnergy/",
+          "desc": "可再生话题",
+          "tags": [
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://www.reddit.com/r/RenewableEnergy/.rss"
+        },
+        {
+          "name": "Reddit r/datacenter",
+          "url": "https://www.reddit.com/r/datacenter/",
+          "desc": "DC 运维/建设从业者",
+          "tags": [
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://www.reddit.com/r/datacenter/.rss"
+        },
+        {
+          "name": "Reddit r/energystorage",
+          "url": "https://www.reddit.com/r/energystorage/",
+          "desc": "储能讨论",
+          "tags": [
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://www.reddit.com/r/energystorage/.rss"
+        },
+        {
+          "name": "Reddit r/nuclear",
+          "url": "https://www.reddit.com/r/nuclear/",
+          "desc": "核能话题",
+          "tags": [
+            "社区"
+          ],
+          "region": "global",
+          "rss": "https://www.reddit.com/r/nuclear/.rss"
+        },
+        {
+          "name": "Volts",
+          "url": "https://www.volts.wtf/",
+          "desc": "脱碳政策深度访谈 newsletter+播客",
+          "tags": [
+            "newsletter",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": "https://www.volts.wtf/feed"
+        },
+        {
+          "name": "Catalyst (Latitude Media)",
+          "url": "https://www.latitudemedia.com/catalyst",
+          "desc": "气候科技投资访谈播客",
+          "tags": [
+            "播客",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": "https://www.latitudemedia.com/rss"
+        },
+        {
+          "name": "The Interchange Recharged",
+          "url": "https://www.woodmac.com/podcasts/",
+          "desc": "Wood Mackenzie 播客",
+          "tags": [
+            "播客"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Redefining Energy",
+          "url": "https://redefiningenergy.com/",
+          "desc": "欧洲能源转型资深播客",
+          "tags": [
+            "播客",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "The Energy Gang",
+          "url": "https://www.woodmac.com/podcasts/",
+          "desc": "能源政策与市场播客",
+          "tags": [
+            "播客"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "LinkedIn Newsletter – Nat Bullard",
+          "url": "https://www.linkedin.com/newsletters/decarbonization-",
+          "desc": "前 BNEF 分析师年度趋势报告",
+          "tags": [
+            "newsletter",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "LinkedIn Newsletter – Michael Barnard",
+          "url": "https://www.linkedin.com/newsletters/future-is-electric/",
+          "desc": "电气化激辩派",
+          "tags": [
+            "newsletter",
+            "KOL"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "LinkedIn – Kingsmill Bond",
+          "url": "https://www.linkedin.com/in/kingsmillbond/",
+          "desc": "RMI 能源转型经济学",
+          "tags": [
+            "KOL"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Twitter/X KOL 清单",
+          "url": "https://x.com/",
+          "desc": "JesseJenkins / Dylan Patel / Andy Lawrence / Nat Bullard 等",
+          "tags": [
+            "KOL",
+            "社区"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    }
+  ]
+}
