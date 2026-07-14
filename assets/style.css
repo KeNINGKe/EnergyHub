@@ -128,17 +128,22 @@ code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  appearance: none;
+  margin: 0;
   background: transparent;
   border: 1px solid transparent;
   color: var(--text-muted);
-  padding: 9px 18px;
+  min-height: 38px;
+  padding: 0 18px;
   border-radius: 99px;
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-  font-size: 0.92rem;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.2s;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .view-tab:hover {
