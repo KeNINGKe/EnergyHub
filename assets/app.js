@@ -16,19 +16,19 @@ async function loadJSON(url) {
 
 async function init() {
   setupTabs();
+  setupWaveform();
 
   try {
     state.sources = await loadJSON('data/sources.json');
     $('#updatedAt').textContent = state.sources.updatedAt || '未知';
     renderNav(state.sources);
+    animateStats(state.sources);
   } catch (e) {
     console.error(e);
-    $('#sourcesArea').innerHTML = `
-      <div class="error">
-        <strong>加载 sources.json 失败</strong><br>
-        ${escapeHtml(e.message)}<br>
-        本地预览请运行 <code>npm run preview</code>，然后用 http://localhost:5173 访问。
-      </div>`;
+    $('#sourcesArea').innerHTML = renderError(
+      `加载 sources.json 失败: ${e.message}`,
+      '本地预览请运行 python3 -m http.server 5173，然后访问 http://localhost:5173'
+    );
     $('#categoryList').innerHTML = '';
   }
 
@@ -39,23 +39,16 @@ async function init() {
       loadJSON('feeds/deep.json')
     ]);
     renderFeeds();
+    updateTodayStat();
   } catch (e) {
     console.error('加载 feeds 失败', e);
-    $('#dailyList').innerHTML = renderLoadError(e);
-    $('#weeklyList').innerHTML = renderLoadError(e);
-    $('#deepList').innerHTML = renderLoadError(e);
+    $('#dailyList').innerHTML = renderError(e.message, '请确认 feeds/ 目录下 JSON 文件存在。');
+    $('#weeklyList').innerHTML = renderError(e.message);
+    $('#deepList').innerHTML = renderError(e.message);
   }
 }
 
-function renderLoadError(e) {
-  return `
-    <div class="error">
-      加载失败: ${escapeHtml(e.message)}<br>
-      本地预览请运行 <code>npm run preview</code>
-    </div>`;
-}
-
-/* ===== 导航渲染 ===== */
+/* ===== Navigation ===== */
 function renderNav(data) {
   const catList = $('#categoryList');
   catList.innerHTML = '';
@@ -63,8 +56,10 @@ function renderNav(data) {
   data.categories.forEach((cat, idx) => {
     const btn = document.createElement('button');
     btn.className = 'cat-btn' + (idx === 0 ? ' active' : '');
-    btn.textContent = cat.name;
-    btn.title = `${cat.sources.length} 个源`;
+    btn.innerHTML = `
+      <span>${escapeHtml(cat.name)}</span>
+      <span class="cat-count">${cat.sources.length}</span>
+    `;
     btn.onclick = () => {
       state.activeCategory = cat.id;
       $$('.cat-btn').forEach(b => b.classList.remove('active'));
@@ -83,7 +78,7 @@ function renderNav(data) {
 function renderCategory(cat) {
   const area = $('#sourcesArea');
   area.innerHTML = `
-    <h2 class="cat-title">${escapeHtml(cat.name)} <small style="font-size:0.7em;color:var(--text-secondary)">(${cat.sources.length} 个源)</small></h2>
+    <h2 class="section-title">${escapeHtml(cat.name)} <small>${cat.sources.length} SOURCES</small></h2>
     <div class="source-grid"></div>
   `;
   const grid = area.querySelector('.source-grid');
@@ -100,71 +95,107 @@ function renderCategory(cat) {
         <span class="region-badge ${src.region}">${src.region === 'cn' ? 'CN' : 'Global'}</span>
       </div>
       <p class="source-desc">${escapeHtml(src.desc)}</p>
-      <div class="source-tags">${src.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-      ${src.rss ? '<span class="rss-dot" title="已配置 RSS，会自动抓取">●</span>' : ''}
+      <div class="source-footer">
+        <div class="source-tags">${src.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
+        <span class="signal-lamp ${src.rss ? 'live' : ''}" title="${src.rss ? '已接入 RSS 自动抓取' : '暂无 RSS，仅导航'}"></span>
+      </div>
     `;
     grid.appendChild(card);
   });
 }
 
-/* ===== Feed 渲染 ===== */
+/* ===== Stats ===== */
+function animateStats(data) {
+  const rssCount = data.categories.reduce((sum, cat) =>
+    sum + cat.sources.filter(s => s.rss).length, 0);
+  const totalCount = data.categories.reduce((sum, cat) => sum + cat.sources.length, 0);
+
+  countUp('statSources', totalCount, 800);
+  countUp('statRSS', rssCount, 1000);
+}
+
+function updateTodayStat() {
+  const daily = state.feeds.daily;
+  if (daily && typeof daily.count === 'number') {
+    countUp('statToday', daily.count, 1200);
+  }
+}
+
+function countUp(id, target, duration) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const start = 0;
+  const startTime = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(start + (target - start) * ease).toString();
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ===== Feeds ===== */
 function renderFeeds() {
   const d = state.feeds.daily;
   if (d) {
-    $('#dailyDate').textContent = d.date ? `(${d.date})` : '';
-    $('#dailyList').innerHTML = renderFeedItems(d.items, 'daily');
+    $('#dailyMeta').innerHTML = `MODE: DAILY · DATE: ${escapeHtml(d.date)} · SOURCES: ${d.successSources}/${d.totalSources} · ITEMS: ${d.count}`;
+    $('#dailyList').innerHTML = d.items.length
+      ? d.items.map(item => renderFeedItem(item)).join('')
+      : renderEmpty('暂无日报内容，运行 npm run fetch:daily 生成。');
   }
 
   const w = state.feeds.weekly;
   if (w) {
-    $('#weeklyRange').textContent = w.dateRange ? `(${w.dateRange})` : (w.week ? `(${w.week})` : '');
-    $('#weeklyList').innerHTML = renderFeedItems(w.items, 'weekly');
+    $('#weeklyMeta').innerHTML = `MODE: WEEKLY · RANGE: ${escapeHtml(w.dateRange || w.week)} · SOURCES: ${w.successSources}/${w.totalSources} · ITEMS: ${w.count}`;
+    $('#weeklyList').innerHTML = w.items.length
+      ? w.items.map(item => renderFeedItem(item)).join('')
+      : renderEmpty('暂无周报内容。');
   }
 
   const deep = state.feeds.deep;
   if (deep) {
+    $('#deepMeta').innerHTML = `MODE: DEEP · UPDATED: ${escapeHtml(deep.updatedAt || '-')}`;
     $('#deepList').innerHTML = deep.items && deep.items.length
-      ? deep.items.map(item => renderDeepCard(item)).join('')
-      : `<div class="empty">${escapeHtml(deep.note || '暂无深研内容，请在 feeds/deep.json 中填充。')}</div>`;
+      ? deep.items.map(item => renderDeepItem(item)).join('')
+      : renderEmpty(deep.note || '暂无深研内容，请在 feeds/deep.json 中填充。');
   }
 }
 
-function renderFeedItems(items, mode) {
-  if (!items || !items.length) {
-    return '<div class="empty">暂无内容，等待首次 RSS 抓取（本地可运行 npm run fetch:daily 测试）。</div>';
-  }
-  return items.map(item => `
+function renderFeedItem(item) {
+  return `
     <article class="feed-item">
-      <div class="feed-meta">
-        <span class="feed-source">${escapeHtml(item.source || item.sourceName || '未知来源')}</span>
+      <div class="feed-top">
+        <span class="feed-source">${escapeHtml(item.source || '未知来源')}</span>
         <span class="feed-date">${escapeHtml(formatDate(item.pubDate || item.date || item.isoDate))}</span>
       </div>
       <h3><a href="${escapeHtml(item.link || item.url || '#')}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
-      ${item.summary || item.contentSnippet ? `<p class="feed-summary">${escapeHtml(truncate(item.summary || item.contentSnippet, 220))}</p>` : ''}
+      ${item.summary || item.contentSnippet ? `<p class="feed-summary">${escapeHtml(truncate(item.summary || item.contentSnippet, 240))}</p>` : ''}
     </article>
-  `).join('');
+  `;
 }
 
-function renderDeepCard(item) {
+function renderDeepItem(item) {
   return `
     <article class="feed-item deep-item">
-      <div class="feed-meta">
+      <div class="feed-top">
         <span class="feed-source">${escapeHtml(item.source || '深研')}</span>
         <span class="feed-date">${escapeHtml(item.date || '')}</span>
       </div>
       <h3><a href="${escapeHtml(item.url || item.link || '#')}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
       ${item.summary ? `<p class="feed-summary">${escapeHtml(item.summary)}</p>` : ''}
-      ${item.tags && item.tags.length ? `<div class="source-tags">${item.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+      ${item.tags && item.tags.length ? `<div class="source-tags" style="margin-top:12px">${item.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>` : ''}
     </article>
   `;
 }
 
 /* ===== Tabs ===== */
 function setupTabs() {
-  $$('.tab-btn').forEach(btn => {
+  $$('.view-tab').forEach(btn => {
     btn.addEventListener('click', () => {
       const tab = btn.dataset.tab;
-      $$('.tab-btn').forEach(b => b.classList.remove('active'));
+      $$('.view-tab').forEach(b => b.classList.remove('active'));
       $$('.tab-panel').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
       $(`#${tab}`).classList.add('active');
@@ -173,7 +204,53 @@ function setupTabs() {
   });
 }
 
-/* ===== 工具函数 ===== */
+/* ===== Signature waveform ===== */
+function setupWaveform() {
+  const path = $('.wave-path');
+  if (!path) return;
+
+  const width = 1200;
+  const height = 120;
+  const segments = 80;
+  const step = width / segments;
+
+  function generatePath() {
+    let d = `M 0 ${height / 2}`;
+    for (let i = 1; i <= segments; i++) {
+      const x = i * step;
+      const noise = Math.sin(i * 0.4) * 15 + Math.sin(i * 0.9) * 8 + Math.sin(i * 1.7) * 5;
+      const y = height / 2 + noise + (Math.random() - 0.5) * 8;
+      d += ` L ${x.toFixed(1)} ${y.toFixed(1)}`;
+    }
+    return d;
+  }
+
+  // Initial draw
+  path.setAttribute('d', generatePath());
+
+  // Slowly morph the wave every few seconds for ambient life
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(() => {
+      path.setAttribute('d', generatePath());
+    }, 4200);
+  }
+}
+
+/* ===== Utilities ===== */
+function renderError(title, hint) {
+  return `
+    <div class="error-state">
+      <strong>${escapeHtml(title)}</strong><br>
+      ${hint ? escapeHtml(hint) : ''}
+    </div>
+  `;
+}
+
+function renderEmpty(message) {
+  return `<div class="empty-state">${escapeHtml(message)}</div>
+  `;
+}
+
 function escapeHtml(str) {
   if (str == null) return '';
   return String(str)
