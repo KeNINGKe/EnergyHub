@@ -7,19 +7,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Anta:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css?v=8">
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <h1>EnergyHub</h1>
+      <p class="subtitle">电力 · 储能 · AIDC 信息聚合</p>
     </div>
   </header>
 
   <nav class="view-tabs" aria-label="视图切换">
     <button class="view-tab active" data-tab="nav">信息源</button>
     <button class="view-tab" data-tab="daily">日报</button>
-    <button class="view-tab" data-tab="weekly">周报</button>
     <button class="view-tab" data-tab="deep">深研</button>
   </nav>
 
@@ -45,16 +45,6 @@
       </div>
     </section>
 
-    <section id="weekly" class="tab-panel" aria-labelledby="tab-weekly">
-      <div class="feed-header">
-        <h2>周报</h2>
-        <p id="weeklyMeta"></p>
-      </div>
-      <div class="feed-list" id="weeklyList">
-        <div class="loading-state">加载中…</div>
-      </div>
-    </section>
-
     <section id="deep" class="tab-panel" aria-labelledby="tab-deep">
       <div class="feed-header">
         <h2>深研</h2>
@@ -70,6 +60,6 @@
     <span id="updatedAt">-</span>
   </footer>
 
-  <script src="assets/app.js"></script>
+  <script src="assets/app.js?v=2"></script>
 </body>
 </html>

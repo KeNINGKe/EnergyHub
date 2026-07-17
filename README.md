@@ -2,7 +2,7 @@
 
 一个纯静态网站，零服务器成本：
 - **综合导航页**：分类展示国内外发电、储能、AIDC 信息源，点击直达。
-- **日报 / 周报**：由 GitHub Actions 定时抓取各源 RSS，自动生成 JSON 静态数据。
+- **日报**：由 GitHub Actions 定时抓取各源 RSS，自动生成 JSON 静态数据。
 - **深研**：预留手动/AI 辅助填充的精选长文区。
 
 ## 技术栈
@@ -26,13 +26,10 @@ npm run preview
 
 ```bash
 # 抓取日报
-npm run fetch:daily
-
-# 抓取周报
-npm run fetch:weekly
+npm run fetch
 ```
 
-抓取结果会写入 `feeds/daily.json` 和 `feeds/weekly.json`。
+抓取结果会写入 `feeds/daily.json`。
 
 ## 部署上线
 
@@ -56,9 +53,8 @@ npm run fetch:weekly
 
 仓库 `.github/workflows/fetch-feeds.yml` 配置：
 - **日报**：北京时间每天 07:00 运行（UTC 23:00）。
-- **周报**：北京时间每周一 07:00 运行，聚合过去 7 天内容。
 
-任务会抓取 `data/sources.json` 中所有带 `rss` 字段的源，生成 `feeds/daily.json` / `feeds/weekly.json` 并提交回仓库，触发 Cloudflare Pages 重新部署。
+任务会抓取 `data/sources.json` 中所有带 `rss` 字段的源，生成 `feeds/daily.json` 并提交回仓库，触发 Cloudflare Pages 重新部署。
 
 ## 目录结构
 
@@ -72,7 +68,6 @@ energy-info-hub/
 │   └── sources.json        # 信息源数据（导航用）
 ├── feeds/
 │   ├── daily.json          # 自动生成的日报
-│   ├── weekly.json         # 自动生成的周报
 │   └── deep.json           # 深研骨架/手动填充
 ├── scripts/
 │   └── fetch-rss.mjs       # RSS 抓取脚本

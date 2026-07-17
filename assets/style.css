@@ -20,6 +20,7 @@
   --radius-lg: 20px;
   --max-width: 1280px;
   --font-display: "Anta", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-heading-news: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
   --font-body: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
@@ -105,6 +106,14 @@ code {
   line-height: 1.1;
   margin: 0 0 14px;
   color: var(--text);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 400;
+  max-width: 560px;
 }
 
 /* ===== View tabs — pill style ===== */
@@ -250,7 +259,7 @@ code {
 }
 
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-heading-news);
   font-size: 1.45rem;
   font-weight: 400;
   margin: 0 0 24px;
@@ -269,11 +278,14 @@ code {
 .source-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  align-items: stretch;
   gap: 16px;
 }
 
 .source-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   position: relative;
   background: var(--bg);
   border: 1px solid var(--border);
@@ -313,7 +325,7 @@ code {
 }
 
 .source-name {
-  font-family: var(--font-display);
+  font-family: var(--font-heading-news);
   font-weight: 400;
   font-size: 1rem;
   color: var(--text);
@@ -342,6 +354,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .source-tags {
@@ -370,13 +383,43 @@ code {
   border-radius: 99px;
 }
 
+/* 无外链的静态卡片（微信公众号等） */
+.source-card--static {
+  cursor: default;
+}
+.source-card--static:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border);
+}
+.source-card--static:hover::before {
+  border-color: transparent;
+}
+.wechat-note {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+  background: var(--bg-soft);
+  padding: 3px 7px;
+  border-radius: 99px;
+  border: 1px solid var(--border-light);
+}
+
+/* 国内需翻墙访问的警示标签 */
+.tag--gfw {
+  color: #B45309;
+  background: #FEF3C7;
+  border-color: #FDE68A;
+}
+
 /* ===== Feed ===== */
 .feed-header {
   margin-bottom: 28px;
 }
 
 .feed-header h2 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading-news);
   font-size: 1.5rem;
   font-weight: 400;
   margin: 0 0 8px;
@@ -421,7 +464,7 @@ code {
 }
 
 .feed-item h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-heading-news);
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 8px;
@@ -437,8 +480,15 @@ code {
   text-decoration: none;
 }
 
+.feed-original-title {
+  margin: 4px 0 0;
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .feed-summary {
-  margin: 0;
+  margin: 10px 0 0;
   color: var(--text-muted);
   font-size: 0.88rem;
   line-height: 1.65;

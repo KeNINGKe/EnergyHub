@@ -13,3 +13,11 @@ Thumbs.db
 
 # 临时
 *.tmp
+scripts/check-results.json
+
+# 自动生成的翻译缓存
+feeds/translation-cache.json
+
+# 会话工作日报导出（临时，不进仓库）
+work-summary-*.md
+work-summary-*.txt

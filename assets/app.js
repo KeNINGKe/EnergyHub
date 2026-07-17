@@ -1,6 +1,6 @@
 const state = {
   sources: null,
-  feeds: { daily: null, weekly: null, deep: null },
+  feeds: { daily: null, deep: null },
   activeTab: 'nav',
   activeCategory: null
 };
@@ -31,16 +31,14 @@ async function init() {
   }
 
   try {
-    [state.feeds.daily, state.feeds.weekly, state.feeds.deep] = await Promise.all([
+    [state.feeds.daily, state.feeds.deep] = await Promise.all([
       loadJSON('feeds/daily.json'),
-      loadJSON('feeds/weekly.json'),
       loadJSON('feeds/deep.json')
     ]);
     renderFeeds();
   } catch (e) {
     console.error('加载 feeds 失败', e);
-    $('#dailyList').innerHTML = renderError(e.message, '请确认 feeds/ 目录下 JSON 文件存在。');
-    $('#weeklyList').innerHTML = renderError(e.message);
+    $('#dailyList').innerHTML = renderError(e.message, '请确认 feeds/daily.json 存在，运行 npm run fetch 生成。');
     $('#deepList').innerHTML = renderError(e.message);
   }
 }
@@ -81,11 +79,21 @@ function renderCategory(cat) {
   const grid = area.querySelector('.source-grid');
 
   cat.sources.forEach(src => {
-    const card = document.createElement('a');
-    card.className = 'source-card';
-    card.href = src.url;
-    card.target = '_blank';
-    card.rel = 'noopener';
+    const hasLink = !!src.url;
+    const card = document.createElement(hasLink ? 'a' : 'div');
+    card.className = 'source-card' + (hasLink ? '' : ' source-card--static');
+    if (hasLink) {
+      card.href = src.url;
+      card.target = '_blank';
+      card.rel = 'noopener';
+    }
+    const tagsHtml = (src.tags || []).map(t => {
+      const cls = t === '翻墙' ? 'tag tag--gfw' : 'tag';
+      return `<span class="${cls}">${escapeHtml(t)}</span>`;
+    }).join('');
+    const note = !hasLink
+      ? '<span class="wechat-note">微信公众号 · 搜索访问</span>'
+      : (src.rss ? '<span class="rss-note">RSS</span>' : '');
     card.innerHTML = `
       <div class="source-header">
         <span class="source-name">${escapeHtml(src.name)}</span>
@@ -93,8 +101,8 @@ function renderCategory(cat) {
       </div>
       <p class="source-desc">${escapeHtml(src.desc)}</p>
       <div class="source-footer">
-        <div class="source-tags">${src.tags.map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('')}</div>
-        ${src.rss ? '<span class="rss-note">RSS</span>' : ''}
+        <div class="source-tags">${tagsHtml}</div>
+        ${note}
       </div>
     `;
     grid.appendChild(card);
@@ -109,14 +117,6 @@ function renderFeeds() {
     $('#dailyList').innerHTML = d.items.length
       ? d.items.map(item => renderFeedItem(item)).join('')
       : renderEmpty('暂无日报内容，运行 npm run fetch:daily 生成。');
-  }
-
-  const w = state.feeds.weekly;
-  if (w) {
-    $('#weeklyMeta').textContent = `${w.dateRange || w.week} · ${w.successSources}/${w.totalSources} 来源 · ${w.count} 条`;
-    $('#weeklyList').innerHTML = w.items.length
-      ? w.items.map(item => renderFeedItem(item)).join('')
-      : renderEmpty('暂无周报内容。');
   }
 
   const deep = state.feeds.deep;
@@ -135,7 +135,8 @@ function renderFeedItem(item) {
         <span>${escapeHtml(item.source || '未知来源')}</span>
         <span>${escapeHtml(formatDate(item.pubDate || item.date || item.isoDate))}</span>
       </div>
-      <h3><a href="${escapeHtml(item.link || item.url || '#')}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+      <h3><a href="${escapeHtml(item.link || item.url || '#')}" target="_blank" rel="noopener">${escapeHtml(item.translatedTitle || item.title)}</a></h3>
+      ${item.translatedTitle ? `<p class="feed-original-title">${escapeHtml(item.title)}</p>` : ''}
       ${item.summary || item.contentSnippet ? `<p class="feed-summary">${escapeHtml(truncate(item.summary || item.contentSnippet, 240))}</p>` : ''}
     </article>
   `;

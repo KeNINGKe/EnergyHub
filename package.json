@@ -6,7 +6,7 @@
   "scripts": {
     "fetch": "node scripts/fetch-rss.mjs",
     "fetch:daily": "node scripts/fetch-rss.mjs --mode=daily",
-    "fetch:weekly": "node scripts/fetch-rss.mjs --mode=weekly",
+    "check": "node scripts/check-sources.mjs",
     "preview": "npx --yes serve . -l 5173"
   },
   "dependencies": {
