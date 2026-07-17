@@ -7,9 +7,13 @@
     "fetch": "node scripts/fetch-rss.mjs",
     "fetch:daily": "node scripts/fetch-rss.mjs --mode=daily",
     "check": "node scripts/check-sources.mjs",
-    "preview": "npx --yes serve . -l 5173"
+    "preview": "npx --yes serve . -l 5173",
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }
