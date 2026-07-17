@@ -524,6 +524,15 @@ code {
   color: var(--text-faint);
   font-size: 0.78rem;
   font-family: var(--font-mono);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-credit {
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
 }
 
 /* ===== Responsive ===== */

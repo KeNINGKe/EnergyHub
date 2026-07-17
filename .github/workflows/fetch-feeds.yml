@@ -2,8 +2,10 @@ name: Fetch RSS Feeds
 
 on:
   schedule:
-    # 北京时间每天 07:00 = UTC 23:00
-    - cron: '0 23 * * *'
+    # 北京时间每天 05:00 = UTC 21:00（前一天）
+    - cron: '0 21 * * *'
+    # 北京时间每天 12:00 = UTC 04:00
+    - cron: '0 4 * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
 
       - name: Install dependencies
