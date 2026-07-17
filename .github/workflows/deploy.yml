@@ -15,6 +15,13 @@ jobs:
           node-version: 22
           cache: 'npm'
       - run: npm ci
+      - name: Prepare dist
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp -r assets dist/
+          cp -r data dist/
+          cp -r feeds dist/
       - name: Deploy
         run: npx wrangler deploy
         env:
