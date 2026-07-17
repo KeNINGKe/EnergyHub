@@ -36,6 +36,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update daily feed [skip ci]"
+            git commit -m "chore: update daily feed"
             git push
           fi
