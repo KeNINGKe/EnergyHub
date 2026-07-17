@@ -36,6 +36,9 @@ async function init() {
       loadJSON('feeds/deep.json')
     ]);
     renderFeeds();
+    if (state.feeds.daily && state.feeds.daily.generatedAt) {
+      $('#updatedAt').textContent = `数据更新于 ${formatDate(state.feeds.daily.generatedAt)}`;
+    }
   } catch (e) {
     console.error('加载 feeds 失败', e);
     $('#dailyList').innerHTML = renderError(e.message, '请确认 feeds/daily.json 存在，运行 npm run fetch 生成。');
