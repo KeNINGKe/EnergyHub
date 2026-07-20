@@ -38,7 +38,9 @@ const now = new Date();
 const ONE_DAY = 24 * 60 * 60 * 1000;
 
 function toISODate(d) {
-  return d.toISOString().split('T')[0];
+  // 按北京时间（UTC+8）取日期，避免 UTC 与本地跨天不一致
+  // （如 05:00 CST 那班运行时 UTC 还在前一天）
+  return new Date(d.getTime() + 8 * 60 * 60 * 1000).toISOString().split('T')[0];
 }
 
 function withinDays(dateStr, days) {
