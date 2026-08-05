@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-08-03",
+  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "status": "ok",
+  "stats": {
+    "sourcesTotal": 0,
+    "sourcesSucceeded": 0,
+    "articlesFetched": 15,
+    "eventsPublished": 8
+  },
+  "items": [
+    {
+      "id": "evt_2b61fc7f024b",
+      "title": "欧洲电动汽车销售报告： BEV市场份额跃升50%并达到26% ！",
+      "originalTitle": "Europe EV Sales Report: BEVs Jump 50% & Reach 26% Market Share!",
+      "url": "https://cleantechnica.com/2026/08/02/europe-ev-sales-report-bevs-jump-50-reach-26-market-share/",
+      "summary": "Tesla and the Chinese push the market upwards — EV Share Jumps to 37% in Europe! Thanks to a number of factors (new cheaper models, high ga…",
+      "whyItMatters": "电力市场与政策；关键数字 50%、26%、37%；关联 Tesla；地区 中国；媒体 CleanTechnica",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "中国",
+      "entities": [
+        "Tesla"
+      ],
+      "metrics": [
+        {
+          "label": "Report: BEVs Jump",
+          "value": 50,
+          "unit": "%"
+        },
+        {
+          "label": "50% & Reach",
+          "value": 26,
+          "unit": "%"
+        },
+        {
+          "label": "Share Jumps to",
+          "value": 37,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-02T16:53:37.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_a99839b0a9b4",
+      "title": "SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将被1.2GW发电厂取代",
+      "originalTitle": " SpaceXAI says it will remove all 69 of its unpermitted turbine power generators, but expects process to take a year — trailer-mounted generators to be replaced by 1.2GW power plant ",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/spacexai-says-it-will-remove-all-69-of-its-unpermitted-turbine-power-generators-but-expects-process-to-take-a-year-trailer-mounted-generators-to-be-replaced-by-1-2gw-power-plant",
+      "summary": "These turbines have been the center of a lawsuit involving permits and pollution. While this is good news for the community, it will still…",
+      "whyItMatters": "光伏与风电；关键数字 1.2GW；媒体 Tom's Hardware",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "be replaced by",
+          "value": 1.2,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-02T11:50:00.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_bdac6bd2c718",
+      "title": "Ember的电动客车展示城际公交电气化已经到来",
+      "originalTitle": "Ember’s Electric Coaches Show Intercity Bus Electrification Is Already Here",
+      "url": "https://cleantechnica.com/2026/08/02/ember-electric-intercity-coaches-scotland/",
+      "summary": "Edinburgh makes electric transit visible. The city has electrified regional rail, trams and a growing number of electric buses, including l…",
+      "whyItMatters": "储能；关联 Ember、EMBER；媒体 CleanTechnica",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Ember",
+        "EMBER"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-02T09:03:00.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "originalTitle": "‘You cannot build a whole electricity system purely on solar hybrids’: Squadron Energy CEO warns",
+      "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/",
+      "summary": "BESS and solar have driven Australia past the halfway mark in NEM renewable penetration, but the technology mix is not yet broad enough.",
+      "whyItMatters": "储能；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-03T03:50:49.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_79eff84dbe8c",
+      "title": "由于AEMO启动故障电流试验，电网形成BESS尚未确认澳大利亚的最低系统强度",
+      "originalTitle": "Grid-forming BESS not yet confirmed for minimum system strength in Australia as AEMO launches fault current trial",
+      "url": "https://www.energy-storage.news/grid-forming-bess-not-yet-confirmed-for-minimum-system-strength-in-australia-as-aemo-launches-fault-current-trial/",
+      "summary": "Grid-forming BESS have not yet been confirmed to meet the highest tier of system strength requirements in Australia's NEM, according to AEM…",
+      "whyItMatters": "储能；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-03T03:29:54.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_e221e8ddfa34",
+      "title": "燃料电池卡车和公共汽车仍然即将到来，它们仍然需要更多的绿色氢气",
+      "originalTitle": "Fuel Cell Trucks And Buses Are Still Coming, And They Still Need More Green Hydrogen",
+      "url": "https://cleantechnica.com/2026/08/02/fuel-cell-buses-trucks-green-hydrogen-innovation/",
+      "summary": "Hydrogen fuel cell buses and trucks are zero emission electric vehicles, but they need green hydrogen to complete the sustainability loop.…",
+      "whyItMatters": "其他能源动态；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-03T02:06:53.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_41d096d339fb",
+      "title": "Lattrex Inc.首席执行官Chuck McClish访谈",
+      "originalTitle": "CEO Interview with Chuck McClish of of Lattrex Inc.",
+      "url": "https://semiwiki.com/ceo-interviews/371425-ceo-interview-with-chuck-mcclish-of-of-lattrex-inc/",
+      "summary": "Chuck McClish is the founder of Lattrex Inc., a fabless semiconductor startup building Kyttar, an asynchronous, clockless reconfigurable pr…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-02T22:00:21.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_d3fb7187ae4a",
+      "title": "为亚洲和非洲的可再生能源提供资金",
+      "originalTitle": "Funding for Renewables in Asia & Africa Ready",
+      "url": "https://cleantechnica.com/2026/08/02/funding-for-renewables-in-asia-africa-ready/",
+      "summary": "Ukko Renewable ready to implement long-term ambition to become a leading player in the energy transition across Asia The Emerging Africa an…",
+      "whyItMatters": "地区 非洲；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "非洲",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-02T13:25:04.000Z",
+      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "relatedSources": []
+    }
+  ]
+}

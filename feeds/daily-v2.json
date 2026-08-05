@@ -1,0 +1,553 @@
+{
+  "schemaVersion": 2,
+  "date": "2026-08-05",
+  "generatedAt": "2026-08-05T06:03:25.894Z",
+  "status": "ok",
+  "stats": {
+    "sourcesTotal": 34,
+    "sourcesSucceeded": 8,
+    "articlesFetched": 104,
+    "eventsPublished": 20
+  },
+  "items": [
+    {
+      "id": "evt_825e4aef26d3",
+      "title": "CoreWeave计划在印尼推出360MW数据中心容量",
+      "originalTitle": "CoreWeave plans to launch 360MW of data center capacity in Indonesia",
+      "url": "https://www.datacenterdynamics.com/en/news/coreweave-plans-to-launch-360mw-of-data-center-capacity-in-indonesia/",
+      "summary": "Will be company's first data centers in Asia-Pacific region",
+      "whyItMatters": "关键数字 360MW；关联 CoreWeave；媒体 Data Center Dynamics",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "CoreWeave"
+      ],
+      "metrics": [
+        {
+          "label": "plans to launch",
+          "value": 360,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T16:00:31.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_2a30fc7e95ef",
+      "title": "富士康子公司Visionbay.ai在台湾推出5MW Nvidia人工智能集群",
+      "originalTitle": "Foxconn subsidiary Visionbay.ai launches 5MW Nvidia-powered AI cluster in Taiwan",
+      "url": "https://www.datacenterdynamics.com/en/news/foxconn-subsidiary-visionbayai-launches-5mw-nvidia-powered-ai-cluster-in-taiwan/",
+      "summary": "Company claims 90 percent capacity already in use",
+      "whyItMatters": "关键数字 5MW；关联 NVIDIA；媒体 Data Center Dynamics",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [
+        {
+          "label": "bsidiary Visionbay.ai launches",
+          "value": 5,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T13:40:35.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_cd667d130e3d",
+      "title": "Velox ， I/ONX HPC将在瑞典数据中心部署7,000个FuriosaAI RNGD加速器",
+      "originalTitle": "Velox, I/ONX HPC to deploy 7,000 FuriosaAI RNGD accelerators at Swedish data center",
+      "url": "https://www.datacenterdynamics.com/en/news/velox-ionx-hpc-to-deploy-7000-furiosaai-rngd-accelerators-at-swedish-data-center/",
+      "summary": "Data center expected to have a total eventual capacity of 15MW",
+      "whyItMatters": "关键数字 15MW；媒体 Data Center Dynamics",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "eventual capacity of",
+          "value": 15,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T15:40:32.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_183efd7bac18",
+      "title": "德国Maincubes完成新法兰克福数据中心的首个模块",
+      "originalTitle": "Germany’s Maincubes completes first module of new Frankfurt data center",
+      "url": "https://www.datacenterdynamics.com/en/news/germanys-maincubes-completes-first-module-of-new-frankfurt-data-center/",
+      "summary": "First leg of the 16MW hyperscale/HPC data center",
+      "whyItMatters": "光伏与风电；关键数字 16MW；地区 德国；媒体 Data Center Dynamics",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "德国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "leg of the",
+          "value": 16,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T15:14:02.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_5e0c79ed0192",
+      "title": "ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦",
+      "originalTitle": "Hourly peak load in ERCOT set a new record, exceeding 91 GW on July 22",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67906",
+      "summary": "Hourly peak load in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization serving most of Texas, reache…",
+      "whyItMatters": "电网与并网；关键数字 91GW；地区 美国；一手来源 EIA Electricity Data",
+      "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "new record, exceeding",
+          "value": 91,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-03T14:00:00.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_1ed6a6bc73ca",
+      "title": "人工智能实验室Moonshot从阿里云租赁2万个Nvidia GPU -报告",
+      "originalTitle": "AI lab Moonshot leases 20,000 Nvidia GPUs from Alibaba Cloud - report",
+      "url": "https://www.datacenterdynamics.com/en/news/ai-lab-moonshot-leases-20000-nvidia-gpus-from-alibaba-cloud-report/",
+      "summary": "Makes up a significant proportion of Moonshot's overall compute capacity for Kimi models",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；媒体 Data Center Dynamics",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T15:58:41.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_f81b8f5e2e11",
+      "title": "基于AWS Graviton5处理器的Amazon EC2 C9g和C9gd实例现已推出",
+      "originalTitle": "Amazon EC2 C9g and C9gd instances powered by AWS Graviton5 processors are now available",
+      "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/",
+      "summary": "Amazon EC2 C9g and C9gd instances, powered by AWS Graviton5, are now generally available. They deliver up to 25% better compute performance…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 25%；关联 Amazon、AWS；一手来源 AWS News Blog",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Amazon",
+        "AWS"
+      ],
+      "metrics": [
+        {
+          "label": "deliver up to",
+          "value": 25,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "AWS News Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-06-30T20:56:44.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_3184643a2bc8",
+      "title": "游戏速率：美国各州如何改变数据中心和电力规则",
+      "originalTitle": "Rate of play: How US states are changing the rules around data centers and power",
+      "url": "https://www.datacenterdynamics.com/en/analysis/rate-of-play-how-us-states-are-changing-the-rules-around-data-centers-and-power/",
+      "summary": "Data center growth is outstripping the regulations designed to control it. Lawmakers are fighting",
+      "whyItMatters": "电力市场与政策；地区 美国；媒体 Data Center Dynamics",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Data Center Dynamics",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T16:00:32.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_c797cba4897f",
+      "title": "随着人工智能对内存的需求增加，存储也随之增加",
+      "originalTitle": "As AI Increases Demands on Memory, Storage Steps Up",
+      "url": "https://blogs.nvidia.com/blog/ai-storage-fms/",
+      "summary": "Surging AI demands are driving the need for massive datasets and context windows that burst past the confines of system memory. But rising…",
+      "whyItMatters": "一手来源 NVIDIA Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T15:00:47.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_b3f3946d3dbb",
+      "title": "从可靠性到AI就绪性，客户在Microsoft数据库中最看重的是什么",
+      "originalTitle": "What customers value most in Microsoft Databases—from reliability to AI readiness",
+      "url": "https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/",
+      "summary": "Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences. T…",
+      "whyItMatters": "关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Microsoft",
+        "Azure"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Microsoft Azure Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-27T15:00:00.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_a5d098e59714",
+      "title": "NVIDIA Spectrum-6专为Vera Rubin打造，登陆千兆级人工智能工厂",
+      "originalTitle": "Built for Vera Rubin, NVIDIA Spectrum-6 Arrives in Gigascale AI Factories",
+      "url": "https://blogs.nvidia.com/blog/nvidia-spectrum-six-arrives-in-gigascale-ai-factories/",
+      "summary": "AI has entered the gigascale era. The world’s most advanced AI factories are bringing together hundreds of thousands of GPUs and CPUs to tr…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；地区 全球；一手来源 NVIDIA Blog",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-21T15:00:20.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": [
+        {
+          "name": "Microsoft Azure Blog",
+          "url": "https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/"
+        },
+        {
+          "name": "NVIDIA Blog",
+          "url": "https://blogs.nvidia.com/blog/vera-rubin/"
+        }
+      ]
+    },
+    {
+      "id": "evt_212a0b82a71a",
+      "title": "认识Brain ： Azure可靠性背后的AI系统",
+      "originalTitle": "Meet Brain: The AI system behind Azure reliability",
+      "url": "https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/",
+      "summary": "Learn how Microsoft is building a digital twin of Azure Service Health and why it changes how hyperscale operates. The post Meet Brain: The…",
+      "whyItMatters": "关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Microsoft",
+        "Azure"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Microsoft Azure Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-02T16:00:00.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_114bcd6441f8",
+      "title": "Azure IaaS ：如何设计、构建和优化云基础架构以实现长期成本效益",
+      "originalTitle": "Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency",
+      "url": "https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/",
+      "summary": "As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—cost efficienc…",
+      "whyItMatters": "冷却、UPS 与 PUE；关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
+      "topic": "cooling-pue",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Microsoft",
+        "Azure"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Microsoft Azure Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-06-30T16:00:00.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_eb075930eb36",
+      "title": "帮助微软实现其可再生能源目标的6个项目",
+      "originalTitle": "6 projects that helped Microsoft meet its renewable energy goal",
+      "url": "https://news.microsoft.com/source/features/sustainability/6-projects-that-helped-microsoft-meet-its-renewable-energy-goal/",
+      "summary": "The post 6 projects that helped Microsoft meet its renewable energy goal appeared first on Source.",
+      "whyItMatters": "关联 Microsoft；一手来源 Microsoft Source – Sustainability",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Microsoft"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Microsoft Source – Sustainability",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-02-25T19:02:06.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_362646a35b94",
+      "title": "AWS每周综述：纽约峰会回顾、河内本地区域、基岩Grok 4.3、降价等（ 2026年6月22日）",
+      "originalTitle": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
+      "summary": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the…",
+      "whyItMatters": "电力市场与政策；关联 AWS；一手来源 AWS News Blog",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "AWS"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "AWS News Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-06-22T14:46:17.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_d38771af9593",
+      "title": "宣布推出由NVIDIA RTX PRO 4500 Blackwell Server Edition GPU加速的Amazon EC2 G7实例",
+      "originalTitle": "Announcing Amazon EC2 G7 instances accelerated by NVIDIA RTX PRO 4500 Blackwell Server Edition GPUs",
+      "url": "https://aws.amazon.com/blogs/aws/announcing-amazon-ec2-g7-instances-accelerated-by-nvidia-rtx-pro-4500-blackwell-server-edition-gpus/",
+      "summary": "Announcing the general availability of Amazon Elastic Compute Cloud (Amazon EC2) G7 instances, delivering high performance GPU acceleration…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Amazon、NVIDIA；一手来源 AWS News Blog",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Amazon",
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "AWS News Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-06-18T21:22:10.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_42f6508fdd2f",
+      "title": "NVIDIA利用Vera CPU加速下一代CPU和GPU的设计",
+      "originalTitle": "NVIDIA Harnesses Vera CPU to Speed Up Design of Next-Generation CPUs and GPUs",
+      "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
+      "summary": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI sy…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；一手来源 NVIDIA Blog",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-27T00:45:42.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": [
+        {
+          "name": "NVIDIA Blog",
+          "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
+        }
+      ]
+    },
+    {
+      "id": "evt_fa741cb4d43b",
+      "title": "2026年人工智能与半导体展望",
+      "originalTitle": "2026 AI &amp; Semiconductor Outlook",
+      "url": "https://www.fabricatedknowledge.com/p/2026-ai-and-semiconductor-outlook",
+      "summary": "A wee bit late, and a bit different this year.",
+      "whyItMatters": "芯片、服务器与算力基础设施；社区 Fabricated Knowledge",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "Fabricated Knowledge",
+        "type": "community",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-01-07T21:37:33.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_da6cbfc893c5",
+      "title": "Will Eatherton ：思科计划如何在人工智能数据中心展开竞争",
+      "originalTitle": "Will Eatherton: How Cisco Plans to Compete in the AI Datacenter",
+      "url": "https://www.fabricatedknowledge.com/p/will-eatherton-how-cisco-plans-to",
+      "summary": "Listen now (41 mins) | How does Cisco plan to make a dent in the all important AI market.",
+      "whyItMatters": "AIDC 项目与区域布局；社区 Fabricated Knowledge",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "Fabricated Knowledge",
+        "type": "community",
+        "isPrimary": true
+      },
+      "publishedAt": "2025-10-27T14:57:33.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    },
+    {
+      "id": "evt_d70ce7103059",
+      "title": "行业领导者团结在开放安全的人工智能联盟中，以实现人工智能的安全和保障",
+      "originalTitle": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
+      "summary": "Open source software is a critical pillar of the global economy. It underpins cloud computing, financial services, manufacturing, telecommu…",
+      "whyItMatters": "地区 全球；一手来源 NVIDIA Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-27T09:00:07.000Z",
+      "discoveredAt": "2026-08-05T06:03:25.894Z",
+      "relatedSources": []
+    }
+  ]
+}

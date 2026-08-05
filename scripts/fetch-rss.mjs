@@ -1,67 +1,17 @@
 #!/usr/bin/env node
 /**
- * RSS 抓取脚本 — 仅生成日报
- * 读取 data/sources.json 中所有 rss 字段，并行抓取，生成 feeds/daily.json
+ * RSS 抓取脚本 — V1 日报（保留兼容，V2 构建器用 scripts/build-daily-v2.mjs）
+ * 读取 data/sources.json 中所有 rss 字段，并行抓取，生成 feeds/daily.json（V1 格式）
  * 用法:
  *   node scripts/fetch-rss.mjs
- *   node scripts/fetch-rss.mjs --mode=daily
  */
-import fs from 'fs/promises';
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
-import Parser from 'rss-parser';
+import fs from 'node:fs/promises';
+import {
+  toISODate, withinDays, loadSources, collectFeeds, fetchAllFeeds, translateTitles
+} from './lib/fetch.mjs';
 
-const execFileAsync = promisify(execFile);
-
-const parser = new Parser({
-  customFields: {
-    item: [['media:group', 'mediaGroup'], ['content:encoded', 'contentEncoded']]
-  }
-});
-
-const COMMON_HEADERS = [
-  '-H', 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 EnergyInfoHub/1.0',
-  '-H', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  '-H', 'Accept-Language: en-US,en;q=0.9'
-];
-
-async function curlFetch(url, maxTime = 30) {
-  const { stdout } = await execFileAsync('curl', [
-    '-L', '--max-time', String(maxTime), '-s', '--compressed',
-    ...COMMON_HEADERS,
-    url
-  ], { maxBuffer: 20 * 1024 * 1024, timeout: (maxTime + 5) * 1000 });
-  return stdout;
-}
-
-const now = new Date();
-const ONE_DAY = 24 * 60 * 60 * 1000;
-
-function toISODate(d) {
-  // 按北京时间（UTC+8）取日期，避免 UTC 与本地跨天不一致
-  // （如 05:00 CST 那班运行时 UTC 还在前一天）
-  return new Date(d.getTime() + 8 * 60 * 60 * 1000).toISOString().split('T')[0];
-}
-
-function withinDays(dateStr, days) {
-  if (!dateStr) return false;
-  const d = new Date(dateStr);
-  if (isNaN(d.getTime())) return false;
-  return (now.getTime() - d.getTime()) <= days * ONE_DAY;
-}
-
-function pickSummary(item) {
-  if (item.contentSnippet) return item.contentSnippet;
-  if (item.summary) return item.summary;
-  if (item.contentEncoded) {
-    return item.contentEncoded.replace(/<[^>]+>/g, ' ').trim().slice(0, 300);
-  }
-  return '';
-}
-
-// 严格主题白名单：必须与 发电/储能/AIDC/电力解决方案 相关
+// 严格主题白名单：必须与 发电/储能/AIDC/电力解决方案 相关（V1 旧版过滤器）
 const ENERGY_KEYWORDS = [
-  // 中文
   '电力', '电网', '电能', '发电', '能源', '新能源', '可再生能源', '清洁能源', '绿电', '绿证',
   '储能', '电池', '锂电池', '锂电', '动力电池', '储能电池', '固态电池', '钠离子',
   '燃料电池', '氢能', '氢', '电解槽', '绿氢', '灰氢',
@@ -73,7 +23,6 @@ const ENERGY_KEYWORDS = [
   '逆变器', '组件', '硅料', '硅片', '源网荷储', '虚拟电厂', '微电网', '特高压', '变电站', '变压器',
   '输配电', '智能电网', '负荷', '调度', '备用电源', '电力市场', '辅助服务', '现货市场',
   '抽水蓄能', '电化学储能', '光储', '风储', '氢储', 'BESS',
-  // English
   'power', 'grid', 'electricity', 'electric', 'energy', 'renewable', 'clean energy',
   'generation', 'generator', 'turbine', 'solar', 'PV', 'wind', 'nuclear', 'reactor', 'uranium', 'hydro', 'coal', 'gas', 'biomass',
   'storage', 'battery', 'batteries', 'lithium', 'solid-state', 'sodium-ion', 'sodium ion',
@@ -84,7 +33,6 @@ const ENERGY_KEYWORDS = [
   'load', 'dispatch', 'backup power', 'electricity market', 'ancillary services', 'demand response',
   'pumped hydro', 'BESS', 'solar-plus-storage', 'solar plus storage', 'wind-storage', 'hydrogen storage',
   'carbon', 'net zero', 'carbon neutral', 'emissions', 'green certificate', 'carbon capture',
-  // AI / 云计算基础设施与电力
   'PPA', 'power purchase', 'power purchase agreement', 'offtake', 'energy procurement', 'carbon-free energy',
   'renewable energy procurement', 'data centre', 'datacenter', 'hyperscale', 'supercomputer', 'supercomputing',
   'cluster', 'AI infrastructure', 'AI data center', 'foundry', 'sovereign cloud', 'edge data center',
@@ -98,11 +46,7 @@ const ENERGY_KEYWORDS = [
 
 function matchesKeyword(text, k) {
   const lowerK = k.toLowerCase();
-  // 含中文字符的关键词使用子串匹配（中文没有明显的词边界）
-  if (/[一-龥]/.test(lowerK)) {
-    return text.includes(lowerK);
-  }
-  // 英文关键词使用整词/整短语匹配，避免 'power' 匹配 'powerful'
+  if (/[一-鿿]/.test(lowerK)) return text.includes(lowerK);
   const words = lowerK.split(/\s+/).map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   const pattern = `\\b${words.join('\\b\\s+\\b')}\\b`;
   return new RegExp(pattern, 'i').test(text);
@@ -113,207 +57,51 @@ function isEnergyRelevant(item) {
   return ENERGY_KEYWORDS.some(k => matchesKeyword(text, k));
 }
 
-// ===== 标题中文翻译（MyMemory 免费 API）=====
-const TRANSLATION_CACHE_PATH = 'feeds/translation-cache.json';
-const MYMEMORY_DELAY = 300;
-
-async function loadTranslationCache() {
-  try {
-    const raw = await fs.readFile(TRANSLATION_CACHE_PATH, 'utf8');
-    return JSON.parse(raw);
-  } catch {
-    return {};
-  }
-}
-
-async function saveTranslationCache(cache) {
-  await fs.writeFile(TRANSLATION_CACHE_PATH, JSON.stringify(cache, null, 2) + '\n');
-}
-
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-function isEnglishTitle(text) {
-  return !!text && /[a-zA-Z]/.test(text) && !/[一-龥]/.test(text);
-}
-
-async function translateTitles(items) {
-  const cache = await loadTranslationCache();
-  let translated = 0;
-  let skipped = 0;
-  for (const item of items) {
-    if (!isEnglishTitle(item.title)) {
-      skipped++;
-      continue;
-    }
-    if (cache[item.title]) {
-      item.translatedTitle = cache[item.title];
-      translated++;
-      continue;
-    }
-    try {
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(item.title)}&langpair=en|zh`;
-      const res = await fetch(url);
-      const data = await res.json();
-      if (data.responseStatus === 200 && data.responseData?.translatedText) {
-        const t = data.responseData.translatedText;
-        cache[item.title] = t;
-        item.translatedTitle = t;
-        translated++;
-      }
-    } catch (err) {
-      console.error(`[翻译失败] ${item.title.slice(0, 40)}: ${err.message}`);
-    }
-    await sleep(MYMEMORY_DELAY);
-  }
-  await saveTranslationCache(cache);
-  console.log(`\n翻译完成: ${translated} 条翻译, ${skipped} 条跳过(已中文)`);
-}
-
-async function loadSources() {
-  const raw = await fs.readFile('data/sources.json', 'utf8');
-  return JSON.parse(raw);
-}
-
-function collectFeeds(data) {
-  const feeds = [];
-  for (const cat of data.categories) {
-    for (const src of cat.sources) {
-      if (src.rss) {
-        feeds.push({ ...src, category: cat.name });
-      }
-    }
-  }
-  return feeds;
-}
-
-
-function sanitizeXml(xml) {
-  // 部分源（如 IEA 旧 RSS）的 URL 参数里含未转义的 &，会导致 XML 解析失败
-  return xml.replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, '&amp;');
-}
-
-function slugToTitle(url) {
-  try {
-    const u = new URL(url);
-    const slug = u.pathname.split('/').filter(Boolean).pop() || '无标题';
-    return decodeURIComponent(slug)
-      .replace(/[-_]+/g, ' ')
-      .replace(/\b\w/g, c => c.toUpperCase());
-  } catch {
-    return '无标题';
-  }
-}
-
-function parseJinaRSS(markdown) {
-  const content = markdown.split('Markdown Content:')[1] || markdown;
-  const items = [];
-  const regex = /### \[(.*?)\]\((.*?)\)\s*\n\s*(?:\[[^\]]*\]\([^)]*\)\s*\n\s*)?([\s\S]*?)\s*\n\s*([A-Z][a-z]{2}, \d{1,2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} [+-]\d{4}|[A-Z][a-z]{2}, \d{1,2} [A-Z][a-z]{2} \d{4} \d{2}:\d{2}:\d{2} GMT)/g;
-  let match;
-  while ((match = regex.exec(content)) !== null) {
-    const [, rawTitle, link, rawBody, dateStr] = match;
-    const title = rawTitle.trim() || slugToTitle(link);
-    const body = rawBody.replace(/^\s*\[.*?\]\([^)]*\)\s*$/gm, '').trim();
-    let pubDate = null;
-    try { pubDate = new Date(dateStr).toISOString(); } catch {}
-    items.push({ title, link, pubDate, summary: body });
-  }
-  return items.slice(0, 15);
-}
-
-async function fetchViaJina(url) {
-  const jinaUrl = `https://r.jina.ai/http://${url.replace(/^https?:\/\//, '')}`;
-  try {
-    await sleep(1500);
-    const text = await curlFetch(jinaUrl, 30);
-    const items = parseJinaRSS(text);
-    if (!items.length) return null;
-    return { items };
-  } catch (err) {
-    return null;
-  }
-}
-
-async function fetchFeed(source) {
-  let via = 'direct';
-  let rawItems = [];
-  try {
-    const xml = sanitizeXml(await curlFetch(source.rss, 45));
-    const feed = await parser.parseString(xml);
-    rawItems = feed.items || [];
-  } catch (err) {
-    const jina = await fetchViaJina(source.rss);
-    if (jina) {
-      rawItems = jina.items;
-      via = 'jina';
-    } else {
-      console.error(`[失败] ${source.name}: ${err.message}`);
-      return null;
-    }
-  }
-
-  const items = rawItems.slice(0, 15).map(item => ({
-    title: item.title || '无标题',
-    link: item.link || item.guid || source.url,
-    pubDate: item.isoDate || item.pubDate || null,
-    summary: pickSummary(item),
-    source: source.name,
-    sourceUrl: source.url
-  }));
-  console.log(`[成功${via === 'jina' ? ' (Jina)' : ''}] ${source.name}: ${items.length} 条`);
-  return { items };
-}
-
 async function main() {
+  const now = new Date();
   const data = await loadSources();
   const feeds = collectFeeds(data);
   console.log(`\n发现 ${feeds.length} 个 RSS 源\n`);
 
-  const results = await Promise.allSettled(feeds.map(fetchFeed));
-  const seenLinks = new Set();
-  let allItems = [];
-  let success = 0;
+  const { items: allItems, succeeded, total } = await fetchAllFeeds(feeds);
 
-  for (const result of results) {
-    if (result.status === 'fulfilled' && result.value) {
-      for (const item of result.value.items) {
-        const key = item.link || item.title;
-        if (seenLinks.has(key)) continue;
-        seenLinks.add(key);
-        allItems.push(item);
-      }
-      success++;
-    }
+  // 链接/标题去重
+  const seenLinks = new Set();
+  const uniqueItems = [];
+  for (const item of allItems) {
+    const key = item.link || item.title;
+    if (seenLinks.has(key)) continue;
+    seenLinks.add(key);
+    uniqueItems.push(item);
   }
 
-  // 严格主题过滤
-  const beforeFilter = allItems.length;
-  allItems = allItems.filter(isEnergyRelevant);
-  console.log(`\n过滤后: ${allItems.length}/${beforeFilter} 条（去除 ${beforeFilter - allItems.length} 条无关内容）`);
+  // 严格主题过滤（V1）
+  const beforeFilter = uniqueItems.length;
+  const filtered = uniqueItems.filter(isEnergyRelevant);
+  console.log(`\n过滤后: ${filtered.length}/${beforeFilter} 条（去除 ${beforeFilter - filtered.length} 条无关内容）`);
 
   // 按发布时间倒序
-  allItems.sort((a, b) => {
+  filtered.sort((a, b) => {
     const ta = a.pubDate ? new Date(a.pubDate).getTime() : 0;
     const tb = b.pubDate ? new Date(b.pubDate).getTime() : 0;
     return tb - ta;
   });
 
   // 翻译英文标题
-  await translateTitles(allItems);
+  await translateTitles(filtered);
 
-  const dailyItems = allItems.filter(i => withinDays(i.pubDate, 1));
+  const dailyItems = filtered.filter(i => withinDays(i.pubDate, 1, now));
   const daily = {
     mode: 'daily',
     date: toISODate(now),
     generatedAt: now.toISOString(),
-    totalSources: feeds.length,
-    successSources: success,
+    totalSources: total,
+    successSources: succeeded,
     count: dailyItems.length,
     items: dailyItems
   };
   await fs.writeFile('feeds/daily.json', JSON.stringify(daily, null, 2) + '\n');
-  console.log(`\n✅ 日报已生成: ${dailyItems.length} 条 (来源 ${success}/${feeds.length})`);
+  console.log(`\n✅ 日报已生成: ${dailyItems.length} 条 (来源 ${succeeded}/${total})`);
 }
 
 main().catch(err => {
