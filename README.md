@@ -61,18 +61,36 @@ npm run fetch
 ```
 energy-info-hub/
 ├── index.html              # 主页
-├── assets/
-│   ├── style.css           # 样式
-│   └── app.js              # 渲染逻辑
-├── data/
-│   └── sources.json        # 信息源数据（导航用）
-├── feeds/
-│   ├── daily.json          # 自动生成的日报
-│   └── deep.json           # 深研骨架/手动填充
-├── scripts/
-│   └── fetch-rss.mjs       # RSS 抓取脚本
-├── .github/workflows/
-│   └── fetch-feeds.yml     # 定时任务
+├── assets/                 # 前端（样式 + 渲染逻辑）
+│   ├── style.css
+│   └── app.js
+├── data/                   # 数据配置
+│   ├── sources.json        # 信息源数据（导航用）
+│   ├── enums.json          # 主题/来源类型/影响/地区枚举
+│   ├── filters.json        # 相关性过滤关键词（强/组合/通用/负面）
+│   ├── source-types.json   # 来源类型规则
+│   ├── entities.json       # 实体表
+│   └── regions.json        # 地区别名表
+├── feeds/                  # 生成的动态数据
+│   ├── daily.json          # V1 日报（线上在用）
+│   ├── daily-v2.json       # V2 事件级数据（暂存，待验收切换）
+│   ├── featured.json       # 今日观察 + 精选编排（V2）
+│   └── dry-run/            # V2 回放 dry-run 产物
+├── scripts/                # 抓取 / 构建 / 评估脚本
+│   ├── lib/                # 共享逻辑库（过滤/合并/校验/兼容层等）
+│   ├── fetch-rss.mjs       # V1 RSS 抓取
+│   ├── build-daily-v2.mjs  # V2 生成器
+│   └── eval-filter.mjs     # 过滤评估
+├── tests/                  # Node 测试（npm test）
+├── samples/                # 标注样本 / 基线 / 回放夹具
+├── docs/                   # 项目文档
+│   ├── DATA_PROTOCOL.md    # V2 数据协议
+│   ├── V1.1_PRD.md         # 产品需求
+│   ├── V1.1_DEVELOPMENT_TASKS.md  # 开发任务清单
+│   ├── PRODUCT_PLAN.md     # 产品规划
+│   ├── WORKLOG.md          # 工作日志
+│   └── worklogs/           # 会话工作日报（gitignore）
+├── .github/workflows/      # CI（部署 + 定时抓取）
 ├── package.json
 └── README.md
 ```
