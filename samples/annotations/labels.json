@@ -1,0 +1,1017 @@
+{
+  "schemaVersion": 1,
+  "seed": 20260805,
+  "perDay": 18,
+  "note": "人工标注（阶段 A-02，AI 预标注 v1）。relevant: relevant|irrelevant；quality: high|medium|low（相关但质量低的标 low，null=未填）；topic: data/enums.json 中的 topic id（irrelevant 为 null）；duplicateOf: null 或同一事件的样本 id；isPrimary: 是否该重复组主来源（单条为 true，irrelevant 为 null）；confidence: high|medium|low（low 需人工复核）。标注规则见 samples/annotations/README.md。",
+  "createdAt": "2026-08-05T00:00:00.000Z",
+  "labels": {
+    "s0001": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 光互连平台融资，AIDC 基础设施",
+      "quality": null
+    },
+    "s0002": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "混合内存研究，芯片/存储",
+      "quality": null
+    },
+    "s0003": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "520MW BESS 项目申报",
+      "quality": null
+    },
+    "s0004": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "晶圆制造 3D 结构研究",
+      "quality": null
+    },
+    "s0005": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型评测",
+      "quality": null
+    },
+    "s0006": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型销售新闻",
+      "quality": null
+    },
+    "s0007": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "儿童电动自行车消费产品",
+      "quality": null
+    },
+    "s0008": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "加州太阳能进展研究",
+      "quality": null
+    },
+    "s0009": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "low",
+      "note": "气候/能源预测咨询，内容待复核",
+      "quality": "low"
+    },
+    "s0010": {
+      "relevant": "irrelevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "low",
+      "note": "热泵概念，与电力需求弱相关",
+      "quality": null
+    },
+    "s0011": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "笔记本消费评测",
+      "quality": null
+    },
+    "s0012": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "中国太阳能市场收缩",
+      "quality": null
+    },
+    "s0013": {
+      "relevant": "relevant",
+      "topic": "aidc-project",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 数据中心项目获批与社区反对",
+      "quality": null
+    },
+    "s0014": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "美国 50 州太阳能季度报告",
+      "quality": null
+    },
+    "s0015": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "意大利 599MW 农业光伏环评",
+      "quality": null
+    },
+    "s0016": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "GPU 硬件 DIY 改装",
+      "quality": null
+    },
+    "s0017": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "美国禁外国产逆变器（主条目）",
+      "quality": null
+    },
+    "s0018": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "固态电池技术合作",
+      "quality": null
+    },
+    "s0019": {
+      "relevant": "irrelevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "中国充电基础设施，以秒计充电时间",
+      "quality": null
+    },
+    "s0020": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "光子学精度，半导体互连研究",
+      "quality": null
+    },
+    "s0021": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "孟加拉 220MW 太阳能投标",
+      "quality": null
+    },
+    "s0022": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "乌拉圭 500MW 可再生能源计划",
+      "quality": null
+    },
+    "s0023": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "摩洛哥绿氢计划",
+      "quality": null
+    },
+    "s0024": {
+      "relevant": "relevant",
+      "topic": "data-center-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "德州 AI 数据中心与风电共址及削减",
+      "quality": null
+    },
+    "s0025": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "家庭电源促销",
+      "quality": null
+    },
+    "s0026": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "钙钛矿-CIGS 串联电池效率",
+      "quality": null
+    },
+    "s0027": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "Eolian Ohio 1.06GWh BESS 开工（主条目）",
+      "quality": null
+    },
+    "s0028": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 服务器内存芯片组",
+      "quality": null
+    },
+    "s0029": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 优化 SSD 平台",
+      "quality": null
+    },
+    "s0030": {
+      "relevant": "relevant",
+      "topic": "power-market-policy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "中国十五五碳达峰行动计划",
+      "quality": null
+    },
+    "s0031": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "Google 自研 AI 加速器与代工",
+      "quality": null
+    },
+    "s0032": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型销售数据",
+      "quality": null
+    },
+    "s0033": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "计算集群扩展 AI",
+      "quality": null
+    },
+    "s0034": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "medium",
+      "note": "Apple Silicon 消费硬件性能评测",
+      "quality": null
+    },
+    "s0035": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": "s0027",
+      "isPrimary": false,
+      "confidence": "high",
+      "note": "与 s0027 同一事件（PJM 最大电池）",
+      "quality": null
+    },
+    "s0036": {
+      "relevant": "relevant",
+      "topic": "power-market-policy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "加州碳定价收入",
+      "quality": null
+    },
+    "s0037": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "电动自行车播客",
+      "quality": null
+    },
+    "s0038": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "DAC 会议小组",
+      "quality": null
+    },
+    "s0039": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "光伏火灾后果研究",
+      "quality": null
+    },
+    "s0040": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "CoWoS 封装技术",
+      "quality": null
+    },
+    "s0041": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "medium",
+      "note": "汽车公司合并播客",
+      "quality": null
+    },
+    "s0042": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "氢气列车与电池替代，氢能/交通",
+      "quality": null
+    },
+    "s0043": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "储能公司收购后访谈",
+      "quality": null
+    },
+    "s0044": {
+      "relevant": "relevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "电网利用率政策讨论",
+      "quality": null
+    },
+    "s0045": {
+      "relevant": "relevant",
+      "topic": "data-center-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "大厂 AI 基础设施万亿美元投资",
+      "quality": null
+    },
+    "s0046": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "芯片行业周回顾",
+      "quality": null
+    },
+    "s0047": {
+      "relevant": "relevant",
+      "topic": "power-market-policy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "FERC 加速清洁能源项目命令",
+      "quality": null
+    },
+    "s0048": {
+      "relevant": "relevant",
+      "topic": "data-center-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 工厂参考设计（供电/冷却）",
+      "quality": null
+    },
+    "s0049": {
+      "relevant": "relevant",
+      "topic": "power-market-policy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "意大利零电价时段",
+      "quality": null
+    },
+    "s0050": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "小米汽车评测",
+      "quality": null
+    },
+    "s0051": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "太阳能与农田政策话题",
+      "quality": null
+    },
+    "s0052": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "德州近 1GW 太阳能项目",
+      "quality": null
+    },
+    "s0053": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "水电人才比赛",
+      "quality": null
+    },
+    "s0054": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "德国氢能战略",
+      "quality": null
+    },
+    "s0055": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型原型发布",
+      "quality": null
+    },
+    "s0056": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "整车厂制造选址",
+      "quality": null
+    },
+    "s0057": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "印尼地热公司收购评论",
+      "quality": null
+    },
+    "s0058": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "赞比亚发电能力提升，太阳能为主",
+      "quality": null
+    },
+    "s0059": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "电池换电卡车",
+      "quality": null
+    },
+    "s0060": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "车展消费新闻",
+      "quality": null
+    },
+    "s0061": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "游戏卡带新闻，完全无关",
+      "quality": null
+    },
+    "s0062": {
+      "relevant": "relevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "low",
+      "note": "公交电气化，电力需求弱相关",
+      "quality": null
+    },
+    "s0063": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "low",
+      "note": "EV 销售排行，偏汽车行业",
+      "quality": null
+    },
+    "s0064": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "电动自行车购买指南",
+      "quality": null
+    },
+    "s0065": {
+      "relevant": "relevant",
+      "topic": "gas-backup",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "AI 公司拆除涡轮发电机组，备用电源",
+      "quality": null
+    },
+    "s0066": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型试驾",
+      "quality": null
+    },
+    "s0067": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "行业高管谈太阳能混合动力与系统构建",
+      "quality": null
+    },
+    "s0068": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "游戏显示器促销",
+      "quality": null
+    },
+    "s0069": {
+      "relevant": "relevant",
+      "topic": "ppa-green-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "亚洲非洲可再生能源融资",
+      "quality": null
+    },
+    "s0070": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "EV 电池换电进入美国",
+      "quality": null
+    },
+    "s0071": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "CPU 游戏性能传闻",
+      "quality": null
+    },
+    "s0072": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "燃料电池车辆与绿氢需求",
+      "quality": null
+    },
+    "s0073": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "low",
+      "note": "欧洲 EV 销售报告，偏汽车行业",
+      "quality": null
+    },
+    "s0074": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "半导体公司 CEO 访谈",
+      "quality": null
+    },
+    "s0075": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "RTL 处理器验证研究",
+      "quality": null
+    },
+    "s0076": {
+      "relevant": "relevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AEMO 电网形成 BESS 试验",
+      "quality": null
+    },
+    "s0077": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "可折叠太阳能板研发",
+      "quality": null
+    },
+    "s0078": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "太阳能业务公司破产出售",
+      "quality": null
+    },
+    "s0079": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "low",
+      "note": "电动滑板车与换电网络，偏消费，待复核",
+      "quality": null
+    },
+    "s0080": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "电动自行车促销",
+      "quality": null
+    },
+    "s0081": {
+      "relevant": "relevant",
+      "topic": "other-energy",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "欧洲氢能网络",
+      "quality": null
+    },
+    "s0082": {
+      "relevant": "irrelevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "国产内存芯片价格",
+      "quality": null
+    },
+    "s0083": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "low",
+      "note": "趣味性 GPU 硬件实验，行业影响小",
+      "quality": null
+    },
+    "s0084": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": "s0017",
+      "isPrimary": false,
+      "confidence": "high",
+      "note": "与 s0017 同一事件（美国禁进口逆变器评论）",
+      "quality": null
+    },
+    "s0085": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "游戏主题消费电子",
+      "quality": null
+    },
+    "s0086": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "消费车型预订",
+      "quality": null
+    },
+    "s0087": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "high",
+      "note": "自动驾驶汽车技术，无能源关联",
+      "quality": null
+    },
+    "s0088": {
+      "relevant": "relevant",
+      "topic": "gas-backup",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AEP 13GW 燃气轮机发电",
+      "quality": null
+    },
+    "s0089": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "三星 SDI 美国 LFP 电池",
+      "quality": null
+    },
+    "s0090": {
+      "relevant": "relevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "PV/电池/热泵/EV 电源管理系统",
+      "quality": null
+    },
+    "s0091": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "medium",
+      "note": "GPU 消费硬件价格",
+      "quality": null
+    },
+    "s0092": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "low",
+      "note": "军用电动坦克，能源关联弱",
+      "quality": null
+    },
+    "s0093": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "家用电池融资与扩张",
+      "quality": null
+    },
+    "s0094": {
+      "relevant": "irrelevant",
+      "topic": "solar-wind",
+      "duplicateOf": "s0111",
+      "isPrimary": false,
+      "confidence": "high",
+      "note": "与 s0111 同一事件（太阳能救护车）",
+      "quality": null
+    },
+    "s0095": {
+      "relevant": "relevant",
+      "topic": "grid",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "非洲最大居民虚拟电厂",
+      "quality": null
+    },
+    "s0096": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "欧洲五国日太阳能记录",
+      "quality": null
+    },
+    "s0097": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "马萨诸塞 1000MW BESS 招标",
+      "quality": null
+    },
+    "s0098": {
+      "relevant": "relevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "641MW 光伏组件供应协议",
+      "quality": null
+    },
+    "s0099": {
+      "relevant": "relevant",
+      "topic": "aidc-project",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "数据中心成为州长竞选议题",
+      "quality": null
+    },
+    "s0100": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "下一代 QLC 闪存",
+      "quality": null
+    },
+    "s0101": {
+      "relevant": "relevant",
+      "topic": "data-center-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "Southern Co 大负荷升至 17GW",
+      "quality": null
+    },
+    "s0102": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 数据中心大功率电池",
+      "quality": null
+    },
+    "s0103": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "算力基础设施，GPU 集群成本",
+      "quality": null
+    },
+    "s0104": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "low",
+      "note": "混合拖车融资，交通领域",
+      "quality": null
+    },
+    "s0105": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "AI 内存基础设施",
+      "quality": null
+    },
+    "s0106": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "HBM 标准规格",
+      "quality": null
+    },
+    "s0107": {
+      "relevant": "relevant",
+      "topic": "chips-compute",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "DAC 会议 AI 设计小组",
+      "quality": null
+    },
+    "s0108": {
+      "relevant": "irrelevant",
+      "topic": null,
+      "duplicateOf": null,
+      "isPrimary": null,
+      "confidence": "medium",
+      "note": "GPU 消费硬件价格",
+      "quality": null
+    },
+    "s0109": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "混合光储项目融资",
+      "quality": null
+    },
+    "s0110": {
+      "relevant": "relevant",
+      "topic": "energy-storage",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "欧洲长时储能电池",
+      "quality": null
+    },
+    "s0111": {
+      "relevant": "irrelevant",
+      "topic": "solar-wind",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "high",
+      "note": "太阳能救护车原型（主条目）",
+      "quality": null
+    },
+    "s0112": {
+      "relevant": "relevant",
+      "topic": "ppa-green-power",
+      "duplicateOf": null,
+      "isPrimary": true,
+      "confidence": "medium",
+      "note": "IRENA 可再生项目融资",
+      "quality": null
+    }
+  }
+}

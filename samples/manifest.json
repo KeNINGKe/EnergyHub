@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-05T03:35:49.435Z",
+  "note": "A-01 回放测试样本：从 git 历史提取的 daily.json 快照，每天保留最新版本。",
+  "sourceRepo": "KeNINGKe/EnergyHub@main",
+  "sourceFile": "feeds/daily.json",
+  "extraction": {
+    "script": "scripts/extract-samples.mjs",
+    "args": [
+      "--days=7"
+    ],
+    "days": 7,
+    "dedupeRule": "按 date 字段（北京时间）分组，每天取提交时间最新的版本"
+  },
+  "samples": [
+    {
+      "date": "2026-07-30",
+      "file": "daily\\2026-07-30.json",
+      "commit": "915b3164ea4d05d9e79c25417ed23bc12c20fe79",
+      "commitShort": "915b316",
+      "generatedAt": "2026-07-30T06:21:07.937Z",
+      "totalSources": 34,
+      "successSources": 26,
+      "count": 62
+    },
+    {
+      "date": "2026-07-31",
+      "file": "daily\\2026-07-31.json",
+      "commit": "4926d53fdca65f6193e47d6a7f4fd9e14da3e0b1",
+      "commitShort": "4926d53",
+      "generatedAt": "2026-07-31T06:38:01.315Z",
+      "totalSources": 34,
+      "successSources": 30,
+      "count": 57
+    },
+    {
+      "date": "2026-08-01",
+      "file": "daily\\2026-08-01.json",
+      "commit": "1a40353d336b8b24206f02a215839170bdc97677",
+      "commitShort": "1a40353",
+      "generatedAt": "2026-08-01T06:22:16.655Z",
+      "totalSources": 34,
+      "successSources": 30,
+      "count": 46
+    },
+    {
+      "date": "2026-08-02",
+      "file": "daily\\2026-08-02.json",
+      "commit": "02fb1ca513a386d4a22e68a5a59f79150f8fa165",
+      "commitShort": "02fb1ca",
+      "generatedAt": "2026-08-02T06:27:23.694Z",
+      "totalSources": 34,
+      "successSources": 27,
+      "count": 7
+    },
+    {
+      "date": "2026-08-03",
+      "file": "daily\\2026-08-03.json",
+      "commit": "88848204c538061a073a332d7a3bb9db4282b07b",
+      "commitShort": "8884820",
+      "generatedAt": "2026-08-03T06:53:25.107Z",
+      "totalSources": 34,
+      "successSources": 30,
+      "count": 15
+    },
+    {
+      "date": "2026-08-04",
+      "file": "daily\\2026-08-04.json",
+      "commit": "13c4c8fbd995917ec0844935b2620e8924890299",
+      "commitShort": "13c4c8f",
+      "generatedAt": "2026-08-04T06:21:30.063Z",
+      "totalSources": 34,
+      "successSources": 30,
+      "count": 59
+    },
+    {
+      "date": "2026-08-05",
+      "file": "daily\\2026-08-05.json",
+      "commit": "0ed221a71c06cf214650ef563ae34dba572bda43",
+      "commitShort": "0ed221a",
+      "generatedAt": "2026-08-04T22:02:50.407Z",
+      "totalSources": 34,
+      "successSources": 27,
+      "count": 71
+    }
+  ],
+  "stats": {
+    "dates": 7,
+    "totalItems": 317,
+    "avgItemsPerDay": 45.3
+  }
+}

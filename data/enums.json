@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "note": "V1.1 结构化枚举单一数据源（阶段 A-05）。前端 fetch('data/enums.json')，Node 校验脚本通过 fs 读取。改动后需同步 scripts/ 中的加载逻辑与校验函数。",
+  "topics": [
+    {
+      "id": "data-center-power",
+      "label": "数据中心电力需求",
+      "description": "数据中心/算力中心的电力需求、负荷预测、供电缺口、算电协同",
+      "keywords": ["数据中心电力", "算电协同", "电力需求", "算力中心", "智算中心", "超算中心", "数据中心", "data center power", "datacenter power demand", "hyperscaler load", "AI load", "server load", "electricity demand", "power demand", "load growth"]
+    },
+    {
+      "id": "aidc-project",
+      "label": "AIDC 项目与区域布局",
+      "description": "AI 数据中心项目的选址、开工、投产与区域布局",
+      "keywords": ["数据中心项目", "智算项目", "算力基地", "机房建设", "数据产业园", "Stargate", "星门", "AI data center", "AI datacenter", "hyperscale campus", "data center project", "data center campus", "AI infrastructure project"]
+    },
+    {
+      "id": "grid",
+      "label": "电网与并网",
+      "description": "电网扩建、并网排队、输配电、变电站、特高压、调度与微电网",
+      "keywords": ["电网", "并网", "特高压", "变电站", "输配电", "智能电网", "微电网", "调度", "变压器", "grid", "grid connection", "interconnection", "grid interconnection", "transmission", "substation", "HVDC", "queue", "curtailment", "microgrid", "demand response"]
+    },
+    {
+      "id": "energy-storage",
+      "label": "储能",
+      "description": "电化学储能、长时储能、抽水蓄能、储充一体与储能市场",
+      "keywords": ["储能", "电池", "锂电池", "固态电池", "钠离子", "电化学储能", "抽水蓄能", "长时储能", "BESS", "液流电池", "储充", "光储", "风储", "储能电站", "battery", "lithium", "solid-state", "sodium-ion", "long-duration storage", "energy storage", "pumped hydro", "BESS", "flow battery", "battery energy storage", "grid-scale storage"]
+    },
+    {
+      "id": "solar-wind",
+      "label": "光伏与风电",
+      "description": "光伏、风电的项目、装机、组件价格与制造",
+      "keywords": ["光伏", "太阳能", "风电", "风能", "组件", "逆变器", "硅料", "硅片", "光伏电站", "海上风电", "陆上风电", "solar", "PV", "photovoltaic", "wind", "onshore wind", "offshore wind", "module", "inverter", "polysilicon", "wafer", "turbine"]
+    },
+    {
+      "id": "nuclear-smr",
+      "label": "核电与 SMR",
+      "description": "大型核电、小型模块化反应堆（SMR）与核燃料",
+      "keywords": ["核电", "核能", "反应堆", "SMR", "小型堆", "核燃料", "铀", "核电站", "nuclear", "reactor", "SMR", "small modular", "uranium", "nuclear power plant", "nuclear fuel"]
+    },
+    {
+      "id": "gas-backup",
+      "label": "天然气与备用电源",
+      "description": "天然气发电、燃气轮机、备用电源与柴油/燃气调峰",
+      "keywords": ["天然气", "燃气", "燃气轮机", "调峰", "备用电源", "柴油机", "气电", "LNG", "gas turbine", "natural gas", "peaker", "backup power", "diesel generator", "gas-fired", "gas generation"]
+    },
+    {
+      "id": "cooling-pue",
+      "label": "冷却、UPS 与 PUE",
+      "description": "液冷、水冷、UPS、不间断电源、PUE 与能效",
+      "keywords": ["液冷", "水冷", "风冷", "冷却", "UPS", "不间断电源", "PUE", "能效", "效率", "liquid cooling", "immersion cooling", "cooling", "UPS", "uninterruptible", "power usage effectiveness", "PUE", "energy efficiency", "efficiency"]
+    },
+    {
+      "id": "ppa-green-power",
+      "label": "绿电采购与 PPA",
+      "description": "购电协议、绿电采购、可再生能源采购与绿证",
+      "keywords": ["购电协议", "电力采购", "绿电采购", "绿电", "绿证", "PPA", "power purchase", "offtake", "renewable energy procurement", "carbon-free energy", "green certificate", "REC", "virtual PPA"]
+    },
+    {
+      "id": "power-market-policy",
+      "label": "电力市场与政策",
+      "description": "电力市场、现货市场、辅助服务、电价与政策",
+      "keywords": ["电力市场", "现货市场", "辅助服务", "电价", "容量市场", "政策", "发改委", "能源局", "碳市场", "碳交易", "electricity market", "power market", "spot market", "ancillary services", "capacity market", "price", "tariff", "policy", "regulation", "carbon market"]
+    },
+    {
+      "id": "chips-compute",
+      "label": "芯片、服务器与算力基础设施",
+      "description": "GPU、AI 芯片、服务器、半导体与算力基础设施",
+      "keywords": ["GPU", "AI芯片", "芯片", "半导体", "服务器", "晶圆", "HBM", "DRAM", "算力", "foundry", "AI chip", "GPU", "semiconductor", "wafer", "HBM", "server", "data center equipment", "compute"]
+    },
+    {
+      "id": "other-energy",
+      "label": "其他能源动态",
+      "description": "水电、氢能、燃料电池、煤炭、生物质及其他能源动态",
+      "keywords": ["氢能", "氢", "燃料电池", "电解槽", "水电", "煤炭", "煤电", "生物质", "石油", "油气", "氢", "hydrogen", "fuel cell", "electrolyzer", "hydro", "coal", "biomass", "oil", "gas"]
+    }
+  ],
+  "sourceTypes": [
+    { "id": "primary", "label": "一手来源", "description": "政府、监管机构、公司公告、项目文件等原始发布方" },
+    { "id": "media", "label": "媒体", "description": "行业媒体与综合媒体的报道" },
+    { "id": "research", "label": "研究机构", "description": "研究机构、咨询公司、行业协会的洞察与报告" },
+    { "id": "community", "label": "社区/KOL", "description": "社区、独立博主、意见领袖" }
+  ],
+  "impacts": [
+    { "id": "positive", "label": "利好" },
+    { "id": "negative", "label": "利空" },
+    { "id": "neutral", "label": "中性" },
+    { "id": "watch", "label": "待观察" },
+    { "id": "unknown", "label": "未知" }
+  ],
+  "regions": {
+    "kind": "open-with-known-set",
+    "rule": "优先输出国家或经济体；无法判断时使用「全球」或「未知」，不得根据媒体所在地猜测。",
+    "known": [
+      "全球", "未知",
+      "中国", "美国", "欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙",
+      "日本", "韩国", "印度", "澳大利亚", "加拿大", "新加坡", "马来西亚",
+      "东南亚", "中东", "沙特", "阿联酋", "拉美", "非洲", "俄罗斯"
+    ]
+  }
+}
