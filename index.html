@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Anta:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=9">
+  <link rel="stylesheet" href="assets/style.css?v=14">
 </head>
 <body>
   <header class="site-header">
@@ -18,40 +18,61 @@
   </header>
 
   <nav class="view-tabs" aria-label="视图切换">
-    <button class="view-tab active" data-tab="nav">信息源</button>
-    <button class="view-tab" data-tab="daily">日报</button>
-    <button class="view-tab" data-tab="deep">深研</button>
+    <button class="view-tab active" data-tab="featured">精选</button>
+    <button class="view-tab" data-tab="all">全部动态</button>
+    <button class="view-tab" data-tab="weekly">周报</button>
+    <button class="view-tab" data-tab="sources">信息源</button>
   </nav>
 
   <main class="container">
-    <section id="nav" class="tab-panel active" aria-labelledby="tab-nav">
+    <section id="featured" class="tab-panel active" aria-labelledby="tab-featured">
+      <div class="feed-header">
+        <h2>精选</h2>
+        <p id="featuredMeta"></p>
+      </div>
+      <div class="hot-card" id="hotListBlock" hidden>
+        <div class="hot-card-head">
+          <span class="hot-card-title">今日热点</span>
+          <span class="hot-card-meta">储能 · AIDC · 发电 优先</span>
+        </div>
+        <ol class="hot-card-list" id="hotList"></ol>
+      </div>
+      <div class="timeline" id="featuredTimeline">
+        <div class="loading-state">加载中…</div>
+      </div>
+      <div class="featured-view-all" id="featuredViewAll"></div>
+    </section>
+
+    <section id="all" class="tab-panel" aria-labelledby="tab-all">
+      <div class="feed-header">
+        <h2>全部动态</h2>
+        <p id="allMeta"></p>
+      </div>
+      <div class="timeline" id="allTimeline">
+        <div class="loading-state">加载中…</div>
+      </div>
+    </section>
+
+    <section id="weekly" class="tab-panel" aria-labelledby="tab-weekly">
+      <div class="feed-header">
+        <h2>周报</h2>
+        <p id="weeklyMeta"></p>
+      </div>
+      <div class="weekly-content" id="weeklyContent">
+        <div class="loading-state">加载中…</div>
+      </div>
+    </section>
+
+    <section id="sources" class="tab-panel" aria-labelledby="tab-sources">
       <div class="browse-layout">
-        <aside class="category-sidebar" id="categoryList">
-          <div class="loading-state">加载中…</div>
+        <aside class="category-sidebar">
+          <div id="categoryList">
+            <div class="loading-state">加载中…</div>
+          </div>
         </aside>
         <div class="sources-stage" id="sourcesArea">
           <div class="loading-state">加载中…</div>
         </div>
-      </div>
-    </section>
-
-    <section id="daily" class="tab-panel" aria-labelledby="tab-daily">
-      <div class="feed-header">
-        <h2>日报</h2>
-        <p id="dailyMeta"></p>
-      </div>
-      <div class="feed-list" id="dailyList">
-        <div class="loading-state">加载中…</div>
-      </div>
-    </section>
-
-    <section id="deep" class="tab-panel" aria-labelledby="tab-deep">
-      <div class="feed-header">
-        <h2>深研</h2>
-        <p id="deepMeta"></p>
-      </div>
-      <div class="feed-list" id="deepList">
-        <div class="loading-state">加载中…</div>
       </div>
     </section>
   </main>
@@ -61,6 +82,6 @@
     <span class="footer-credit">@Jereh-Power</span>
   </footer>
 
-  <script src="assets/app.js?v=3"></script>
+  <script src="assets/app.js?v=8"></script>
 </body>
 </html>

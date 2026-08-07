@@ -28,7 +28,8 @@ import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
 import { loadOverrides, applyOverrides } from './lib/overrides.mjs';
 import { hashId, canonicalUrl } from './lib/compat.mjs';
 import {
-  toISODate, loadSources, collectFeeds, fetchAllFeeds, translateTitles
+  toISODate, loadSources, collectFeeds, fetchAllFeeds, translateTitles,
+  loadWechatSeeds, fetchWechatSeeds
 } from './lib/fetch.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -261,6 +262,8 @@ async function main() {
 
   // ---- 线上抓取 ----
   const data = await loadSources();
+  // 若未来给公众号信源配上 url，可在这里把页面型信源纳入采集：
+  // const feeds = collectFeeds(data, { includePages: true });
   const feeds = collectFeeds(data);
   console.log(`发现 ${feeds.length} 个 RSS 源`);
   const fetched = await fetchAllFeeds(feeds);
@@ -268,7 +271,14 @@ async function main() {
   sourcesTotal = fetched.total;
   sourcesSucceeded = fetched.succeeded;
 
-  // 翻译英文标题
+  // 微信公众号文章种子（feeds/wechat-articles.json，可选）：抓未抓取的文章注入 items 流
+  const seed = await loadWechatSeeds();
+  if (seed.articles?.length) {
+    const seedItems = await fetchWechatSeeds(seed);
+    if (seedItems.length) rawItems.push(...seedItems);
+  }
+
+  // 翻译英文标题（中文标题自动跳过）
   const tr = await translateTitles(rawItems);
   console.log(`翻译: ${tr.translated} 条`);
 

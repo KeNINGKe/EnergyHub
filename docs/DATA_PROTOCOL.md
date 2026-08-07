@@ -11,6 +11,7 @@
 | `feeds/featured.json` | 今日观察 + 精选 ID 编排 | 阶段 B 生成器 |
 | `data/editorial-overrides.json` | 人工覆盖配置（可选） | 人工维护 |
 | `data/enums.json` | 主题/来源类型/影响/地区枚举 | 人工维护（阶段 A-05 固化） |
+| `feeds/wechat-articles.json` | 微信公众号文章种子（可选） | 人工维护（采集时自动回写） |
 
 ## 2. `feeds/daily.json` V2
 
@@ -135,3 +136,28 @@
 - [x] A-05 枚举固化（`data/enums.json`）
 - [x] A-06 基线记录（`samples/baseline/`）
 - [x] 完成条件「相同输入重复执行，得到结构一致、ID 稳定的输出」：`npm test` 25 项通过，覆盖 ID 稳定性与样本可复现性。
+
+## 9. `feeds/wechat-articles.json`（公众号文章种子，可选）
+
+微信公众号无公开列表页，靠「人工把值得抓的单篇文章链接丢进种子文件」补充进日报。采集时只抓 `fetched: false` 的条目，抓完自动回写 `fetched: true`；已抓取记录保留 3 天后自动清理。
+
+```jsonc
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-08-07T00:00:00.000Z",   // 最近一次回写时间（采集自动更新）
+  "articles": [
+    {
+      "sourceName": "储能与电力市场",          // 必填，将作为日报来源名
+      "url": "https://mp.weixin.qq.com/s/xxx", // 必填，mp.weixin.qq.com 单篇文章链接
+      "title": "",                             // 可选，留空则抓取后回填
+      "pubDate": null,                         // 可选 ISO，留空则解析正文日期
+      "addedAt": "2026-08-07T00:00:00.000Z",   // 加入时间（用于 3 天清理）
+      "fetched": false                         // 是否已抓取（采集自动置 true）
+    }
+  ]
+}
+```
+
+采集位置：`scripts/build-daily-v2.mjs` 线上抓取段在 `fetchAllFeeds` 之后读取并注入 items 流；实现见 `scripts/lib/fetch.mjs` 的 `loadWechatSeeds` / `saveWechatSeeds` / `fetchWechatSeeds`。
+
+> **公众号名册（2026-08-07 收集，未进 `data/sources.json`）**：公众号无公开主页可跳转，卡片无法直达，故不在信息源页展示，仅作种子文件抓取。名单：电网头条、能源新磁场、新能源产业家、创客能源、电气时代、能源新媒、蓝色碳能（电力/新能源）；SST渗透率、燃气轮机聚焦（发电）；储能与电力市场、储能头条、储能100人、兰木达电力现货、蓝海经研、阳光电源、光储星球、储能日参（储能）；AIDC储能、IDC Energy（AIDC）；华为数字能源（AI/云计算）。抓取某公众号文章时，将文章链接按本文件格式填入 `articles` 即可，`sourceName` 用上表名称。

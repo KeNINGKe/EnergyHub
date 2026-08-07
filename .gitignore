@@ -18,6 +18,9 @@ scripts/check-results.json
 # 自动生成的翻译缓存
 feeds/translation-cache.json
 
+# dry-run 构建输出（开发验证用，不进仓库）
+feeds/dry-run/
+
 # 会话工作日报导出（临时，不进仓库）
 work-summary-*.md
 work-summary-*.txt

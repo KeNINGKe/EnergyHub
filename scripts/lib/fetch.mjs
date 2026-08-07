@@ -2,8 +2,9 @@
 /**
  * RSS 抓取共享逻辑（V1 日报任务与 V2 构建器共用）。
  *
- * 提供：curlFetch、fetchFeed（含 Jina 兜底）、translateTitles、collectFeeds、
- * toISODate、withinDays、pickSummary 等。
+ * 提供：curlFetch、fetchFeed（含 Jina 兜底）、fetchPage（无 RSS 页面型抓取）、
+ * translateTitles、collectFeeds、toISODate、withinDays、pickSummary，
+ * 以及微信文章种子文件 loadWechatSeeds/saveWechatSeeds/fetchWechatSeeds 等。
  *
  * 用法：
  *   import { loadSources, collectFeeds, fetchAllFeeds, translateTitles, toISODate } from './fetch.mjs';
@@ -119,11 +120,27 @@ export async function loadSources() {
   return JSON.parse(raw);
 }
 
-export function collectFeeds(data) {
+/**
+ * 收集待抓取信源。
+ * @param {object} data sources.json 结构
+ * @param {{includePages?: boolean}} [opts] includePages=true 时才会把「无 rss 但有 url」的
+ *   页面型信源纳入采集。即便开启，也只纳入公众号（tags 含 微信公众号）或显式标记
+ *   fetchType:'page' 的信源，避免误抓普通 url 站。
+ *   返回项带 fetchType: 'rss' | 'page'，fetchFeed 据此分支。
+ */
+export function collectFeeds(data, opts = {}) {
+  const includePages = !!opts.includePages;
   const feeds = [];
   for (const cat of data.categories) {
     for (const src of cat.sources) {
-      if (src.rss) feeds.push({ ...src, category: cat.name });
+      if (src.rss) {
+        feeds.push({ ...src, category: cat.name, fetchType: 'rss' });
+      } else if (includePages && src.url) {
+        const isWechat = Array.isArray(src.tags) && src.tags.includes('微信公众号');
+        if (isWechat || src.fetchType === 'page') {
+          feeds.push({ ...src, category: cat.name, fetchType: 'page' });
+        }
+      }
     }
   }
   return feeds;
@@ -161,12 +178,186 @@ function parseJinaRSS(markdown) {
   return items.slice(0, 15);
 }
 
-async function fetchViaJina(url) {
+/**
+ * 解析 Jina 输出的「普通页面」Markdown（官网 / 聚合页 / 单篇文章页）。
+ * 解析层级：列表条目（### / ## 链接）→ 文章标题块（Title:/URL Source:/Published Time:）→ 兜底。
+ */
+export function parseJinaPage(markdown, fallbackTitle) {
+  const content = markdown.split('Markdown Content:')[1] || markdown;
+  const items = [];
+
+  // 1) 列表式：### [标题](链接) 或 ## [标题](链接)
+  const re = /^(#{2,3})\s+\[(.*?)\]\((.*?)\)\s*$/gm;
+  let m;
+  while ((m = re.exec(content)) !== null) {
+    const [, , rawTitle, link] = m;
+    items.push({
+      title: (rawTitle || slugToTitle(link)).trim(),
+      link: link.trim(),
+      pubDate: null,
+      summary: ''
+    });
+  }
+
+  // 2) 文章式：单页正文，取 Title 块 + 正文前 300 字作摘要
+  if (!items.length) {
+    const title = (markdown.match(/^Title:\s*(.+)$/m) || [])[1] || '';
+    const link = (markdown.match(/^URL Source:\s*(.+)$/m) || [])[1] || '';
+    const dateStr = (markdown.match(/^Published Time:\s*(.+)$/m) || [])[1] || null;
+    let pubDate = null;
+    if (dateStr) {
+      try { pubDate = new Date(dateStr).toISOString(); } catch {}
+    }
+    items.push({
+      title: title.trim() || (fallbackTitle ? String(fallbackTitle) : '无标题'),
+      link: link.trim(),
+      pubDate,
+      summary: content.trim().replace(/\s+/g, ' ').slice(0, 300)
+    });
+  }
+
+  return items.slice(0, 15);
+}
+
+/**
+ * 解析 Jina 输出的微信公众号文章页（mp.weixin.qq.com/s/xxx）。
+ * 标题取正文 H1（# 标题）或 Title 块；日期支持中文「2026年8月7日」与 ISO；摘要取首个长段落。
+ */
+export function parseJinaArticle(markdown, fallbackTitle) {
+  const content = markdown.split('Markdown Content:')[1] || markdown;
+
+  // 标题
+  let title = (content.match(/^#\s+(.+)$/m) || [])[1] || '';
+  if (!title) title = (markdown.match(/^Title:\s*(.+)$/m) || [])[1] || '';
+  title = title.trim() || (fallbackTitle ? String(fallbackTitle) : '无标题');
+
+  // 链接
+  const link = (markdown.match(/^URL Source:\s*(.+)$/m) || [])[1] || '';
+
+  // 日期：中文「2026年8月7日」优先，其次 Published Time 块
+  let pubDate = null;
+  const zhDate = content.match(/(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/);
+  if (zhDate) {
+    const [, y, mo, d] = zhDate;
+    const iso = `${y}-${mo.padStart(2, '0')}-${d.padStart(2, '0')}T00:00:00+08:00`;
+    try { pubDate = new Date(iso).toISOString(); } catch {}
+  }
+  if (!pubDate) {
+    const isoDate = (markdown.match(/^Published Time:\s*(.+)$/m) || [])[1];
+    if (isoDate) {
+      try { pubDate = new Date(isoDate).toISOString(); } catch {}
+    }
+  }
+
+  // 摘要：正文首个 ≥40 字的长段落，取前 300 字
+  const paras = content
+    .split(/\n{2,}/)
+    .map(p => p.replace(/^#{1,4}\s+/gm, '').replace(/[*_`>#]/g, '').trim())
+    .filter(p => p.length >= 40);
+  const summary = (paras[0] || content).replace(/\s+/g, ' ').slice(0, 300);
+
+  return [{
+    title: String(title),
+    link: link.trim(),
+    pubDate,
+    summary
+  }];
+}
+
+/** 从 HTML 中取出 id 对应的 div 完整内容（处理嵌套 div 的闭合）。 */
+function extractDivById(html, id) {
+  const marker = `id="${id}"`;
+  const k = html.indexOf(marker);
+  if (k < 0) return '';
+  const open = html.indexOf('>', k);
+  if (open < 0) return '';
+  let depth = 1;
+  let pos = open + 1;
+  let close = -1;
+  while (pos < html.length) {
+    const openDiv = html.indexOf('<div', pos);
+    const closeDiv = html.indexOf('</div>', pos);
+    if (closeDiv === -1) break;
+    if (openDiv !== -1 && openDiv < closeDiv) {
+      depth++;
+      pos = openDiv + 4;
+    } else {
+      depth--;
+      pos = closeDiv + 6;
+      if (depth === 0) { close = pos; break; }
+    }
+  }
+  return close === -1 ? '' : html.slice(open + 1, close);
+}
+
+/**
+ * 解析微信公众号文章页直连 HTML（mp.weixin.qq.com/s/xxx）。
+ * Jina 在 mp.weixin.qq.com 会被 Cloudflare 人机验证拦截，直连反而可行。
+ * 提取：og:title 标题、js_name 公众号名、正文 js_content、publish 时间。
+ * @returns {{title:string, link:string, pubDate:string|null, summary:string, author:string}|null}
+ */
+export function parseWechatArticleHtml(html, fallbackTitle) {
+  const g = re => { const m = html.match(re); return m ? m[1].trim() : ''; };
+
+  const title = g(/<meta[^>]*property="og:title"[^>]*content="([^"]*)"/) || fallbackTitle || '';
+  const link = g(/<meta[^>]*property="og:url"[^>]*content="([^"]*)"/);
+  const author = g(/id="js_name"[\s\S]{0,300}?>\s*([^<]{1,40})/);
+
+  // 发布时间：正文里首个「2026-05-26 14:39」形式
+  let pubDate = null;
+  const dt = (html.match(/\b20\d\d-\d{2}-\d{2}[ T]\d{2}:\d{2}/) || [])[0];
+  if (dt) {
+    try { pubDate = new Date(dt.replace(' ', 'T') + '+08:00').toISOString(); } catch {}
+  }
+
+  const contentHtml = extractDivById(html, 'js_content');
+  const text = contentHtml
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#\d+;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // 真实文章正文远不止 20 字；无正文（或正文为空）说明是错误页/已删除/需关注页
+  if (text.length < 20) return null;
+  return {
+    title: title || fallbackTitle || '无标题',
+    link,
+    pubDate,
+    summary: text.slice(0, 300),
+    author
+  };
+}
+
+/**
+ * 直连抓取单个微信公众号文章页。返回 item 数组（1 条）或 null。
+ */
+export async function fetchWechatArticle(url) {
+  const html = await curlFetch(url, 45);
+  const parsed = parseWechatArticleHtml(html);
+  if (!parsed) return null;
+  return [{
+    title: parsed.title,
+    link: parsed.link || url,
+    pubDate: parsed.pubDate,
+    summary: parsed.summary || '',
+    author: parsed.author || ''
+  }];
+}
+
+/** 原始 Jina 抓取：拼 URL、限速、45s 超时，返回 Markdown 文本。 */
+async function fetchViaJinaRaw(url, maxTime = 45) {
   const jinaUrl = `https://r.jina.ai/http://${url.replace(/^https?:\/\//, '')}`;
+  await sleep(1500);
+  return curlFetch(jinaUrl, maxTime);
+}
+
+async function fetchViaJina(url, mode = 'feed') {
   try {
-    await sleep(1500);
-    const text = await curlFetch(jinaUrl, 30);
-    const items = parseJinaRSS(text);
+    const text = await fetchViaJinaRaw(url);
+    const items = mode === 'page' ? parseJinaPage(text, url) : parseJinaRSS(text);
     if (!items.length) return null;
     return { items };
   } catch {
@@ -175,10 +366,54 @@ async function fetchViaJina(url) {
 }
 
 /**
+ * 抓取无 RSS 的页面型信源（公众号官网 / 聚合页 / 单篇文章）。
+ * 返回 { items, via: 'jina-page' } 或 null（失败）。
+ */
+export async function fetchPage(source) {
+  const url = source.url || source.rss;
+  if (!url) {
+    console.error(`[失败] ${source.name}: 无抓取入口 url`);
+    return null;
+  }
+  try {
+  const isWechatArticle = /mp\.weixin\.qq\.com\/s\//i.test(url);
+  let items = null;
+  if (isWechatArticle) {
+    // 微信只走直连（Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，无有效兜底）
+    items = await fetchWechatArticle(url);
+  } else {
+    const text = await fetchViaJinaRaw(url);
+    items = parseJinaPage(text, source.name);
+  }
+  if (!items || !items.length) {
+    console.error(`[失败] ${source.name}: 抓取 ${url} 无结果`);
+    return null;
+  }
+    const mapped = items.slice(0, 15).map(item => ({
+      title: item.title || '无标题',
+      link: item.link || url,
+      guid: item.link || item.guid || url,
+      pubDate: item.pubDate || null,
+      summary: item.summary || '',
+      source: source.name,
+      sourceUrl: source.url
+    }));
+    console.log(`[成功 (Jina 页面)] ${source.name}: ${mapped.length} 条`);
+    return { items: mapped, via: 'jina-page' };
+  } catch (err) {
+    console.error(`[失败] ${source.name}: ${err.message}`);
+    return null;
+  }
+}
+
+/**
  * 抓取单个 feed。返回 { items, via } 或 null（失败）。
+ * fetchType==='page' 时走 Jina 页面抓取；否则走 RSS（失败降级 Jina）。
  * item 字段：title, link, pubDate, summary, source, sourceUrl, guid
  */
 export async function fetchFeed(source) {
+  if (source.fetchType === 'page') return fetchPage(source);
+
   let via = 'direct';
   let rawItems = [];
   try {
@@ -228,4 +463,86 @@ export async function fetchAllFeeds(feeds) {
     }
   }
   return { items, succeeded, failed, total: feeds.length };
+}
+
+// ---- 微信公众号文章种子文件 ----
+// feeds/wechat-articles.json 由用户按需维护：有值得抓的公众号文章链接就丢进去，
+// 采集时只抓未抓取（fetched=false）的条目，抓完回写标记；已抓取记录保留 3 天。
+export const WECHAT_SEEDS_PATH = 'feeds/wechat-articles.json';
+
+/** 支持测试用环境变量覆盖路径。 */
+function seedsPath() {
+  return process.env.WECHAT_SEEDS_PATH || WECHAT_SEEDS_PATH;
+}
+
+export async function loadWechatSeeds() {
+  try {
+    const raw = JSON.parse(await fs.readFile(seedsPath(), 'utf8'));
+    return { version: raw.version || '1.0.0', updatedAt: raw.updatedAt || null, articles: raw.articles || [] };
+  } catch {
+    return { version: '1.0.0', updatedAt: null, articles: [] };
+  }
+}
+
+export async function saveWechatSeeds(seed) {
+  await fs.writeFile(seedsPath(), JSON.stringify(seed, null, 2) + '\n');
+}
+
+/**
+ * 抓取种子文件中的未抓取公众号文章，抓完回写 fetched 标记，并清理 3 天前的已抓取记录。
+ * @returns {Promise<Array>} 本次新增抓取的 item 流（可注入 rawItems）
+ */
+export async function fetchWechatSeeds(seed) {
+  const items = [];
+  const now = new Date();
+  const cutoff = now.getTime() - 3 * 24 * 60 * 60 * 1000;
+  const remaining = [];
+  let done = 0;
+  let pruned = 0;
+
+  for (const a of seed.articles || []) {
+    if (a.fetched) {
+      const added = a.addedAt ? new Date(a.addedAt).getTime() : 0;
+      if (!isNaN(added) && added >= cutoff) remaining.push(a);
+      else pruned++;
+      continue;
+    }
+    if (!a.url) { remaining.push(a); continue; }
+    try {
+      // 微信只走直连：Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，兜底只会注入验证页垃圾
+      const parsed = await fetchWechatArticle(a.url);
+      if (!parsed || !parsed.length) {
+        // 页面可访问但无有效正文（已删除/失效/需关注）：标记 fetched，避免每次构建重试
+        a.fetched = true;
+        console.warn(`[微信] ${a.url.slice(0, 60)} 无有效正文，已标记跳过`);
+      } else {
+        for (const it of parsed) {
+          items.push({
+            title: it.title,
+            link: it.link || a.url,
+            guid: a.url,
+            pubDate: it.pubDate || a.pubDate || null,
+            summary: it.summary || '',
+            source: a.sourceName || '微信公众号',
+            sourceUrl: null
+          });
+        }
+        if (!a.title && parsed[0]?.title) a.title = parsed[0].title;
+        if (!a.pubDate && parsed[0]?.pubDate) a.pubDate = parsed[0].pubDate;
+        a.fetched = true;
+        done++;
+      }
+    } catch (err) {
+      // 网络错误：不标记，下次构建重试
+      console.error(`[微信抓取失败] ${a.url.slice(0, 60)}: ${err.message}`);
+    }
+    remaining.push(a);
+    await sleep(1200);
+  }
+
+  if (items.length || done || pruned) {
+    await saveWechatSeeds({ version: '1.0.0', updatedAt: now.toISOString(), articles: remaining });
+    console.log(`[微信公众号种子] 本次新抓 ${done} 条 → 注入 ${items.length} 条，清理过期 ${pruned} 条（保留 ${remaining.length} 条记录）`);
+  }
+  return items;
 }
