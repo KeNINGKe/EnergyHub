@@ -400,41 +400,6 @@ function renderHotList(events) {
       </li>`).join('');
 }
 
-/* ===== 微信公众号区块 ===== */
-function renderWechatBlock() {
-  const block = $('#wechatBlock');
-  if (!block) return;
-  const wechatEvents = state.allEvents.filter(ev => ev.wechat === true);
-  if (!wechatEvents.length) {
-    block.hidden = true;
-    return;
-  }
-  $('#wechatList').innerHTML = wechatEvents.map(renderWechatCard).join('');
-  block.hidden = false;
-}
-
-function renderWechatCard(ev) {
-  const url = ev.url || ev.link || '#';
-  const t = new Date(ev.publishedAt || ev.pubDate || ev.isoDate || ev.date);
-  const valid = !isNaN(t.getTime());
-  const dateStr = valid ? `${t.getMonth() + 1}月${t.getDate()}日` : '';
-  const time = valid ? t.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', hour12: false }) : '';
-  const src = typeof ev.source === 'string' ? ev.source : (ev.source && ev.source.name) || '微信公众号';
-  const topic = ev.topic ? getTopicLabel(ev.topic) : '';
-  const summary = ev.summary ? `<p class="wechat-card-summary">${escapeHtml(truncate(ev.summary, 140))}</p>` : '';
-  return `
-      <li class="wechat-card">
-        <a class="wechat-card-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(ev.title || ev.translatedTitle || '')}</a>
-        <div class="wechat-card-meta">
-          <span class="wechat-card-src">${escapeHtml(src)}</span>
-          ${topic ? `<span class="wechat-card-topic">${escapeHtml(topic)}</span>` : ''}
-          ${dateStr ? `<span class="wechat-card-time">${dateStr}${time ? ' ' + time : ''}</span>` : ''}
-          <span class="wechat-card-score">${formatScore(ev.importance)}</span>
-        </div>
-        ${summary}
-      </li>`;
-}
-
 /* ===== 精选页（C-03 ~ C-08） ===== */
 function renderFeatured() {
   const meta = $('#featuredMeta');
@@ -453,13 +418,10 @@ function renderFeatured() {
     hotBlock.hidden = true;
   }
 
-  // 微信公众号区块：当日数据里所有微信文章单独列出，避免被埋没
-  renderWechatBlock();
-
   const timelineEl = $('#featuredTimeline');
   const featuredIds = new Set(state.featured ? (state.featured.featuredEventIds || []) : []);
-  // 精选页只展示每日精选的条目（featuredEventIds）；微信文章已在公众号区块展示，这里排除避免重复
-  const featuredEvents = state.allEvents.filter(ev => featuredIds.has(ev.id) && !ev.wechat);
+  // 精选页只展示每日精选的条目（featuredEventIds）；微信文章同样进时间线（带公众号徽章），不单独分区
+  const featuredEvents = state.allEvents.filter(ev => featuredIds.has(ev.id));
   if (featuredEvents.length) {
     timelineEl.innerHTML = renderTimeline(featuredEvents, featuredIds);
   } else {
