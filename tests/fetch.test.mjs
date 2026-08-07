@@ -4,7 +4,8 @@ import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import {
-  collectFeeds, parseJinaArticle, parseJinaPage, parseWechatArticleHtml, loadSources, fetchWechatSeeds
+  collectFeeds, parseJinaArticle, parseJinaPage, parseWechatArticleHtml, loadSources, fetchWechatSeeds,
+  isWechatArticleUrl, parseGenericPageHtml
 } from '../scripts/lib/fetch.mjs';
 
 const data = await loadSources();
@@ -80,6 +81,28 @@ test('parseJinaArticle：标题缺失时用 fallbackTitle', () => {
   const md = `Markdown Content:\n正文内容。`.replace('正文内容。', '仅正文，无标题块。');
   const [it] = parseJinaArticle(md, '储能头条');
   assert.equal(it.title, '储能头条');
+});
+
+test('isWechatArticleUrl：识别 mp.weixin 短链与参数式，转载站为 false', () => {
+  assert.equal(isWechatArticleUrl('https://mp.weixin.qq.com/s/Hr5WTdxaYIyZQmBwhrsjrA'), true, '短链 /s/ 识别');
+  assert.equal(isWechatArticleUrl('https://mp.weixin.qq.com/s?__biz=MzIxMTYwNjMwMw==&mid=2247552149'), true, '参数式 /s? 识别');
+  assert.equal(isWechatArticleUrl('https://chuneng.bjx.com.cn/html/20260807/135000.shtml'), false, '转载站 URL 不是微信');
+  assert.equal(isWechatArticleUrl('https://mp.weixin.qq.com/mp/profile_ext?action=home'), false, '非文章页不是微信文章');
+});
+
+test('parseGenericPageHtml：转载站直连兜底解析（og:title/<title> + 正文）', () => {
+  const [it] = parseGenericPageHtml(
+    '<html><head><meta property="og:title" content="北极星储能网转载文章"/><title>备用标题</title></head>' +
+    '<body><nav>导航链接</nav><div>正文第一段储能相关内容，足够长以便提取摘要。</div></body></html>',
+    '兜底'
+  );
+  assert.equal(it.title, '北极星储能网转载文章', '优先 og:title');
+  assert.ok(it.summary.includes('储能相关内容'), '提取正文摘要');
+
+  const [it2] = parseGenericPageHtml('<html><head><title>仅标题页</title></head><body><p>内容略。</p></body></html>', '兜底');
+  assert.equal(it2.title, '仅标题页', '无 og:title 时用 <title>');
+
+  assert.equal(parseGenericPageHtml('<html><body>空页</body></html>', ''), null, '无标题且无正文 → null');
 });
 
 test('parseJinaPage：列表页（### 链接）', () => {

@@ -65,6 +65,11 @@ export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+/** 是否为微信公众号单篇文章 URL（mp.weixin.qq.com/s/xxx 或 /s?__biz=... 参数式）。 */
+export function isWechatArticleUrl(url) {
+  return /mp\.weixin\.qq\.com\/s(\/|\?)/i.test(url);
+}
+
 export function isEnglishTitle(text) {
   return !!text && /[a-zA-Z]/.test(text) && !/[一-鿿]/.test(text);
 }
@@ -332,6 +337,30 @@ export function parseWechatArticleHtml(html, fallbackTitle) {
 }
 
 /**
+ * 通用网页 HTML 解析（转载站 Jina 失败时的直连兜底）。
+ * 提取 og:title/<title> + 正文前 300 字。无标题且正文 <20 字 → null。
+ */
+export function parseGenericPageHtml(html, fallbackTitle) {
+  const g = re => { const m = html.match(re); return m ? m[1].trim() : ''; };
+  const title = g(/<meta[^>]*property="og:title"[^>]*content="([^"]*)"/) || g(/<title>([^<]*)<\/title>/) || fallbackTitle || '';
+  const text = html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#\d+;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!title && text.length < 20) return null;
+  return [{
+    title: title || fallbackTitle || '无标题',
+    link: '',
+    pubDate: null,
+    summary: text.slice(0, 300)
+  }];
+}
+
+/**
  * 直连抓取单个微信公众号文章页。返回 item 数组（1 条）或 null。
  */
 export async function fetchWechatArticle(url) {
@@ -376,7 +405,7 @@ export async function fetchPage(source) {
     return null;
   }
   try {
-  const isWechatArticle = /mp\.weixin\.qq\.com\/s(\/|\?)/i.test(url);
+  const isWechatArticle = isWechatArticleUrl(url);
   let items = null;
   if (isWechatArticle) {
     // 微信只走直连（Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，无有效兜底）
@@ -509,12 +538,27 @@ export async function fetchWechatSeeds(seed) {
     }
     if (!a.url) { remaining.push(a); continue; }
     try {
-      // 微信只走直连：Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，兜底只会注入验证页垃圾
-      const parsed = await fetchWechatArticle(a.url);
+      const isWechatUrl = isWechatArticleUrl(a.url);
+      let parsed = null;
+      if (isWechatUrl) {
+        // 微信只走直连：Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，兜底只会注入验证页垃圾
+        parsed = await fetchWechatArticle(a.url);
+      } else {
+        // 转载站（北极星/碳索储能等）：优先 Jina 页面解析，失败降级直连 + 通用 HTML 解析
+        // （腾讯新闻/中国发展网等拦截 Jina，但直连可访问）。抓到的内容仍按公众号来源处理
+        let text = null;
+        try { text = await fetchViaJinaRaw(a.url); } catch {}
+        if (text && /Markdown Content:|^Title:/m.test(text)) {
+          parsed = parseJinaPage(text, a.title || a.sourceName || a.url);
+        } else {
+          const html = await curlFetch(a.url, 45);
+          parsed = parseGenericPageHtml(html, a.title || a.sourceName || a.url);
+        }
+      }
       if (!parsed || !parsed.length) {
         // 页面可访问但无有效正文（已删除/失效/需关注）：标记 fetched，避免每次构建重试
         a.fetched = true;
-        console.warn(`[微信] ${a.url.slice(0, 60)} 无有效正文，已标记跳过`);
+        console.warn(`[微信/转载] ${a.url.slice(0, 60)} 无有效正文，已标记跳过`);
       } else {
         for (const it of parsed) {
           items.push({
@@ -535,7 +579,7 @@ export async function fetchWechatSeeds(seed) {
       }
     } catch (err) {
       // 网络错误：不标记，下次构建重试
-      console.error(`[微信抓取失败] ${a.url.slice(0, 60)}: ${err.message}`);
+      console.error(`[微信/转载抓取失败] ${a.url.slice(0, 60)}: ${err.message}`);
     }
     remaining.push(a);
     await sleep(1200);
