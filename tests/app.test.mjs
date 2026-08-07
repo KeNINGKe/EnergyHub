@@ -8,10 +8,14 @@ const APP = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8')
 /* 加载 app.js（去掉 init 自启动），导出优先级相关纯函数 */
 function loadPriority() {
   const code = APP.replace(/\ninit\(\);?\s*$/, '') + `
-    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, isNorthAmerica, isNuclear };
+    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, isNorthAmerica, isNuclear, renderWechatCard, renderWechatBlock, state };
   `;
+  const els = new Map();
   const ctx = vm.createContext({
-    document: { querySelector: () => null, querySelectorAll: () => [] },
+    document: {
+      querySelector: (sel) => { if (!els.has(sel)) els.set(sel, { innerHTML: '', textContent: '', hidden: false }); return els.get(sel); },
+      querySelectorAll: () => []
+    },
     location: { hash: '#featured' },
     history: { replaceState() {} },
     fetch: () => Promise.reject(new Error('fetch stub 未覆盖')),
@@ -19,7 +23,7 @@ function loadPriority() {
   });
   vm.runInContext(code, ctx);
   ctx.window = ctx;
-  return ctx.__p;
+  return { ...ctx.__p, __els: els };
 }
 
 const ev = (over) => ({ title: 't', summary: 's', importance: 0.5, region: '未知', topic: 'other-energy', ...over });
@@ -98,4 +102,27 @@ test('sortChronological：纯时间倒序，最新在前，与优先级序无关
   ];
   const sorted = t.sortChronological(events);
   assert.deepEqual(Array.from(sorted, e => e.id), ['new', 'mid', 'old']);
+});
+
+test('renderWechatBlock：微信文章独立成块渲染，无微信时隐藏', () => {
+  const t = loadPriority();
+  t.state.topicMap = { 'energy-storage': '储能' };
+  t.state.allEvents = [
+    ev({ id: 'w', wechat: true, title: '微信储能文章', url: 'https://mp.weixin.qq.com/s/x',
+        source: '储能100人', summary: '正文摘要', importance: 0.8, topic: 'energy-storage',
+        publishedAt: '2026-08-07T03:00:00Z' }),
+    ev({ id: 'n', wechat: false, title: '普通新闻', importance: 0.5 })
+  ];
+  t.renderWechatBlock();
+  assert.equal(t.__els.get('#wechatBlock').hidden, false, '有微信文章时显示区块');
+  const listHtml = t.__els.get('#wechatList').innerHTML;
+  assert.ok(listHtml.includes('微信储能文章'), '块内包含微信标题');
+  assert.ok(listHtml.includes('储能100人'), '块内包含公众号名');
+  assert.ok(listHtml.includes('储能'), '块内包含主题标签');
+  assert.ok(listHtml.includes('mp.weixin.qq.com'), '块内链接指向微信原文');
+
+  // 无微信事件 → 区块隐藏
+  t.state.allEvents = [ev({ id: 'n', wechat: false, title: '普通新闻', importance: 0.5 })];
+  t.renderWechatBlock();
+  assert.equal(t.__els.get('#wechatBlock').hidden, true, '无微信文章时隐藏区块');
 });

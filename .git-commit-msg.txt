@@ -1,0 +1,6 @@
+feat(feed): 封杀电动汽车内容，精选页新增微信公众号独立区块
+
+- filters.json negative 增加电动汽车/电动车/纯电/插混/增程/混动/EV/electric vehicle|car|pickup|truck|suv 等词，移除「电动车-充换电-基建」组合分组；重建后 8 条 EV 文章全部消失
+- 精选页新增「微信公众号文章」区块（今日热点下方），所有 wechat:true 文章独立列出，主时间线排除微信文章避免重复
+- 根因修复：种子文章 fetched:true 无 addedAt → 下一次构建即被清理，微信内容一次性消失；重置 fetched + 补 addedAt，重建后微信文章重新注入并置顶今日观察
+- 测试 +2（renderWechatBlock、EV 封杀），全量 144 通过

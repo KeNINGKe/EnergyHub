@@ -27,8 +27,13 @@ test('组合词：EV 消费车评不相关（只有单个 EV 词）', () => {
   assert.equal(classify('2027 Chevrolet Blazer EV 配置升级价格不变', filters).relevant, false);
 });
 
-test('组合词：EV + 充电设施相关', () => {
-  assert.equal(classify('EV charging network deploys 500+ fast chargers', filters).relevant, true);
+test('负面词：电动汽车内容全部封杀（EV + 充电设施也不再放行）', () => {
+  const r = classify('EV charging network deploys 500+ fast chargers', filters);
+  assert.equal(r.relevant, false);
+  assert.match(r.reason, /负面词:/);
+  assert.equal(classify('比亚迪纯电动新车发布', filters).relevant, false);
+  assert.equal(classify('纽约市安装 600 个电动汽车充电站', filters).relevant, false);
+  assert.equal(classify('electric vehicle sales surging', filters).relevant, false);
 });
 
 test('通用词：单个泛词不相关', () => {

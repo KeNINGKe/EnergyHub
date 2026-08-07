@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-07",
-  "generatedAt": "2026-08-07T03:47:43.198Z",
+  "generatedAt": "2026-08-07T05:54:12.467Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 34,
     "sourcesSucceeded": 34,
     "articlesFetched": 396,
-    "eventsPublished": 122
+    "eventsPublished": 114
   },
   "items": [
     {
@@ -43,7 +43,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [
         {
           "name": "Electrek",
@@ -58,6 +58,10 @@
           "url": "https://www.pv-magazine.com/2026/08/06/finnish-push-for-data-center-flexibility/"
         },
         {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/gentari-australia-reaches-mechanical-completion-at-243mwp-solar-plus-storage-project/"
+        },
+        {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/orsted-puts-500mwh-old-300-texas-bess-into-operation/"
         },
@@ -66,36 +70,6 @@
           "url": "https://www.energy-storage.news/ampyr-australia-bags-5-3-4-letter-for-270mw-grid-forming-battery-storage-system/"
         }
       ],
-      "wechat": false
-    },
-    {
-      "id": "evt_b1befb293903",
-      "title": "这款1.5兆瓦电动卡车充电器刚刚克服了美国的一个关键障碍",
-      "originalTitle": "This 1.5 MW electric truck charger just cleared a key US hurdle",
-      "url": "https://electrek.co/2026/08/06/this-1-5-mw-electric-truck-charger-just-cleared-a-key-us-hurdle/",
-      "summary": "Portuguese EV charging company i-charging has cleared a key hurdle for bringing its 1.5-megawatt (MW) electric truck charger to the US and…",
-      "whyItMatters": "关键数字 1.5MW；地区 美国；媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "This",
-          "value": 1.5,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T18:58:32.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
       "wechat": false
     },
     {
@@ -129,7 +103,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -169,7 +143,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -209,7 +183,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T09:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -239,7 +213,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T08:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -269,7 +243,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -309,26 +283,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:42:52.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_c2951b6ad9a3",
-      "title": "澳大利亚钒，美国铝业公司为西澳大利亚州氧化铝炼油厂评估50-80MW钒液流电池",
-      "originalTitle": "Australian Vanadium, Alcoa evaluate 50-80MW vanadium flow battery for WA alumina refineries",
-      "url": "https://www.energy-storage.news/australian-vanadium-alcoa-evaluate-50-80mw-vanadium-flow-battery-for-wa-alumina-refineries/",
-      "summary": "Australian Vanadium Limited has signed an MoU with Alcoa to evaluate the deployment of vanadium flow battery technology in Western Australi…",
-      "whyItMatters": "储能；关键数字 80MW；地区 澳大利亚；媒体 Energy Storage News",
+      "id": "evt_eeb230adca9f",
+      "title": "ZEBRE submits 180MW BESS to Australia’s EPBC Act as ZEN Energy administration fails to slow pipeline",
+      "originalTitle": "ZEBRE submits 180MW BESS to Australia’s EPBC Act as ZEN Energy administration fails to slow pipeline",
+      "url": "https://www.energy-storage.news/zebre-submits-180mw-bess-to-australias-epbc-act-as-zen-energy-administration-fails-to-slow-pipeline/",
+      "summary": "ZEBRE has submitted the 180MW/360MWh Noblevale Battery in Queensland for federal environmental assessment under the EPBC Act.",
+      "whyItMatters": "储能；关键数字 180MW、360MWh；地区 澳大利亚；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
       "region": "澳大利亚",
       "entities": [],
       "metrics": [
         {
-          "label": "Alcoa evaluate 50-",
-          "value": 80,
+          "label": "ZEBRE submits",
+          "value": 180,
           "unit": "MW"
+        },
+        {
+          "label": "submitted the 180MW/",
+          "value": 360,
+          "unit": "MWh"
         }
       ],
       "impact": "unknown",
@@ -338,8 +317,8 @@
         "type": "media",
         "isPrimary": true
       },
-      "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "publishedAt": "2026-08-07T03:53:20.000Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -369,7 +348,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:00:33.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -399,7 +378,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:36:16.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -429,7 +408,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:32:08.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -456,7 +435,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -486,7 +465,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -512,39 +491,13 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:24:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [
         {
           "name": "CleanTechnica",
           "url": "https://cleantechnica.com/2026/08/06/donald-trump-pays-off-5th-energy-company-in-attack-on-renewable-energy/"
         }
       ],
-      "wechat": false
-    },
-    {
-      "id": "evt_a1e86024265f",
-      "title": "比亚迪只卖廉价电动汽车？看看这个$ 216,000阳旺",
-      "originalTitle": "BYD Just Sells Cheap EVs? Check Out This $216,000 Yangwang",
-      "url": "https://cleantechnica.com/2026/08/06/byd-just-sells-cheap-evs-check-out-this-216000-yangwang/",
-      "summary": "People often think of Chinese cars being cheap. There is a full blown EV revolution underway in China, and many of the electric car models…",
-      "whyItMatters": "关联 BYD；地区 中国；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "中国",
-      "entities": [
-        "BYD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T13:50:12.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
       "wechat": false
     },
     {
@@ -570,7 +523,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:12:42.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -600,7 +553,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -630,7 +583,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T15:09:05.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -660,7 +613,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:32:19.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -690,7 +643,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:06:20.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -735,37 +688,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T11:33:32.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9ecbd2f6071b",
-      "title": "DYCM secures funding for 1GW module assembly plant in California",
-      "originalTitle": "DYCM secures funding for 1GW module assembly plant in California",
-      "url": "https://www.pv-tech.org/dycm-secures-funding-for-1gw-module-assembly-plant-in-california/",
-      "summary": "US module manufacturer DYCM Solar Modules has closed an investment round to fund the growth of its business and its solar module assembly p…",
-      "whyItMatters": "光伏与风电；关键数字 1GW；地区 美国；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "secures funding for",
-          "value": 1,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T09:54:05.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -791,7 +714,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:07:46.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -821,13 +744,43 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T09:32:32.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/zelestra-centrica-energy-agree-toll-99mw-297mwh-germany-bess/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_c2951b6ad9a3",
+      "title": "澳大利亚钒，美国铝业公司为西澳大利亚州氧化铝炼油厂评估50-80MW钒液流电池",
+      "originalTitle": "Australian Vanadium, Alcoa evaluate 50-80MW vanadium flow battery for WA alumina refineries",
+      "url": "https://www.energy-storage.news/australian-vanadium-alcoa-evaluate-50-80mw-vanadium-flow-battery-for-wa-alumina-refineries/",
+      "summary": "Australian Vanadium Limited has signed an MoU with Alcoa to evaluate the deployment of vanadium flow battery technology in Western Australi…",
+      "whyItMatters": "储能；关键数字 80MW；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Alcoa evaluate 50-",
+          "value": 80,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T04:07:15.000Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -856,7 +809,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T11:04:35.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -886,47 +839,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T10:31:52.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f6f88cc342dd",
-      "title": "日本：东京燃气公司承购200MWh福岛BESS ， Eku Energy接近完成第一个项目",
-      "originalTitle": "Japan: Tokyo Gas enters offtake for 200MWh Fukushima BESS, Eku Energy nears completion of first project",
-      "url": "https://www.energy-storage.news/japan-tokyo-gas-enters-offtake-for-200mwh-fukushima-bess-eku-energy-nears-completion-of-first-project/",
-      "summary": "Japanese utility Tokyo Gas has entered into a long-term offtake agreement for a 49.7MW/202.1MWh battery storage project in Fukushima Prefec…",
-      "whyItMatters": "储能；关键数字 200MWh、49.7MW、202.1MWh；地区 日本；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "日本",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "enters offtake for",
-          "value": 200,
-          "unit": "MWh"
-        },
-        {
-          "label": "agreement for a",
-          "value": 49.7,
-          "unit": "MW"
-        },
-        {
-          "label": "for a 49.7MW/",
-          "value": 202.1,
-          "unit": "MWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T05:35:14.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -956,7 +869,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -982,7 +895,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:45:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1015,7 +928,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1051,7 +964,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1083,7 +996,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1109,7 +1022,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:51:13.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1135,7 +1048,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:30:35.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1161,7 +1074,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:09:42.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1187,7 +1100,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:08:43.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1213,7 +1126,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:03:25.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1239,7 +1152,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:00:57.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1265,7 +1178,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:52:11.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1291,7 +1204,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:11:09.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1328,7 +1241,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1354,7 +1267,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1387,7 +1300,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1419,7 +1332,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1461,7 +1374,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-05-26T06:39:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -1485,7 +1398,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1509,7 +1422,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1533,7 +1446,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1557,7 +1470,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1581,7 +1494,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1605,7 +1518,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1631,31 +1544,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f22d68868858",
-      "title": "New Zealand Electric Vehicle Market Rises from the Depths! (CHARTS)",
-      "originalTitle": "New Zealand Electric Vehicle Market Rises from the Depths! (CHARTS)",
-      "url": "https://cleantechnica.com/2026/08/06/new-zealand-electric-vehicle-market-rises-from-the-depths-charts/",
-      "summary": "Once touted as a possible “Norway of the Pacific,” New Zealand’s electric vehicle transition was stopped in its tracks by a change of gover…",
-      "whyItMatters": "媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T03:06:41.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1679,55 +1568,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:51:35.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8e3e71f6a0dc",
-      "title": "全新福特Fathom电动皮卡，价格仅（支票） $ 28,350建议零售价",
-      "originalTitle": "Get Your Hands On The New Ford Fathom Electric Pickup Truck For Just (Checks Notes) $28,350 MSRP",
-      "url": "https://cleantechnica.com/2026/08/06/ford-fathom-electric-pickup-truck-ev-affordable/",
-      "summary": "Ford is still playing its forthcoming midsized electric pickup truck close to the vest, but the EV finally has a name: Fathom. The post Get…",
-      "whyItMatters": "媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T22:08:16.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_406d1630115b",
-      "title": "英国司机因“我的电动汽车疯了！”骗局被判入狱",
-      "originalTitle": "UK Driver Jailed After “My EV Went Crazy!” Scam",
-      "url": "https://cleantechnica.com/2026/08/06/uk-driver-jailed-after-my-ev-went-crazy-scam/",
-      "summary": "On March 6, 2024, Nathan Owen, a resident of the UK, phoned police and told them his Jaguar I-Pace electric car had gone berserk on a motor…",
-      "whyItMatters": "地区 英国；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "英国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T20:19:25.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1751,79 +1592,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T06:50:39.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e2a99eceed15",
-      "title": "纽约市正在路边安装600个新的电动汽车充电站",
-      "originalTitle": "NYC is putting 600 new EV charging points right at the curb",
-      "url": "https://electrek.co/2026/08/06/nyc-is-putting-600-new-ev-charging-points-right-at-the-curb/",
-      "summary": "New York City is going to install 600 new curbside EV charging points across all five boroughs, expanding its network from just 88 Level 2…",
-      "whyItMatters": "媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T22:25:51.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_39bbb539993f",
-      "title": "2027年丰田C-HR电动车定价现已上线，起价为$ 37,080",
-      "originalTitle": "2027 Toyota C-HR EV pricing is here, starting at $37,080",
-      "url": "https://electrek.co/2026/08/06/2027-toyota-c-hr-ev-pricing-starting-37080/",
-      "summary": "Toyota announced prices for the 2027 C-HR start at $37,080, or $2,100 more than its first electric SUV.",
-      "whyItMatters": "电力市场与政策；媒体 Electrek",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T18:32:15.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6b814e27cbbc",
-      "title": "福特经济实惠的电动汽车皮卡车名为Fathom ，起价为$ 28,350",
-      "originalTitle": "Ford’s affordable EV pickup is named Fathom, and it will start at $28,350",
-      "url": "https://electrek.co/2026/08/06/fords-affordable-ev-pickup-named-fathom-priced-from-28350/",
-      "summary": "Ford revealed that its affordable midsize electric pickup will be named Fathom, with prices starting at just $28,350.",
-      "whyItMatters": "电力市场与政策；媒体 Electrek",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T13:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1853,7 +1622,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1883,7 +1652,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f3c8e7b70c37",
+      "title": "Australia’s data centre energy rules take shape as AEMC publishes framework and NSW moves to control grid access",
+      "originalTitle": "Australia’s data centre energy rules take shape as AEMC publishes framework and NSW moves to control grid access",
+      "url": "https://www.pv-tech.org/australias-data-centre-energy-rules-take-shape-as-aemc-publishes-framework-and-nsw-moves-to-control-grid-access/",
+      "summary": "Australia's AEMC sets a renewable energy framework for data centres as NSW introduces REZ-style legislation to control grid access and cost…",
+      "whyItMatters": "电网与并网；地区 澳大利亚；媒体 PV-Tech",
+      "topic": "grid",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T03:57:01.000Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1907,7 +1700,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:00:35.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1931,7 +1724,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:50:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1955,7 +1748,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:34:16.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1979,7 +1772,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T02:56:46.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2003,7 +1796,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T00:25:07.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2033,7 +1826,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2057,7 +1850,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:00:22.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2081,7 +1874,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:00:18.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2105,7 +1898,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:36.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2129,7 +1922,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:17.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2153,7 +1946,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:33.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2177,7 +1970,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:11.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2201,7 +1994,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:01:02.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2225,7 +2018,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T10:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2251,7 +2044,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2286,7 +2079,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2310,7 +2103,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2334,7 +2127,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2358,7 +2151,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2382,7 +2175,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2406,7 +2199,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2430,7 +2223,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T16:50:30.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3a9c8589311d",
+      "title": "欧洲国家从风能和太阳能增长中削减了数百亿欧元的化石燃料进口",
+      "originalTitle": "European Countries Cut Tens of Billions of Euros of Fossil Fuel Imports from Wind & Solar Power Growth",
+      "url": "https://cleantechnica.com/2026/08/05/european-countries-cut-tens-of-billions-of-euros-of-fossil-fuel-imports-from-wind-solar-power-growth/",
+      "summary": "I wrote a handful of articles last month on the 75th edition of the Statistical Review of World Energy. There was one more thing in there t…",
+      "whyItMatters": "光伏与风电；地区 全球；媒体 CleanTechnica",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T02:30:19.000Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2456,7 +2273,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2482,7 +2299,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2508,7 +2325,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2535,7 +2352,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2564,7 +2381,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2591,7 +2408,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2618,7 +2435,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2644,7 +2461,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2670,7 +2487,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2696,7 +2513,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2722,7 +2539,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2746,7 +2563,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2772,7 +2589,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
@@ -2803,7 +2620,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2829,7 +2646,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2856,7 +2673,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2882,7 +2699,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2908,7 +2725,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2934,7 +2751,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2958,7 +2775,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2982,7 +2799,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3006,7 +2823,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3030,7 +2847,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3054,7 +2871,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3078,7 +2895,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3102,7 +2919,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3126,7 +2943,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3150,7 +2967,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3174,7 +2991,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3198,7 +3015,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3222,7 +3039,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3246,7 +3063,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3270,7 +3087,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3294,31 +3111,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_133bcb7ecfa4",
-      "title": "美国旗舰汽车厂商进军家用能源市场",
-      "originalTitle": "America's flagship automaker enters the home energy market",
-      "url": "https://www.volts.wtf/p/americas-flagship-automaker-enters",
-      "summary": "Aseem Kapur joins me to explain how GM plans to turn its massive EV fleet into a distributed virtual power plant.",
-      "whyItMatters": "地区 美国；社区 Volts",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Volts",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-19T16:03:42.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3342,7 +3135,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3366,7 +3159,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "discoveredAt": "2026-08-07T05:54:12.467Z",
       "relatedSources": [],
       "wechat": false
     }
