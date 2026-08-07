@@ -8,7 +8,7 @@ const APP = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8')
 /* 加载 app.js（去掉 init 自启动），导出优先级相关纯函数 */
 function loadPriority() {
   const code = APP.replace(/\ninit\(\);?\s*$/, '') + `
-    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, isNorthAmerica, isNuclear };
+    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, isNorthAmerica, isNuclear };
   `;
   const ctx = vm.createContext({
     document: { querySelector: () => null, querySelectorAll: () => [] },
@@ -87,4 +87,15 @@ test('sortForTimeline：北美储能/AIDC → 储能/AIDC → 发电 → 其他'
   ];
   const sorted = t.sortForTimeline(events);
   assert.deepEqual(Array.from(sorted, e => e.id), ['n', 's', 'g', 'o']);
+});
+
+test('sortChronological：纯时间倒序，最新在前，与优先级序无关', () => {
+  const t = loadPriority();
+  const events = [
+    ev({ id: 'old', publishedAt: '2026-08-01T00:00:00Z', importance: 0.9 }),
+    ev({ id: 'new', publishedAt: '2026-08-07T00:00:00Z', importance: 0.3 }),
+    ev({ id: 'mid', publishedAt: '2026-08-03T00:00:00Z', importance: 0.5 })
+  ];
+  const sorted = t.sortChronological(events);
+  assert.deepEqual(Array.from(sorted, e => e.id), ['new', 'mid', 'old']);
 });

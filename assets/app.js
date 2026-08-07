@@ -300,6 +300,16 @@ function sortForTimeline(events) {
   });
 }
 
+/* 全部动态：纯时间倒序（最新在前），与精选的优先级序区分开 */
+function sortChronological(events) {
+  return [...(events || [])].sort((a, b) => {
+    const ta = new Date(a.publishedAt || a.pubDate || a.isoDate || a.date).getTime() || 0;
+    const tb = new Date(b.publishedAt || b.pubDate || b.isoDate || b.date).getTime() || 0;
+    if (tb !== ta) return tb - ta;
+    return (b.importance || 0) - (a.importance || 0);
+  });
+}
+
 function groupByDay(sortedEvents) {
   const groups = new Map();
   for (const ev of sortedEvents) {
@@ -312,8 +322,8 @@ function groupByDay(sortedEvents) {
   return [...groups.values()];
 }
 
-function renderTimeline(events, featuredIds) {
-  const groups = groupByDay(sortForTimeline(events));
+function renderTimeline(events, featuredIds, sorter = sortForTimeline) {
+  const groups = groupByDay(sorter(events));
   if (!groups.length) return '';
   return groups.map(g => {
     const d = g.date;
@@ -409,15 +419,15 @@ function renderFeatured() {
   }
 
   const timelineEl = $('#featuredTimeline');
-  const featuredIds = state.featured ? (state.featured.featuredEventIds || []) : [];
-  if (state.allEvents.length) {
-    timelineEl.innerHTML = renderTimeline(state.allEvents, new Set(featuredIds));
-  } else if (state.isV2) {
-    timelineEl.innerHTML = renderEmpty(
-      (state.dataDate ? state.dataDate + ' ' : '') + '今日暂无内容，可能没有达到收录门槛的新闻。'
-    );
+  const featuredIds = new Set(state.featured ? (state.featured.featuredEventIds || []) : []);
+  // 精选页只展示每日精选的条目（featuredEventIds），不再渲染全部动态
+  const featuredEvents = state.allEvents.filter(ev => featuredIds.has(ev.id));
+  if (featuredEvents.length) {
+    timelineEl.innerHTML = renderTimeline(featuredEvents, featuredIds);
   } else {
-    timelineEl.innerHTML = renderEmpty('当前使用旧版数据格式，全部动态可正常浏览。');
+    timelineEl.innerHTML = renderEmpty(
+      (state.dataDate ? state.dataDate + ' ' : '') + '今日暂无精选内容。'
+    );
   }
 
   $('#featuredViewAll').innerHTML = state.allEvents.length
@@ -440,7 +450,7 @@ function renderAll() {
   } else {
     meta.textContent = `${state.dataDate} · ${state.allEvents.length} 条`;
   }
-  $('#allTimeline').innerHTML = renderTimeline(state.allEvents);
+  $('#allTimeline').innerHTML = renderTimeline(state.allEvents, null, sortChronological);
 }
 
 /* ===== Footer ===== */
