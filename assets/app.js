@@ -17,7 +17,7 @@ const state = {
   activeCategory: null,
 };
 
-const VALID_TABS = ['featured', 'all', 'weekly', 'sources'];
+const VALID_TABS = ['featured', 'all', 'sources'];
 
 const FALLBACK_TOPICS = {
   'data-center-power': '数据中心电力需求',
@@ -37,10 +37,12 @@ const FALLBACK_IMPACTS = { positive: '利好', negative: '利空', neutral: '中
 const FALLBACK_SOURCE_TYPES = { primary: '一手来源', media: '媒体', research: '研究机构', community: '社区/KOL' };
 const WEEKDAYS = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
 
-/* 优先级主题：储能 / AIDC / 发电（发电含燃气轮机、核电 SMR、PCS、SST 设备） */
+/* 优先级：储能 / AIDC 为最高（其中北美最优先），发电为次级 */
 const PRIORITY_TOPICS = {
   'energy-storage': '储能',
-  'aidc-project': 'AIDC',
+  'aidc-project': 'AIDC'
+};
+const PRIORITY_SECONDARY_TOPICS = {
   'gas-backup': '发电',
   'nuclear-smr': '发电'
 };
@@ -49,6 +51,12 @@ const PRIORITY_KEYWORDS = [
   { re: /\bPCS\b|储能变流器|变流器/i, label: '发电' },
   { re: /\bSST\b|固态变压器|solid\s*state\s*transformer/i, label: '发电' }
 ];
+
+/* 北美判定：region 字段为 美国 / 加拿大（含北美/usa/canada） */
+function isNorthAmerica(ev) {
+  const r = (ev && ev.region) || '';
+  return /美国|加拿大|北美|USA|Canada|\bUS\b/i.test(r);
+}
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
@@ -229,17 +237,28 @@ function renderCategory(cat) {
   });
 }
 
-/* ===== 优先级判定（储能 / AIDC / 发电） ===== */
+/* ===== 优先级判定（储能/AIDC 最高，其中北美最优先；发电次级） ===== */
 function getPriority(ev) {
-  if (ev && ev.topic && PRIORITY_TOPICS[ev.topic]) {
-    return { rank: 0, label: PRIORITY_TOPICS[ev.topic] };
+  const topic = ev && ev.topic;
+  let label = '';
+  let tier = 2;                 // 0=储能/AIDC，1=发电，2=其他
+  if (topic && PRIORITY_TOPICS[topic]) {
+    label = PRIORITY_TOPICS[topic];
+    tier = 0;
+  } else if (topic && PRIORITY_SECONDARY_TOPICS[topic]) {
+    label = PRIORITY_SECONDARY_TOPICS[topic];
+    tier = 1;
+  } else {
+    const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
+      .filter(Boolean).join(' ');
+    for (const k of PRIORITY_KEYWORDS) {
+      if (k.re.test(hay)) { label = k.label; tier = 1; break; }
+    }
   }
-  const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
-    .filter(Boolean).join(' ');
-  for (const k of PRIORITY_KEYWORDS) {
-    if (k.re.test(hay)) return { rank: 0, label: k.label };
-  }
-  return { rank: 1, label: '' };
+  // 储能/AIDC 且北美 → rank 0（最优先）；储能/AIDC 非北美 → rank 1；发电 → 2；其他 → 3
+  const na = tier === 0 && isNorthAmerica(ev);
+  const rank = na ? 0 : (tier === 0 ? 1 : (tier === 1 ? 2 : 3));
+  return { rank, label: na ? `${label}·北美` : label, tier };
 }
 
 /* 核电判定：topic 或标题/摘要含核电关键词（不进今日热点） */
@@ -251,11 +270,15 @@ function isNuclear(ev) {
   return /核电|核电站|核反应堆|核电机组|小型模块化反应堆|\bSMR\b|nuclear/i.test(hay);
 }
 
+/* 今日热点候选：仅储能 / AIDC（北美 rank 0 优先，再按推荐分） */
 function priorityEvents(events) {
   return (events || [])
     .map(ev => ({ ev, p: getPriority(ev) }))
-    .filter(x => x.p.rank === 0 && !isNuclear(x.ev))
-    .sort((a, b) => (b.ev.importance || 0) - (a.ev.importance || 0))
+    .filter(x => x.p.tier === 0 && !isNuclear(x.ev))
+    .sort((a, b) => {
+      if (a.p.rank !== b.p.rank) return a.p.rank - b.p.rank;
+      return (b.ev.importance || 0) - (a.ev.importance || 0);
+    })
     .map(x => x.ev);
 }
 
@@ -319,7 +342,7 @@ function renderTimelineItem(ev, isFeatured) {
   const p = getPriority(ev);
   const badges = [];
   if (isFeatured) badges.push('<span class="timeline-selected-badge">精选</span>');
-  if (p.rank === 0) badges.push(`<span class="timeline-priority-badge">${escapeHtml(p.label)}</span>`);
+  if (p.tier === 0) badges.push(`<span class="timeline-priority-badge">${escapeHtml(p.label)}</span>`);
   const topicBadge = ev.topic
     ? `<span class="timeline-topic-badge">${escapeHtml(getTopicLabel(ev.topic))}</span>` : '';
 
@@ -374,7 +397,7 @@ function renderFeatured() {
   if (state.dataGeneratedAt) parts.push(`更新于 ${formatTime(state.dataGeneratedAt)}`);
   meta.innerHTML = escapeHtml(parts.join(' · ')) + (state.stale ? ' <span class="stale-badge">数据已过期</span>' : '');
 
-  // 今日热点榜：储能 / AIDC / 发电 中推荐分最高的前 5
+  // 今日热点榜：储能 / AIDC（北美 rank 0 优先）中推荐分最高的前 5
   const hotBlock = $('#hotListBlock');
   const hotHtml = renderHotList(state.allEvents);
   if (hotHtml) {
@@ -417,17 +440,6 @@ function renderAll() {
     meta.textContent = `${state.dataDate} · ${state.allEvents.length} 条`;
   }
   $('#allTimeline').innerHTML = renderTimeline(state.allEvents);
-}
-
-/* ===== 周报页 ===== */
-function renderWeekly() {
-  $('#weeklyMeta').textContent = '';
-  $('#weeklyContent').innerHTML = `
-    <div class="weekly-preparation">
-      <h3>周报筹备中</h3>
-      <p>每周精选要闻汇总、行业趋势与关键事件回顾，即将上线。</p>
-      <p class="weekly-note">内容来源与日报一致，将定期整理发布。</p>
-    </div>`;
 }
 
 /* ===== Footer ===== */
@@ -506,7 +518,6 @@ async function init() {
   renderSources();
   renderFeatured();
   renderAll();
-  renderWeekly();
   renderFooter();
 }
 

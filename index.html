@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Anta:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css?v=14">
+  <link rel="stylesheet" href="assets/style.css?v=15">
 </head>
 <body>
   <header class="site-header">
@@ -20,7 +20,6 @@
   <nav class="view-tabs" aria-label="视图切换">
     <button class="view-tab active" data-tab="featured">精选</button>
     <button class="view-tab" data-tab="all">全部动态</button>
-    <button class="view-tab" data-tab="weekly">周报</button>
     <button class="view-tab" data-tab="sources">信息源</button>
   </nav>
 
@@ -33,7 +32,7 @@
       <div class="hot-card" id="hotListBlock" hidden>
         <div class="hot-card-head">
           <span class="hot-card-title">今日热点</span>
-          <span class="hot-card-meta">储能 · AIDC · 发电 优先</span>
+          <span class="hot-card-meta">储能 · AIDC 优先 · 北美最优先</span>
         </div>
         <ol class="hot-card-list" id="hotList"></ol>
       </div>
@@ -49,16 +48,6 @@
         <p id="allMeta"></p>
       </div>
       <div class="timeline" id="allTimeline">
-        <div class="loading-state">加载中…</div>
-      </div>
-    </section>
-
-    <section id="weekly" class="tab-panel" aria-labelledby="tab-weekly">
-      <div class="feed-header">
-        <h2>周报</h2>
-        <p id="weeklyMeta"></p>
-      </div>
-      <div class="weekly-content" id="weeklyContent">
         <div class="loading-state">加载中…</div>
       </div>
     </section>
@@ -82,6 +71,6 @@
     <span class="footer-credit">@Jereh-Power</span>
   </footer>
 
-  <script src="assets/app.js?v=8"></script>
+  <script src="assets/app.js?v=9"></script>
 </body>
 </html>

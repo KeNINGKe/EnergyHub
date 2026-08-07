@@ -762,36 +762,6 @@ code {
   text-decoration: none;
 }
 
-/* 周报筹备状态 */
-.weekly-preparation {
-  max-width: 520px;
-  margin: 48px auto;
-  text-align: center;
-  padding: 48px 32px;
-  background: var(--bg-soft);
-  border: 1px dashed var(--border);
-  border-radius: var(--radius-lg);
-}
-
-.weekly-preparation h3 {
-  font-family: var(--font-heading-news);
-  font-size: 1.4rem;
-  color: var(--text);
-  margin: 0 0 14px;
-}
-
-.weekly-preparation p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.7;
-  margin: 0 0 8px;
-}
-
-.weekly-note {
-  font-size: 0.82rem;
-  color: var(--text-faint);
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .site-header {
