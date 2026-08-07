@@ -52,6 +52,7 @@
 | `publishedAt` | string/null | - | ISO 8601 |
 | `discoveredAt` | string/null | - | ISO 8601 |
 | `relatedSources` | `{name,url}[]` | - | 同一事件的其他报道 |
+| `wechat` | boolean | - | 微信种子注入的事件（`true` 时精选页显示「公众号」徽章，并在精选选择中保底 1 条配额） |
 
 ## 3. `feeds/featured.json`
 

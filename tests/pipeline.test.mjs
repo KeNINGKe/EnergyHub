@@ -44,6 +44,40 @@ test('selectFeatured：同主题最多 2 条', () => {
   assert.equal(featuredEventIds.filter(id => events.find(e => e.id === id).topic === 'grid').length, 2);
 });
 
+test('selectFeatured：微信文章保底 1 条，跨过主题/来源配额', () => {
+  const mk = (id, importance, topic, source, wechat) => ({ id, importance, topic, source: { name: source }, wechat: wechat || false });
+  // energy-storage 主题已满 2 条（a/b），微信事件 w 同主题且同来源仍应保底入选
+  const events = [
+    mk('evt_a', 4, 'energy-storage', 'S1'),
+    mk('evt_b', 4, 'energy-storage', 'S2'),
+    mk('evt_w', 3, 'energy-storage', '微信源', true)
+  ];
+  const { featuredEventIds } = selectFeatured(events, enums);
+  assert.ok(featuredEventIds.includes('evt_w'), '微信事件跨过主题配额保底入选');
+});
+
+test('selectFeatured：微信保底超配额后回归常规规则', () => {
+  const mk = (id, importance, topic, source, wechat) => ({ id, importance, topic, source: { name: source }, wechat: wechat || false });
+  // 主题已满 2 条（a/b），wechatQuota 用尽（0），第三条同主题 wechat 不再保底
+  const events = [
+    mk('evt_a', 4, 'grid', 'S1'),
+    mk('evt_b', 4, 'grid', 'S2'),
+    mk('evt_w', 3, 'grid', '微信源', true)
+  ];
+  const { featuredEventIds } = selectFeatured(events, enums, { wechatQuota: 0 });
+  assert.ok(!featuredEventIds.includes('evt_w'), 'wechatQuota=0 时微信事件受主题配额约束');
+});
+
+test('selectFeatured：微信事件排名靠后仍被预选保底（不受 maxFeatured 截断影响）', () => {
+  const mk = (id, importance, topic, source, wechat) => ({ id, importance, topic, source: { name: source }, wechat: wechat || false });
+  // 10 个高重要性非微信事件足以填满 maxFeatured；微信事件重要性仅 3 排最后，仍应保底入选
+  const events = [];
+  for (let i = 0; i < 10; i++) events.push(mk('evt_a' + i, 4, 'grid', 'S' + i));
+  events.push(mk('evt_w', 3, 'energy-storage', '微信源', true));
+  const { featuredEventIds } = selectFeatured(events, enums);
+  assert.ok(featuredEventIds.includes('evt_w'), '微信事件排名靠后也被预选保底');
+});
+
 test('processItems：产出合法 daily + featured', async () => {
   const items = [
     raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/1', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),

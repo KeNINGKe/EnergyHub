@@ -524,7 +524,8 @@ export async function fetchWechatSeeds(seed) {
             pubDate: it.pubDate || a.pubDate || null,
             summary: it.summary || '',
             source: a.sourceName || '微信公众号',
-            sourceUrl: null
+            sourceUrl: null,
+            wechat: true
           });
         }
         if (!a.title && parsed[0]?.title) a.title = parsed[0].title;

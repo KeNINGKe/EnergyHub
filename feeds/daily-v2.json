@@ -1,15 +1,73 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-07",
-  "generatedAt": "2026-08-07T00:34:24.251Z",
+  "generatedAt": "2026-08-07T03:47:43.198Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 34,
-    "sourcesSucceeded": 31,
-    "articlesFetched": 365,
-    "eventsPublished": 106
+    "sourcesSucceeded": 34,
+    "articlesFetched": 396,
+    "eventsPublished": 122
   },
   "items": [
+    {
+      "id": "evt_bdffa573a29f",
+      "title": "Ørsted在德克萨斯州启动500 MWh太阳能并网电池项目",
+      "originalTitle": "Ørsted turns on 500 MWh battery project with co-located solar in Texas",
+      "url": "https://www.pv-magazine.com/2026/08/06/orsted-turns-on-500-mwh-battery-project-with-co-located-solar-in-texas/",
+      "summary": "The Old 300 Storage project has reached commercial operations and is now fully integrated with the ERCOT grid, using made-in-America Tesla…",
+      "whyItMatters": "储能；关键数字 500MWh、430MW；关联 Tesla；地区 美国；媒体 pv magazine",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "Tesla"
+      ],
+      "metrics": [
+        {
+          "label": "Ørsted turns on",
+          "value": 500,
+          "unit": "MWh"
+        },
+        {
+          "label": "co-located with a",
+          "value": 430,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T11:30:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/08/06/tesla-megapack-power-orsted-big-new-texas-grid-battery/"
+        },
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/08/06/tesla-megapack-3-production-starts-texas/"
+        },
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/06/finnish-push-for-data-center-flexibility/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/orsted-puts-500mwh-old-300-texas-bess-into-operation/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/ampyr-australia-bags-5-3-4-letter-for-270mw-grid-forming-battery-storage-system/"
+        }
+      ],
+      "wechat": false
+    },
     {
       "id": "evt_b1befb293903",
       "title": "这款1.5兆瓦电动卡车充电器刚刚克服了美国的一个关键障碍",
@@ -36,8 +94,224 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:58:32.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_25b0d61f243f",
+      "title": "拉脱维亚的太阳能装机容量超过1.5吉瓦",
+      "originalTitle": "Latvia’s solar capacity surpasses 1.5 GW",
+      "url": "https://www.pv-magazine.com/2026/08/06/latvias-solar-capacity-surpasses-1-5-gw/",
+      "summary": "Latvia has installed around 600 MW of solar so far this year, meaning 2026 has already broken the country’s record for solar deployed in a…",
+      "whyItMatters": "光伏与风电；关键数字 1.5GW、600MW；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "solar capacity surpasses",
+          "value": 1.5,
+          "unit": "GW"
+        },
+        {
+          "label": "has installed around",
+          "value": 600,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T12:30:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c8759024d5dc",
+      "title": "韩国继续进行迄今为止最大的单站点光伏项目",
+      "originalTitle": "South Korea proceeds with largest single-site PV project to date",
+      "url": "https://www.pv-magazine.com/2026/08/06/south-korea-proceeds-with-largest-single-site-pv-project-to-date/",
+      "summary": "The 400 MW solar complex, scheduled for completion in 2028, is expected to supply 529 GWh of electricity annually. The project will include…",
+      "whyItMatters": "光伏与风电；关键数字 400MW、529GWh、10MW；地区 韩国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "韩国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "to date The",
+          "value": 400,
+          "unit": "MW"
+        },
+        {
+          "label": "expected to supply",
+          "value": 529,
+          "unit": "GWh"
+        },
+        {
+          "label": "will include a",
+          "value": 10,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T11:00:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_7f0c4c948392",
+      "title": "研究人员比较了用于社区规模能源的光伏、风能和混合动力系统",
+      "originalTitle": "Researchers compare PV, wind, hybrid systems for community-scale energy",
+      "url": "https://www.pv-magazine.com/2026/08/06/researchers-compare-pv-wind-hybrid-systems-for-community-scale-energy/",
+      "summary": "Researchers in China found a hybrid system combining 200 kW of PV, 200 kW of wind and a 100 kWh battery achieved a 70.8% self-sufficiency r…",
+      "whyItMatters": "光伏与风电；关键数字 100kWh、70.8%、1000kWh；地区 中国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "wind and a",
+          "value": 100,
+          "unit": "kWh"
+        },
+        {
+          "label": "battery achieved a",
+          "value": 70.8,
+          "unit": "%"
+        },
+        {
+          "label": "a community consuming",
+          "value": 1000,
+          "unit": "kWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T09:30:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_756d4521bf41",
+      "title": "印度的目标是通过同地存储实现5吉瓦的浮动光伏",
+      "originalTitle": "India targets 5 GW of floating PV with co-located storage",
+      "url": "https://www.pv-magazine.com/2026/08/06/india-approves-inr-5070-crore-scheme-for-5-gw-of-floating-solar-with-storage/",
+      "summary": "A newly-approved government scheme in India plans to support the development of 5 GW of floating solar on existing reservoirs and industria…",
+      "whyItMatters": "光伏与风电；关键数字 5GW；地区 印度；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "印度",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "India targets",
+          "value": 5,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T08:30:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c3fb532ca7c7",
+      "title": "随着电网延迟的增加，美国数据中心转向现场太阳能、存储和VPP",
+      "originalTitle": "US data centers turn to on-site solar, storage, VPPs as grid delays mount",
+      "url": "https://www.pv-magazine.com/2026/08/06/transmission-logjams-and-ai-load-growth-push-data-centers-toward-on-site-solar-storage-and-vpps/",
+      "summary": "A Reuters Events report highlights how multi-year transmission delays are forcing data center developers in the United States to deploy 56…",
+      "whyItMatters": "电网与并网；关键数字 56GW；地区 美国；媒体 pv magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "States to deploy",
+          "value": 56,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T07:30:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ccf8c72ed15b",
+      "title": "2026年第二季度Clearway Energy可再生能源和储能发电量同比增长16%",
+      "originalTitle": "Clearway Energy renewables & storage generation rises 16% year-on-year in Q2 2026",
+      "url": "https://www.pv-tech.org/clearway-energy-renewables-storage-generation-rises-16-year-on-year-in-q2-2026/",
+      "summary": "Clearway Energy generated and sold 3,585GWh of solar power in the second quarter of 2026, up from 2,800GWh in Q2 2025.",
+      "whyItMatters": "光伏与风电；关键数字 16%、3585GWh、2800GWh；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "storage generation rises",
+          "value": 16,
+          "unit": "%"
+        },
+        {
+          "label": "generated and sold",
+          "value": 3585,
+          "unit": "GWh"
+        },
+        {
+          "label": "2026, up from",
+          "value": 2800,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T13:42:52.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c2951b6ad9a3",
@@ -65,8 +339,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6d9e72c77977",
@@ -94,8 +369,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:00:33.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d9878632ab60",
@@ -123,8 +399,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:36:16.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_354448ec2424",
@@ -152,8 +429,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:32:08.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_886d819f9280",
@@ -178,8 +456,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f44be569c418",
@@ -207,8 +486,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_76c16e2008ad",
@@ -232,13 +512,14 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:24:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
       "relatedSources": [
         {
           "name": "CleanTechnica",
           "url": "https://cleantechnica.com/2026/08/06/donald-trump-pays-off-5th-energy-company-in-attack-on-renewable-energy/"
         }
-      ]
+      ],
+      "wechat": false
     },
     {
       "id": "evt_a1e86024265f",
@@ -262,50 +543,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:50:12.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_9ca6e60135e0",
-      "title": "AMPYR澳大利亚包装袋5.3.4 LETTER适用于270MW成网电池存储系统",
-      "originalTitle": "AMPYR Australia bags 5.3.4 letter for 270MW grid-forming battery storage system",
-      "url": "https://www.energy-storage.news/ampyr-australia-bags-5-3-4-letter-for-270mw-grid-forming-battery-storage-system/",
-      "summary": "AMPYR Australia has received a 5.3.4 letter from AEMO for the 270MW Northern Battery near Port Augusta in South Australia.",
-      "whyItMatters": "储能；关键数字 270MW；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "5.3.4 letter for",
-          "value": 270,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T03:21:42.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": [
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/08/06/tesla-megapack-power-orsted-big-new-texas-grid-battery/"
-        },
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/08/06/tesla-megapack-3-production-starts-texas/"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/orsted-puts-500mwh-old-300-texas-bess-into-operation/"
-        }
-      ]
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_2ac7ac4d9d85",
@@ -330,8 +570,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:12:42.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_667ee76c3bab",
@@ -359,8 +600,174 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1de22483705e",
+      "title": "Avantus secures US$1 billion facility to expand 24GW solar PV and energy storage pipeline",
+      "originalTitle": "Avantus secures US$1 billion facility to expand 24GW solar PV and energy storage pipeline",
+      "url": "https://www.pv-tech.org/avantus-secures-us1-billion-facility-to-expand-24gw-solar-pv-and-energy-storage-pipeline/",
+      "summary": "Avantus has closed a US$1.05 billion corporate credit facility, doubling the US$522 million facility it secured in July 2024.",
+      "whyItMatters": "光伏与风电；关键数字 24GW；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "facility to expand",
+          "value": 24,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T15:09:05.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_965e8d5ca8e4",
+      "title": "Spain’s MITECO allocates €360 million to co-located BESS with agriPV, floating solar",
+      "originalTitle": "Spain’s MITECO allocates €360 million to co-located BESS with agriPV, floating solar",
+      "url": "https://www.pv-tech.org/spains-miteco-allocates-e360-million-to-co-located-bess-with-agripv-floating-solar/",
+      "summary": "The Spanish Ministry of Ecological Transition (MITECO) has awarded €360 million (US$415 million) to 1.14GW of solar PV co-located with batt…",
+      "whyItMatters": "储能；关键数字 1.14GW；地区 美国；媒体 PV-Tech",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "(US$415 million) to",
+          "value": 1.14,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T13:32:19.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_71f1875d7852",
+      "title": "Southern Power starts commercial operations at second phase of Millers Branch solar farm, signs seven-party VPPA",
+      "originalTitle": "Southern Power starts commercial operations at second phase of Millers Branch solar farm, signs seven-party VPPA",
+      "url": "https://www.pv-tech.org/southern-power-commercial-operations-second-phase-millers-branch-solar-seven-party-vppa/",
+      "summary": "Southern Power has started commercial operations at the 180MW second phase of its Millers Branch Solar Facility in Haskell County, Texas.",
+      "whyItMatters": "光伏与风电；关键数字 180MW；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "operations at the",
+          "value": 180,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T12:06:20.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_edc621417117",
+      "title": "MNRE adds 12.7GW of solar module capacity to ALMM-I, total listed capacity exceeds 217GW",
+      "originalTitle": "MNRE adds 12.7GW of solar module capacity to ALMM-I, total listed capacity exceeds 217GW",
+      "url": "https://www.pv-tech.org/mnre-adds-12-7gw-of-solar-module-capacity-to-almm-i-total-listed-capacity-exceeds-217gw/",
+      "summary": "MNRE has expanded the ALMM List-I by adding 12,724MW of solar module manufacturing capacity, taking the total enlisted capacity to 217,107M…",
+      "whyItMatters": "光伏与风电；关键数字 12.7GW、217GW、12724MW；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "MNRE adds",
+          "value": 12.7,
+          "unit": "GW"
+        },
+        {
+          "label": "listed capacity exceeds",
+          "value": 217,
+          "unit": "GW"
+        },
+        {
+          "label": "List-I by adding",
+          "value": 12724,
+          "unit": "MW"
+        },
+        {
+          "label": "enlisted capacity to",
+          "value": 217107,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T11:33:32.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9ecbd2f6071b",
+      "title": "DYCM secures funding for 1GW module assembly plant in California",
+      "originalTitle": "DYCM secures funding for 1GW module assembly plant in California",
+      "url": "https://www.pv-tech.org/dycm-secures-funding-for-1gw-module-assembly-plant-in-california/",
+      "summary": "US module manufacturer DYCM Solar Modules has closed an investment round to fund the growth of its business and its solar module assembly p…",
+      "whyItMatters": "光伏与风电；关键数字 1GW；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "secures funding for",
+          "value": 1,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T09:54:05.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_166ea39d21a5",
@@ -384,8 +791,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:07:46.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_9c5faa7a0fca",
@@ -413,13 +821,14 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T09:32:32.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/zelestra-centrica-energy-agree-toll-99mw-297mwh-germany-bess/"
         }
-      ]
+      ],
+      "wechat": false
     },
     {
       "id": "evt_de1b12f20f6c",
@@ -447,8 +856,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T11:04:35.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_de21b5b4e98c",
@@ -476,8 +886,49 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T10:31:52.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f6f88cc342dd",
+      "title": "日本：东京燃气公司承购200MWh福岛BESS ， Eku Energy接近完成第一个项目",
+      "originalTitle": "Japan: Tokyo Gas enters offtake for 200MWh Fukushima BESS, Eku Energy nears completion of first project",
+      "url": "https://www.energy-storage.news/japan-tokyo-gas-enters-offtake-for-200mwh-fukushima-bess-eku-energy-nears-completion-of-first-project/",
+      "summary": "Japanese utility Tokyo Gas has entered into a long-term offtake agreement for a 49.7MW/202.1MWh battery storage project in Fukushima Prefec…",
+      "whyItMatters": "储能；关键数字 200MWh、49.7MW、202.1MWh；地区 日本；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "日本",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "enters offtake for",
+          "value": 200,
+          "unit": "MWh"
+        },
+        {
+          "label": "agreement for a",
+          "value": 49.7,
+          "unit": "MW"
+        },
+        {
+          "label": "for a 49.7MW/",
+          "value": 202.1,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-05T05:35:14.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5e0c79ed0192",
@@ -505,8 +956,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a0e4bfbc5d27",
@@ -530,8 +982,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:45:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_919f7512f24c",
@@ -562,8 +1015,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_9fa3662f92cf",
@@ -597,8 +1051,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_52bcdb51cfd3",
@@ -628,8 +1083,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_7febff2385e5",
@@ -653,8 +1109,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:51:13.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8891a821c48c",
@@ -678,8 +1135,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:30:35.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_97f376b9d745",
@@ -703,8 +1161,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:09:42.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_cf00f300eca5",
@@ -728,8 +1187,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:08:43.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_ccc18c94a86c",
@@ -753,8 +1213,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:03:25.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_57a39f9ef08b",
@@ -778,8 +1239,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:00:57.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_10b085b025f2",
@@ -803,8 +1265,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:52:11.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_95acf4565b72",
@@ -828,8 +1291,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:11:09.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_60b792c2978f",
@@ -864,8 +1328,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5c8093e5adfb",
@@ -889,8 +1354,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f81b8f5e2e11",
@@ -921,8 +1387,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_90fdc5216d3f",
@@ -952,8 +1419,51 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f15e71e03887",
+      "title": "【行业资讯】针对不同技术路线划定质量监督“硬杠杠”——让新型储能电站“建得好、用得稳”",
+      "originalTitle": "【行业资讯】针对不同技术路线划定质量监督“硬杠杠”——让新型储能电站“建得好、用得稳”",
+      "url": "https://mp.weixin.qq.com/s/iOywr-9s1fWXlLcSzbLqFg",
+      "summary": "来源：人民日报海外版 我国新型储能装机规模正在快速增长。截至 2025年底，全国新型储能装机较2024年底增长84%，全国已建成投运新型储能装机规模达到1.36亿千瓦/3.51亿千瓦时，与“十三五”末相比增长超40倍，实现跨越式发展。 新型储能电站大规模建设的另一面，是质量管控…",
+      "whyItMatters": "储能；关键数字 84%、1.36亿千瓦、3.51亿千瓦时；关联 国家能源局；媒体 中国化学与物理电源行业协会",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "国家能源局"
+      ],
+      "metrics": [
+        {
+          "label": "24年底增长",
+          "value": 84,
+          "unit": "%"
+        },
+        {
+          "label": "装机规模达到",
+          "value": 1.36,
+          "unit": "亿千瓦"
+        },
+        {
+          "label": "36亿千瓦/",
+          "value": 3.51,
+          "unit": "亿千瓦时"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "中国化学与物理电源行业协会",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-05-26T06:39:00.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": true
     },
     {
       "id": "evt_fa0332951004",
@@ -975,8 +1485,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4feccd7dc987",
@@ -998,8 +1509,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_2631a866c358",
@@ -1021,8 +1533,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b4b7eec2b027",
@@ -1044,8 +1557,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c5ac51c74ffe",
@@ -1067,8 +1581,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5df73a7b4d47",
@@ -1090,8 +1605,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4c8d5e73b44b",
@@ -1115,8 +1631,33 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f22d68868858",
+      "title": "New Zealand Electric Vehicle Market Rises from the Depths! (CHARTS)",
+      "originalTitle": "New Zealand Electric Vehicle Market Rises from the Depths! (CHARTS)",
+      "url": "https://cleantechnica.com/2026/08/06/new-zealand-electric-vehicle-market-rises-from-the-depths-charts/",
+      "summary": "Once touted as a possible “Norway of the Pacific,” New Zealand’s electric vehicle transition was stopped in its tracks by a change of gover…",
+      "whyItMatters": "媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T03:06:41.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_668ebfbb77e2",
@@ -1138,13 +1679,14 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:51:35.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8e3e71f6a0dc",
-      "title": "全新福特Fathom电动皮卡，价格仅（支票） $ 28,3501建议零售价",
-      "originalTitle": "Get Your Hands On The New Ford Fathom Electric Pickup Truck For Just (Checks Notes) $28,3501 MSRP",
+      "title": "全新福特Fathom电动皮卡，价格仅（支票） $ 28,350建议零售价",
+      "originalTitle": "Get Your Hands On The New Ford Fathom Electric Pickup Truck For Just (Checks Notes) $28,350 MSRP",
       "url": "https://cleantechnica.com/2026/08/06/ford-fathom-electric-pickup-truck-ev-affordable/",
       "summary": "Ford is still playing its forthcoming midsized electric pickup truck close to the vest, but the EV finally has a name: Fathom. The post Get…",
       "whyItMatters": "媒体 CleanTechnica",
@@ -1161,8 +1703,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:08:16.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_406d1630115b",
@@ -1184,8 +1727,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T20:19:25.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_462e59b4331e",
@@ -1207,31 +1751,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T06:50:39.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_3a9c8589311d",
-      "title": "欧洲国家从风能和太阳能增长中削减了数百亿欧元的化石燃料进口",
-      "originalTitle": "European Countries Cut Tens of Billions of Euros of Fossil Fuel Imports from Wind & Solar Power Growth",
-      "url": "https://cleantechnica.com/2026/08/05/european-countries-cut-tens-of-billions-of-euros-of-fossil-fuel-imports-from-wind-solar-power-growth/",
-      "summary": "I wrote a handful of articles last month on the 75th edition of the Statistical Review of World Energy. There was one more thing in there t…",
-      "whyItMatters": "光伏与风电；地区 全球；媒体 CleanTechnica",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T02:30:19.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_e2a99eceed15",
@@ -1253,8 +1775,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:25:51.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_39bbb539993f",
@@ -1276,8 +1799,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:32:15.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6b814e27cbbc",
@@ -1299,8 +1823,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4f9cbab935fd",
@@ -1328,8 +1853,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_800b3b1efde3",
@@ -1357,8 +1883,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_042ae358b538",
@@ -1380,8 +1907,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:00:35.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_939281f188cc",
@@ -1403,8 +1931,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:50:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_70a45cf839b8",
@@ -1426,8 +1955,57 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:34:16.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_429a0fa13186",
+      "title": "AI SSD：大模型推理的存储范式转移",
+      "originalTitle": "AI SSD：大模型推理的存储范式转移",
+      "url": "https://www.qbitai.com/2026/08/467840.html",
+      "summary": "算力、网络、内存与存储开始围绕每个Token协同",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 量子位",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "量子位",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T02:56:46.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_e0da201aef47",
+      "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
+      "originalTitle": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
+      "url": "https://www.qbitai.com/2026/08/467487.html",
+      "summary": "此后模型、算力、数据中心都在合作范围内",
+      "whyItMatters": "数据中心电力需求；媒体 量子位",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "量子位",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T00:25:07.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_9c7dfa325bb8",
@@ -1455,8 +2033,57 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_da7bc78d24d1",
+      "title": "New Audio SoCs Combine Bluetooth HDT with Dual-RF Technology",
+      "originalTitle": "New Audio SoCs Combine Bluetooth HDT with Dual-RF Technology",
+      "url": "https://semiwiki.com/ip/ceva/372013-new-audio-socs-combine-bluetooth-hdt-with-dual-rf-technology/",
+      "summary": "Ceva and Actions Technology have expanded their longstanding partnership with the introduction of the ATS296X series, a new family of Bluet…",
+      "whyItMatters": "媒体 SemiWiki",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T21:00:22.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_fcb14b1c3363",
+      "title": "White Paper: The Semiconductor Foundation of Modern AI Data Centers",
+      "originalTitle": "White Paper: The Semiconductor Foundation of Modern AI Data Centers",
+      "url": "https://semiwiki.com/artificial-intelligence/370090-white-paper-the-semiconductor-foundation-of-modern-ai-data-centers/",
+      "summary": "Artificial intelligence AI has become one of the most significant drivers of semiconductor innovation in history. While AI applications oft…",
+      "whyItMatters": "AIDC 项目与区域布局；媒体 SemiWiki",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T17:00:18.000Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_bb440e2b15bb",
@@ -1478,8 +2105,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:36.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a84b9e30c12c",
@@ -1501,8 +2129,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:17.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_208e6e1d1999",
@@ -1524,8 +2153,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:33.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3857cf291f69",
@@ -1547,8 +2177,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:11.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_df60a72bb7aa",
@@ -1570,8 +2201,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:01:02.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_74b33dee3756",
@@ -1593,8 +2225,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T10:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3ef18d1f5526",
@@ -1618,8 +2251,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_7976db928fd9",
@@ -1652,8 +2286,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_023be1225ece",
@@ -1675,8 +2310,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_66102efc9892",
@@ -1698,8 +2334,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_01989ca438ff",
@@ -1721,8 +2358,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_e688897954dd",
@@ -1744,8 +2382,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f513d66c5a21",
@@ -1767,8 +2406,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_7413181ab2c5",
@@ -1790,31 +2430,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T16:50:30.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_b853428f4a78",
-      "title": "超级算力枢纽远景乌兰察布星河基地投产，全球最大AI算力超级单体落地",
-      "originalTitle": "超级算力枢纽远景乌兰察布星河基地投产，全球最大AI算力超级单体落地",
-      "url": "https://www.qbitai.com/2026/08/467262.html",
-      "summary": "",
-      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 量子位",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "量子位",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T05:29:40.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4d4d25a8f350",
@@ -1838,8 +2456,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d996a67f6579",
@@ -1863,8 +2482,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_da941260c784",
@@ -1888,8 +2508,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b3f3946d3dbb",
@@ -1914,8 +2535,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6d457e2e020c",
@@ -1942,8 +2564,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_212a0b82a71a",
@@ -1968,8 +2591,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_114bcd6441f8",
@@ -1994,8 +2618,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_eb075930eb36",
@@ -2019,8 +2644,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_362646a35b94",
@@ -2044,8 +2670,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_05d066b4d43b",
@@ -2069,8 +2696,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_e49c72737344",
@@ -2094,8 +2722,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c797cba4897f",
@@ -2117,8 +2746,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_42f6508fdd2f",
@@ -2142,13 +2772,14 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
           "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
         }
-      ]
+      ],
+      "wechat": false
     },
     {
       "id": "evt_a5bd32112dd3",
@@ -2172,8 +2803,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3d6f2198aa70",
@@ -2197,8 +2829,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_78ccae7e14cb",
@@ -2223,8 +2856,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_14166d74da20",
@@ -2248,8 +2882,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_839f66565069",
@@ -2273,8 +2908,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f4a0c2b45be1",
@@ -2298,8 +2934,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_44960c9d4645",
@@ -2321,8 +2958,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_383d1bdd0069",
@@ -2344,8 +2982,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3d5ae5fdfa69",
@@ -2367,8 +3006,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b675097ac586",
@@ -2390,8 +3030,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_db13be1f325b",
@@ -2413,8 +3054,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8396684988c9",
@@ -2436,8 +3078,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d40acdb043d3",
@@ -2459,8 +3102,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_03f23446a0c1",
@@ -2482,8 +3126,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5ec469108b07",
@@ -2505,8 +3150,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_34a4dafb00c4",
@@ -2528,8 +3174,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_fa741cb4d43b",
@@ -2551,8 +3198,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_da6cbfc893c5",
@@ -2574,8 +3222,9 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d70ce7103059",
@@ -2597,8 +3246,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_cba903d51a84",
@@ -2620,8 +3270,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_1d03b8d6a8d6",
@@ -2643,8 +3294,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_133bcb7ecfa4",
@@ -2666,8 +3318,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-19T16:03:42.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f6abc9f95aa3",
@@ -2689,8 +3342,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_cdeb69bbf2b1",
@@ -2712,8 +3366,9 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-07T00:34:24.251Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-07T03:47:43.198Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }

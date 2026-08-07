@@ -40,16 +40,42 @@ function eventId(it) {
   return `evt_${hashId(key).slice(0, 12)}`;
 }
 
-/** 精选选择：重要性降序 + 主题多样性 + 来源多样性 + 质量门槛。 */
+/**
+ * 精选选择：重要性降序 + 主题多样性 + 来源多样性 + 质量门槛。
+ * 微信来源事件（wechat:true）在主题/来源配额上保底入选（默认 1 条），
+ * 保证公众号内容可靠地进入精选，而非只靠重要性竞争。
+ */
 export function selectFeatured(events, enums, opts = {}) {
-  const { threshold = 3.0, maxPerTopic = 2, maxPerSource = 1, maxFeatured = 10 } = opts;
+  const { threshold = 3.0, maxPerTopic = 2, maxPerSource = 1, maxFeatured = 10, wechatQuota = 1 } = opts;
   const observations = [];
   const featuredEventIds = [];
   const topicCount = {};
   const srcCount = {};
+  const reserved = new Set();
+
+  // 预选：微信事件保底。重要性降序里权重最高的前 wechatQuota 条先占位，
+  // 跨过主题/来源配额（它们不参与后面的主选），保证公众号内容可靠进精选。
+  for (const ev of events) {
+    if (ev.importance < threshold) break;
+    if (reserved.size >= wechatQuota) break;
+    if (!(ev.wechat === true) || reserved.has(ev.id)) continue;
+    reserved.add(ev.id);
+    featuredEventIds.push(ev.id);
+    const t = ev.topic || 'other-energy';
+    const s = ev.source.name;
+    topicCount[t] = (topicCount[t] || 0) + 1;
+    srcCount[s] = (srcCount[s] || 0) + 1;
+    if (observations.length < 3) {
+      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
+      observations.push(`【${topicLabel}】${ev.title}`.slice(0, 60));
+    }
+  }
+
+  // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信事件跳过）
   for (const ev of events) {
     if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
     if (featuredEventIds.length >= maxFeatured) break;
+    if (reserved.has(ev.id)) continue;
     const t = ev.topic || 'other-energy';
     const s = ev.source.name;
     if ((topicCount[t] || 0) >= maxPerTopic) continue;
@@ -106,7 +132,8 @@ export async function processItems(rawItems, ctx) {
       topic: ex.topics[0] || null,
       region: ex.region,
       entities: ex.entities,
-      metrics: ex.metrics
+      metrics: ex.metrics,
+      wechat: it.wechat || false
     });
   }
 
@@ -143,7 +170,8 @@ export async function processItems(rawItems, ctx) {
       source: { name: primary.source, type: primary.sourceType, isPrimary: true },
       publishedAt: primary.publishedAt,
       discoveredAt: primary.discoveredAt,
-      relatedSources
+      relatedSources,
+      wechat: primary.wechat || false
     });
   }
 

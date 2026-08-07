@@ -342,6 +342,7 @@ function renderTimelineItem(ev, isFeatured) {
   const p = getPriority(ev);
   const badges = [];
   if (isFeatured) badges.push('<span class="timeline-selected-badge">精选</span>');
+  if (ev.wechat) badges.push('<span class="timeline-wechat-badge">公众号</span>');
   if (p.tier === 0) badges.push(`<span class="timeline-priority-badge">${escapeHtml(p.label)}</span>`);
   const topicBadge = ev.topic
     ? `<span class="timeline-topic-badge">${escapeHtml(getTopicLabel(ev.topic))}</span>` : '';
