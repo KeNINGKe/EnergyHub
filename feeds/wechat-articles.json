@@ -1,35 +1,133 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-08-07T06:00:00.000Z",
-  "note": "公众号文章种子：把要抓的 mp.weixin.qq.com/s/xxx 链接填入对应公众号的 url，跑一次 npm run build:v2 即进入日报。下方 20 个公众号为 2026-08-07 收集的名册（见 docs/DATA_PROTOCOL.md §9），url 留空会被跳过、不影响构建。",
+  "updatedAt": "2026-08-07T06:47:41.163Z",
   "articles": [
     {
-      "sourceName": "中国化学与物理电源行业协会",
-      "url": "https://mp.weixin.qq.com/s/iOywr-9s1fWXlLcSzbLqFg",
-      "title": "【行业资讯】针对不同技术路线划定质量监督“硬杠杠”——让新型储能电站“建得好、用得稳”",
-      "pubDate": "2026-05-26T06:39:00.000Z",
-      "addedAt": "2026-08-07T03:00:00.000Z",
+      "category": "储能",
+      "sourceName": "储能头条",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIxMTYwNjMwMw==&mid=2247552149&idx=5&sn=c2200bdf3a9073e568eaf4f53fffcae8&chksm=975082e5a0270bf370571c00b437b5b2562ac443c93cd6eedad8763a5dd5be58daf4c70ba6ab",
+      "title": "储能日报·速览【7月20日】",
+      "pubDate": "2023-07-20T04:48:00.000Z",
+      "addedAt": "2026-08-07T06:30:00.000Z",
       "fetched": true
     },
-    { "category": "电力/新能源", "sourceName": "电网头条", "url": "" },
-    { "category": "电力/新能源", "sourceName": "能源新磁场", "url": "" },
-    { "category": "电力/新能源", "sourceName": "新能源产业家", "url": "" },
-    { "category": "电力/新能源", "sourceName": "创客能源", "url": "" },
-    { "category": "电力/新能源", "sourceName": "电气时代", "url": "" },
-    { "category": "电力/新能源", "sourceName": "能源新媒", "url": "" },
-    { "category": "电力/新能源", "sourceName": "蓝色碳能", "url": "" },
-    { "category": "发电", "sourceName": "SST渗透率", "url": "" },
-    { "category": "发电", "sourceName": "燃气轮机聚焦", "url": "" },
-    { "category": "储能", "sourceName": "储能与电力市场", "url": "" },
-    { "category": "储能", "sourceName": "储能头条", "url": "" },
-    { "category": "储能", "sourceName": "储能100人", "url": "" },
-    { "category": "储能", "sourceName": "兰木达电力现货", "url": "" },
-    { "category": "储能", "sourceName": "蓝海经研", "url": "" },
-    { "category": "储能", "sourceName": "阳光电源", "url": "" },
-    { "category": "储能", "sourceName": "光储星球", "url": "" },
-    { "category": "储能", "sourceName": "储能日参", "url": "" },
-    { "category": "AIDC", "sourceName": "AIDC储能", "url": "" },
-    { "category": "AIDC", "sourceName": "IDC Energy", "url": "" },
-    { "category": "AI/云计算", "sourceName": "华为数字能源", "url": "" }
+    {
+      "category": "电力/新能源",
+      "sourceName": "电网头条",
+      "url": "https://mp.weixin.qq.com/s/Hr5WTdxaYIyZQmBwhrsjrA",
+      "title": "电网头条四季度典型宣传案例⑤：最具影响力策划，等你来选",
+      "pubDate": "2025-01-01T09:00:00.000Z",
+      "addedAt": "2026-08-07T06:30:00.000Z",
+      "fetched": true
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "电网头条",
+      "url": "https://mp.weixin.qq.com/s/HNHWegNpPpxhH1Geb_SMGA",
+      "title": "电网头条四季度人气作品⑤：哪个专题是你的“菜”？",
+      "pubDate": "2026-01-07T22:58:00.000Z",
+      "addedAt": "2026-08-07T06:30:00.000Z",
+      "fetched": true
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "电网头条",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "能源新磁场",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "新能源产业家",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "创客能源",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "电气时代",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "能源新媒",
+      "url": ""
+    },
+    {
+      "category": "电力/新能源",
+      "sourceName": "蓝色碳能",
+      "url": ""
+    },
+    {
+      "category": "发电",
+      "sourceName": "SST渗透率",
+      "url": ""
+    },
+    {
+      "category": "发电",
+      "sourceName": "燃气轮机聚焦",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "储能与电力市场",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "储能头条",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "储能100人",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "兰木达电力现货",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "蓝海经研",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "阳光电源",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "光储星球",
+      "url": ""
+    },
+    {
+      "category": "储能",
+      "sourceName": "储能日参",
+      "url": ""
+    },
+    {
+      "category": "AIDC",
+      "sourceName": "AIDC储能",
+      "url": ""
+    },
+    {
+      "category": "AIDC",
+      "sourceName": "IDC Energy",
+      "url": ""
+    },
+    {
+      "category": "AI/云计算",
+      "sourceName": "华为数字能源",
+      "url": ""
+    }
   ]
 }

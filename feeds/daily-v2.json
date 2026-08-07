@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-07",
-  "generatedAt": "2026-08-07T05:54:12.467Z",
+  "generatedAt": "2026-08-07T06:47:24.726Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 34,
     "sourcesSucceeded": 34,
-    "articlesFetched": 396,
-    "eventsPublished": 114
+    "articlesFetched": 398,
+    "eventsPublished": 115
   },
   "items": [
     {
@@ -43,7 +43,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [
         {
           "name": "Electrek",
@@ -68,6 +68,41 @@
         {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/ampyr-australia-bags-5-3-4-letter-for-270mw-grid-forming-battery-storage-system/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_ab7d9fd5508e",
+      "title": "US announces tariffs, minimum import price on polysilicon imports",
+      "originalTitle": "US announces tariffs, minimum import price on polysilicon imports",
+      "url": "https://www.pv-magazine.com/2026/08/07/us-announces-tariffs-minimum-import-price-on-polysilicon-imports/",
+      "summary": "Following a Section 232 investigation into polysilicon and its derivatives, the White House has announced plans to implement a 15% tariff o…",
+      "whyItMatters": "光伏与风电；关键数字 15%；地区 美国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "to implement a",
+          "value": 15,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T06:43:21.000Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
+      "relatedSources": [
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/clearway-energy-renewables-storage-generation-rises-16-year-on-year-in-q2-2026/"
         }
       ],
       "wechat": false
@@ -103,7 +138,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -143,7 +178,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -183,7 +218,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T09:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -213,77 +248,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T08:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c3fb532ca7c7",
-      "title": "随着电网延迟的增加，美国数据中心转向现场太阳能、存储和VPP",
-      "originalTitle": "US data centers turn to on-site solar, storage, VPPs as grid delays mount",
-      "url": "https://www.pv-magazine.com/2026/08/06/transmission-logjams-and-ai-load-growth-push-data-centers-toward-on-site-solar-storage-and-vpps/",
-      "summary": "A Reuters Events report highlights how multi-year transmission delays are forcing data center developers in the United States to deploy 56…",
-      "whyItMatters": "电网与并网；关键数字 56GW；地区 美国；媒体 pv magazine",
-      "topic": "grid",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "States to deploy",
-          "value": 56,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ccf8c72ed15b",
-      "title": "2026年第二季度Clearway Energy可再生能源和储能发电量同比增长16%",
-      "originalTitle": "Clearway Energy renewables & storage generation rises 16% year-on-year in Q2 2026",
-      "url": "https://www.pv-tech.org/clearway-energy-renewables-storage-generation-rises-16-year-on-year-in-q2-2026/",
-      "summary": "Clearway Energy generated and sold 3,585GWh of solar power in the second quarter of 2026, up from 2,800GWh in Q2 2025.",
-      "whyItMatters": "光伏与风电；关键数字 16%、3585GWh、2800GWh；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "storage generation rises",
-          "value": 16,
-          "unit": "%"
-        },
-        {
-          "label": "generated and sold",
-          "value": 3585,
-          "unit": "GWh"
-        },
-        {
-          "label": "2026, up from",
-          "value": 2800,
-          "unit": "GWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T13:42:52.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -318,7 +283,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T03:53:20.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -348,7 +313,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:00:33.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -378,7 +343,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:36:16.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -408,7 +373,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:32:08.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -435,7 +400,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -465,7 +430,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -491,7 +456,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:24:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [
         {
           "name": "CleanTechnica",
@@ -523,7 +488,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:12:42.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -553,7 +518,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -583,7 +548,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T15:09:05.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -613,7 +578,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:32:19.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -643,7 +608,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:06:20.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -688,7 +653,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T11:33:32.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -714,7 +679,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:07:46.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -744,7 +709,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T09:32:32.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
@@ -779,7 +744,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -809,7 +774,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T11:04:35.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -839,7 +804,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T10:31:52.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -869,7 +834,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -895,7 +860,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:45:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -928,7 +893,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -964,7 +929,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -996,7 +961,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1022,7 +987,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:51:13.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1048,7 +1013,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:30:35.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1074,7 +1039,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:09:42.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1100,7 +1065,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:08:43.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1126,7 +1091,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:03:25.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1152,7 +1117,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:00:57.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1178,7 +1143,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:52:11.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1204,7 +1169,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:11:09.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1241,7 +1206,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1267,7 +1232,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1300,7 +1265,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1332,49 +1297,74 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_f15e71e03887",
-      "title": "【行业资讯】针对不同技术路线划定质量监督“硬杠杠”——让新型储能电站“建得好、用得稳”",
-      "originalTitle": "【行业资讯】针对不同技术路线划定质量监督“硬杠杠”——让新型储能电站“建得好、用得稳”",
-      "url": "https://mp.weixin.qq.com/s/iOywr-9s1fWXlLcSzbLqFg",
-      "summary": "来源：人民日报海外版 我国新型储能装机规模正在快速增长。截至 2025年底，全国新型储能装机较2024年底增长84%，全国已建成投运新型储能装机规模达到1.36亿千瓦/3.51亿千瓦时，与“十三五”末相比增长超40倍，实现跨越式发展。 新型储能电站大规模建设的另一面，是质量管控…",
-      "whyItMatters": "储能；关键数字 84%、1.36亿千瓦、3.51亿千瓦时；关联 国家能源局；媒体 中国化学与物理电源行业协会",
+      "id": "evt_99a8f0d2206f",
+      "title": "储能日报·速览【7月20日】",
+      "originalTitle": "储能日报·速览【7月20日】",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIxMTYwNjMwMw==&amp;mid=2247552149&amp;idx=5&amp;sn=c2200bdf3a9073e568eaf4f53fffcae8&amp;chksm=963d820acfd977dbc26f115415c28e11e5eeb8f064fad9f738184cacaa022ddf6d041b4908cf#rd",
+      "summary": "编辑 | 国际能源网/储能头条 团队 微信公众号 | 储能头条 2023年7月20日 传播 · 创造价值 关注“储能头条”微信公众号，一览天下储能大事。 ① 最高1.5元/kWh！贵州电力需求响应实施方案印发 ② 最高补贴500万元！广东某地出台新型储能产业发展扶持方案 ③ 2…",
+      "whyItMatters": "储能；关键数字 200MW、400MWh、240MW；关联 AES；地区 西班牙；媒体 储能头条",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "西班牙",
       "entities": [
-        "国家能源局"
+        "AES"
       ],
       "metrics": [
         {
-          "label": "24年底增长",
-          "value": 84,
-          "unit": "%"
+          "label": "扶持方案 ③",
+          "value": 200,
+          "unit": "MW"
         },
         {
-          "label": "装机规模达到",
-          "value": 1.36,
-          "unit": "亿千瓦"
+          "label": "200MW/",
+          "value": 400,
+          "unit": "MWh"
         },
         {
-          "label": "36亿千瓦/",
-          "value": 3.51,
-          "unit": "亿千瓦时"
+          "label": "站并网！ ④",
+          "value": 240,
+          "unit": "MW"
+        },
+        {
+          "label": "240MW/",
+          "value": 480,
+          "unit": "MWh"
+        },
+        {
+          "label": "⑦ 总投资",
+          "value": 15,
+          "unit": "亿元"
+        },
+        {
+          "label": "西班牙计划为",
+          "value": 600,
+          "unit": "MW"
+        },
+        {
+          "label": "助 ⑨ 配储",
+          "value": 1,
+          "unit": "GW"
+        },
+        {
+          "label": "配储1GW/",
+          "value": 4,
+          "unit": "GWh"
         }
       ],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "中国化学与物理电源行业协会",
+        "name": "储能头条",
         "type": "media",
         "isPrimary": true
       },
-      "publishedAt": "2026-05-26T06:39:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "publishedAt": "2023-07-20T04:48:00.000Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -1398,7 +1388,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1422,7 +1412,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1446,7 +1436,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1470,7 +1460,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1494,7 +1484,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1518,7 +1508,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1544,7 +1534,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1568,7 +1558,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:51:35.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1592,7 +1582,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T06:50:39.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1622,7 +1612,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1652,7 +1642,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1676,7 +1666,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T03:57:01.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2a0ab339b469",
+      "title": "We Energies在威斯康星州的三个新可再生能源项目上破土动工",
+      "originalTitle": "We Energies breaks ground on three new Wisconsin renewables projects",
+      "url": "https://www.pv-tech.org/we-energies-breaks-ground-on-three-new-wisconsin-renewables-projects/",
+      "summary": "US utility We Energies has begun construction on three renewable energy and battery energy storage system (BESS) projects in Wisconsin, US.",
+      "whyItMatters": "储能；地区 美国；媒体 PV-Tech",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T13:30:00.000Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1700,7 +1714,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T16:00:35.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1724,7 +1738,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:50:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1748,7 +1762,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:34:16.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1772,31 +1786,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T02:56:46.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e0da201aef47",
-      "title": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
-      "originalTitle": "DeepSeek豪掷1.4亿护航宇树IPO，杭州绝代双骄战略合体",
-      "url": "https://www.qbitai.com/2026/08/467487.html",
-      "summary": "此后模型、算力、数据中心都在合作范围内",
-      "whyItMatters": "数据中心电力需求；媒体 量子位",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "量子位",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T00:25:07.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1826,7 +1816,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1850,7 +1840,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:00:22.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1874,7 +1864,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:00:18.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1898,7 +1888,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:36.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1922,7 +1912,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:17.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1946,7 +1936,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:33.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1970,7 +1960,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:02:11.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1994,7 +1984,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:01:02.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2018,7 +2008,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T10:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2044,7 +2034,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2079,7 +2069,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2103,7 +2093,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2127,7 +2117,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2151,7 +2141,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2175,7 +2165,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2199,7 +2189,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2223,7 +2213,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T16:50:30.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2247,7 +2237,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T02:30:19.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2273,7 +2263,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2299,7 +2289,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2325,7 +2315,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2352,7 +2342,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2381,7 +2371,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2408,7 +2398,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2435,7 +2425,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2461,7 +2451,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2487,7 +2477,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2513,7 +2503,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2539,7 +2529,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2563,7 +2553,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2589,7 +2579,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
@@ -2620,7 +2610,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2646,7 +2636,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2673,7 +2663,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2699,7 +2689,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2725,7 +2715,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2751,7 +2741,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2775,7 +2765,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2799,7 +2789,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2823,7 +2813,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2847,7 +2837,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2871,7 +2861,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2895,7 +2885,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2919,7 +2909,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2943,7 +2933,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2967,7 +2957,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2991,7 +2981,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3015,7 +3005,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3039,7 +3029,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3063,7 +3053,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3087,7 +3077,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3111,7 +3101,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3135,7 +3125,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3159,9 +3149,57 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-07T05:54:12.467Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
       "relatedSources": [],
       "wechat": false
+    },
+    {
+      "id": "evt_db60378c278b",
+      "title": "电网头条四季度典型宣传案例⑤：最具影响力策划，等你来选",
+      "originalTitle": "电网头条四季度典型宣传案例⑤：最具影响力策划，等你来选",
+      "url": "https://mp.weixin.qq.com/s/Hr5WTdxaYIyZQmBwhrsjrA",
+      "summary": "2024年第四季度，电网头条策划并制作、发布了很多优秀作品。为系统梳理成果，总结、归纳、提升，我们分别整理出了其中较为典型的作品。今天推出 最具影响力策划 类别。 2024年四季度 电网头条为您推出了 诸多精彩纷呈的系列报道 …… 这3个月的记忆里 是否有我们带给您的一抹亮色…",
+      "whyItMatters": "电网与并网；地区 中国；媒体 电网头条",
+      "topic": "grid",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "电网头条",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2025-01-01T09:00:00.000Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
+      "relatedSources": [],
+      "wechat": true
+    },
+    {
+      "id": "evt_dde48dba1ee6",
+      "title": "电网头条四季度人气作品⑤：哪个专题是你的“菜”？",
+      "originalTitle": "电网头条四季度人气作品⑤：哪个专题是你的“菜”？",
+      "url": "https://mp.weixin.qq.com/s/HNHWegNpPpxhH1Geb_SMGA",
+      "summary": "2025年第四季度，电网头条策划、制作了很多专题，有独立策划的，也有和兄弟单位联合策划的。为了便于归纳、总结、学习、借鉴、提升，我们整理出了其中较为典型的作品。 快来看看哪些专题给你留下深刻印象？欢迎文末投票！ 点击图片",
+      "whyItMatters": "电网与并网；媒体 电网头条",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "电网头条",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-01-07T22:58:00.000Z",
+      "discoveredAt": "2026-08-07T06:47:24.726Z",
+      "relatedSources": [],
+      "wechat": true
     }
   ]
 }

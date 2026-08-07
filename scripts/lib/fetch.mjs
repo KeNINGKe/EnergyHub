@@ -376,7 +376,7 @@ export async function fetchPage(source) {
     return null;
   }
   try {
-  const isWechatArticle = /mp\.weixin\.qq\.com\/s\//i.test(url);
+  const isWechatArticle = /mp\.weixin\.qq\.com\/s(\/|\?)/i.test(url);
   let items = null;
   if (isWechatArticle) {
     // 微信只走直连（Jina 在 mp.weixin.qq.com 被 Cloudflare 拦截，无有效兜底）
