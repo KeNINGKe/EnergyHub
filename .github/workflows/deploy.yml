@@ -15,6 +15,8 @@ jobs:
           node-version: 22
           cache: 'npm'
       - run: npm ci
+      - name: Verify code and data
+        run: npm run verify
       - name: Prepare dist
         run: |
           mkdir -p dist

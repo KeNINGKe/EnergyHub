@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-10",
-  "generatedAt": "2026-08-10T07:51:14.317Z",
+  "generatedAt": "2026-08-10T09:45:37.776Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
-    "sourcesSucceeded": 46,
-    "articlesFetched": 511,
-    "eventsPublished": 158
+    "sourcesSucceeded": 45,
+    "articlesFetched": 468,
+    "eventsPublished": 107
   },
   "items": [
     {
@@ -33,16 +33,65 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
+      "id": "evt_5e0c79ed0192",
+      "title": "在过去三年中，电池存储容量平均增长了70%",
+      "originalTitle": "Battery storage capacity averaged 70% growth over the last three years",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67925",
+      "summary": "Utility-scale battery storage capacity in the United States increased significantly during the last three years, with an annual average gro…",
+      "whyItMatters": "储能；关键数字 70%、8.3GW、52GW；地区 美国；一手来源 EIA Electricity Data",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "storage capacity averaged",
+          "value": 70,
+          "unit": "%"
+        },
+        {
+          "label": "operators added another",
+          "value": 8.3,
+          "unit": "GW"
+        },
+        {
+          "label": "capacity, reaching nearly",
+          "value": 52,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T14:00:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [
+        {
+          "name": "Energy Central",
+          "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-utility-scale-battery-storage-capacity-is-booming-2UPrB40KXve8bUQ"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/elestor-hydrogen-iron-flow-battery/"
+        }
+      ],
+      "wechat": false
+    },
+    {
       "id": "evt_cb8a13f40ef5",
-      "title": "NEWS: Political headwinds are leaving data center projects up in the air (and costing developers billions). 💨",
+      "title": "新闻：政治阻力正在使数据中心项目悬而未决（并使开发商损失数十亿美元）。 💨",
       "originalTitle": "NEWS: Political headwinds are leaving data center projects up in the air (and costing developers billions). 💨",
       "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-political-headwinds-are-leaving-data-center-projects-up-in-the-air-p6ikumeszXTamYA",
       "summary": "* In Texas: Gov. Greg Abbott’s recent pause [https://www.energycentral.com/energy-management/post/news-texas-is-pressing-pause-on-data-cent…",
@@ -70,10 +119,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T23:39:46.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -102,16 +151,76 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_96d7df26d70b",
+      "title": "在北卡罗来纳州，尽管遭遇逆风，屋顶太阳能仍然充满活力",
+      "originalTitle": "In North Carolina, rooftop solar is alive and well despite headwinds",
+      "url": "https://www.canarymedia.com/articles/solar/north-carolina-rooftop-solar",
+      "summary": "Stew Miller, who launched his North Carolina rooftop solar company in the 2000s, says there’s “a lot of negativity” in his industry right n…",
+      "whyItMatters": "光伏与风电；关键数字 30%；媒体 Canary Media",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Act eliminating the",
+          "value": 30,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T07:30:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_edd43663ebf9",
+      "title": "氧化锌紫外屏蔽可减少异质结太阳能电池的降解，并将寿命输出提高4.8%",
+      "originalTitle": "Zinc oxide UV shield cuts heterojunction solar cell degradation and boosts lifetime output by 4.8%",
+      "url": "https://www.pv-magazine.com/2026/08/10/zinc-oxide-uv-shield-cuts-heterojunction-solar-cell-degradation-and-boosts-lifetime-output-by-4-8/",
+      "summary": "Researchers in China have demonstrated that zinc oxide (ZnO) thin films can act as a 'sunscreen' for heterojunction solar cells, reducing U…",
+      "whyItMatters": "光伏与风电；关键数字 4.8%；地区 中国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "lifetime output by",
+          "value": 4.8,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T08:58:23.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_146f0bf74fec",
-      "title": "France expands renewable curtailment mechanism amid negative prices, lowers threshold to 1 MW",
+      "title": "法国在价格下跌的情况下扩大可再生能源削减机制，将门槛降至1兆瓦",
       "originalTitle": "France expands renewable curtailment mechanism amid negative prices, lowers threshold to 1 MW",
       "url": "https://www.pv-magazine.com/2026/08/10/france-expands-renewable-curtailment-mechanism-amid-negative-prices-lowers-threshold-to-1-mw/",
       "summary": "France will expand its renewable curtailment mechanism to more solar and wind installations, lowering the capacity threshold from 10 MW to…",
@@ -137,10 +246,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:35:43.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -177,10 +286,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T06:11:03.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -212,10 +321,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T04:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -244,16 +353,16 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_abc2abcfe94a",
-      "title": "NEWS: A new Trump administration tariff on polysilicon aims to boost domestic solar production—but the industry isn’t pleased.",
+      "title": "新闻：特朗普政府对多晶硅征收的新关税旨在提高国内太阳能产量，但该行业并不满意。",
       "originalTitle": "NEWS: A new Trump administration tariff on polysilicon aims to boost domestic solar production—but the industry isn’t pleased.",
       "url": "https://www.energycentral.com/renewables-9zth006i/post/news-a-new-trump-administration-tariff-on-polysilicon-aims-to-boost-K0MVuPs8yOzQo2Q",
       "summary": "* What happened: Citing national security concerns, President Trump announced [https://www.whitehouse.gov/presidential-actions/2026/08/adju…",
@@ -274,10 +383,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T23:39:22.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -313,10 +422,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:11:38.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -345,16 +454,16 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T10:22:08.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_2038614d5a4b",
-      "title": "India's rooftop revolution is winning the numbers game and losing the share game",
+      "title": "印度的屋顶革命正在赢得数字游戏并输掉分享游戏",
       "originalTitle": "India's rooftop revolution is winning the numbers game and losing the share game",
       "url": "https://www.energycentral.com/renewables-9zth006i/post/india-s-rooftop-revolution-is-winning-the-numbers-game-and-losing-the-ZoLPJf3HSELRTNy",
       "summary": "Distributed solar capacity has grown from 1.8 gigawatts (GW) in the 2018 financial year to 31.5GW in FY2026. That figure covers panels on h…",
@@ -375,16 +484,16 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T00:35:56.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_91eb97a9b3ee",
-      "title": "NEWS: Duke has reached (another) agreement with North Carolina officials on rate hikes.",
+      "title": "新闻：杜克大学已与北卡罗来纳州官员就加息达成（另一项）协议。",
       "originalTitle": "NEWS: Duke has reached (another) agreement with North Carolina officials on rate hikes.",
       "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-duke-has-reached-another-agreement-with-north-carolina-officials-D3VuT40O125r7Z7",
       "summary": "* The latest: Duke has settled [https://news.duke-energy.com/releases/duke-energy-progress-reaches-agreement-with-north-carolina-public-sta…",
@@ -405,16 +514,16 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T23:40:55.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_c11b6715d6f5",
-      "title": "NEWS: In July, the average US residential electric bill hit a record $217—up nearly 33% from 2021.",
+      "title": "新闻： 7月，美国住宅电费平均达到创纪录的217 $ ，比2021年增长近33%。",
       "originalTitle": "NEWS: In July, the average US residential electric bill hit a record $217—up nearly 33% from 2021.",
       "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/news-in-july-the-average-us-residential-electric-bill-hit-a-record-217--9r2InvW0bCwm0bx",
       "summary": "* Why? A combo of high prices and power consumption as US households tried to keep cool amid searing temps, according to Heatmap and MIT’s…",
@@ -435,10 +544,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T23:38:48.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -467,10 +576,36 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:20:36.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_69b0eb09af80",
+      "title": "Firebird在亚美尼亚推出独联体地区最大的人工智能工厂",
+      "originalTitle": "Firebird Launches CIS Region’s Largest AI Factory in Armenia",
+      "url": "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/",
+      "summary": "The global buildout of AI infrastructure reached a new milestone today — Firebird, an emerging AI cloud, launched the CIS region’s largest…",
+      "whyItMatters": "关联 NVIDIA；地区 全球；一手来源 NVIDIA Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-08T10:24:54.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -497,66 +632,40 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-08T10:11:14.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_2da62220a1b4",
-      "title": "三星橡树岭国家实验室测试寒冷气候蒸汽压缩热泵技术",
-      "originalTitle": "Samsung, Oak Ridge National Laboratory testing cold climate vapor compression heat pump tech",
-      "url": "https://www.pv-magazine.com/2026/08/10/samsung-oak-ridge-national-laboratory-testing-cold-climate-vapor-compression-heat-pump-tech/",
-      "summary": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating perfor…",
-      "whyItMatters": "光伏与风电；关联 Samsung；地区 全球；媒体 pv magazine",
+      "id": "evt_667ee76c3bab",
+      "title": "丹麦海上风电招标成功证明CfD能够提供有竞争力的投标",
+      "originalTitle": "Successful Danish offshore wind tender proves that CfDs deliver competitive bids",
+      "url": "https://windeurope.org/news/successful-danish-offshore-wind-tender-proves-that-cfds-deliver-competitive-bids/",
+      "summary": "Denmark held a successful offshore wind auction for two sites with a total capacity of 1.8 GW. It shows that auction design matters. The la…",
+      "whyItMatters": "光伏与风电；关键数字 1.8GW；研究机构 WindEurope",
       "topic": "solar-wind",
       "tags": [],
-      "region": "全球",
-      "entities": [
-        "Samsung"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-10T06:57:38.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c8b936f3b456",
-      "title": "中国多晶硅巨头承诺结束亏损销售",
-      "originalTitle": "Chinese polysilicon majors pledge to end loss-making sales",
-      "url": "https://www.pv-magazine.com/2026/08/07/chinese-polysilicon-majors-pledge-to-end-loss-making-sales/",
-      "summary": "China's top eight polysilicon producers, controlling more than 90% of effective Chinese polysilicon capacity, have signed an industry prici…",
-      "whyItMatters": "光伏与风电；关键数字 90%；地区 中国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "中国",
+      "region": "未知",
       "entities": [],
       "metrics": [
         {
-          "label": "controlling more than",
-          "value": 90,
-          "unit": "%"
+          "label": "total capacity of",
+          "value": 1.8,
+          "unit": "GW"
         }
       ],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
+        "name": "WindEurope",
+        "type": "research",
+        "isPrimary": false
       },
-      "publishedAt": "2026-08-07T12:55:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "publishedAt": "2026-08-05T13:44:45.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -583,10 +692,41 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T15:28:19.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/10/european-transmission-system-operators-prepare-for-solar-eclipse/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_2da62220a1b4",
+      "title": "三星橡树岭国家实验室测试寒冷气候蒸汽压缩热泵技术",
+      "originalTitle": "Samsung, Oak Ridge National Laboratory testing cold climate vapor compression heat pump tech",
+      "url": "https://www.pv-magazine.com/2026/08/10/samsung-oak-ridge-national-laboratory-testing-cold-climate-vapor-compression-heat-pump-tech/",
+      "summary": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating perfor…",
+      "whyItMatters": "光伏与风电；关联 Samsung；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "Samsung"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T06:57:38.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -607,10 +747,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -637,10 +777,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:42:11.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -672,131 +812,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T12:30:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b8b919dcb163",
-      "title": "CIP在墨西哥使用750 MWh电池的同地太阳能项目达成财务结算",
-      "originalTitle": "CIP reaches financial close on co-located solar project with 750 MWh battery in Mexico",
-      "url": "https://www.ess-news.com/2026/08/07/cip-reaches-financial-close-on-co-located-solar-project-with-750-mwh-battery-in-mexico/",
-      "summary": "Construction underway at grid-scale project with commissioning expected in 2028. The solar and battery energy storage system (BESS) project…",
-      "whyItMatters": "储能；关键数字 750MWh；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "solar project with",
-          "value": 750,
-          "unit": "MWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T08:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_619090942af6",
-      "title": "Callan JMB为美国变压器制造业推出Callan Power",
-      "originalTitle": "Callan JMB Launches Callan Power for U.S. Transformer Manufacturing",
-      "url": "https://transformer-technology.com/callan-jmb-launches-callan-power-for-u-s-transformer-manufacturing/",
-      "summary": "Callan JMB has established Callan Power LLC, a wholly owned subsidiary focused on the planned domestic manufacturing of transformers and ot…",
-      "whyItMatters": "固态变压器（SST）；地区 美国；媒体 Transformer Technology",
-      "topic": "sst",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_742c887232fb",
-      "title": "TotalEnergies收购壳牌的欧洲可再生资产",
-      "originalTitle": "TotalEnergies Acquires Shell’s European Renewable Assets",
-      "url": "https://transformer-technology.com/totalenergies-acquires-shells-european-renewable-assets/",
-      "summary": "Shell has agreed to sell its European onshore renewables business to TotalEnergies, transferring a portfolio of renewable energy assets spa…",
-      "whyItMatters": "关键数字 0.5GW；关联 Shell；地区 欧盟；媒体 Transformer Technology",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [
-        "Shell"
-      ],
-      "metrics": [
-        {
-          "label": "portfolio includes around",
-          "value": 0.5,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T08:24:30.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f54d7ece00a5",
-      "title": "瑞典批准1.4吉瓦海上风电场",
-      "originalTitle": "Sweden approves 1.4 GW offshore wind farm",
-      "url": "https://transformer-magazine.com/news/sweden-approves-1-4-gw-offshore-wind-farm/",
-      "summary": "Skyborn’s offshore wind project could generate 5 TWh annually",
-      "whyItMatters": "光伏与风电；关键数字 1.4GW、5TWh；媒体 Transformer Magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Sweden approves",
-          "value": 1.4,
-          "unit": "GW"
-        },
-        {
-          "label": "project could generate",
-          "value": 5,
-          "unit": "TWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T08:53:32.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -825,10 +844,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T07:06:49.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -862,65 +881,16 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T21:32:38.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_5e0c79ed0192",
-      "title": "在过去三年中，电池存储容量平均增长了70%",
-      "originalTitle": "Battery storage capacity averaged 70% growth over the last three years",
-      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67925",
-      "summary": "Utility-scale battery storage capacity in the United States increased significantly during the last three years, with an annual average gro…",
-      "whyItMatters": "储能；关键数字 70%、8.3GW、52GW；地区 美国；一手来源 EIA Electricity Data",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "storage capacity averaged",
-          "value": 70,
-          "unit": "%"
-        },
-        {
-          "label": "operators added another",
-          "value": 8.3,
-          "unit": "GW"
-        },
-        {
-          "label": "capacity, reaching nearly",
-          "value": 52,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "EIA Electricity Data",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [
-        {
-          "name": "Energy Central",
-          "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-utility-scale-battery-storage-capacity-is-booming-2UPrB40KXve8bUQ"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/elestor-hydrogen-iron-flow-battery/"
-        }
-      ],
-      "wechat": false
-    },
-    {
       "id": "evt_c63c71aa0757",
-      "title": "New Mexico &amp; Clean Energy",
+      "title": "新墨西哥州和清洁能源",
       "originalTitle": "New Mexico &amp; Clean Energy",
       "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/new-mexico-clean-energy-NGLzxh5c1DbfQq9",
       "summary": "SkepticalScience: \"New Mexico’s clean energy success story [https://skepticalscience.com/new-mexico-clean-energy-success.html].\" \"July is t…",
@@ -937,10 +907,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T14:13:23.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -967,10 +937,10 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:00:32.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -993,111 +963,10 @@
       "source": {
         "name": "量子位",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T01:12:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_919f7512f24c",
-      "title": "xAI的Colossus 2 –世界上第一个千兆瓦数据中心，独特的RL方法，筹集资金",
-      "originalTitle": "xAI’s Colossus 2 – First Gigawatt Datacenter In The World, Unique RL Methodology, Capital Raise",
-      "url": "https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/",
-      "summary": "Much has been written about xAI’s Colossus 1. The Memphis build belongs in the history books: the largest AI training cluster, erected from…",
-      "whyItMatters": "关键数字 300MW；关联 Google、Colossus；地区 全球；研究机构 Semianalysis",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [
-        "Google",
-        "Colossus"
-      ],
-      "metrics": [
-        {
-          "label": "Colossus 1’s ~",
-          "value": 300,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9fa3662f92cf",
-      "title": "亚马逊的人工智能复兴： AWS和Anthropic的万兆瓦火车头扩张",
-      "originalTitle": "Amazon’s AI Resurgence: AWS & Anthropic’s Multi-Gigawatt Trainium Expansion",
-      "url": "https://semianalysis.com/2025/09/03/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion/",
-      "summary": "Two-and-a-half years ago, we flagged a looming “cloud crisis” at AWS. Today, the evidence has mounted. AWS is the crown jewel of the Amazon…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 60%；关联 Anthropic、Microsoft、Azure；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Anthropic",
-        "Microsoft",
-        "Azure",
-        "Amazon",
-        "AWS"
-      ],
-      "metrics": [
-        {
-          "label": "empire, generating ~",
-          "value": 60,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_52bcdb51cfd3",
-      "title": "Meta Superintelligence –领导力计算、人才和数据",
-      "originalTitle": "Meta Superintelligence – Leadership Compute, Talent, and Data",
-      "url": "https://semianalysis.com/2025/07/11/meta-superintelligence-leadership-compute-talent-and-data/",
-      "summary": "Meta’s shocking purchase of 49% of Scale AI at a ~$30B valuation shows that money is of no concern for the $100B annual cashflow ad machine…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 49%；关联 Meta；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [
-        {
-          "label": "shocking purchase of",
-          "value": 49,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1120,71 +989,27 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T13:55:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_60b792c2978f",
-      "title": "Circles通过OpenAI技术为电信运营商个性化提供支持",
-      "originalTitle": "Circles powers telco personalization with OpenAI technology",
-      "url": "https://openai.com/index/circles",
-      "summary": "Circles uses the OpenAI API and Codex to power AI-native telco experiences, increasing ARPU by 22%, reducing churn by 9%, and improving dev…",
-      "whyItMatters": "冷却、UPS 与 PUE；关键数字 22%、9%；关联 OpenAI；一手来源 OpenAI News",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "OpenAI"
-      ],
-      "metrics": [
-        {
-          "label": "increasing ARPU by",
-          "value": 22,
-          "unit": "%"
-        },
-        {
-          "label": "reducing churn by",
-          "value": 9,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "OpenAI News",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f81b8f5e2e11",
-      "title": "基于AWS Graviton5处理器的Amazon EC2 C9g和C9gd实例现已推出",
-      "originalTitle": "Amazon EC2 C9g and C9gd instances powered by AWS Graviton5 processors are now available",
-      "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c9g-and-c9gd-instances-powered-by-aws-graviton5-processors-are-now-available/",
-      "summary": "Amazon EC2 C9g and C9gd instances, powered by AWS Graviton5, are now generally available. They deliver up to 25% better compute performance…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 25%；关联 Amazon、AWS；一手来源 AWS News Blog",
+      "id": "evt_5c8093e5adfb",
+      "title": "运行时实例： Amazon Bedrock AgentCore上生产AI代理的持久计算",
+      "originalTitle": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
+      "url": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/",
+      "summary": "Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent c…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Amazon；一手来源 AWS News Blog",
       "topic": "chips-compute",
       "tags": [],
       "region": "未知",
       "entities": [
-        "Amazon",
-        "AWS"
+        "Amazon"
       ],
-      "metrics": [
-        {
-          "label": "deliver up to",
-          "value": 25,
-          "unit": "%"
-        }
-      ],
+      "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
@@ -1192,40 +1017,58 @@
         "type": "primary",
         "isPrimary": true
       },
-      "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "publishedAt": "2026-08-06T22:58:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_90fdc5216d3f",
-      "title": "亚马逊最新的英国配送站旨在率先在美国境外获得新的零碳认证",
-      "originalTitle": "Amazon’s newest UK delivery station aims to be the first to achieve new zero carbon certification outside the US",
-      "url": "https://www.aboutamazon.com/news/sustainability/net-zero-delivery-station-uk?utm_source=rss",
-      "summary": "The Stockton-on-Tees facility will use AI tracking, carbon-storing materials, and renewable energy to cut emissions by at least 20%.",
-      "whyItMatters": "关键数字 20%；关联 Amazon；地区 美国；一手来源 Amazon Sustainability",
-      "topic": "other-energy",
+      "id": "evt_3ef18d1f5526",
+      "title": "NVIDIA及其合作伙伴在美国为美国打造",
+      "originalTitle": "NVIDIA and Partners Build in America, for America",
+      "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
+      "summary": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce…",
+      "whyItMatters": "电网与并网；关联 NVIDIA；地区 美国；一手来源 NVIDIA Blog",
+      "topic": "grid",
       "tags": [],
       "region": "美国",
       "entities": [
-        "Amazon"
+        "NVIDIA"
       ],
-      "metrics": [
-        {
-          "label": "by at least",
-          "value": 20,
-          "unit": "%"
-        }
-      ],
+      "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Amazon Sustainability",
+        "name": "NVIDIA Blog",
         "type": "primary",
         "isPrimary": true
       },
-      "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "publishedAt": "2026-08-05T13:00:47.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c0f2c4915078",
+      "title": "世界上最古老的切达干酪制造商用新型热泵大幅削减能源账单",
+      "originalTitle": "World’s oldest cheddar-maker slashes energy bills with novel heat pumps",
+      "url": "https://www.canarymedia.com/articles/heat-pumps/worlds-oldest-cheddar-maker-heat-pumps",
+      "summary": "In many ways the world's oldest cheddar-maker hews to tradition. Since 1833, Barber’s Farmhouse Cheesemakers has operated from the rolling…",
+      "whyItMatters": "地区 全球；媒体 Canary Media",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T07:30:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1246,29 +1089,55 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_f44be569c418",
-      "title": "面对估计474吉瓦的互连请求，德克萨斯州暂停了数据中心",
-      "originalTitle": "Facing an estimated 474 GW of interconnection requests, Texas hits pause on data centers",
-      "url": "https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/",
-      "summary": "Texas Gov. Greg Abbott has called for an audit of all data centers in the Electric Reliability Council of Texas interconnection queue, lead…",
-      "whyItMatters": "电网与并网；关键数字 474GW；媒体 Utility Dive",
+      "id": "evt_ce926154a483",
+      "title": "现有发电厂是提供数据中心的“基石” ： Constellation首席执行官",
+      "originalTitle": "Existing power plants are ‘bedrock’ in supplying data centers: Constellation CEO",
+      "url": "https://www.utilitydive.com/news/existing-power-plants-supply-data-centers-constellation/827326/",
+      "summary": "Constellation Energy expects Texas’ Batch Zero large load interconnection process will resume without “meaningful delay.”",
+      "whyItMatters": "电网与并网；关联 Constellation；媒体 Utility Dive",
       "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Constellation"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-07T14:23:04.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0d3f29af808e",
+      "title": "数据中心电力销售推动TVA净收入增长$ 2.2亿",
+      "originalTitle": "Data center power sales drive $220M increase in TVA’s net income",
+      "url": "https://www.utilitydive.com/news/data-center-tva-income-earnings-cumberland/827282/",
+      "summary": "The federal utility’s total operating revenue was $10 billion over the first nine months of the fiscal year, up 3% year over year, with a n…",
+      "whyItMatters": "数据中心电力需求；关键数字 3%；媒体 Utility Dive",
+      "topic": "data-center-power",
       "tags": [],
       "region": "未知",
       "entities": [],
       "metrics": [
         {
-          "label": "Facing an estimated",
-          "value": 474,
-          "unit": "GW"
+          "label": "fiscal year, up",
+          "value": 3,
+          "unit": "%"
         }
       ],
       "impact": "unknown",
@@ -1276,10 +1145,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "publishedAt": "2026-08-06T20:54:49.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1300,10 +1169,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T06:41:19.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1326,100 +1195,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-08T02:45:02.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_667ee76c3bab",
-      "title": "丹麦海上风电招标成功证明CfD能够提供有竞争力的投标",
-      "originalTitle": "Successful Danish offshore wind tender proves that CfDs deliver competitive bids",
-      "url": "https://windeurope.org/news/successful-danish-offshore-wind-tender-proves-that-cfds-deliver-competitive-bids/",
-      "summary": "Denmark held a successful offshore wind auction for two sites with a total capacity of 1.8 GW. It shows that auction design matters. The la…",
-      "whyItMatters": "光伏与风电；关键数字 1.8GW；研究机构 WindEurope",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "total capacity of",
-          "value": 1.8,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4f9cbab935fd",
-      "title": "欧洲将电力翻番的计划将需要更强大的ETS",
-      "originalTitle": "Europe’s plan to double down on electricity will require a more robust ETS",
-      "url": "https://windeurope.org/news/europes-plan-to-double-down-on-electricity-will-require-a-more-robust-ets/",
-      "summary": "Europe has not been doing enough to electrify industry, buildings and mobility, leaving the continent over reliant on volatile and expensiv…",
-      "whyItMatters": "关键数字 46%；地区 欧盟；研究机构 WindEurope",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "energy mix to",
-          "value": 46,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_800b3b1efde3",
-      "title": "法国和德国陆上风电拍卖结果要求增加产量",
-      "originalTitle": "French and German onshore wind auction results call for more volumes",
-      "url": "https://windeurope.org/news/french-and-german-onshore-wind-auction-results-call-for-more-volumes/",
-      "summary": "France and Germany held successful onshore wind auction rounds. Together they awarded more than 3 GW of new onshore wind capacity. Upon com…",
-      "whyItMatters": "光伏与风电；关键数字 3GW；地区 欧盟；研究机构 WindEurope",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "awarded more than",
-          "value": 3,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1440,10 +1219,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T02:52:14.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1480,10 +1259,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T07:21:49.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1515,10 +1294,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T11:21:34.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -1555,10 +1334,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T03:53:20.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -1567,6 +1346,10 @@
         {
           "name": "ESS News",
           "url": "https://www.ess-news.com/2026/08/07/eolian-starts-building-1-gwh-battery-project-for-pjm-data-centers-in-ohio/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/serentica-renewables-commissions-first-phase-of-1gwh-bess-for-round-the-clock-renewable-energy-delivery-in-rajasthan-india/"
         }
       ],
       "wechat": false
@@ -1599,16 +1382,94 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T11:17:29.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "ESS News",
           "url": "https://www.ess-news.com/2026/08/07/centrica-energy-and-zelestra-sign-tolling-agreement-for-297-mwh-project-in-germany/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_b8b919dcb163",
+      "title": "CIP在墨西哥使用750 MWh电池的同地太阳能项目达成财务结算",
+      "originalTitle": "CIP reaches financial close on co-located solar project with 750 MWh battery in Mexico",
+      "url": "https://www.ess-news.com/2026/08/07/cip-reaches-financial-close-on-co-located-solar-project-with-750-mwh-battery-in-mexico/",
+      "summary": "Construction underway at grid-scale project with commissioning expected in 2028. The solar and battery energy storage system (BESS) project…",
+      "whyItMatters": "储能；关键数字 750MWh；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "solar project with",
+          "value": 750,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-07T08:00:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ee162a7ba63e",
+      "title": "LUMA瞄准波多黎各老化变压器电网升级",
+      "originalTitle": "LUMA Targets Aging Transformer in Puerto Rico Grid Upgrade",
+      "url": "https://transformer-technology.com/luma-targets-aging-transformer-in-puerto-rico-grid-upgrade/",
+      "summary": "LUMA Energy is preparing a major maintenance project on the main transformer at its urban-area substation in Juana Díaz, Puerto Rico, as pa…",
+      "whyItMatters": "电网与并网；媒体 Transformer Technology",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T08:21:17.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_619090942af6",
+      "title": "Callan JMB为美国变压器制造业推出Callan Power",
+      "originalTitle": "Callan JMB Launches Callan Power for U.S. Transformer Manufacturing",
+      "url": "https://transformer-technology.com/callan-jmb-launches-callan-power-for-u-s-transformer-manufacturing/",
+      "summary": "Callan JMB has established Callan Power LLC, a wholly owned subsidiary focused on the planned domestic manufacturing of transformers and ot…",
+      "whyItMatters": "固态变压器（SST）；地区 美国；媒体 Transformer Technology",
+      "topic": "sst",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-07T08:45:28.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -1628,10 +1489,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:59:18.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1658,10 +1519,69 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-04T08:17:24.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0dcf9b12b930",
+      "title": "MNK成立国际能源事业部",
+      "originalTitle": "MNK launches International Energy Division",
+      "url": "https://transformer-magazine.com/news/mnk-launches-international-energy-division/",
+      "summary": "William Wakeham will lead the new unit covering renewables, battery storage, data centres, grid infrastructure and conventional energy.",
+      "whyItMatters": "储能；媒体 Transformer Magazine",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T09:27:56.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f54d7ece00a5",
+      "title": "瑞典批准1.4吉瓦海上风电场",
+      "originalTitle": "Sweden approves 1.4 GW offshore wind farm",
+      "url": "https://transformer-magazine.com/news/sweden-approves-1-4-gw-offshore-wind-farm/",
+      "summary": "Skyborn’s offshore wind project could generate 5 TWh annually",
+      "whyItMatters": "光伏与风电；关键数字 1.4GW、5TWh；媒体 Transformer Magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Sweden approves",
+          "value": 1.4,
+          "unit": "GW"
+        },
+        {
+          "label": "project could generate",
+          "value": 5,
+          "unit": "TWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-07T08:53:32.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1688,10 +1608,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T06:53:24.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1718,10 +1638,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T07:21:48.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1748,10 +1668,10 @@
       "source": {
         "name": "T&D World",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:18:47.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1774,10 +1694,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:20:01.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "T&D World",
@@ -1813,10 +1733,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T07:28:37.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1843,70 +1763,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8396684988c9",
-      "title": "投资支持两相冷却作为水冷板继任者",
-      "originalTitle": "Investments back two-phase cooling as water cold plate successor",
-      "url": "https://journal.uptimeinstitute.com/investments-back-two-phase-cooling-as-water-cold-plate-successor/",
-      "summary": "Direct liquid cooling (DLC) has attracted significant investment over the past two years, driven largely by the massive buildout of dense A…",
-      "whyItMatters": "冷却、UPS 与 PUE；关键数字 200kW；研究机构 Uptime Institute Journal",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "soon to surpass",
-          "value": 200,
-          "unit": "kW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d40acdb043d3",
-      "title": "产能分配和下一代人工智能时代的关键绩效指标",
-      "originalTitle": "Capacity allocation and the next generation of AI-era KPIs",
-      "url": "https://journal.uptimeinstitute.com/capacity-allocation-and-the-next-generation-of-ai-era-kpis/",
-      "summary": "AI workloads are reshaping data center infrastructure at an unprecedented scale. Rack densities exceeding 50 kW are becoming increasingly c…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 50kW；研究机构 Uptime Institute Journal",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Rack densities exceeding",
-          "value": 50,
-          "unit": "kW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1929,40 +1789,10 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:40:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9c7dfa325bb8",
-      "title": "扩展内存墙： HBM的崛起和路线图",
-      "originalTitle": "Scaling the Memory Wall: The Rise and Roadmap of HBM",
-      "url": "https://semianalysis.com/2025/08/12/scaling-the-memory-wall-the-rise-and-roadmap-of-hbm/",
-      "summary": "The first portion of this report will explain HBM, the manufacturing process, dynamics between vendors, KVCache offload, disaggregated pref…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 4w；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "coming to HBM",
-          "value": 4,
-          "unit": "w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1985,10 +1815,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T19:50:34.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2011,10 +1841,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T16:28:49.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2037,16 +1867,16 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T15:50:32.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_dea269a03ef6",
-      "title": "How Data Center AI Can Keep Growing, Despite Supply Chain Bottlenecks",
+      "title": "尽管存在供应链瓶颈，数据中心人工智能如何保持增长",
       "originalTitle": "How Data Center AI Can Keep Growing, Despite Supply Chain Bottlenecks",
       "url": "https://semiengineering.com/how-data-center-ai-can-keep-growing-despite-supply-chain-bottlenecks/",
       "summary": "Efficiency is key for the next two to five years. But what happens when supply eventually catches up? The post How Data Center AI Can Keep…",
@@ -2061,16 +1891,16 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:01:44.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_4ab26044060e",
-      "title": "Chip Industry Technical Paper Roundup: Aug. 10",
+      "title": "芯片行业技术论文综述： 8月10日",
       "originalTitle": "Chip Industry Technical Paper Roundup: Aug. 10",
       "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-aug-11/",
       "summary": "Ultrafast optical switching in doped semis; PIM simulation; foundry-compatible silicon photonics MEMS switching; GPU-accelerated switching-…",
@@ -2085,16 +1915,16 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:01:34.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
       "id": "evt_bf0096bdd57e",
-      "title": "Research Bits: Aug. 10",
+      "title": "研究位： 8月10日",
       "originalTitle": "Research Bits: Aug. 10",
       "url": "https://semiengineering.com/research-bits-aug-10/",
       "summary": "Thin chip stacking; analog CAM with MoS2; sensor-level processing and memory. The post Research Bits: Aug. 10 appeared first on Semiconduct…",
@@ -2109,10 +1939,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:01:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2133,10 +1963,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T14:15:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2157,26 +1987,24 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T12:20:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_69b0eb09af80",
-      "title": "Firebird在亚美尼亚推出独联体地区最大的人工智能工厂",
-      "originalTitle": "Firebird Launches CIS Region’s Largest AI Factory in Armenia",
-      "url": "https://blogs.nvidia.com/blog/firebird-ai-factory-armenia-blackwell-rubin-dsx/",
-      "summary": "The global buildout of AI infrastructure reached a new milestone today — Firebird, an emerging AI cloud, launched the CIS region’s largest…",
-      "whyItMatters": "关联 NVIDIA；地区 全球；一手来源 NVIDIA Blog",
+      "id": "evt_c797cba4897f",
+      "title": "随着人工智能对内存的需求增加，存储也随之增加",
+      "originalTitle": "As AI Increases Demands on Memory, Storage Steps Up",
+      "url": "https://blogs.nvidia.com/blog/ai-storage-fms/",
+      "summary": "Surging AI demands are driving the need for massive datasets and context windows that burst past the confines of system memory. But rising…",
+      "whyItMatters": "一手来源 NVIDIA Blog",
       "topic": "other-energy",
       "tags": [],
-      "region": "全球",
-      "entities": [
-        "NVIDIA"
-      ],
+      "region": "未知",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
@@ -2185,71 +2013,10 @@
         "type": "primary",
         "isPrimary": true
       },
-      "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "publishedAt": "2026-08-04T15:00:47.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
-    },
-    {
-      "id": "evt_7976db928fd9",
-      "title": "数据中心和人工智能使用了多少能源？",
-      "originalTitle": "How much energy do data centers and artificial intelligence use?",
-      "url": "https://ourworldindata.org/how-much-energy-do-data-centers-and-artificial-intelligence-use",
-      "summary": "Data centers consume around 1.5% of global electricity, but demand is very geographically concentrated.",
-      "whyItMatters": "关键数字 1.5%、0/w；地区 全球；研究机构 Our World in Data – Energy",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "centers consume around",
-          "value": 1.5,
-          "unit": "%"
-        },
-        {
-          "label": "728d-dc32-4ca7-32f8-dcb5be9a4b",
-          "value": 0,
-          "unit": "/w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Our World in Data – Energy",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c39f67ec1904",
-      "title": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
-      "originalTitle": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
-      "url": "https://digitalpower.huawei.com/cn/news/fusionsolar/snec2026-interview-news1",
-      "summary": "",
-      "whyItMatters": "储能变流器（PCS）；关联 华为数字能源；一手来源 华为数字能源",
-      "topic": "pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "华为数字能源"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "华为数字能源",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-11T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
     },
     {
       "id": "evt_5743d9e6ffca",
@@ -2268,10 +2035,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T22:30:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2295,10 +2062,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "POWER Magazine",
@@ -2309,6 +2076,30 @@
           "url": "https://www.powermag.com/oklos-groves-becomes-fifth-doe-pilot-reactor-to-reach-criticality-first-on-private-land/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_6e2b5be4b870",
+      "title": "Oncor权衡德克萨斯州数据中心冻结对近300GW负载管道的影响",
+      "originalTitle": "Oncor weighs impact of Texas data center freeze on nearly 300-GW load pipeline",
+      "url": "https://www.utilitydive.com/news/fate-of-oncors-nearly-300-gw-load-pipeline-unclear-following-texas-data-ce/827303/",
+      "summary": "Executives at parent company Sempra said they support the governor's pause on new data center interconnection approvals, citing a need for…",
+      "whyItMatters": "电网与并网；媒体 Utility Dive",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-07T12:00:00.000Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -2328,10 +2119,10 @@
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T16:52:54.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2354,10 +2145,10 @@
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2378,10 +2169,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-09T06:40:17.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2402,10 +2193,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-08T02:17:14.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2426,10 +2217,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:07:03.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2450,10 +2241,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T12:55:34.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2474,10 +2265,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T12:50:47.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2498,10 +2289,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2522,10 +2313,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2548,34 +2339,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T08:08:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b3ee1e966e56",
-      "title": "西门子能源订单达到206亿美元",
-      "originalTitle": "Siemens Energy orders reach $20.6 B",
-      "url": "https://transformer-magazine.com/news/siemens-energy-orders-reach-20-6-b/",
-      "summary": "Grid Technologies records strong order growth as Siemens Energy’s backlog rises to $186 B (€162 B) amid continued electricity infrastructur…",
-      "whyItMatters": "电网与并网；媒体 Transformer Magazine",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T08:44:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2598,10 +2365,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T08:54:56.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2624,10 +2391,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:37:56.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2650,10 +2417,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:17:03.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2676,10 +2443,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T13:53:27.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2700,10 +2467,10 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-08T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2724,10 +2491,10 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T17:00:55.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2748,62 +2515,10 @@
       "source": {
         "name": "Data Center Dynamics",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4d4d25a8f350",
-      "title": "华为Ascend生产坡道：模具银行，台积电继续生产， HBM是瓶颈",
-      "originalTitle": "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck",
-      "url": "https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/",
-      "summary": "Compute is the lifeblood of AI. He who controls the spice controls the universe the compute will control the production of tokens and reap…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 TSMC；地区 美国；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "TSMC"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d996a67f6579",
-      "title": "H100与GB200 NVL72培训基准–功耗、总拥有成本和可靠性分析、软件随时间的改进",
-      "originalTitle": "H100 vs GB200 NVL72 Training Benchmarks – Power, TCO, and Reliability Analysis, Software Improvement Over Time",
-      "url": "https://semianalysis.com/2025/08/20/h100-vs-gb200-nvl72-training-benchmarks/",
-      "summary": "Frontier model training has pushed GPUs and AI systems to their absolute limits, making cost, efficiency, power, performance per TCO, and r…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2824,10 +2539,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T19:07:13.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2848,10 +2563,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:38:48.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2875,10 +2590,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T07:01:09.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [
         {
           "name": "SemiWiki",
@@ -2889,32 +2604,6 @@
           "url": "https://semiwiki.com/semiconductor-manufacturers/intel/372019-intel-foundry-and-the-dac2026-ecosystem/"
         }
       ],
-      "wechat": false
-    },
-    {
-      "id": "evt_da941260c784",
-      "title": "Jensen Groks Groq",
-      "originalTitle": "Jensen Groks Groq",
-      "url": "https://thechipletter.substack.com/p/jensen-groks-groq",
-      "summary": "On Nvidia's fascinating 'acqui-something' of AI chip startup Groq",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；社区 Chip Letter",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Chip Letter",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
       "wechat": false
     },
     {
@@ -2934,10 +2623,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T19:48:39.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2958,496 +2647,12 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T16:49:11.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
-    },
-    {
-      "id": "evt_b3f3946d3dbb",
-      "title": "从可靠性到AI就绪性，客户在Microsoft数据库中最看重的是什么",
-      "originalTitle": "What customers value most in Microsoft Databases—from reliability to AI readiness",
-      "url": "https://azure.microsoft.com/en-us/blog/what-customers-value-most-in-microsoft-databases-from-reliability-to-ai-readiness/",
-      "summary": "Every day, customers trust Microsoft Databases to power their most critical applications, business processes, and AI-powered experiences. T…",
-      "whyItMatters": "关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Microsoft",
-        "Azure"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Microsoft Azure Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6d457e2e020c",
-      "title": "AT&T和微软通过微软Foundry和AMD扩展万亿代币工作负载",
-      "originalTitle": "AT&T and Microsoft scale trillion-token workloads with Microsoft Foundry and AMD",
-      "url": "https://azure.microsoft.com/en-us/blog/att-and-microsoft-scale-trillion-token-workloads-with-microsoft-foundry-and-amd/",
-      "summary": "AT&T processed approximately one trillion tokens while developing OTel2.0 using Microsoft Foundry Managed Compute, open AI models, and AMD…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Microsoft、Azure、NVIDIA；一手来源 Microsoft Azure Blog",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Microsoft",
-        "Azure",
-        "NVIDIA",
-        "AMD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Microsoft Azure Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_212a0b82a71a",
-      "title": "认识Brain ： Azure可靠性背后的AI系统",
-      "originalTitle": "Meet Brain: The AI system behind Azure reliability",
-      "url": "https://azure.microsoft.com/en-us/blog/meet-brain-the-ai-system-behind-azure-reliability/",
-      "summary": "Learn how Microsoft is building a digital twin of Azure Service Health and why it changes how hyperscale operates. The post Meet Brain: The…",
-      "whyItMatters": "关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Microsoft",
-        "Azure"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Microsoft Azure Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_114bcd6441f8",
-      "title": "Azure IaaS ：如何设计、构建和优化云基础架构以实现长期成本效益",
-      "originalTitle": "Azure IaaS: How to design, build, and optimize cloud infrastructure for long-term cost efficiency",
-      "url": "https://azure.microsoft.com/en-us/blog/azure-iaas-how-to-design-build-and-optimize-cloud-infrastructure-for-long-term-cost-optimization-efficiency/",
-      "summary": "As organizations modernize infrastructure, migrate mission-critical workloads, build cloud-native applications, and scale AI—cost efficienc…",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 Microsoft、Azure；一手来源 Microsoft Azure Blog",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Microsoft",
-        "Azure"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Microsoft Azure Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_eb075930eb36",
-      "title": "帮助微软实现其可再生能源目标的6个项目",
-      "originalTitle": "6 projects that helped Microsoft meet its renewable energy goal",
-      "url": "https://news.microsoft.com/source/features/sustainability/6-projects-that-helped-microsoft-meet-its-renewable-energy-goal/",
-      "summary": "The post 6 projects that helped Microsoft meet its renewable energy goal appeared first on Source.",
-      "whyItMatters": "关联 Microsoft；一手来源 Microsoft Source – Sustainability",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Microsoft"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Microsoft Source – Sustainability",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5c8093e5adfb",
-      "title": "运行时实例： Amazon Bedrock AgentCore上生产AI代理的持久计算",
-      "originalTitle": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
-      "url": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/",
-      "summary": "Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent c…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Amazon；一手来源 AWS News Blog",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Amazon"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "AWS News Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_362646a35b94",
-      "title": "AWS每周综述：纽约峰会回顾、河内本地区域、基岩Grok 4.3、降价等（ 2026年6月22日）",
-      "originalTitle": "AWS Weekly Roundup: NY Summit recap, Local Zone in Hanoi, Grok 4.3 in Bedrock, price reductions, and more (June 22, 2026)",
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-ny-summit-recap-local-zone-in-hanoi-grok-4-3-in-bedrock-price-reductions-and-more-june-22-2026/",
-      "summary": "Last week AWS Summit New York City brought together thousands of customers, partners, and builders for a free, one-day event showcasing the…",
-      "whyItMatters": "电力市场与政策；关联 AWS；一手来源 AWS News Blog",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "AWS"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "AWS News Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_05d066b4d43b",
-      "title": "亚马逊如何为未来的能源需求做好准备",
-      "originalTitle": "How Amazon is preparing for the energy needs of the future",
-      "url": "https://www.aboutamazon.com/news/sustainability/amazon-renewable-energy-updates?utm_source=rss",
-      "summary": "Learn how we're supporting the transition to carbon-free energy and powering our business with sustainability in mind.",
-      "whyItMatters": "绿电采购与 PPA；关联 Amazon；一手来源 Amazon Sustainability",
-      "topic": "ppa-green-power",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Amazon"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Amazon Sustainability",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e49c72737344",
-      "title": "亚马逊仍然是全球领先的无碳能源企业采购商之一",
-      "originalTitle": "Amazon continues to be one of the world’s leading corporate purchasers of carbon-free energy",
-      "url": "https://www.aboutamazon.com/news/sustainability/amazon-leading-corporate-carbon-free-energy-purchaser?utm_source=rss",
-      "summary": "With more than 700 projects globally, Amazon is investing in over 40 gigawatts of carbon-free energy, which is enough to power more than 12…",
-      "whyItMatters": "绿电采购与 PPA；关联 Amazon；地区 美国；一手来源 Amazon Sustainability",
-      "topic": "ppa-green-power",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "Amazon"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Amazon Sustainability",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_3ef18d1f5526",
-      "title": "NVIDIA及其合作伙伴在美国为美国打造",
-      "originalTitle": "NVIDIA and Partners Build in America, for America",
-      "url": "https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/",
-      "summary": "NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce…",
-      "whyItMatters": "电网与并网；关联 NVIDIA；地区 美国；一手来源 NVIDIA Blog",
-      "topic": "grid",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_42f6508fdd2f",
-      "title": "NVIDIA利用Vera CPU加速下一代CPU和GPU的设计",
-      "originalTitle": "NVIDIA Harnesses Vera CPU to Speed Up Design of Next-Generation CPUs and GPUs",
-      "url": "https://blogs.nvidia.com/blog/vera-cpu-eda/",
-      "summary": "The complexity of modern chip design continues to grow as engineering teams work to develop increasingly sophisticated CPUs, GPUs and AI sy…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；一手来源 NVIDIA Blog",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [
-        {
-          "name": "NVIDIA Blog",
-          "url": "https://blogs.nvidia.com/blog/build-ai-with-nvidia-jetson/"
-        }
-      ],
-      "wechat": false
-    },
-    {
-      "id": "evt_a5bd32112dd3",
-      "title": "Meta的人工智能大规模存储蓝图",
-      "originalTitle": "Meta’s AI Storage Blueprint at Scale",
-      "url": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/",
-      "summary": "Over the past several years, model capabilities and training dataset sizes have experienced exponential growth. During the past year or so,…",
-      "whyItMatters": "关联 Meta；一手来源 Meta Data Center Engineering",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_3d6f2198aa70",
-      "title": "熄灯，系统开启：验证即时断电准备状态",
-      "originalTitle": "Lights Out, Systems On: Validating Instant Power Loss Readiness",
-      "url": "https://engineering.fb.com/2026/06/03/data-center-engineering/lights-out-systems-on-validating-instant-power-loss-readiness/",
-      "summary": "We’re introducing Instantaneous PowerLoss Storm, a new testing paradigm within Meta’s infrastructure for handling and mitigating instant or…",
-      "whyItMatters": "关联 Meta；一手来源 Meta Data Center Engineering",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_78ccae7e14cb",
-      "title": "RCCLX ：在AMD平台上创新GPU通信",
-      "originalTitle": "RCCLX: Innovating GPU Communications on AMD Platforms",
-      "url": "https://engineering.fb.com/2026/02/24/data-center-engineering/rrcclx-innovating-gpu-communications-amd-platforms-meta/",
-      "summary": "We are open-sourcing the initial version of RCCLX – an enhanced version of RCCL that we developed and tested on Meta’s internal workloads.…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Meta、AMD；一手来源 Meta Data Center Engineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta",
-        "AMD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_14166d74da20",
-      "title": "构建Prometheus ：后端聚合如何实现千兆瓦级AI集群",
-      "originalTitle": "Building Prometheus: How Backend Aggregation Enables Gigawatt-Scale AI Clusters",
-      "url": "https://engineering.fb.com/2026/02/09/data-center-engineering/building-prometheus-how-backend-aggregation-enables-gigawatt-scale-ai-clusters/",
-      "summary": "We’re sharing details of the role backend aggregation (BAG) plays in building Meta’s gigawatt-scale AI clusters like Prometheus. BAG allows…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Meta；一手来源 Meta Data Center Engineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_839f66565069",
-      "title": "Zoomer ：通过智能调试和优化，在Meta的规模上提升AI性能",
-      "originalTitle": "Zoomer: Powering AI Performance at Meta’s Scale Through Intelligent Debugging and Optimization",
-      "url": "https://engineering.fb.com/2025/11/21/data-infrastructure/zoomer-powering-ai-performance-meta-intelligent-debugging-optimization/",
-      "summary": "We’re introducing Zoomer, Meta’s comprehensive, automated debugging and optimization platform for AI. Zoomer works across all of our traini…",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 Meta；一手来源 Meta Data Center Engineering",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f4a0c2b45be1",
-      "title": "10X骨干网： Meta如何为AI扩展骨干网连接",
-      "originalTitle": "10X Backbone: How Meta Is Scaling Backbone Connectivity for AI",
-      "url": "https://engineering.fb.com/2025/10/16/data-center-engineering/10x-backbone-how-meta-is-scaling-backbone-connectivity-for-ai/",
-      "summary": "We’re sharing details on our journey to scale Meta’s Backbone network to support the increasing demands of new and existing AI workloads. W…",
-      "whyItMatters": "关联 Meta；一手来源 Meta Data Center Engineering",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Meta Data Center Engineering",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e09084a3dc95",
-      "title": "装机1.36亿千瓦之后，新型储能的“资产化”分水岭",
-      "originalTitle": "装机1.36亿千瓦之后，新型储能的“资产化”分水岭",
-      "url": "https://news.58heating.com/show-13617.html",
-      "summary": "",
-      "whyItMatters": "储能；关键数字 1.36亿千瓦；媒体 能源新媒",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "装机",
-          "value": 1.36,
-          "unit": "亿千瓦"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "能源新媒",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
     },
     {
       "id": "evt_fa0332951004",
@@ -3466,58 +2671,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_023be1225ece",
-      "title": "基础电力筹集$ 10亿，让更多家庭使用大型电池",
-      "originalTitle": "Base Power raises $1B to get big batteries into more homes",
-      "url": "https://www.canarymedia.com/articles/batteries/base-power-raises-1b-to-get-big-batteries-into-more-homes",
-      "summary": "Home battery startup Base Power seems constitutionally incapable of standing still. After raising $1 billion last October, the Texas compan…",
-      "whyItMatters": "储能；媒体 Canary Media",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_66102efc9892",
-      "title": "数据中心在威斯康星州州长竞选中占据中心位置",
-      "originalTitle": "Data centers take center stage in Wisconsin governor’s race",
-      "url": "https://www.canarymedia.com/articles/data-centers/wisconsin-governors-race",
-      "summary": "A year ago, most Wisconsin residents thought little about data centers, according to local leaders and journalists. But today, the computin…",
-      "whyItMatters": "媒体 Canary Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3538,10 +2695,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3562,10 +2719,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3586,58 +2743,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e688897954dd",
-      "title": "加州DER批发市场参与可能从CAISO “会计变更”中增长2 + GW ：倡导者",
-      "originalTitle": "California DER wholesale market participation could grow 2+ GW from CAISO ‘accounting change’: advocate",
-      "url": "https://www.utilitydive.com/news/california-der-wholesale-market-participation-could-grow-2-gw-from-caiso/827122/",
-      "summary": "Behind-the-meter batteries and other aggregated DERs could get another lift from a related rulemaking at the California Public Utilities Co…",
-      "whyItMatters": "媒体 Utility Dive",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f513d66c5a21",
-      "title": "上诉法院撤销了$ 200亿的联邦气候补助金",
-      "originalTitle": "$20B in federal climate grants unblocked by appeals court",
-      "url": "https://www.utilitydive.com/news/20b-federal-climate-grants-unblocked-appeals-court/827097/",
-      "summary": "A divided court rejected the U.S. Environmental Protection Agency’s attempt to reclaim Greenhouse Gas Reduction Fund grants “based solely o…",
-      "whyItMatters": "电力市场与政策；地区 美国；媒体 Utility Dive",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3658,10 +2767,10 @@
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3682,10 +2791,10 @@
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3706,82 +2815,10 @@
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_383d1bdd0069",
-      "title": "海上风电为波兰电网提供首批电力",
-      "originalTitle": "Offshore wind delivers first electricity to Polish grid",
-      "url": "https://windeurope.org/news/offshore-wind-delivers-first-electricity-to-polish-grid/",
-      "summary": "On 10 July Poland celebrated a major offshore wind milestone. For the first time, a Polish offshore wind farm delivered electricity to the…",
-      "whyItMatters": "光伏与风电；研究机构 WindEurope",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_3d5ae5fdfa69",
-      "title": "地中海海上风电：新研究确定了增长的优先事项",
-      "originalTitle": "Offshore Wind in the Mediterranean: New Study Sets Out Priorities for Growth",
-      "url": "https://windeurope.org/news/offshore-wind-in-the-mediterranean-new-study-sets-out-priorities-for-growth/",
-      "summary": "A joint study by Politecnico di Torino and WindEurope identifies what the Mediterranean needs to grow its offshore wind sector. Published i…",
-      "whyItMatters": "光伏与风电；研究机构 WindEurope",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b675097ac586",
-      "title": "欧盟必须将ETS转变为欧洲的电气化引擎 ",
-      "originalTitle": "The EU must turn the ETS into Europe’s electrification engine ",
-      "url": "https://windeurope.org/news/the-eu-must-turn-the-ets-into-europes-electrification-engine/",
-      "summary": "WindEurope calls on the European Commission to maintain a clear and predictable carbon price signal, and ensure ETS revenues are geared tow…",
-      "whyItMatters": "电力市场与政策；地区 欧盟；研究机构 WindEurope",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "WindEurope",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3802,10 +2839,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3826,10 +2863,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3850,10 +2887,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-07T07:21:41.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3874,10 +2911,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T18:03:53.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3898,10 +2935,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T15:07:15.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3922,10 +2959,10 @@
       "source": {
         "name": "T&D World",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:34:42.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3946,10 +2983,10 @@
       "source": {
         "name": "T&D World",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T20:57:59.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3970,429 +3007,12 @@
       "source": {
         "name": "T&D World",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-05T18:07:29.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
+      "discoveredAt": "2026-08-10T09:45:37.776Z",
       "relatedSources": [],
       "wechat": false
-    },
-    {
-      "id": "evt_db13be1f325b",
-      "title": "更低的密度带来服务器效率和冷却收益",
-      "originalTitle": "Lower density brings server efficiency and cooling gains",
-      "url": "https://journal.uptimeinstitute.com/lower-density-brings-server-efficiency-and-cooling-gains/",
-      "summary": "For many years — well before AI compute’s “big bang” in late 2022 — the data center industry has been preoccupied with the notion of design…",
-      "whyItMatters": "冷却、UPS 与 PUE；研究机构 Uptime Institute Journal",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_03f23446a0c1",
-      "title": "液体冷却不会超过其高密度利基",
-      "originalTitle": "Liquid cooling will not outgrow its high-density niche",
-      "url": "https://journal.uptimeinstitute.com/liquid-cooling-will-not-outgrow-its-high-density-niche/",
-      "summary": "Deployment of direct liquid cooling (DLC, as cold plate or immersion systems) remains overwhelmingly concentrated in applications where air…",
-      "whyItMatters": "冷却、UPS 与 PUE；研究机构 Uptime Institute Journal",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5ec469108b07",
-      "title": "随着排放量飙升，运营商寻求碳捕获",
-      "originalTitle": "As emissions soar, operators look to carbon capture",
-      "url": "https://journal.uptimeinstitute.com/as-emissions-soar-operators-look-to-carbon-capture/",
-      "summary": "During 2024 and 2025, a new trend emerged: many large data center builders and operators reported increases in their Scope 2, location- and…",
-      "whyItMatters": "其他能源动态；研究机构 Uptime Institute Journal",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_34a4dafb00c4",
-      "title": "高通公司的Hexagon AI加速器",
-      "originalTitle": "Qualcomm's Hexagon AI Accelerators",
-      "url": "https://thechipletter.substack.com/p/qualcomms-hexagon-ai-accelerators",
-      "summary": "Can Qualcomm’s smartphone NPUs give it an edge in AI datacenters?",
-      "whyItMatters": "AIDC 项目与区域布局；社区 Chip Letter",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Chip Letter",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_fa741cb4d43b",
-      "title": "2026年人工智能与半导体展望",
-      "originalTitle": "2026 AI &amp; Semiconductor Outlook",
-      "url": "https://www.fabricatedknowledge.com/p/2026-ai-and-semiconductor-outlook",
-      "summary": "A wee bit late, and a bit different this year.",
-      "whyItMatters": "芯片、服务器与算力基础设施；社区 Fabricated Knowledge",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Fabricated Knowledge",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_da6cbfc893c5",
-      "title": "Will Eatherton ：思科计划如何在人工智能数据中心展开竞争",
-      "originalTitle": "Will Eatherton: How Cisco Plans to Compete in the AI Datacenter",
-      "url": "https://www.fabricatedknowledge.com/p/will-eatherton-how-cisco-plans-to",
-      "summary": "Listen now (41 mins) | How does Cisco plan to make a dent in the all important AI market.",
-      "whyItMatters": "AIDC 项目与区域布局；社区 Fabricated Knowledge",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Fabricated Knowledge",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c797cba4897f",
-      "title": "随着人工智能对内存的需求增加，存储也随之增加",
-      "originalTitle": "As AI Increases Demands on Memory, Storage Steps Up",
-      "url": "https://blogs.nvidia.com/blog/ai-storage-fms/",
-      "summary": "Surging AI demands are driving the need for massive datasets and context windows that burst past the confines of system memory. But rising…",
-      "whyItMatters": "一手来源 NVIDIA Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d70ce7103059",
-      "title": "行业领导者团结在开放安全的人工智能联盟中，以实现人工智能的安全和保障",
-      "originalTitle": "Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
-      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/",
-      "summary": "Open source software is a critical pillar of the global economy. It underpins cloud computing, financial services, manufacturing, telecommu…",
-      "whyItMatters": "地区 全球；一手来源 NVIDIA Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cba903d51a84",
-      "title": "理解数据中心的反弹",
-      "originalTitle": "Making sense of the data center backlash",
-      "url": "https://www.volts.wtf/p/making-sense-of-the-data-center-backlash",
-      "summary": "A crossover with Jigar Shah's \"Energy Empire\" podcast!",
-      "whyItMatters": "社区 Volts",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Volts",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1d03b8d6a8d6",
-      "title": "亚利桑那州的一场关键比赛将测试清洁能源的选举权",
-      "originalTitle": "A key Arizona race will test clean energy's electoral power",
-      "url": "https://www.volts.wtf/p/a-key-arizona-race-will-test-clean",
-      "summary": "Charlie Fisher and Ning Mosberger-Tang on scaling up the grassroots playbook to flip Arizona's powerful utility regulator.",
-      "whyItMatters": "社区 Volts",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Volts",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f6abc9f95aa3",
-      "title": "英国能否坚持其气候计划？",
-      "originalTitle": "Can the UK stay the course with its climate plans?",
-      "url": "https://www.volts.wtf/p/can-the-uk-stay-the-course-with-its",
-      "summary": "UK Climate Minister Katie White on navigating the decarbonization challenge amidst rising energy prices and political headwinds.",
-      "whyItMatters": "电力市场与政策；地区 英国；社区 Volts",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "英国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Volts",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cdeb69bbf2b1",
-      "title": "为什么NERC如此担心数据中心？",
-      "originalTitle": "Why is NERC so worried about data centers?",
-      "url": "https://www.volts.wtf/p/why-is-nerc-so-worried-about-data",
-      "summary": "How massive AI & crypto loads are threatening grid stability, and what Colin McCormick and Doug Bryan say we must do to fix it.",
-      "whyItMatters": "电网与并网；社区 Volts",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Volts",
-        "type": "community",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9e49d847940a",
-      "title": "英伟达“逼”出全液冷时代：A股哪些公司会受益？| 产业家一线",
-      "originalTitle": "英伟达“逼”出全液冷时代：A股哪些公司会受益？| 产业家一线",
-      "url": "https://finance.sina.com.cn/wm/2026-07-03/doc-inifqmqn3462255.shtml",
-      "summary": "",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 英伟达；媒体 新能源产业家",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "英伟达"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "新能源产业家",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
-    },
-    {
-      "id": "evt_dcee70355e1d",
-      "title": "国家能源局发布《中国新型储能发展报告（2026）》",
-      "originalTitle": "国家能源局发布《中国新型储能发展报告（2026）》",
-      "url": "http://pp.chinadevelopment.com.cn/xcsp/2026/0730/2007932.shtml",
-      "summary": "",
-      "whyItMatters": "电力市场与政策；关联 国家能源局；地区 中国；媒体 储能与电力市场",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "中国",
-      "entities": [
-        "国家能源局"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "储能与电力市场",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [
-        {
-          "name": "储能100人",
-          "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786088039&ver=6889&signature=FK4eJcYIq1LxYBpUnPRzasvHBIH3S-fm3qZxaQKKUhAU8b-1HZT6dKr-GKAE8toGlMeKWjBSh9pljb6lukqjM4vecJnE14Ii-hrgni5kJFs0ipCifxFstAW7tK*7rvQH&new=1"
-        }
-      ],
-      "wechat": true
-    },
-    {
-      "id": "evt_99a8f0d2206f",
-      "title": "快讯｜得州暂停IDC电网接入审批，澳强制IDC使用可再生能源，意大利百亿算力基建获批，液冷渗透率超四成成刚需",
-      "originalTitle": "快讯｜得州暂停IDC电网接入审批，澳强制IDC使用可再生能源，意大利百亿算力基建获批，液冷渗透率超四成成刚需",
-      "url": "https://mp.weixin.qq.com/s?src=11&timestamp=1786087640&ver=6889&signature=H4ib1v-0K*ia0qN0Eq2fuT1lYq9D2rN-C3uENJtXp3NDivxc7EoUlRZeozKm3KGCJW8WQjgEH77boA70wm63fajZ4IJMSZb1c69*pjU0X0f9EF7ZNm7PDr9mVT9jSOXM&new=1",
-      "summary": "",
-      "whyItMatters": "电网与并网；地区 意大利；媒体 AIDC储能",
-      "topic": "grid",
-      "tags": [],
-      "region": "意大利",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1,
-      "source": {
-        "name": "AIDC储能",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
-    },
-    {
-      "id": "evt_755e6c8f2345",
-      "title": "多地电网负荷刷新纪录，高温“烤”出电力需求新高度",
-      "originalTitle": "多地电网负荷刷新纪录，高温“烤”出电力需求新高度",
-      "url": "https://news.qq.com/rain/a/20260806A07HJI00",
-      "summary": "",
-      "whyItMatters": "数据中心电力需求；媒体 能源新媒",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1,
-      "source": {
-        "name": "能源新媒",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
-    },
-    {
-      "id": "evt_259931ed53f9",
-      "title": "资源链接！2026风光储氢充绿电私享会首场圆满举办！",
-      "originalTitle": "资源链接！2026风光储氢充绿电私享会首场圆满举办！",
-      "url": "https://chuneng.in-en.com/html/chunengy-54128.shtml",
-      "summary": "",
-      "whyItMatters": "其他能源动态；媒体 储能头条",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1,
-      "source": {
-        "name": "储能头条",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-04-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T07:51:14.317Z",
-      "relatedSources": [],
-      "wechat": true
     }
   ]
 }

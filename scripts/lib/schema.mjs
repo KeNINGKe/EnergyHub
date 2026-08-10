@@ -225,6 +225,8 @@ export async function validateDailyV2(daily, enums) {
       }
       if (typeof src.isPrimary !== 'boolean') {
         push(errors, `${where}.source: isPrimary 应为布尔值`);
+      } else if (src.isPrimary !== (src.type === 'primary')) {
+        push(errors, `${where}.source: isPrimary 应与 type="primary" 保持一致`);
       }
     }
 
@@ -454,7 +456,9 @@ export async function validateCurrentData() {
     }
   };
 
-  const daily = await readJson(path.join(root, 'feeds/daily.json'));
+  // 与前端加载顺序一致：优先校验 daily-v2，缺失时再回退 daily。
+  const dailyV2 = await readJson(path.join(root, 'feeds/daily-v2.json'));
+  const daily = dailyV2 || await readJson(path.join(root, 'feeds/daily.json'));
   const featured = await readJson(path.join(root, 'feeds/featured.json'));
   const overrides = await readJson(path.join(root, 'data/editorial-overrides.json'));
 
@@ -487,8 +491,11 @@ export async function validateCurrentData() {
   if (featured) {
     reports.featured = await validateFeatured(featured, daily);
     if (!reports.featured.valid) valid = false;
+  } else if (daily?.schemaVersion === 2) {
+    reports.featured = { valid: false, errors: ['feeds/featured.json 不存在，V2 精选页无法加载'], warnings: [] };
+    valid = false;
   } else {
-    // featured 允许暂缺：全部动态仍可用（异常场景表）
+    // 仅 V1 兼容模式允许 featured 暂缺。
     reports.featured = { valid: true, errors: [], warnings: ['feeds/featured.json 不存在（V1.1 尚未生成，属于正常）'] };
   }
 

@@ -28,6 +28,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify code and existing data
+        run: npm run verify
+
       - name: Build V2 daily feed
         run: npm run build:v2
 

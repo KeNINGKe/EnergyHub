@@ -2,6 +2,7 @@ const state = {
   sources: null,
   enums: null,
   featured: null,
+  featuredLoadFailed: false,
   dataSource: null,     // daily-v2 (V2) 或 daily (V1) 的整份数据
   allEvents: [],        // 全部动态列表（V2 事件优先，V1 条目降级）
   isV2: false,
@@ -127,6 +128,13 @@ function labelMap(arr) {
   return m;
 }
 
+function isValidFeatured(featured, daily) {
+  if (!featured || featured.schemaVersion !== 1) return false;
+  if (!Array.isArray(featured.featuredEventIds) || !Array.isArray(featured.observations)) return false;
+  if (daily && featured.date && daily.date && featured.date !== daily.date) return false;
+  return true;
+}
+
 function getTopicLabel(id) { return state.topicMap[id] || FALLBACK_TOPICS[id] || id; }
 function getImpactLabel(id) { return state.impactMap[id] || FALLBACK_IMPACTS[id] || id; }
 function getSourceTypeLabel(id) { return state.sourceTypeMap[id] || FALLBACK_SOURCE_TYPES[id] || id; }
@@ -142,8 +150,6 @@ async function loadData() {
 
   state.sources = sources.status === 'fulfilled' ? sources.value : null;
   state.enums = enums.status === 'fulfilled' ? enums.value : null;
-  state.featured = featured.status === 'fulfilled' ? featured.value : null;
-
   state.topicMap = labelMap(state.enums && state.enums.topics);
   state.impactMap = labelMap(state.enums && state.enums.impacts);
   state.sourceTypeMap = labelMap(state.enums && state.enums.sourceTypes);
@@ -156,6 +162,9 @@ async function loadData() {
   state.isV2 = !!v2;
   state.dataSource = v2 || v1 || null;
   state.allEvents = state.dataSource ? state.dataSource.items : [];
+  const featuredValue = featured.status === 'fulfilled' ? featured.value : null;
+  state.featured = isValidFeatured(featuredValue, state.dataSource) ? featuredValue : null;
+  state.featuredLoadFailed = !state.featured;
   state.dataDate = (state.dataSource && state.dataSource.date) || (state.featured && state.featured.date) || '';
   state.dataGeneratedAt = (state.dataSource && state.dataSource.generatedAt) || (state.featured && state.featured.generatedAt) || null;
   state.stale = isDataStale(state.dataGeneratedAt);
@@ -492,6 +501,17 @@ function renderFeatured() {
 
   // 分类标签：计数基于当日精选事件；点击切换时过滤时间线（与全部动态共享 state.category）
   renderCats('#featuredCats', featuredAll);
+
+  if (state.featuredLoadFailed) {
+    timelineEl.innerHTML = renderError(
+      '精选数据加载失败',
+      '全部动态仍可正常浏览，请稍后刷新重试。'
+    );
+    $('#featuredViewAll').innerHTML = state.allEvents.length
+      ? `<a href="#all" class="view-all-link">查看全部 ${state.allEvents.length} 条动态 →</a>`
+      : '';
+    return;
+  }
 
   const cat = state.category || 'all';
   const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';

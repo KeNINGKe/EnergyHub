@@ -32,7 +32,9 @@ export const TRANSLATION_CACHE_PATH = 'feeds/translation-cache.json';
 
 export async function curlFetch(url, maxTime = 30) {
   const { stdout } = await execFileAsync('curl', [
-    '-L', '--max-time', String(maxTime), '-s', '--compressed',
+    // 不强制 --compressed：部分 Windows curl 构建未包含压缩支持；不发送
+    // Accept-Encoding 时服务端会返回可直接解析的未压缩响应。
+    '-L', '--max-time', String(maxTime), '-s',
     ...COMMON_HEADERS,
     url
   ], { maxBuffer: 20 * 1024 * 1024, timeout: (maxTime + 5) * 1000 });

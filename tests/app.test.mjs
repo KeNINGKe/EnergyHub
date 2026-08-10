@@ -8,7 +8,7 @@ const APP = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8')
 /* 加载 app.js（去掉 init 自启动），导出优先级相关纯函数 */
 function loadPriority() {
   const code = APP.replace(/\ninit\(\);?\s*$/, '') + `
-    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, groupByDay, renderTimeline, isNorthAmerica, isNuclear, renderTimelineItem, state };
+    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, groupByDay, renderTimeline, isNorthAmerica, isNuclear, renderTimelineItem, isValidFeatured, state };
   `;
   const els = new Map();
   const ctx = vm.createContext({
@@ -27,6 +27,15 @@ function loadPriority() {
 }
 
 const ev = (over) => ({ title: 't', summary: 's', importance: 0.5, region: '未知', topic: 'other-energy', ...over });
+
+test('isValidFeatured：拒绝缺失、结构错误和跨日期数据', () => {
+  const t = loadPriority();
+  const daily = { date: '2026-08-10' };
+  assert.equal(t.isValidFeatured(null, daily), false);
+  assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-10', observations: [], featuredEventIds: [] }, daily), true);
+  assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-09', observations: [], featuredEventIds: [] }, daily), false);
+  assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-10', observations: null, featuredEventIds: [] }, daily), false);
+});
 
 test('isNorthAmerica：美国/加拿大为北美，其余不是', () => {
   const t = loadPriority();

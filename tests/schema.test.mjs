@@ -120,6 +120,14 @@ test('source.type 不在枚举时报错', async () => {
   assert.ok(r.errors.some(e => e.includes('type')));
 });
 
+test('source.isPrimary 必须与 primary 类型一致', async () => {
+  const daily = makeValidDaily();
+  daily.items[1].source.isPrimary = true;
+  const r = await validateDailyV2(daily);
+  assert.equal(r.valid, false);
+  assert.ok(r.errors.some(e => e.includes('isPrimary')));
+});
+
 test('schemaVersion 不是 2 时报错', async () => {
   const daily = makeValidDaily({ schemaVersion: 1 });
   const r = await validateDailyV2(daily);

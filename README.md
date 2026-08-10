@@ -52,9 +52,9 @@ npm run fetch
 ## GitHub Actions 定时任务
 
 仓库 `.github/workflows/fetch-feeds.yml` 配置：
-- **日报**：北京时间每天 07:00 运行（UTC 23:00）。
+- **动态更新**：北京时间每天 05:00 和 12:00 各运行一次。
 
-任务会抓取 `data/sources.json` 中所有带 `rss` 字段的源，生成 `feeds/daily.json` 并提交回仓库，触发 Cloudflare Pages 重新部署。
+任务会抓取 `data/sources.json` 中配置的 RSS 与显式页面型信源，生成 `feeds/daily-v2.json` 和 `feeds/featured.json`，并提交回仓库触发静态站点重新部署。部署前会运行测试与数据校验。
 
 ## 目录结构
 
@@ -72,8 +72,8 @@ energy-info-hub/
 │   ├── entities.json       # 实体表
 │   └── regions.json        # 地区别名表
 ├── feeds/                  # 生成的动态数据
-│   ├── daily.json          # V1 日报（线上在用）
-│   ├── daily-v2.json       # V2 事件级数据（暂存，待验收切换）
+│   ├── daily.json          # 兼容文件（可由 --activate 更新为 V2）
+│   ├── daily-v2.json       # 前端优先读取的 V2 事件级数据
 │   ├── featured.json       # 今日观察 + 精选编排（V2）
 │   └── dry-run/            # V2 回放 dry-run 产物
 ├── scripts/                # 抓取 / 构建 / 评估脚本

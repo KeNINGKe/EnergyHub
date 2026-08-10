@@ -34,6 +34,7 @@ import {
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+const DAILY_MAX_AGE_DAYS = 7;
 
 function eventId(it) {
   const key = canonicalUrl(it.url) || it.originalTitle || it.title;
@@ -144,12 +145,37 @@ export function selectFeatured(events, enums, opts = {}) {
  * @param {object} ctx { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate }
  * @returns {{ daily, featured, stats }}
  */
+export function resolveReplayNow(date, generatedAt) {
+  const fromSample = generatedAt ? new Date(generatedAt) : null;
+  if (fromSample && Number.isFinite(fromSample.getTime())) return fromSample;
+  return new Date(`${date}T23:59:59+08:00`);
+}
+
+export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
+  if (stats.events === 0 && !dryRun) {
+    throw new Error(`本次构建 0 个事件（原始 ${stats.raw} 条），已中止且保留既有日报。`);
+  }
+}
+
 export async function processItems(rawItems, ctx) {
   const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate } = ctx;
-  const stats = { raw: rawItems.length, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0 };
+  const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0 };
+
+  // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
+  // 精选时效规则和前端降级处理；非法、未来或超窗的明确日期直接剔除。
+  const maxAgeMs = DAILY_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+  const nowMs = now.getTime();
+  const timelyItems = rawItems.filter(it => {
+    if (!it.pubDate) return true;
+    const publishedMs = new Date(it.pubDate).getTime();
+    if (!Number.isFinite(publishedMs)) return false;
+    const ageMs = nowMs - publishedMs;
+    return ageMs >= 0 && ageMs <= maxAgeMs;
+  });
+  stats.staleFiltered = rawItems.length - timelyItems.length;
 
   // 1. 确定性去重
-  const { kept: deduped, removed: dupRemoved } = dedupItems(rawItems);
+  const { kept: deduped, removed: dupRemoved } = dedupItems(timelyItems);
   stats.duplicatesRemoved = dupRemoved.length;
 
   // 2. 相关性硬过滤（记录原因）
@@ -214,7 +240,7 @@ export async function processItems(rawItems, ctx) {
       metrics: primary.metrics.map(m => ({ label: m.label || m.unit || '关键数字', value: m.value, unit: m.unit })),
       impact: 'unknown',
       importance: 0,
-      source: { name: primary.source, type: primary.sourceType, isPrimary: true },
+      source: { name: primary.source, type: primary.sourceType, isPrimary: primary.sourceType === 'primary' },
       publishedAt: primary.publishedAt,
       discoveredAt: primary.discoveredAt,
       relatedSources,
@@ -282,7 +308,7 @@ export async function atomicWrite(file, data, validator) {
 async function loadReplayItems(date) {
   const file = path.join(ROOT, 'samples', 'daily', `${date}.json`);
   const raw = JSON.parse(await fs.readFile(file, 'utf8'));
-  return (raw.items || []).map(it => ({
+  const items = (raw.items || []).map(it => ({
     title: it.title || '',
     link: it.link || it.url || '',
     guid: it.guid || null,
@@ -291,6 +317,7 @@ async function loadReplayItems(date) {
     source: it.source || '',
     translatedTitle: it.translatedTitle || null
   }));
+  return { items, generatedAt: raw.generatedAt || null };
 }
 
 async function main() {
@@ -313,11 +340,14 @@ async function main() {
   if (replay) {
     const dates = replayDate ? [replayDate] : (await fs.readdir(path.join(ROOT, 'samples', 'daily'))).filter(f => f.endsWith('.json')).map(f => f.replace('.json', '')).sort();
     for (const d of dates) {
-      const items = await loadReplayItems(d);
+      const replayData = await loadReplayItems(d);
+      const items = replayData.items;
       const date = d;
+      // 优先使用快照自己的生成时间，确保发布时间晚于中午的条目不会被误判为未来。
+      const replayNow = resolveReplayNow(d, replayData.generatedAt);
       console.log(`\n===== 回放 ${date} =====`);
       const { daily, featured, stats } = await processItems(items, {
-        date, now, filters, enums, sourceTypes, sourceMap,
+        date, now: replayNow, filters, enums, sourceTypes, sourceMap,
         overridesForDate: overrides.byDate?.[date],
         sourcesTotal, sourcesSucceeded
       });
@@ -368,10 +398,7 @@ async function main() {
   await logStats(date, stats, daily, featured);
 
   // 空结果保护：抓取/过滤全空时保留既有数据，避免用空日报覆盖线上（如全部 RSS 源临时失败）
-  if (stats.events === 0) {
-    console.warn(`⚠️  本次构建 0 个事件（原始 ${stats.raw} 条），跳过写入，保留既有 feeds/。`);
-    return;
-  }
+  ensureNonEmptyBuild(stats, { dryRun });
 
   // 校验
   const v1 = await validateDailyV2(daily, enums);
@@ -394,8 +421,6 @@ async function main() {
   }
 
   // 正式写入（原子替换）
-  await atomicWrite(path.join(ROOT, 'feeds', 'featured.json'), featured, (d) => validateFeatured(d, daily, enums));
-  console.log('✅ 已写入 feeds/featured.json');
   if (activate) {
     await atomicWrite(path.join(ROOT, 'feeds', 'daily.json'), daily, (d) => validateDailyV2(d, enums));
     console.log('✅ 已激活 feeds/daily.json（V2）');
@@ -403,10 +428,14 @@ async function main() {
     await atomicWrite(path.join(ROOT, 'feeds', 'daily-v2.json'), daily, (d) => validateDailyV2(d, enums));
     console.log('✅ 已写入 feeds/daily-v2.json（V2 暂存，--activate 覆盖 daily.json）');
   }
+  // daily 先落盘；若 featured 随后写入失败，前端会识别日期不一致并显示明确错误，
+  // 避免新 featured 引用尚未落盘的事件 ID。
+  await atomicWrite(path.join(ROOT, 'feeds', 'featured.json'), featured, (d) => validateFeatured(d, daily, enums));
+  console.log('✅ 已写入 feeds/featured.json');
 }
 
 async function logStats(date, stats, daily, featured) {
-  console.log(`  原始 ${stats.raw} → 去重 ${stats.duplicatesRemoved} → 过滤 ${stats.filteredOut} → 事件 ${stats.events}（精选 ${stats.featured}）`);
+  console.log(`  原始 ${stats.raw} → 过期 ${stats.staleFiltered} → 去重 ${stats.duplicatesRemoved} → 过滤 ${stats.filteredOut} → 事件 ${stats.events}（精选 ${stats.featured}）`);
   console.log(`  今日观察 ${featured.observations.length} 条：${featured.observations.join(' | ').slice(0, 120)}`);
   if (stats.overrideErrors) console.log(`  [覆盖] ${stats.overrideErrors} 条错误被记录`);
 }

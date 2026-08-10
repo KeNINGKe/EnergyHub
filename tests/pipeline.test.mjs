@@ -6,7 +6,9 @@ import path from 'node:path';
 import { loadEnums, validateDailyV2, validateFeatured } from '../scripts/lib/schema.mjs';
 import { loadFilters } from '../scripts/lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap } from '../scripts/lib/source.mjs';
-import { processItems, selectFeatured, atomicWrite } from '../scripts/build-daily-v2.mjs';
+import {
+  processItems, selectFeatured, atomicWrite, resolveReplayNow, ensureNonEmptyBuild
+} from '../scripts/build-daily-v2.mjs';
 
 const enums = await loadEnums();
 const filters = await loadFilters();
@@ -25,6 +27,17 @@ function raw(over = {}) {
 const FNOW = '2026-08-10T04:00:00Z';
 const FPUB = '2026-08-09T12:00:00Z'; // now 前 16h，远在 72h 窗口内
 const FSELECT = { now: FNOW };
+
+test('resolveReplayNow：优先使用样本生成时间，缺失时回退到当日末尾', () => {
+  assert.equal(resolveReplayNow('2026-08-05', '2026-08-05T06:30:00Z').toISOString(), '2026-08-05T06:30:00.000Z');
+  assert.equal(resolveReplayNow('2026-08-05', null).toISOString(), '2026-08-05T15:59:59.000Z');
+});
+
+test('ensureNonEmptyBuild：正式构建零事件失败，dry-run 允许空结果', () => {
+  assert.throws(() => ensureNonEmptyBuild({ raw: 20, events: 0 }), /0 个事件/);
+  assert.doesNotThrow(() => ensureNonEmptyBuild({ raw: 20, events: 0 }, { dryRun: true }));
+  assert.doesNotThrow(() => ensureNonEmptyBuild({ raw: 20, events: 1 }));
+});
 
 test('selectFeatured：门槛与多样性', () => {
   const mk = (id, importance, topic, source) => ({ id, importance, topic, source: { name: source }, publishedAt: FPUB });
@@ -160,6 +173,43 @@ test('processItems：产出合法 daily + featured', async () => {
   assert.equal(vf.valid, true, vf.errors.join('; '));
   assert.ok(daily.items.every(e => /^evt_[a-z0-9]{8,}$/.test(e.id)), '事件 ID 格式');
   assert.ok(daily.items.every(e => e.topic && enums.topicIds.has(e.topic)), '主题枚举合法');
+});
+
+test('processItems：来源类型参与评分，isPrimary 只标记一手来源', async () => {
+  const items = [
+    raw({
+      title: '1 MW battery station alpha', link: 'https://a.com/primary',
+      summary: 'battery project', source: 'NVIDIA Blog'
+    }),
+    raw({
+      title: '900 GWh electrochemical facility omega', link: 'https://a.com/media',
+      summary: 'energy storage system', source: 'Electrek'
+    })
+  ];
+  const { daily } = await processItems(items, {
+    date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null
+  });
+  const primary = daily.items.find(e => e.source.name === 'NVIDIA Blog');
+  const media = daily.items.find(e => e.source.name === 'Electrek');
+  assert.ok(primary && media, '两种来源均应保留为独立事件');
+  assert.equal(primary.source.type, 'primary');
+  assert.equal(primary.source.isPrimary, true);
+  assert.equal(media.source.type, 'media');
+  assert.equal(media.source.isPrimary, false);
+  assert.equal(primary.importance - media.importance, 1, '一手来源应比同等媒体来源高 1 分');
+});
+
+test('processItems：全部动态排除 7 天前及未来文章', async () => {
+  const items = [
+    raw({ title: 'fresh battery storage project', link: 'https://a.com/fresh', pubDate: '2026-08-04T01:00:00Z' }),
+    raw({ title: 'old solar power project', link: 'https://a.com/old', pubDate: '2026-07-20T01:00:00Z' }),
+    raw({ title: 'future grid power project', link: 'https://a.com/future', pubDate: '2026-08-06T01:00:00Z' })
+  ];
+  const { daily, stats } = await processItems(items, {
+    date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null
+  });
+  assert.deepEqual(daily.items.map(e => e.url), ['https://a.com/fresh']);
+  assert.equal(stats.staleFiltered, 2);
 });
 
 test('processItems：确定性（同输入两次结果一致）', async () => {

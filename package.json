@@ -16,6 +16,7 @@
     "build:v2:replay": "node scripts/build-daily-v2.mjs --replay",
     "validate": "node scripts/validate-data.mjs",
     "test": "node --test --test-concurrency=1 \"tests/**/*.test.mjs\"",
+    "verify": "npm test && npm run validate && node --check assets/app.js",
     "preview": "npx --yes serve . -l 5173",
     "deploy": "wrangler deploy"
   },
