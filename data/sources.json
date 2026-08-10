@@ -833,6 +833,202 @@
       ]
     },
     {
+      "id": "ems",
+      "name": "能量管理系统（EMS）",
+      "sources": [
+        {
+          "name": "Energy Central",
+          "url": "https://www.energycentral.com/",
+          "desc": "全球电力与能源管理社区媒体，EMS/VPP/DERMS 讨论活跃",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.energycentral.com/rss/feed"
+        },
+        {
+          "name": "Microgrid Knowledge",
+          "url": "https://www.microgridknowledge.com/",
+          "desc": "微电网垂直媒体，微电网 EMS 与调度实践",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Smart Energy International",
+          "url": "https://www.smart-energy.com/",
+          "desc": "智能电网/EMS/VPP 国际媒体",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Energy Manager Today",
+          "url": "https://www.energymanalertoday.com/",
+          "desc": "能源管理垂直媒体，EMS 技术迭代与落地案例",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Energy Storage Journal",
+          "url": "https://www.energystoragejournal.com/",
+          "desc": "储能产业媒体，储能 EMS/能量管理动态",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Guidehouse Insights",
+          "url": "https://guidehouse.com/",
+          "desc": "DERMS/VPP/EMS 专项研报最权威机构",
+          "tags": [
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "OFweek 储能网",
+          "url": "https://chuneng.ofweek.com/",
+          "desc": "中文储能门户，EMS 产品与项目资讯",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国际能源网·储能",
+          "url": "https://chuneng.in-en.com/",
+          "desc": "储能产业资讯，含储能 EMS 专题",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "能源界",
+          "url": "https://www.nengyuanjie.net/",
+          "desc": "综合能源与虚拟电厂 EMS 应用报道",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国电南瑞",
+          "url": "https://www.naritech.cn/",
+          "desc": "国内电网调度 EMS 绝对龙头（D5000）",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国能日新",
+          "url": "https://www.sprixin.com/",
+          "desc": "新能源功率预测与电站 EMS",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "海博思创 HyperStrong",
+          "url": "https://www.hyperstrong.com/",
+          "desc": "储能系统集成与 EMS",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "智光电气",
+          "url": "https://www.gzzg.com.cn/",
+          "desc": "高压直挂储能配套 EMS，大容量储能能量管理",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "远景智能",
+          "url": "https://www.envision-group.com/",
+          "desc": "EnOS 物联网 + EMS，风光储一体化能量调度",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "安科瑞",
+          "url": "https://www.acrel.cn/",
+          "desc": "工商业储能 EMS 与园区能量管理",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "Stem",
+          "url": "https://www.stem.com/",
+          "desc": "Athena AI EMS 与虚拟电厂平台",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "AutoGrid",
+          "url": "https://www.autogrid.com/",
+          "desc": "VPP/DERMS 软件平台先驱",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Fluence",
+          "url": "https://fluenceenergy.com/",
+          "desc": "储能 EMS 标杆（Fluence IQ/Mosaic）",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Tesla Energy",
+          "url": "https://www.tesla.com/energy",
+          "desc": "Autobidder 交易型 EMS 与 VPP 平台",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        }
+      ]
+    },
+    {
       "id": "energy-storage",
       "name": "储能",
       "sources": [

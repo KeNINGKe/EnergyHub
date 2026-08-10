@@ -26,6 +26,8 @@ const ENERGY_KEYWORDS = [
   'IGBT', 'SiC', 'GaN', 'MVDC', 'STATCOM',
   'solid-state transformer', 'power electronic transformer', 'grid-forming', 'grid forming',
   'energy storage converter', 'power conversion system', 'battery inverter', 'wide bandgap',
+  '能量管理系统', '储能EMS', '能量管理', '虚拟电厂', 'VPP', 'DERMS', '需求响应', 'EMS',
+  'energy management system', 'virtual power plant', 'demand response',
   '输配电', '智能电网', '负荷', '调度', '备用电源', '电力市场', '辅助服务', '现货市场',
   '抽水蓄能', '电化学储能', '光储', '风储', '氢储', 'BESS',
   'power', 'grid', 'electricity', 'electric', 'energy', 'renewable', 'clean energy',

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-10",
-  "generatedAt": "2026-08-10T06:44:46.411Z",
+  "generatedAt": "2026-08-10T07:29:31.381Z",
   "status": "ok",
   "stats": {
-    "sourcesTotal": 45,
-    "sourcesSucceeded": 45,
-    "articlesFetched": 501,
-    "eventsPublished": 149
+    "sourcesTotal": 46,
+    "sourcesSucceeded": 46,
+    "articlesFetched": 511,
+    "eventsPublished": 157
   },
   "items": [
     {
@@ -36,7 +36,44 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_cb8a13f40ef5",
+      "title": "NEWS: Political headwinds are leaving data center projects up in the air (and costing developers billions). 💨",
+      "originalTitle": "NEWS: Political headwinds are leaving data center projects up in the air (and costing developers billions). 💨",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-political-headwinds-are-leaving-data-center-projects-up-in-the-air-p6ikumeszXTamYA",
+      "summary": "* In Texas: Gov. Greg Abbott’s recent pause [https://www.energycentral.com/energy-management/post/news-texas-is-pressing-pause-on-data-cent…",
+      "whyItMatters": "AIDC 项目与区域布局；关键数字 50GW、20%；关联 BNEF；媒体 Energy Central",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "BNEF"
+      ],
+      "metrics": [
+        {
+          "label": "15-billion-bnef-warns/] nearly",
+          "value": 50,
+          "unit": "GW"
+        },
+        {
+          "label": "of new projects—nearly",
+          "value": 20,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-09T23:39:46.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -68,7 +105,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -108,7 +145,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T06:11:03.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -143,7 +180,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T04:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -175,7 +212,76 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_abc2abcfe94a",
+      "title": "NEWS: A new Trump administration tariff on polysilicon aims to boost domestic solar production—but the industry isn’t pleased.",
+      "originalTitle": "NEWS: A new Trump administration tariff on polysilicon aims to boost domestic solar production—but the industry isn’t pleased.",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/news-a-new-trump-administration-tariff-on-polysilicon-aims-to-boost-K0MVuPs8yOzQo2Q",
+      "summary": "* What happened: Citing national security concerns, President Trump announced [https://www.whitehouse.gov/presidential-actions/2026/08/adju…",
+      "whyItMatters": "光伏与风电；关键数字 15%；地区 中国；媒体 Energy Central",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "ves-into-the-united-states/] a",
+          "value": 15,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-09T23:39:22.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/clearway-energy-renewables-storage-generation-rises-16-year-on-year-in-q2-2026/"
+        },
+        {
+          "name": "Data Center Dynamics",
+          "url": "https://www.datacenterdynamics.com/en/news/trump-signs-eo-imposing-15-tariff-on-chip-and-solar-panel-material-polysilicon/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_33c1871d17e1",
+      "title": "Hithium在中国开设新的长期储能产业园",
+      "originalTitle": "Hithium opens new long-duration energy storage industrial park in China",
+      "url": "https://www.ess-news.com/2026/08/10/hithium-opens-new-long-duration-energy-storage-industrial-park-in-china/",
+      "summary": "New fifth-generation production line first to exceed 15 GWh single-line capacity according to Hithium, as the manufacturer plans ramp up of…",
+      "whyItMatters": "储能；关键数字 15GWh；地区 中国；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "first to exceed",
+          "value": 15,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-10T07:11:38.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -207,7 +313,97 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T10:22:08.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2038614d5a4b",
+      "title": "India's rooftop revolution is winning the numbers game and losing the share game",
+      "originalTitle": "India's rooftop revolution is winning the numbers game and losing the share game",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/india-s-rooftop-revolution-is-winning-the-numbers-game-and-losing-the-ZoLPJf3HSELRTNy",
+      "summary": "Distributed solar capacity has grown from 1.8 gigawatts (GW) in the 2018 financial year to 31.5GW in FY2026. That figure covers panels on h…",
+      "whyItMatters": "光伏与风电；关键数字 31.5GW；地区 印度；媒体 Energy Central",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "印度",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "financial year to",
+          "value": 31.5,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-10T00:35:56.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_91eb97a9b3ee",
+      "title": "NEWS: Duke has reached (another) agreement with North Carolina officials on rate hikes.",
+      "originalTitle": "NEWS: Duke has reached (another) agreement with North Carolina officials on rate hikes.",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-duke-has-reached-another-agreement-with-north-carolina-officials-D3VuT40O125r7Z7",
+      "summary": "* The latest: Duke has settled [https://news.duke-energy.com/releases/duke-energy-progress-reaches-agreement-with-north-carolina-public-sta…",
+      "whyItMatters": "关键数字 3.4%；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "an average of",
+          "value": 3.4,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-09T23:40:55.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c11b6715d6f5",
+      "title": "NEWS: In July, the average US residential electric bill hit a record $217—up nearly 33% from 2021.",
+      "originalTitle": "NEWS: In July, the average US residential electric bill hit a record $217—up nearly 33% from 2021.",
+      "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/news-in-july-the-average-us-residential-electric-bill-hit-a-record-217--9r2InvW0bCwm0bx",
+      "summary": "* Why? A combo of high prices and power consumption as US households tried to keep cool amid searing temps, according to Heatmap and MIT’s…",
+      "whyItMatters": "电力市场与政策；关键数字 33%；地区 美国；媒体 Energy Central",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "record $217—up nearly",
+          "value": 33,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-09T23:38:48.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -239,7 +435,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:20:36.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -269,7 +465,33 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:11:14.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2da62220a1b4",
+      "title": "三星橡树岭国家实验室测试寒冷气候蒸汽压缩热泵技术",
+      "originalTitle": "Samsung, Oak Ridge National Laboratory testing cold climate vapor compression heat pump tech",
+      "url": "https://www.pv-magazine.com/2026/08/10/samsung-oak-ridge-national-laboratory-testing-cold-climate-vapor-compression-heat-pump-tech/",
+      "summary": "Samsung and Oak Ridge National Laboratory are testing a cold-climate vapor-compression heat pump designed to maintain stable heating perfor…",
+      "whyItMatters": "光伏与风电；关联 Samsung；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "Samsung"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-10T06:57:38.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -299,7 +521,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:55:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -334,43 +556,13 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T11:20:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "ESS News",
           "url": "https://www.ess-news.com/2026/08/07/saudi-company-to-build-1077-mwh-of-bess-with-solar-in-syria/"
         }
       ],
-      "wechat": false
-    },
-    {
-      "id": "evt_61cf0691874b",
-      "title": "氢气流：为西班牙、荷兰的项目提供超过10亿$的资金",
-      "originalTitle": "The Hydrogen Stream: Over $1 billion in funds for projects in Spain, the Netherlands",
-      "url": "https://www.pv-magazine.com/2026/08/07/the-hydrogen-stream-over-1-billion-in-funds-for-projects-in-spain-the-netherlands/",
-      "summary": "The Spanish government has allocated €274.2 million for four renewable hydrogen projects with a combined electrolysis capacity of 102.27 MW…",
-      "whyItMatters": "其他能源动态；关键数字 102.27MW；地区 欧盟；媒体 pv magazine",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "electrolysis capacity of",
-          "value": 102.27,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
       "wechat": false
     },
     {
@@ -399,47 +591,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T15:28:19.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_51ce51ca5fd5",
-      "title": "Array跟踪器交付量超过100GW ，第二季度订单达到25亿美元",
-      "originalTitle": "Array surpasses 100GW of tracker deliveries as Q2 orders reach US$2.5 billion",
-      "url": "https://www.pv-tech.org/array-surpasses-100gw-pv-tracker-deliveries-orders-reach-us2-5-billion/",
-      "summary": "Array Technologies reported revenue of US$342.1 million, gross margin of 29.1% and adjusted gross margin of 30.8% for Q2 2026.",
-      "whyItMatters": "关键数字 100GW、29.1%、30.8%；媒体 PV-Tech",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Array surpasses",
-          "value": 100,
-          "unit": "GW"
-        },
-        {
-          "label": "gross margin of",
-          "value": 29.1,
-          "unit": "%"
-        },
-        {
-          "label": "gross margin of",
-          "value": 30.8,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T07:21:49.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -463,7 +615,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -493,7 +645,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:42:11.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -523,7 +675,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -555,7 +707,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T08:24:30.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -590,37 +742,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:53:32.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1e9828a769f6",
-      "title": "杜克能源计划募集$ 100亿股权",
-      "originalTitle": "Duke Energy plans $10 B equity raise",
-      "url": "https://transformer-magazine.com/news/duke-energy-plans-10-b-equity-raise/",
-      "summary": "Utility targets 15 GW of new generation by 2031 as data centre demand grows, with gas and battery storage central to its $103 B plan",
-      "whyItMatters": "储能；关键数字 15GW；媒体 Transformer Magazine",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "raise Utility targets",
-          "value": 15,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T06:53:24.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -652,7 +774,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T07:06:49.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -689,37 +811,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:32:38.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1a484b6d2041",
-      "title": "西班牙政府为同地电池存储项目拨款3.6亿欧元",
-      "originalTitle": "Spanish government awards €360 million for co-located battery storage projects",
-      "url": "https://www.energy-storage.news/spanish-government-awards-e360-million-for-co-located-battery-storage-projects/",
-      "summary": "The Spanish Ministry of Ecological Transition (MITECO) has awarded €360 million (US$415 million) to 1.14GW of solar PV co-located with batt…",
-      "whyItMatters": "储能；关键数字 1.14GW；地区 西班牙；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "西班牙",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "(US$415 million) to",
-          "value": 1.14,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T07:28:37.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -759,13 +851,43 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
+        {
+          "name": "Energy Central",
+          "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-utility-scale-battery-storage-capacity-is-booming-2UPrB40KXve8bUQ"
+        },
         {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/elestor-hydrogen-iron-flow-battery/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_c63c71aa0757",
+      "title": "New Mexico &amp; Clean Energy",
+      "originalTitle": "New Mexico &amp; Clean Energy",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/new-mexico-clean-energy-NGLzxh5c1DbfQq9",
+      "summary": "SkepticalScience: \"New Mexico’s clean energy success story [https://skepticalscience.com/new-mexico-clean-energy-success.html].\" \"July is t…",
+      "whyItMatters": "数据中心电力需求；关联 EIA；地区 美国；媒体 Energy Central",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "EIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-09T14:13:23.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -794,7 +916,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:00:32.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -820,7 +942,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T01:12:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -853,7 +975,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -889,7 +1011,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -921,7 +1043,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -947,7 +1069,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T13:55:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -984,7 +1106,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1017,7 +1139,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1049,7 +1171,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_4feccd7dc987",
+      "title": "VPP成功的缺失环节？客户知识。",
+      "originalTitle": "The Missing Link to VPP Success? Customer Knowledge.",
+      "url": "https://www.canarymedia.com/articles/sponsored/the-missing-link-to-vpp-success-customer-knowledge",
+      "summary": "Signs of the momentum behind virtual power plants (VPPs) are everywhere. States including New Jersey, Virginia, and Illinois are advancing…",
+      "whyItMatters": "能量管理系统（EMS）；媒体 Canary Media",
+      "topic": "ems",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-06T07:00:00.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1079,7 +1225,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3352b0c5072b",
+      "title": "当政府开发和纳税人承担风险时，建造新的核电站",
+      "originalTitle": "New Nuclear Gets Built When Governments Run Development & Taxpayers Take The Risk",
+      "url": "https://cleantechnica.com/2026/08/10/new-nuclear-financing-government-risk/",
+      "summary": "Nuclear power works. It produces low-carbon electricity, avoids the health burden of fossil-fuel combustion, provides firm generation and c…",
+      "whyItMatters": "核电与 SMR；媒体 CleanTechnica",
+      "topic": "nuclear-smr",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-10T06:41:19.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1105,7 +1275,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T02:45:02.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1135,7 +1305,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1165,7 +1335,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1195,7 +1365,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1219,7 +1389,47 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T02:52:14.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_51ce51ca5fd5",
+      "title": "Array跟踪器交付量超过100GW ，第二季度订单达到25亿美元",
+      "originalTitle": "Array surpasses 100GW of tracker deliveries as Q2 orders reach US$2.5 billion",
+      "url": "https://www.pv-tech.org/array-surpasses-100gw-pv-tracker-deliveries-orders-reach-us2-5-billion/",
+      "summary": "Array Technologies reported revenue of US$342.1 million, gross margin of 29.1% and adjusted gross margin of 30.8% for Q2 2026.",
+      "whyItMatters": "关键数字 100GW、29.1%、30.8%；媒体 PV-Tech",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Array surpasses",
+          "value": 100,
+          "unit": "GW"
+        },
+        {
+          "label": "gross margin of",
+          "value": 29.1,
+          "unit": "%"
+        },
+        {
+          "label": "gross margin of",
+          "value": 30.8,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T07:21:49.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1254,56 +1464,11 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:21:34.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
           "url": "https://www.pv-tech.org/gentari-australia-reaches-mechanical-completion-at-243mwp-solar-plus-storage-project/"
-        }
-      ],
-      "wechat": false
-    },
-    {
-      "id": "evt_ccf8c72ed15b",
-      "title": "2026年第二季度Clearway Energy可再生能源和储能发电量同比增长16%",
-      "originalTitle": "Clearway Energy renewables & storage generation rises 16% year-on-year in Q2 2026",
-      "url": "https://www.pv-tech.org/clearway-energy-renewables-storage-generation-rises-16-year-on-year-in-q2-2026/",
-      "summary": "Clearway Energy generated and sold 3,585GWh of solar power in the second quarter of 2026, up from 2,800GWh in Q2 2025.",
-      "whyItMatters": "光伏与风电；关键数字 16%、3585GWh、2800GWh；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "storage generation rises",
-          "value": 16,
-          "unit": "%"
-        },
-        {
-          "label": "generated and sold",
-          "value": 3585,
-          "unit": "GWh"
-        },
-        {
-          "label": "2026, up from",
-          "value": 2800,
-          "unit": "GWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T13:42:52.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [
-        {
-          "name": "Data Center Dynamics",
-          "url": "https://www.datacenterdynamics.com/en/news/trump-signs-eo-imposing-15-tariff-on-chip-and-solar-panel-material-polysilicon/"
         }
       ],
       "wechat": false
@@ -1339,7 +1504,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T03:53:20.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -1383,43 +1548,13 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:17:29.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "ESS News",
           "url": "https://www.ess-news.com/2026/08/07/centrica-energy-and-zelestra-sign-tolling-agreement-for-297-mwh-project-in-germany/"
         }
       ],
-      "wechat": false
-    },
-    {
-      "id": "evt_59d3171dcfc8",
-      "title": "TerraFlow和Shoals的目标是部署5 GW钒流",
-      "originalTitle": "TerraFlow and Shoals target 5 GW vanadium flow deployment",
-      "url": "https://www.ess-news.com/2026/08/07/terraflow-and-shoals-target-5-gw-vanadium-flow-deployment/",
-      "summary": "US companies sign agreement in a bid to boost flow battery deployment, with the data centers, industrial users and utilities seen as potent…",
-      "whyItMatters": "储能；关键数字 5GW；地区 美国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "and Shoals target",
-          "value": 5,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T06:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
       "wechat": false
     },
     {
@@ -1448,7 +1583,37 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T08:17:24.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1e9828a769f6",
+      "title": "杜克能源计划募集$ 100亿股权",
+      "originalTitle": "Duke Energy plans $10 B equity raise",
+      "url": "https://transformer-magazine.com/news/duke-energy-plans-10-b-equity-raise/",
+      "summary": "Utility targets 15 GW of new generation by 2031 as data centre demand grows, with gas and battery storage central to its $103 B plan",
+      "whyItMatters": "储能；关键数字 15GW；媒体 Transformer Magazine",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "raise Utility targets",
+          "value": 15,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T06:53:24.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1478,7 +1643,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T07:21:48.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1508,7 +1673,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T19:18:47.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1534,7 +1699,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:20:01.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "T&D World",
@@ -1545,6 +1710,36 @@
           "url": "https://www.hpcwire.com/off-the-wire/university-of-north-dakota-joins-doe-genesis-mission-with-ai-battery-security-project/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_1a484b6d2041",
+      "title": "西班牙政府为同地电池存储项目拨款3.6亿欧元",
+      "originalTitle": "Spanish government awards €360 million for co-located battery storage projects",
+      "url": "https://www.energy-storage.news/spanish-government-awards-e360-million-for-co-located-battery-storage-projects/",
+      "summary": "The Spanish Ministry of Ecological Transition (MITECO) has awarded €360 million (US$415 million) to 1.14GW of solar PV co-located with batt…",
+      "whyItMatters": "储能；关键数字 1.14GW；地区 西班牙；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "西班牙",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "(US$415 million) to",
+          "value": 1.14,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T07:28:37.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -1573,7 +1768,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1603,7 +1798,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1633,7 +1828,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1659,7 +1854,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:40:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1689,7 +1884,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1715,7 +1910,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T19:50:34.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1741,7 +1936,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T16:28:49.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1767,24 +1962,21 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T15:50:32.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_83c92a73c437",
-      "title": "芯片行业周回顾",
-      "originalTitle": "Chip Industry Week in Review",
-      "url": "https://semiengineering.com/chip-industry-week-in-review-150/",
-      "summary": "SK hynix's $38B new fabs; memory density increases; 2026 chip industry revenue to hit $1.65T; imec metrology roadmap; MIT's self-assembled…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Intel、SK hynix；地区 美国；媒体 SemiEngineering",
+      "id": "evt_bf0096bdd57e",
+      "title": "Research Bits: Aug. 10",
+      "originalTitle": "Research Bits: Aug. 10",
+      "url": "https://semiengineering.com/research-bits-aug-10/",
+      "summary": "Thin chip stacking; analog CAM with MoS2; sensor-level processing and memory. The post Research Bits: Aug. 10 appeared first on Semiconduct…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
       "topic": "chips-compute",
       "tags": [],
-      "region": "美国",
-      "entities": [
-        "Intel",
-        "SK hynix"
-      ],
+      "region": "未知",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
@@ -1793,18 +1985,9 @@
         "type": "media",
         "isPrimary": true
       },
-      "publishedAt": "2026-08-07T07:01:09.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [
-        {
-          "name": "SemiWiki",
-          "url": "https://semiwiki.com/semiconductor-manufacturers/tsmc/371838-intel-and-tsmc-take-different-paths-to-high-na-euv/"
-        },
-        {
-          "name": "SemiWiki",
-          "url": "https://semiwiki.com/semiconductor-manufacturers/intel/372019-intel-foundry-and-the-dac2026-ecosystem/"
-        }
-      ],
+      "publishedAt": "2026-08-10T07:01:00.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -1827,7 +2010,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T14:15:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1851,7 +2034,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T12:20:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1877,7 +2060,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1912,7 +2095,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1938,7 +2121,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-11T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -1962,7 +2145,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T22:30:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1989,7 +2172,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "POWER Magazine",
@@ -2022,7 +2205,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T16:52:54.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2048,7 +2231,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2072,7 +2255,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T06:40:17.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2096,7 +2279,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T02:17:14.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2120,7 +2303,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:07:03.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2144,7 +2327,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:55:34.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6951273bfc70",
+      "title": "插电式太阳能：阳台光伏能否复制欧洲在美国的成功？",
+      "originalTitle": "Plug-in solar: Can balcony PV replicate Europe’s success in the US?",
+      "url": "https://www.pv-tech.org/plug-in-solar-can-balcony-pv-replicate-europes-success-in-the-us/",
+      "summary": "Wood Mackenzie’s Joseph Shangraw discusses the challenges facing the US plug-in solar market and the pathway to wider adoption.",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T12:50:47.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2168,7 +2375,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2192,31 +2399,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c31da84b44cb",
-      "title": "澳大利亚家用电池销量同比增长三倍",
-      "originalTitle": "Australia home battery volumes triple year-on-year",
-      "url": "https://www.ess-news.com/2026/08/07/australia-home-battery-volumes-triple-year-on-year/",
-      "summary": "Home battery program continues to support high installation volumes in Australia, which are around three times higher than the same period…",
-      "whyItMatters": "储能；地区 澳大利亚；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T07:21:41.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2240,7 +2423,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2266,7 +2449,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T08:08:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2290,7 +2473,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:44:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2316,7 +2499,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T08:54:56.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2342,7 +2525,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:37:56.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2368,7 +2551,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:17:03.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2394,7 +2577,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:53:27.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2418,7 +2601,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2442,7 +2625,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T17:00:55.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2466,7 +2649,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2492,7 +2675,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2518,7 +2701,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2542,7 +2725,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T19:07:13.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2566,8 +2749,44 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:38:48.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_83c92a73c437",
+      "title": "芯片行业周回顾",
+      "originalTitle": "Chip Industry Week in Review",
+      "url": "https://semiengineering.com/chip-industry-week-in-review-150/",
+      "summary": "SK hynix's $38B new fabs; memory density increases; 2026 chip industry revenue to hit $1.65T; imec metrology roadmap; MIT's self-assembled…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Intel、SK hynix；地区 美国；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "Intel",
+        "SK hynix"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T07:01:09.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [
+        {
+          "name": "SemiWiki",
+          "url": "https://semiwiki.com/semiconductor-manufacturers/tsmc/371838-intel-and-tsmc-take-different-paths-to-high-na-euv/"
+        },
+        {
+          "name": "SemiWiki",
+          "url": "https://semiwiki.com/semiconductor-manufacturers/intel/372019-intel-foundry-and-the-dac2026-ecosystem/"
+        }
+      ],
       "wechat": false
     },
     {
@@ -2592,7 +2811,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2616,7 +2835,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T19:48:39.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2640,7 +2859,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T16:49:11.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2667,7 +2886,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2696,7 +2915,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2723,7 +2942,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2750,7 +2969,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2776,7 +2995,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2802,7 +3021,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2828,7 +3047,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2854,7 +3073,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2880,7 +3099,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2906,7 +3125,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2932,7 +3151,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
@@ -2963,7 +3182,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2989,7 +3208,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3016,7 +3235,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3042,7 +3261,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3068,7 +3287,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3094,7 +3313,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3124,7 +3343,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -3148,31 +3367,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4feccd7dc987",
-      "title": "VPP成功的缺失环节？客户知识。",
-      "originalTitle": "The Missing Link to VPP Success? Customer Knowledge.",
-      "url": "https://www.canarymedia.com/articles/sponsored/the-missing-link-to-vpp-success-customer-knowledge",
-      "summary": "Signs of the momentum behind virtual power plants (VPPs) are everywhere. States including New Jersey, Virginia, and Illinois are advancing…",
-      "whyItMatters": "电力市场与政策；媒体 Canary Media",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3196,7 +3391,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3220,7 +3415,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3244,7 +3439,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3268,7 +3463,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3292,7 +3487,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3316,7 +3511,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3340,7 +3535,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3364,7 +3559,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3388,7 +3583,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3412,7 +3607,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3436,7 +3631,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3460,7 +3655,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3484,7 +3679,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3508,7 +3703,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3532,7 +3727,31 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c31da84b44cb",
+      "title": "澳大利亚家用电池销量同比增长三倍",
+      "originalTitle": "Australia home battery volumes triple year-on-year",
+      "url": "https://www.ess-news.com/2026/08/07/australia-home-battery-volumes-triple-year-on-year/",
+      "summary": "Home battery program continues to support high installation volumes in Australia, which are around three times higher than the same period…",
+      "whyItMatters": "储能；地区 澳大利亚；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T07:21:41.000Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3556,7 +3775,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:59:18.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3580,7 +3799,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:03:53.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3604,7 +3823,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T15:07:15.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3628,7 +3847,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T19:34:42.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3652,7 +3871,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T20:57:59.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3676,7 +3895,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T18:07:29.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3700,7 +3919,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3724,7 +3943,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3748,7 +3967,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3772,7 +3991,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3796,7 +4015,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:36.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3820,7 +4039,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:17.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3844,7 +4063,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3868,7 +4087,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3892,7 +4111,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3916,7 +4135,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3940,7 +4159,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3964,7 +4183,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3988,7 +4207,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -4012,7 +4231,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -4038,7 +4257,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -4064,7 +4283,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [
         {
           "name": "储能100人",
@@ -4093,7 +4312,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -4117,7 +4336,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -4141,7 +4360,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T06:44:46.411Z",
+      "discoveredAt": "2026-08-10T07:29:31.381Z",
       "relatedSources": [],
       "wechat": true
     }

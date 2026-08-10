@@ -312,8 +312,8 @@ export async function validateFeatured(featured, daily, enums) {
       }
     }
     // 数量目标为软约束：不足时如实减少（PRD 7.2）
-    if (featured.featuredEventIds.length > 10) {
-      warnings.push(`精选 ${featured.featuredEventIds.length} 条，超过目标上限 10 条`);
+    if (featured.featuredEventIds.length > 20) {
+      warnings.push(`精选 ${featured.featuredEventIds.length} 条，超过目标上限 20 条`);
     }
   }
 

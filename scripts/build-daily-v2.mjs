@@ -48,7 +48,7 @@ function eventId(it) {
  * 无日期或更早的旧文章不进精选（PRD：精选是"今日精选"，不是全局历史榜）。
  */
 export function selectFeatured(events, enums, opts = {}) {
-  const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 10, wechatQuota = 1,
+  const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 20, wechatQuota = 1,
           priorityQuota = 1, maxAgeHours = 72, now = new Date().toISOString() } = opts;
   const nowMs = new Date(now).getTime();
   const isFresh = (ev) => {

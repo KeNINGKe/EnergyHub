@@ -15,7 +15,7 @@ const state = {
   stale: false,
   activeTab: null,
   activeCategory: null,
-  featuredCategory: 'all',
+  category: 'all',        // 精选 + 全部动态共用的分类过滤（?category=）
 };
 
 /* 精选页分类（参考 aihot.virxact.com 的 ?category= 过滤） */
@@ -28,18 +28,18 @@ const FEATURED_CATEGORIES = [
   { id: 'aidc', label: 'AIDC' },
 ];
 
-// 分类 → 主题集合（EMS 主题待信源接入后补充，暂无主题映射）
+// 分类 → 主题集合
 const CATEGORY_TOPICS = {
   pcs: ['pcs'],
   sst: ['sst'],
-  ems: [],
+  ems: ['ems'],
   storage: ['energy-storage'],
   aidc: ['data-center-power', 'aidc-project', 'cooling-pue'],
 };
 
-// 无主题映射的分类（EMS）按标题/摘要关键词兜底
+// EMS 为跨领域软件层（常落在储能/电网主题下），补充关键词兜底；其余分类以主题为准
 const CATEGORY_KEYWORDS = {
-  ems: [/\bEMS\b/, /能量管理系统/, /能量管理/],
+  ems: [/\bEMS\b/, /能量管理系统/, /储能EMS/, /能量管理/, /\bVPP\b/, /虚拟电厂/, /DERMS/],
 };
 
 const VALID_TABS = ['featured', 'all', 'sources'];
@@ -426,14 +426,14 @@ function renderHotList(events) {
       </li>`).join('');
 }
 
-/* ===== 精选页分类（PCS / SST / EMS / 储能 / AIDC） ===== */
+/* ===== 分类过滤（PCS / SST / EMS / 储能 / AIDC，精选 + 全部动态共用） ===== */
 function eventInCategory(ev, catId) {
   if (!catId || catId === 'all') return true;
   const topics = CATEGORY_TOPICS[catId] || [];
   if (ev.topic && topics.includes(ev.topic)) return true;
-  if (!topics.length) {
-    // 无主题映射的分类（EMS）：按标题/摘要关键词兜底
-    const kws = CATEGORY_KEYWORDS[catId] || [];
+  // 其余分类以主题为准；EMS 等配置了关键词的分类再补关键词兜底
+  const kws = CATEGORY_KEYWORDS[catId] || [];
+  if (kws.length) {
     const hay = [ev.title, ev.originalTitle, ev.summary].filter(Boolean).join(' ');
     return kws.some(re => re.test(hay));
   }
@@ -444,11 +444,12 @@ function categoryCount(events, catId) {
   return (events || []).filter(ev => eventInCategory(ev, catId)).length;
 }
 
-function renderFeaturedCats(events) {
-  const bar = $('#featuredCats');
+/* 渲染分类栏到指定容器；计数基于该视图的事件池。点击切换共享 state.category 并同步 URL。 */
+function renderCats(containerId, events) {
+  const bar = $(containerId);
   if (!bar) return;
   bar.innerHTML = FEATURED_CATEGORIES.map(c => {
-    const active = state.featuredCategory === c.id ? ' active' : '';
+    const active = state.category === c.id ? ' active' : '';
     return `<button class="feed-cat${active}" data-cat="${c.id}" role="tab"
         aria-selected="${active ? 'true' : 'false'}">
       <span>${c.label}</span>
@@ -457,9 +458,10 @@ function renderFeaturedCats(events) {
   }).join('');
   bar.querySelectorAll('.feed-cat').forEach(btn => {
     btn.addEventListener('click', () => {
-      state.featuredCategory = btn.dataset.cat;
+      state.category = btn.dataset.cat;
       history.replaceState(null, '', '?category=' + btn.dataset.cat + location.hash);
       renderFeatured();
+      renderAll();
     });
   });
 }
@@ -487,10 +489,10 @@ function renderFeatured() {
   // 精选页只展示每日精选的条目（featuredEventIds）；微信文章同样进时间线（带公众号徽章），不单独分区
   const featuredAll = state.allEvents.filter(ev => featuredIds.has(ev.id));
 
-  // 分类标签：计数基于当日精选事件；点击切换时过滤时间线
-  renderFeaturedCats(featuredAll);
+  // 分类标签：计数基于当日精选事件；点击切换时过滤时间线（与全部动态共享 state.category）
+  renderCats('#featuredCats', featuredAll);
 
-  const cat = state.featuredCategory || 'all';
+  const cat = state.category || 'all';
   const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
   const featuredEvents = (cat === 'all') ? featuredAll : featuredAll.filter(ev => eventInCategory(ev, cat));
 
@@ -516,9 +518,16 @@ function renderAll() {
   const meta = $('#allMeta');
   if (!state.allEvents.length) {
     meta.textContent = state.dataDate ? `${state.dataDate} · 暂无数据` : '';
+    $('#allCats').innerHTML = '';
     $('#allTimeline').innerHTML = renderEmpty('暂无动态数据。');
     return;
   }
+  renderCats('#allCats', state.allEvents);
+
+  const cat = state.category || 'all';
+  const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
+  const filtered = (cat === 'all') ? state.allEvents : state.allEvents.filter(ev => eventInCategory(ev, cat));
+
   const src = state.dataSource;
   if (state.isV2 && src.stats) {
     const s = src.stats;
@@ -526,7 +535,15 @@ function renderAll() {
   } else {
     meta.textContent = `${state.dataDate} · ${state.allEvents.length} 条`;
   }
-  $('#allTimeline').innerHTML = renderTimeline(state.allEvents, null, sortChronological);
+  if (cat !== 'all') meta.textContent += ` · ${catLabel} ${filtered.length} 条`;
+
+  if (filtered.length) {
+    $('#allTimeline').innerHTML = renderTimeline(filtered, null, sortChronological);
+  } else if (cat !== 'all') {
+    $('#allTimeline').innerHTML = `<div class="empty-state">「${escapeHtml(catLabel)}」分类暂无内容。</div>`;
+  } else {
+    $('#allTimeline').innerHTML = renderEmpty('暂无动态数据。');
+  }
 }
 
 /* ===== Footer ===== */
@@ -601,9 +618,9 @@ async function init() {
   window.addEventListener('hashchange', onHashChange);
   activateTab(normalizeTab(location.hash));
 
-  // 精选页分类参数（参考 aihot.virxact.com 的 ?category=）
+  // 分类参数（参考 aihot.virxact.com 的 ?category=，精选 + 全部动态共用）
   const catParam = new URLSearchParams(location.search).get('category') || 'all';
-  state.featuredCategory = FEATURED_CATEGORIES.some(c => c.id === catParam) ? catParam : 'all';
+  state.category = FEATURED_CATEGORIES.some(c => c.id === catParam) ? catParam : 'all';
 
   await loadData();
   renderSources();
