@@ -21,10 +21,16 @@
       "keywords": ["电网", "并网", "特高压", "变电站", "输配电", "智能电网", "微电网", "调度", "变压器", "grid", "grid connection", "interconnection", "grid interconnection", "transmission", "substation", "HVDC", "queue", "curtailment", "microgrid", "demand response"]
     },
     {
-      "id": "sst-pcs",
-      "label": "电力电子设备（SST/PCS）",
-      "description": "固态变压器、电力电子变压器、储能变流器、功率器件（SiC/GaN/IGBT）、构网型变流器、柔性直流与中压电力电子",
-      "keywords": ["固态变压器", "电力电子变压器", "智能变压器", "储能变流器", "储能逆变器", "变流器", "构网", "柔性直流", "换流阀", "换流器", "直流配电", "中压直流", "直流断路器", "中压电力电子", "功率半导体", "功率器件", "碳化硅", "氮化镓", "宽禁带", "IGBT", "SiC", "GaN", "MVDC", "STATCOM", "solid-state transformer", "power electronic transformer", "grid-forming", "grid forming", "energy storage converter", "power conversion system", "battery inverter", "DC transformer"]
+      "id": "sst",
+      "label": "固态变压器（SST）",
+      "description": "固态变压器、电力电子变压器、中压电力电子、直流配电与数据中心直流供电",
+      "keywords": ["固态变压器", "电力电子变压器", "智能变压器", "中压电力电子", "直流配电", "中压直流", "多端口变换器", "高频变压器", "中频变压器", "直流变压器", "数据中心直流供电", "MVDC", "solid-state transformer", "power electronic transformer", "DC transformer", "medium voltage DC", "800 VDC", "800VDC"]
+    },
+    {
+      "id": "pcs",
+      "label": "储能变流器（PCS）",
+      "description": "储能变流器、储能逆变器、构网型变流器、功率器件（SiC/GaN/IGBT）与并网控制",
+      "keywords": ["储能变流器", "储能逆变器", "变流器", "构网", "组串式", "功率半导体", "功率器件", "碳化硅", "氮化镓", "宽禁带", "IGBT", "SiC", "GaN", "PCS", "energy storage converter", "battery inverter", "power conversion system", "grid-forming", "grid forming", "grid-forming inverter", "virtual synchronous generator", "VSG"]
     },
     {
       "id": "energy-storage",
@@ -81,7 +87,7 @@
       "keywords": ["氢能", "氢", "燃料电池", "电解槽", "水电", "煤炭", "煤电", "生物质", "石油", "油气", "氢", "hydrogen", "fuel cell", "electrolyzer", "hydro", "coal", "biomass", "oil", "gas"]
     }
   ],
-  "priorityTopics": ["sst-pcs"],
+  "priorityTopics": ["sst", "pcs"],
   "sourceTypes": [
     { "id": "primary", "label": "一手来源", "description": "政府、监管机构、公司公告、项目文件等原始发布方" },
     { "id": "media", "label": "媒体", "description": "行业媒体与综合媒体的报道" },

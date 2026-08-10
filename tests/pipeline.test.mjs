@@ -118,6 +118,31 @@ test('selectFeatured：微信事件排名靠后仍被预选保底（不受 maxFe
   assert.ok(featuredEventIds.includes('evt_w'), '微信事件排名靠后也被预选保底');
 });
 
+test('selectFeatured：优先主题（SST/PCS）保底，跨过高分事件挤占', () => {
+  const mk = (id, importance, topic, source, publishedAt) => ({ id, importance, topic, source: { name: source }, publishedAt });
+  // 10 个高分 grid 事件足以挤满 featured；sst/pcs 各 1 条 ≥门槛 且 72h 内仍应保底入选
+  const events = [];
+  for (let i = 0; i < 10; i++) events.push(mk('evt_a' + i, 4, 'grid', 'S' + i, FPUB));
+  events.push(mk('evt_sst', 2.6, 'sst', 'SST源', FPUB));
+  events.push(mk('evt_pcs', 2.6, 'pcs', 'PCS源', FPUB));
+  const { featuredEventIds } = selectFeatured(events, enums, FSELECT);
+  assert.ok(featuredEventIds.includes('evt_sst'), 'sst 优先主题保底入选');
+  assert.ok(featuredEventIds.includes('evt_pcs'), 'pcs 优先主题保底入选');
+});
+
+test('selectFeatured：优先主题保底仍要求 ≥threshold 与时效，低于门槛不入', () => {
+  const mk = (id, importance, topic, source, publishedAt) => ({ id, importance, topic, source: { name: source }, publishedAt });
+  const events = [
+    mk('evt_old', 4, 'sst', 'S1', '2026-07-01T00:00:00Z'),   // 超时效，保底也不入
+    mk('evt_low', 2, 'pcs', 'S2', FPUB),                       // 低于门槛，不入
+    mk('evt_ok', 3, 'sst', 'S3', FPUB)                         // 合格，保底入
+  ];
+  const { featuredEventIds } = selectFeatured(events, enums, FSELECT);
+  assert.ok(!featuredEventIds.includes('evt_old'), '超时效的优先主题事件不入精选');
+  assert.ok(!featuredEventIds.includes('evt_low'), '低于门槛的优先主题事件不入精选');
+  assert.ok(featuredEventIds.includes('evt_ok'), '合格的优先主题事件保底入选');
+});
+
 test('processItems：产出合法 daily + featured', async () => {
   const items = [
     raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/1', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),

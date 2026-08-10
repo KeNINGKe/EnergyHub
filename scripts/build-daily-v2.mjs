@@ -49,7 +49,7 @@ function eventId(it) {
  */
 export function selectFeatured(events, enums, opts = {}) {
   const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 10, wechatQuota = 1,
-          maxAgeHours = 72, now = new Date().toISOString() } = opts;
+          priorityQuota = 1, maxAgeHours = 72, now = new Date().toISOString() } = opts;
   const nowMs = new Date(now).getTime();
   const isFresh = (ev) => {
     if (!ev.publishedAt) return false;
@@ -83,7 +83,32 @@ export function selectFeatured(events, enums, opts = {}) {
     }
   }
 
-  // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信事件跳过）
+  // 预选：优先主题保底（enums.priorityTopics，如 SST/PCS）。每个优先主题各占
+  // priorityQuota 席，跨过主题/来源配额——保证重点方向在精选稳定可见，而不是被
+  // 当日高分大事件挤掉。仍要求 ≥threshold、72h 内（质量与时效应有底线）。
+  const priorityTopics = enums.priorityTopics || [];
+  const priorityUsed = {};
+  for (const ev of events) {
+    if (featuredEventIds.length >= maxFeatured) break;
+    if (!priorityTopics.includes(ev.topic)) continue;
+    if ((priorityUsed[ev.topic] || 0) >= priorityQuota) continue;
+    if (ev.importance < threshold) continue;
+    if (reserved.has(ev.id)) continue;
+    if (!isFresh(ev)) continue;
+    reserved.add(ev.id);
+    featuredEventIds.push(ev.id);
+    priorityUsed[ev.topic] = (priorityUsed[ev.topic] || 0) + 1;
+    const t = ev.topic || 'other-energy';
+    const s = ev.source.name;
+    topicCount[t] = (topicCount[t] || 0) + 1;
+    srcCount[s] = (srcCount[s] || 0) + 1;
+    if (observations.length < 3) {
+      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
+      observations.push(`【${topicLabel}】${ev.title}`.slice(0, 60));
+    }
+  }
+
+  // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信/优先主题事件跳过）
   for (const ev of events) {
     if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
     if (featuredEventIds.length >= maxFeatured) break;

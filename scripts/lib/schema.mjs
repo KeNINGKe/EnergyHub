@@ -29,6 +29,7 @@ export async function loadEnums() {
     sourceTypes: data.sourceTypes || [],
     impacts: data.impacts || [],
     regions: data.regions || {},
+    priorityTopics: data.priorityTopics || [],
     topicIds: new Set((data.topics || []).map(t => t.id)),
     sourceTypeIds: new Set((data.sourceTypes || []).map(t => t.id)),
     impactIds: new Set((data.impacts || []).map(t => t.id))
