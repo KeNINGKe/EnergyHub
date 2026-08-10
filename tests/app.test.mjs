@@ -8,7 +8,7 @@ const APP = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8')
 /* 加载 app.js（去掉 init 自启动），导出优先级相关纯函数 */
 function loadPriority() {
   const code = APP.replace(/\ninit\(\);?\s*$/, '') + `
-    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, isNorthAmerica, isNuclear, renderTimelineItem, state };
+    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, groupByDay, renderTimeline, isNorthAmerica, isNuclear, renderTimelineItem, state };
   `;
   const els = new Map();
   const ctx = vm.createContext({
@@ -102,6 +102,29 @@ test('sortChronological：纯时间倒序，最新在前，与优先级序无关
   ];
   const sorted = t.sortChronological(events);
   assert.deepEqual(Array.from(sorted, e => e.id), ['new', 'mid', 'old']);
+});
+
+test('groupByDay/renderTimeline：日期分组始终最新在前，不被优先级序打乱', () => {
+  const t = loadPriority();
+  // 旧日期的高优先级事件（储能）排在前面时，日期分组仍须按时间倒序（用正午 UTC 避免时区漂移）
+  const events = [
+    ev({ id: 'a', topic: 'energy-storage', region: '中国', publishedAt: '2026-08-08T12:00:00Z' }),
+    ev({ id: 'b', topic: 'energy-storage', region: '中国', publishedAt: '2026-08-07T12:00:00Z' }),
+    ev({ id: 'c', topic: 'other-energy', publishedAt: '2026-08-09T12:00:00Z' }),
+    ev({ id: 'd', topic: 'other-energy', publishedAt: '2026-08-10T12:00:00Z' })
+  ];
+  const groups = t.groupByDay(t.sortForTimeline(events));
+  assert.deepEqual(
+    Array.from(groups, g => g.date.getUTCDate()),
+    [10, 9, 8, 7],
+    '日期分组必须按时间倒序'
+  );
+  const html = t.renderTimeline(events, null);
+  const pos = [10, 9, 8, 7].map(d => html.indexOf(`8月${d}日`));
+  assert.ok(pos.every(p => p >= 0), '四个日期标题均存在');
+  for (let i = 1; i < pos.length; i++) {
+    assert.ok(pos[i - 1] < pos[i], '日期标题按最新在前排列');
+  }
 });
 
 test('renderTimelineItem：微信事件融进时间线并带公众号徽章', () => {

@@ -319,7 +319,8 @@ function groupByDay(sortedEvents) {
     if (!groups.has(key)) groups.set(key, { date: t, items: [] });
     groups.get(key).items.push(ev);
   }
-  return [...groups.values()];
+  // 日期分组始终按时间倒序（最新一天在前），组内顺序由传入的 sorter 决定
+  return [...groups.values()].sort((a, b) => b.date - a.date);
 }
 
 function renderTimeline(events, featuredIds, sorter = sortForTimeline) {
