@@ -41,12 +41,23 @@ function eventId(it) {
 }
 
 /**
- * 精选选择：重要性降序 + 主题多样性 + 来源多样性 + 质量门槛。
+ * 精选选择：重要性降序 + 主题多样性 + 来源多样性 + 质量门槛 + 时效窗口。
  * 微信来源事件（wechat:true）在主题/来源配额上保底入选（默认 1 条），
  * 保证公众号内容可靠地进入精选，而非只靠重要性竞争。
+ * 时效窗口：只接受 now 之前 maxAgeHours（默认 72h）内发布的事件，
+ * 无日期或更早的旧文章不进精选（PRD：精选是"今日精选"，不是全局历史榜）。
  */
 export function selectFeatured(events, enums, opts = {}) {
-  const { threshold = 3.0, maxPerTopic = 2, maxPerSource = 1, maxFeatured = 10, wechatQuota = 1 } = opts;
+  const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 10, wechatQuota = 1,
+          maxAgeHours = 72, now = new Date().toISOString() } = opts;
+  const nowMs = new Date(now).getTime();
+  const isFresh = (ev) => {
+    if (!ev.publishedAt) return false;
+    const t = new Date(ev.publishedAt).getTime();
+    if (isNaN(t)) return false;
+    const ageH = (nowMs - t) / 3600e3;
+    return ageH >= 0 && ageH <= maxAgeHours;
+  };
   const observations = [];
   const featuredEventIds = [];
   const topicCount = {};
@@ -59,6 +70,7 @@ export function selectFeatured(events, enums, opts = {}) {
     if (ev.importance < threshold) break;
     if (reserved.size >= wechatQuota) break;
     if (!(ev.wechat === true) || reserved.has(ev.id)) continue;
+    if (!isFresh(ev)) continue;
     reserved.add(ev.id);
     featuredEventIds.push(ev.id);
     const t = ev.topic || 'other-energy';
@@ -76,6 +88,7 @@ export function selectFeatured(events, enums, opts = {}) {
     if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
     if (featuredEventIds.length >= maxFeatured) break;
     if (reserved.has(ev.id)) continue;
+    if (!isFresh(ev)) continue; // 超过时效窗口的旧事件不进精选
     const t = ev.topic || 'other-energy';
     const s = ev.source.name;
     if ((topicCount[t] || 0) >= maxPerTopic) continue;
@@ -181,8 +194,8 @@ export async function processItems(rawItems, ctx) {
   const capped = capPerSource(events, { max: 6 });
   stats.events = capped.length;
 
-  // 7. 今日观察 + 精选候选
-  const { featuredEventIds, observations } = selectFeatured(capped, enums);
+  // 7. 今日观察 + 精选候选（时效窗口相对本次构建时间 now）
+  const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString() });
 
   const daily = {
     schemaVersion: 2,
