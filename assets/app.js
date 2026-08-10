@@ -15,6 +15,31 @@ const state = {
   stale: false,
   activeTab: null,
   activeCategory: null,
+  featuredCategory: 'all',
+};
+
+/* 精选页分类（参考 aihot.virxact.com 的 ?category= 过滤） */
+const FEATURED_CATEGORIES = [
+  { id: 'all', label: '全部' },
+  { id: 'pcs', label: 'PCS' },
+  { id: 'sst', label: 'SST' },
+  { id: 'ems', label: 'EMS' },
+  { id: 'storage', label: '储能' },
+  { id: 'aidc', label: 'AIDC' },
+];
+
+// 分类 → 主题集合（EMS 主题待信源接入后补充，暂无主题映射）
+const CATEGORY_TOPICS = {
+  pcs: ['pcs'],
+  sst: ['sst'],
+  ems: [],
+  storage: ['energy-storage'],
+  aidc: ['data-center-power', 'aidc-project', 'cooling-pue'],
+};
+
+// 无主题映射的分类（EMS）按标题/摘要关键词兜底
+const CATEGORY_KEYWORDS = {
+  ems: [/\bEMS\b/, /能量管理系统/, /能量管理/],
 };
 
 const VALID_TABS = ['featured', 'all', 'sources'];
@@ -401,6 +426,44 @@ function renderHotList(events) {
       </li>`).join('');
 }
 
+/* ===== 精选页分类（PCS / SST / EMS / 储能 / AIDC） ===== */
+function eventInCategory(ev, catId) {
+  if (!catId || catId === 'all') return true;
+  const topics = CATEGORY_TOPICS[catId] || [];
+  if (ev.topic && topics.includes(ev.topic)) return true;
+  if (!topics.length) {
+    // 无主题映射的分类（EMS）：按标题/摘要关键词兜底
+    const kws = CATEGORY_KEYWORDS[catId] || [];
+    const hay = [ev.title, ev.originalTitle, ev.summary].filter(Boolean).join(' ');
+    return kws.some(re => re.test(hay));
+  }
+  return false;
+}
+
+function categoryCount(events, catId) {
+  return (events || []).filter(ev => eventInCategory(ev, catId)).length;
+}
+
+function renderFeaturedCats(events) {
+  const bar = $('#featuredCats');
+  if (!bar) return;
+  bar.innerHTML = FEATURED_CATEGORIES.map(c => {
+    const active = state.featuredCategory === c.id ? ' active' : '';
+    return `<button class="feed-cat${active}" data-cat="${c.id}" role="tab"
+        aria-selected="${active ? 'true' : 'false'}">
+      <span>${c.label}</span>
+      <span class="cat-count">${categoryCount(events, c.id)}</span>
+    </button>`;
+  }).join('');
+  bar.querySelectorAll('.feed-cat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.featuredCategory = btn.dataset.cat;
+      history.replaceState(null, '', '?category=' + btn.dataset.cat + location.hash);
+      renderFeatured();
+    });
+  });
+}
+
 /* ===== 精选页（C-03 ~ C-08） ===== */
 function renderFeatured() {
   const meta = $('#featuredMeta');
@@ -422,13 +485,25 @@ function renderFeatured() {
   const timelineEl = $('#featuredTimeline');
   const featuredIds = new Set(state.featured ? (state.featured.featuredEventIds || []) : []);
   // 精选页只展示每日精选的条目（featuredEventIds）；微信文章同样进时间线（带公众号徽章），不单独分区
-  const featuredEvents = state.allEvents.filter(ev => featuredIds.has(ev.id));
+  const featuredAll = state.allEvents.filter(ev => featuredIds.has(ev.id));
+
+  // 分类标签：计数基于当日精选事件；点击切换时过滤时间线
+  renderFeaturedCats(featuredAll);
+
+  const cat = state.featuredCategory || 'all';
+  const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
+  const featuredEvents = (cat === 'all') ? featuredAll : featuredAll.filter(ev => eventInCategory(ev, cat));
+
   if (featuredEvents.length) {
     timelineEl.innerHTML = renderTimeline(featuredEvents, featuredIds);
-  } else {
+  } else if (cat === 'all') {
     timelineEl.innerHTML = renderEmpty(
       (state.dataDate ? state.dataDate + ' ' : '') + '今日暂无精选内容。'
     );
+  } else {
+    // 分类无内容：提示 + 链接去全部动态（renderEmpty 会转义 HTML，故直接拼）
+    timelineEl.innerHTML = `<div class="empty-state">「${escapeHtml(catLabel)}」分类今日暂无精选内容，` +
+      `<a href="#all" style="color:var(--accent)">去全部动态看看 ›</a></div>`;
   }
 
   $('#featuredViewAll').innerHTML = state.allEvents.length
@@ -525,6 +600,10 @@ async function init() {
   setupTabs();
   window.addEventListener('hashchange', onHashChange);
   activateTab(normalizeTab(location.hash));
+
+  // 精选页分类参数（参考 aihot.virxact.com 的 ?category=）
+  const catParam = new URLSearchParams(location.search).get('category') || 'all';
+  state.featuredCategory = FEATURED_CATEGORIES.some(c => c.id === catParam) ? catParam : 'all';
 
   await loadData();
   renderSources();

@@ -159,6 +159,59 @@ code {
   border-color: var(--text);
 }
 
+/* ===== 精选页分类标签（参考 aihot.virxact.com 的 ?category= 过滤） ===== */
+.feed-cats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 22px;
+}
+
+.feed-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  appearance: none;
+  margin: 0;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  min-height: 34px;
+  padding: 0 16px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.feed-cat:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.feed-cat.active {
+  color: #fff;
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.feed-cat .cat-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  background: rgba(0, 0, 0, 0.04);
+  padding: 1px 7px;
+  border-radius: 99px;
+}
+
+.feed-cat.active .cat-count {
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.14);
+}
+
 /* ===== Main container ===== */
 .container {
   max-width: var(--max-width);
