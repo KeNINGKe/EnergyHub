@@ -294,10 +294,20 @@ energy-info-hub/
 
 - [x] **V2 构建接入 CI（隐患，优先）**：`fetch-feeds.yml` 由 `npm run fetch`（V1，只写 `daily.json`）改为 `npm run build:v2`（`node scripts/build-daily-v2.mjs`），定时任务每天重新生成 `daily-v2.json`/`featured.json`/微信数据。⚠️ **未用 `--activate`**：前端 `app.js` 优先读 `daily-v2.json`（`v2 || v1`），`--activate` 只覆盖 `daily.json` 会让前端继续读到冻结的旧 `daily-v2.json`。（2026-08-10 修复）
 - [x] **种子文件一次性问题（隐患）**：`fetchWechatSeeds` 现会回填保留期（3 天）内已抓取的种子进 items 流，并在抓取时存 `summary`/`author` 供回填；重建不再丢公众号文章。（2026-08-10 修复）
-- [ ] **V2 构建空结果保护**：`build-daily-v2.mjs` 已加 `stats.events===0` 时跳过写入（保留既有 feeds），防止全源失败时线上被空日报覆盖。回放/dry-run 路径不受影响。
+- [x] **V2 构建空结果保护**：`build-daily-v2.mjs` 已加 `stats.events===0` 时跳过写入（保留既有 feeds），防止全源失败时线上被空日报覆盖。回放/dry-run 路径不受影响。（2026-08-10 实现）
 - [ ] **查透 pipeline 吞微信文章**：手动复现 17/22 条 mp.weixin 能过过滤，但 build 后进日报仅个位数。定位是过滤时机/内容差异还是去重合并环节，可能需让微信种子跳过相关性过滤或走独立通道。
 - [ ] **公众号最新文章日常维护**：各公众号无官网，当日最新文章需人工把 mp.weixin 链接填入 `feeds/wechat-articles.json`（丢链接 → `npm run build:v2` → 内容进日报）。
 - [ ] **4 个号待补链接**：阳光电源 / 创客能源 / SST渗透率 / 蓝海经研，本轮未找到可抓取文章，留空模板。
+
+### 7.3 国内可达迁移（2026-08-10 决定）
+
+**背景**：同事反映 `energyhub.jereh.workers.dev` 打不开。原因是 `.workers.dev` 域名在大陆被 DNS 污染/封锁（多年已知问题），同事需挂梯子。用户决定迁移到**香港轻量服务器**（免备案、大陆可直连）。
+
+**方案**（仓库公开，免 SSH 凭证）：
+- `scripts/server-setup.sh`：Ubuntu 22.04 一键装 nginx + `git clone` 公开仓库到 `/opt/energyhub` + nginx 只放行 `index.html/assets/data/feeds`（其余 404）+ 每 15 分钟 `git pull` 定时同步。
+- GitHub Actions 每天提交新日报 → 服务器 15 分钟内自动同步，**无需改现有 Cloudflare 部署**（继续保留）。
+- 无域名，暂用 `http://IP` 直访；后续可买域名配 Let's Encrypt 上 HTTPS。
+- 待办：服务器放行 80 端口（腾讯云轻量控制台防火墙需手动加规则）、Google Fonts 在大陆被墙（会退化系统字体，可自托管优化）。
 
 ---
 
