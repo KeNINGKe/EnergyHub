@@ -62,16 +62,29 @@ export function extractTopics(text, enums) {
   return scores.slice(0, 2).map(s => s.id);
 }
 
+// 货币符号：整词边界不应把紧邻货币符号当作「词边界」，
+// 否则 "US$415 million" 里的 US 会被误判成美国（文章可能讲的是别国、只是用美元计价）。
+const CURRENCY_CLASS = '€$£¥';
+
+/** 英文别名整词命中：全大写缩写（US/UK/EU/USA…）按原大小写匹配，避免与代词 us、US$ 撞车。 */
+function englishWordHit(text, alias) {
+  const isAcronym = /^[A-Z]{2,}$/.test(alias);
+  const source = isAcronym ? text : text.toLowerCase();
+  const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const flags = isAcronym ? '' : 'i';
+  return new RegExp(`(^|[^a-z${CURRENCY_CLASS}])${escaped}([^a-z${CURRENCY_CLASS}]|$)`, flags).test(source);
+}
+
 /** 地区提取：按别名表顺序首中；无命中返回「未知」。 */
 export function extractRegion(text, regionsConfig) {
-  const t = String(text || '').toLowerCase();
+  const t = String(text || '');
+  const tl = t.toLowerCase();
   for (const { alias, region } of regionsConfig.aliases) {
     const a = alias.toLowerCase();
     if (/[一-鿿]/.test(a)) {
-      if (t.includes(a)) return region;
-    } else {
-      const escaped = a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      if (new RegExp(`(^|[^a-z])${escaped}([^a-z]|$)`, 'i').test(t)) return region;
+      if (tl.includes(a)) return region;
+    } else if (englishWordHit(t, alias)) {
+      return region;
     }
   }
   return '未知';

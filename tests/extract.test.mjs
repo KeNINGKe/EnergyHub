@@ -39,6 +39,38 @@ test('extractRegion：US 不误匹配 focus', () => {
   assert.notEqual(extractRegion('focus on storage economics', regionsConfig), '美国');
 });
 
+test('extractRegion：US$ 货币符号不误判为美国（西班牙文章）', () => {
+  const text = 'The Spanish Ministry of Ecological Transition (MITECO) has awarded €360 million (US$415 million) to 1.14GW of solar PV co-located with batteries';
+  assert.equal(extractRegion(text, regionsConfig), '西班牙');
+});
+
+test('extractRegion：代词 us 不误判为美国', () => {
+  assert.equal(extractRegion('The Spanish government allocated funds, allowing us to build more', regionsConfig), '西班牙');
+});
+
+test('extractRegion：国名形容词识别', () => {
+  assert.equal(extractRegion('Spanish regulator approves 1.14GW co-located storage', regionsConfig), '西班牙');
+  assert.equal(extractRegion('British grid operator plans interconnector', regionsConfig), '英国');
+  assert.equal(extractRegion('French nuclear fleet maintenance', regionsConfig), '法国');
+  assert.equal(extractRegion('German storage market grows', regionsConfig), '德国');
+  assert.equal(extractRegion('Dutch port hosts new plant', regionsConfig), '荷兰');
+});
+
+test('extractRegion：U.S. 与 EU 缩写', () => {
+  assert.equal(extractRegion('U.S. Department of Energy funding', regionsConfig), '美国');
+  assert.equal(extractRegion('EU storage mandate', regionsConfig), '欧盟');
+});
+
+test('extractRegion：Latin/Central/South America 归拉美而非美国', () => {
+  assert.equal(extractRegion('Latin American solar markets expand', regionsConfig), '拉美');
+  assert.equal(extractRegion('Central America renewable projects get funding', regionsConfig), '拉美');
+  assert.equal(extractRegion('South American grid interconnection plans', regionsConfig), '拉美');
+});
+
+test('extractRegion：American 整词识别为美国', () => {
+  assert.equal(extractRegion('winners of the American Solar Challenge honored', regionsConfig), '美国');
+});
+
 test('extractRegion：欧盟（Europe 整词）', () => {
   assert.equal(extractRegion('Europe bets big on batteries', regionsConfig), '欧盟');
 });
