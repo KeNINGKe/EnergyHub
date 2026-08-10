@@ -179,7 +179,7 @@ test('parseWechatArticleHtml：空 js_content 且无标题 → null', () => {
   assert.equal(parseWechatArticleHtml('<html><body>Cloudflare 验证页</body></html>', ''), null);
 });
 
-test('fetchWechatSeeds：无未抓取条目不注入，且清理 3 天前已抓取记录', async () => {
+test('fetchWechatSeeds：保留期内已抓取种子回填 items，清理 3 天前已抓取记录', async () => {
   const dir = await mkdtemp(path.join(tmpdir(), 'wechat-seed-'));
   const file = path.join(dir, 'wechat-articles.json');
   process.env.WECHAT_SEEDS_PATH = file;
@@ -190,11 +190,20 @@ test('fetchWechatSeeds：无未抓取条目不注入，且清理 3 天前已抓�
       version: '1.0.0', updatedAt: null,
       articles: [
         { sourceName: '旧源', url: 'https://mp.weixin.qq.com/s/old', addedAt: oldAt, fetched: true },
-        { sourceName: '新源', url: 'https://mp.weixin.qq.com/s/recent', addedAt: recentAt, fetched: true }
+        {
+          sourceName: '新源', url: 'https://mp.weixin.qq.com/s/recent', addedAt: recentAt, fetched: true,
+          title: '某公众号文章', pubDate: '2026-08-09T00:00:00.000Z', summary: '正文摘要……'
+        }
       ]
     };
     const items = await fetchWechatSeeds(seed);
-    assert.equal(items.length, 0, '无未抓取条目，不注入 items');
+    assert.equal(items.length, 1, '保留期内已抓取条目回填 items');
+    assert.equal(items[0].title, '某公众号文章');
+    assert.equal(items[0].link, 'https://mp.weixin.qq.com/s/recent');
+    assert.equal(items[0].pubDate, '2026-08-09T00:00:00.000Z');
+    assert.equal(items[0].summary, '正文摘要……');
+    assert.equal(items[0].source, '新源');
+    assert.equal(items[0].wechat, true, '回填条目带 wechat 标记');
     const saved = JSON.parse(await readFile(file, 'utf8'));
     assert.equal(saved.articles.length, 1, '10 天前的已抓取记录被清理');
     assert.equal(saved.articles[0].sourceName, '新源');

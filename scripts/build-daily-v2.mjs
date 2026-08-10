@@ -319,6 +319,12 @@ async function main() {
   });
   await logStats(date, stats, daily, featured);
 
+  // 空结果保护：抓取/过滤全空时保留既有数据，避免用空日报覆盖线上（如全部 RSS 源临时失败）
+  if (stats.events === 0) {
+    console.warn(`⚠️  本次构建 0 个事件（原始 ${stats.raw} 条），跳过写入，保留既有 feeds/。`);
+    return;
+  }
+
   // 校验
   const v1 = await validateDailyV2(daily, enums);
   const vf = await validateFeatured(featured, daily, enums);

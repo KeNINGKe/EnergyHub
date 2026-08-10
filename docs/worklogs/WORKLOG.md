@@ -281,13 +281,23 @@ energy-info-hub/
 
 ## 7. 下一步待办
 
-- [ ] 用户确认当前设计是否可上线
-- [ ] 推送代码到 GitHub 仓库
-- [ ] 连接 Cloudflare Pages 自动部署
+### 7.1 基础待办（V1 早期）
+
+- [x] 推送代码到 GitHub 仓库
+- [x] 连接 Cloudflare Pages 自动部署（改用 Workers：`energyhub.jereh.workers.dev`）
 - [ ] 配置自定义 `xxx.pages.dev` 子域名
 - [ ] 验证 GitHub Actions RSS 抓取在美国网络下的成功率
 - [ ] 补充深研内容到 `feeds/deep.json`
 - [ ] 设置 Cloudflare Pages 访问分析
+
+### 7.2 微信管线待办（2026-08-07 记录）
+
+- [x] **V2 构建接入 CI（隐患，优先）**：`fetch-feeds.yml` 由 `npm run fetch`（V1，只写 `daily.json`）改为 `npm run build:v2`（`node scripts/build-daily-v2.mjs`），定时任务每天重新生成 `daily-v2.json`/`featured.json`/微信数据。⚠️ **未用 `--activate`**：前端 `app.js` 优先读 `daily-v2.json`（`v2 || v1`），`--activate` 只覆盖 `daily.json` 会让前端继续读到冻结的旧 `daily-v2.json`。（2026-08-10 修复）
+- [x] **种子文件一次性问题（隐患）**：`fetchWechatSeeds` 现会回填保留期（3 天）内已抓取的种子进 items 流，并在抓取时存 `summary`/`author` 供回填；重建不再丢公众号文章。（2026-08-10 修复）
+- [ ] **V2 构建空结果保护**：`build-daily-v2.mjs` 已加 `stats.events===0` 时跳过写入（保留既有 feeds），防止全源失败时线上被空日报覆盖。回放/dry-run 路径不受影响。
+- [ ] **查透 pipeline 吞微信文章**：手动复现 17/22 条 mp.weixin 能过过滤，但 build 后进日报仅个位数。定位是过滤时机/内容差异还是去重合并环节，可能需让微信种子跳过相关性过滤或走独立通道。
+- [ ] **公众号最新文章日常维护**：各公众号无官网，当日最新文章需人工把 mp.weixin 链接填入 `feeds/wechat-articles.json`（丢链接 → `npm run build:v2` → 内容进日报）。
+- [ ] **4 个号待补链接**：阳光电源 / 创客能源 / SST渗透率 / 蓝海经研，本轮未找到可抓取文章，留空模板。
 
 ---
 

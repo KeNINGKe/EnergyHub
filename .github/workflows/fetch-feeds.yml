@@ -28,8 +28,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Fetch RSS
-        run: npm run fetch
+      - name: Build V2 daily feed
+        run: npm run build:v2
 
       - name: Commit and push
         id: commit

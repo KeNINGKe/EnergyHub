@@ -519,7 +519,9 @@ export async function saveWechatSeeds(seed) {
 
 /**
  * 抓取种子文件中的未抓取公众号文章，抓完回写 fetched 标记，并清理 3 天前的已抓取记录。
- * @returns {Promise<Array>} 本次新增抓取的 item 流（可注入 rawItems）
+ * 保留期内的已抓取种子也回填 item 流（用抓取时存下的 title/pubDate/summary），
+ * 保证公众号内容在重建后不消失（否则 V2 构建只注入一次，重跑即丢）。
+ * @returns {Promise<Array>} 注入的 item 流（含本次新抓 + 保留期回填，可注入 rawItems）
  */
 export async function fetchWechatSeeds(seed) {
   const items = [];
@@ -528,12 +530,28 @@ export async function fetchWechatSeeds(seed) {
   const remaining = [];
   let done = 0;
   let pruned = 0;
+  let reinjected = 0;
 
   for (const a of seed.articles || []) {
     if (a.fetched) {
       const added = a.addedAt ? new Date(a.addedAt).getTime() : 0;
-      if (!isNaN(added) && added >= cutoff) remaining.push(a);
-      else pruned++;
+      if (!isNaN(added) && added >= cutoff) {
+        remaining.push(a);
+        // 回填已抓取种子（无 summary 时留空，title/link 即可渲染链接卡）
+        items.push({
+          title: a.title || '无标题',
+          link: a.url,
+          guid: a.url,
+          pubDate: a.pubDate || null,
+          summary: a.summary || '',
+          source: a.sourceName || '微信公众号',
+          sourceUrl: null,
+          wechat: true
+        });
+        reinjected++;
+      } else {
+        pruned++;
+      }
       continue;
     }
     if (!a.url) { remaining.push(a); continue; }
@@ -574,6 +592,8 @@ export async function fetchWechatSeeds(seed) {
         }
         if (!a.title && parsed[0]?.title) a.title = parsed[0].title;
         if (!a.pubDate && parsed[0]?.pubDate) a.pubDate = parsed[0].pubDate;
+        if (parsed[0]?.summary) a.summary = parsed[0].summary;
+        if (parsed[0]?.author) a.author = parsed[0].author;
         a.fetched = true;
         done++;
       }
@@ -585,9 +605,9 @@ export async function fetchWechatSeeds(seed) {
     await sleep(1200);
   }
 
-  if (items.length || done || pruned) {
+  if (items.length || done || pruned || reinjected) {
     await saveWechatSeeds({ version: '1.0.0', updatedAt: now.toISOString(), articles: remaining });
-    console.log(`[微信公众号种子] 本次新抓 ${done} 条 → 注入 ${items.length} 条，清理过期 ${pruned} 条（保留 ${remaining.length} 条记录）`);
+    console.log(`[微信公众号种子] 本次新抓 ${done} 条 + 保留期回填 ${reinjected} 条 → 注入 ${items.length} 条，清理过期 ${pruned} 条（保留 ${remaining.length} 条记录）`);
   }
   return items;
 }
