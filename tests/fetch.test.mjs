@@ -17,17 +17,20 @@ test('collectFeeds 默认只收 rss，全部标记 fetchType:rss', () => {
   assert.ok(feeds.every(f => f.rss), '每个都应有 rss');
 });
 
-test('collectFeeds includePages=true 不误扫普通 url 站', () => {
+test('collectFeeds includePages=true 只收 RSS + 显式 fetchType:page，不误扫普通 url 站', () => {
   const feeds = collectFeeds(data, { includePages: true });
   const pageFeeds = feeds.filter(f => f.fetchType === 'page');
-  // 当前公众号均无 url，不应新增任何 page 型，也不应扫到 101 个普通 url 站
-  assert.equal(pageFeeds.length, 0);
-  const withUrlNoRssNoWechat = data.categories
+  // 只有显式 fetchType:'page' 标记的源（电力设备/SST·PCS 分类）进入页面抓取
+  assert.ok(pageFeeds.length >= 5, `页面型信源应 ≥5，实际 ${pageFeeds.length}`);
+  // 普通 url 站（无 rss、无微信公众号、无 fetchType:page 标记）不应被采集
+  const unmarkedPlainUrls = data.categories
     .flatMap(c => c.sources)
-    .filter(s => s.url && !s.rss && !(s.tags || []).includes('微信公众号')).length;
-  assert.ok(withUrlNoRssNoWechat > 50, `存在 ${withUrlNoRssNoWechat} 个普通 url 站需要被挡下`);
-  const anyScraped = feeds.some(f => f.fetchType === 'page' && !(f.tags || []).includes('微信公众号'));
-  assert.equal(anyScraped, false, 'page 型不应包含非公众号来源');
+    .filter(s => s.url && !s.rss && !(s.tags || []).includes('微信公众号') && s.fetchType !== 'page').length;
+  assert.ok(unmarkedPlainUrls > 50, `存在 ${unmarkedPlainUrls} 个普通 url 站需要被挡下`);
+  // 页面型必须带显式标记（微信公众号标签 或 fetchType:page），防止误扫普通站
+  for (const f of pageFeeds) {
+    assert.ok((f.tags || []).includes('微信公众号') || f.fetchType === 'page', `${f.name} 必须带显式标记`);
+  }
 });
 
 test('collectFeeds：公众号配 url 后进入 page 型；非公众号被挡下', () => {

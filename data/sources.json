@@ -440,6 +440,399 @@
       ]
     },
     {
+      "id": "power-equipment",
+      "name": "电力设备 / SST·PCS",
+      "sources": [
+        {
+          "name": "Power Electronics News",
+          "url": "https://www.powerelectronicsnews.com/",
+          "desc": "全球电力电子权威技术媒体，SST/PCS/功率器件前沿",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.powerelectronicsnews.com/feed/"
+        },
+        {
+          "name": "ESS News",
+          "url": "https://www.ess-news.com/",
+          "desc": "储能产业媒体，PCS/BESS 产品与市场",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.ess-news.com/feed/"
+        },
+        {
+          "name": "Transformer Technology",
+          "url": "https://www.transformer-technology.com/",
+          "desc": "变压器垂直媒体，覆盖传统变压器与固态变压器",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.transformer-technology.com/rss"
+        },
+        {
+          "name": "Transformer Magazine",
+          "url": "https://transformer-magazine.com/",
+          "desc": "变压器与 SST 技术/供应商月刊",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://transformer-magazine.com/feed/"
+        },
+        {
+          "name": "POWER Magazine",
+          "url": "https://www.powermag.com/",
+          "desc": "发电/电网/储能/设备综合媒体",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.powermag.com/feed/"
+        },
+        {
+          "name": "T&D World",
+          "url": "https://www.tdworld.com/",
+          "desc": "输配电设备媒体，变压器/开关/电网投资",
+          "tags": [
+            "媒体"
+          ],
+          "region": "global",
+          "rss": "https://www.tdworld.com/rss.xml"
+        },
+        {
+          "name": "CPSS 中国电源学会",
+          "url": "https://www.cpss.org.cn/",
+          "desc": "国内电力电子最权威学会，PCS/SST 学术与产业衔接",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null,
+          "fetchType": "page"
+        },
+        {
+          "name": "CSEE 中国电机工程学会",
+          "url": "https://www.csee.org.cn/",
+          "desc": "国内电力行业最高学术组织",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "cn",
+          "rss": null,
+          "fetchType": "page"
+        },
+        {
+          "name": "中国储能网",
+          "url": "https://www.escn.com.cn/",
+          "desc": "储能垂直门户，PCS 市场与技术路线",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null,
+          "fetchType": "page"
+        },
+        {
+          "name": "时代储能网",
+          "url": "https://eraes.com.cn/",
+          "desc": "储能技术/标准/企业/招中标",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null,
+          "fetchType": "page"
+        },
+        {
+          "name": "DG Matrix",
+          "url": "https://www.dgmatrix.com/",
+          "desc": "美国多端口 SST 厂商，AI 数据中心/800VDC/中压电力电子",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null,
+          "fetchType": "page"
+        },
+        {
+          "name": "IEEE PELS 电力电子学会",
+          "url": "https://www.ieee-pels.org/",
+          "desc": "全球电力电子最权威学术组织，SST/PCS 技术顶层平台",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEEE PES 电力与能源学会",
+          "url": "https://ieee-pes.org/",
+          "desc": "电网侧电力设备与并网技术核心机构",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/",
+          "desc": "电力电子/储能论文检索库，SST 拓扑与 PCS 控制前沿",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "CIGRE",
+          "url": "https://www.cigre.org/",
+          "desc": "国际大电网会议组织，变压器/HVDC/电网设备技术",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEEE Standards 标准协会",
+          "url": "https://standards.ieee.org/",
+          "desc": "IEEE 1547/2800 并网与储能标准",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "IEC 国际电工委员会",
+          "url": "https://www.iec.ch/",
+          "desc": "IEC 62477 等电力电子与储能标准归口",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "NREL",
+          "url": "https://www.nrel.gov/",
+          "desc": "美国国家可再生能源实验室，grid-forming/IBR/PCS",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Fraunhofer ISE 电力电子与电网部",
+          "url": "https://www.ise.fraunhofer.de/en/business-areas/power-electronics-and-grids.html",
+          "desc": "MW 级变流器/中压电力电子测试与并网研究",
+          "tags": [
+            "官方",
+            "研报"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "EPRI StorageWiki",
+          "url": "https://storagewiki.epri.com/",
+          "desc": "BESS 工程/PCS/并网/安全实践库",
+          "tags": [
+            "研报",
+            "数据"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "全国标准信息公共服务平台",
+          "url": "https://std.samr.gov.cn/",
+          "desc": "国标立项/征求意见/发布状态查询",
+          "tags": [
+            "官方",
+            "数据"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "国家电网电子商务平台 ECP",
+          "url": "https://ecp.sgcc.com.cn/",
+          "desc": "国网设备采购招标，PCS/变压器/储能真实需求",
+          "tags": [
+            "官方",
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "南方电网供应链统一服务平台",
+          "url": "https://www.bidding.csg.cn/",
+          "desc": "南网设备采购招标，储能/柔直/换流器",
+          "tags": [
+            "官方",
+            "招投标"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "阳光电源 ESS",
+          "url": "https://www.sungrowpower.com/en/ess",
+          "desc": "全球储能 PCS 龙头，全场景储能方案",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "华为数字能源",
+          "url": "https://digitalpower.huawei.com/",
+          "desc": "智能组串式储能 PCS，构网型与数据中心供电",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "上能电气",
+          "url": "https://en.si-neng.com/",
+          "desc": "集中式/组串式储能 PCS",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "科华数据",
+          "url": "https://www.kehua.com/",
+          "desc": "大功率 PCS 与数据中心供电",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "盛弘股份",
+          "url": "https://en.sinexcel.com/",
+          "desc": "储能 PCS 与电能质量治理",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Hitachi Energy",
+          "url": "https://www.hitachienergy.com/",
+          "desc": "SST 研发/变压器/HVDC/储能电网接口",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Eaton 中压固态变压器",
+          "url": "https://www.eaton.com/us/en-us/catalog/medium-voltage-power-distribution-control-systems/medium-voltage-solid-state-transformer.html",
+          "desc": "中压 SST 产品，数据中心/EV 充电/直流配电",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Infineon 固态变压器应用",
+          "url": "https://www.infineon.com/applications/industrial/high-voltage-solid-state-power-distribution/solid-state-transformer",
+          "desc": "SiC/IGBT 器件与 SST 设计资料",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "Wolfspeed",
+          "url": "https://www.wolfspeed.com/",
+          "desc": "高压 SiC MOSFET/模块，SST 核心器件上游",
+          "tags": [
+            "官方"
+          ],
+          "region": "global",
+          "rss": null
+        },
+        {
+          "name": "特变电工 TBEA",
+          "url": "https://www.tbea.com/",
+          "desc": "变压器/输变电/新能源装备",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "中国西电",
+          "url": "https://www.xd.com.cn/",
+          "desc": "中高压电力电子变压器研发与产业化",
+          "tags": [
+            "官方"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电子工程专辑",
+          "url": "https://www.eet-china.com/",
+          "desc": "半导体与电力电子深度媒体，SiC 与 SST 产业链",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "电子工程世界 EEWorld",
+          "url": "https://www.eeworld.com.cn/",
+          "desc": "电子工程综合媒体，电力电子技术资讯",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        },
+        {
+          "name": "行家说三代半",
+          "url": "https://www.hangjiashuo.com/",
+          "desc": "第三代半导体与 SST 赛道垂直媒体",
+          "tags": [
+            "媒体"
+          ],
+          "region": "cn",
+          "rss": null
+        }
+      ]
+    },
+    {
       "id": "energy-storage",
       "name": "储能",
       "sources": [

@@ -303,9 +303,10 @@ async function main() {
 
   // ---- 线上抓取 ----
   const data = await loadSources();
-  // 若未来给公众号信源配上 url，可在这里把页面型信源纳入采集：
-  // const feeds = collectFeeds(data, { includePages: true });
-  const feeds = collectFeeds(data);
+  // 页面型信源（fetchType:'page' 标记，见 data/sources.json 的「电力设备 / SST·PCS」分类）
+  // 通过 Jina 页面解析纳入采集。注意：会增加每次构建的抓取时长与 Jina 限流压力，
+  // 新增页面源时按需维护 fetchType:'page' 标记，不要给普通无 RSS 源随意打标。
+  const feeds = collectFeeds(data, { includePages: true });
   console.log(`发现 ${feeds.length} 个 RSS 源`);
   const fetched = await fetchAllFeeds(feeds);
   rawItems = fetched.items;
