@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-10",
-  "generatedAt": "2026-08-10T05:44:14.525Z",
+  "generatedAt": "2026-08-10T06:29:52.930Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 45,
-    "sourcesSucceeded": 45,
-    "articlesFetched": 504,
-    "eventsPublished": 149
+    "sourcesSucceeded": 43,
+    "articlesFetched": 481,
+    "eventsPublished": 138
   },
   "items": [
     {
@@ -38,8 +38,53 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3798987a32b6",
+      "title": "印度的全天候可再生能源招标吸引了$ 0.055/kWh的最低出价",
+      "originalTitle": "India’s round-the-clock renewables tender attracts lowest bid of $0.055/kWh",
+      "url": "https://www.pv-magazine.com/2026/08/10/secis-1-gw-fdre-rtc-power-tender-discovers-inr-5-25-kwh-tariff/",
+      "summary": "The Solar Energy Corp. of India (SECI) has discovered a lowest tariff of INR 5.25/kWh in its tender to procure 1 GW of firm and dispatchabl…",
+      "whyItMatters": "光伏与风电；关键数字 0.055$/kWh、5.25/kWh、1GW；地区 印度；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "印度",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "lowest bid of",
+          "value": 0.055,
+          "unit": "$/kWh"
+        },
+        {
+          "label": "tariff of INR",
+          "value": 5.25,
+          "unit": "/kWh"
+        },
+        {
+          "label": "tender to procure",
+          "value": 1,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-10T06:11:03.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [
+        {
+          "name": "ESS News",
+          "url": "https://www.ess-news.com/2026/08/10/seci-announces-winners-of-1-gw-round-the-clock-renewables-tender/"
+        }
+      ],
       "wechat": false
     },
     {
@@ -68,7 +113,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T04:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -100,7 +145,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:40:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -132,7 +177,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T10:22:08.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -164,7 +209,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:20:36.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -194,7 +239,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:11:14.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -224,7 +269,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:55:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -259,7 +304,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T11:20:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -294,7 +339,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -324,7 +369,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T15:28:19.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -364,7 +409,37 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T07:21:49.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6d20236936eb",
+      "title": "PowiGaN 2.2kV氮化镓开关、JEDEC碳化硅高级测试标准、脉冲电容器：电子周洞察",
+      "originalTitle": "PowiGaN 2.2kV GaN Switch, JEDEC’s SiC Advanced Testing Standards, Pulse Capacitors: Electronics Week Insights",
+      "url": "https://www.powerelectronicsnews.com/powigan-2-2kv-gan-switch-jedecs-sic-advanced-testing-standards-pulse-capacitors-electronics-week-insights/",
+      "summary": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on PowiGaN 2.2kV GaN Switch, JEDEC’s SiC Adva…",
+      "whyItMatters": "电力电子设备（SST/PCS）；关键数字 2.2kV；媒体 Power Electronics News",
+      "topic": "sst-pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "PowiGaN",
+          "value": 2.2,
+          "unit": "kV"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Power Electronics News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T14:03:36.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -394,7 +469,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:42:11.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -424,37 +499,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_59d3171dcfc8",
-      "title": "TerraFlow和Shoals的目标是部署5 GW钒流",
-      "originalTitle": "TerraFlow and Shoals target 5 GW vanadium flow deployment",
-      "url": "https://www.ess-news.com/2026/08/07/terraflow-and-shoals-target-5-gw-vanadium-flow-deployment/",
-      "summary": "US companies sign agreement in a bid to boost flow battery deployment, with the data centers, industrial users and utilities seen as potent…",
-      "whyItMatters": "储能；关键数字 5GW；地区 美国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "and Shoals target",
-          "value": 5,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T06:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -486,7 +531,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T08:24:30.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -521,7 +566,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:53:32.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -551,7 +596,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T06:53:24.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -583,7 +628,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T07:06:49.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -620,7 +665,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T21:32:38.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -650,7 +695,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T07:28:37.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -690,7 +735,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
@@ -725,7 +770,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:00:32.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -751,108 +796,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T01:12:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_919f7512f24c",
-      "title": "xAI的Colossus 2 –世界上第一个千兆瓦数据中心，独特的RL方法，筹集资金",
-      "originalTitle": "xAI’s Colossus 2 – First Gigawatt Datacenter In The World, Unique RL Methodology, Capital Raise",
-      "url": "https://semianalysis.com/2025/09/16/xais-colossus-2-first-gigawatt-datacenter/",
-      "summary": "Much has been written about xAI’s Colossus 1. The Memphis build belongs in the history books: the largest AI training cluster, erected from…",
-      "whyItMatters": "关键数字 300MW；关联 Google、Colossus；地区 全球；研究机构 Semianalysis",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [
-        "Google",
-        "Colossus"
-      ],
-      "metrics": [
-        {
-          "label": "Colossus 1’s ~",
-          "value": 300,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-16T17:38:01.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9fa3662f92cf",
-      "title": "亚马逊的人工智能复兴： AWS和Anthropic的万兆瓦火车头扩张",
-      "originalTitle": "Amazon’s AI Resurgence: AWS & Anthropic’s Multi-Gigawatt Trainium Expansion",
-      "url": "https://semianalysis.com/2025/09/03/amazons-ai-resurgence-aws-anthropics-multi-gigawatt-trainium-expansion/",
-      "summary": "Two-and-a-half years ago, we flagged a looming “cloud crisis” at AWS. Today, the evidence has mounted. AWS is the crown jewel of the Amazon…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 60%；关联 Anthropic、Microsoft、Azure；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Anthropic",
-        "Microsoft",
-        "Azure",
-        "Amazon",
-        "AWS"
-      ],
-      "metrics": [
-        {
-          "label": "empire, generating ~",
-          "value": 60,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-03T20:55:46.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_52bcdb51cfd3",
-      "title": "Meta Superintelligence –领导力计算、人才和数据",
-      "originalTitle": "Meta Superintelligence – Leadership Compute, Talent, and Data",
-      "url": "https://semianalysis.com/2025/07/11/meta-superintelligence-leadership-compute-talent-and-data/",
-      "summary": "Meta’s shocking purchase of 49% of Scale AI at a ~$30B valuation shows that money is of no concern for the $100B annual cashflow ad machine…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 49%；关联 Meta；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Meta"
-      ],
-      "metrics": [
-        {
-          "label": "shocking purchase of",
-          "value": 49,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-07-11T20:12:19.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -878,7 +822,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T13:55:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -915,7 +859,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -948,7 +892,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T20:56:44.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -980,7 +924,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-16T23:50:18.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1010,7 +954,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T12:23:45.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1034,7 +978,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T06:40:17.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1060,7 +1004,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T02:45:02.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1090,7 +1034,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1120,7 +1064,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-17T15:30:29.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1150,7 +1094,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-16T10:25:29.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1174,7 +1118,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T02:52:14.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1209,7 +1153,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:21:34.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -1254,7 +1198,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T13:42:52.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "Data Center Dynamics",
@@ -1294,7 +1238,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T03:53:20.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -1338,13 +1282,73 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:17:29.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "ESS News",
           "url": "https://www.ess-news.com/2026/08/07/centrica-energy-and-zelestra-sign-tolling-agreement-for-297-mwh-project-in-germany/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_59d3171dcfc8",
+      "title": "TerraFlow和Shoals的目标是部署5 GW钒流",
+      "originalTitle": "TerraFlow and Shoals target 5 GW vanadium flow deployment",
+      "url": "https://www.ess-news.com/2026/08/07/terraflow-and-shoals-target-5-gw-vanadium-flow-deployment/",
+      "summary": "US companies sign agreement in a bid to boost flow battery deployment, with the data centers, industrial users and utilities seen as potent…",
+      "whyItMatters": "储能；关键数字 5GW；地区 美国；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "and Shoals target",
+          "value": 5,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-07T06:00:00.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_aa8af76bff19",
+      "title": "为马耳他-西西里岛电力链路安装的主要电气设备",
+      "originalTitle": "Major Electrical Equipment Installed for Malta-Sicily Power Link",
+      "url": "https://transformer-technology.com/major-electrical-equipment-installed-for-malta-sicily-power-link/",
+      "summary": "The Malta-Sicily Interconnector 2 (IC2) project has reached a key construction milestone with the installation of major electrical equipmen…",
+      "whyItMatters": "电力市场与政策；关键数字 250MVA；媒体 Transformer Technology",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "positioning of a",
+          "value": 250,
+          "unit": "MVA"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-04T08:17:24.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -1373,7 +1377,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T07:21:48.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1403,7 +1407,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T19:18:47.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1429,15 +1433,11 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:20:01.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "T&D World",
           "url": "https://www.tdworld.com/distributed-energy-resources/energy-storage/news/55395936/doe-finalizes-489-million-loan-for-puerto-rico-battery-storage-projects"
-        },
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/university-of-north-dakota-joins-doe-genesis-mission-with-ai-battery-security-project/"
         }
       ],
       "wechat": false
@@ -1468,7 +1468,67 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T04:07:15.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8396684988c9",
+      "title": "投资支持两相冷却作为水冷板继任者",
+      "originalTitle": "Investments back two-phase cooling as water cold plate successor",
+      "url": "https://journal.uptimeinstitute.com/investments-back-two-phase-cooling-as-water-cold-plate-successor/",
+      "summary": "Direct liquid cooling (DLC) has attracted significant investment over the past two years, driven largely by the massive buildout of dense A…",
+      "whyItMatters": "冷却、UPS 与 PUE；关键数字 200kW；研究机构 Uptime Institute Journal",
+      "topic": "cooling-pue",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "soon to surpass",
+          "value": 200,
+          "unit": "kW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Uptime Institute Journal",
+        "type": "research",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-01T22:00:00.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d40acdb043d3",
+      "title": "产能分配和下一代人工智能时代的关键绩效指标",
+      "originalTitle": "Capacity allocation and the next generation of AI-era KPIs",
+      "url": "https://journal.uptimeinstitute.com/capacity-allocation-and-the-next-generation-of-ai-era-kpis/",
+      "summary": "AI workloads are reshaping data center infrastructure at an unprecedented scale. Rack densities exceeding 50 kW are becoming increasingly c…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 50kW；研究机构 Uptime Institute Journal",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Rack densities exceeding",
+          "value": 50,
+          "unit": "kW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Uptime Institute Journal",
+        "type": "research",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-05-20T22:00:00.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1494,115 +1554,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:40:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9c7dfa325bb8",
-      "title": "扩展内存墙： HBM的崛起和路线图",
-      "originalTitle": "Scaling the Memory Wall: The Rise and Roadmap of HBM",
-      "url": "https://semianalysis.com/2025/08/12/scaling-the-memory-wall-the-rise-and-roadmap-of-hbm/",
-      "summary": "The first portion of this report will explain HBM, the manufacturing process, dynamics between vendors, KVCache offload, disaggregated pref…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 4w；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "coming to HBM",
-          "value": 4,
-          "unit": "w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-08-12T01:16:06.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_3aa9e6cf5780",
-      "title": "美国能源部为Genesis使命推出开放式模型计划",
-      "originalTitle": "DOE Launches Open Model Initiative for Genesis Mission",
-      "url": "https://www.hpcwire.com/2026/08/07/doe-launches-open-model-initiative-for-genesis-mission/",
-      "summary": "The Department of Energy today announced a plan to create a new class of open-weight foundation models as part of its Genesis Mission effor…",
-      "whyItMatters": "关联 DOE；媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "DOE"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T19:50:34.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1e17db6b4e40",
-      "title": "犹他大学赢得多项DOE创世纪使命研究奖",
-      "originalTitle": "University of Utah Wins Multiple DOE Genesis Mission Research Awards",
-      "url": "https://www.hpcwire.com/off-the-wire/university-of-utah-wins-multiple-doe-genesis-mission-research-awards/",
-      "summary": "Four U research teams which include faculty from the Department of Atmospheric Science join a national initiative advancing AI, energy, and…",
-      "whyItMatters": "关联 DOE；地区 美国；媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "DOE"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T16:28:49.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_583b84accb23",
-      "title": "AMD收购Taalas ，为快速增长的人工智能推理市场推进计算解决方案",
-      "originalTitle": "AMD Acquires Taalas to Advance Compute Solutions for Rapidly Growing AI Inference Market",
-      "url": "https://www.hpcwire.com/off-the-wire/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market/",
-      "summary": "SANTA CLARA, Calif., Aug. 7, 2026 — AMD has announced it has reached a definitive agreement to acquire Taalas, a pioneer in specialized AI…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 AMD；媒体 HPCwire",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "AMD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T15:50:32.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1629,7 +1581,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T07:01:09.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "SemiWiki",
@@ -1662,7 +1614,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T14:15:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1686,7 +1638,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-09T12:20:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1712,7 +1664,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1747,7 +1699,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1771,7 +1723,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T22:30:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1798,7 +1750,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "POWER Magazine",
@@ -1831,7 +1783,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T16:52:54.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1857,7 +1809,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:53:08.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1881,31 +1833,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T02:17:14.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e0e11a764b18",
-      "title": "传统的PPA在南部非洲会消亡吗？",
-      "originalTitle": "Is the traditional PPA dying in Southern Africa?",
-      "url": "https://www.pv-magazine.com/2026/08/07/is-the-traditional-ppa-dying-in-southern-africa/",
-      "summary": "The latest in a series of articles on energy markets in Southern Africa looks at how the region is transitioning away from the traditional…",
-      "whyItMatters": "绿电采购与 PPA；地区 非洲；媒体 pv magazine",
-      "topic": "ppa-green-power",
-      "tags": [],
-      "region": "非洲",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T12:45:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1929,7 +1857,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:07:03.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1953,7 +1881,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T12:55:34.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1977,31 +1905,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6d20236936eb",
-      "title": "PowiGaN 2.2kV氮化镓开关、JEDEC碳化硅高级测试标准、脉冲电容器：电子周洞察",
-      "originalTitle": "PowiGaN 2.2kV GaN Switch, JEDEC’s SiC Advanced Testing Standards, Pulse Capacitors: Electronics Week Insights",
-      "url": "https://www.powerelectronicsnews.com/powigan-2-2kv-gan-switch-jedecs-sic-advanced-testing-standards-pulse-capacitors-electronics-week-insights/",
-      "summary": "Here’s a RoundUp of this week’s must-read articles – we’ll delve into the latest developments on PowiGaN 2.2kV GaN Switch, JEDEC’s SiC Adva…",
-      "whyItMatters": "电力电子设备（SST/PCS）；媒体 Power Electronics News",
-      "topic": "sst-pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Power Electronics News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2025,7 +1929,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T13:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2049,7 +1953,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2073,7 +1977,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T07:21:41.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2097,7 +2001,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2123,7 +2027,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T08:08:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2147,7 +2051,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T08:44:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2173,7 +2077,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T08:54:56.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2199,7 +2103,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:37:56.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2225,7 +2129,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:17:03.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2251,7 +2155,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:53:27.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2275,7 +2179,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2299,7 +2203,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T17:00:55.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2323,107 +2227,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4d4d25a8f350",
-      "title": "华为Ascend生产坡道：模具银行，台积电继续生产， HBM是瓶颈",
-      "originalTitle": "Huawei Ascend Production Ramp: Die Banks, TSMC Continued Production, HBM is The Bottleneck",
-      "url": "https://semianalysis.com/2025/09/08/huawei-ascend-production-ramp/",
-      "summary": "Compute is the lifeblood of AI. He who controls the spice controls the universe the compute will control the production of tokens and reap…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 TSMC；地区 美国；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "TSMC"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-09-08T09:54:57.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d996a67f6579",
-      "title": "H100与GB200 NVL72培训基准–功耗、总拥有成本和可靠性分析、软件随时间的改进",
-      "originalTitle": "H100 vs GB200 NVL72 Training Benchmarks – Power, TCO, and Reliability Analysis, Software Improvement Over Time",
-      "url": "https://semianalysis.com/2025/08/20/h100-vs-gb200-nvl72-training-benchmarks/",
-      "summary": "Frontier model training has pushed GPUs and AI systems to their absolute limits, making cost, efficiency, power, performance per TCO, and r…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；研究机构 Semianalysis",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Semianalysis",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2025-08-20T04:56:35.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_08a205dd622e",
-      "title": "ORNL将人工智能与合成生物学相结合，加速微生物工程",
-      "originalTitle": "ORNL Combines AI and Synthetic Biology to Accelerate Microbial Engineering",
-      "url": "https://www.hpcwire.com/off-the-wire/ornl-combines-ai-and-synthetic-biology-to-accelerate-microbial-engineering/",
-      "summary": "Aug. 7, 2026 — Scientists at the Department of Energy’s Oak Ridge National Laboratory created a platform that pinpoints genetic triggers th…",
-      "whyItMatters": "媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T19:07:13.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1f2f103d5795",
-      "title": "阿贡：用物理知情人工智能预测微电子性能",
-      "originalTitle": "Argonne: Predicting Microelectronics Performance with Physics-Informed AI",
-      "url": "https://www.hpcwire.com/off-the-wire/argonne-predicting-microelectronics-performance-with-physics-informed-ai/",
-      "summary": "Argonne-led collaboration will use AI and U.S. Department of Energy user facilities to understand how tiny flaws affect electronics over ti…",
-      "whyItMatters": "地区 美国；媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-07T14:38:48.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2449,7 +2253,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-12-31T23:59:06.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2473,7 +2277,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T19:48:39.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2497,7 +2301,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T16:49:11.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2524,7 +2328,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T15:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2553,7 +2357,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-23T18:30:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2580,7 +2384,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-02T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2607,7 +2411,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-30T16:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2633,7 +2437,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-25T19:02:06.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2659,7 +2463,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2685,7 +2489,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-22T14:46:17.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2711,7 +2515,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-25T07:28:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2737,7 +2541,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-19T09:29:53.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2763,7 +2567,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2789,7 +2593,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T00:45:42.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
@@ -2820,7 +2624,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:00:36.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2846,7 +2650,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-03T17:00:44.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2873,7 +2677,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-24T21:30:54.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2899,7 +2703,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-02-09T17:00:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2925,7 +2729,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-21T21:00:15.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2951,7 +2755,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-16T16:30:02.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2981,7 +2785,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -3005,7 +2809,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3029,7 +2833,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3053,7 +2857,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T01:27:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3077,7 +2881,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T07:30:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3101,7 +2905,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T15:58:30.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3125,7 +2929,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:16:56.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3149,7 +2953,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3173,7 +2977,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T17:43:20.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3197,7 +3001,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T14:49:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3221,7 +3025,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T17:13:20.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3245,7 +3049,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T12:05:43.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3269,7 +3073,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3293,7 +3097,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-15T13:19:25.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3317,7 +3121,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-14T09:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3341,7 +3145,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T07:57:52.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3365,7 +3169,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T14:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3389,7 +3193,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T11:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3413,31 +3217,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:59:18.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_aa8af76bff19",
-      "title": "为马耳他-西西里岛电力链路安装的主要电气设备",
-      "originalTitle": "Major Electrical Equipment Installed for Malta-Sicily Power Link",
-      "url": "https://transformer-technology.com/major-electrical-equipment-installed-for-malta-sicily-power-link/",
-      "summary": "The Malta-Sicily Interconnector 2 (IC2) project has reached a key construction milestone with the installation of major electrical equipmen…",
-      "whyItMatters": "电力市场与政策；媒体 Transformer Technology",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-04T08:17:24.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3461,7 +3241,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T18:03:53.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3485,7 +3265,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T15:07:15.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3509,7 +3289,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T19:34:42.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3533,7 +3313,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T20:57:59.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3557,7 +3337,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T18:07:29.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3581,55 +3361,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8396684988c9",
-      "title": "投资支持两相冷却作为水冷板继任者",
-      "originalTitle": "Investments back two-phase cooling as water cold plate successor",
-      "url": "https://journal.uptimeinstitute.com/investments-back-two-phase-cooling-as-water-cold-plate-successor/",
-      "summary": "Direct liquid cooling (DLC) has attracted significant investment over the past two years, driven largely by the massive buildout of dense A…",
-      "whyItMatters": "冷却、UPS 与 PUE；研究机构 Uptime Institute Journal",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-01T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d40acdb043d3",
-      "title": "产能分配和下一代人工智能时代的关键绩效指标",
-      "originalTitle": "Capacity allocation and the next generation of AI-era KPIs",
-      "url": "https://journal.uptimeinstitute.com/capacity-allocation-and-the-next-generation-of-ai-era-kpis/",
-      "summary": "AI workloads are reshaping data center infrastructure at an unprecedented scale. Rack densities exceeding 50 kW are becoming increasingly c…",
-      "whyItMatters": "芯片、服务器与算力基础设施；研究机构 Uptime Institute Journal",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Uptime Institute Journal",
-        "type": "research",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-05-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3653,7 +3385,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-15T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3677,7 +3409,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-03-25T22:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3701,7 +3433,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-11-06T22:00:20.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3725,7 +3457,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:36.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3749,7 +3481,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T07:05:17.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3773,7 +3505,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-01-07T21:37:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3797,7 +3529,7 @@
         "isPrimary": true
       },
       "publishedAt": "2025-10-27T14:57:33.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3821,7 +3553,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3845,7 +3577,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-27T09:00:07.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3869,7 +3601,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-20T16:19:13.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3893,7 +3625,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-01T16:02:05.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3917,7 +3649,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-17T16:03:46.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -3941,9 +3673,35 @@
         "isPrimary": true
       },
       "publishedAt": "2026-06-10T16:02:28.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": false
+    },
+    {
+      "id": "evt_c39f67ec1904",
+      "title": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
+      "originalTitle": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
+      "url": "https://digitalpower.huawei.com/cn/news/fusionsolar/snec2026-interview-news1",
+      "summary": "",
+      "whyItMatters": "电力电子设备（SST/PCS）；关联 华为数字能源；一手来源 华为数字能源",
+      "topic": "sst-pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "华为数字能源"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "华为数字能源",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-06-11T00:00:00.000Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
+      "relatedSources": [],
+      "wechat": true
     },
     {
       "id": "evt_9e49d847940a",
@@ -3967,7 +3725,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-03T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -3993,7 +3751,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-07-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [
         {
           "name": "储能100人",
@@ -4022,31 +3780,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-07T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
-      "relatedSources": [],
-      "wechat": true
-    },
-    {
-      "id": "evt_c39f67ec1904",
-      "title": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
-      "originalTitle": "华为数字能源智能光伏产品线总裁周涛：让构网无处不在、AI无所不及",
-      "url": "https://digitalpower.huawei.com/cn/news/fusionsolar/snec2026-interview-news1",
-      "summary": "",
-      "whyItMatters": "电力电子设备（SST/PCS）；一手来源 华为数字能源",
-      "topic": "sst-pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1,
-      "source": {
-        "name": "华为数字能源",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-06-11T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -4070,7 +3804,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": true
     },
@@ -4094,7 +3828,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-04-30T00:00:00.000Z",
-      "discoveredAt": "2026-08-10T05:44:14.525Z",
+      "discoveredAt": "2026-08-10T06:29:52.930Z",
       "relatedSources": [],
       "wechat": true
     }
