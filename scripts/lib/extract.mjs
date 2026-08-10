@@ -104,9 +104,9 @@ export function extractEntities(text, entities) {
   return out;
 }
 
-// 单位表，长单位在前（避免 MW 吃掉 GWdc 之类）
+// 单位表，长单位在前（避免 MW 吃掉 GWdc 之类；kVA 在 kV 前，避免 kVA 被吞成 kV）
 const UNIT_ALTERNATION =
-  'GWdc|MWdc|GWh|MWh|TWh|kWh|GW|MW|TW|W|tCO2|万吨标准煤|亿千瓦时|吉瓦时|兆瓦时|万千瓦时|亿千瓦|吉瓦|兆瓦|万千瓦|亿美元|亿元|美元\\/MWh|元\\/MWh|€\\/MWh|\\$\\/MWh|%';
+  'GWdc|MWdc|GWh|MWh|TWh|kWh|GW|MW|MVA|kVA|kA|kW|kV|Hz|TW|W|tCO2|万吨标准煤|亿千瓦时|吉瓦时|兆瓦时|万千瓦时|亿千瓦|吉瓦|兆瓦|万千瓦|亿美元|亿元|美元\\/MWh|元\\/MWh|€\\/MWh|\\$\\/MWh|%';
 const METRIC_RE = new RegExp(
   `([$€¥]?\\s?)(\\d[\\d,]*(?:\\.\\d+)?)\\s*(\\/?(?:${UNIT_ALTERNATION}))`, 'gi'
 );

@@ -37,6 +37,17 @@ test('importance：确定性', () => {
   assert.equal(a, b);
 });
 
+test('importance：优先主题 +1，且不依赖 priorityTopics 也能跑', () => {
+  const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
+  const noBoost = importance(base, { now: NOW });            // media 1 + 摘要 .5 + 时效 24h 1 = 2.5
+  const boosted = importance({ ...base, topic: 'sst-pcs' }, { now: NOW, priorityTopics: ['sst-pcs'] });
+  assert.equal(boosted - noBoost, 1, `${boosted} 应比 ${noBoost} 高 1`);
+  // 未命中优先主题不额外加分；未传 priorityTopics 时正常跑
+  const other = importance({ ...base, topic: 'grid' }, { now: NOW, priorityTopics: ['sst-pcs'] });
+  assert.equal(other, noBoost);
+  assert.equal(importance(base, { now: NOW }), 2.5, '无 priorityTopics 仍正常计算');
+});
+
 test('capPerSource：每来源限量', () => {
   const items = [
     item({ source: 'A', title: 'a1' }),

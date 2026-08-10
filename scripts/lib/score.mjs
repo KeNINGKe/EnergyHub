@@ -15,8 +15,10 @@ const TYPE_SCORE = { primary: 2, research: 1.5, media: 1, community: 0.5 };
 
 /**
  * 内部重要性评分（0–10）。
- * @param {object} item 条目（含 sourceType, metrics, entities, summary, publishedAt）
- * @param {object} ctx { now }
+ * @param {object} item 条目（含 sourceType, metrics, entities, summary, publishedAt, topic）
+ * @param {object} ctx { now, priorityTopics }
+ *   priorityTopics: 优先主题列表（data/enums.json），命中的事件 +1，
+ *   让专题方向（如 SST/PCS）的内容有机会进入精选，而非被普通媒体分埋没。
  */
 export function importance(item, ctx = {}) {
   const now = ctx.now || new Date().toISOString();
@@ -30,6 +32,7 @@ export function importance(item, ctx = {}) {
     if (ageH <= 24 && ageH >= 0) s += 1;
     else if (ageH <= 72) s += 0.5;
   }
+  if (Array.isArray(ctx.priorityTopics) && ctx.priorityTopics.includes(item.topic)) s += 1;
   return Math.round(s * 10) / 10;
 }
 
