@@ -27,3 +27,15 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+
+      # 腾讯云 CloudBase 静态托管（大陆免备案直连）。配置 TCB_ENV_ID 等三个 secrets 后自动生效；
+      # 未配置时本步骤跳过，不影响 Cloudflare 部署。
+      - name: Deploy to CloudBase (腾讯云静态托管)
+        if: env.TCB_ENV_ID != ''
+        env:
+          CI: 'true'
+          TCB_ENV_ID: ${{ secrets.TCB_ENV_ID }}
+        run: |
+          npm install -g @cloudbase/cli
+          tcb login --apiKeyId "${{ secrets.TCB_SECRET_ID }}" --apiKey "${{ secrets.TCB_SECRET_KEY }}"
+          tcb hosting deploy ./dist --envId "$TCB_ENV_ID" --concurrency 10

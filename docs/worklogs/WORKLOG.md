@@ -301,13 +301,15 @@ energy-info-hub/
 
 ### 7.3 国内可达迁移（2026-08-10 决定）
 
-**背景**：同事反映 `energyhub.jereh.workers.dev` 打不开。原因是 `.workers.dev` 域名在大陆被 DNS 污染/封锁（多年已知问题），同事需挂梯子。用户决定迁移到**香港轻量服务器**（免备案、大陆可直连）。
+**背景**：同事反映 `energyhub.jereh.workers.dev` 打不开。原因是 `.workers.dev` 域名在大陆被 DNS 污染/封锁（多年已知问题），同事需挂梯子。用户要求大陆可直连、且优先免费。
 
-**方案**（仓库公开，免 SSH 凭证）：
-- `scripts/server-setup.sh`：Ubuntu 22.04 一键装 nginx + `git clone` 公开仓库到 `/opt/energyhub` + nginx 只放行 `index.html/assets/data/feeds`（其余 404）+ 每 15 分钟 `git pull` 定时同步。
-- GitHub Actions 每天提交新日报 → 服务器 15 分钟内自动同步，**无需改现有 Cloudflare 部署**（继续保留）。
-- 无域名，暂用 `http://IP` 直访；后续可买域名配 Let's Encrypt 上 HTTPS。
-- 待办：服务器放行 80 端口（腾讯云轻量控制台防火墙需手动加规则）、Google Fonts 在大陆被墙（会退化系统字体，可自托管优化）。
+**最终方案：腾讯云 CloudBase 静态网站托管（免费，进行中）**
+- Gitee Pages 已 2026 年停服下线；GitHub Pages 大陆不稳；香港服务器要花钱。故选 CloudBase 静态托管：免备案、免费额度、默认域名（国内 CDN 节点）、可接 GitHub Actions 自动更新。
+- deploy.yml 已加「Deploy to CloudBase」步骤：`TCB_ENV_ID` secrets 存在才跑，`tcb login --apiKeyId/--apiKey` + `tcb hosting deploy ./dist --envId`。secrets：`TCB_SECRET_ID`/`TCB_SECRET_KEY`/`TCB_ENV_ID`。
+- 需要用户：注册实名腾讯云 → 创建云开发环境 → 开通静态托管拿环境 ID+默认域名 → 访问管理建 API 密钥 → 填 GitHub secrets → 手动 Run workflow 验证。
+- Cloudflare 部署保留（双线并行）。
+
+**备选（已写好，未用）**：`scripts/server-setup.sh` 香港轻量服务器一键初始化（nginx + git pull，免凭证，~¥26/月）。若 CloudBase 免费额度不够/体验差可切换。
 
 ---
 
