@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+# 免费方案：GitHub Pages（github.io）。
+# 注意：fetch-feeds 用 GITHUB_TOKEN 提交的 push 不会触发本 workflow（反循环保护），
+# 因此 fetch-feeds.yml 里另有「Trigger GitHub Pages」步骤手动 dispatch。
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare static site
+        run: |
+          mkdir -p dist
+          cp index.html dist/
+          cp -r assets dist/
+          cp -r data dist/
+          cp -r feeds dist/
+          touch dist/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
