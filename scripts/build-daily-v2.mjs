@@ -49,7 +49,7 @@ function eventId(it) {
  */
 export function selectFeatured(events, enums, opts = {}) {
   const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 20, wechatQuota = 1,
-          priorityQuota = 1, maxAgeHours = 72, now = new Date().toISOString() } = opts;
+          priorityQuota = 1, maxAgeHours = 72, priorityMaxAgeHours = 168, now = new Date().toISOString() } = opts;
   const nowMs = new Date(now).getTime();
   const isFresh = (ev) => {
     if (!ev.publishedAt) return false;
@@ -57,6 +57,15 @@ export function selectFeatured(events, enums, opts = {}) {
     if (isNaN(t)) return false;
     const ageH = (nowMs - t) / 3600e3;
     return ageH >= 0 && ageH <= maxAgeHours;
+  };
+  // 优先主题（SST/PCS/EMS 等）时效窗放宽到 7 天：细分领域新闻稀疏，
+  // 不能因 72h 内无新事件就让重点方向在精选长期为 0。
+  const isFreshPriority = (ev) => {
+    if (!ev.publishedAt) return false;
+    const t = new Date(ev.publishedAt).getTime();
+    if (isNaN(t)) return false;
+    const ageH = (nowMs - t) / 3600e3;
+    return ageH >= 0 && ageH <= priorityMaxAgeHours;
   };
   const observations = [];
   const featuredEventIds = [];
@@ -94,7 +103,7 @@ export function selectFeatured(events, enums, opts = {}) {
     if ((priorityUsed[ev.topic] || 0) >= priorityQuota) continue;
     if (ev.importance < threshold) continue;
     if (reserved.has(ev.id)) continue;
-    if (!isFresh(ev)) continue;
+    if (!isFreshPriority(ev)) continue;   // 优先主题用 7 天窗（见上）
     reserved.add(ev.id);
     featuredEventIds.push(ev.id);
     priorityUsed[ev.topic] = (priorityUsed[ev.topic] || 0) + 1;

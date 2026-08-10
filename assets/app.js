@@ -37,9 +37,10 @@ const CATEGORY_TOPICS = {
   aidc: ['data-center-power', 'aidc-project', 'cooling-pue'],
 };
 
-// EMS 为跨领域软件层（常落在储能/电网主题下），补充关键词兜底；其余分类以主题为准
+// 跨领域分类补充关键词兜底（EMS 常落在储能/电网主题下，SST 变压器内容偶尔仍在 grid 主题）
 const CATEGORY_KEYWORDS = {
   ems: [/\bEMS\b/, /能量管理系统/, /储能EMS/, /能量管理/, /\bVPP\b/, /虚拟电厂/, /DERMS/],
+  sst: [/变压器/, /transformer/i, /固态变压器/, /solid[- ]state transformer/i, /中压/, /电力电子/],
 };
 
 const VALID_TABS = ['featured', 'all', 'sources'];
