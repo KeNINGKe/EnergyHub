@@ -386,7 +386,7 @@ async function main() {
 
   // 翻译英文标题（中文标题自动跳过）
   const tr = await translateTitles(rawItems);
-  console.log(`翻译: ${tr.translated} 条`);
+  console.log(`翻译: 成功 ${tr.translated} / 跳过 ${tr.skipped} / 失败 ${tr.failed} / 专有名词 ${tr.identity} 条`);
 
   const date = toISODate(now);
   console.log(`\n===== 生成 ${date} =====`);

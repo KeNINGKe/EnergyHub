@@ -15,8 +15,9 @@ Thumbs.db
 *.tmp
 scripts/check-results.json
 
-# 自动生成的翻译缓存
-feeds/translation-cache.json
+# 翻译缓存需要进仓库：CI 冷启动时没有缓存会把每日配额耗尽、大量标题漏翻。
+# 缓存随 feeds/ 一起提交，由 fetch-feeds.yml 的「git add feeds/」自动纳入。
+# feeds/translation-cache.json
 
 # dry-run 构建输出（开发验证用，不进仓库）
 feeds/dry-run/

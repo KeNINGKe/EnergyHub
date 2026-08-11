@@ -93,6 +93,8 @@ export async function translateTitles(items) {
   const cache = await loadTranslationCache();
   let translated = 0;
   let skipped = 0;
+  let failed = 0;
+  let identity = 0;
   for (const item of items) {
     if (!isEnglishTitle(item.title)) {
       skipped++;
@@ -103,23 +105,51 @@ export async function translateTitles(items) {
       translated++;
       continue;
     }
-    try {
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(item.title)}&langpair=en|zh`;
-      const res = await fetch(url);
-      const data = await res.json();
-      if (data.responseStatus === 200 && data.responseData?.translatedText) {
-        const t = data.responseData.translatedText;
+    const t = await translateOneTitle(item.title);
+    if (t) {
+      if (t === item.title.trim()) {
+        // MyMemory 对纯专有名词常原样返回；缓存命中可省配额，但结果等于原文，
+        // 不写 translatedTitle，条目保持英文（本无可翻）。
+        cache[item.title] = t;
+        identity++;
+      } else {
         cache[item.title] = t;
         item.translatedTitle = t;
         translated++;
       }
-    } catch (err) {
-      console.error(`[翻译失败] ${item.title.slice(0, 40)}: ${err.message}`);
+    } else {
+      failed++;
     }
     await sleep(300);
   }
   await saveTranslationCache(cache);
-  return { translated, skipped };
+  return { translated, skipped, failed, identity };
+}
+
+/** 翻译单个标题：配额耗尽/非200直接放弃（重试无意义），瞬时错误重试 2 次。 */
+async function translateOneTitle(title, maxRetries = 2) {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    if (attempt > 0) await sleep(800 * attempt);
+    try {
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(title)}&langpair=en|zh`;
+      const res = await fetch(url);
+      const data = await res.json();
+      if (data.quotaFinished || /MYMEMORY WARNING/i.test(data.responseDetails || '') || (data.responseStatus === 403 || data.responseStatus === 429)) {
+        console.warn(`[翻译配额耗尽/限流] ${title.slice(0, 50)}`);
+        return null;
+      }
+      if (data.responseStatus === 200 && data.responseData?.translatedText) {
+        return String(data.responseData.translatedText).trim();
+      }
+      console.warn(`[翻译异常响应] ${title.slice(0, 50)}: status=${data.responseStatus} ${data.responseDetails || ''}`.trim());
+      return null;
+    } catch (err) {
+      if (attempt === maxRetries) {
+        console.warn(`[翻译失败] ${title.slice(0, 50)}: ${err.message}`);
+      }
+    }
+  }
+  return null;
 }
 
 export async function loadSources() {
