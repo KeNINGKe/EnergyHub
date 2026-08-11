@@ -32,9 +32,10 @@ export const TRANSLATION_CACHE_PATH = 'feeds/translation-cache.json';
 
 // MyMemory 免费档配额：匿名 5000 字符/天/IP；请求带 de 邮箱参数可提升到
 // 50000 字符/天/邮箱（10 倍）。CI 跑在共享 IP 上必须带邮箱，否则大批次
-// 新标题会把 5000 字符配额耗尽导致漏翻。优先读 MYMEMORY_EMAIL 环境变量，
-// 未设置则用仓库维护邮箱。
-const MYMEMORY_EMAIL = process.env.MYMEMORY_EMAIL || 'cooper.ke.ning@gmail.com';
+// 新标题会把 5000 字符配额耗尽导致漏翻。邮箱从 MYMEMORY_EMAIL 环境变量
+// 读取（fetch-feeds.yml 由 GitHub secret 注入，避免写进公开仓库）；
+// 未设置时退回匿名配额。
+const MYMEMORY_EMAIL = process.env.MYMEMORY_EMAIL || '';
 
 export async function curlFetch(url, maxTime = 30) {
   const { stdout } = await execFileAsync('curl', [
@@ -137,7 +138,8 @@ async function translateOneTitle(title, maxRetries = 2) {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     if (attempt > 0) await sleep(800 * attempt);
     try {
-      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(title)}&langpair=en|zh&de=${encodeURIComponent(MYMEMORY_EMAIL)}`;
+      const de = MYMEMORY_EMAIL ? `&de=${encodeURIComponent(MYMEMORY_EMAIL)}` : '';
+      const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(title)}&langpair=en|zh${de}`;
       const res = await fetch(url);
       const data = await res.json();
       if (data.quotaFinished || /MYMEMORY WARNING/i.test(data.responseDetails || '') || (data.responseStatus === 403 || data.responseStatus === 429)) {

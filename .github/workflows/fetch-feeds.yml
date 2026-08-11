@@ -33,6 +33,11 @@ jobs:
 
       - name: Build V2 daily feed
         run: npm run build:v2
+        env:
+          # MyMemory 翻译配额邮箱（提升到 50000 字符/天）。在仓库
+          # Settings → Secrets → Actions 配置 MYMEMORY_EMAIL；未配置时
+          # 退回匿名 5000 字符/天，批量新标题可能漏翻。
+          MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
 
       - name: Commit and push
         id: commit
