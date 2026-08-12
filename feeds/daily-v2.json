@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-12",
-  "generatedAt": "2026-08-11T21:33:16.012Z",
+  "generatedAt": "2026-08-12T05:25:44.291Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
-    "sourcesSucceeded": 39,
-    "articlesFetched": 414,
+    "sourcesSucceeded": 40,
+    "articlesFetched": 424,
     "eventsPublished": 91
   },
   "items": [
@@ -38,7 +38,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T15:36:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -78,7 +78,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T12:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -110,7 +110,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T13:12:07.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -145,8 +145,51 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T14:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1e7f80501d73",
+      "title": "英伟达人工智能工厂计算正在成为一个可投资的资产类别",
+      "originalTitle": "NVIDIA AI Factory Compute Is Becoming an Investable Asset Class",
+      "url": "https://blogs.nvidia.com/blog/nvidia-ai-factory-compute/",
+      "summary": "We announced partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish independent financing platform…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；一手来源 NVIDIA Blog",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-12T00:38:21.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [
+        {
+          "name": "HPCwire",
+          "url": "https://www.hpcwire.com/2026/08/11/nvidias-500-billion-ai-bet-jensen-huang-brings-wall-street-into-the-race/"
+        },
+        {
+          "name": "HPCwire",
+          "url": "https://www.hpcwire.com/off-the-wire/nvidia-partners-with-financial-giants-to-mobilize-500b-for-ai-infrastructure/"
+        },
+        {
+          "name": "SemiWiki",
+          "url": "https://semiwiki.com/eda/372073-siemens-and-nvidia-tout-agentic-ai/"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-teams-up-with-financial-giants-to-create-usd500-billion-ai-infrastructure-funds-six-investment-firms-to-enable-access-to-long-term-funding-at-attractive-rates"
+        }
+      ],
       "wechat": false
     },
     {
@@ -169,7 +212,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T16:06:41.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -204,7 +247,72 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:50:23.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_06852d0341c0",
+      "title": "计算设施可以通过地下观察来节省大量资金并保持凉爽",
+      "originalTitle": "Computing Facilities Can Save Big and Keep Cool by Looking Underground",
+      "url": "https://cleantechnica.com/2026/08/11/computing-facilities-can-save-big-and-keep-cool-by-looking-underground/",
+      "summary": "A New National Laboratory Study Finds that Underground Thermal Energy Storage Can Keep Servers Cool Year Round To ensure equipment in compu…",
+      "whyItMatters": "储能；关键数字 40%；媒体 CleanTechnica",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "water—as much as",
+          "value": 40,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:05:57.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6505359e8cbc",
+      "title": "爱尔兰对数据中心供电的信心飞跃",
+      "originalTitle": "Ireland’s leap of faith to power data centers",
+      "url": "https://www.pv-magazine.com/2026/08/12/irelands-leap-of-faith-to-power-data-centers/",
+      "summary": "Under Ireland’s Large Energy User Action Plan (LEAP), 10 MW-plus data centers must provide at least 80% of their energy demand through new…",
+      "whyItMatters": "电网与并网；关键数字 10MW、80%；地区 全球；媒体 pv magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Action Plan (LEAP),",
+          "value": 10,
+          "unit": "MW"
+        },
+        {
+          "label": "provide at least",
+          "value": 80,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T04:00:00.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -234,7 +342,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T12:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -274,7 +382,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:42:36.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -309,7 +417,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T10:41:03.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -339,7 +447,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T10:07:09.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -379,57 +487,8 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T09:54:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c42f2b3364c8",
-      "title": "法国上半年新增2.9吉瓦太阳能",
-      "originalTitle": "France adds 2.9 GW of solar in H1",
-      "url": "https://www.pv-magazine.com/2026/08/11/france-adds-2-9-gw-of-solar-in-h1/",
-      "summary": "France connected 1.496 GW of solar PV capacity in Q2 2026, including 48 MW paired with storage, bringing first-half additions to around 2.9…",
-      "whyItMatters": "光伏与风电；关键数字 2.9GW、1.496GW、48MW；地区 法国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "法国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "France adds",
-          "value": 2.9,
-          "unit": "GW"
-        },
-        {
-          "label": "H1 France connected",
-          "value": 1.496,
-          "unit": "GW"
-        },
-        {
-          "label": "Q2 2026, including",
-          "value": 48,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T09:25:15.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [
-        {
-          "name": "PV-Tech",
-          "url": "https://www.pv-tech.org/purvah-green-power-to-acquire-1-4gw-renewables-portfolio-from-renew/"
-        },
-        {
-          "name": "PV-Tech",
-          "url": "https://www.pv-tech.org/poland-round-up-orla-buys-216mw-solar-wind-project-enefit-polska-powers-pv-plant/"
-        }
-      ],
       "wechat": false
     },
     {
@@ -463,7 +522,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:20:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -493,7 +552,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T13:43:03.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -542,7 +601,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:56:07.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -572,7 +631,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:50:24.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -598,7 +657,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:38:36.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -628,7 +687,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -658,7 +717,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -703,7 +762,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T12:40:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -738,7 +797,151 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T09:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d79d45e486a0",
+      "title": "塞浦路斯首个多功能电池项目上线：访谈",
+      "originalTitle": "Cyprus’ first utility battery project goes online: Interview",
+      "url": "https://www.ess-news.com/2026/08/11/cyprus-first-utility-battery-project-goes-online-interview/",
+      "summary": "The 5 MWh battery storage facility is a step forward for Cyprus as the island grapples with record solar curtailment and a slow-moving ener…",
+      "whyItMatters": "储能；关键数字 5MWh；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "online: Interview The",
+          "value": 5,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-11T07:24:22.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_5d0724659f76",
+      "title": "LS电气和GS E&C在人工智能数据中心的合作伙伴",
+      "originalTitle": "LS ELECTRIC and GS E&C partner on AI data centres",
+      "url": "https://transformer-magazine.com/news/ls-electric-and-gs-ec-partner-on-ai-data-centres/",
+      "summary": "The partnership will develop next-generation DC distribution systems and supply switchgear, GIS and transformers for AI data centre projects",
+      "whyItMatters": "固态变压器（SST）；媒体 Transformer Magazine",
+      "topic": "sst",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T05:00:57.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_5a51db90ff6d",
+      "title": "新闻：州官员说，地热可以为新墨西哥州的土著居民提供“增强的能源主权”。",
+      "originalTitle": "NEWS: Geothermal could offer New Mexico's Indigenous populations ‘enhanced energy sovereignty,’ state officials say.",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/news-geothermal-could-offer-new-mexico-s-indigenous-populations-ikNsvoZgDIWuVx9",
+      "summary": "* The opportunity: Lawmakers want [https://sourcenm.com/2026/08/10/much-of-new-mexicos-tribal-pueblo-land-ripe-for-geothermal-power-energy-…",
+      "whyItMatters": "关键数字 163GW；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "-Geothermal-in-New-Mexico.pdf]",
+          "value": 163,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:55:59.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_155d43a66f78",
+      "title": "新闻： CenterPoint预计未来十年将为德克萨斯州客户节省$ 50亿。司机？新增大载荷。",
+      "originalTitle": "NEWS: CenterPoint is predicting $5B in savings for Texas customers over the next decade. The driver? New large-load additions.",
+      "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/news-centerpoint-is-predicting-5b-in-savings-for-texas-customers-over-hui9mY3y1QuFYUf",
+      "summary": "* The logic: CenterPoint has up to 14 GW of ERCOT Batch Zero [https://www.energycentral.com/energy-management/post/news-ferc-and-ercot-are-…",
+      "whyItMatters": "电网与并网；关键数字 14GW；媒体 Energy Central",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "has up to",
+          "value": 14,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:55:23.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_be0270c1ba82",
+      "title": "新闻：特朗普政府希望重写一项农田规则--这些修订可能会阻碍可再生能源和管道项目。",
+      "originalTitle": "NEWS: The Trump administration wants to rewrite a farmland rule—these revisions could hamper renewables and pipeline projects.",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-the-trump-administration-wants-to-rewrite-a-farmland-rule--these-0zTdnOFITHHfmBh",
+      "summary": "* The details: The USDA is proposing adjustments to the Agricultural Foreign Investment Disclosure Act of 1978, which orders [https://www.e…",
+      "whyItMatters": "关键数字 1978w；地区 美国；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Disclosure Act of",
+          "value": 1978,
+          "unit": "w"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:53:15.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -768,7 +971,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:15:10.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -798,7 +1001,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T09:04:02.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -822,7 +1025,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-11T15:00:06.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -852,7 +1055,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -882,22 +1085,22 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T13:27:12.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_27db0ae3b359",
-      "title": "电动航空用宁德时代电池通过重要安全测试",
-      "originalTitle": "CATL Battery for Electric Aviation Passes Important Safety Test",
-      "url": "https://cleantechnica.com/2026/08/10/catl-battery-for-electric-aviation-passes-important-safety-test/",
-      "summary": "The #1 battery maker in the world, CATL, has developed a battery for use in electric aircraft — in particular, for passenger eVTOL aircraft…",
-      "whyItMatters": "储能；关联 CATL；地区 全球；媒体 CleanTechnica",
-      "topic": "energy-storage",
+      "id": "evt_161d91378924",
+      "title": "美国最大的单一污染源将成为亚马逊人工智能数据中心",
+      "originalTitle": "The Single Largest Pollution Source In The USA Going To Be An Amazon AI Data Center",
+      "url": "https://cleantechnica.com/2026/08/11/the-single-largest-pollution-source-in-the-usa-going-to-be-an-amazon-ai-data-center/",
+      "summary": "Well, so much for climate pledges and grand goals to cut carbon emissions. It’s more important for ginormous tech companies and the tech-ne…",
+      "whyItMatters": "AIDC 项目与区域布局；关联 Amazon；地区 美国；媒体 CleanTechnica",
+      "topic": "aidc-project",
       "tags": [],
-      "region": "全球",
+      "region": "美国",
       "entities": [
-        "CATL"
+        "Amazon"
       ],
       "metrics": [],
       "impact": "unknown",
@@ -907,8 +1110,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-10T22:36:28.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "publishedAt": "2026-08-12T02:12:13.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -934,7 +1137,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T16:14:23.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -964,7 +1167,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-05T13:44:45.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -999,7 +1202,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T13:50:52.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1029,7 +1232,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T11:21:05.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1064,7 +1267,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T13:34:28.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1094,43 +1297,8 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T13:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_54abe0b10070",
-      "title": "Energy Vault将为美国数据中心提供1.25 GW的离网BESS",
-      "originalTitle": "Energy Vault to supply 1.25 GW of off-grid BESS for US data center",
-      "url": "https://www.ess-news.com/2026/08/10/energy-vault-to-supply-1-25-gw-of-off-grid-bess-for-us-data-center/",
-      "summary": "A unnamed Texas data center is going off-grid with a significant battery installation. The post Energy Vault to supply 1.25 GW of off-grid…",
-      "whyItMatters": "储能；关键数字 1.25GW；地区 美国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Vault to supply",
-          "value": 1.25,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T12:19:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/energy-vault-signs-1-25gw-ai-data-centre-power-infrastructure-agreement-in-texas/"
-        }
-      ],
       "wechat": false
     },
     {
@@ -1155,7 +1323,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T08:38:06.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1185,7 +1353,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:18:53.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1222,7 +1390,59 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T21:32:38.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ea44213cf753",
+      "title": "新闻： AES旨在将该国的连接和管理系统拼凑成一个单一的标准。 🪡",
+      "originalTitle": "NEWS: AES aims to stitch the country’s patchwork of connect-and-manage systems into a single standard. 🪡",
+      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/news-aes-hopes-to-stitch-the-country-s-patchwork-of-connect-and-manage-pCdiNEl6sun7kU5",
+      "summary": "* The proposed Grid 2.0 standard, floated [https://www.linkedin.com/posts/tylerhnorris_very-notable-for-a-fortune-500-global-energy-share-7…",
+      "whyItMatters": "电网与并网；关联 AES；地区 全球；媒体 Energy Central",
+      "topic": "grid",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "AES"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:54:13.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_950e72b70f4b",
+      "title": "新闻：电动航空用宁德时代电池通过重要安全测试",
+      "originalTitle": "NEWS: CATL Battery for Electric Aviation Passes Important Safety Test",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-catl-battery-for-electric-aviation-passes-important-safety-test-dxx18nK5C0zkEnt",
+      "summary": "Wondering why electric planes haven’t really taken off? They’ve hit some turbulence: Batteries that pack enough capacity to power long trip…",
+      "whyItMatters": "储能；关联 CATL；媒体 Energy Central",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "CATL"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T01:52:08.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1252,7 +1472,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T08:08:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1278,47 +1498,8 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T19:08:53.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6b2c1da8f7d6",
-      "title": "英伟达与金融巨头合作创建5000亿美元的人工智能基础设施基金—六家投资公司以具有吸引力的利率获得长期资金",
-      "originalTitle": " Nvidia teams up with financial giants to create $500 billion AI infrastructure funds — six investment firms to enable access to long-term funding at attractive rates ",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-teams-up-with-financial-giants-to-create-usd500-billion-ai-infrastructure-funds-six-investment-firms-to-enable-access-to-long-term-funding-at-attractive-rates",
-      "summary": "Nvidia to arrange financing from major financial institutions at attractive rates for customers seeking to build AI data centers.",
-      "whyItMatters": "AIDC 项目与区域布局；关联 NVIDIA；媒体 Tom's Hardware",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T11:04:32.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/2026/08/11/nvidias-500-billion-ai-bet-jensen-huang-brings-wall-street-into-the-race/"
-        },
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/nvidia-partners-with-financial-giants-to-mobilize-500b-for-ai-infrastructure/"
-        },
-        {
-          "name": "SemiWiki",
-          "url": "https://semiwiki.com/eda/372073-siemens-and-nvidia-tout-agentic-ai/"
-        }
-      ],
       "wechat": false
     },
     {
@@ -1343,33 +1524,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T12:31:21.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8bdd04f02976",
-      "title": "故障分析硬件支持3D IC的系统级调试（谷歌、代尔夫特理工大学）",
-      "originalTitle": "Failure Analysis HW Enables System-Level Debug For 3D ICs (Google, TU Delft)",
-      "url": "https://semiengineering.com/failure-analysis-hw-enables-system-level-debug-for-3d-ics-google-tu-delft/",
-      "summary": "Researchers from Google and Delft University of Technology published a technical paper titled “Innovative FA Hardware Solution to Enable Sy…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Google；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Google"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T21:55:24.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1395,7 +1550,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1421,7 +1576,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1447,7 +1602,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-05T13:00:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1471,7 +1626,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1495,7 +1650,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1519,7 +1674,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1543,7 +1698,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T17:27:43.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1567,55 +1722,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T16:54:43.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_25a650e44056",
-      "title": "稳步进展重塑澳大利亚能源市场— 2026年7月更新",
-      "originalTitle": "Steady Progress Reshapes Australia’s Energy Market — July 2026 Update",
-      "url": "https://cleantechnica.com/2026/08/10/steady-progress-reshapes-australias-energy-market-july-2026-update/",
-      "summary": "So much to share with you. First, we have the overall picture from the Australian Energy Market Operator’s (AEMO’s) latest Quarterly Energy…",
-      "whyItMatters": "地区 澳大利亚；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T02:23:53.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_dd08ffc41918",
-      "title": "SolarAnywhere ®支持太阳能光伏和无人飞行！",
-      "originalTitle": "SolarAnywhere® Supports Solar PV & Unmanned Flight!",
-      "url": "https://cleantechnica.com/2026/08/10/solaranywhere-supports-solar-pv-unmanned-flight/",
-      "summary": "SolarAnywhere® is often associated with utility-scale or distributed PV, but our solar irradiance data powers a lot more than solar plants.…",
-      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T22:59:21.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1639,7 +1746,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1663,7 +1770,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1687,7 +1794,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1711,7 +1818,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:59:18.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1746,7 +1853,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T08:53:32.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1776,7 +1883,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T06:53:24.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1803,7 +1910,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:17:20.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1833,42 +1940,18 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:18:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_b0378cbee318",
-      "title": "美国天然气如何从死里复活",
-      "originalTitle": "How U.S. Natural Gas Came Back from the Dead",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/how-u-s-natural-gas-came-back-from-the-dead-6twwNWx8PJbmiSK",
-      "summary": "Rayburn Energy Station, Sherman, Texas Credit: Rayburn Electric Cooperative The Trump administration is proud of America’s dominance in nat…",
-      "whyItMatters": "天然气与备用电源；地区 美国；媒体 Energy Central",
-      "topic": "gas-backup",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T16:05:55.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_bef901d34ca0",
-      "title": "电池储能新闻",
-      "originalTitle": "Battery Energy Storage News",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/battery-energy-storage-news-Sd2elqEzib0oNpu",
-      "summary": "I came across three articles regarding significant events in the title market. All of these were significant, but none were sufficient news…",
-      "whyItMatters": "储能；媒体 Energy Central",
-      "topic": "energy-storage",
+      "id": "evt_08fb81e266d8",
+      "title": "新闻：最近的一份报告称，电力供应商在过去十年中向马萨诸塞州的住宅和小企业客户多收了123亿美元。",
+      "originalTitle": "NEWS: Electricity suppliers overcharged Massachusetts residential and small-business customers by $12.3B over the past decade, a recent report claims.",
+      "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/news-electricity-suppliers-overcharged-massachusetts-residential-and-Vw13mOA7WOgu8aS",
+      "summary": "* For context: Utilities like Eversource and National Grid don't generate power—they buy it from independent suppliers at a fixed rate lock…",
+      "whyItMatters": "电网与并网；媒体 Energy Central",
+      "topic": "grid",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -1880,104 +1963,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-11T15:25:33.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_fd35f5aea13d",
-      "title": "可以改变太空旅行的微型核技术",
-      "originalTitle": "The Tiny Nuclear Technology That Could Transform Space Travel",
-      "url": "https://www.energycentral.com/power-perspectives-om0ntkvn/post/the-tiny-nuclear-technology-that-could-transform-space-travel-RRioQxzfkKq8UnR",
-      "summary": "What if a battery the size of a grain of rice could power critical sensors for decades—or help build the infrastructure needed to explore t…",
-      "whyItMatters": "储能；媒体 Energy Central",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T14:28:31.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_7750fcdaf54d",
-      "title": "E-ISAC首席执行官详细介绍了公共电力公司加入网络和物理安全组织时可用的资源",
-      "originalTitle": "E-ISAC CEO Details Resources Available to Public Power Utilities When They Join Cyber and Physical Security Organization",
-      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/e-isac-ceo-details-resources-available-to-public-power-utilities-when-b6XvTs2jHx41jWr",
-      "summary": "In the latest episode of the American Public Power Association's Public Power Now podcast, Michael Ball, CEO of the Electricity Information…",
-      "whyItMatters": "地区 美国；媒体 Energy Central",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T13:24:30.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_074afa964966",
-      "title": "能源：您的客户是否抓住了与能源相关的机会？",
-      "originalTitle": "Energy: is your client seizing energy related opportunities?",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/energy-is-your-client-seizing-energy-related-opportunities-PuTi27C4sLoaBTW",
-      "summary": "This list marks the beginning of a successful path! 1) Are the $/kWh and kWh/activity metrics tracked on a monthly basis? 2) Does the utili…",
-      "whyItMatters": "媒体 Energy Central",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T09:35:34.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_58df16151511",
-      "title": "德里的电力转型：为什么答案在于进口，而不是发电",
-      "originalTitle": "Delhi's electricity transition: Why the answer lies in imports, not generation",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/delhi-s-electricity-transition-why-the-answer-lies-in-imports-not-Oq1y3z7M1m066Pa",
-      "summary": "Delhi does not have the option that most of India's power-hungry states have. It cannot simply build its way out of a demand crunch by open…",
-      "whyItMatters": "光伏与风电；地区 印度；媒体 Energy Central",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "印度",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T00:45:33.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "publishedAt": "2026-08-12T01:54:55.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2001,7 +1988,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T13:55:02.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2025,7 +2012,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T12:34:32.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2049,7 +2036,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T10:18:01.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2073,7 +2060,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:36:42.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2097,7 +2084,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:06:54.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2121,7 +2108,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:05:17.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2145,7 +2132,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:04:35.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2169,7 +2156,33 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:02:51.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8bdd04f02976",
+      "title": "故障分析硬件支持3D IC的系统级调试（谷歌、代尔夫特理工大学）",
+      "originalTitle": "Failure Analysis HW Enables System-Level Debug For 3D ICs (Google, TU Delft)",
+      "url": "https://semiengineering.com/failure-analysis-hw-enables-system-level-debug-for-3d-ics-google-tu-delft/",
+      "summary": "Researchers from Google and Delft University of Technology published a technical paper titled “Innovative FA Hardware Solution to Enable Sy…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Google；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Google"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T21:55:24.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2193,7 +2206,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2220,7 +2233,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T12:13:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [
         {
           "name": "POWER Magazine",
@@ -2253,7 +2266,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:40:13.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_25a650e44056",
+      "title": "稳步进展重塑澳大利亚能源市场— 2026年7月更新",
+      "originalTitle": "Steady Progress Reshapes Australia’s Energy Market — July 2026 Update",
+      "url": "https://cleantechnica.com/2026/08/10/steady-progress-reshapes-australias-energy-market-july-2026-update/",
+      "summary": "So much to share with you. First, we have the overall picture from the Australian Energy Market Operator’s (AEMO’s) latest Quarterly Energy…",
+      "whyItMatters": "地区 澳大利亚；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-11T02:23:53.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2277,7 +2314,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T08:21:17.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2303,7 +2340,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-05T08:08:33.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2327,33 +2364,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T09:27:56.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_d26e19ea2858",
-      "title": "弗吉尼亚州使数据中心为电网升级提供资金",
-      "originalTitle": "Virginia makes data centres fund grid upgrades",
-      "url": "https://transformer-magazine.com/news/virginia-makes-data-centres-fund-grid-upgrades/",
-      "summary": "Regulators ordered Dominion Energy to make data centres fund substations and transmission lines built exclusively for their projects",
-      "whyItMatters": "电网与并网；关联 Dominion；媒体 Transformer Magazine",
-      "topic": "grid",
+      "id": "evt_d0a74f53f12f",
+      "title": "引信吹捧任何核聚变公司的“最高”中子产量",
+      "originalTitle": "Fuse Touts ‘Highest’ Neutron Yield by Any Fusion Company",
+      "url": "https://www.powermag.com/fuse-touts-highest-neutron-yield-by-any-fusion-company/",
+      "summary": "A California-based fusion energy company announced it has reached an industry milestone. Fuse Energy Technologies Corp. on August 10 publis…",
+      "whyItMatters": "媒体 POWER Magazine",
+      "topic": "other-energy",
       "tags": [],
       "region": "未知",
-      "entities": [
-        "Dominion"
-      ],
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2,
       "source": {
-        "name": "Transformer Magazine",
+        "name": "POWER Magazine",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-06T08:54:56.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "publishedAt": "2026-08-10T16:34:11.000Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2377,7 +2412,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:45:47.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2403,33 +2438,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:37:56.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9221ba3ecc06",
-      "title": "LS Power从Constellation收购606兆瓦德克萨斯州燃气发电厂",
-      "originalTitle": "LS Power Acquiring 606-MW Texas Gas-Fired Plant From Constellation",
-      "url": "https://www.powermag.com/ls-power-acquiring-606-mw-texas-gas-fired-plant-from-constellation/",
-      "summary": "A New York-headquartered group that pursues investments in North American power and energy infrastructure said it has a deal to acquire a n…",
-      "whyItMatters": "天然气与备用电源；关联 Constellation；地区 美国；媒体 POWER Magazine",
-      "topic": "gas-backup",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "Constellation"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "POWER Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-06T14:17:03.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2453,7 +2462,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:55:54.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2477,7 +2486,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T13:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2501,7 +2510,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2525,7 +2534,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T08:44:33.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2549,7 +2558,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:34:42.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2573,7 +2582,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-05T20:57:59.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2597,7 +2606,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-05T18:07:29.000Z",
-      "discoveredAt": "2026-08-11T21:33:16.012Z",
+      "discoveredAt": "2026-08-12T05:25:44.291Z",
       "relatedSources": [],
       "wechat": false
     }
