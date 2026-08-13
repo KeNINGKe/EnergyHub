@@ -485,9 +485,11 @@ function renderFeatured() {
   if (state.dataGeneratedAt) parts.push(`更新于 ${formatTime(state.dataGeneratedAt)}`);
   meta.innerHTML = escapeHtml(parts.join(' · ')) + (state.stale ? ' <span class="stale-badge">数据已过期</span>' : '');
 
-  // 今日热点榜：储能 / AIDC（北美 rank 0 优先）中推荐分最高的前 5
+  const cat = state.category || 'all';
+
+  // 今日热点榜：储能 / AIDC（北美 rank 0 优先）中推荐分最高的前 5；仅在「全部」分类下显示
   const hotBlock = $('#hotListBlock');
-  const hotHtml = renderHotList(state.allEvents);
+  const hotHtml = (cat === 'all') ? renderHotList(state.allEvents) : '';
   if (hotHtml) {
     hotBlock.hidden = false;
     $('#hotList').innerHTML = hotHtml;
@@ -514,7 +516,6 @@ function renderFeatured() {
     return;
   }
 
-  const cat = state.category || 'all';
   const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
   const featuredEvents = (cat === 'all') ? featuredAll : featuredAll.filter(ev => eventInCategory(ev, cat));
 
