@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-13",
-  "generatedAt": "2026-08-13T05:22:53.960Z",
+  "generatedAt": "2026-08-13T05:28:10.413Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
-    "sourcesSucceeded": 44,
-    "articlesFetched": 464,
-    "eventsPublished": 94
+    "sourcesSucceeded": 37,
+    "articlesFetched": 389,
+    "eventsPublished": 82
   },
   "items": [
     {
@@ -43,7 +43,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T12:30:17.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
@@ -80,7 +80,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:18:46.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -110,39 +110,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-10T14:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_0e2781879fe4",
-      "title": "位于加利福尼亚州奥克兰的前LBNL超级计算设施，面向20MW数据中心",
-      "originalTitle": "Former LBNL supercomputing facility in Oakland, California, targeted for 20MW data center",
-      "url": "https://www.datacenterdynamics.com/en/news/former-lbnl-supercomputing-facility-in-oakland-california-targeted-for-20mw-data-center/",
-      "summary": "Behring looks to turn vacant site back into live data center",
-      "whyItMatters": "关键数字 20MW；关联 LBNL；媒体 Data Center Dynamics",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "LBNL"
-      ],
-      "metrics": [
-        {
-          "label": "California, targeted for",
-          "value": 20,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T16:00:31.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -191,7 +159,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T12:35:44.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [
         {
           "name": "SemiWiki",
@@ -220,7 +188,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-11T15:00:06.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -250,7 +218,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:02:23.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -280,7 +248,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:01:39.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [
         {
           "name": "Energy Central",
@@ -317,7 +285,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T15:36:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -352,7 +320,132 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T22:16:15.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2f2281ebd696",
+      "title": "法国太阳能组件回收量急剧上升",
+      "originalTitle": "France sees sharp rise in solar module recycling",
+      "url": "https://www.pv-magazine.com/2026/08/12/france-sees-sharp-rise-in-solar-module-recycling/",
+      "summary": "France collected 13,760 tonnes of end-of-life solar modules in 2025, up 40% from the previous year, as recycling activity accelerates. The…",
+      "whyItMatters": "光伏与风电；关键数字 40%；地区 法国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "法国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "in 2025, up",
+          "value": 40,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T13:13:23.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3199c75d98eb",
+      "title": "韩国Shinsung E&G开通350MW光伏组件生产线",
+      "originalTitle": "Korea’s Shinsung E&G opens 350 MW PV module production line",
+      "url": "https://www.pv-magazine.com/2026/08/12/koreas-shinsung-eg-opens-350-mw-pv-module-production-line/",
+      "summary": "The South Korean company says its new PV module production line will supply high-quality n-type solar modules to a series of projects in th…",
+      "whyItMatters": "光伏与风电；关键数字 350MW；地区 韩国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "韩国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Shinsung E&G opens",
+          "value": 350,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T11:26:52.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b4d7ebf47a88",
+      "title": "TÜV Rheinland警告说，大约14吉瓦的不规则分布式太阳能威胁着巴西的电网安全",
+      "originalTitle": "Around 14 GW of irregular distributed solar threatens grid security in Brazil, warns TÜV Rheinland",
+      "url": "https://www.pv-magazine.com/2026/08/12/around-14-gw-of-irregular-distributed-solar-threatens-grid-security-in-brazil-warns-tuv-rheinland/",
+      "summary": "Unauthorized distributed-generation expansions in Brazil could add up to 14 GW of unregistered capacity, complicating grid planning and ope…",
+      "whyItMatters": "光伏与风电；关键数字 14GW、5MW；地区 巴西；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "巴西",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Around",
+          "value": 14,
+          "unit": "GW"
+        },
+        {
+          "label": "systems up to",
+          "value": 5,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T08:55:40.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9df34091e2b4",
+      "title": "哥伦比亚：地震影响电网，但太阳能发电厂未报告损坏",
+      "originalTitle": "Colombia: Earthquake affects power grid, but no damage reported at solar plants",
+      "url": "https://www.pv-magazine.com/2026/08/12/colombia-earthquake-affects-power-grid-but-no-damage-reported-at-solar-plants/",
+      "summary": "A magnitude-7.4 earthquake in Colombia disrupted electricity supplies, leaving up to 20% of demand unmet in some affected regions. No damag…",
+      "whyItMatters": "电网与并网；关键数字 20%；地区 全球；媒体 pv magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "leaving up to",
+          "value": 20,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T08:43:10.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -387,7 +480,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:06:55.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -417,7 +510,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:57:39.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -447,7 +540,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:00:16.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -473,7 +566,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:38:36.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -503,7 +596,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -533,7 +626,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:40:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -563,7 +656,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T09:48:58.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -593,77 +686,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T09:01:40.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_364ce4a6026a",
-      "title": "随着电池热潮，加州电网发生变化",
-      "originalTitle": "California grid shifts with battery boom",
-      "url": "https://transformer-magazine.com/news/california-grid-shifts-with-battery-boom/",
-      "summary": "21 GW battery fleet is helping balance solar power and rising electricity demand",
-      "whyItMatters": "数据中心电力需求；关键数字 21GW；媒体 Transformer Magazine",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "with battery boom",
-          "value": 21,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T10:04:47.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_bc56f01d82ae",
-      "title": "Datagrid为AI集线器保护变压器",
-      "originalTitle": "Datagrid secures transformers for AI hub",
-      "url": "https://transformer-magazine.com/news/datagrid-secures-transformers-for-ai-hub/",
-      "summary": "The 360 MVA substation will connect a 280 MW AI data centre to New Zealand’s 220 kV transmission network by late 2027",
-      "whyItMatters": "电网与并网；关键数字 360MVA、280MW、220kV；媒体 Transformer Magazine",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "AI hub The",
-          "value": 360,
-          "unit": "MVA"
-        },
-        {
-          "label": "will connect a",
-          "value": 280,
-          "unit": "MW"
-        },
-        {
-          "label": "to New Zealand’s",
-          "value": 220,
-          "unit": "kV"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T06:28:07.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -698,7 +721,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T22:39:04.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -733,7 +756,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T09:50:02.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -763,7 +786,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:50:39.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -793,7 +816,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:36:18.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -828,97 +851,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:26:38.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8dd0cd27e0b3",
-      "title": "仲量联行：数据中心需求超出预期，同比增长一倍",
-      "originalTitle": "JLL: Data center demand exceeds expectations, doubles year-over-year",
-      "url": "https://www.datacenterdynamics.com/en/news/jll-data-center-demand-exceeds-expectations-doubles-year-over-year/",
-      "summary": "Absorption hits record 25GW in 1H 2026",
-      "whyItMatters": "关键数字 25GW；媒体 Data Center Dynamics",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Absorption hits record",
-          "value": 25,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T15:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_dd4683511ef6",
-      "title": "赞助：动力工厂： 10GW的铲式数据中心站点隐藏在显而易见的地方",
-      "originalTitle": "Sponsored: The powered mill: 10GW of shovel-ready data center sites is hiding in plain sight",
-      "url": "https://www.datacenterdynamics.com/en/opinions/the-powered-mill-10gw-of-shovel-ready-data-center-sites-is-hiding-in-plain-sight/",
-      "summary": "A view for hyperscalers, colos, and infrastructure capital",
-      "whyItMatters": "关键数字 10GW；媒体 Data Center Dynamics",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "The powered mill:",
-          "value": 10,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T15:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b6103778b3dc",
-      "title": "西门子能源将为B&W提供1GW的蒸汽轮机发电机，用于数据中心电力计划",
-      "originalTitle": "Siemens Energy to supply B&W with 1GW of steam turbine-generators for data center power program",
-      "url": "https://www.datacenterdynamics.com/en/news/siemens-energy-to-supply-bw-with-1gw-of-steam-turbine-generators-for-data-center-power-program/",
-      "summary": "Will be delivered to an undisclosed operator in US market",
-      "whyItMatters": "数据中心电力需求；关键数字 1GW；地区 美国；媒体 Data Center Dynamics",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "supply B&W with",
-          "value": 1,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T12:30:36.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -944,7 +877,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-12T00:38:21.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [
         {
           "name": "SemiWiki",
@@ -979,7 +912,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1009,7 +942,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1033,7 +966,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T16:06:41.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1068,7 +1001,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:50:23.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1098,7 +1031,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T03:36:12.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1124,7 +1057,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T11:50:19.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1154,7 +1087,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:50:24.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -1194,7 +1127,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:20:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1224,7 +1157,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T14:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1269,7 +1202,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T12:40:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1295,7 +1228,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:49:52.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1322,31 +1255,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:22:28.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5d0724659f76",
-      "title": "LS电气和GS E&C在人工智能数据中心的合作伙伴",
-      "originalTitle": "LS ELECTRIC and GS E&C partner on AI data centres",
-      "url": "https://transformer-magazine.com/news/ls-electric-and-gs-ec-partner-on-ai-data-centres/",
-      "summary": "The partnership will develop next-generation DC distribution systems and supply switchgear, GIS and transformers for AI data centre projects",
-      "whyItMatters": "固态变压器（SST）；媒体 Transformer Magazine",
-      "topic": "sst",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T05:00:57.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1376,7 +1285,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:18:53.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1413,7 +1322,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T21:32:38.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1443,59 +1352,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T13:09:25.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f2a965ad0fe4",
-      "title": "IBM和Together AI签署$ 2.4亿英伟达HGX B300云部署协议",
-      "originalTitle": "IBM and Together AI sign $240m Nvidia HGX B300 cloud deployment deal",
-      "url": "https://www.datacenterdynamics.com/en/news/ibm-and-together-ai-sign-240m-nvidia-hgx-b300-cloud-deployment-deal/",
-      "summary": "Cluster expected to go live in Q1 2027",
-      "whyItMatters": "关联 NVIDIA；媒体 Data Center Dynamics",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T13:20:32.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_aa8a75fa3f3a",
-      "title": "SpaceX将通过现场发电和电池存储为德克萨斯州的TeraFab芯片工厂供电",
-      "originalTitle": "SpaceX to power TeraFab chip factory in Texas via on-site generation and battery storage",
-      "url": "https://www.datacenterdynamics.com/en/news/spacex-to-power-terafab-chip-factory-in-texas-via-on-site-generation-and-battery-storage/",
-      "summary": "Said it is not expected to use energy from the grid",
-      "whyItMatters": "储能；关联 SpaceX；媒体 Data Center Dynamics",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "SpaceX"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Data Center Dynamics",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T12:06:22.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1522,7 +1379,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T19:21:09.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1548,7 +1405,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1574,7 +1431,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1598,57 +1455,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_709839e33672",
-      "title": "有人刚刚想出了如何为核能项目提供资金吗？",
-      "originalTitle": "Did someone just figure out how to project finance nuclear?",
-      "url": "https://www.latitudemedia.com/news/green-blueprint-did-someone-just-figure-out-how-to-project-finance-nuclear/",
-      "summary": "Blue Energy CEO Jake Jurewicz on why modular fabrication and a gas-to-nuclear pivot could unlock commercial project finance for new nuclear…",
-      "whyItMatters": "核电与 SMR；媒体 Latitude Media",
-      "topic": "nuclear-smr",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T13:32:37.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b60084b9b555",
-      "title": "特斯拉的基础电力是否即将到来？",
-      "originalTitle": "Is Base Power coming for Tesla?",
-      "url": "https://www.latitudemedia.com/news/is-base-power-coming-for-tesla/",
-      "summary": "The home battery company’s latest billion-dollar raise will help it meet data center demand — and expand beyond batteries. The post Is Base…",
-      "whyItMatters": "储能；关联 Tesla；媒体 Latitude Media",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Tesla"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T13:27:50.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1672,7 +1479,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T02:27:26.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1696,7 +1503,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T02:15:43.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1720,7 +1527,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T01:04:46.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1744,7 +1551,55 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T18:31:44.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_7112049dc009",
+      "title": "太阳能的基础设施障碍",
+      "originalTitle": "Solar’s infrastructure obstacle",
+      "url": "https://www.pv-magazine.com/2026/08/13/solars-infrastructure-obstacle/",
+      "summary": "During the development of a recent utility-scale project in Texas’ ERCOT grid interconnection zone, Levona Renewables CEO Fernando Queiroz…",
+      "whyItMatters": "电网与并网；地区 美国；媒体 pv magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-13T04:00:00.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_face4ed9f85a",
+      "title": "魏德米勒推出新型光伏连接器",
+      "originalTitle": "Weidmüller unveils new PV connectors",
+      "url": "https://www.pv-magazine.com/2026/08/12/weidmuller-unveils-new-pv-stick-connectors/",
+      "summary": "Weidmüller has introduced a tool-free PV-Stick connection system designed to simplify and speed up photovoltaic installations while ensurin…",
+      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-12T11:13:33.000Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1768,7 +1623,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:21:58.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1792,7 +1647,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1816,7 +1671,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T11:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1840,7 +1695,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1864,68 +1719,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T07:59:18.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cfaffd5efd5d",
-      "title": "美国能源部资助人工智能网格安全研究",
-      "originalTitle": "DOE funds AI grid security research",
-      "url": "https://transformer-magazine.com/news/doe-funds-ai-grid-security-research/",
-      "summary": "A $750,000 award will fund tools to protect AI-powered grid operations from cyberattacks",
-      "whyItMatters": "电网与并网；关联 DOE；媒体 Transformer Magazine",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "DOE"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T08:38:06.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f54d7ece00a5",
-      "title": "瑞典批准1.4吉瓦海上风电场",
-      "originalTitle": "Sweden approves 1.4 GW offshore wind farm",
-      "url": "https://transformer-magazine.com/news/sweden-approves-1-4-gw-offshore-wind-farm/",
-      "summary": "Skyborn’s offshore wind project could generate 5 TWh annually",
-      "whyItMatters": "光伏与风电；关键数字 1.4GW、5TWh；媒体 Transformer Magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Sweden approves",
-          "value": 1.4,
-          "unit": "GW"
-        },
-        {
-          "label": "project could generate",
-          "value": 5,
-          "unit": "TWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-07T08:53:32.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1952,7 +1746,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:17:20.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1982,7 +1776,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:18:47.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2006,7 +1800,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T01:10:33.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2030,7 +1824,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T22:40:42.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2054,7 +1848,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T22:39:26.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2078,7 +1872,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T22:19:55.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2102,7 +1896,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:19:17.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2128,7 +1922,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T19:08:53.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2152,7 +1946,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:00:56.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2176,7 +1970,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:01:47.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2200,7 +1994,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:01:40.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2224,7 +2018,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:46:55.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2248,7 +2042,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T12:42:23.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2272,7 +2066,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2296,7 +2090,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2320,7 +2114,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2344,79 +2138,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:40:13.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_410c6bd397fe",
-      "title": "先进的地热产业能否跟随Fervo的脚步？",
-      "originalTitle": "Can the advanced geothermal industry follow in Fervo’s wake?",
-      "url": "https://www.latitudemedia.com/news/can-the-advanced-geothermal-industry-follow-in-fervos-wake/",
-      "summary": "The sector's breakout star may be pulling other startups up with it, but the path to the next IPO isn't totally clear. The post Can the adv…",
-      "whyItMatters": "媒体 Latitude Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T20:29:42.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8f9196b35a1b",
-      "title": "将需求响应参与设为默认值",
-      "originalTitle": "Make demand response participation the default",
-      "url": "https://www.latitudemedia.com/news/make-demand-response-participation-the-default/",
-      "summary": "At a time of sharply rising electricity demand, sign-up friction is leaving millions of grid-interactive devices stranded. The post Make de…",
-      "whyItMatters": "电网与并网；媒体 Latitude Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T13:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9d0e39749d47",
-      "title": "Nextpower的下一章：从太阳能跟踪器到逆变器和存储",
-      "originalTitle": "Nextpower’s next chapter: From solar trackers to inverters and storage",
-      "url": "https://www.latitudemedia.com/news/nextpowers-next-chapter-from-solar-trackers-to-inverters-and-storage/",
-      "summary": "The solar tracker pioneer is making a series of acquisitions. The post Nextpower’s next chapter: From solar trackers to inverters and stora…",
-      "whyItMatters": "光伏与风电；媒体 Latitude Media",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T20:18:33.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2440,7 +2162,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:00:00.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2464,31 +2186,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T08:21:17.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_0dcf9b12b930",
-      "title": "MNK成立国际能源事业部",
-      "originalTitle": "MNK launches International Energy Division",
-      "url": "https://transformer-magazine.com/news/mnk-launches-international-energy-division/",
-      "summary": "William Wakeham will lead the new unit covering renewables, battery storage, data centres, grid infrastructure and conventional energy.",
-      "whyItMatters": "储能；媒体 Transformer Magazine",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-10T09:27:56.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2512,7 +2210,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:34:11.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2536,7 +2234,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:45:47.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2562,7 +2260,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T14:37:56.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2586,7 +2284,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:06:54.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2610,31 +2308,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:05:17.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5145818ded82",
-      "title": "数据中心存在德克萨斯州规模的能源问题",
-      "originalTitle": "Data centers have a Texas-sized energy problem",
-      "url": "https://www.latitudemedia.com/news/open-circuit-data-centers-have-a-texas-sized-energy-problem/",
-      "summary": "As more states pause data centers, how will they use the opportunity to pass energy policy? The post Data centers have a Texas-sized energy…",
-      "whyItMatters": "电力市场与政策；媒体 Latitude Media",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-07T16:52:54.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2658,7 +2332,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-06T19:34:42.000Z",
-      "discoveredAt": "2026-08-13T05:22:53.960Z",
+      "discoveredAt": "2026-08-13T05:28:10.413Z",
       "relatedSources": [],
       "wechat": false
     }
