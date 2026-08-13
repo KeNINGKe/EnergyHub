@@ -24,7 +24,7 @@
       "id": "sst",
       "label": "固态变压器（SST）",
       "description": "固态变压器、电力电子变压器、中压电力电子、直流配电与数据中心直流供电",
-      "keywords": ["固态变压器", "电力电子变压器", "智能变压器", "中压电力电子", "直流配电", "中压直流", "多端口变换器", "高频变压器", "中频变压器", "直流变压器", "数据中心直流供电", "变压器", "transformer", "中压", "开关设备", "电力设备", "电力电子设备", "MVDC", "solid-state transformer", "power electronic transformer", "DC transformer", "medium voltage DC", "800 VDC", "800VDC"]
+      "keywords": ["固态变压器", "电力电子变压器", "智能变压器", "中压电力电子", "直流配电", "中压直流", "多端口变换器", "高频变压器", "中频变压器", "直流变压器", "数据中心直流供电", "变压器", "transformer", "中压", "开关设备", "电力设备", "电力电子设备", "MVDC", "solid-state transformer", "power electronic transformer", "DC transformer", "medium voltage DC", "800 VDC", "800VDC", "power architecture", "power distribution"]
     },
     {
       "id": "pcs",
@@ -36,13 +36,13 @@
       "id": "ems",
       "label": "能量管理系统（EMS）",
       "description": "电网调度EMS、储能EMS、工商业EMS、虚拟电厂（VPP）、DERMS与微电网能量管理",
-      "keywords": ["能量管理系统", "能量管理", "储能EMS", "EMS", "虚拟电厂", "VPP", "DERMS", "需求响应", "AGC", "AVC", "功率预测", "energy management system", "energy management", "virtual power plant", "demand response", "DERMS", "Autobidder"]
+      "keywords": ["能量管理系统", "能量管理", "储能EMS", "EMS", "虚拟电厂", "VPP", "DERMS", "需求响应", "AGC", "AVC", "功率预测", "energy management system", "energy management", "virtual power plant", "demand response", "Autobidder"]
     },
     {
       "id": "energy-storage",
       "label": "储能",
       "description": "电化学储能、长时储能、抽水蓄能、储充一体与储能市场",
-      "keywords": ["储能", "电池", "锂电池", "固态电池", "钠离子", "电化学储能", "抽水蓄能", "长时储能", "BESS", "液流电池", "储充", "光储", "风储", "储能电站", "battery", "lithium", "solid-state", "sodium-ion", "long-duration storage", "energy storage", "pumped hydro", "BESS", "flow battery", "battery energy storage", "grid-scale storage"]
+      "keywords": ["储能", "电池", "锂电池", "固态电池", "钠离子", "电化学储能", "抽水蓄能", "长时储能", "BESS", "液流电池", "储充", "光储", "风储", "储能电站", "battery", "lithium", "solid-state", "sodium-ion", "long-duration storage", "energy storage", "pumped hydro", "flow battery", "battery energy storage", "grid-scale storage"]
     },
     {
       "id": "solar-wind",
@@ -54,7 +54,7 @@
       "id": "nuclear-smr",
       "label": "核电与 SMR",
       "description": "大型核电、小型模块化反应堆（SMR）与核燃料",
-      "keywords": ["核电", "核能", "反应堆", "SMR", "小型堆", "核燃料", "铀", "核电站", "nuclear", "reactor", "SMR", "small modular", "uranium", "nuclear power plant", "nuclear fuel"]
+      "keywords": ["核电", "核能", "反应堆", "SMR", "小型堆", "核燃料", "铀", "核电站", "nuclear", "reactor", "small modular", "uranium", "nuclear power plant", "nuclear fuel"]
     },
     {
       "id": "gas-backup",
@@ -66,7 +66,7 @@
       "id": "cooling-pue",
       "label": "冷却、UPS 与 PUE",
       "description": "液冷、水冷、UPS、不间断电源、PUE 与能效",
-      "keywords": ["液冷", "水冷", "风冷", "冷却", "UPS", "不间断电源", "PUE", "能效", "效率", "liquid cooling", "immersion cooling", "cooling", "UPS", "uninterruptible", "power usage effectiveness", "PUE", "energy efficiency", "efficiency"]
+      "keywords": ["液冷", "水冷", "风冷", "冷却", "UPS", "不间断电源", "PUE", "能效", "效率", "liquid cooling", "immersion cooling", "cooling", "uninterruptible", "power usage effectiveness", "energy efficiency", "efficiency"]
     },
     {
       "id": "ppa-green-power",
@@ -84,13 +84,13 @@
       "id": "chips-compute",
       "label": "芯片、服务器与算力基础设施",
       "description": "GPU、AI 芯片、服务器、半导体与算力基础设施",
-      "keywords": ["GPU", "AI芯片", "芯片", "半导体", "服务器", "晶圆", "HBM", "DRAM", "算力", "foundry", "AI chip", "GPU", "semiconductor", "wafer", "HBM", "server", "data center equipment", "compute"]
+      "keywords": ["GPU", "AI芯片", "芯片", "半导体", "服务器", "晶圆", "HBM", "DRAM", "算力", "foundry", "AI chip", "semiconductor", "wafer", "server", "data center equipment", "compute"]
     },
     {
       "id": "other-energy",
       "label": "其他能源动态",
       "description": "水电、氢能、燃料电池、煤炭、生物质及其他能源动态",
-      "keywords": ["氢能", "氢", "燃料电池", "电解槽", "水电", "煤炭", "煤电", "生物质", "石油", "油气", "氢", "hydrogen", "fuel cell", "electrolyzer", "hydro", "coal", "biomass", "oil", "gas"]
+      "keywords": ["氢能", "氢", "燃料电池", "电解槽", "水电", "煤炭", "煤电", "生物质", "石油", "油气", "hydrogen", "fuel cell", "electrolyzer", "hydro", "coal", "biomass", "oil", "gas"]
     }
   ],
   "priorityTopics": ["sst", "pcs", "ems"],

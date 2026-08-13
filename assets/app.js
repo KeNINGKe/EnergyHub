@@ -42,6 +42,7 @@ const CATEGORY_TOPICS = {
 const CATEGORY_KEYWORDS = {
   ems: [/\bEMS\b/, /能量管理系统/, /储能EMS/, /能量管理/, /\bVPP\b/, /虚拟电厂/, /DERMS/],
   sst: [/变压器/, /transformer/i, /固态变压器/, /solid[- ]state transformer/i, /中压/, /电力电子/],
+  aidc: [/800\s*VDC/i, /power architecture/i, /电源架构/, /直流供电/],
 };
 
 const VALID_TABS = ['featured', 'all', 'sources'];
