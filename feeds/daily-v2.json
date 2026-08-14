@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-14",
-  "generatedAt": "2026-08-13T21:32:39.233Z",
+  "generatedAt": "2026-08-14T05:26:28.493Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
     "sourcesSucceeded": 40,
     "articlesFetched": 424,
-    "eventsPublished": 89
+    "eventsPublished": 91
   },
   "items": [
     {
@@ -38,7 +38,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T12:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -71,7 +71,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T11:00:27.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -103,7 +103,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T08:27:29.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -150,7 +150,37 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T06:52:46.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_5e0c79ed0192",
+      "title": "美国有望在2026年实现创纪录的天然气产量",
+      "originalTitle": "United States on track for record natural gas production in 2026",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67944",
+      "summary": "We forecast U.S. marketed natural gas production will average 122.5 billion cubic feet per day (Bcf/d) in 2026, surpassing the previous rec…",
+      "whyItMatters": "天然气与备用电源；关键数字 2026W；地区 美国；一手来源 EIA Electricity Data",
+      "topic": "gas-backup",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "gas production in",
+          "value": 2026,
+          "unit": "W"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-12T14:00:00.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -174,7 +204,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-11T15:00:06.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -198,42 +228,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_942dbf737c6a",
-      "title": "美国2026年天然气产量创纪录",
-      "originalTitle": "United States on Track for Record Natural Gas Production in 2026",
-      "url": "https://cleantechnica.com/2026/08/12/united-states-on-track-for-record-natural-gas-production-in-2026/",
-      "summary": "We forecast U.S. marketed natural gas production will average 122.5 billion cubic feet per day (Bcf/d) in 2026, surpassing the previous rec…",
-      "whyItMatters": "天然气与备用电源；关键数字 2026W、4%；地区 美国；媒体 CleanTechnica",
-      "topic": "gas-backup",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Gas Production in",
-          "value": 2026,
-          "unit": "W"
-        },
-        {
-          "label": "averaged 121.3 Bcf/d,",
-          "value": 4,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T22:16:15.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -263,25 +258,45 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T11:54:11.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_05253f116eb3",
-      "title": "大规模再利用试点项目发现15 ％的二次寿命太阳能电池组件不符合安全要求",
-      "originalTitle": "Mass-scale reuse pilot project finds 15% of second-life solar modules fail to meet safety requirements",
-      "url": "https://www.pv-magazine.com/2026/08/13/mass-scale-reuse-pilot-project-finds-15-of-second-life-solar-modules-fail-to-meet-safety-requirements/",
-      "summary": "Researchers in Australia identified two scalable routes for electrical safety qualification of second-life PV modules: silicone backsheet r…",
-      "whyItMatters": "光伏与风电；关键数字 15%；地区 澳大利亚；媒体 pv magazine",
+      "id": "evt_8f5d042bd564",
+      "title": "带有内置降压转换器的太阳能组件可以在部分遮阳下将屋顶光伏产量提高高达20%",
+      "originalTitle": "Solar modules with built-in buck converters could raise rooftop PV yield by up to 20% under partial shading",
+      "url": "https://www.pv-magazine.com/2026/08/13/solar-modules-with-built-in-buck-converters-could-raise-rooftop-pv-yield-by-up-to-20-under-partial-shading/",
+      "summary": "TU Delft researchers found that smart PV modules with integrated buck converters can significantly improve energy yields under partial shad…",
+      "whyItMatters": "光伏与风电；关键数字 20%、15%、2%；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "澳大利亚",
+      "region": "全球",
       "entities": [],
       "metrics": [
         {
-          "label": "pilot project finds",
+          "label": "by up to",
+          "value": 20,
+          "unit": "%"
+        },
+        {
+          "label": "The systems delivered",
           "value": 15,
+          "unit": "%"
+        },
+        {
+          "label": "string-inverter systems and",
+          "value": 2,
+          "unit": "%"
+        },
+        {
+          "label": "systems and 2%-",
+          "value": 3,
+          "unit": "%"
+        },
+        {
+          "label": "supporting up to",
+          "value": 50,
           "unit": "%"
         }
       ],
@@ -292,14 +307,9 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-13T08:03:21.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/13/solar-modules-with-built-in-buck-converters-could-raise-rooftop-pv-yield-by-up-to-20-under-partial-shading/"
-        }
-      ],
+      "publishedAt": "2026-08-13T10:34:12.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -333,7 +343,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T10:05:48.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -368,7 +378,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [
         {
           "name": "pv magazine",
@@ -412,7 +422,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:20:09.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -447,7 +457,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T08:15:17.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -477,7 +487,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:03:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -507,7 +517,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T08:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -549,7 +559,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T12:30:17.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
@@ -582,7 +592,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:12:30.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -617,7 +627,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T13:06:29.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -647,7 +657,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:25:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -682,7 +692,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T08:51:05.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -712,37 +722,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:50:58.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5e0c79ed0192",
-      "title": "非重大事件导致的波多黎各停电持续时间在2025年增加了19%",
-      "originalTitle": "Duration of power outages in Puerto Rico not caused by major events increased 19% in 2025",
-      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67926",
-      "summary": "In 2025, customers in Puerto Rico experienced an average of 36 hours of power interruptions that were not caused by major events such as hu…",
-      "whyItMatters": "关键数字 19%；地区 美国；一手来源 EIA Electricity Data",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "major events increased",
-          "value": 19,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "EIA Electricity Data",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-10T14:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -772,7 +752,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T12:34:42.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -807,7 +787,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T06:33:52.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -833,7 +813,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-12T00:38:21.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -863,7 +843,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:02:23.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -893,7 +873,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:01:39.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -917,7 +897,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T16:06:41.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -944,7 +924,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T16:50:37.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -979,7 +959,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:06:55.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1009,7 +989,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:57:39.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1039,7 +1019,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:54:43.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1069,7 +1049,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:00:16.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1095,7 +1075,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:38:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1125,7 +1105,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:40:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1155,7 +1135,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:04:47.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1195,7 +1175,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T06:28:07.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1219,7 +1199,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T05:00:57.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1246,7 +1226,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T20:26:14.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1281,7 +1261,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T09:50:02.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1311,7 +1291,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:50:39.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1337,7 +1317,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T15:20:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1363,7 +1343,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T15:19:26.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1389,33 +1369,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T14:00:28.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5c8093e5adfb",
-      "title": "运行时实例： Amazon Bedrock AgentCore上生产AI代理的持久计算",
-      "originalTitle": "Runtime instances: persistent compute for production AI agents on Amazon Bedrock AgentCore",
-      "url": "https://aws.amazon.com/blogs/aws/runtime-instances-persistent-compute-for-production-ai-agents-on-amazon-bedrock-agentcore/",
-      "summary": "Announcing runtime instances in Amazon Bedrock AgentCore—persistent, managed EC2 infrastructure for production AI agents with multi-agent c…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Amazon；一手来源 AWS News Blog",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Amazon"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "AWS News Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-06T22:58:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1441,7 +1395,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-08T10:24:54.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1465,7 +1419,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1491,7 +1445,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1521,7 +1475,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1545,18 +1499,42 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T18:16:29.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_195acacec8da",
-      "title": "问答：全球是否需要“碳捕集与封存”来实现净零排放？",
-      "originalTitle": "Q&A: Does the World Need “Carbon Capture & Storage” to Reach Net-Zero?",
-      "url": "https://cleantechnica.com/2026/08/12/qa-does-the-world-need-carbon-capture-storage-to-reach-net-zero/",
-      "summary": "When carbon dioxide (CO2) is released from a factory or power plant, the gas can be captured and permanently stored underground, preventing…",
-      "whyItMatters": "其他能源动态；地区 全球；媒体 CleanTechnica",
+      "id": "evt_bded078c4ea9",
+      "title": "与Georgia Power签订开放式人工智能合同需要透明度和问责制",
+      "originalTitle": "Transparency, Accountability Needed in Open AI Contract with Georgia Power",
+      "url": "https://cleantechnica.com/2026/08/13/transparency-accountability-needed-in-open-ai-contract-with-georgia-power/",
+      "summary": "ATLANTA, GA. — This week, NRDC (Natural Resources Defense Council), the Sierra Club and SACE (Southern Alliance for Clean Energy) submitted…",
+      "whyItMatters": "媒体 CleanTechnica",
       "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-14T00:19:45.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6e8330652598",
+      "title": "使用BLUETTI FridgePower备份冰箱并降低电力成本",
+      "originalTitle": "Back Up Your Refrigerator And Cut Electricity Costs with BLUETTI FridgePower",
+      "url": "https://cleantechnica.com/2026/08/13/back-up-your-refrigerator-and-cut-electricity-costs-with-bluetti-fridgepower/",
+      "summary": "I’ve had a BLUETTI FridgePower battery for a few months now, and it’s definitely a special product that could become a household normal in…",
+      "whyItMatters": "储能；地区 全球；媒体 CleanTechnica",
+      "topic": "energy-storage",
       "tags": [],
       "region": "全球",
       "entities": [],
@@ -1568,65 +1546,17 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-13T02:27:26.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "publishedAt": "2026-08-13T22:12:45.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_01b5ce9c52c2",
-      "title": "Factcheck ：热浪对核能、天然气、风能和太阳能的影响",
-      "originalTitle": "Factcheck: How Nuclear, Gas, Wind, & Solar Power Are Affected During Heatwaves",
-      "url": "https://cleantechnica.com/2026/08/12/factcheck-how-nuclear-gas-wind-solar-power-are-affected-during-heatwaves/",
-      "summary": "Heatwaves are becoming more likely and more intense due to climate change, impacting sources of power generation around the world as they w…",
-      "whyItMatters": "核电与 SMR；地区 欧盟；媒体 CleanTechnica",
-      "topic": "nuclear-smr",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T02:15:43.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4d578e88ce37",
-      "title": "问答：中国应对气候变化的新五年计划包含哪些内容？",
-      "originalTitle": "Q&A: What Is In China’s New Five-Year Plan For Climate Change?",
-      "url": "https://cleantechnica.com/2026/08/12/qa-what-is-in-chinas-new-five-year-plan-for-climate-change/",
-      "summary": "China has released a five-year plan dedicated to addressing climate change. The 15th five-year plan for a national response to climate chan…",
-      "whyItMatters": "地区 中国；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T01:04:46.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1b4905aae345",
-      "title": "天合光能推出额定功率高达8,000 Pa的抗台风光伏组件",
-      "originalTitle": "Trina Solar launches typhoon-resistant PV modules rated up to 8,000 Pa",
-      "url": "https://www.pv-magazine.com/2026/08/13/trina-solar-launches-typhoon-resistant-pv-modules-rated-up-to-8000-pa/",
-      "summary": "Trina Solar has introduced typhoon-resistant PV modules with mechanical load ratings of up to 8,000 Pa, targeting solar projects in regions…",
+      "id": "evt_afe1e6578a1d",
+      "title": "安哥拉离网",
+      "originalTitle": "Off-grid in Angola",
+      "url": "https://www.pv-magazine.com/2026/08/14/off-grid-in-angola/",
+      "summary": "Portugal’s MCA group has switched on two large-scale off-grid solar-plus-storage projects in Angola since December 2025. Carlo Amado, the c…",
       "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
@@ -1640,8 +1570,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-13T12:50:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "publishedAt": "2026-08-14T04:00:00.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1665,7 +1595,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T11:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1689,7 +1619,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T14:57:48.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1713,7 +1643,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:50:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1737,7 +1667,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:20:12.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1763,7 +1693,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:49:52.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1790,7 +1720,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:22:28.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1814,7 +1744,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-07T08:45:28.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1838,7 +1768,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T06:58:41.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1864,7 +1794,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T08:38:06.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1894,7 +1824,55 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:18:53.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0200b51845eb",
+      "title": "研究发现， CenterPoint Energy的弹性项目可以为德克萨斯州经济注入数十亿美元",
+      "originalTitle": "CenterPoint Energy's Resiliency Projects Could Inject Billions into Texas Economy, Study Finds",
+      "url": "https://www.tdworld.com/reliability-and-resiliency/news/55398030/centerpoint-energys-resiliency-projects-could-inject-billions-into-texas-economy-study-finds",
+      "summary": "According to IdeaSmiths' electric grid capacity modeling, CenterPoint is engineering these projects to modernize the regional grid and miti…",
+      "whyItMatters": "电网与并网；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-13T21:17:27.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2663acc9628d",
+      "title": "人工智能的碳数学：该技术有助于石油，也有助于太阳能，这就是问题所在",
+      "originalTitle": "AI's carbon math: The technology helps oil as much as it helps solar, and that is the problem",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/ai-s-carbon-math-the-technology-helps-oil-as-much-as-it-helps-solar-and-8fc5JqsAKs6wCSN",
+      "summary": "Does artificial intelligence help the fight against climate change, or does it quietly work against it? Most people would answer that AI he…",
+      "whyItMatters": "光伏与风电；媒体 Energy Central",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-14T00:08:46.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1918,7 +1896,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:18:14.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1942,7 +1920,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:17:53.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1966,7 +1944,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:11:30.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1990,31 +1968,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T19:59:54.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1651568c8fe4",
-      "title": "自由市场能源的未来价格（巴西） I",
-      "originalTitle": "Future prices for free-market energy (Brazil) I",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/future-prices-for-free-market-energy-brazil-i-bTnQy8NymIbcqJk",
-      "summary": "In the near future, even low-voltage consumers will be able to contract energy in the free market. The expectation is that this will reduce…",
-      "whyItMatters": "电力市场与政策；地区 巴西；媒体 Energy Central",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "巴西",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T10:00:16.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2038,7 +1992,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:00:46.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2062,7 +2016,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T17:00:43.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2086,7 +2040,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T13:00:52.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2112,7 +2066,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T21:00:55.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2136,7 +2090,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:15:49.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2160,7 +2114,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:11:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2184,7 +2138,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:08:19.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2208,7 +2162,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:06:43.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2232,7 +2186,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:05:36.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2256,7 +2210,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:03:53.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2280,7 +2234,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2304,20 +2258,20 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_d16a12c2de54",
-      "title": "海上风电之战刚刚开始（扰流板警告：特朗普失败）",
-      "originalTitle": "The Battle For Offshore Wind Has Just Begun (Spoiler Alert: Trump Loses)",
-      "url": "https://cleantechnica.com/2026/08/12/offshore-wind-war-trump-lease-buyouts-states-fight-back/",
-      "summary": "Regardless of Trump's war on wind power, lawmakers in Maine and California are already prepping for an offshore wind industry comeback, fea…",
-      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
-      "topic": "solar-wind",
+      "id": "evt_195acacec8da",
+      "title": "问答：全球是否需要“碳捕集与封存”来实现净零排放？",
+      "originalTitle": "Q&A: Does the World Need “Carbon Capture & Storage” to Reach Net-Zero?",
+      "url": "https://cleantechnica.com/2026/08/12/qa-does-the-world-need-carbon-capture-storage-to-reach-net-zero/",
+      "summary": "When carbon dioxide (CO2) is released from a factory or power plant, the gas can be captured and permanently stored underground, preventing…",
+      "whyItMatters": "其他能源动态；地区 全球；媒体 CleanTechnica",
+      "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "全球",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -2327,8 +2281,32 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-12T18:31:44.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "publishedAt": "2026-08-13T02:27:26.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_01b5ce9c52c2",
+      "title": "Factcheck ：热浪对核能、天然气、风能和太阳能的影响",
+      "originalTitle": "Factcheck: How Nuclear, Gas, Wind, & Solar Power Are Affected During Heatwaves",
+      "url": "https://cleantechnica.com/2026/08/12/factcheck-how-nuclear-gas-wind-solar-power-are-affected-during-heatwaves/",
+      "summary": "Heatwaves are becoming more likely and more intense due to climate change, impacting sources of power generation around the world as they w…",
+      "whyItMatters": "核电与 SMR；地区 欧盟；媒体 CleanTechnica",
+      "topic": "nuclear-smr",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-13T02:15:43.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2352,7 +2330,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:21:58.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2376,7 +2354,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:00:00.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2403,7 +2381,55 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:17:20.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_788386a7b4cf",
+      "title": "S&C Electric扩大与阿贡实验室的合作关系，以加强电网解决方案",
+      "originalTitle": "S&C Electric Expands Argonne Lab Partnership to Strengthen Power Grid Solutions",
+      "url": "https://www.tdworld.com/overhead-distribution/news/55397386/sc-electric-expands-argonne-lab-partnership-to-strengthen-power-grid-solutions",
+      "summary": "The two entities aim to accelerate solutions for the electric power industry amid the growing challenges from large-scale load customers an…",
+      "whyItMatters": "AIDC 项目与区域布局；媒体 T&D World",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-11T20:53:52.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_fa6ed3609eaf",
+      "title": "在密歇根州，电费率在有争议的参议院竞选中占据中心位置",
+      "originalTitle": "In Michigan, Electricity Rates Take Center Stage in Contested Senate Race",
+      "url": "https://www.tdworld.com/policy/article/55397274/in-michigan-electricity-rates-take-center-stage-in-contested-senate-race",
+      "summary": "Utility bills, data centers and politicians’ relationships with utilities have become top issues.",
+      "whyItMatters": "媒体 T&D World",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-11T17:18:00.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2427,7 +2453,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T08:21:17.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2451,7 +2477,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T09:27:56.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2475,7 +2501,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:34:11.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2499,7 +2525,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:45:47.000Z",
-      "discoveredAt": "2026-08-13T21:32:39.233Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_a1e9dc011b6a",
+      "title": "为什么积极的客户参与对电网可靠性至关重要",
+      "originalTitle": "Why Proactive Customer Engagement is Critical to Grid Reliability ",
+      "url": "https://www.tdworld.com/utility-business/blog/55396358/why-proactive-customer-engagement-is-critical-to-grid-reliability",
+      "summary": "As energy demand rises and the grid becomes more complex, utilities must treat transparent customer engagement as a core part of reliabilit…",
+      "whyItMatters": "电网与并网；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-10T21:26:21.000Z",
+      "discoveredAt": "2026-08-14T05:26:28.493Z",
       "relatedSources": [],
       "wechat": false
     }
