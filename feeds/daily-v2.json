@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-17",
-  "generatedAt": "2026-08-16T21:08:37.567Z",
+  "generatedAt": "2026-08-17T04:33:40.162Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
-    "sourcesSucceeded": 42,
-    "articlesFetched": 444,
-    "eventsPublished": 89
+    "sourcesSucceeded": 40,
+    "articlesFetched": 424,
+    "eventsPublished": 85
   },
   "items": [
     {
@@ -41,7 +41,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T13:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -71,7 +71,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T14:08:51.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [
         {
           "name": "Transformer Magazine",
@@ -106,7 +106,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T07:10:50.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -132,7 +132,107 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T14:45:02.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3e991f3ab2a1",
+      "title": "新闻：太平洋西北地区在未来五年内需要前所未有的11吉瓦以上的新一代发电量。",
+      "originalTitle": "NEWS: The Pacific Northwest needs an unprecedented 11+ GW of new generation over the next five years.",
+      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/news-the-pacific-northwest-needs-an-unprecedented-11-gw-of-new-Pq9IMmMOBxtSWlu",
+      "summary": "* The details: This figure comes from the Northwest Power and Conservation Council’s recent draft report [https://www.nwcouncil.org/news/20…",
+      "whyItMatters": "天然气与备用电源；关键数字 9GW、5GW、2.1GW；媒体 Energy Central",
+      "topic": "gas-backup",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "The target includes",
+          "value": 9,
+          "unit": "GW"
+        },
+        {
+          "label": "GW of renewables,",
+          "value": 5,
+          "unit": "GW"
+        },
+        {
+          "label": "of storage, and",
+          "value": 2.1,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-16T22:44:58.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6ec2514c4eb1",
+      "title": "新闻： ERCOT犯了一个建模错误，平均减少了3.7吉瓦的储量。",
+      "originalTitle": "NEWS: ERCOT made a modeling mistake—and bought an average of 3.7 GW less in reserves.",
+      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/news-ercot-made-a-modeling-mistake--and-bought-an-average-of-3-7-gw-less-6ZGb1ykl0CfA72g",
+      "summary": "* Whoops: For seven months, the grid operator has run on trimmer-than-intended reserves. Why? Nobody double-checked the planning model, The…",
+      "whyItMatters": "电网与并网；关键数字 3.7GW；媒体 Energy Central",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "an average of",
+          "value": 3.7,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-16T22:43:31.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2556a23c97ce",
+      "title": "新闻：数据中心的建设正在推动煤炭卷土重来。",
+      "originalTitle": "NEWS: The data center buildout is fueling a coal comeback.",
+      "url": "https://www.energycentral.com/fossil-thermal-ujoy2csr/post/news-the-data-center-buildout-is-fueling-a-coal-comeback-I4TyaDDgat8Qkep",
+      "summary": "* The latest: In the Midwest, Evergy is asking [https://www.latitudemedia.com/news/in-the-midwest-more-coal-power-for-data-centers/] the Ka…",
+      "whyItMatters": "其他能源动态；关键数字 3GW；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "retirement of nearly",
+          "value": 3,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-16T22:43:01.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -162,7 +262,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-12T14:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -192,7 +292,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-16T10:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -216,7 +316,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-11T15:00:06.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -248,33 +348,24 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T12:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_46280808ee24",
-      "title": "Vikram Solar在印度开设6GW太阳能光伏组件工厂",
-      "originalTitle": "Vikram Solar inaugurates 6 GW solar PV module factory in India",
-      "url": "https://www.pv-magazine.com/2026/08/14/vikram-solar-inaugurates-6-gw-solar-pv-module-plant-at-gangaikondan/",
-      "summary": "Vikram Solar has inaugurated a 6 GW solar PV module manufacturing plant at Gangaikondan in Tirunelveli district, Tamil Nadu. Following the…",
-      "whyItMatters": "光伏与风电；关键数字 6GW、15.5GW；地区 印度；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_da99051afdf7",
+      "title": "追求效率",
+      "originalTitle": "Pursuing efficiency",
+      "url": "https://www.pv-magazine.com/2026/08/17/pursuing-efficiency/",
+      "summary": "SolarEdge CEO Shuki Nir sits down with pv magazine to discuss recent changes to the company’s offer, developments in the commercial and ind…",
+      "whyItMatters": "AIDC 项目与区域布局；关联 SolarEdge；地区 全球；媒体 pv magazine",
+      "topic": "aidc-project",
       "tags": [],
-      "region": "印度",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Vikram Solar inaugurates",
-          "value": 6,
-          "unit": "GW"
-        },
-        {
-          "label": "has increased to",
-          "value": 15.5,
-          "unit": "GW"
-        }
+      "region": "全球",
+      "entities": [
+        "SolarEdge"
       ],
+      "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
@@ -282,14 +373,9 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-14T09:34:16.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [
-        {
-          "name": "Latitude Media",
-          "url": "https://www.latitudemedia.com/news/pacific-northwest-targets-14-gw-clean-energy-buildout-by-2032/"
-        }
-      ],
+      "publishedAt": "2026-08-17T04:00:00.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -323,7 +409,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T12:43:37.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -353,7 +439,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T11:07:26.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -383,7 +469,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T10:54:19.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -418,7 +504,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T10:35:50.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -448,7 +534,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T14:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -478,7 +564,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T13:21:38.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -508,7 +594,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T11:11:36.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -541,7 +627,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T11:00:27.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -573,8 +659,57 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T08:27:29.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_21d460ffe0de",
+      "title": "Edify Energy在澳大利亚昆士兰州完成1200MWh太阳能+储能项目融资",
+      "originalTitle": "Edify Energy reaches financial close on 1,200MWh solar-plus-storage projects in Queensland, Australia",
+      "url": "https://www.energy-storage.news/edify-energy-financial-close-1200mwh-solar-plus-storage-queensland-australia/",
+      "summary": "Australian developer Edify Energy has reached financial close on the Ganymirra and Majors Creek solar-plus-storage projects near Townsville…",
+      "whyItMatters": "储能；关键数字 1200MWh、360MW、300MW；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "financial close on",
+          "value": 1200,
+          "unit": "MWh"
+        },
+        {
+          "label": "North Queensland, featuring",
+          "value": 360,
+          "unit": "MW"
+        },
+        {
+          "label": "solar generation and",
+          "value": 300,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-14T08:15:02.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [
+        {
+          "name": "ESS News",
+          "url": "https://www.ess-news.com/2026/08/14/econergy-lands-e229m-for-romanian-solar-and-storage-hybrid-backed-by-cfd/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/origin-energy-650mwh-mortlake-bess-commercial-operations-australia/"
+        }
+      ],
       "wechat": false
     },
     {
@@ -597,37 +732,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T11:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_368239b9f2fc",
-      "title": "1.8吉瓦的可再生能源可以提供多少氢-氨、淡化水和经济价值？摩洛哥南部ORNX1项目案例",
-      "originalTitle": "How much hydrogen-ammonia, desalinated water, and economic value can 1.8 GW of renewables deliver? The case of the ORNX1 project in southern Morocco",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/how-much-hydrogen-ammonia-desalinated-water-and-economic-value-can-1-8-DQSUeBMFBUYtX25",
-      "summary": "Hydrogen demand is increasing worldwide [1] to decarbonize hard-to-electrify sectors or where carbon capture and storage may be less favora…",
-      "whyItMatters": "其他能源动态；关键数字 1.8GW；地区 全球；媒体 Energy Central",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "economic value can",
-          "value": 1.8,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-15T15:16:46.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -653,7 +758,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-12T00:38:21.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [
         {
           "name": "SemiEngineering",
@@ -682,7 +787,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -712,7 +817,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -742,7 +847,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T15:02:23.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -772,7 +877,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:01:39.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_bde64f374ee9",
+      "title": "ForeFront Power为弗雷斯诺市建成首个Erthos太阳能系统",
+      "originalTitle": "ForeFront Power Completes Its First Erthos Solar Energy System for the City of Fresno",
+      "url": "https://cleantechnica.com/2026/08/16/forefront-power-completes-its-first-erthos-solar-energy-system-for-the-city-of-fresno/",
+      "summary": "Erthos solar modules are mounted directly on the earth without structural steel, streamlining development and enabling the solar energy sys…",
+      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-17T03:23:03.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -799,7 +928,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-15T12:51:23.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -825,23 +954,21 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-15T11:48:55.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_e191d1291b27",
-      "title": "SMA Solar在2026年上半年推动销售和盈利",
-      "originalTitle": "SMA Solar boosts sales and earnings in H1 2026",
-      "url": "https://www.pv-tech.org/sma-solar-boosts-sales-and-earnings-in-h1-2026/",
-      "summary": "German solar inverter producer SMA Solar increased its sales and earnings in the first half of 2026 (H1), returning to profit compared with…",
-      "whyItMatters": "光伏与风电；关联 SMA Solar；地区 德国；媒体 PV-Tech",
-      "topic": "solar-wind",
+      "id": "evt_973bf4caac58",
+      "title": "澳大利亚新南威尔士州成为第一个使用新框架详细说明国家数据中心规则的州",
+      "originalTitle": "Australia’s NSW becomes first state to detail national data centre rules with new framework",
+      "url": "https://www.pv-tech.org/australias-nsw-becomes-first-state-to-detail-national-data-centre-rules-with-new-framework/",
+      "summary": "New South Wales (NSW) has released a Data Centre Policy Framework that ties streamlined planning approval for new data centres to commitmen…",
+      "whyItMatters": "电力市场与政策；地区 澳大利亚；媒体 PV-Tech",
+      "topic": "power-market-policy",
       "tags": [],
-      "region": "德国",
-      "entities": [
-        "SMA Solar"
-      ],
+      "region": "澳大利亚",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
@@ -850,57 +977,9 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-14T11:20:11.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "publishedAt": "2026-08-17T02:19:28.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d3d54bfb4e13",
-      "title": "Arevon Energy的1,200MWh California BESS开始运营",
-      "originalTitle": "Arevon Energy’s 1,200MWh California BESS begins operations",
-      "url": "https://www.energy-storage.news/arevon-energys-1200mwh-california-bess-begins-operations/",
-      "summary": "Renewable energy developer-operator Arevon Energy has put its 300MW/1,200MWh Nighthawk Energy Storage Project in Poway, California, US into…",
-      "whyItMatters": "储能；关键数字 1200MWh、300MW；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Arevon Energy’s",
-          "value": 1200,
-          "unit": "MWh"
-        },
-        {
-          "label": "has put its",
-          "value": 300,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T08:51:05.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [
-        {
-          "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/08/14/econergy-lands-e229m-for-romanian-solar-and-storage-hybrid-backed-by-cfd/"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/origin-energy-650mwh-mortlake-bess-commercial-operations-australia/"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/edify-energy-financial-close-1200mwh-solar-plus-storage-queensland-australia/"
-        }
-      ],
       "wechat": false
     },
     {
@@ -925,7 +1004,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T10:50:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -960,7 +1039,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -999,7 +1078,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T12:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
@@ -1039,7 +1118,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T10:50:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1069,7 +1148,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T10:04:47.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1109,7 +1188,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T06:28:07.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1133,7 +1212,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T05:00:57.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1163,7 +1242,79 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:18:53.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_7de8df396a6d",
+      "title": "新闻：州政府官员对公用事业（和PJM ）如何降低电价有想法。 💡",
+      "originalTitle": "NEWS: State officials have ideas for how utilities (and PJM) can bring down power prices. 💡",
+      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/news-state-officials-have-ideas-for-how-utilities-and-pjm-can-bring-QrdTADPRWCR9qGr",
+      "summary": "* In Michigan: The state PSC has suggested [https://www.michigan.gov/mpsc/-/media/Project/Websites/mpsc/activity/07162026_MPSC_Affordabilit…",
+      "whyItMatters": "电力市场与政策；媒体 Energy Central",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-16T22:44:36.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_81054a94923b",
+      "title": "澳大利亚可再生能源署支持新南威尔士大学对形成电网的电池存储和系统强度的研究",
+      "originalTitle": "Australian Renewable Energy Agency backs UNSW research into grid-forming battery storage and system strength",
+      "url": "https://www.energy-storage.news/australian-renewable-energy-agency-backs-unsw-research-into-grid-forming-battery-storage-and-system-strength/",
+      "summary": "UNSW receives AU$6.52 million to study how solar, wind and battery storage interact with grid protection systems as Australia transitions t…",
+      "whyItMatters": "光伏与风电；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-17T01:24:30.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_dd5503af2f76",
+      "title": "澳大利亚“廉价家用电池计划”正式通过50万次安装",
+      "originalTitle": "Australia’s Cheaper Home Batteries Program officially passes 500,000 installations",
+      "url": "https://www.energy-storage.news/australias-cheaper-home-batteries-program-officially-passes-500000-installations/",
+      "summary": "More than 507,000 households, small businesses and community organisations have installed a home battery storage system under Australia's C…",
+      "whyItMatters": "储能；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-17T01:19:21.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1198,7 +1349,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T13:06:29.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1228,7 +1379,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:32:22.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1258,7 +1409,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:25:36.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1282,7 +1433,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-16T14:31:33.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1308,81 +1459,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f90b6892dd91",
-      "title": "在中西部，更多的煤炭发电用于数据中心",
-      "originalTitle": "In the Midwest, more coal power for data centers",
-      "url": "https://www.latitudemedia.com/news/in-the-midwest-more-coal-power-for-data-centers/",
-      "summary": "As utility tariff approvals make data center pipelines less speculative, Evergy doubles down on existing plants. The post In the Midwest, m…",
-      "whyItMatters": "电力市场与政策；媒体 Latitude Media",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-14T12:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8bb6b0376308",
-      "title": "特斯拉新推出的家庭能源产品具有经济实惠的特点",
-      "originalTitle": "Tesla’s new home energy offering comes with an affordability pitch",
-      "url": "https://www.latitudemedia.com/news/teslas-new-home-energy-offering-comes-with-an-affordability-pitch/",
-      "summary": "The company’s new approach to residential storage in Texas brings its strategy closer to that of newcomer Base Power. The post Tesla’s new…",
-      "whyItMatters": "关联 Tesla；媒体 Latitude Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Tesla"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T15:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_2bba8b146851",
-      "title": "与州长凯蒂·霍布斯（ Katie Hobbs ）分享的数千条评论激烈反对沙漠西南天然气管道",
-      "originalTitle": "Thousands of Comments Shared with Governor Katie Hobbs Passionately Oppose Desert Southwest Gas Pipeline",
-      "url": "https://cleantechnica.com/2026/08/14/thousands-of-comments-shared-with-governor-katie-hobbs-passionately-oppose-desert-southwest-gas-pipeline/",
-      "summary": "On Friday, the Sierra Club Grand Canyon Chapter shared with Gov. Katie Hobbs’s office about 2,000 comments that were submitted to the Feder…",
-      "whyItMatters": "其他能源动态；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-15T02:05:09.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1406,7 +1483,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-15T04:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1430,7 +1507,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T11:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1456,7 +1533,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T15:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1480,8 +1557,13 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T06:50:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/relectrify-installs-first-ac1-inverterless-battery-storage-system-in-south-australia/"
+        }
+      ],
       "wechat": false
     },
     {
@@ -1504,7 +1586,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T08:06:40.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1528,7 +1610,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T07:45:36.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1554,7 +1636,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:49:52.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1581,7 +1663,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T08:22:28.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1605,7 +1687,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T07:51:07.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1629,7 +1711,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T07:12:58.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1653,7 +1735,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T15:56:18.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1680,7 +1762,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T20:26:14.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1707,103 +1789,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T14:17:20.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_0200b51845eb",
-      "title": "研究发现， CenterPoint Energy的弹性项目可以为德克萨斯州经济注入数十亿美元",
-      "originalTitle": "CenterPoint Energy's Resiliency Projects Could Inject Billions into Texas Economy, Study Finds",
-      "url": "https://www.tdworld.com/reliability-and-resiliency/news/55398030/centerpoint-energys-resiliency-projects-could-inject-billions-into-texas-economy-study-finds",
-      "summary": "According to IdeaSmiths' electric grid capacity modeling, CenterPoint is engineering these projects to modernize the regional grid and miti…",
-      "whyItMatters": "电网与并网；媒体 T&D World",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "T&D World",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T21:17:27.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_95ffa20d8c66",
-      "title": "在您的大负荷客户合同中需要考虑的首要保障措施",
-      "originalTitle": "Top Safeguards to Consider for Your Large-Load Customer Contract",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/top-safeguards-to-consider-for-your-large-load-customer-contract-cM0OhPW4y02QJxO",
-      "summary": "The call comes in, and it sounds like good news. A developer wants to connect a large new load to your system—maybe a hyperscale data cente…",
-      "whyItMatters": "其他能源动态；媒体 Energy Central",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-15T01:30:58.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_dc9b33ff285e",
-      "title": "“数据准确性是最重要的事情之一” ： enSights首席执行官谈论PJM中的BESS经济学",
-      "originalTitle": "‘Data accuracy is one of the most important things’: enSights CEO on BESS economics in PJM",
-      "url": "https://www.energy-storage.news/data-accuracy-is-one-of-the-most-important-things-ensights-ceo-on-bess-economics-in-pjm/",
-      "summary": "Energy-Storage.news Premium speaks with Alon Maskovich, CEO and co-founder of enSights about BESS economics and the company’s new battery e…",
-      "whyItMatters": "储能；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-14T13:13:58.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_445a80e22001",
-      "title": "优化美国BESS市场： Caerus Commodities的见解",
-      "originalTitle": "Optimising US BESS markets: Insights from Caerus Commodities",
-      "url": "https://www.energy-storage.news/optimising-us-bess-markets-insights-from-caerus-commodities/",
-      "summary": "Casey Keller, founding partner at Caerus Commodities, shares critical lessons from optimising battery storage, ahead of the 2026 US Battery…",
-      "whyItMatters": "储能；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-14T08:39:46.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1827,7 +1813,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T16:52:07.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1851,7 +1837,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-14T13:45:11.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1875,7 +1861,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1899,7 +1885,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1923,7 +1909,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T07:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1947,103 +1933,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T18:16:29.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d662f3ff1629",
-      "title": "数据中心不必干涸城镇",
-      "originalTitle": "Data centers don’t have to drink the town dry",
-      "url": "https://www.latitudemedia.com/news/data-centers-dont-have-to-drink-the-town-dry/",
-      "summary": "Liquid cooling, reclaimed water, and novel power systems that generate water are turning a liability into a solvable problem. The post Data…",
-      "whyItMatters": "冷却、UPS 与 PUE；媒体 Latitude Media",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-13T12:30:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_709839e33672",
-      "title": "有人刚刚想出了如何为核能项目提供资金吗？",
-      "originalTitle": "Did someone just figure out how to project finance nuclear?",
-      "url": "https://www.latitudemedia.com/news/green-blueprint-did-someone-just-figure-out-how-to-project-finance-nuclear/",
-      "summary": "Blue Energy CEO Jake Jurewicz on why modular fabrication and a gas-to-nuclear pivot could unlock commercial project finance for new nuclear…",
-      "whyItMatters": "核电与 SMR；媒体 Latitude Media",
-      "topic": "nuclear-smr",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-12T13:32:37.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_410c6bd397fe",
-      "title": "先进的地热产业能否跟随Fervo的脚步？",
-      "originalTitle": "Can the advanced geothermal industry follow in Fervo’s wake?",
-      "url": "https://www.latitudemedia.com/news/can-the-advanced-geothermal-industry-follow-in-fervos-wake/",
-      "summary": "The sector's breakout star may be pulling other startups up with it, but the path to the next IPO isn't totally clear. The post Can the adv…",
-      "whyItMatters": "媒体 Latitude Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T20:29:42.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8f9196b35a1b",
-      "title": "将需求响应参与设为默认值",
-      "originalTitle": "Make demand response participation the default",
-      "url": "https://www.latitudemedia.com/news/make-demand-response-participation-the-default/",
-      "summary": "At a time of sharply rising electricity demand, sign-up friction is leaving millions of grid-interactive devices stranded. The post Make de…",
-      "whyItMatters": "电网与并网；媒体 Latitude Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-11T13:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2067,7 +1957,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T11:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2091,7 +1981,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-12T13:21:58.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2115,7 +2005,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T11:00:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2139,7 +2029,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:50:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2163,7 +2053,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T09:20:12.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2187,7 +2077,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T16:34:11.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2211,7 +2101,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T15:45:47.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0200b51845eb",
+      "title": "研究发现， CenterPoint Energy的弹性项目可以为德克萨斯州经济注入数十亿美元",
+      "originalTitle": "CenterPoint Energy's Resiliency Projects Could Inject Billions into Texas Economy, Study Finds",
+      "url": "https://www.tdworld.com/reliability-and-resiliency/news/55398030/centerpoint-energys-resiliency-projects-could-inject-billions-into-texas-economy-study-finds",
+      "summary": "According to IdeaSmiths' electric grid capacity modeling, CenterPoint is engineering these projects to modernize the regional grid and miti…",
+      "whyItMatters": "电网与并网；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-13T21:17:27.000Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2235,7 +2149,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T20:53:52.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2259,7 +2173,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-11T17:18:00.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2283,7 +2197,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-10T21:26:21.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2307,7 +2221,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T21:00:46.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2331,7 +2245,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:15:49.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2355,7 +2269,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:11:36.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2379,7 +2293,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:08:19.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2403,7 +2317,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:06:43.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2427,7 +2341,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:05:36.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2451,7 +2365,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-13T07:03:53.000Z",
-      "discoveredAt": "2026-08-16T21:08:37.567Z",
+      "discoveredAt": "2026-08-17T04:33:40.162Z",
       "relatedSources": [],
       "wechat": false
     }
