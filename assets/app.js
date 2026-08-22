@@ -19,31 +19,39 @@ const state = {
   category: 'all',        // 精选 + 全部动态共用的分类过滤（?category=）
 };
 
-/* 精选页分类（参考 aihot.virxact.com 的 ?category= 过滤） */
-const FEATURED_CATEGORIES = [
-  { id: 'all', label: '全部' },
-  { id: 'pcs', label: 'PCS' },
-  { id: 'sst', label: 'SST' },
-  { id: 'ems', label: 'EMS' },
-  { id: 'storage', label: '储能' },
-  { id: 'aidc', label: 'AIDC' },
+/* 分类与热点配置的正常来源是 data/enums.json（categories / hot 段），以下仅作加载失败时的兜底 */
+const FALLBACK_CATEGORIES = [
+  { id: 'all', label: '全部', topics: [], keywords: [] },
+  { id: 'pcs', label: 'PCS', topics: ['pcs'], keywords: [] },
+  { id: 'sst', label: 'SST', topics: ['sst'], keywords: ['变压器', 'transformer', '固态变压器', 'solid[- ]state transformer', '中压', '电力电子'] },
+  { id: 'ems', label: 'EMS', topics: ['ems'], keywords: ['\\bEMS\\b', '能量管理系统', '储能EMS', '能量管理', '\\bVPP\\b', '虚拟电厂', 'DERMS'] },
+  { id: 'storage', label: '储能', topics: ['energy-storage'], keywords: [] },
+  { id: 'aidc', label: 'AIDC', topics: ['data-center-power', 'aidc-project', 'cooling-pue'], keywords: ['800\\s*VDC', 'power architecture', '电源架构', '直流供电'] },
 ];
-
-// 分类 → 主题集合
-const CATEGORY_TOPICS = {
-  pcs: ['pcs'],
-  sst: ['sst'],
-  ems: ['ems'],
-  storage: ['energy-storage'],
-  aidc: ['data-center-power', 'aidc-project', 'cooling-pue'],
+const FALLBACK_HOT = {
+  topics: ['energy-storage', 'aidc-project'],
+  labels: { 'energy-storage': '储能', 'aidc-project': 'AIDC' },
+  secondaryTopics: ['gas-backup', 'nuclear-smr'],
+  secondaryLabels: { 'gas-backup': '发电', 'nuclear-smr': '发电' },
+  keywordLabels: [
+    { pattern: '燃气轮机|燃气发电|燃气机组|燃气联合循环|gas\\s*turbine|turbine', label: '发电' },
+    { pattern: '\\bPCS\\b|储能变流器|变流器', label: '发电' },
+    { pattern: '\\bSST\\b|固态变压器|solid\\s*state\\s*transformer', label: '发电' },
+  ],
+  regionBoost: ['美国', '加拿大', '北美'],
 };
 
-// 跨领域分类补充关键词兜底（EMS 常落在储能/电网主题下，SST 变压器内容偶尔仍在 grid 主题）
-const CATEGORY_KEYWORDS = {
-  ems: [/\bEMS\b/, /能量管理系统/, /储能EMS/, /能量管理/, /\bVPP\b/, /虚拟电厂/, /DERMS/],
-  sst: [/变压器/, /transformer/i, /固态变压器/, /solid[- ]state transformer/i, /中压/, /电力电子/],
-  aidc: [/800\s*VDC/i, /power architecture/i, /电源架构/, /直流供电/],
-};
+const RE_CACHE = new Map();
+function compileRe(pattern) {
+  let re = RE_CACHE.get(pattern);
+  if (!re) { re = new RegExp(pattern, 'i'); RE_CACHE.set(pattern, re); }
+  return re;
+}
+function getCategories() {
+  const cats = state.enums && state.enums.categories;
+  return Array.isArray(cats) && cats.length ? cats : FALLBACK_CATEGORIES;
+}
+function getHotCfg() { return (state.enums && state.enums.hot) || FALLBACK_HOT; }
 
 const VALID_TABS = ['featured', 'all', 'sources'];
 
@@ -65,26 +73,7 @@ const FALLBACK_IMPACTS = { positive: '利好', negative: '利空', neutral: '中
 const FALLBACK_SOURCE_TYPES = { primary: '一手来源', media: '媒体', research: '研究机构', community: '社区/KOL' };
 const WEEKDAYS = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
 
-/* 优先级：储能 / AIDC 为最高（其中北美最优先），发电为次级 */
-const PRIORITY_TOPICS = {
-  'energy-storage': '储能',
-  'aidc-project': 'AIDC'
-};
-const PRIORITY_SECONDARY_TOPICS = {
-  'gas-backup': '发电',
-  'nuclear-smr': '发电'
-};
-const PRIORITY_KEYWORDS = [
-  { re: /燃气轮机|燃气发电|燃气机组|燃气联合循环|gas\s*turbine|turbine/i, label: '发电' },
-  { re: /\bPCS\b|储能变流器|变流器/i, label: '发电' },
-  { re: /\bSST\b|固态变压器|solid\s*state\s*transformer/i, label: '发电' }
-];
-
-/* 北美判定：region 字段为 美国 / 加拿大（含北美/usa/canada） */
-function isNorthAmerica(ev) {
-  const r = (ev && ev.region) || '';
-  return /美国|加拿大|北美|USA|Canada|\bUS\b/i.test(r);
-}
+/* 优先级配置已迁至 data/enums.json 的 hot 段（构建端与前端同源），见 getHotCfg() */
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
@@ -273,49 +262,29 @@ function renderCategory(cat) {
   });
 }
 
-/* ===== 优先级判定（储能/AIDC 最高，其中北美最优先；发电次级） ===== */
+/* ===== 优先级判定（配置来自 enums.json hot 段：储能/AIDC 最高、北美置顶；发电次级） ===== */
 function getPriority(ev) {
+  const cfg = getHotCfg();
   const topic = ev && ev.topic;
   let label = '';
-  let tier = 2;                 // 0=储能/AIDC，1=发电，2=其他
-  if (topic && PRIORITY_TOPICS[topic]) {
-    label = PRIORITY_TOPICS[topic];
+  let tier = 2;                 // 0=热点主题，1=次级主题/关键词命中，2=其他
+  if (topic && (cfg.topics || []).includes(topic)) {
+    label = (cfg.labels || {})[topic] || topic;
     tier = 0;
-  } else if (topic && PRIORITY_SECONDARY_TOPICS[topic]) {
-    label = PRIORITY_SECONDARY_TOPICS[topic];
+  } else if (topic && (cfg.secondaryTopics || []).includes(topic)) {
+    label = (cfg.secondaryLabels || {})[topic] || '';
     tier = 1;
   } else {
     const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
       .filter(Boolean).join(' ');
-    for (const k of PRIORITY_KEYWORDS) {
-      if (k.re.test(hay)) { label = k.label; tier = 1; break; }
+    for (const k of (cfg.keywordLabels || [])) {
+      if (compileRe(k.pattern).test(hay)) { label = k.label; tier = 1; break; }
     }
   }
-  // 储能/AIDC 且北美 → rank 0（最优先）；储能/AIDC 非北美 → rank 1；发电 → 2；其他 → 3
-  const na = tier === 0 && isNorthAmerica(ev);
+  // 热点主题且命中 regionBoost（北美）→ rank 0（最优先）；热点主题非北美 → 1；发电 → 2；其他 → 3
+  const na = tier === 0 && (cfg.regionBoost || []).some(r => String(ev.region || '').includes(r));
   const rank = na ? 0 : (tier === 0 ? 1 : (tier === 1 ? 2 : 3));
   return { rank, label: na ? `${label}·北美` : label, tier };
-}
-
-/* 核电判定：topic 或标题/摘要含核电关键词（不进今日热点） */
-function isNuclear(ev) {
-  if (!ev) return false;
-  if (ev.topic === 'nuclear-smr') return true;
-  const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
-    .filter(Boolean).join(' ');
-  return /核电|核电站|核反应堆|核电机组|小型模块化反应堆|\bSMR\b|nuclear/i.test(hay);
-}
-
-/* 今日热点候选：仅储能 / AIDC（北美 rank 0 优先，再按推荐分） */
-function priorityEvents(events) {
-  return (events || [])
-    .map(ev => ({ ev, p: getPriority(ev) }))
-    .filter(x => x.p.tier === 0 && !isNuclear(x.ev))
-    .sort((a, b) => {
-      if (a.p.rank !== b.p.rank) return a.p.rank - b.p.rank;
-      return (b.ev.importance || 0) - (a.ev.importance || 0);
-    })
-    .map(x => x.ev);
 }
 
 function formatScore(imp) {
@@ -425,9 +394,10 @@ function renderTimelineItem(ev, isFeatured) {
     </div>`;
 }
 
-/* ===== 今日热点榜 ===== */
-function renderHotList(events) {
-  const top = priorityEvents(events).slice(0, 5);
+/* ===== 今日热点榜（构建端产出 featured.hotEventIds，前端只渲染） ===== */
+function renderHotList() {
+  const ids = (state.featured && state.featured.hotEventIds) || [];
+  const top = ids.map(id => state.eventMap.get(id)).filter(Boolean);
   if (!top.length) return '';
   return top.map((ev, i) => `
       <li class="hot-card-item">
@@ -437,16 +407,17 @@ function renderHotList(events) {
       </li>`).join('');
 }
 
-/* ===== 分类过滤（PCS / SST / EMS / 储能 / AIDC，精选 + 全部动态共用） ===== */
+/* ===== 分类过滤（PCS / SST / EMS / 储能 / AIDC，精选 + 全部动态共用；配置见 enums.json categories） ===== */
 function eventInCategory(ev, catId) {
   if (!catId || catId === 'all') return true;
-  const topics = CATEGORY_TOPICS[catId] || [];
-  if (ev.topic && topics.includes(ev.topic)) return true;
-  // 其余分类以主题为准；EMS 等配置了关键词的分类再补关键词兜底
-  const kws = CATEGORY_KEYWORDS[catId] || [];
+  const cat = getCategories().find(c => c.id === catId);
+  if (!cat) return true;
+  if (ev.topic && (cat.topics || []).includes(ev.topic)) return true;
+  // 其余分类以主题为准；EMS/SST/AIDC 等配置了关键词的分类再补关键词兜底
+  const kws = cat.keywords || [];
   if (kws.length) {
     const hay = [ev.title, ev.originalTitle, ev.summary].filter(Boolean).join(' ');
-    return kws.some(re => re.test(hay));
+    return kws.some(p => compileRe(p).test(hay));
   }
   return false;
 }
@@ -459,7 +430,7 @@ function categoryCount(events, catId) {
 function renderCats(containerId, events) {
   const bar = $(containerId);
   if (!bar) return;
-  bar.innerHTML = FEATURED_CATEGORIES.map(c => {
+  bar.innerHTML = getCategories().map(c => {
     const active = state.category === c.id ? ' active' : '';
     return `<button class="feed-cat${active}" data-cat="${c.id}" role="tab"
         aria-selected="${active ? 'true' : 'false'}">
@@ -487,9 +458,9 @@ function renderFeatured() {
 
   const cat = state.category || 'all';
 
-  // 今日热点榜：储能 / AIDC（北美 rank 0 优先）中推荐分最高的前 5；仅在「全部」分类下显示
+  // 今日热点榜：构建端产出的 hotEventIds（储能/AIDC 北美优先）；仅在「全部」分类下显示
   const hotBlock = $('#hotListBlock');
-  const hotHtml = (cat === 'all') ? renderHotList(state.allEvents) : '';
+  const hotHtml = (cat === 'all') ? renderHotList() : '';
   if (hotHtml) {
     hotBlock.hidden = false;
     $('#hotList').innerHTML = hotHtml;
@@ -516,7 +487,7 @@ function renderFeatured() {
     return;
   }
 
-  const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
+  const catLabel = (getCategories().find(c => c.id === cat) || {}).label || '';
   const featuredEvents = (cat === 'all') ? featuredAll : featuredAll.filter(ev => eventInCategory(ev, cat));
 
   if (featuredEvents.length) {
@@ -548,7 +519,7 @@ function renderAll() {
   renderCats('#allCats', state.allEvents);
 
   const cat = state.category || 'all';
-  const catLabel = (FEATURED_CATEGORIES.find(c => c.id === cat) || {}).label || '';
+  const catLabel = (getCategories().find(c => c.id === cat) || {}).label || '';
   const filtered = (cat === 'all') ? state.allEvents : state.allEvents.filter(ev => eventInCategory(ev, cat));
 
   const src = state.dataSource;
@@ -641,11 +612,13 @@ async function init() {
   window.addEventListener('hashchange', onHashChange);
   activateTab(normalizeTab(location.hash));
 
-  // 分类参数（参考 aihot.virxact.com 的 ?category=，精选 + 全部动态共用）
-  const catParam = new URLSearchParams(location.search).get('category') || 'all';
-  state.category = FEATURED_CATEGORIES.some(c => c.id === catParam) ? catParam : 'all';
-
   await loadData();
+
+  // 分类参数（参考 aihot.virxact.com 的 ?category=，精选 + 全部动态共用）；
+  // 合法性依赖 enums.json 的 categories，故在数据加载后校验
+  const catParam = new URLSearchParams(location.search).get('category') || 'all';
+  state.category = getCategories().some(c => c.id === catParam) ? catParam : 'all';
+
   renderSources();
   renderFeatured();
   renderAll();

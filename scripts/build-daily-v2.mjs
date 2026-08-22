@@ -17,7 +17,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
-import { loadFilters, classifyItem } from './lib/filter.mjs';
+import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
 import { extractItem } from './lib/extract.mjs';
 import { dedupItems } from './lib/dedup.mjs';
@@ -47,9 +47,13 @@ function eventId(it) {
  * 保证公众号内容可靠地进入精选，而非只靠重要性竞争。
  * 时效窗口：只接受 now 之前 maxAgeHours（默认 72h）内发布的事件，
  * 无日期或更早的旧文章不进精选（PRD：精选是"今日精选"，不是全局历史榜）。
+ *
+ * 今日观察（observations）在全部选择完成后，从最终入选集合按重要性取前 3 条，
+ * 而非沿用选择过程中的遇到顺序——否则微信/优先主题保底项会劫持头条位，
+ * 当天真正最高分的大事件反而进不了「今日观察」。
  */
 export function selectFeatured(events, enums, opts = {}) {
-  const { threshold = 2.5, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 20, wechatQuota = 1,
+  const { threshold = 3, maxPerTopic = 2, maxPerSource = 2, maxFeatured = 12, wechatQuota = 1,
           priorityQuota = 1, maxAgeHours = 72, priorityMaxAgeHours = 168, now = new Date().toISOString() } = opts;
   const nowMs = new Date(now).getTime();
   const isFresh = (ev) => {
@@ -68,29 +72,26 @@ export function selectFeatured(events, enums, opts = {}) {
     const ageH = (nowMs - t) / 3600e3;
     return ageH >= 0 && ageH <= priorityMaxAgeHours;
   };
-  const observations = [];
-  const featuredEventIds = [];
+  const selected = [];
   const topicCount = {};
   const srcCount = {};
   const reserved = new Set();
+  const admit = (ev) => {
+    reserved.add(ev.id);
+    selected.push(ev);
+    const t = ev.topic || 'other-energy';
+    topicCount[t] = (topicCount[t] || 0) + 1;
+    srcCount[ev.source.name] = (srcCount[ev.source.name] || 0) + 1;
+  };
 
   // 预选：微信事件保底。重要性降序里权重最高的前 wechatQuota 条先占位，
   // 跨过主题/来源配额（它们不参与后面的主选），保证公众号内容可靠进精选。
   for (const ev of events) {
     if (ev.importance < threshold) break;
-    if (reserved.size >= wechatQuota) break;
+    if (selected.length >= wechatQuota) break;
     if (!(ev.wechat === true) || reserved.has(ev.id)) continue;
     if (!isFresh(ev)) continue;
-    reserved.add(ev.id);
-    featuredEventIds.push(ev.id);
-    const t = ev.topic || 'other-energy';
-    const s = ev.source.name;
-    topicCount[t] = (topicCount[t] || 0) + 1;
-    srcCount[s] = (srcCount[s] || 0) + 1;
-    if (observations.length < 3) {
-      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
-      observations.push(`【${topicLabel}】${ev.title}`.slice(0, 60));
-    }
+    admit(ev);
   }
 
   // 预选：优先主题保底（enums.priorityTopics，如 SST/PCS）。每个优先主题各占
@@ -99,44 +100,70 @@ export function selectFeatured(events, enums, opts = {}) {
   const priorityTopics = enums.priorityTopics || [];
   const priorityUsed = {};
   for (const ev of events) {
-    if (featuredEventIds.length >= maxFeatured) break;
+    if (selected.length >= maxFeatured) break;
     if (!priorityTopics.includes(ev.topic)) continue;
     if ((priorityUsed[ev.topic] || 0) >= priorityQuota) continue;
     if (ev.importance < threshold) continue;
     if (reserved.has(ev.id)) continue;
     if (!isFreshPriority(ev)) continue;   // 优先主题用 7 天窗（见上）
-    reserved.add(ev.id);
-    featuredEventIds.push(ev.id);
+    admit(ev);
     priorityUsed[ev.topic] = (priorityUsed[ev.topic] || 0) + 1;
-    const t = ev.topic || 'other-energy';
-    const s = ev.source.name;
-    topicCount[t] = (topicCount[t] || 0) + 1;
-    srcCount[s] = (srcCount[s] || 0) + 1;
-    if (observations.length < 3) {
-      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
-      observations.push(`【${topicLabel}】${ev.title}`.slice(0, 60));
-    }
   }
 
   // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信/优先主题事件跳过）
   for (const ev of events) {
     if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
-    if (featuredEventIds.length >= maxFeatured) break;
+    if (selected.length >= maxFeatured) break;
     if (reserved.has(ev.id)) continue;
     if (!isFresh(ev)) continue; // 超过时效窗口的旧事件不进精选
     const t = ev.topic || 'other-energy';
-    const s = ev.source.name;
     if ((topicCount[t] || 0) >= maxPerTopic) continue;
-    if ((srcCount[s] || 0) >= maxPerSource) continue;
-    featuredEventIds.push(ev.id);
-    topicCount[t] = (topicCount[t] || 0) + 1;
-    srcCount[s] = (srcCount[s] || 0) + 1;
-    if (observations.length < 3) {
-      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
-      observations.push(`【${topicLabel}】${ev.title}`.slice(0, 60));
-    }
+    if ((srcCount[ev.source.name] || 0) >= maxPerSource) continue;
+    admit(ev);
   }
+
+  const featuredEventIds = selected.map(ev => ev.id);
+  // 今日观察：从最终入选集合按重要性降序取前 3（稳定排序，同分保持入选顺序）
+  const observations = [...selected]
+    .sort((a, b) => (b.importance || 0) - (a.importance || 0))
+    .slice(0, 3)
+    .map(ev => {
+      const t = ev.topic || 'other-energy';
+      const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
+      return `【${topicLabel}】${ev.title}`.slice(0, 60);
+    });
   return { featuredEventIds, observations };
+}
+
+/**
+ * 今日热点榜（构建端产出 featured.hotEventIds，前端只渲染）。
+ * 配置取 data/enums.json 的 hot 段：topics=最高优先档（储能/AIDC），
+ * regionBoost 内的地区（北美）置顶，exclude 的主题/关键词（核电）排除。
+ * 排序：北美优先 → importance 降序；同分为稳定输入序（确定性）。
+ * 人工可通过 editorial-overrides 的 hotEventIds 整体替换。
+ * @returns {string[]} 事件 id 列表（≤ hot.maxItems）
+ */
+export function selectHot(events, enums, _opts = {}) {
+  const cfg = enums.hot || {};
+  const topics = new Set(cfg.topics || []);
+  if (!topics.size) return [];
+  const exclTopics = new Set(cfg.exclude?.topics || []);
+  const exclKws = cfg.exclude?.keywords || [];
+  const regionRe = (cfg.regionBoost || []).length
+    ? new RegExp(cfg.regionBoost.join('|'), 'i') : null;
+  const maxItems = cfg.maxItems ?? 5;
+
+  const candidates = [];
+  for (const ev of events) {
+    if (!topics.has(ev.topic) || exclTopics.has(ev.topic)) continue;
+    const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
+      .filter(Boolean).join(' ');
+    if (exclKws.some(k => keywordHit(hay, k))) continue;
+    candidates.push({ ev, na: regionRe ? regionRe.test(ev.region || '') : false });
+  }
+  candidates.sort((a, b) =>
+    (a.na === b.na ? 0 : a.na ? -1 : 1) || ((b.ev.importance || 0) - (a.ev.importance || 0)));
+  return candidates.slice(0, maxItems).map(x => x.ev.id);
 }
 
 /**
@@ -159,7 +186,7 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 
 export async function processItems(rawItems, ctx) {
   const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate } = ctx;
-  const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0 };
+  const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
 
   // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
   // 精选时效规则和前端降级处理；非法、未来或超窗的明确日期直接剔除。
@@ -254,8 +281,9 @@ export async function processItems(rawItems, ctx) {
   const capped = capPerSource(events, { max: 6 });
   stats.events = capped.length;
 
-  // 7. 今日观察 + 精选候选（时效窗口相对本次构建时间 now）
+  // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now）
   const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString() });
+  const hotEventIds = selectHot(capped, enums);
 
   const daily = {
     schemaVersion: 2,
@@ -276,9 +304,11 @@ export async function processItems(rawItems, ctx) {
     date,
     generatedAt: now.toISOString(),
     observations,
-    featuredEventIds
+    featuredEventIds,
+    hotEventIds
   };
   stats.featured = featuredEventIds.length;
+  stats.hot = hotEventIds.length;
 
   // 8. 人工覆盖（B-11）
   if (overridesForDate) {
@@ -435,7 +465,7 @@ async function main() {
 }
 
 async function logStats(date, stats, daily, featured) {
-  console.log(`  原始 ${stats.raw} → 过期 ${stats.staleFiltered} → 去重 ${stats.duplicatesRemoved} → 过滤 ${stats.filteredOut} → 事件 ${stats.events}（精选 ${stats.featured}）`);
+  console.log(`  原始 ${stats.raw} → 过期 ${stats.staleFiltered} → 去重 ${stats.duplicatesRemoved} → 过滤 ${stats.filteredOut} → 事件 ${stats.events}（精选 ${stats.featured}，热点 ${stats.hot ?? 0}）`);
   console.log(`  今日观察 ${featured.observations.length} 条：${featured.observations.join(' | ').slice(0, 120)}`);
   if (stats.overrideErrors) console.log(`  [覆盖] ${stats.overrideErrors} 条错误被记录`);
 }

@@ -48,6 +48,19 @@ test('importance：优先主题 +1，且不依赖 priorityTopics 也能跑', () 
   assert.equal(importance(base, { now: NOW }), 2.5, '无 priorityTopics 仍正常计算');
 });
 
+test('importance：多源报道加分，封顶 +1.5', () => {
+  const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
+  const solo = importance(base, { now: NOW });
+  const two = importance({ ...base, relatedSources: [{ name: 'B', url: 'https://b.com/1' }] }, { now: NOW });
+  const many = importance({ ...base, relatedSources: [{ name: 'B' }, { name: 'C' }, { name: 'D' }, { name: 'E' }] }, { now: NOW });
+  assert.equal(two - solo, 0.5, '1 家其他信源 +0.5');
+  assert.equal(many - solo, 1.5, '≥3 家封顶 +1.5');
+});
+
+test('importance：无 relatedSources 字段正常计算（兼容旧条目）', () => {
+  assert.equal(importance(item({ sourceType: 'media' }), { now: NOW }), importance(item({ sourceType: 'media', relatedSources: [] }), { now: NOW }));
+});
+
 test('capPerSource：每来源限量', () => {
   const items = [
     item({ source: 'A', title: 'a1' }),

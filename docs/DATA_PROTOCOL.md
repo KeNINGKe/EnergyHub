@@ -62,13 +62,16 @@
   "date": "2026-08-05",
   "generatedAt": "2026-08-05T04:00:00.000Z",
   "observations": ["今日观察，≤5 条"],
-  "featuredEventIds": ["evt_xxx", "evt_yyy"]
+  "featuredEventIds": ["evt_xxx", "evt_yyy"],
+  "hotEventIds": ["evt_zzz"]           // 今日热点榜（可选字段，前端只渲染不计算）
 }
 ```
 
 - `featuredEventIds` 中的每个 id **必须存在于同日期 `daily.json`**（校验失败则不发布）。
-- 数量目标 5–10 条，**不足时如实减少**，不降低质量门槛（软约束，超上限只给 warning）。
+- 数量目标 5–12 条，**不足时如实减少**，不降低质量门槛（软约束，超上限只给 warning）。
 - 数组顺序即展示顺序。
+- `observations` 由最终入选集合按重要性取前 3 生成，可被 overrides 覆盖。
+- `hotEventIds` 配置见 `data/enums.json` 的 `hot` 段（储能/AIDC 北美置顶、核电排除）；可用 overrides 的 `hotEventIds` 整体替换。
 
 ## 4. `data/editorial-overrides.json`
 

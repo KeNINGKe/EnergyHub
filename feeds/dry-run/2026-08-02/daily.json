@@ -1,41 +1,15 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-02",
-  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "generatedAt": "2026-08-02T06:27:23.694Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 7,
-    "eventsPublished": 3
+    "eventsPublished": 2
   },
   "items": [
-    {
-      "id": "evt_e0b13d454171",
-      "title": "起亚选择在墨西哥生产EV3",
-      "originalTitle": "KIA Elects To Manufacture The EV3 In Mexico",
-      "url": "https://cleantechnica.com/2026/08/01/kia-elects-to-manufacture-the-ev3-in-mexico/",
-      "summary": "By all accounts, the Kia EV3 should be the perfect electric car for many US drivers. After all, it was named World Car of the Year in 2025.…",
-      "whyItMatters": "储能；关联 Kia、Shell；地区 美国；媒体 CleanTechnica",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "Kia",
-        "Shell"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-01T18:41:07.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
     {
       "id": "evt_790d2a1386d4",
       "title": "赞比亚政府兑现提高发电能力的承诺，太阳能将发挥关键作用",
@@ -49,15 +23,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-01T20:08:28.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-02T06:27:23.694Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a2a03a95e5d4",
@@ -65,22 +40,23 @@
       "originalTitle": "Op-Ed: Is Indonesia’s Bid For The Philippines’ Largest Geothermal Company Really About Geothermal?",
       "url": "https://cleantechnica.com/2026/08/01/op-ed-is-indonesias-bid-for-the-philippines-largest-geothermal-company-really-about-geothermal/",
       "summary": "When news emerged that Indonesian billionaire Prajogo Pangestu made an unsolicited, non-binding takeover offer for Energy Development Corpo…",
-      "whyItMatters": "媒体 CleanTechnica",
+      "whyItMatters": "地区 印尼；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "印尼",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-01T18:29:43.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-02T06:27:23.694Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }

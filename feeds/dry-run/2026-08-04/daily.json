@@ -1,28 +1,91 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-04",
-  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "generatedAt": "2026-08-04T06:21:30.063Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 59,
-    "eventsPublished": 31
+    "eventsPublished": 37
   },
   "items": [
+    {
+      "id": "evt_5e0c79ed0192",
+      "title": "ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦",
+      "originalTitle": "Hourly peak load in ERCOT set a new record, exceeding 91 GW on July 22",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67906",
+      "summary": "Hourly peak load in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization serving most of Texas, reache…",
+      "whyItMatters": "电网与并网；关键数字 91GW、91吉瓦；一手来源 EIA Electricity Data",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "new record, exceeding",
+          "value": 91,
+          "unit": "GW"
+        },
+        {
+          "label": "月22日超过",
+          "value": 91,
+          "unit": "吉瓦"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-03T14:00:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_caa8ea6afef1",
+      "title": "施耐德电气研究提供管理800 VDC电弧闪光安全的框架",
+      "originalTitle": "Schneider Electric Research Offers Framework for Managing 800 VDC Arc Flash Safety",
+      "url": "https://www.hpcwire.com/off-the-wire/schneider-electric-research-offers-framework-for-managing-800-vdc-arc-flash-safety/",
+      "summary": "RUEIL-MALMAISON, France, Aug. 3, 2026 — Schneider Electric, a global energy technology leader, today announced a first-of-its-kind analysis…",
+      "whyItMatters": "固态变压器（SST）；关联 施耐德、Schneider；地区 法国；媒体 HPCwire",
+      "topic": "sst",
+      "tags": [],
+      "region": "法国",
+      "entities": [
+        "施耐德",
+        "Schneider"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T18:46:56.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
     {
       "id": "evt_2811af0012c4",
       "title": "一个令人不安的迹象是， Nvidia RTX 50系列的价格在韩国上涨了30 ％ —台积电晶圆上涨和20 $ GDDR7模块推动RTX 5090超过$ 5,100",
       "originalTitle": " In a troubling sign, Nvidia RTX 50 series prices jump up to 30% in South Korea — TSMC wafer hikes and $20 GDDR7 modules push RTX 5090 past $5,100 ",
       "url": "https://www.tomshardware.com/pc-components/gpus/in-a-troubling-sign-nvidia-rtx-50-series-prices-jump-up-to-30-percent-in-south-korea-tsmc-wafer-hikes-and-usd20-gddr7-modules-push-rtx-5090-past-usd5-100",
       "summary": "The latest round of price increases affects the entire RTX 50 lineup, with premium models bearing the brunt of rising production costs.",
-      "whyItMatters": "光伏与风电；关键数字 30%；关联 NVIDIA、TSMC；地区 韩国；媒体 Tom's Hardware",
+      "whyItMatters": "光伏与风电；关键数字 30%；关联 NVIDIA、TSMC、台积电；地区 韩国；媒体 Tom's Hardware",
       "topic": "solar-wind",
       "tags": [],
       "region": "韩国",
       "entities": [
         "NVIDIA",
-        "TSMC"
+        "TSMC",
+        "台积电"
       ],
       "metrics": [
         {
@@ -32,15 +95,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3.5,
+      "importance": 4,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T16:39:36.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_25e7f6277d1f",
@@ -61,15 +125,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-04T03:28:43.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_53719d23274b",
@@ -90,44 +155,47 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "量子位",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-04T01:27:41.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_5e0c79ed0192",
-      "title": "ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦",
-      "originalTitle": "Hourly peak load in ERCOT set a new record, exceeding 91 GW on July 22",
-      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67906",
-      "summary": "Hourly peak load in the Electric Reliability Council of Texas (ERCOT), the regional transmission organization serving most of Texas, reache…",
-      "whyItMatters": "电网与并网；关键数字 91GW；地区 美国；一手来源 EIA Electricity Data",
-      "topic": "grid",
+      "id": "evt_bbad54af23ef",
+      "title": "弗吉尼亚州奠定了将更多太阳能与农业相结合的基础",
+      "originalTitle": "Virginia lays groundwork to combine more solar with farming",
+      "url": "https://www.canarymedia.com/articles/food-and-farms/virginia-solar-with-farming",
+      "summary": "As the world’s data center capital, Virginia faces a surge in energy demand that could spike power costs and lead to more polluting fossil…",
+      "whyItMatters": "光伏与风电；关联 Dominion；地区 美国；媒体 Canary Media",
+      "topic": "solar-wind",
       "tags": [],
       "region": "美国",
-      "entities": [],
-      "metrics": [
+      "entities": [
+        "Dominion"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T07:30:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [
         {
-          "label": "new record, exceeding",
-          "value": 91,
-          "unit": "GW"
+          "name": "Utility Dive",
+          "url": "https://www.utilitydive.com/news/dominion-offshore-wind-project-cost-rises-nearly-300m/826845/"
         }
       ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "EIA Electricity Data",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T14:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "wechat": false
     },
     {
       "id": "evt_6d4a5d35b6ae",
@@ -135,7 +203,7 @@
       "originalTitle": "AEP secures 13 GW of gas turbines as generation ‘central’ to growth plans",
       "url": "https://www.utilitydive.com/news/aep-secures-13-gw-of-gas-turbines-as-generation-central-to-growth-plans/826808/",
       "summary": "Turbines are “a scarce resource and will become increasingly more valuable,” AEP’s Bill Fehrman said. “We're going to continue to be aggres…",
-      "whyItMatters": "天然气与备用电源；关键数字 13GW；媒体 Utility Dive",
+      "whyItMatters": "天然气与备用电源；关键数字 13GW、13吉瓦；媒体 Utility Dive",
       "topic": "gas-backup",
       "tags": [],
       "region": "未知",
@@ -145,18 +213,24 @@
           "label": "AEP secures",
           "value": 13,
           "unit": "GW"
+        },
+        {
+          "label": "AEP确保",
+          "value": 13,
+          "unit": "吉瓦"
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T13:44:56.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_2c7349d6c088",
@@ -187,15 +261,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:45:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3433cae96289",
@@ -216,15 +291,56 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:22:40.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_fea9c5d5dbda",
+      "title": "神铃推出新型空对水热泵系列",
+      "originalTitle": "Shenling releases new air-to-water heat pump series",
+      "url": "https://www.pv-magazine.com/2026/08/03/shenling-releases-new-air-to-water-heat-pump-series/",
+      "summary": "The Chinese manufacturer's new all-in-one heat pump series comes in three models with heating capacities of 8.03 kW, 9.88 kW and 11.75 kW.…",
+      "whyItMatters": "光伏与风电；关键数字 8.03kW、9.88kW、11.75kW；地区 中国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "heating capacities of",
+          "value": 8.03,
+          "unit": "kW"
+        },
+        {
+          "label": "of 8.03 kW,",
+          "value": 9.88,
+          "unit": "kW"
+        },
+        {
+          "label": "9.88 kW and",
+          "value": 11.75,
+          "unit": "kW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T12:15:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_05177324e63d",
@@ -232,10 +348,10 @@
       "originalTitle": "European Commission approves scheme to support 370MWh of battery storage in Slovenia",
       "url": "https://www.energy-storage.news/european-commission-approves-scheme-to-support-370mwh-of-battery-storage-in-slovenia/",
       "summary": "The European Commission (EC) has approved a financial support scheme to accelerate the deployment of battery storage technologies in Sloven…",
-      "whyItMatters": "储能；关键数字 370MWh；媒体 Energy Storage News",
+      "whyItMatters": "储能；关键数字 370MWh；地区 欧盟；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "欧盟",
       "entities": [],
       "metrics": [
         {
@@ -245,15 +361,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T11:23:32.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8ac6bfecbb79",
@@ -261,10 +378,10 @@
       "originalTitle": "Morocco hosts Africa’s first battery manufacturing plant",
       "url": "https://www.pv-magazine.com/2026/08/03/morocco-hosts-africas-first-battery-manufacturing-plant/",
       "summary": "The factory, belonging to Chinese company Gotion High-Tech, is based on the cathode-to-cell lithium-iron-phosphate (LFP) battery technology…",
-      "whyItMatters": "储能；关键数字 10GWh；地区 中国；媒体 pv magazine",
+      "whyItMatters": "储能；关键数字 10GWh；地区 非洲；媒体 pv magazine",
       "topic": "energy-storage",
       "tags": [],
-      "region": "中国",
+      "region": "非洲",
       "entities": [],
       "metrics": [
         {
@@ -274,15 +391,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T11:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_af7c2b820223",
@@ -303,15 +421,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T09:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4eb3166edff5",
@@ -347,15 +466,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T09:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_e5d9bd8bf706",
@@ -372,65 +492,16 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-04T04:16:10.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_caa8ea6afef1",
-      "title": "施耐德电气研究提供管理800 VDC电弧闪光安全的框架",
-      "originalTitle": "Schneider Electric Research Offers Framework for Managing 800 VDC Arc Flash Safety",
-      "url": "https://www.hpcwire.com/off-the-wire/schneider-electric-research-offers-framework-for-managing-800-vdc-arc-flash-safety/",
-      "summary": "RUEIL-MALMAISON, France, Aug. 3, 2026 — Schneider Electric, a global energy technology leader, today announced a first-of-its-kind analysis…",
-      "whyItMatters": "关联 Schneider；地区 法国；媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "法国",
-      "entities": [
-        "Schneider"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T18:46:56.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_f2a3e0380adc",
-      "title": "特斯拉增压器射击引发电动汽车充电安全辩论",
-      "originalTitle": "Tesla Supercharger shooting sparks EV charging safety debate",
-      "url": "https://electrek.co/2026/08/03/evject-tesla-supercharger-shooting-emergency-disconnect/",
-      "summary": "After a gunman opened fire at a Twin Falls, Idaho, In-N-Out with an attached Tesla Supercharger last week, EV owners flooded social media w…",
-      "whyItMatters": "关联 Tesla；媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Tesla"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T14:30:56.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f3d1ac97b76c",
@@ -438,26 +509,56 @@
       "originalTitle": " Co-Packaged Optics (CPO) foundry roadmaps — breaking down TSMC, Intel, Samsung, and GlobalFoundries' approach to next-generation scale-up connectivity ",
       "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/co-packaged-optics-cpo-foundry-roadmaps-breaking-down-tsmc-intel-samsung-and-globalfoundries-approach-to-next-generation-scale-up-connectivity",
       "summary": "As AI systems outgrow copper interconnects, TSMC, Intel, Samsung Foundry, and GlobalFoundries are pursuing four distinctly different co-pac…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Intel、TSMC、Samsung；媒体 Tom's Hardware",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Intel、英特尔、TSMC；媒体 Tom's Hardware",
       "topic": "chips-compute",
       "tags": [],
       "region": "未知",
       "entities": [
         "Intel",
+        "英特尔",
         "TSMC",
-        "Samsung"
+        "台积电",
+        "Samsung",
+        "三星"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T11:45:50.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_169a70b19445",
+      "title": "PG&E如何将家庭能源报告扩展为范围广泛的节能和账单节省",
+      "originalTitle": "How PG&E scaled home energy reports into wide-ranging energy reduction and bill savings",
+      "url": "https://www.utilitydive.com/spons/how-pge-scaled-home-energy-reports-into-wide-ranging-energy-reduction-and/826315/",
+      "summary": "Learn how this approach can support savings, affordability and peak flexibility.",
+      "whyItMatters": "关联 PG&E；媒体 Utility Dive",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "PG&E"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T09:00:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5823da24f024",
@@ -465,49 +566,50 @@
       "originalTitle": "Samsung SDI on track with US LFP cell production, expects demand to outstrip production",
       "url": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/",
       "summary": "Samsung SDI is on track to begin production of lithium iron phosphate (LFP) battery cells in the US in the third quarter of this year.",
-      "whyItMatters": "储能；关联 Samsung；地区 美国；媒体 Energy Storage News",
+      "whyItMatters": "储能；关联 Samsung、三星；地区 美国；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
       "region": "美国",
       "entities": [
-        "Samsung"
+        "Samsung",
+        "三星"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T08:31:51.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_bbad54af23ef",
-      "title": "弗吉尼亚州奠定了将更多太阳能与农业相结合的基础",
-      "originalTitle": "Virginia lays groundwork to combine more solar with farming",
-      "url": "https://www.canarymedia.com/articles/food-and-farms/virginia-solar-with-farming",
-      "summary": "As the world’s data center capital, Virginia faces a surge in energy demand that could spike power costs and lead to more polluting fossil…",
-      "whyItMatters": "光伏与风电；关联 Dominion；地区 美国；媒体 Canary Media",
+      "id": "evt_33fd44a0c25f",
+      "title": "阻止新的进口逆变器将使美国付出代价",
+      "originalTitle": "Blocking New Imported Inverters Will Cost America",
+      "url": "https://cleantechnica.com/2026/08/03/blocking-new-imported-inverters-will-cost-america/",
+      "summary": "Last week, the FCC added foreign-produced inverters to its “Covered List.” Effective immediately, new inverter models cannot be imported. T…",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 CleanTechnica",
       "topic": "solar-wind",
       "tags": [],
       "region": "美国",
-      "entities": [
-        "Dominion"
-      ],
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "Canary Media",
+        "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-08-03T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-08-03T19:55:36.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b433f711ecb8",
@@ -522,15 +624,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T18:52:15.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_96b913320264",
@@ -545,15 +648,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T18:42:20.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_3a5144fa7e4d",
@@ -568,15 +672,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T18:32:58.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c571d5bc0da4",
@@ -591,15 +696,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T17:00:49.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d3158d0bef5a",
@@ -614,15 +720,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T15:51:42.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4a2ab8890011",
@@ -630,22 +737,47 @@
       "originalTitle": " Lexar lists 32GB DDR5 memory with homegrown Chinese chips — 3,999 Yuan ($592) price undercuts hopes for cheaper CXMT-powered RAM ",
       "url": "https://www.tomshardware.com/pc-components/ddr5/lexar-lists-32gb-ddr5-memory-with-homegrown-chinese-chips-3-999-yuan-usd592-price-undercuts-hopes-for-cheaper-cxmt-powered-ram",
       "summary": "Lexar's latest Thor RGB kit likely uses CXMT-made DRAM, but its pricing remains comparable to premium DDR5 memory from established brands.",
-      "whyItMatters": "电力市场与政策；地区 中国；媒体 Tom's Hardware",
-      "topic": "power-market-policy",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 中国；媒体 Tom's Hardware",
+      "topic": "chips-compute",
       "tags": [],
       "region": "中国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T14:51:09.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_258e02a2a207",
+      "title": "由于美国禁止外国电源逆变器，对缺乏清晰度和透明度的担忧",
+      "originalTitle": "Concerns over lack of clarity, transparency as US bans foreign power inverters",
+      "url": "https://www.energy-storage.news/concerns-over-lack-of-clarity-transparency-as-us-bans-foreign-power-inverters/",
+      "summary": "The Public Safety and Homeland Security Bureau (PSHSB) of the US Federal Communications Commission (FCC) has classified foreign-produced po…",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 Energy Storage News",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T13:06:10.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_414b3b46bd4e",
@@ -660,15 +792,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T13:04:59.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_0c7d4f01fd52",
@@ -683,15 +816,40 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T13:00:06.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c6faea89dec7",
+      "title": "DTE将稳定性与数据中心项目联系起来，因为大负载管道保持稳定",
+      "originalTitle": "DTE ties rate stability to data center projects as large-load pipeline remains steady",
+      "url": "https://www.utilitydive.com/news/dte-rate-stability-data-center-projects-large-load-pipeline/826803/",
+      "summary": "The company’s $30 billion electric utility capital investment plan was unchanged from the first quarter, officials said during the second-q…",
+      "whyItMatters": "AIDC 项目与区域布局；媒体 Utility Dive",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T12:43:44.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_1ebc7f033340",
@@ -706,38 +864,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_fea9c5d5dbda",
-      "title": "神铃推出新型空对水热泵系列",
-      "originalTitle": "Shenling releases new air-to-water heat pump series",
-      "url": "https://www.pv-magazine.com/2026/08/03/shenling-releases-new-air-to-water-heat-pump-series/",
-      "summary": "The Chinese manufacturer's new all-in-one heat pump series comes in three models with heating capacities of 8.03 kW, 9.88 kW and 11.75 kW.…",
-      "whyItMatters": "光伏与风电；地区 中国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-03T12:15:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_08185b7fc808",
@@ -745,22 +881,23 @@
       "originalTitle": "Argentina’s solar train brings zero-emission travel to an ancient trade route",
       "url": "https://electrek.co/2026/08/03/argentinas-solar-train-brings-zero-emission-travel-to-an-ancient-trade-route/",
       "summary": "The Tren Solar de la Quebrada is Latin America’s first primarily solar-powered passenger train, carrying tens of thousands of travelers thr…",
-      "whyItMatters": "光伏与风电；地区 美国；媒体 Electrek",
+      "whyItMatters": "光伏与风电；地区 拉美；媒体 Electrek",
       "topic": "solar-wind",
       "tags": [],
-      "region": "美国",
+      "region": "拉美",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:04:44.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_44960c9d4645",
@@ -775,15 +912,88 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T12:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ded1e8311534",
+      "title": "世界上最小的GPU芯片通过真实世界测试— 240,000个晶体管TinyGPU v2.0以高达15 FPS的速度渲染3D图形，而v3.0则准备在2026年发布",
+      "originalTitle": " World’s smallest GPU silicon passes real-world testing — 240,000-transistor TinyGPU v2.0 renders 3D graphics at up to 15 FPS while v3.0 prepares for 2026 release ",
+      "url": "https://www.tomshardware.com/pc-components/gpus/worlds-smallest-gpu-silicon-passes-real-world-testing-240-000-transistor-tinygpu-v2-0-renders-3d-graphics-at-up-to-15-fps-while-v3-0-prepares-for-2026-release",
+      "summary": "The TinyGPU v2.0 'standalone GPU' silicon works, and was demonstrated in a video after it came back from its Tiny Tapeout production run.",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T11:00:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_e060b28a4488",
+      "title": "融合能源领域的地缘政治和企业风险：领导者现在需要预测什么",
+      "originalTitle": "Converging geopolitical and enterprise risks in energy: What leaders need to anticipate now",
+      "url": "https://www.utilitydive.com/spons/converging-geopolitical-and-enterprise-risks-in-energy-what-leaders-need-t/825738/",
+      "summary": "Geopolitical developments are significantly reshaping North American energy risk and requiring leaders to adapt operations and strategies.",
+      "whyItMatters": "地区 美国；媒体 Utility Dive",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T09:00:00.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_db61f3b92363",
+      "title": "欧洲700巴氢能网络正在关闭并重新出现",
+      "originalTitle": "Europe’s 700-Bar Hydrogen Network Is Closing And Reappearing",
+      "url": "https://cleantechnica.com/2026/08/03/europe-paying-twice-700-bar-hydrogen-refuelling/",
+      "summary": "Europe’s public hydrogen refuelling network is not growing, but shrinking slightly. It is, however, changing shape. The part built for pass…",
+      "whyItMatters": "其他能源动态；地区 欧盟；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-03T08:53:56.000Z",
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_696e67b4d1ff",
@@ -798,15 +1008,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f6d1a8db12be",
@@ -821,15 +1032,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-03T07:01:41.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-04T06:21:30.063Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }

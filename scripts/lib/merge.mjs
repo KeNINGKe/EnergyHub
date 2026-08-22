@@ -7,7 +7,9 @@
  *
  * 合并条件（全部满足）：
  *   - 时间差 ≤ mergeWindow 天
- *   - 相似度分 ≥ threshold（同主题 +0.2，共享实体 +0.35，共享数字 +0.35，标题相似 +0.3）
+ *   - 相似度分 ≥ threshold（同主题 +0.2，共享实体 +0.35，共享数字 +0.35，
+ *     标题 token 重叠 ≥0.35 +0.3、≥0.7 +0.45——近重复标题单独即可过 0.45 门槛，
+ *     覆盖「同一事件中英文报道主题/实体提取不一致」的漏合场景）
  *
  * 用法：
  *   import { titleSimilarity, eventSimilarity, mergeEvents } from './merge.mjs';
@@ -71,7 +73,7 @@ export function sharedEntity(a, b) {
  * @returns {{ score: number, signals: string[] }}
  */
 export function eventSimilarity(a, b, opts = {}) {
-  const { mergeWindowMs = THREE_DAYS_MS, titleThreshold = 0.35 } = opts;
+  const { mergeWindowMs = THREE_DAYS_MS, titleThreshold = 0.35, titleStrongThreshold = 0.7 } = opts;
   // 时间窗口检查
   const ta = a.publishedAt ? new Date(a.publishedAt).getTime() : null;
   const tb = b.publishedAt ? new Date(b.publishedAt).getTime() : null;
@@ -85,7 +87,8 @@ export function eventSimilarity(a, b, opts = {}) {
   const met = sharedMetric(a, b);
   if (met) { score += 0.35; signals.push(`metric:${met}`); }
   const sim = titleSimilarity(a.title, b.title);
-  if (sim >= titleThreshold) { score += 0.3; signals.push(`title:${sim.toFixed(2)}`); }
+  if (sim >= titleStrongThreshold) { score += 0.45; signals.push(`title-strong:${sim.toFixed(2)}`); }
+  else if (sim >= titleThreshold) { score += 0.3; signals.push(`title:${sim.toFixed(2)}`); }
 
   return { score, signals };
 }
@@ -93,11 +96,11 @@ export function eventSimilarity(a, b, opts = {}) {
 /**
  * 事件合并（并查集，输入顺序决定确定性）。
  * @param {Array} items 条目，需含 { title, topic, entities, metrics, publishedAt }
- * @param {object} opts { threshold=0.5, mergeWindowMs }
+ * @param {object} opts { threshold=0.45, mergeWindowMs }
  * @returns {{ clusters: Array<{members:Array, reason:string[]}>, standaloneCount: number }}
  */
 export function mergeEvents(items, opts = {}) {
-  const { threshold = 0.5 } = opts;
+  const { threshold = 0.45 } = opts;
   const n = items.length;
   const parent = items.map((_, i) => i);
 

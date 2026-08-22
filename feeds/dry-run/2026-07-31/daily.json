@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-07-31",
-  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "generatedAt": "2026-07-31T06:38:01.315Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 0,
@@ -11,40 +11,93 @@
   },
   "items": [
     {
-      "id": "evt_e1cf9695536f",
-      "title": "Jackery 3,584Wh和2,048Wh HomePower发电站可独家节省$ 1,450 ，达到新低、Roborock、Greenworks等",
-      "originalTitle": "Jackery 3,584Wh and 2,048Wh HomePower power stations get exclusive $1,450 savings to new lows, Roborock, Greenworks, more",
-      "url": "https://electrek.co/2026/07/30/jackery-3584wh-and-2048wh-homepower-power-stations-roborock-greenworks-more/",
-      "summary": "We’ve got two big exclusive Jackery deals leading today’s Green Deals, with up to $1,450 savings on the 3,584Wh HomePower 3600 Plus and 2,0…",
-      "whyItMatters": "电力市场与政策；关键数字 3584W、2048W；关联 Tesla；媒体 Electrek",
-      "topic": "power-market-policy",
+      "id": "evt_7804376d48c8",
+      "title": "Axpo和Zelestra同意207MW意大利BESS通行费， IPP在7月份排名第二",
+      "originalTitle": "Axpo and Zelestra agree 207MW Italy BESS toll, second in July for IPP",
+      "url": "https://www.energy-storage.news/axpo-and-zelestra-agree-207mw-italy-bess-toll-second-in-july-for-ipp/",
+      "summary": "Power firm Axpo and IPP Zelestra have entered into a long-term toll for a BESS project in northern Italy, Zelestra's second deal in July.",
+      "whyItMatters": "储能；关键数字 207MW；地区 意大利；媒体 Energy Storage News",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
-      "entities": [
-        "Tesla"
-      ],
+      "region": "意大利",
+      "entities": [],
       "metrics": [
         {
-          "label": "Jackery",
-          "value": 3584,
-          "unit": "W"
-        },
-        {
-          "label": "Jackery 3,584Wh and",
-          "value": 2048,
-          "unit": "W"
+          "label": "and Zelestra agree",
+          "value": 207,
+          "unit": "MW"
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 4.5,
       "source": {
-        "name": "Electrek",
+        "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-30T18:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-30T09:22:04.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/30/pjm-grid-largest-battery-is-now-under-construction-in-ohio/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/eolian-begins-construction-on-1-06gwh-ohio-bess-largest-system-built-in-pjm/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_bdcfc244f051",
+      "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
+      "originalTitle": "South Africa energizes 216 MW solar, 500 MWh BESS project",
+      "url": "https://www.pv-magazine.com/2026/07/30/south-africa-energizes-216-mw-solar-500-mwh-bess-project/",
+      "summary": "A consortia led by TotalEnergies has switched on its Hydra project in South Africa's Northern Cape, billed as Africa's largest hybrid renew…",
+      "whyItMatters": "光伏与风电；关键数字 216MW、500MWh、216兆瓦；地区 非洲；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "非洲",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "South Africa energizes",
+          "value": 216,
+          "unit": "MW"
+        },
+        {
+          "label": "216 MW solar,",
+          "value": 500,
+          "unit": "MWh"
+        },
+        {
+          "label": "ct 南非为",
+          "value": 216,
+          "unit": "兆瓦"
+        },
+        {
+          "label": "兆瓦太阳能、",
+          "value": 500,
+          "unit": "兆瓦时"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T07:30:00.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/07/30/bangladesh-opens-bids-for-220-mw-solar-project/"
+        }
+      ],
+      "wechat": false
     },
     {
       "id": "evt_ef415876b502",
@@ -52,12 +105,13 @@
       "originalTitle": "Tesla, ContourGlobal enter 1 TWh solar-storage PPA in Arizona",
       "url": "https://www.pv-magazine.com/2026/07/30/tesla-contourglobal-enter-1-twh-solar-storage-ppa-in-arizona/",
       "summary": "Tesla will buy around 1 TWh per year of electricity from ContourGlobal’s hybrid solar and storage project in the US state of Arizona, which…",
-      "whyItMatters": "光伏与风电；关键数字 1TWh；关联 Tesla；地区 美国；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 1TWh；关联 Tesla、特斯拉；地区 美国；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
       "region": "美国",
       "entities": [
-        "Tesla"
+        "Tesla",
+        "特斯拉"
       ],
       "metrics": [
         {
@@ -67,15 +121,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 4,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T08:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6e6c742caaeb",
@@ -96,73 +151,141 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T03:32:11.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_3a6108dd1132",
-      "title": "PJM电网最大的电池目前正在俄亥俄州建造",
-      "originalTitle": "The PJM grid’s largest battery is now under construction in Ohio",
-      "url": "https://electrek.co/2026/07/30/pjm-grid-largest-battery-is-now-under-construction-in-ohio/",
-      "summary": "A giant 1 GWh battery is now under construction outside Columbus, Ohio, where data center and industrial development is rapidly pushing up…",
-      "whyItMatters": "数据中心电力需求；关键数字 1GWh；媒体 Electrek",
+      "id": "evt_c2c96dc03079",
+      "title": "“热块”热能存储初创公司再削减5.5亿美元用于追逐化石燃料",
+      "originalTitle": "“Hot Blocks” Thermal Energy Storage Startup Nails Down $550 Million More To Chase Fossil Fuels Away",
+      "url": "https://cleantechnica.com/2026/07/30/energy-storage-factory-made-carbon-blocks-us-startup-antora/",
+      "summary": "The US energy storage startup Antora Energy is scaling up with a $550 million assist from leading investors. The post “Hot Blocks” Thermal…",
+      "whyItMatters": "储能；关键数字 5.5亿美元；地区 美国；媒体 CleanTechnica",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "创公司再削减",
+          "value": 5.5,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T01:34:49.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b039c17ad0f4",
+      "title": "Antora获得5.5亿美元用于运行数据中心和工厂的热电池",
+      "originalTitle": "Antora snags $550M for heat batteries to run data centers and factories",
+      "url": "https://www.canarymedia.com/articles/climatetech-finance/antora-550m-heat-batteries",
+      "summary": "The startup Antora Energy just raised $550 million to build and deploy more of its heat-storing batteries for powering data centers and cle…",
+      "whyItMatters": "数据中心电力需求；关键数字 5.5亿美元；媒体 Canary Media",
       "topic": "data-center-power",
       "tags": [],
       "region": "未知",
       "entities": [],
       "metrics": [
         {
-          "label": "Ohio A giant",
-          "value": 1,
-          "unit": "GWh"
+          "label": "tora获得",
+          "value": 5.5,
+          "unit": "亿美元"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
-        "name": "Electrek",
+        "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-30T22:55:14.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-30T19:00:00.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_0b02b642ce14",
-      "title": "中国开始测量电动汽车的充电时间，以秒为单位，而不是以分钟为单位",
-      "originalTitle": "China is starting to measure EV charging times in seconds, not minutes",
-      "url": "https://electrek.co/2026/07/30/china-is-starting-to-measure-ev-charging-times-in-seconds-not-minutes/",
-      "summary": "One of China’s newest EVs is also its fastest-charging, with the ability to fill its battery from 10-70% in 4 minutes and 22 seconds. But t…",
-      "whyItMatters": "储能；关键数字 70%；地区 中国；媒体 Electrek",
-      "topic": "energy-storage",
+      "id": "evt_28b82c2d350b",
+      "title": "Xsight Labs以28亿美元的估值筹集了超过3亿美元的资金，为下一代人工智能和云网络提供动力",
+      "originalTitle": "Xsight Labs Raises Over $300M at $2.8B Valuation to Power Next-Gen AI and Cloud Networks",
+      "url": "https://www.hpcwire.com/off-the-wire/xsight-labs-raises-over-300m-at-2-8b-valuation-to-power-next-gen-ai-and-cloud-networks/",
+      "summary": "SAN JOSE, Calif. and TEL AVIV, Israel, July 30, 2026 — Xsight Labs, a fabless semiconductor company providing intelligent connectivity solu…",
+      "whyItMatters": "AIDC 项目与区域布局；关键数字 28亿美元、3亿美元；媒体 HPCwire",
+      "topic": "aidc-project",
       "tags": [],
-      "region": "中国",
+      "region": "未知",
       "entities": [],
       "metrics": [
         {
-          "label": "battery from 10-",
-          "value": 70,
-          "unit": "%"
+          "label": "Labs以",
+          "value": 28,
+          "unit": "亿美元"
+        },
+        {
+          "label": "值筹集了超过",
+          "value": 3,
+          "unit": "亿美元"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
-        "name": "Electrek",
+        "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-30T14:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-30T18:39:00.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_c6125d9110b5",
+      "title": "加利福尼亚州的碳定价计划为气候倡议创造了362亿美元$ ：报告",
+      "originalTitle": "California’s carbon-pricing program generated $36.2B for climate initiatives: report",
+      "url": "https://www.utilitydive.com/news/california-carbon-pricing-program-generated-362b-for-climate-initiatives-carb/826598/",
+      "summary": "The Cap-and-Invest program deployed $15.5 billion for projects focused on clean air, energy efficiency and emissions reductions. Covered en…",
+      "whyItMatters": "冷却、UPS 与 PUE；关键数字 362亿美元；媒体 Utility Dive",
+      "topic": "cooling-pue",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "候倡议创造了",
+          "value": 362,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T15:37:41.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_09c070163f67",
@@ -170,8 +293,8 @@
       "originalTitle": "FirstEnergy data center contracts surge 50% in Q2",
       "url": "https://www.utilitydive.com/news/firstenergy-data-center-west-virginia-maidsville-earnings/826558/",
       "summary": "Mon Power, a FirstEnergy subsidiary, plans to assess a surcharge on its customers to help finance $2.7 billion in generation it is building…",
-      "whyItMatters": "关键数字 50%；媒体 Utility Dive",
-      "topic": "other-energy",
+      "whyItMatters": "数据中心电力需求；关键数字 50%；媒体 Utility Dive",
+      "topic": "data-center-power",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -183,15 +306,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T12:43:51.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_94e058d100b1",
@@ -199,7 +323,7 @@
       "originalTitle": "Türkiye adds 2.1 GW of solar in H1",
       "url": "https://www.pv-magazine.com/2026/07/30/turkiye-adds-2-1-gw-of-solar-in-h1/",
       "summary": "Türkiye's solar additions from the first half of the year take total capacity to around 26.9 GW. The number of solar plants in the country…",
-      "whyItMatters": "光伏与风电；关键数字 2.1GW、26.9GW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 2.1GW、2.1吉瓦、26.9GW；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
       "region": "全球",
@@ -211,21 +335,27 @@
           "unit": "GW"
         },
         {
+          "label": "在H1增加了",
+          "value": 2.1,
+          "unit": "吉瓦"
+        },
+        {
           "label": "capacity to around",
           "value": 26.9,
           "unit": "GW"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T12:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d59249110808",
@@ -233,7 +363,7 @@
       "originalTitle": "Aecon executes energy storage agreement for 1,200MWh Ontario BESS",
       "url": "https://www.energy-storage.news/aecon-executes-energy-storage-agreement-for-1200mwh-ontario-bess/",
       "summary": "Infrastructure and construction company Aecon Group has executed an agreement with Ontario’s Independent Electricity System Operator (IESO)…",
-      "whyItMatters": "储能；关键数字 1200MWh、150MW；媒体 Energy Storage News",
+      "whyItMatters": "储能；关键数字 1200MWh、1200MWh、150MW；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
       "region": "未知",
@@ -245,64 +375,27 @@
           "unit": "MWh"
         },
         {
+          "label": "econ签署",
+          "value": 1200,
+          "unit": "MWh"
+        },
+        {
           "label": "(IESO) for the",
           "value": 150,
           "unit": "MW"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T12:27:15.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_bdcfc244f051",
-      "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
-      "originalTitle": "South Africa energizes 216 MW solar, 500 MWh BESS project",
-      "url": "https://www.pv-magazine.com/2026/07/30/south-africa-energizes-216-mw-solar-500-mwh-bess-project/",
-      "summary": "A consortia led by TotalEnergies has switched on its Hydra project in South Africa's Northern Cape, billed as Africa's largest hybrid renew…",
-      "whyItMatters": "储能；关键数字 216MW、500MWh；地区 非洲；媒体 pv magazine",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "非洲",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "South Africa energizes",
-          "value": 216,
-          "unit": "MW"
-        },
-        {
-          "label": "216 MW solar,",
-          "value": 500,
-          "unit": "MWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": [
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/eolian-begins-construction-on-1-06gwh-ohio-bess-largest-system-built-in-pjm/"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/axpo-and-zelestra-agree-207mw-italy-bess-toll-second-in-july-for-ipp/"
-        }
-      ]
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b6f7e95ae161",
@@ -310,28 +403,34 @@
       "originalTitle": "Indonesia signals start of 100 GW solar initiative",
       "url": "https://www.pv-magazine.com/2026/07/30/indonesia-signals-start-of-100-gw-solar-initiative/",
       "summary": "Indonesia’s Minister of Energy and Mineral Resources, Bahlil Lahadalia, says a groundbreaking ceremony will soon take place for the first p…",
-      "whyItMatters": "光伏与风电；关键数字 100GW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 100GW、100吉瓦；地区 印尼；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "全球",
+      "region": "印尼",
       "entities": [],
       "metrics": [
         {
           "label": "signals start of",
           "value": 100,
           "unit": "GW"
+        },
+        {
+          "label": "印尼宣布启动",
+          "value": 100,
+          "unit": "吉瓦"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T12:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_19a2d7255773",
@@ -339,7 +438,7 @@
       "originalTitle": "Colombia awards 270 MW of solar, 100 MW of storage in clean energy auction",
       "url": "https://www.pv-magazine.com/2026/07/30/colombia-awards-270-mw-of-solar-100-mw-of-storage-in-clean-energy-auction/",
       "summary": "Colombia's Ministry of Mines and Energy awarded contracts for around 270 MW of new solar tied to 100 MW of battery energy storage in the fi…",
-      "whyItMatters": "储能；关键数字 270MW、100MW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "储能；关键数字 270MW、100MW、270兆瓦；地区 全球；媒体 pv magazine",
       "topic": "energy-storage",
       "tags": [],
       "region": "全球",
@@ -354,18 +453,29 @@
           "label": "MW of solar,",
           "value": 100,
           "unit": "MW"
+        },
+        {
+          "label": "源拍卖中授予",
+          "value": 270,
+          "unit": "兆瓦"
+        },
+        {
+          "label": "瓦的太阳能和",
+          "value": 100,
+          "unit": "兆瓦"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T11:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4825191aa78d",
@@ -373,10 +483,10 @@
       "originalTitle": "Central & Eastern Europe: UK’s Alcemi buys 2.3GWh Romania projects, Slovakia’s biggest BESS brought online",
       "url": "https://www.energy-storage.news/central-eastern-europe-uks-alcemi-buys-2-3gwh-romania-projects-slovakias-biggest-bess-brought-online/",
       "summary": "Alcemi, developer of some of the UK’s biggest projects, has entered the Romanian battery storage market, while Slovakia’s biggest project t…",
-      "whyItMatters": "储能；关键数字 2.3GWh；地区 欧盟；媒体 Energy Storage News",
+      "whyItMatters": "储能；关键数字 2.3GWh；地区 英国；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
-      "region": "欧盟",
+      "region": "英国",
       "entities": [],
       "metrics": [
         {
@@ -386,15 +496,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T10:30:03.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_cdc0ff017088",
@@ -402,7 +513,7 @@
       "originalTitle": "Uruguay plans 500 MW of new renewables by 2030",
       "url": "https://www.pv-magazine.com/2026/07/30/uruguay-plans-500-mw-of-new-renewables-by-2030/",
       "summary": "Uruguay is planning to deploy an additional 500 MW of new renewables before the end of the current administration in February 2030. The pla…",
-      "whyItMatters": "光伏与风电；关键数字 500MW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 500MW、500兆瓦；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
       "region": "全球",
@@ -412,18 +523,24 @@
           "label": "Uruguay plans",
           "value": 500,
           "unit": "MW"
+        },
+        {
+          "label": "030年新增",
+          "value": 500,
+          "unit": "兆瓦"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T10:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_06bbc635c807",
@@ -431,8 +548,8 @@
       "originalTitle": "This Texas coal mine will soon be home to a 1.2GW solar farm",
       "url": "https://www.canarymedia.com/articles/solar/texas-coal-mine-solar-farm",
       "summary": "Construction is underway on a $1.7 billion solar and battery storage project in Texas that will turn existing coal mining land into a hub o…",
-      "whyItMatters": "储能；关键数字 1.2GW；媒体 Canary Media",
-      "topic": "energy-storage",
+      "whyItMatters": "光伏与风电；关键数字 1.2GW；媒体 Canary Media",
+      "topic": "solar-wind",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -444,15 +561,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_444e0ab99108",
@@ -469,15 +587,16 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T22:56:17.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_10c14d017ac9",
@@ -494,40 +613,72 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T17:50:55.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_9148635445b9",
-      "title": "特斯拉汽车销量达到1000万辆—但其电动汽车增长停滞不前",
-      "originalTitle": "Tesla hits 10 million vehicles — but its EV growth has stalled",
-      "url": "https://electrek.co/2026/07/30/tesla-10-millionth-vehicle-ev-growth-stalled/",
-      "summary": "Tesla has built its 10 millionth vehicle, the company announced this week. Ten million all-electric cars is a real milestone, and no other…",
-      "whyItMatters": "关联 Tesla；媒体 Electrek",
+      "id": "evt_15c6f6615820",
+      "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究",
+      "originalTitle": "DDN Backs AI Research at Naval Postgraduate School with NVIDIA Partnership",
+      "url": "https://www.hpcwire.com/off-the-wire/ddn-backs-ai-research-at-naval-postgraduate-school-with-nvidia-partnership/",
+      "summary": "July 30, 2026 — Artificial intelligence (AI) is rapidly becoming a strategic capability for governments around the world. As public sector…",
+      "whyItMatters": "关联 NVIDIA；地区 全球；媒体 HPCwire",
       "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "全球",
       "entities": [
-        "Tesla"
+        "NVIDIA"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
-        "name": "Electrek",
+        "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-30T13:36:51.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-30T17:17:35.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_4ee84eed7041",
+      "title": "分析师声称，谷歌可能会建造比英伟达在2028年销售的更多的人工智能加速器，这可能会推动该公司使用英特尔代工来实现其目标",
+      "originalTitle": " Google could build more AI accelerators than Nvidia sells in 2028, analyst claims — could push the company to use Intel Foundry to meet its goals ",
+      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-could-build-more-ai-accelerators-than-nvidia-sells-in-2028-analyst-claims-could-push-the-company-to-use-intel-foundry-to-meet-its-goals",
+      "summary": "Google eyes to build more TPU AI accelerators in 2028 than Nvidia, if a report by Fubon Research is correct.",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Google、NVIDIA、英伟达；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Google",
+        "NVIDIA",
+        "英伟达",
+        "Intel",
+        "英特尔"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T14:35:50.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6d9bd0100497",
@@ -535,49 +686,26 @@
       "originalTitle": "Hyundai Motor Group Executive Chair Euisun Chung Charts Mid-to-Long-Term Growth Strategy in Brazil",
       "url": "https://cleantechnica.com/2026/07/30/hyundai-motor-group-executive-chair-euisun-chung-charts-mid-to-long-term-growth-strategy-in-brazil/",
       "summary": "Executive Chair Chung visits Hyundai Motor Company’s plant in Piracicaba to chart local production, quality and sales strategy Hyundai Moto…",
-      "whyItMatters": "其他能源动态；关联 Hyundai；地区 巴西；媒体 CleanTechnica",
+      "whyItMatters": "其他能源动态；关联 Hyundai、现代；地区 巴西；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
       "region": "巴西",
       "entities": [
-        "Hyundai"
+        "Hyundai",
+        "现代"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T12:24:23.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_3d2ef90b8c3e",
-      "title": "欧洲电动汽车需求、美国BESS推动LG Energy Solution第二季度恢复盈利",
-      "originalTitle": "EV demand in Europe, BESS in the US drive LG Energy Solution’s return to profit in Q2",
-      "url": "https://www.energy-storage.news/ev-demand-in-europe-bess-in-the-us-drive-lg-energy-solutions-return-to-profit-in-q2/",
-      "summary": "LG Energy Solution (LG ES) posted a profitable second quarter this year, with investments in battery storage in the US and EV cell producti…",
-      "whyItMatters": "储能；关联 LG Energy；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "LG Energy"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T08:56:29.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_893b4a36b3a6",
@@ -592,38 +720,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T05:40:47.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_c2c96dc03079",
-      "title": "“热块”热能存储初创公司再削减5.5亿美元用于追逐化石燃料",
-      "originalTitle": "“Hot Blocks” Thermal Energy Storage Startup Nails Down $550 Million More To Chase Fossil Fuels Away",
-      "url": "https://cleantechnica.com/2026/07/30/energy-storage-factory-made-carbon-blocks-us-startup-antora/",
-      "summary": "The US energy storage startup Antora Energy is scaling up with a $550 million assist from leading investors. The post “Hot Blocks” Thermal…",
-      "whyItMatters": "储能；地区 美国；媒体 CleanTechnica",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T01:34:49.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8e550986364b",
@@ -631,6 +737,30 @@
       "originalTitle": "New Sierra Club Reports Finds Wisconsin’s Dirty Power Generation Uses 1.34 Trillion Gallons of Water Annually",
       "url": "https://cleantechnica.com/2026/07/30/new-sierra-club-reports-finds-wisconsins-dirty-power-generation-uses-1-34-trillion-gallons-of-water-annually/",
       "summary": "A new report from the Sierra Club, Thirsty Power: Coal and gas will leave us high and dry, analyzes Wisconsin’s current power generation, t…",
+      "whyItMatters": "其他能源动态；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T23:20:58.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0cf11db7c57d",
+      "title": "美国通过绿色氢能计划协助摩洛哥—等等，什么？",
+      "originalTitle": "US Assists Morocco With Green Hydrogen Plan — Wait, What?",
+      "url": "https://cleantechnica.com/2026/07/30/green-hydrogen-morocco-us-government-grant-renewable-energy/",
+      "summary": "Morocco is pursuing plans for a massive green hydrogen operation, with a focus on producing green ammonia for global markets -- and an assi…",
       "whyItMatters": "其他能源动态；地区 美国；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
@@ -638,84 +768,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-30T23:20:58.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_f1741565ba63",
-      "title": "新的Zipcar试点项目将共享电动汽车与离网太阳能充电配对",
-      "originalTitle": "A new Zipcar pilot pairs shared EVs with off-grid solar charging",
-      "url": "https://electrek.co/2026/07/30/a-new-zipcar-pilot-pairs-shared-evs-with-off-grid-solar-charging/",
-      "summary": "Four Greater Boston communities now have off-grid solar EV chargers powering a new Zipcar pilot designed to bring affordable carsharing to…",
-      "whyItMatters": "光伏与风电；媒体 Electrek",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T21:11:38.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_b039c17ad0f4",
-      "title": "Antora获得5.5亿美元用于运行数据中心和工厂的热电池",
-      "originalTitle": "Antora snags $550M for heat batteries to run data centers and factories",
-      "url": "https://www.canarymedia.com/articles/climatetech-finance/antora-550m-heat-batteries",
-      "summary": "The startup Antora Energy just raised $550 million to build and deploy more of its heat-storing batteries for powering data centers and cle…",
-      "whyItMatters": "媒体 Canary Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T19:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_28b82c2d350b",
-      "title": "Xsight Labs以28亿美元的估值筹集了超过3亿美元的资金，为下一代人工智能和云网络提供动力",
-      "originalTitle": "Xsight Labs Raises Over $300M at $2.8B Valuation to Power Next-Gen AI and Cloud Networks",
-      "url": "https://www.hpcwire.com/off-the-wire/xsight-labs-raises-over-300m-at-2-8b-valuation-to-power-next-gen-ai-and-cloud-networks/",
-      "summary": "SAN JOSE, Calif. and TEL AVIV, Israel, July 30, 2026 — Xsight Labs, a fabless semiconductor company providing intelligent connectivity solu…",
-      "whyItMatters": "AIDC 项目与区域布局；媒体 HPCwire",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T18:39:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-30T20:03:42.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_94f207607f59",
@@ -723,22 +785,23 @@
       "originalTitle": "Renesas Unveils Gen 3 DDR5 MRDIMM Chipset for AI Servers",
       "url": "https://www.hpcwire.com/off-the-wire/renesas-unveils-gen-3-ddr5-mrdimm-chipset-for-ai-servers/",
       "summary": "TOKYO, July 30, 2026 —Renesas Electronics Corporation today announced its third-generation DDR5 Multiplexed Rank Dual In-Line Memory Module…",
-      "whyItMatters": "光伏与风电；媒体 HPCwire",
-      "topic": "solar-wind",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 HPCwire",
+      "topic": "chips-compute",
       "tags": [],
       "region": "未知",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T18:00:24.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_fec6d93b57d2",
@@ -753,15 +816,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T16:57:06.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5f5d40cb7dbf",
@@ -776,38 +840,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T16:45:50.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_c6125d9110b5",
-      "title": "加利福尼亚州的碳定价计划为气候倡议创造了362亿美元$ ：报告",
-      "originalTitle": "California’s carbon-pricing program generated $36.2B for climate initiatives: report",
-      "url": "https://www.utilitydive.com/news/california-carbon-pricing-program-generated-362b-for-climate-initiatives-carb/826598/",
-      "summary": "The Cap-and-Invest program deployed $15.5 billion for projects focused on clean air, energy efficiency and emissions reductions. Covered en…",
-      "whyItMatters": "冷却、UPS 与 PUE；媒体 Utility Dive",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T15:37:41.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_0046f9ae65f1",
@@ -822,15 +864,64 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Latitude Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T15:08:19.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_5970f6dfedbd",
+      "title": "在压力下， Entergy希望降低德克萨斯州天然气厂$ 18亿的收购成本",
+      "originalTitle": "Under pressure, Entergy looks to mitigate cost of $1.8B Texas gas plant purchase",
+      "url": "https://www.utilitydive.com/news/entergy-cottonwood-texas-gas-plant-meta/826565/",
+      "summary": "“We know that Cottonwood isn't the shiniest new plant out there,” Entergy CEO Drew Marsh told analysts. The deal is “increasingly in doubt,…",
+      "whyItMatters": "天然气与备用电源；媒体 Utility Dive",
+      "topic": "gas-backup",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T12:53:57.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_62103f31daf5",
+      "title": "$ 21任天堂Wii U升级允许您使用M.2或SATA固态硬盘将TB的存储空间添加到您的控制台—升级使控制台略快，但需要自制和自定义固件",
+      "originalTitle": " $21 Nintendo Wii U upgrade lets you add TBs of storage to your console with an M.2 or SATA SSD — upgrade makes console slightly faster, but requires Homebrew and custom firmware ",
+      "url": "https://www.tomshardware.com/video-games/nintendo/usd21-nintendo-wii-u-upgrade-lets-you-add-tbs-of-storage-to-your-console-with-an-m-2-or-sata-ssd-upgrade-makes-console-slightly-faster-but-requires-homebrew-and-custom-firmware",
+      "summary": "You can now upgrade your Wii U from an 8GB or 32GB internal storage to more than a TB with this SSD kit. You'll have to install the Aroma c…",
+      "whyItMatters": "媒体 Tom's Hardware",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T11:42:22.000Z",
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_97330f9ed80a",
@@ -845,15 +936,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T11:20:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_cf7a6f838401",
@@ -868,15 +960,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T07:01:21.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-31T06:38:01.315Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }

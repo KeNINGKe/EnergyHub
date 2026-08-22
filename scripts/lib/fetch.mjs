@@ -92,6 +92,13 @@ export async function loadTranslationCache() {
 }
 
 export async function saveTranslationCache(cache) {
+  // 容量上限：缓存随时间只增不减会把仓库越推越大，超限淘汰最早写入的一半
+  // （JS 对象字符串键保持插入序，即最旧的先删）。
+  const MAX_ENTRIES = 6000;
+  const keys = Object.keys(cache);
+  if (keys.length > MAX_ENTRIES) {
+    for (const k of keys.slice(0, keys.length - Math.floor(MAX_ENTRIES / 2))) delete cache[k];
+  }
   await fs.writeFile(TRANSLATION_CACHE_PATH, JSON.stringify(cache, null, 2) + '\n');
 }
 

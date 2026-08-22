@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadEnums } from '../scripts/lib/schema.mjs';
-import { loadRegions, loadEntities, extractTopics, extractRegion, extractEntities, extractMetrics } from '../scripts/lib/extract.mjs';
+import { loadRegions, loadEntities, extractTopics, extractRegion, extractRegionFromParts, regionVotes, extractEntities, extractMetrics } from '../scripts/lib/extract.mjs';
 
 const enums = await loadEnums();
 const regionsConfig = await loadRegions();
@@ -77,6 +77,40 @@ test('extractRegion：欧盟（Europe 整词）', () => {
 
 test('extractRegion：无命中返回未知', () => {
   assert.equal(extractRegion('无地区信息', regionsConfig), '未知');
+});
+
+test('regionVotes：多地区命中按次数取胜，同数按最早位置', () => {
+  // 智利 1 次 + 澳大利亚 1 次 → 平票，智利在标题中位置更早
+  const r = regionVotes('Sungrow在智利赢得606MWh，Hithium在澳大利亚赢得421MW', regionsConfig);
+  assert.equal(r.region, '智利');
+  // 中国别名命中两次（中国 + Chinese）压过单次智利
+  const r2 = regionVotes('Chinese company Sungrow won a project in Chile for 中国 market', regionsConfig);
+  assert.equal(r2.region, '中国');
+});
+
+test('extractRegion：新增国家别名（智利/波兰/越南等）', () => {
+  assert.equal(extractRegion('Chile approves 1GWh BESS project', regionsConfig), '智利');
+  assert.equal(extractRegion('Poland grid adds battery capacity', regionsConfig), '波兰');
+  assert.equal(extractRegion('Vietnam solar expansion continues', regionsConfig), '越南');
+});
+
+test('extractRegionFromParts：标题优先于正文（公司国籍噪声不覆盖事件国家）', () => {
+  // 标题写明智利项目；摘要提到中国厂商——正确结果应为智利而非中国
+  const title = 'Sungrow wins 606MWh BESS deal in Chile';
+  const body = 'Chinese inverter maker Sungrow signed the contract, expanding its overseas footprint';
+  assert.equal(extractRegionFromParts(title, body, regionsConfig), '智利');
+});
+
+test('extractRegionFromParts：标题无命中退回正文，全球让位具体地区', () => {
+  assert.equal(
+    extractRegionFromParts('Battery prices keep falling', 'the global market sees China leading production', regionsConfig),
+    '中国'
+  );
+  assert.equal(
+    extractRegionFromParts('Battery prices keep falling', 'worldwide demand keeps growing', regionsConfig),
+    '全球'
+  );
+  assert.equal(extractRegionFromParts('no region here', 'nothing either', regionsConfig), '未知');
 });
 
 test('extractEntities：公司名', () => {

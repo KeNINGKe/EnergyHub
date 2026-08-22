@@ -30,6 +30,8 @@ export async function loadEnums() {
     impacts: data.impacts || [],
     regions: data.regions || {},
     priorityTopics: data.priorityTopics || [],
+    hot: data.hot || null,             // 今日热点榜配置（构建端 selectHot / 前端徽章共用）
+    categories: data.categories || [], // 精选页分类配置（前端分类栏）
     topicIds: new Set((data.topics || []).map(t => t.id)),
     sourceTypeIds: new Set((data.sourceTypes || []).map(t => t.id)),
     impactIds: new Set((data.impacts || []).map(t => t.id))
@@ -313,9 +315,32 @@ export async function validateFeatured(featured, daily, enums) {
         }
       }
     }
-    // 数量目标为软约束：不足时如实减少（PRD 7.2）
-    if (featured.featuredEventIds.length > 20) {
-      warnings.push(`精选 ${featured.featuredEventIds.length} 条，超过目标上限 20 条`);
+    // 数量目标为软约束：不足时如实减少（PRD 7.2）；上限与生成器 maxFeatured 一致
+    if (featured.featuredEventIds.length > 12) {
+      warnings.push(`精选 ${featured.featuredEventIds.length} 条，超过目标上限 12 条`);
+    }
+  }
+
+  // hotEventIds：可选（旧版 featured 无此字段），存在时校验引用与去重
+  if (featured.hotEventIds != null) {
+    if (!Array.isArray(featured.hotEventIds) || featured.hotEventIds.some(x => typeof x !== 'string')) {
+      push(errors, `hotEventIds 应为字符串数组`);
+    } else {
+      const dupHot = new Set();
+      for (const id of featured.hotEventIds) {
+        if (!id) {
+          push(errors, `hotEventIds 含空值`);
+          continue;
+        }
+        if (dupHot.has(id)) warnings.push(`hotEventIds 含重复 id: ${id}`);
+        dupHot.add(id);
+        if (daily && Array.isArray(daily.items) && !daily.items.some(it => it.id === id)) {
+          push(errors, `热点 id "${id}" 不存在于同日期 daily.json items 中`);
+        }
+      }
+      if (featured.hotEventIds.length > 10) {
+        warnings.push(`热点榜 ${featured.hotEventIds.length} 条，超过展示上限 10 条`);
+      }
     }
   }
 
@@ -372,6 +397,7 @@ export async function validateOverrides(overrides, daily) {
     stringIdArray('forcedFeaturedIds');
     stringIdArray('hiddenIds');
     stringIdArray('unfeaturedIds');
+    stringIdArray('hotEventIds');   // 整体替换今日热点榜
 
     const E = await loadEnums();
     const mapField = (field, allowedSet, label) => {

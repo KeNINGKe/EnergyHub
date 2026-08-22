@@ -8,7 +8,7 @@ const APP = await readFile(new URL('../assets/app.js', import.meta.url), 'utf8')
 /* 加载 app.js（去掉 init 自启动），导出优先级相关纯函数 */
 function loadPriority() {
   const code = APP.replace(/\ninit\(\);?\s*$/, '') + `
-    ;globalThis.__p = { getPriority, priorityEvents, sortForTimeline, sortChronological, groupByDay, renderTimeline, isNorthAmerica, isNuclear, renderTimelineItem, isValidFeatured, state };
+    ;globalThis.__p = { getPriority, renderHotList, sortForTimeline, sortChronological, groupByDay, renderTimeline, renderTimelineItem, isValidFeatured, state };
   `;
   const els = new Map();
   const ctx = vm.createContext({
@@ -37,15 +37,15 @@ test('isValidFeatured：拒绝缺失、结构错误和跨日期数据', () => {
   assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-10', observations: null, featuredEventIds: [] }, daily), false);
 });
 
-test('isNorthAmerica：美国/加拿大为北美，其余不是', () => {
+test('isNorthAmerica 判定已迁至构建端配置：前端 getPriority 按 regionBoost 置顶北美', () => {
   const t = loadPriority();
-  assert.equal(t.isNorthAmerica(ev({ region: '美国' })), true);
-  assert.equal(t.isNorthAmerica(ev({ region: '加拿大' })), true);
-  assert.equal(t.isNorthAmerica(ev({ region: '北美' })), true);
-  assert.equal(t.isNorthAmerica(ev({ region: '中国' })), false);
-  assert.equal(t.isNorthAmerica(ev({ region: '未知' })), false);
-  assert.equal(t.isNorthAmerica(ev({ region: '全球' })), false);
-  assert.equal(t.isNorthAmerica(ev({ region: '欧盟' })), false);
+  // 前端不再导出 isNorthAmerica/priorityEvents；北美置顶效果通过 getPriority rank 体现
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '美国' })).rank, 0);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '加拿大' })).rank, 0);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '北美' })).rank, 0);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '中国' })).rank, 1);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '未知' })).rank, 1);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '欧盟' })).rank, 1);
 });
 
 test('getPriority：储能/AIDC 最高，北美最优先，发电次级', () => {
@@ -71,23 +71,19 @@ test('getPriority：储能/AIDC 最高，北美最优先，发电次级', () => 
   assert.equal(other.label, '');
 });
 
-test('priorityEvents：只收储能/AIDC，排除核电，北美优先', () => {
+test('renderHotList：按构建端 featured.hotEventIds 渲染，空/缺失时返回空串', () => {
   const t = loadPriority();
-  const events = [
-    ev({ id: 'a', topic: 'energy-storage', region: '中国', importance: 0.9 }),
-    ev({ id: 'b', topic: 'aidc-project', region: '美国', importance: 0.4 }),
-    ev({ id: 'c', topic: 'energy-storage', region: '加拿大', importance: 0.3 }),
-    ev({ id: 'd', topic: 'nuclear-smr', region: '美国', importance: 0.99 }),
-    ev({ id: 'e', topic: 'solar-wind', region: '美国', importance: 0.8 }),
-    ev({ id: 'f', topic: 'energy-storage', region: '未知', title: 'nuclear 反应堆', importance: 0.7 })
-  ];
-  const top = t.priorityEvents(events);
-  // Array.from 转回测试域普通数组（vm 返回的数组原型不同，deepStrictEqual 会误报）
-  assert.deepEqual(Array.from(top, e => e.id), ['b', 'c', 'a'],
-    '北美 rank0 优先（b 美国、c 加拿大），非北美按 importance（a 0.9）');
-  assert.ok(!top.some(e => e.id === 'd'), '核电被排除');
-  assert.ok(!top.some(e => e.id === 'e'), '非储能/AIDC 被排除');
-  assert.ok(!top.some(e => e.id === 'f'), '标题含核电关键词被排除');
+  const a = ev({ id: 'a', topic: 'energy-storage', region: '中国', importance: 0.9, url: 'https://a.com/1', title: '储能A' });
+  const b = ev({ id: 'b', topic: 'aidc-project', region: '美国', importance: 0.4, url: 'https://b.com/2', title: 'AIDC B' });
+  t.state.eventMap = new Map([['a', a], ['b', b]]);
+  t.state.featured = { hotEventIds: ['b', 'a'] };
+  const html = t.renderHotList();
+  assert.ok(html.includes('储能A') && html.includes('AIDC B'), '两条热点均渲染');
+  assert.ok(html.indexOf('AIDC B') < html.indexOf('储能A'), '按构建端给定的顺序渲染');
+  t.state.featured = { hotEventIds: [] };
+  assert.equal(t.renderHotList(), '', '空榜单返回空串');
+  t.state.featured = null;
+  assert.equal(t.renderHotList(), '', 'featured 缺失时返回空串');
 });
 
 test('sortForTimeline：北美储能/AIDC → 储能/AIDC → 发电 → 其他', () => {

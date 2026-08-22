@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-07-30",
-  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "generatedAt": "2026-07-30T06:21:07.937Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 0,
@@ -11,17 +11,90 @@
   },
   "items": [
     {
+      "id": "evt_e01f48bd9671",
+      "title": "随着半导体设计中Agentic AI的需求增长， ChipAgents将A系列扩展至1.34亿美元（ $ ）",
+      "originalTitle": "ChipAgents Expands Series A to $134M as Demand Grows for Agentic AI in Semiconductor Design",
+      "url": "https://www.hpcwire.com/off-the-wire/chipagents-expands-series-a-funding-to-134m-as-demand-grows-for-agentic-ai-in-semiconductor-design/",
+      "summary": "SANTA CLARA, Calif., July 29, 2026 — ChipAgents has announced an additional $60 million in Series A2 financing, bringing the expanded round…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 1.34亿美元；关联 Micron；媒体 HPCwire",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Micron"
+      ],
+      "metrics": [
+        {
+          "label": "A系列扩展至",
+          "value": 1.34,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T19:41:06.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [
+        {
+          "name": "HPCwire",
+          "url": "https://www.hpcwire.com/off-the-wire/eliyan-secures-145m-to-expand-ai-optical-interconnect-platform/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_5e0c79ed0192",
+      "title": "原油价格下跌导致2025年美加能源贸易额下降",
+      "originalTitle": "Lower crude oil prices reduced U.S.-Canada energy trade value in 2025",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=67904",
+      "summary": "The value of energy trade between the United States and Canada fell by 11% in 2025 to an estimated $137 billion, according to data from the…",
+      "whyItMatters": "电力市场与政策；关键数字 11%、69%；地区 美国；一手来源 EIA Electricity Data",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Canada fell by",
+          "value": 11,
+          "unit": "%"
+        },
+        {
+          "label": "trade, making up",
+          "value": 69,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-07-29T14:00:00.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
       "id": "evt_d4e2521249b2",
       "title": "特斯拉与ContourGlobal签署涵盖1太瓦时/年英镑可再生能源项目的长期电力协议",
       "originalTitle": "Tesla & ContourGlobal Sign Long-Term Power Agreement Covering 1 Terawatt-Hour/Year for Sterling Renewable Project",
       "url": "https://cleantechnica.com/2026/07/29/tesla-contourglobal-sign-long-term-power-agreement-covering-1-terawatt-hour-year-for-sterling-renewable-project/",
       "summary": "This is one of the largest solar-plus-battery storage corporate PPA ever signed from a single plant in the U.S., and it will be served by t…",
-      "whyItMatters": "储能；关键数字 1.4GWh；关联 Tesla；媒体 CleanTechnica",
+      "whyItMatters": "储能；关键数字 1.4GWh；关联 Tesla、特斯拉；地区 美国；媒体 CleanTechnica",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [
-        "Tesla"
+        "Tesla",
+        "特斯拉"
       ],
       "metrics": [
         {
@@ -31,15 +104,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 4,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T02:29:07.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_17c8462bd4c4",
@@ -58,21 +132,22 @@
       ],
       "metrics": [
         {
-          "label": "Energy recorded a",
+          "label": "rded a",
           "value": 9.5,
           "unit": "%"
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 4,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T14:19:32.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_862a73dd86dc",
@@ -110,15 +185,43 @@
         }
       ],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 4,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T10:46:34.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9f082c22f01f",
+      "title": "美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
+      "originalTitle": "DOE mulls changes to Biden-era transformer rule, raising utility concerns",
+      "url": "https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/",
+      "summary": "Utility associations supported the 2024 efficiency requirements for distribution transformers and oppose their repeal. The rule may threate…",
+      "whyItMatters": "固态变压器（SST）；关联 DOE、美国能源部；地区 美国；媒体 Utility Dive",
+      "topic": "sst",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "DOE",
+        "美国能源部"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T10:40:40.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b4f5d9ea74c9",
@@ -139,15 +242,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T05:17:40.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_38201b999385",
@@ -155,8 +259,8 @@
       "originalTitle": "“The 50 States of Solar” Report — Q2 2026",
       "url": "https://cleantechnica.com/2026/07/29/the-50-states-of-solar-report-q2-2026/",
       "summary": "The Q2 2026 edition of “The 50 States of Solar” report finds that 45 states, plus the District of Columbia and Puerto Rico, took some type…",
-      "whyItMatters": "电力市场与政策；关键数字 2026w；媒体 CleanTechnica",
-      "topic": "power-market-policy",
+      "whyItMatters": "光伏与风电；关键数字 2026w；媒体 CleanTechnica",
+      "topic": "solar-wind",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -168,15 +272,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-30T00:45:07.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_068f6899fd11",
@@ -197,15 +302,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T16:40:53.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_8a0b414bc6e9",
@@ -231,15 +337,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T12:52:29.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c696cea177bc",
@@ -247,8 +354,8 @@
       "originalTitle": "Serbia adds 61 MW of solar in H1",
       "url": "https://www.pv-magazine.com/2026/07/29/serbia-adds-61-mw-of-solar-in-h1/",
       "summary": "After the first six months of the year, Serbia’s solar capacity reached around 379 MW. While the country’s green energy market has been imp…",
-      "whyItMatters": "电网与并网；关键数字 61MW、379MW；地区 全球；媒体 pv magazine",
-      "topic": "grid",
+      "whyItMatters": "光伏与风电；关键数字 61MW、61兆瓦、379MW；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
       "tags": [],
       "region": "全球",
       "entities": [],
@@ -259,21 +366,27 @@
           "unit": "MW"
         },
         {
+          "label": "亚在H1新增",
+          "value": 61,
+          "unit": "兆瓦"
+        },
+        {
           "label": "capacity reached around",
           "value": 379,
           "unit": "MW"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T11:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_02441caed6be",
@@ -281,7 +394,7 @@
       "originalTitle": "Italy gives 599 MW agrivoltaic project positive environmental assessment",
       "url": "https://www.pv-magazine.com/2026/07/29/italy-gives-599-mw-agrivoltaic-project-positive-environmental-assessment/",
       "summary": "Italy's Ministry of the Environment and Energy Security has given a positive environmental impact assessment to a planned 599 MW agrivoltai…",
-      "whyItMatters": "光伏与风电；关键数字 599MW；地区 意大利；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 599MW、599兆瓦；地区 意大利；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
       "region": "意大利",
@@ -291,258 +404,24 @@
           "label": "Italy gives",
           "value": 599,
           "unit": "MW"
+        },
+        {
+          "label": "意大利给予",
+          "value": 599,
+          "unit": "兆瓦"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T09:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_b169205cb30c",
-      "title": "阿贡黑客马拉松帮助研究人员加速极光的科学发现",
-      "originalTitle": "Argonne Hackathon Helps Researchers Accelerate Scientific Discovery on Aurora",
-      "url": "https://www.hpcwire.com/off-the-wire/argonne-hackathon-helps-researchers-accelerate-scientific-discovery-on-aurora/",
-      "summary": "July 29, 2026 — The Argonne Leadership Computing Facility (ALCF) recently hosted its annual hackathon, bringing together researchers and de…",
-      "whyItMatters": "关联 DOE；媒体 HPCwire",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "DOE"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T20:19:01.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_e01f48bd9671",
-      "title": "随着半导体设计中Agentic AI的需求增长， ChipAgents将A系列扩展至1.34亿美元（ $ ）",
-      "originalTitle": "ChipAgents Expands Series A to $134M as Demand Grows for Agentic AI in Semiconductor Design",
-      "url": "https://www.hpcwire.com/off-the-wire/chipagents-expands-series-a-funding-to-134m-as-demand-grows-for-agentic-ai-in-semiconductor-design/",
-      "summary": "SANTA CLARA, Calif., July 29, 2026 — ChipAgents has announced an additional $60 million in Series A2 financing, bringing the expanded round…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Micron；媒体 HPCwire",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Micron"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T19:41:06.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_f5dd6becf11b",
-      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
-      "originalTitle": "DOE Selects Brookfield and NextEra for $100B Kentucky AI Data Center Project",
-      "url": "https://www.hpcwire.com/off-the-wire/doe-selects-brookfield-and-nextera-for-100b-kentucky-ai-data-center-project/",
-      "summary": "WASHINGTON, July 29, 2026 — The U.S. Department of Energy (DOE) today announced a partnership with Brookfield, NextEra Energy, Big Rivers E…",
-      "whyItMatters": "AIDC 项目与区域布局；关联 NextEra、NextEra Energy、DOE；媒体 HPCwire",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NextEra",
-        "NextEra Energy",
-        "DOE"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T18:46:09.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_b1bdebeec806",
-      "title": "为东帝汶首个太阳能储能项目获得融资",
-      "originalTitle": "Financing secured for Timor-Leste’s first solar-storage project",
-      "url": "https://www.pv-magazine.com/2026/07/29/financing-secured-for-timor-lestes-first-solar-storage-project/",
-      "summary": "The Asian Development Bank, World Bank and investors from Canada and Japan have partnered on a $85.7 million financing package for Timor-Le…",
-      "whyItMatters": "光伏与风电；关联 First Solar；地区 日本；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "日本",
-      "entities": [
-        "First Solar"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T09:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_7bb52a78d8d1",
-      "title": "首创研究调查加速和加州太阳能发展停滞的因素",
-      "originalTitle": "First-of-Its-Kind Research Examines the Factors Accelerating — and Stalling — Solar Progress in California",
-      "url": "https://cleantechnica.com/2026/07/29/first-of-its-kind-research-examines-the-factors-accelerating-and-stalling-solar-progress-in-california/",
-      "summary": "New research from The Nature Conservancy in California (TNC) and ECOnorthwest shows that where California builds utility‑scale solar determ…",
-      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T02:19:06.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_6a2ffc02b8c2",
-      "title": "AirTrunk表示，澳大利亚应将数据中心视为清洁能源基础设施的“主要租户”",
-      "originalTitle": "Australia should treat data centres as ‘anchor tenants’ for clean energy infrastructure, says AirTrunk",
-      "url": "https://www.energy-storage.news/australia-should-treat-data-centres-as-anchor-tenants-for-clean-energy-infrastructure-says-airtrunk/",
-      "summary": "Large data centres should serve as “anchor tenants” for new renewable energy generation, storage, and transmission investment, leveraging t…",
-      "whyItMatters": "电网与并网；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "grid",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T02:17:10.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_2118b0e039fd",
-      "title": "问答：欧盟的碳市场审查对气候行动意味着什么",
-      "originalTitle": "Q&A: What the EU’s Carbon Market Review Means for Climate Action",
-      "url": "https://cleantechnica.com/2026/07/29/qa-what-the-eus-carbon-market-review-means-for-climate-action/",
-      "summary": "Article from Carbon Brief. The European Commission has put forward new plans to cut emissions under the EU carbon market more slowly, from…",
-      "whyItMatters": "电力市场与政策；媒体 CleanTechnica",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-30T01:06:37.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_0c3773d58c7e",
-      "title": "混合内存结合NAND闪存和DRAM ，实现更快的数据传输（首尔）",
-      "originalTitle": "Hybrid Memory Combines NAND Flash And DRAM For Faster Data Transfer (U. of Seoul)",
-      "url": "https://semiengineering.com/nad-memory-combines-nand-flash-and-dram-for-faster-data-transfer-u-of-seoul/",
-      "summary": "Researchers from University of Seoul published a technical paper titled “NAD Memory: A Hybrid Memory Device Combined with NAND Flash Memory…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T23:00:06.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_400dfcbc6a18",
-      "title": "来自晶圆制造前体的可部署3D结构（休斯顿大学、丰田、伦敦帝国理工学院）",
-      "originalTitle": "Deployable 3D Structures from Wafer-Fabricated Precursors (U. of Houston, Toyota, Imperial College London)",
-      "url": "https://semiengineering.com/deployable-3d-structures-from-wafer-fabricated-precursors-u-of-houston-toyota-imperial-college-london/",
-      "summary": "Researchers from University of Houston, Toyota, and Imperial College London published a technical paper titled “Deployable 3D Architectures…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T22:32:14.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_ac632c0bdf05",
-      "title": "特朗普联邦调查局利用太阳能审查批准了公共土地上的第一个人工智能数据中心",
-      "originalTitle": "Trump feds use a solar review to approve the first AI data center on public land",
-      "url": "https://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
-      "summary": "Apparently, a 19-megawatt (MW) solar farm and a 167-MW AI data center are “substantially the same” – at least according to the Trump admini…",
-      "whyItMatters": "AIDC 项目与区域布局；媒体 Electrek",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T22:03:08.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_db13be1f325b",
@@ -557,15 +436,264 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 3,
       "source": {
         "name": "Uptime Institute Journal",
         "type": "research",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T22:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b169205cb30c",
+      "title": "阿贡黑客马拉松帮助研究人员加速极光的科学发现",
+      "originalTitle": "Argonne Hackathon Helps Researchers Accelerate Scientific Discovery on Aurora",
+      "url": "https://www.hpcwire.com/off-the-wire/argonne-hackathon-helps-researchers-accelerate-scientific-discovery-on-aurora/",
+      "summary": "July 29, 2026 — The Argonne Leadership Computing Facility (ALCF) recently hosted its annual hackathon, bringing together researchers and de…",
+      "whyItMatters": "关联 DOE；地区 美国；媒体 HPCwire",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "DOE"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T20:19:01.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f5dd6becf11b",
+      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
+      "originalTitle": "DOE Selects Brookfield and NextEra for $100B Kentucky AI Data Center Project",
+      "url": "https://www.hpcwire.com/off-the-wire/doe-selects-brookfield-and-nextera-for-100b-kentucky-ai-data-center-project/",
+      "summary": "WASHINGTON, July 29, 2026 — The U.S. Department of Energy (DOE) today announced a partnership with Brookfield, NextEra Energy, Big Rivers E…",
+      "whyItMatters": "AIDC 项目与区域布局；关联 NextEra、NextEra Energy、DOE；地区 美国；媒体 HPCwire",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "NextEra",
+        "NextEra Energy",
+        "DOE"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T18:46:09.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b1bdebeec806",
+      "title": "为东帝汶首个太阳能储能项目获得融资",
+      "originalTitle": "Financing secured for Timor-Leste’s first solar-storage project",
+      "url": "https://www.pv-magazine.com/2026/07/29/financing-secured-for-timor-lestes-first-solar-storage-project/",
+      "summary": "The Asian Development Bank, World Bank and investors from Canada and Japan have partnered on a $85.7 million financing package for Timor-Le…",
+      "whyItMatters": "光伏与风电；关联 First Solar；地区 加拿大；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "加拿大",
+      "entities": [
+        "First Solar"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T09:30:00.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_7bb52a78d8d1",
+      "title": "首创研究调查加速和加州太阳能发展停滞的因素",
+      "originalTitle": "First-of-Its-Kind Research Examines the Factors Accelerating — and Stalling — Solar Progress in California",
+      "url": "https://cleantechnica.com/2026/07/29/first-of-its-kind-research-examines-the-factors-accelerating-and-stalling-solar-progress-in-california/",
+      "summary": "New research from The Nature Conservancy in California (TNC) and ECOnorthwest shows that where California builds utility‑scale solar determ…",
+      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T02:19:06.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6a2ffc02b8c2",
+      "title": "AirTrunk表示，澳大利亚应将数据中心视为清洁能源基础设施的“主要租户”",
+      "originalTitle": "Australia should treat data centres as ‘anchor tenants’ for clean energy infrastructure, says AirTrunk",
+      "url": "https://www.energy-storage.news/australia-should-treat-data-centres-as-anchor-tenants-for-clean-energy-infrastructure-says-airtrunk/",
+      "summary": "Large data centres should serve as “anchor tenants” for new renewable energy generation, storage, and transmission investment, leveraging t…",
+      "whyItMatters": "电网与并网；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "grid",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T02:17:10.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2118b0e039fd",
+      "title": "问答：欧盟的碳市场审查对气候行动意味着什么",
+      "originalTitle": "Q&A: What the EU’s Carbon Market Review Means for Climate Action",
+      "url": "https://cleantechnica.com/2026/07/29/qa-what-the-eus-carbon-market-review-means-for-climate-action/",
+      "summary": "Article from Carbon Brief. The European Commission has put forward new plans to cut emissions under the EU carbon market more slowly, from…",
+      "whyItMatters": "电力市场与政策；地区 欧盟；媒体 CleanTechnica",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-30T01:06:37.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0c3773d58c7e",
+      "title": "混合内存结合NAND闪存和DRAM ，实现更快的数据传输（首尔）",
+      "originalTitle": "Hybrid Memory Combines NAND Flash And DRAM For Faster Data Transfer (U. of Seoul)",
+      "url": "https://semiengineering.com/nad-memory-combines-nand-flash-and-dram-for-faster-data-transfer-u-of-seoul/",
+      "summary": "Researchers from University of Seoul published a technical paper titled “NAD Memory: A Hybrid Memory Device Combined with NAND Flash Memory…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T23:00:06.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_752bee0d81b9",
+      "title": "用于互补BEOL CMOS的带氧化物N沟道晶体管的2D P型半导体（斯坦福，汉阳）",
+      "originalTitle": "2D P-Type Semiconductors with Oxide N-Channel Transistors For Complementary BEOL CMOS (Stanford, Hanyang)",
+      "url": "https://semiengineering.com/2d-p-type-semiconductors-with-oxide-n-channel-transistors-for-complementary-beol-cmos-stanford-hanyang/",
+      "summary": "Researchers from Stanford University and Hanyang University published a technical paper titled “Bridging the p-type gap in oxide electronic…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T22:45:54.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_400dfcbc6a18",
+      "title": "来自晶圆制造前体的可部署3D结构（休斯顿大学、丰田、伦敦帝国理工学院）",
+      "originalTitle": "Deployable 3D Structures from Wafer-Fabricated Precursors (U. of Houston, Toyota, Imperial College London)",
+      "url": "https://semiengineering.com/deployable-3d-structures-from-wafer-fabricated-precursors-u-of-houston-toyota-imperial-college-london/",
+      "summary": "Researchers from University of Houston, Toyota, and Imperial College London published a technical paper titled “Deployable 3D Architectures…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T22:32:14.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ac632c0bdf05",
+      "title": "特朗普联邦调查局利用太阳能审查批准了公共土地上的第一个人工智能数据中心",
+      "originalTitle": "Trump feds use a solar review to approve the first AI data center on public land",
+      "url": "https://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
+      "summary": "Apparently, a 19-megawatt (MW) solar farm and a 167-MW AI data center are “substantially the same” – at least according to the Trump admini…",
+      "whyItMatters": "光伏与风电；媒体 Electrek",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T22:03:08.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_463f1c86cccc",
@@ -580,15 +708,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T21:00:17.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_2e407bae6f95",
@@ -603,15 +732,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T21:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_688d591f3464",
@@ -626,84 +756,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T20:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_9baba95e713e",
-      "title": "Eliyan获得1.45亿美元$以扩展AI光纤互连平台",
-      "originalTitle": "Eliyan Secures $145M to Expand AI Optical Interconnect Platform",
-      "url": "https://www.hpcwire.com/off-the-wire/eliyan-secures-145m-to-expand-ai-optical-interconnect-platform/",
-      "summary": "SANTA CLARA, Calif., July 29, 2026 — Eliyan Corporation, a leader in foundational connectivity technologies enabling next-generation AI com…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 HPCwire",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T20:04:43.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_3c42e5888dc3",
-      "title": "新款梅赛德斯GLA EV更大、更智能，续航里程超过400英里",
-      "originalTitle": "The new Mercedes GLA EV is bigger, smarter, and has a range of over 400 miles",
-      "url": "https://electrek.co/2026/07/29/new-mercedes-gla-ev-bigger-400-miles-range/",
-      "summary": "Mercedes-Benz gave its smallest SUV a glow-up. The new electric GLA offers more space for passengers, ultra-fast charging, and a range of o…",
-      "whyItMatters": "媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T19:53:51.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_6291ac467cb7",
-      "title": "法拉利$ 640K的Luce EV在2026年售罄：约500辆",
-      "originalTitle": "Ferrari’s $640K Luce EV sells out 2026 allocation: ~500 units",
-      "url": "https://electrek.co/2026/07/29/ferrari-luce-ev-sold-out-2026-allocation/",
-      "summary": "Ferrari has already sold every Luce it plans to build in 2026. The automaker’s first electric car hit its full-year sales target — just und…",
-      "whyItMatters": "电力市场与政策；媒体 Electrek",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T17:44:24.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c7f412789ec4",
@@ -718,38 +780,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T17:22:20.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_33874721251b",
-      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
-      "originalTitle": "Two solid-state EV battery leaders are joining forces to scale the ‘breakthrough’ tech",
-      "url": "https://electrek.co/2026/07/29/solid-state-ev-battery-leaders-team-up/",
-      "summary": "SK On and Factorial Energy announced a new alliance that will focus on bringing solid-state batteries to the masses.",
-      "whyItMatters": "储能；媒体 Electrek",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-29T16:51:40.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c434b85db545",
@@ -764,15 +804,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T16:12:01.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_68af745cefed",
@@ -787,15 +828,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T14:35:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_b475e8dfd34b",
@@ -810,15 +852,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T14:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_55043954f4ee",
@@ -833,15 +876,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T13:06:16.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d23cdc276c88",
@@ -856,15 +900,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T12:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_90cc8fc875fa",
@@ -879,15 +924,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T10:56:03.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_2c834426e95a",
@@ -902,15 +948,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T09:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_257a7dc6db05",
@@ -918,22 +965,23 @@
       "originalTitle": "EPA proposals to keep Indiana coal going would threaten drinking water",
       "url": "https://www.canarymedia.com/articles/fossil-fuels/epa-indiana-coal-threaten-drinking-water",
       "summary": "Indiana — a state with a long history of coal mining and coal-fired power — has started undergoing a clean energy transition in recent year…",
-      "whyItMatters": "光伏与风电；媒体 Canary Media",
-      "topic": "solar-wind",
+      "whyItMatters": "其他能源动态；地区 美国；媒体 Canary Media",
+      "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_1dbdbf3dfc0a",
@@ -948,15 +996,40 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-29T07:01:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1dbaedbd2d72",
+      "title": "我们是否应该对特朗普后清洁能源的发展轨迹感到满意？",
+      "originalTitle": "Should we feel good about the trajectory of clean energy post-Trump? ",
+      "url": "https://www.volts.wtf/p/should-we-feel-good-about-the-trajectory",
+      "summary": "A conversation with Lily Bermel.",
+      "whyItMatters": "社区 Volts",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Volts",
+        "type": "community",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-29T10:06:08.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }

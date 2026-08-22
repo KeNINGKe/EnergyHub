@@ -119,9 +119,10 @@ export function isRelevant(text, filters) {
   return classify(text, filters).relevant;
 }
 
-/** 对条目（含 title/summary 字段）判定，供管线使用。 */
+/** 对条目（含 title/summary 字段）判定，供管线使用。
+ * 翻译标题一并参与判定，让中文过滤词对英文信源生效。 */
 export function classifyItem(item, filters) {
-  const text = `${item.title || ''} ${item.summary || ''}`;
+  const text = `${item.title || ''} ${item.translatedTitle || ''} ${item.summary || ''}`;
   return classify(text, filters);
 }
 

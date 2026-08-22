@@ -8,8 +8,9 @@
  *
  * 支持：
  *   forcedFeaturedIds  强制入选精选（必须存在于 daily）
- *   hiddenIds          从全部动态隐藏
+ *   hiddenIds          从全部动态隐藏（同步移出精选与热点榜）
  *   unfeaturedIds      取消精选
+ *   hotEventIds        整体替换今日热点榜（必须存在于 daily）
  *   topics / impacts   修正字段（枚举合法才生效）
  *   summaries / whyItMatters 覆盖文本
  *   observations       覆盖今日观察
@@ -56,12 +57,30 @@ export function applyOverrides(daily, featured, config, enums) {
 
   const ensure = (list) => Array.isArray(list) ? list : [];
 
-  // 1. 隐藏事件
+  // 1. 隐藏事件（同步移出精选与热点榜，避免引用悬空导致校验失败）
   for (const id of ensure(config.hiddenIds)) {
     const ev = byId.get(id);
     if (!ev) { errors.push(`hiddenIds 引用不存在的 id: ${id}`); continue; }
     daily.items = daily.items.filter(e => e.id !== id);
     byId.delete(id);
+    featured.featuredEventIds = featured.featuredEventIds.filter(x => x !== id);
+    if (Array.isArray(featured.hotEventIds)) {
+      featured.hotEventIds = featured.hotEventIds.filter(x => x !== id);
+    }
+  }
+
+  // 1.5 今日热点榜整体替换（在隐藏之后执行，引用仍存在的 id）
+  if (config.hotEventIds != null) {
+    if (!Array.isArray(config.hotEventIds)) {
+      errors.push('hotEventIds 应为字符串数组');
+    } else {
+      const next = [];
+      for (const id of config.hotEventIds) {
+        if (!byId.has(id)) { errors.push(`hotEventIds 引用不存在的 id: ${id}`); continue; }
+        if (!next.includes(id)) next.push(id);
+      }
+      featured.hotEventIds = next;
+    }
   }
 
   // 2. 强制精选（存在才加入，且不重复）

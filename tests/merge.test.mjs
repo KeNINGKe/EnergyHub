@@ -59,6 +59,25 @@ test('eventSimilarity：同主题+共享数字+标题相似 → 高分合并', (
   assert.ok(signals.length >= 2, signals.join(','));
 });
 
+test('eventSimilarity：标题近重复单独即可合并（主题/实体提取不一致的漏合场景）', () => {
+  const a = item({ title: 'Tesla Megapack project in Texas', topic: 'energy-storage' });
+  const b = item({ title: 'Tesla Megapack storage project in Texas', topic: null });
+  const { score } = eventSimilarity(a, b);
+  assert.ok(score >= 0.45, `score=${score} 应达门槛`);
+});
+
+test('eventSimilarity：中等标题相似无佐证不合并不足门槛', () => {
+  const a = item({ title: 'Solar panel price drops in Q3', topic: 'solar-wind' });
+  const b = item({ title: 'Solar panel price drops again this quarter', topic: 'solar-wind' });
+  const { score } = eventSimilarity(a, b);
+  // 同主题 + 中等相似 = 0.5，可过；但去掉同主题后仅标题信号不足
+  const c = item({ title: 'Solar panel price drops in Q3' });
+  const d = item({ title: 'Solar panel price drops again this quarter' });
+  const { score: s2 } = eventSimilarity(c, d);
+  assert.ok(score >= 0.45);
+  assert.ok(s2 < 0.45, `仅中等标题相似 score=${s2} 不应过门槛`);
+});
+
 test('eventSimilarity：超时间窗口不合并', () => {
   const a = item({ title: 'Same event', topic: 'grid' });
   const b = item({ title: 'Same event', topic: 'grid', publishedAt: '2026-08-10T02:00:00Z' });

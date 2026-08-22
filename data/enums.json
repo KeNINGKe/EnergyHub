@@ -94,6 +94,32 @@
     }
   ],
   "priorityTopics": ["sst", "pcs", "ems"],
+  "hot": {
+    "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC），secondaryTopics=次级档（发电），regionBoost=最高档内北美置顶，exclude=核电极外（产品决策：核电不进热点榜）。修改后构建端与前端同时生效。",
+    "topics": ["energy-storage", "aidc-project"],
+    "labels": { "energy-storage": "储能", "aidc-project": "AIDC" },
+    "secondaryTopics": ["gas-backup", "nuclear-smr"],
+    "secondaryLabels": { "gas-backup": "发电", "nuclear-smr": "发电" },
+    "keywordLabels": [
+      { "pattern": "燃气轮机|燃气发电|燃气机组|燃气联合循环|gas\\s*turbine|turbine", "label": "发电" },
+      { "pattern": "\\bPCS\\b|储能变流器|变流器", "label": "发电" },
+      { "pattern": "\\bSST\\b|固态变压器|solid\\s*state\\s*transformer", "label": "发电" }
+    ],
+    "regionBoost": ["美国", "加拿大", "北美"],
+    "maxItems": 5,
+    "exclude": {
+      "topics": ["nuclear-smr"],
+      "keywords": ["核电", "核电站", "核反应堆", "核电机组", "小型模块化反应堆", "SMR", "nuclear"]
+    }
+  },
+  "categories": [
+    { "id": "all", "label": "全部", "topics": [], "keywords": [] },
+    { "id": "pcs", "label": "PCS", "topics": ["pcs"], "keywords": [] },
+    { "id": "sst", "label": "SST", "topics": ["sst"], "keywords": ["变压器", "transformer", "固态变压器", "solid[- ]state transformer", "中压", "电力电子"] },
+    { "id": "ems", "label": "EMS", "topics": ["ems"], "keywords": ["\\bEMS\\b", "能量管理系统", "储能EMS", "能量管理", "\\bVPP\\b", "虚拟电厂", "DERMS"] },
+    { "id": "storage", "label": "储能", "topics": ["energy-storage"], "keywords": [] },
+    { "id": "aidc", "label": "AIDC", "topics": ["data-center-power", "aidc-project", "cooling-pue"], "keywords": ["800\\s*VDC", "power architecture", "电源架构", "直流供电"] }
+  ],
   "sourceTypes": [
     { "id": "primary", "label": "一手来源", "description": "政府、监管机构、公司公告、项目文件等原始发布方" },
     { "id": "media", "label": "媒体", "description": "行业媒体与综合媒体的报道" },
@@ -114,7 +140,8 @@
       "全球", "未知",
       "中国", "美国", "欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙",
       "日本", "韩国", "印度", "澳大利亚", "加拿大", "新加坡", "马来西亚",
-      "东南亚", "中东", "沙特", "阿联酋", "拉美", "非洲", "俄罗斯"
+      "东南亚", "中东", "沙特", "阿联酋", "拉美", "非洲", "俄罗斯",
+      "意大利", "智利", "波兰", "菲律宾", "越南", "泰国", "印尼", "土耳其", "乌克兰"
     ]
   }
 }

@@ -6,6 +6,8 @@
  *   - 来源类型质量（primary 2 / research 1.5 / media 1 / community 0.5）
  *   - 有关键数字 +1、有实体 +0.5、有摘要 +0.5
  *   - 时效：24h 内 +1、72h 内 +0.5
+ *   - 多源报道：每有 1 家其他信源报道同一事件 +0.5，封顶 +1.5
+ *     （合并聚类给出的 relatedSources 是「事件重要性」最可靠的免费代理指标）
  *
  * 用法：
  *   import { importance, capPerSource } from './score.mjs';
@@ -34,6 +36,9 @@ export function importance(item, ctx = {}) {
     else if (ageH <= 72) s += 0.5;
   }
   if (Array.isArray(ctx.priorityTopics) && ctx.priorityTopics.includes(item.topic)) s += 1;
+  // 多源报道：合并聚类中其他信源的数量，1 家 +0.5，封顶 +1.5（≥3 家视为充分交叉验证）
+  const related = item.relatedSources?.length || 0;
+  if (related > 0) s += Math.min(1.5, related * 0.5);
   return Math.round(s * 10) / 10;
 }
 

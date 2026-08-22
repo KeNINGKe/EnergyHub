@@ -172,9 +172,9 @@ test('精选 ID 不存在于 daily 时报错', async () => {
   assert.ok(r.errors.some(e => e.includes('不存在')));
 });
 
-test('精选超过 20 条给 warning 而不报错', async () => {
+test('精选超过 12 条给 warning 而不报错', async () => {
   // 不传 daily，跳过 ID 存在性检查，只验证数量上限是软约束
-  const ids = Array.from({ length: 22 }, (_, i) => `evt_zzz00000000${String(i).padStart(2, '0')}`);
+  const ids = Array.from({ length: 14 }, (_, i) => `evt_zzz00000000${String(i).padStart(2, '0')}`);
   const featured = {
     schemaVersion: 1,
     date: '2026-08-05',
@@ -187,8 +187,8 @@ test('精选超过 20 条给 warning 而不报错', async () => {
   assert.ok(r.warnings.some(w => w.includes('超过')));
 });
 
-test('精选 20 条以内不报 warning', async () => {
-  const ids = Array.from({ length: 20 }, (_, i) => `evt_zzz00000000${String(i).padStart(2, '0')}`);
+test('精选 12 条以内不报 warning', async () => {
+  const ids = Array.from({ length: 12 }, (_, i) => `evt_zzz00000000${String(i).padStart(2, '0')}`);
   const featured = {
     schemaVersion: 1,
     date: '2026-08-05',
@@ -198,7 +198,19 @@ test('精选 20 条以内不报 warning', async () => {
   };
   const r = await validateFeatured(featured, null);
   assert.equal(r.valid, true);
-  assert.ok(!r.warnings.some(w => w.includes('超过')), '20 条以内不应触发上限 warning');
+  assert.ok(!r.warnings.some(w => w.includes('超过')), '12 条以内不应触发上限 warning');
+});
+
+test('hotEventIds：合法引用通过，悬空引用报错，缺失字段不报错（旧数据兼容）', async () => {
+  const daily = makeValidDaily();
+  const base = { schemaVersion: 1, date: '2026-08-05', generatedAt: '2026-08-05T04:00:00.000Z', observations: [], featuredEventIds: ['evt_abcdef123456'] };
+  const ok = await validateFeatured({ ...base, hotEventIds: ['evt_abcdef123456'] }, daily);
+  assert.equal(ok.valid, true, JSON.stringify(ok.errors));
+  const bad = await validateFeatured({ ...base, hotEventIds: ['evt_nonexistent00'] }, daily);
+  assert.equal(bad.valid, false);
+  assert.ok(bad.errors.some(e => e.includes('热点')));
+  const legacy = await validateFeatured(base, daily);
+  assert.equal(legacy.valid, true, '无 hotEventIds 的旧版 featured 应兼容');
 });
 
 /* ===== editorial-overrides.json ===== */

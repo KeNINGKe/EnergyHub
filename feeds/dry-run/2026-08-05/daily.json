@@ -7,7 +7,7 @@
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 71,
-    "eventsPublished": 45
+    "eventsPublished": 48
   },
   "items": [
     {
@@ -46,12 +46,13 @@
       "originalTitle": "Kioxia and Sandisk Reveal Next-Gen QLC Flash with Greater Density and Efficiency",
       "url": "https://www.hpcwire.com/off-the-wire/kioxia-and-sandisk-reveal-next-gen-qlc-flash-with-greater-density-and-efficiency/",
       "summary": "SANTA CLARA, Calif., Aug. 4, 2026 — Kioxia Corporation, a subsidiary of Kioxia Holdings Corporation, and Sandisk Corporation today unveiled…",
-      "whyItMatters": "冷却、UPS 与 PUE；关键数字 60%；关联 Kioxia、Sandisk；媒体 HPCwire",
+      "whyItMatters": "冷却、UPS 与 PUE；关键数字 60%；关联 Kioxia、铠侠、Sandisk；媒体 HPCwire",
       "topic": "cooling-pue",
       "tags": [],
       "region": "未知",
       "entities": [
         "Kioxia",
+        "铠侠",
         "Sandisk"
       ],
       "metrics": [
@@ -79,7 +80,7 @@
       "originalTitle": "Southern Co. contracted large load rises to 17 GW",
       "url": "https://www.utilitydive.com/news/southern-co-contracted-large-load-data-centers/826919/",
       "summary": "Recently announced projects include a 3.2-GW OpenAI data center near Savannah, Georgia. The contract includes 1 GW of “flexible demand resp…",
-      "whyItMatters": "电网与并网；关键数字 17GW、1GW；关联 OpenAI；媒体 Utility Dive",
+      "whyItMatters": "电网与并网；关键数字 17GW、17吉瓦、1GW；关联 OpenAI；媒体 Utility Dive",
       "topic": "grid",
       "tags": [],
       "region": "未知",
@@ -91,6 +92,11 @@
           "label": "load rises to",
           "value": 17,
           "unit": "GW"
+        },
+        {
+          "label": "大负荷上升至",
+          "value": 17,
+          "unit": "吉瓦"
         },
         {
           "label": "The contract includes",
@@ -116,8 +122,8 @@
       "originalTitle": "Google, RWE ink 155MW solar PV PPA in Oklahoma",
       "url": "https://www.pv-tech.org/google-rwe-ink-155mw-solar-pv-ppa-in-oklahoma/",
       "summary": "Solar developer RWE has signed a power purchase agreement (PPA) with tech giant Google to power data centre operations in Oklahoma, US.",
-      "whyItMatters": "绿电采购与 PPA；关键数字 155MW；关联 Google、RWE；地区 美国；媒体 PV-Tech",
-      "topic": "ppa-green-power",
+      "whyItMatters": "光伏与风电；关键数字 155MW；关联 Google、RWE；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
       "tags": [],
       "region": "美国",
       "entities": [
@@ -227,7 +233,7 @@
       "originalTitle": "Massachusetts issues RFP seeking 1,000MW of BESS",
       "url": "https://www.energy-storage.news/massachusetts-issues-rfp-seeking-1000mw-of-bess/",
       "summary": "Massachusetts’s Department of Energy Resources (DOER) has issued a request for proposals (RFP) for 1,000MW of energy storage in the US stat…",
-      "whyItMatters": "储能；关键数字 1000MW；地区 美国；媒体 Energy Storage News",
+      "whyItMatters": "储能；关键数字 1000MW、1000兆瓦；地区 美国；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
       "region": "美国",
@@ -237,6 +243,11 @@
           "label": "issues RFP seeking",
           "value": 1000,
           "unit": "MW"
+        },
+        {
+          "label": "塞州发布征求",
+          "value": 1000,
+          "unit": "兆瓦"
         }
       ],
       "impact": "unknown",
@@ -257,7 +268,7 @@
       "originalTitle": "Romania’s solar capacity exceeds 8.5 GW",
       "url": "https://www.pv-magazine.com/2026/08/04/romanias-solar-capacity-exceeds-8-5-gw/",
       "summary": "Romania's solar market continues to grow with around 1.8 GW installed since the start of the year. The country appears on track to reach it…",
-      "whyItMatters": "光伏与风电；关键数字 8.5GW、1.8GW、10GW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "光伏与风电；关键数字 8.5GW、8.5吉瓦、1.8GW；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
       "region": "全球",
@@ -267,6 +278,11 @@
           "label": "solar capacity exceeds",
           "value": 8.5,
           "unit": "GW"
+        },
+        {
+          "label": "装机容量超过",
+          "value": 8.5,
+          "unit": "吉瓦"
         },
         {
           "label": "grow with around",
@@ -635,12 +651,13 @@
       "originalTitle": "SK hynix Unveils 1st HBF Standard Specifications with Sandisk at FMS 2026",
       "url": "https://www.hpcwire.com/off-the-wire/sk-hynix-unveils-1st-hbf-standard-specifications-with-sandisk-at-fms-2026/",
       "summary": "SEOUL, South Korea, Aug. 4, 2026 — SK hynix Inc., in collaboration with Sandisk, has announced that it has unveiled the first standard spec…",
-      "whyItMatters": "关联 SK hynix、Sandisk；地区 韩国；媒体 HPCwire",
+      "whyItMatters": "关联 SK hynix、SK海力士、Sandisk；地区 韩国；媒体 HPCwire",
       "topic": "other-energy",
       "tags": [],
       "region": "韩国",
       "entities": [
         "SK hynix",
+        "SK海力士",
         "Sandisk"
       ],
       "metrics": [],
@@ -829,6 +846,30 @@
       "wechat": false
     },
     {
+      "id": "evt_a997601b8824",
+      "title": "美国正在考虑禁止中国关键网络技术打击数据中心组件--白宫希望在2026年施加限制，中国表示将在必要时做出回应",
+      "originalTitle": " US mulling ban on key Chinese networking tech in data center component crackdown — White House wants to impose restrictions in 2026, China says it will respond if necessary ",
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/us-mulling-ban-on-key-chinese-networking-tech-in-data-center-component-crackdown-white-house-wants-to-impose-restrictions-in-2026-china-says-it-will-respond-if-necessary",
+      "summary": "Sources say that the FCC is drafting a ban on optical transceivers for data centers. These components, which convert electrical signals int…",
+      "whyItMatters": "数据中心电力需求；地区 中国；媒体 Tom's Hardware",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-04T16:54:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
       "id": "evt_7413181ab2c5",
       "title": "符合电池条件的新泽西州VPP计划开始成形",
       "originalTitle": "Battery-eligible New Jersey VPP program begins to take shape",
@@ -949,25 +990,25 @@
       "wechat": false
     },
     {
-      "id": "evt_28131f615158",
-      "title": "PJM “饥饿游戏”储能、太阳能与天然气、核能",
-      "originalTitle": "PJM “Hunger Games” Pits Energy Storage, Solar Against Natural Gas, Nuclear",
-      "url": "https://cleantechnica.com/2026/08/04/pjm-capacity-715-projects-solar-energy-storage-gas/",
-      "summary": "The sprawling PJM grid region is seeking more details on 715 new power plant proposals, with solar and energy storage leading by number tho…",
-      "whyItMatters": "储能；媒体 CleanTechnica",
-      "topic": "energy-storage",
+      "id": "evt_3bab6ce91b41",
+      "title": "PC冷却设备Arctic在美国政府退款后扭转了关税时代的价格上涨—降低了整个阵容的价格，包括冷却器和表壳风扇",
+      "originalTitle": " PC cooling outfit Arctic reverses tariff-era price hikes after US government refund — lowers prices across lineup, including coolers and case fans ",
+      "url": "https://www.tomshardware.com/pc-components/cooling/pc-cooling-outfit-arctic-reverses-tariff-era-price-hikes-after-us-government-refund-lowers-prices-across-lineup-including-coolers-and-case-fans",
+      "summary": "The company says it is honoring its earlier promise to reverse tariff-driven price increases, becoming one of the first PC hardware vendors…",
+      "whyItMatters": "电力市场与政策；地区 美国；媒体 Tom's Hardware",
+      "topic": "power-market-policy",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "CleanTechnica",
+        "name": "Tom's Hardware",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-04T14:10:54.000Z",
+      "publishedAt": "2026-08-04T13:37:09.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false
@@ -1045,6 +1086,30 @@
       "wechat": false
     },
     {
+      "id": "evt_45a0eac3da4f",
+      "title": "到目前为止， 2026年至少有37人因抗议数据中心而被捕，其中大多数是因为违反了“小规则” --大多数被拘留者是和平行动的",
+      "originalTitle": " At least 37 people arrested in 2026 so far for protesting against data centers, most for breaking 'petty rules' — most taken into custody acted peacefully ",
+      "url": "https://www.tomshardware.com/tech-industry/data-centers/at-least-37-people-arrested-in-2026-so-far-for-protesting-against-data-centers-most-taken-into-custody-acted-peacefully-only-broke-petty-rules",
+      "summary": "Data center protesters are getting arrested for minor infractions, yet they continue pushing back against these projects. Aside from the ar…",
+      "whyItMatters": "数据中心电力需求；媒体 Tom's Hardware",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-04T12:53:03.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
       "id": "evt_16c375375ed6",
       "title": "Kosol Energie推出抗冰雹模块",
       "originalTitle": "Kosol Energie launches hail-resistant module",
@@ -1098,8 +1163,8 @@
       "originalTitle": "Scaling solar: Why inspection workflows must evolve for a new generation of energy infrastructure",
       "url": "https://www.pv-tech.org/scaling-solar-inspection-workflows-must-evolve-new-generation-energy-infrastructure/",
       "summary": "Solar growth changes how operators think about inspections, as they must ensure that thousands of panels are producing at peak efficiency.",
-      "whyItMatters": "冷却、UPS 与 PUE；媒体 PV-Tech",
-      "topic": "cooling-pue",
+      "whyItMatters": "光伏与风电；媒体 PV-Tech",
+      "topic": "solar-wind",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -1122,8 +1187,8 @@
       "originalTitle": "Data centers take center stage in Wisconsin governor’s race",
       "url": "https://www.canarymedia.com/articles/data-centers/wisconsin-governors-race",
       "summary": "A year ago, most Wisconsin residents thought little about data centers, according to local leaders and journalists. But today, the computin…",
-      "whyItMatters": "媒体 Canary Media",
-      "topic": "other-energy",
+      "whyItMatters": "数据中心电力需求；媒体 Canary Media",
+      "topic": "data-center-power",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -1184,6 +1249,30 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-04T07:05:09.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8f3f9d8b2047",
+      "title": "为什么模拟速度会阻碍小芯片的发展",
+      "originalTitle": "Why Simulation Speed Is Holding Chiplets Back",
+      "url": "https://semiengineering.com/why-simulation-speed-is-holding-chiplets-back/",
+      "summary": "Toolchain capability is no longer the limiting factor in heterogeneous chiplet design. The bottleneck is the computational cost of multi-ph…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-04T07:02:11.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false

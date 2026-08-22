@@ -7,7 +7,7 @@ import { loadEnums, validateDailyV2, validateFeatured } from '../scripts/lib/sch
 import { loadFilters } from '../scripts/lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap } from '../scripts/lib/source.mjs';
 import {
-  processItems, selectFeatured, atomicWrite, resolveReplayNow, ensureNonEmptyBuild
+  processItems, selectFeatured, selectHot, atomicWrite, resolveReplayNow, ensureNonEmptyBuild
 } from '../scripts/build-daily-v2.mjs';
 
 const enums = await loadEnums();
@@ -136,11 +136,58 @@ test('selectFeatured：优先主题（SST/PCS）保底，跨过高分事件挤�
   // 10 个高分 grid 事件足以挤满 featured；sst/pcs 各 1 条 ≥门槛 且 72h 内仍应保底入选
   const events = [];
   for (let i = 0; i < 10; i++) events.push(mk('evt_a' + i, 4, 'grid', 'S' + i, FPUB));
-  events.push(mk('evt_sst', 2.6, 'sst', 'SST源', FPUB));
-  events.push(mk('evt_pcs', 2.6, 'pcs', 'PCS源', FPUB));
+  events.push(mk('evt_sst', 3.5, 'sst', 'SST源', FPUB));
+  events.push(mk('evt_pcs', 3.5, 'pcs', 'PCS源', FPUB));
   const { featuredEventIds } = selectFeatured(events, enums, FSELECT);
   assert.ok(featuredEventIds.includes('evt_sst'), 'sst 优先主题保底入选');
   assert.ok(featuredEventIds.includes('evt_pcs'), 'pcs 优先主题保底入选');
+});
+
+test('selectFeatured：今日观察取最终入选集的重要性前 3，而非选择过程的遇到顺序', () => {
+  const mk = (id, importance, topic, source, wechat) => ({ id, importance, topic, source: { name: source }, wechat: wechat || false, publishedAt: FPUB });
+  // 微信保底项（importance 3）最先被选入；两条 4 分大事件随后主选入选。
+  // 观察位必须给 4 分事件，而不是按遇到顺序给微信保底项。
+  const events = [
+    mk('evt_w', 3, 'energy-storage', '微信源', true),
+    mk('evt_hi1', 4, 'grid', 'S1'),
+    mk('evt_hi2', 4, 'solar-wind', 'S2')
+  ];
+  const { observations } = selectFeatured(events, enums, FSELECT);
+  assert.equal(observations.length, 3);
+  assert.ok(observations.every(o => o.startsWith('【')), '观察条目带主题标签');
+  assert.ok(!observations.some(o => o.includes('微信')), '低分保底项不占观察位');
+  assert.equal(observations.filter(o => o.includes('电网与并网') || o.includes('光伏与风电')).length, 2, '高分事件进观察位');
+});
+
+test('selectFeatured：默认收紧到 12 条、门槛 3', () => {
+  const mk = (id, importance, topic, source) => ({ id, importance, topic, source: { name: source }, publishedAt: FPUB });
+  const events = [];
+  for (let i = 0; i < 20; i++) events.push(mk('evt_a' + i, 4, i % 2 ? 'grid' : 'solar-wind', 'S' + i));
+  events.push(mk('evt_low', 2.9, 'grid', 'SLow'));
+  const { featuredEventIds } = selectFeatured(events, enums, FSELECT);
+  assert.ok(featuredEventIds.length <= 12, `实际 ${featuredEventIds.length} 条`);
+  assert.ok(!featuredEventIds.includes('evt_low'), '低于门槛 3 不入选');
+});
+
+test('selectHot：储能/AIDC 入榜、北美置顶、核电排除、上限生效', () => {
+  const mk = (id, importance, topic, region, over = {}) => ({
+    id, importance, topic, region,
+    title: '', originalTitle: '', summary: '', entities: [],
+    source: { name: 'S' + id }, publishedAt: FPUB, ...over
+  });
+  const events = [
+    mk('evt_us', 4, 'energy-storage', '美国'),
+    mk('evt_eu', 4.5, 'energy-storage', '德国'),
+    mk('evt_nuke', 5, 'energy-storage', '美国', { title: '核电储能混合项目 nuclear' }),
+    mk('evt_aidc', 3, 'aidc-project', '中国'),
+    mk('evt_grid', 9, 'grid', '美国') // 非热点主题，不入榜
+  ];
+  const ids = selectHot(events, enums);
+  assert.equal(ids[0], 'evt_us', '北美置顶');
+  assert.ok(ids.includes('evt_eu') && ids.includes('evt_aidc'));
+  assert.ok(!ids.includes('evt_nuke'), '核电关键词排除');
+  assert.ok(!ids.includes('evt_grid'), '非热点主题不入榜');
+  assert.ok(ids.length <= (enums.hot?.maxItems ?? 5));
 });
 
 test('selectFeatured：优先主题保底仍要求 ≥threshold 与时效，低于门槛不入', () => {

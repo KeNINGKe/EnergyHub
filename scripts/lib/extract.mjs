@@ -66,28 +66,68 @@ export function extractTopics(text, enums) {
 // 否则 "US$415 million" 里的 US 会被误判成美国（文章可能讲的是别国、只是用美元计价）。
 const CURRENCY_CLASS = '€$£¥';
 
-/** 英文别名整词命中：全大写缩写（US/UK/EU/USA…）按原大小写匹配，避免与代词 us、US$ 撞车。 */
-function englishWordHit(text, alias) {
+/** 英文别名整词匹配，返回首个命中位置（无命中 -1）。全大写缩写（US/UK/EU/USA…）
+ * 按原大小写匹配，避免与代词 us、US$ 撞车。 */
+function englishWordMatch(text, alias) {
   const isAcronym = /^[A-Z]{2,}$/.test(alias);
   const source = isAcronym ? text : text.toLowerCase();
   const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const flags = isAcronym ? '' : 'i';
-  return new RegExp(`(^|[^a-z${CURRENCY_CLASS}])${escaped}([^a-z${CURRENCY_CLASS}]|$)`, flags).test(source);
+  const m = new RegExp(`(^|[^a-z${CURRENCY_CLASS}])${escaped}([^a-z${CURRENCY_CLASS}]|$)`, flags).exec(source);
+  return m ? m.index : -1;
 }
 
-/** 地区提取：按别名表顺序首中；无命中返回「未知」。 */
-export function extractRegion(text, regionsConfig) {
+/**
+ * 单文本地区投票：统计每个地区的不同别名命中数（同别名只计一次），
+ * 命中数相同按文本中最早出现位置取胜——修复「摘要里的公司国籍抢先命中、
+ * 标题里的真实事件国家落选」的首中即得问题。
+ * 「全球」类泛称在存在具体地区命中时让位。
+ * @returns {{ region: string, votes: number } | null}
+ */
+export function regionVotes(text, regionsConfig) {
   const t = String(text || '');
   const tl = t.toLowerCase();
+  const stats = new Map(); // region -> { count, firstPos }
   for (const { alias, region } of regionsConfig.aliases) {
     const a = alias.toLowerCase();
-    if (/[一-鿿]/.test(a)) {
-      if (tl.includes(a)) return region;
-    } else if (englishWordHit(t, alias)) {
-      return region;
+    const pos = /[一-鿿]/.test(a) ? tl.indexOf(a) : englishWordMatch(t, alias);
+    if (pos < 0) continue;
+    const cur = stats.get(region);
+    if (!cur) stats.set(region, { count: 1, firstPos: pos });
+    else {
+      cur.count += 1;
+      if (pos < cur.firstPos) cur.firstPos = pos;
     }
   }
-  return '未知';
+  if (!stats.size) return null;
+  if (stats.size > 1) stats.delete('全球');
+  let best = null;
+  for (const [region, v] of stats) {
+    if (!best || v.count > best.v.count ||
+        (v.count === best.v.count && v.firstPos < best.v.firstPos)) {
+      best = { region, v };
+    }
+  }
+  return { region: best.region, votes: best.v.count };
+}
+
+/** 地区提取（单文本）：投票取胜；无命中返回「未知」。 */
+export function extractRegion(text, regionsConfig) {
+  const r = regionVotes(text, regionsConfig);
+  return r ? r.region : '未知';
+}
+
+/**
+ * 地区提取（标题优先）：标题（含译名）有具体地区命中直接采用，
+ * 否则退回正文投票。标题是事件地区最可靠的信号——摘要常混入
+ * 公司国籍、市场对比等噪声地区。
+ */
+export function extractRegionFromParts(title, body, regionsConfig) {
+  const tv = regionVotes(title, regionsConfig);
+  if (tv && tv.region !== '全球') return tv.region;
+  const bv = regionVotes(body, regionsConfig);
+  if (bv) return bv.region;
+  return tv ? tv.region : '未知';
 }
 
 /** 实体提取：返回命中的实体名（去重，保持出现顺序）。 */
@@ -143,13 +183,18 @@ export function extractMetrics(text) {
   return out;
 }
 
-/** 对条目做全套提取。 */
+/** 对条目做全套提取。翻译标题（translatedTitle）一并参与主题/实体/数字提取，
+ * 让中文关键词体系对英文信源生效；地区用「标题优先 + 正文投票」。 */
 export async function extractItem(item, enums) {
-  const text = `${item.title || ''} ${item.summary || ''}`;
+  const text = `${item.title || ''} ${item.translatedTitle || ''} ${item.summary || ''}`;
   const [regionsConfig, entitiesConfig] = await Promise.all([loadRegions(), loadEntities()]);
   return {
     topics: extractTopics(text, enums),
-    region: extractRegion(text, regionsConfig),
+    region: extractRegionFromParts(
+      `${item.title || ''} ${item.translatedTitle || ''}`,
+      item.summary || '',
+      regionsConfig
+    ),
     entities: extractEntities(text, entitiesConfig.entities),
     metrics: extractMetrics(text)
   };

@@ -1,77 +1,49 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-01",
-  "generatedAt": "2026-08-05T06:05:10.920Z",
+  "generatedAt": "2026-08-01T06:22:16.655Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 46,
-    "eventsPublished": 25
+    "eventsPublished": 27
   },
   "items": [
     {
-      "id": "evt_31eff7ef2514",
-      "title": "这个巨大的德克萨斯州太阳能中心的装机容量接近1吉瓦，只有一半建成",
-      "originalTitle": "This huge Texas solar hub is nearly 1 GW, and it’s only half built",
-      "url": "https://electrek.co/2026/07/31/this-huge-texas-solar-hub-is-nearly-1-gw-and-its-only-half-built/",
-      "summary": "Renewable energy developer Origis Energy has brought another 500 megawatts (MWdc) of solar online at its Rockhound complex in West Texas, p…",
-      "whyItMatters": "光伏与风电；关键数字 1GW；媒体 Electrek",
-      "topic": "solar-wind",
+      "id": "evt_cd6aff731c65",
+      "title": "大型科技公司在人工智能基础设施上的支出超过1万亿美元—预计仅在2026年就将增加7450亿美元",
+      "originalTitle": " Big tech spends more than $1 trillion on AI infrastructure — additional $745 billion expected to be added to the figure in 2026 alone ",
+      "url": "https://www.tomshardware.com/tech-industry/big-tech/big-tech-spends-more-than-usd1-trillion-on-ai-infrastructure-additional-usd745-billion-expected-to-be-added-to-the-figure-in-2026-alone",
+      "summary": "Amazon, Google, Meta, and Microsoft have collectively spent more than $1 trillion on AI investments since the rush started in 2023. However…",
+      "whyItMatters": "关键数字 7450亿美元；关联 Google、Microsoft、Amazon；媒体 Tom's Hardware",
+      "topic": "other-energy",
       "tags": [],
       "region": "未知",
-      "entities": [],
+      "entities": [
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Meta"
+      ],
       "metrics": [
         {
-          "label": "hub is nearly",
-          "value": 1,
-          "unit": "GW"
+          "label": "6年就将增加",
+          "value": 7450,
+          "unit": "亿美元"
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 4,
       "source": {
-        "name": "Electrek",
+        "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-31T19:14:20.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_bb464fb5b96a",
-      "title": "随着市场准备推出插件，英国太阳能装机容量达到22.8吉瓦",
-      "originalTitle": "UK solar capacity hits 22.8 GW as market prepares for plug-in launch",
-      "url": "https://www.pv-magazine.com/2026/07/31/uk-solar-capacity-hits-22-8-gw-as-market-prepares-for-plug-in-launch/",
-      "summary": "The UK added over 2 GW of solar capacity in the 12 months to the end of June 2026. With new plug-in solar regulations soon to take effect,…",
-      "whyItMatters": "光伏与风电；关键数字 22.8GW、2GW；地区 英国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "英国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "solar capacity hits",
-          "value": 22.8,
-          "unit": "GW"
-        },
-        {
-          "label": "UK added over",
-          "value": 2,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T12:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-31T16:30:34.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_c826955b8c75",
@@ -92,20 +64,156 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 4,
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T07:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [
         {
           "name": "pv magazine",
           "url": "https://www.pv-magazine.com/2026/07/31/solars-share-of-eu-electricity-demand-tops-20-for-three-consecutive-months/"
         }
-      ]
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_31eff7ef2514",
+      "title": "这个巨大的德克萨斯州太阳能中心的装机容量接近1吉瓦，只有一半建成",
+      "originalTitle": "This huge Texas solar hub is nearly 1 GW, and it’s only half built",
+      "url": "https://electrek.co/2026/07/31/this-huge-texas-solar-hub-is-nearly-1-gw-and-its-only-half-built/",
+      "summary": "Renewable energy developer Origis Energy has brought another 500 megawatts (MWdc) of solar online at its Rockhound complex in West Texas, p…",
+      "whyItMatters": "光伏与风电；关键数字 1GW、1吉瓦；媒体 Electrek",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "hub is nearly",
+          "value": 1,
+          "unit": "GW"
+        },
+        {
+          "label": "装机容量接近",
+          "value": 1,
+          "unit": "吉瓦"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T19:14:20.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_708bb4bdd529",
+      "title": "Lumentum首席执行官警告用于硅光子学的关键材料即将出现瓶颈—由于联合包装光学器件需求飙升，晶圆厂和材料短缺已经低于客户需求的30 ％",
+      "originalTitle": " Lumentum CEO warns of impending bottleneck on critical material used for silicon photonics  — fab and material shortfall already lags 30% below customer needs as co-packaged optics demand skyrockets ",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/lumentum-ceo-says-the-indium-phosphide-shortage-will-become-worse-than-memory",
+      "summary": "Lumentum CEO Michael Hurlston told an audience at the RAISE Summit that indium phosphide is heading into a squeeze worse than the one in me…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 30%；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "shortfall already lags",
+          "value": 30,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T12:45:27.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_bb464fb5b96a",
+      "title": "随着市场准备推出插件，英国太阳能装机容量达到22.8吉瓦",
+      "originalTitle": "UK solar capacity hits 22.8 GW as market prepares for plug-in launch",
+      "url": "https://www.pv-magazine.com/2026/07/31/uk-solar-capacity-hits-22-8-gw-as-market-prepares-for-plug-in-launch/",
+      "summary": "The UK added over 2 GW of solar capacity in the 12 months to the end of June 2026. With new plug-in solar regulations soon to take effect,…",
+      "whyItMatters": "光伏与风电；关键数字 22.8GW、22.8吉瓦、2GW；地区 英国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "英国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "solar capacity hits",
+          "value": 22.8,
+          "unit": "GW"
+        },
+        {
+          "label": "装机容量达到",
+          "value": 22.8,
+          "unit": "吉瓦"
+        },
+        {
+          "label": "d over",
+          "value": 2,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T12:30:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0cd2fdc5fce1",
+      "title": "Antora Energy完成5.5亿美元的C轮融资，以扩大美国热电池部署规模",
+      "originalTitle": "Antora Energy closes US$550 million Series C to scale US thermal battery deployment",
+      "url": "https://www.energy-storage.news/antora-energy-closes-us550-million-series-c-to-scale-us-thermal-battery-deployment/",
+      "summary": "Thermal energy storage (TES) technology provider Antora Energy has closed a US$550 million Series C funding round to accelerate deployment…",
+      "whyItMatters": "储能；关键数字 5.5亿美元；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "ergy完成",
+          "value": 5.5,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T11:48:18.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_e8d02b0842ce",
@@ -113,8 +221,8 @@
       "originalTitle": "Veolia to operate 350MW microgrid for AI data centre in central Ohio",
       "url": "https://www.energy-storage.news/veolia-to-operate-350mw-microgrid-for-ai-data-centre-in-central-ohio/",
       "summary": "Environmental services company Veolia has been selected to operate and maintain a 350MW microgrid to power an AI data centre campus in New…",
-      "whyItMatters": "储能；关键数字 350MW、430MWh；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
+      "whyItMatters": "电网与并网；关键数字 350MW、430MWh；地区 美国；媒体 Energy Storage News",
+      "topic": "grid",
       "tags": [],
       "region": "美国",
       "entities": [],
@@ -131,15 +239,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T11:43:43.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_d306531b3713",
@@ -147,10 +256,10 @@
       "originalTitle": "Greenvolt inaugurates 200MW/800MWh capacity market-contracted BESS in Poland",
       "url": "https://www.energy-storage.news/greenvolt-inaugurates-200mw-800mwh-capacity-market-contracted-bess-in-poland/",
       "summary": "Greenvolt Power has inaugurated the 200MW Turośń Kościelna Battery Energy Storage Facility in Poland, which energy trader Entrix will optim…",
-      "whyItMatters": "储能；关键数字 200MW、800MWh；媒体 Energy Storage News",
+      "whyItMatters": "储能；关键数字 200MW、800MWh；地区 波兰；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "波兰",
       "entities": [],
       "metrics": [
         {
@@ -165,15 +274,51 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T10:40:19.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_4e5b6fd6ca17",
+      "title": "新西兰希望将插电式太阳能合法化",
+      "originalTitle": "New Zealand looks to legalize plug-in solar",
+      "url": "https://www.pv-magazine.com/2026/07/31/new-zealand-looks-to-legalize-plug-in-solar/",
+      "summary": "A solar regulatory review from New Zealand's Ministry for Regulation suggests legalizing plug-in solar, approving installations under 10 kW…",
+      "whyItMatters": "光伏与风电；关键数字 10kW、100kW；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "approving installations under",
+          "value": 10,
+          "unit": "kW"
+        },
+        {
+          "label": "installation less than",
+          "value": 100,
+          "unit": "kW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T09:00:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_4075a2c4fffa",
@@ -181,7 +326,7 @@
       "originalTitle": "Colombia awards 725 MW of solar on second day of green energy auction",
       "url": "https://www.pv-magazine.com/2026/07/31/colombia-awards-725-mw-of-solar-on-second-day-of-green-energy-auction/",
       "summary": "The country's Clean Energy Procurement Auction awarded 995 MW of solar and nearly 100 MW of battery energy storage systems across two days.…",
-      "whyItMatters": "储能；关键数字 725MW、995MW、100MW；地区 全球；媒体 pv magazine",
+      "whyItMatters": "储能；关键数字 725MW、725兆瓦、995MW；地区 全球；媒体 pv magazine",
       "topic": "energy-storage",
       "tags": [],
       "region": "全球",
@@ -191,6 +336,11 @@
           "label": "Colombia awards",
           "value": 725,
           "unit": "MW"
+        },
+        {
+          "label": "的第二天授予",
+          "value": 725,
+          "unit": "兆瓦"
         },
         {
           "label": "Procurement Auction awarded",
@@ -204,15 +354,16 @@
         }
       ],
       "impact": "unknown",
-      "importance": 2.5,
+      "importance": 3.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T08:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a4a7fda5e351",
@@ -220,7 +371,7 @@
       "originalTitle": "Water Power Winners Emerge As Collegiate Competitions Surge",
       "url": "https://cleantechnica.com/2026/07/31/water-power-winners-emerge-as-collegiate-competitions-surge/",
       "summary": "Top Teams Claim Prizes at 2026 Hydropower and Marine Energy Collegiate Competition Final Events, and DOE Welcomes a Record 45 Teams for the…",
-      "whyItMatters": "关联 DOE；媒体 CleanTechnica",
+      "whyItMatters": "其他能源动态；关联 DOE；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
       "region": "未知",
@@ -229,40 +380,16 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-01T00:53:20.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_92202664eb0a",
-      "title": "比亚迪在下个月推出新款Qin Max EV之前透露了图像",
-      "originalTitle": "BYD reveals images of the new Qin Max EV ahead of its launch next month",
-      "url": "https://electrek.co/2026/07/31/byd-reveals-images-new-qin-max-ev-launch/",
-      "summary": "The Qin Max is a “completely different new B-segment fast-charging sedan,” BYD claims. Ahead of its official launch next month, BYD release…",
-      "whyItMatters": "关联 BYD；媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "BYD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T19:41:59.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_6257e7a3d9cf",
@@ -279,15 +406,16 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T13:00:45.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a3e90d74154c",
@@ -295,25 +423,77 @@
       "originalTitle": "Schneider Electric and AMD Release 1st Helios Platform Reference Design to Accelerate AI Factory Deployment",
       "url": "https://www.hpcwire.com/off-the-wire/schneider-electric-and-amd-release-1st-helios-platform-reference-design-to-accelerate-ai-factory-deployment/",
       "summary": "SAN FRANCISCO, July 31, 2026 — Schneider Electric, a global energy technology leader, and AMD have announced a jointly developed and valida…",
-      "whyItMatters": "关联 AMD、Schneider；地区 全球；媒体 HPCwire",
+      "whyItMatters": "关联 AMD、施耐德、Schneider；地区 全球；媒体 HPCwire",
       "topic": "other-energy",
       "tags": [],
       "region": "全球",
       "entities": [
         "AMD",
+        "施耐德",
         "Schneider"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 3,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T11:52:49.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8923e742c531",
+      "title": "塞拉利昂开启太阳能储能项目",
+      "originalTitle": "Sierra Leone switches on solar-storage project",
+      "url": "https://www.pv-magazine.com/2026/07/31/sierra-leone-switches-on-first-solar-storage-project/",
+      "summary": "Chinese manufacturer Sungrow, which commissioned the project, says its the country’s first national-scale power generation project connecte…",
+      "whyItMatters": "光伏与风电；关联 Sungrow；地区 中国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [
+        "Sungrow"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T11:00:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ec271b165108",
+      "title": "下萨克森州的氢气列车现在是一个电池退出策略问题",
+      "originalTitle": "Lower Saxony’s Hydrogen Trains Are Now A Battery Exit Strategy Problem",
+      "url": "https://cleantechnica.com/2026/08/01/lower-saxony-hydrogen-trains-battery-exit/",
+      "summary": "Lower Saxony’s hydrogen trains will probably not be retired because a politician announces that battery-electric multiple units were the be…",
+      "whyItMatters": "储能；媒体 CleanTechnica",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-01T06:20:01.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_a7d0c75a436c",
@@ -328,38 +508,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-08-01T03:57:19.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_23815c80cf81",
-      "title": "电气化行动计划对交通运输意味着什么",
-      "originalTitle": "What the Electrification Action Plan Means for Transport",
-      "url": "https://cleantechnica.com/2026/07/31/what-the-electrification-action-plan-means-for-transport/",
-      "summary": "T&E’s in-depth review of the EU Commission’s Electrification Action Plan Electrification is the clearest way to cut energy demand, increase…",
-      "whyItMatters": "电力市场与政策；地区 欧盟；媒体 CleanTechnica",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-01T00:13:35.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_0f1d73d0ba50",
@@ -374,38 +532,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T23:39:43.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_a50e6dc5dfd7",
-      "title": "这款全电动VinFast出租车服务刚刚在欧洲推出",
-      "originalTitle": "This all-electric VinFast taxi service just debuted in Europe",
-      "url": "https://electrek.co/2026/07/31/this-all-electric-vinfast-taxi-service-just-debuted-in-europe/",
-      "summary": "Vietnamese all-electric taxi operator Green SM has made its European debut in Copenhagen, rolling out a company-owned fleet of VinFast EVs.",
-      "whyItMatters": "地区 欧盟；媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T21:04:09.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_26f5703c26ff",
@@ -420,15 +556,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T18:08:48.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_18c256c32436",
@@ -443,15 +580,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T18:04:18.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_ba258baf311a",
@@ -466,15 +604,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T18:01:31.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_f892adaf771f",
@@ -482,45 +621,23 @@
       "originalTitle": "New York takes on the myth that solar is swallowing farmland",
       "url": "https://www.canarymedia.com/articles/solar/new-york-solar-farms",
       "summary": "This analysis and news roundup come from the Canary Media Weekly newsletter. Sign up to get it every Friday. In rural areas across the U.S.…",
-      "whyItMatters": "光伏与风电；媒体 Canary Media",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 Canary Media",
       "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T16:20:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_0cd2fdc5fce1",
-      "title": "Antora Energy完成5.5亿美元的C轮融资，以扩大美国热电池部署规模",
-      "originalTitle": "Antora Energy closes US$550 million Series C to scale US thermal battery deployment",
-      "url": "https://www.energy-storage.news/antora-energy-closes-us550-million-series-c-to-scale-us-thermal-battery-deployment/",
-      "summary": "Thermal energy storage (TES) technology provider Antora Energy has closed a US$550 million Series C funding round to accelerate deployment…",
-      "whyItMatters": "储能；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
       "tags": [],
       "region": "美国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
-        "name": "Energy Storage News",
+        "name": "Canary Media",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-31T11:48:18.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-31T16:20:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_20019d2368b2",
@@ -535,15 +652,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T11:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_448ce8a2c780",
@@ -558,38 +676,16 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T11:24:41.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
-    },
-    {
-      "id": "evt_8923e742c531",
-      "title": "塞拉利昂开启太阳能储能项目",
-      "originalTitle": "Sierra Leone switches on solar-storage project",
-      "url": "https://www.pv-magazine.com/2026/07/31/sierra-leone-switches-on-first-solar-storage-project/",
-      "summary": "Chinese manufacturer Sungrow, which commissioned the project, says its the country’s first national-scale power generation project connecte…",
-      "whyItMatters": "光伏与风电；地区 中国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-07-31T11:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_5fd8d5d692b9",
@@ -604,38 +700,40 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T10:30:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
-      "id": "evt_c2f16f133af1",
-      "title": "欧洲的热浪带来了高辐射，因为烟雾、灰尘影响了南方光伏系统",
-      "originalTitle": "Europe’s heatwave brings high irradiance as smoke, dust impact southern PV systems",
-      "url": "https://www.pv-magazine.com/2026/07/31/europes-heatwave-brings-high-irradiance-as-smoke-dust-impact-southern-pv-systems/",
-      "summary": "In a new weekly update for pv magazine, Solcast, a DNV company, reports that Europe's July heatwave led to positive irradiance anomalies ac…",
-      "whyItMatters": "光伏与风电；地区 欧盟；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_f597bb5e413c",
+      "title": "德国正在用氢气重建其失败的俄罗斯天然气战略",
+      "originalTitle": "Germany Is Rebuilding Its Failed Russian Gas Strategy With Hydrogen",
+      "url": "https://cleantechnica.com/2026/07/31/germany-hydrogen-gas-system-rescue/",
+      "summary": "Germany’s hydrogen strategy keeps producing numbers that sound like market evidence until the subsidy structure is examined. Its latest hyd…",
+      "whyItMatters": "其他能源动态；地区 德国；媒体 CleanTechnica",
+      "topic": "other-energy",
       "tags": [],
-      "region": "欧盟",
+      "region": "德国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
-        "name": "pv magazine",
+        "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
-      "publishedAt": "2026-07-31T10:00:00.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "publishedAt": "2026-07-31T09:16:28.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     },
     {
       "id": "evt_16c64045900f",
@@ -650,15 +748,40 @@
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 1.5,
+      "importance": 2.5,
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": true
+        "isPrimary": false
       },
       "publishedAt": "2026-07-31T07:01:48.000Z",
-      "discoveredAt": "2026-08-05T06:05:10.920Z",
-      "relatedSources": []
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9ddbb563bcd9",
+      "title": "用于电池的硅阳极可释放更高的能量密度和更快的充电时间",
+      "originalTitle": "Silicon anodes for batteries unlock greater energy density and faster charging times",
+      "url": "https://www.volts.wtf/p/silicon-anodes-for-batteries-unlock",
+      "summary": "A conversation with Rick Costantino of Group14.",
+      "whyItMatters": "储能；社区 Volts",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Volts",
+        "type": "community",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-07-31T10:20:09.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false
     }
   ]
 }
