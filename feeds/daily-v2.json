@@ -1,15 +1,135 @@
 {
   "schemaVersion": 2,
-  "date": "2026-08-25",
-  "generatedAt": "2026-08-25T04:31:40.630Z",
+  "date": "2026-08-26",
+  "generatedAt": "2026-08-25T21:15:25.274Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
-    "sourcesSucceeded": 42,
-    "articlesFetched": 439,
-    "eventsPublished": 98
+    "sourcesSucceeded": 40,
+    "articlesFetched": 424,
+    "eventsPublished": 103
   },
   "items": [
+    {
+      "id": "evt_4fb62fdc3df8",
+      "title": "Quinbrook利用GE Vernova和CATL打造澳大利亚最大电池存储系统的第三阶段",
+      "originalTitle": "Quinbrook taps GE Vernova and CATL for the third stage of Australia’s largest battery storage system",
+      "url": "https://www.energy-storage.news/quinbrook-taps-ge-vernova-and-catl-for-the-third-stage-of-australias-largest-battery-storage-system/",
+      "summary": "GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system.",
+      "whyItMatters": "储能；关键数字 1216MWh；关联 CATL、GE Vernova；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [
+        "CATL",
+        "GE Vernova"
+      ],
+      "metrics": [
+        {
+          "label": "CATL selected for",
+          "value": 1216,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T01:27:43.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/25/a-closer-look-at-catl-tener-s-6-017-mwh-bess/"
+        },
+        {
+          "name": "ESS News",
+          "url": "https://www.ess-news.com/2026/08/25/clarifying-the-catl-tener-s-6-017-mwh-battery-energy-storage-system/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_06877d1f5f14",
+      "title": "尼泊尔将投产10条输电线路",
+      "originalTitle": "Nepal to commission 10 transmission lines",
+      "url": "https://transformer-magazine.com/news/nepal-to-commission-10-transmission-lines/",
+      "summary": "Ten transmission projects, including two major 400 kV links, are expected to strengthen Nepal’s grid and expand electricity exports to India",
+      "whyItMatters": "电网与并网；关键数字 400kV；地区 印度；媒体 Transformer Magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "印度",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "including two major",
+          "value": 400,
+          "unit": "kV"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T07:19:31.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "Transformer Technology",
+          "url": "https://transformer-technology.com/alfanar-projects-to-build-substation-for-expo-2030-riyadh/"
+        },
+        {
+          "name": "Transformer Magazine",
+          "url": "https://transformer-magazine.com/news/alfanar-wins-expo-2030-riyadh-substation-contract/"
+        },
+        {
+          "name": "Transformer Magazine",
+          "url": "https://transformer-magazine.com/news/laing-orourke-wins-london-substation-contract/"
+        },
+        {
+          "name": "Transformer Magazine",
+          "url": "https://transformer-magazine.com/news/cbh-wins-60-m-johor-substation-contract/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_cbf833b4a0b4",
+      "title": "丰富智慧背后的全栈",
+      "originalTitle": "The full stack behind abundant intelligence",
+      "url": "https://openai.com/index/the-full-stack-behind-abundant-intelligence",
+      "summary": "OpenAI CFO Sarah Friar explains how advances across chips, compute, models, and products compound to deliver more useful intelligence at gr…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 OpenAI；一手来源 OpenAI News",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "OpenAI"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "OpenAI News",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-25T07:05:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/semiconductors/openai-says-its-jalapeno-chip-beats-nvidias-gb300-in-first-published-benchmarks"
+        }
+      ],
+      "wechat": false
+    },
     {
       "id": "evt_3ab7d9d63285",
       "title": "借助全面生产的Groq 3 LPX ， NVIDIA为代理商扩展了Vera Rubin推理",
@@ -31,157 +151,83 @@
         }
       ],
       "impact": "unknown",
-      "importance": 5,
+      "importance": 4.5,
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T15:00:41.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_db7082c61601",
-      "title": "Heron Power计划如何将第一家变压器工厂的规模扩大到40 GW",
-      "originalTitle": "How Heron Power plans to scale first transformer factory to 40 GW",
-      "url": "https://www.latitudemedia.com/news/how-heron-power-plans-to-scale-first-transformer-factory-to-40-gw/",
-      "summary": "CEO Drew Baglino on the company’s plans to ramp production in the coming years — and combat the U.S. power equipment shortage. The post How…",
-      "whyItMatters": "固态变压器（SST）；关键数字 40GW；地区 美国；媒体 Latitude Media",
-      "topic": "sst",
+      "id": "evt_9422817907f8",
+      "title": "Avantus斥资3亿美元建造150MW加州太阳能、储能站",
+      "originalTitle": "Avantus bags US$300 million for 150MW California solar, energy storage site",
+      "url": "https://www.pv-tech.org/avantus-bags-us300-million-for-150mw-california-solar-energy-storage-site/",
+      "summary": "US IPP Avantus has closed US$300 million in tax equity for a 150MW/452MWh solar-plus-storage project in California.",
+      "whyItMatters": "储能；关键数字 150MW、3亿美元、452MWh；地区 美国；媒体 PV-Tech",
+      "topic": "energy-storage",
       "tags": [],
       "region": "美国",
       "entities": [],
       "metrics": [
         {
-          "label": "transformer factory to",
-          "value": 40,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T23:30:42.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_52789dbbadb2",
-      "title": "即使使用直流快速充电器，丰田经销商如何降低55%的能源成本",
-      "originalTitle": "How a Toyota dealer cut energy costs 55%, even with DC fast chargers",
-      "url": "https://electrek.co/2026/08/24/how-a-toyota-dealer-cut-energy-costs-55-percent-even-with-dc-fast-chargers/",
-      "summary": "A Toyota dealer on Long Island says it cut its energy costs by an average of 55% over three months by putting solar, battery storage, DC fa…",
-      "whyItMatters": "能量管理系统（EMS）；关键数字 55%；媒体 Electrek",
-      "topic": "ems",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "cut energy costs",
-          "value": 55,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T17:46:18.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9e7358b0c05f",
-      "title": "印度在第二季度新增3吉瓦的开放式太阳能",
-      "originalTitle": "India adds 3 GW of open-access solar in Q2",
-      "url": "https://www.pv-magazine.com/2026/08/24/india-adds-3-gw-of-open-access-solar-in-q2/",
-      "summary": "India added a record 3 GW of open-access solar capacity in the second quarter of 2026, taking cumulative installations to 36 GW. First-half…",
-      "whyItMatters": "光伏与风电；关键数字 3GW、3吉瓦、36GW；地区 印度；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "印度",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "India adds",
-          "value": 3,
-          "unit": "GW"
-        },
-        {
-          "label": "第二季度新增",
-          "value": 3,
-          "unit": "吉瓦"
-        },
-        {
-          "label": "cumulative installations to",
-          "value": 36,
-          "unit": "GW"
-        },
-        {
-          "label": "additions reached nearly",
-          "value": 6,
-          "unit": "GW"
-        },
-        {
-          "label": "6 GW, up",
-          "value": 42,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T11:24:58.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [
-        {
-          "name": "PV-Tech",
-          "url": "https://www.pv-tech.org/pv-wafer-prices-surge-up-to-40-in-weekly-gain/"
-        },
-        {
-          "name": "PV-Tech",
-          "url": "https://www.pv-tech.org/vikram-solar-to-add-9gw-wafer-ingot-capacity-at-tamil-nadu-hub/"
-        }
-      ],
-      "wechat": false
-    },
-    {
-      "id": "evt_24382f94364a",
-      "title": "中国启动660MW/3.96 GWh CAES项目的EPC招标",
-      "originalTitle": "China launches EPC tender for 660 MW/3.96 GWh CAES project",
-      "url": "https://www.ess-news.com/2026/08/24/china-launches-epc-tender-for-660-mw-3-96-gwh-compressed-air-storage-project/",
-      "summary": "China has tendered engineering, procurement and construction (EPC) work for a 660 MW/3.96 GWh compressed air energy storage (CAES) facility…",
-      "whyItMatters": "储能；关键数字 660MW、3.96GWh；地区 中国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "EPC tender for",
-          "value": 660,
+          "label": "US$300 million for",
+          "value": 150,
           "unit": "MW"
         },
         {
-          "label": "for 660 MW/",
-          "value": 3.96,
-          "unit": "GWh"
+          "label": "ntus斥资",
+          "value": 3,
+          "unit": "亿美元"
+        },
+        {
+          "label": "for a 150MW/",
+          "value": 452,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T14:03:33.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "Utility Dive",
+          "url": "https://www.utilitydive.com/news/new-jersey-seeks-150-mw-of-behind-the-meter-storage-to-support-vpp/828727/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_379795e8a33d",
+      "title": "夏普推出全新日本11.5 kWh Eee蓄电池，供住宅使用",
+      "originalTitle": "Sharp launches new Japanese 11.5 kWh Eee Storage battery for residential use",
+      "url": "https://www.ess-news.com/2026/08/25/sharp-launches-new-japanese-11-5-kwh-eee-storage-battery-for-residential-use/",
+      "summary": "Sharp starts the rollout of its all-new Eee Storage series, now 55% more compact, and making use of it Cocoro energy app to boost self-cons…",
+      "whyItMatters": "储能；关键数字 11.5kWh、55%；地区 日本；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "日本",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "launches new Japanese",
+          "value": 11.5,
+          "unit": "kWh"
+        },
+        {
+          "label": "Storage series, now",
+          "value": 55,
+          "unit": "%"
         }
       ],
       "impact": "unknown",
@@ -191,14 +237,741 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T12:26:52.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T14:03:39.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [
         {
-          "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/08/24/a-3-6-gwh-18-hour-lithium-ion-bess-project-has-secured-planning-consent-in-scotland/"
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/25/sharp-unveils-11-5-kwh-battery-for-residential-use/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_2d6998e2b73c",
+      "title": "随着可再生能源装机量反弹，中国7月新增14.1GW太阳能光伏装机量",
+      "originalTitle": "China adds 14.1GW solar PV in July as renewables installations rebound",
+      "url": "https://www.pv-tech.org/china-adds-14gw-solar-pv-july-2026/",
+      "summary": "Chinese solar PV installations have reached 14.08GW in July 2026, according to the latest data from China’s National Energy Administration…",
+      "whyItMatters": "光伏与风电；关键数字 14.1GW、14.08GW；关联 NEA；地区 中国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [
+        "NEA"
+      ],
+      "metrics": [
+        {
+          "label": "China adds",
+          "value": 14.1,
+          "unit": "GW"
+        },
+        {
+          "label": "installations have reached",
+          "value": 14.08,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T10:35:05.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f3c87e7450e1",
+      "title": "7月欧洲PPA价格上涨2.3% ，存储交易总计3.1吉瓦时",
+      "originalTitle": "European PPA prices rise 2.3% in July, storage deals tally 3.1 GWh",
+      "url": "https://www.ess-news.com/2026/08/25/european-ppa-prices-rise-2-3-in-july/",
+      "summary": "European PPA prices rose 2.3% in July, with gains in Great Britain and Italy offset by declines in the Nordics, Spain and Portugal. Contrac…",
+      "whyItMatters": "储能；关键数字 2.3%、3.1GWh、3.1吉瓦时；地区 欧盟；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "PPA prices rise",
+          "value": 2.3,
+          "unit": "%"
+        },
+        {
+          "label": "storage deals tally",
+          "value": 3.1,
+          "unit": "GWh"
+        },
+        {
+          "label": "存储交易总计",
+          "value": 3.1,
+          "unit": "吉瓦时"
+        },
+        {
+          "label": "24 PPAs totaling",
+          "value": 1.1,
+          "unit": "GW"
+        },
+        {
+          "label": "torage agreements representing",
+          "value": 865,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/tc-energy-appoints-worley-to-advance-development-of-11gwh-ontario-pumped-hydro-energy-storage-project/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_009bb7534e0b",
+      "title": "BC Hydro投资2亿美元升级本拿比变电站",
+      "originalTitle": "BC Hydro Invests $200 Million to Upgrade Burnaby Substation",
+      "url": "https://transformer-technology.com/bc-hydro-invests-200-million-to-upgrade-burnaby-substation/",
+      "summary": "BC Hydro is investing $200 million to modernize and expand the Newell Substation in Burnaby, B.C., replacing aging equipment and adding cap…",
+      "whyItMatters": "电网与并网；关键数字 2亿美元；媒体 Transformer Technology",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "ydro投资",
+          "value": 2,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T08:27:39.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [
+        {
+          "name": "Transformer Magazine",
+          "url": "https://transformer-magazine.com/news/bc-hydro-invests-200-m-in-burnaby-substation/"
+        }
+      ],
+      "wechat": false
+    },
+    {
+      "id": "evt_99926e4befb0",
+      "title": "Jalapeño的首批结果显示了业界领先的人工智能推理速度和效率",
+      "originalTitle": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower l…",
+      "whyItMatters": "冷却、UPS 与 PUE；关联 OpenAI；一手来源 OpenAI News",
+      "topic": "cooling-pue",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "OpenAI"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "OpenAI News",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-25T07:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9daae4542f20",
+      "title": "20岁生日快乐， Amazon EC2",
+      "originalTitle": "Happy 20th Birthday, Amazon EC2",
+      "url": "https://aws.amazon.com/blogs/aws/happy-20th-birthday-amazon-ec2/",
+      "summary": "On the 20th Anniversary, we recognize how AWS has continued to push the boundaries of what cloud computing can deliver, building custom sil…",
+      "whyItMatters": "关联 Amazon、AWS；一手来源 AWS News Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Amazon",
+        "AWS"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "AWS News Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-25T16:11:02.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9f11eac27240",
+      "title": "数据中心可以在几秒钟内从电网中消失；可靠性规则需要赶上",
+      "originalTitle": "Data centers can vanish from the grid in seconds; reliability rules need to catch up",
+      "url": "https://www.utilitydive.com/news/data-centers-vanish-grid-seconds-reliability-rules/827035/",
+      "summary": "The loss of more than 3 GW of data center demand in Virginia shows why policy must address operational behavior, not just costs, writes AIx…",
+      "whyItMatters": "电网与并网；关键数字 3GW；媒体 Utility Dive",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "e than",
+          "value": 3,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T15:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_44ec01edd933",
+      "title": "美加贸易战威胁电力进口和价格",
+      "originalTitle": "US-Canada trade war threatens electricity imports, prices",
+      "url": "https://www.utilitydive.com/news/us-canada-trade-war-threatens-electricity-imports-prices/828689/",
+      "summary": "If Canada opts to reduce or eliminate electricity exports to New England, the impact would be largely financial — at least under typical we…",
+      "whyItMatters": "电力市场与政策；关键数字 25%；地区 美国；媒体 Utility Dive",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "operator. A previous",
+          "value": 25,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T12:55:23.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_4ee5075cbc05",
+      "title": "2025年爱尔兰电网规模光伏发电量增长51%",
+      "originalTitle": "Irish electricity generation by grid-scale PV up 51% in 2025",
+      "url": "https://www.pv-magazine.com/2026/08/25/irish-electricity-generation-by-grid-scale-pv-up-51-in-2025/",
+      "summary": "Grid-scale solar farms generated 1.1 GWh of electricity in 2025, 4% of the total and a 51% increase compared with 2024. Electricity storage…",
+      "whyItMatters": "光伏与风电；关键数字 51%、1.1GWh、4%；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "grid-scale PV up",
+          "value": 51,
+          "unit": "%"
+        },
+        {
+          "label": "solar farms generated",
+          "value": 1.1,
+          "unit": "GWh"
+        },
+        {
+          "label": "electricity in 2025,",
+          "value": 4,
+          "unit": "%"
+        },
+        {
+          "label": "its share by",
+          "value": 52,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T13:54:42.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_af181475d06c",
+      "title": "葡萄牙最大的太阳能发电厂在产量低，电价下跌的情况下进入运营",
+      "originalTitle": "Portugal’s largest solar plant enters administration amid low output, falling power prices",
+      "url": "https://www.pv-magazine.com/2026/08/25/portugals-largest-solar-plant-enters-administration-amid-low-output-falling-power-prices/",
+      "summary": "Welink Energy Portugal 2 UK, owner of Portugal’s 220 MW Solara4 solar plant, entered administration after weak generation, low wholesale po…",
+      "whyItMatters": "光伏与风电；关键数字 220MW；地区 英国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "英国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "owner of Portugal’s",
+          "value": 220,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T13:00:49.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_57cb41511b6e",
+      "title": "在韩国分层电价下，住宅光伏可能会引发反弹效应",
+      "originalTitle": "Residential PV can trigger rebound effects under South Korea’s tiered electricity tariffs",
+      "url": "https://www.pv-magazine.com/2026/08/25/residential-pv-can-trigger-rebound-effects-under-south-koreas-tiered-electricity-tariffs/",
+      "summary": "Research finds households in South Korea moving into lower tariff tiers after installing PV systems can offset 11% to 22% of expected energ…",
+      "whyItMatters": "电力市场与政策；关键数字 11%、22%；地区 韩国；媒体 pv magazine",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "韩国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "systems can offset",
+          "value": 11,
+          "unit": "%"
+        },
+        {
+          "label": "offset 11% to",
+          "value": 22,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T11:50:55.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_47222e27a727",
+      "title": "希腊推出新的光伏空间规划规则",
+      "originalTitle": "Greece introduces new spatial planning rules for PV",
+      "url": "https://www.pv-magazine.com/2026/08/25/greece-introduces-new-spatial-planning-rules-for-pv/",
+      "summary": "Greece has introduced a new spatial planning framework for renewable energy and storage, tightening siting rules for PV and expanding prote…",
+      "whyItMatters": "光伏与风电；关键数字 1.5%；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "land use at",
+          "value": 1.5,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T09:01:11.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_09f03b9747c3",
+      "title": "Invenergy在美国华盛顿启动120MW太阳能光伏项目建设",
+      "originalTitle": "Invenergy starts construction at 120MW solar PV project in Washington, US",
+      "url": "https://www.pv-tech.org/invenergy-starts-construction-120mw-solar-pv-project-washington-us/",
+      "summary": "US IPP Invenergy has started construction work at its 120MW Quincy Solar Energy Center in Grant County in the US state of Washington.",
+      "whyItMatters": "光伏与风电；关键数字 120MW；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "starts construction at",
+          "value": 120,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T14:47:32.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_67c8c02acb33",
+      "title": "Runergy的TOPCon 3.0太阳能电池组件以25.9%的转换效率获得认证",
+      "originalTitle": "Runergy’s TOPCon 3.0 solar modules certified at 25.9% conversion efficiency",
+      "url": "https://www.pv-tech.org/runergys-topcon-3-0-solar-modules-25-9-conversion-efficiency/",
+      "summary": "The NLR has certified that the third generation of TOPCon modules produced by Runergy has a conversion efficiency of 25.9%.",
+      "whyItMatters": "光伏与风电；关键数字 25.9%；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "modules certified at",
+          "value": 25.9,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T11:23:49.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_59b6b6db18e7",
+      "title": "澳大利亚在西澳大利亚独联体招标11中寻求1.8GW可再生能源",
+      "originalTitle": "Australia seeks 1.8GW renewables in Western Australia CIS Tender 11",
+      "url": "https://www.pv-tech.org/australia-seeks-1-8gw-renewables-in-western-australia-cis-tender-11/",
+      "summary": "Bidding for Tender 11 will open on 27 August 2026 and close on 22 October 2026, seeking nearly 1.8GW of renewable energy generation in West…",
+      "whyItMatters": "电力市场与政策；关键数字 1.8GW、11w；地区 澳大利亚；媒体 PV-Tech",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Australia seeks",
+          "value": 1.8,
+          "unit": "GW"
+        },
+        {
+          "label": "Tender",
+          "value": 11,
+          "unit": "w"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T10:04:04.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_be26548e2af1",
+      "title": "Fraunhofer ISE开发具有9.26%转换效率的半透明有机太阳能光伏组件",
+      "originalTitle": "Fraunhofer ISE develops semi-transparent organic solar PV modules with a 9.26% conversion efficiency",
+      "url": "https://www.pv-tech.org/fraunhofer-ise-semi-transparent-organic-solar-pv-modules-9-26-conversion-efficiency/",
+      "summary": "Fraunhofer ISE has developed what it described as 'industry-ready' semi-transparent PV modules with a conversion efficiency of up to 9.26%.",
+      "whyItMatters": "光伏与风电；关键数字 9.26%；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "modules with a",
+          "value": 9.26,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T09:27:30.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_262185442e85",
+      "title": "EPC批量生产用于AI电源架构的18V氮化镓FET",
+      "originalTitle": "EPC Mass Produces 18V GaN FET for AI Power Architectures",
+      "url": "https://www.powerelectronicsnews.com/epc-mass-produces-18v-gan-fet-for-ai-power-architectures/",
+      "summary": "The EPC2370 combines 0.28 mΩ on-resistance, 101 A current capability and a 22 V transient rating for high-frequency power conversion. The p…",
+      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
+      "topic": "pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Power Electronics News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T14:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_bab2b38e4946",
+      "title": "氮化镓功率器件扩展挑战",
+      "originalTitle": "Power GaN Device Scaling Challenges",
+      "url": "https://www.powerelectronicsnews.com/power-gan-device-scaling-challenges/",
+      "summary": "Wafer substrate selection, buffer layer design, and 2-DEG optimization are key to scaling GaN power devices higher. The post Power GaN Devi…",
+      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
+      "topic": "pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Power Electronics News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T11:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_decc939061c2",
+      "title": "Alpiq从Eco Stor收购103 MW/238 MWh BESS",
+      "originalTitle": "Alpiq acquires 103 MW/238 MWh BESS from Eco Stor",
+      "url": "https://www.ess-news.com/2026/08/25/alpiq-acquires-103-mw-238-mwh-bess-from-eco-stor/",
+      "summary": "Swiss energy company Alpiq has acquired the project company behind the 103 MW/238 MWh Bollingstedt battery energy storage system (BESS) in…",
+      "whyItMatters": "储能；关键数字 103MW、238MWh；地区 德国；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "德国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Alpiq acquires",
+          "value": 103,
+          "unit": "MW"
+        },
+        {
+          "label": "acquires 103 MW/",
+          "value": 238,
+          "unit": "MWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T14:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b811fcdb0c4d",
+      "title": "智利可能在2027年初达到6吉瓦的存储目标",
+      "originalTitle": "Chile could reach 6 GW storage target by early 2027",
+      "url": "https://www.ess-news.com/2026/08/25/chile-could-reach-6-gw-storage-target-by-early-2027/",
+      "summary": "Chile could reach its 6 GW energy storage target by early 2027, three years ahead of schedule, as a large pipeline of battery projects move…",
+      "whyItMatters": "储能；关键数字 6GW、6吉瓦；地区 智利；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "智利",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Chile could reach",
+          "value": 6,
+          "unit": "GW"
+        },
+        {
+          "label": "27年初达到",
+          "value": 6,
+          "unit": "吉瓦"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T08:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8124719eece4",
+      "title": "7月意大利BESS增量放缓至28.86 MWh",
+      "originalTitle": "Italy’s BESS additions slow to 28.86 MWh in July",
+      "url": "https://www.ess-news.com/2026/08/25/italys-bess-additions-slow-to-28-86-mwh-in-july/",
+      "summary": "Italy added 1,105 new battery energy storage systems (BESS) in July, representing 28.86 MWh of additional capacity and 15.6 MW of power, ac…",
+      "whyItMatters": "储能；关键数字 28.86MWh、15.6MW、698.55MW；地区 意大利；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "意大利",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "additions slow to",
+          "value": 28.86,
+          "unit": "MWh"
+        },
+        {
+          "label": "additional capacity and",
+          "value": 15.6,
+          "unit": "MW"
+        },
+        {
+          "label": "new systems totaling",
+          "value": 698.55,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T07:45:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_4b32b22f21ae",
+      "title": "戈尔街的欧盟基金在爱尔兰收购了390兆瓦时的BESS",
+      "originalTitle": "Gore Street’s EU Fund acquires 390 MWh of BESS in Ireland",
+      "url": "https://www.ess-news.com/2026/08/25/gore-streets-eu-fund-acquires-390-mwh-of-bess-in-ireland/",
+      "summary": "Gore Street Capital’s GS EU Fund acquired a 100% stake in the ready-to-build Kilmannock and Mucklagh batteries totaling 390 MWh of storage…",
+      "whyItMatters": "储能；关键数字 390MWh、390兆瓦时、100%；地区 欧盟；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "EU Fund acquires",
+          "value": 390,
+          "unit": "MWh"
+        },
+        {
+          "label": "爱尔兰收购了",
+          "value": 390,
+          "unit": "兆瓦时"
+        },
+        {
+          "label": "Fund acquired a",
+          "value": 100,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T06:45:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1a4b50adfc3d",
+      "title": "CIGRE巴黎会议2026 ：变压器技术迎接电力系统的未来",
+      "originalTitle": "CIGRE Paris Session 2026: Transformer Technology Meets the Future of Power Systems",
+      "url": "https://transformer-technology.com/cigre-paris-session-2026-where-transformer-technology-meets-the-future-of-power-systems/",
+      "summary": "The CIGRE Paris Session 2026 is bringing together the global power system community from August 23–28 at the Palais des Congrès in Paris. W…",
+      "whyItMatters": "固态变压器（SST）；地区 全球；媒体 Transformer Technology",
+      "topic": "sst",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T14:40:14.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -233,50 +1006,105 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "Transformer Technology",
         "type": "media",
         "isPrimary": false
       },
       "publishedAt": "2026-08-24T12:17:03.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_4d66e6b7d6fb",
-      "title": "台湾指控向中国非法出口Nvidia B300显卡的9人—细节揭示了利用和规避海关控制的五点策略",
-      "originalTitle": " Nine indicted by Taiwan over illegal export of Nvidia B300 GPUs to China — details reveal five-point strategy to exploit and avoid customs controls ",
-      "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nine-indicted-by-taiwan-over-illegal-export-of-nvidia-b300-gpus-to-china-details-reveal-five-point-strategy-to-exploit-and-avoid-customs-controls",
-      "summary": "A new report claims nine people have been indicted over the illegal smuggling of Nvidia B300 servers to China.",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 NVIDIA；地区 中国；媒体 Tom's Hardware",
-      "topic": "chips-compute",
+      "id": "evt_3eb69fad442a",
+      "title": "世界上第一个能源岛完成地基",
+      "originalTitle": "World’s first energy island completes foundations",
+      "url": "https://transformer-magazine.com/news/worlds-first-energy-island-completes-foundations/",
+      "summary": "All 23 caissons are installed as Princess Elisabeth Island advances toward grid connection and 2.1 GW of offshore wind integration",
+      "whyItMatters": "电网与并网；关键数字 2.1GW；地区 全球；媒体 Transformer Magazine",
+      "topic": "grid",
       "tags": [],
-      "region": "中国",
-      "entities": [
-        "NVIDIA"
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "grid connection and",
+          "value": 2.1,
+          "unit": "GW"
+        }
       ],
-      "metrics": [],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
-        "name": "Tom's Hardware",
+        "name": "Transformer Magazine",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T15:09:55.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [
+      "publishedAt": "2026-08-25T09:44:10.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_531c5b9081bf",
+      "title": "乌克兰拍卖受战争破坏的变压器",
+      "originalTitle": "Ukraine auctions war-damaged transformers",
+      "url": "https://transformer-magazine.com/news/ukraine-auctions-war-damaged-transformers/",
+      "summary": "Six damaged transformers with a combined pre-damage capacity of 785 MVA are being offered for recycling in Ukraine’s Odesa region",
+      "whyItMatters": "固态变压器（SST）；关键数字 785MVA；地区 乌克兰；媒体 Transformer Magazine",
+      "topic": "sst",
+      "tags": [],
+      "region": "乌克兰",
+      "entities": [],
+      "metrics": [
         {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/micron-opens-boise-training-center-to-build-semiconductor-workforce/"
-        },
-        {
-          "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/semiconductors/sk-hynix-says-hybrid-bonding-wont-be-ready-for-hbm4e-as-ai-memory-runs-into-a-775-micron-ceiling"
+          "label": "pre-damage capacity of",
+          "value": 785,
+          "unit": "MVA"
         }
       ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T08:24:54.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f9855d3a4ca3",
+      "title": "澳大利亚的电池存储合同从“实体收费”转向商品化产品",
+      "originalTitle": "Australia’s battery storage contracts shift from ‘physical tolls’ toward commoditised products",
+      "url": "https://www.energy-storage.news/australias-battery-storage-contracts-shift-from-physical-tolls-toward-commoditised-products/",
+      "summary": "Australia's BESS market evolves from physical tolls to commoditised contracts as spreads compress & investor return expectations rise to 14…",
+      "whyItMatters": "储能；关键数字 14%；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "expectations rise to",
+          "value": 14,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T08:07:39.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -294,14 +1122,14 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T15:00:19.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -320,538 +1148,14 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "Meta Data Center Engineering",
         "type": "primary",
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T18:02:29.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_45a551c506c0",
-      "title": "Commonwealth Fusion Systems旨在以10亿$的资金回合完成示范反应堆",
-      "originalTitle": "Commonwealth Fusion Systems aims to complete demonstration reactor with $1B funding round",
-      "url": "https://www.utilitydive.com/news/what-a-billion-dollar-funding-means-for-commonwealth-fusion-systems-and-its/828515/",
-      "summary": "CEO Bob Mumgaard said the reactor, SPARC, is now “about 80% complete.” Experts remain divided over how soon they believe fusion technology…",
-      "whyItMatters": "核电与 SMR；关键数字 80%；媒体 Utility Dive",
-      "topic": "nuclear-smr",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "is now “about",
-          "value": 80,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T15:40:24.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f486d41928ea",
-      "title": "挪威在1月至7月安装了43兆瓦的太阳能",
-      "originalTitle": "Norway installs 43 MW of solar in January-July",
-      "url": "https://www.pv-magazine.com/2026/08/24/norway-installs-43-mw-of-solar-in-january-july/",
-      "summary": "As Norway’s cumulative solar capacity moves closer to 1 GW, the country’s C&I market accounts for the majority of new installations while i…",
-      "whyItMatters": "光伏与风电；关键数字 43MW、43兆瓦、1GW；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Norway installs",
-          "value": 43,
-          "unit": "MW"
-        },
-        {
-          "label": "至7月安装了",
-          "value": 43,
-          "unit": "兆瓦"
-        },
-        {
-          "label": "moves closer to",
-          "value": 1,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T09:09:09.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_7a389f11b424",
-      "title": "Scatec第二季度收入达到2.453亿美元，运营太阳能光伏发电容量达到4.5GW",
-      "originalTitle": "Scatec Q2 revenues reach US$245.3 million, operational solar PV capacity hits 4.5GW",
-      "url": "https://www.pv-tech.org/scatec-revenues-us245-3-million-opertional-solar-pv-capacity-4-5gw-q2-2026/",
-      "summary": "Scatec has reported quarter-on-quarter growth in revenue and operational solar PV capacity in its latest financial results.",
-      "whyItMatters": "光伏与风电；关键数字 4.5GW、2.453亿美元；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "PV capacity hits",
-          "value": 4.5,
-          "unit": "GW"
-        },
-        {
-          "label": "季度收入达到",
-          "value": 2.453,
-          "unit": "亿美元"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T12:42:58.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_84407bfaff68",
-      "title": "用于人工智能基础设施的300mm碳化硅衬底的相干样品",
-      "originalTitle": "Coherent Samples 300mm SiC Substrates for AI Infrastructure",
-      "url": "https://www.powerelectronicsnews.com/coherent-samples-300mm-sic-substrates-for-ai-infrastructure/",
-      "summary": "Customer sampling validates Coherent’s 300mm SiC platform for advanced thermal management, packaging and high-density computing. The post C…",
-      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
-      "topic": "pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Power Electronics News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T16:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ec21f8a63ae7",
-      "title": "保时捷将氮化镓技术引入高端汽车音响",
-      "originalTitle": "Porsche Brings GaN Technology to High-End Automotive Audio",
-      "url": "https://www.powerelectronicsnews.com/porsche-brings-gan-technology-to-high-end-automotive-audio/",
-      "summary": "The GaN-based power stage reduces heat and cooling requirements, enabling a lighter amplifier with smaller passive components. The post Por…",
-      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
-      "topic": "pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Power Electronics News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T12:59:23.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ee9fb0873ed1",
-      "title": "沙特阿拉伯奖励11.6亿美元购买8GWh电池储能； ACWA Power、Engie赢得大奖",
-      "originalTitle": "Saudi Arabia awards $1.16 billion for 8 GWh of battery storage; ACWA Power, Engie win big",
-      "url": "https://www.ess-news.com/2026/08/24/saudi-arabia-awards-1-16-billion-for-8-gwh-of-battery-storage-acwa-power-engie-win-big/",
-      "summary": "The Saudi Power Procurement Company (SPPC) has finalized four 15-year storage service agreements with two consortiums led by ACWA Power and…",
-      "whyItMatters": "储能；关键数字 8GWh、11.6亿美元、2GW；地区 沙特；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "沙特",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "$1.16 billion for",
-          "value": 8,
-          "unit": "GWh"
-        },
-        {
-          "label": "特阿拉伯奖励",
-          "value": 11.6,
-          "unit": "亿美元"
-        },
-        {
-          "label": "and ENGIE. The",
-          "value": 2,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T14:19:23.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e994a1cdf968",
-      "title": "Harmony Energy在英国开启70 MWh Skeeby BESS",
-      "originalTitle": "Harmony Energy switches on 70 MWh Skeeby BESS in UK",
-      "url": "https://www.ess-news.com/2026/08/24/harmony-energy-switches-on-70-mwh-skeeby-bess-in-uk/",
-      "summary": "The Skeeby battery system has been energized, marking the first Harmony Energy site to go live after Alpiq’s acquisition. The post Harmony…",
-      "whyItMatters": "储能；关键数字 70MWh；地区 英国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "英国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Energy switches on",
-          "value": 70,
-          "unit": "MWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T12:59:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4894b573f42d",
-      "title": "西班牙电池储能将农场电力成本降低80%",
-      "originalTitle": "Battery storage cuts farm electricity costs by 80% in Spain",
-      "url": "https://www.ess-news.com/2026/08/24/battery-storage-cuts-farm-electricity-costs-by-80-in-spain/",
-      "summary": "A 150 kW solar system paired with a 257 kWh battery energy storage system (BESS) has helped an agricultural operation in Spain cut its elec…",
-      "whyItMatters": "储能；关键数字 80%、150kW、257kWh；地区 西班牙；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "西班牙",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "electricity costs by",
-          "value": 80,
-          "unit": "%"
-        },
-        {
-          "label": "低80% A",
-          "value": 150,
-          "unit": "kW"
-        },
-        {
-          "label": "paired with a",
-          "value": 257,
-          "unit": "kWh"
-        },
-        {
-          "label": "unit and approach",
-          "value": 100,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T11:25:52.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_15ca78db56d9",
-      "title": "欧洲能源公司开始在澳大利亚与太阳能发电场一起建造电池",
-      "originalTitle": "European Energy starts building battery alongside solar farm in Australia",
-      "url": "https://www.ess-news.com/2026/08/24/european-energy-starts-building-battery-alongside-solar-farm-in-australia/",
-      "summary": "The Australian arm of Danish renewables developer European Energy has started construction of a 40 MW/80 MWh battery energy storage system…",
-      "whyItMatters": "储能；关键数字 40MW、80MWh、58MW；地区 欧盟；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "construction of a",
-          "value": 40,
-          "unit": "MW"
-        },
-        {
-          "label": "a 40 MW/",
-          "value": 80,
-          "unit": "MWh"
-        },
-        {
-          "label": "(BESS) at its",
-          "value": 58,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T09:45:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_224cdb95b3ed",
-      "title": "Kostal开始销售新型电池逆变器",
-      "originalTitle": "Kostal starts selling new battery inverter",
-      "url": "https://www.ess-news.com/2026/08/24/kostal-starts-selling-new-battery-inverter/",
-      "summary": "Kostal has launched a 25 kW AC-coupled battery inverter for commercial and larger residential solar-plus-storage systems, with support for…",
-      "whyItMatters": "储能；关键数字 25kW；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "ched a",
-          "value": 25,
-          "unit": "kW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T09:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c1b483e9a9cd",
-      "title": "GameChange能源在孟买变压器工厂破土动工",
-      "originalTitle": "GameChange Energy Breaks Ground on Mumbai Transformer Factory",
-      "url": "https://transformer-technology.com/gamechange-energy-breaks-ground-on-mumbai-transformer-factory/",
-      "summary": "GameChange Energy, which develops infrastructure for renewable energy and other power-intensive projects, has broken ground on a new 300,00…",
-      "whyItMatters": "固态变压器（SST）；关键数字 300MVA、500kV；地区 印度；媒体 Transformer Technology",
-      "topic": "sst",
-      "tags": [],
-      "region": "印度",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "rated up to",
-          "value": 300,
-          "unit": "MVA"
-        },
-        {
-          "label": "300 MVA and",
-          "value": 500,
-          "unit": "kV"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-19T08:54:29.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cf50f9268866",
-      "title": "新闻：让阳光灿烂：梵蒂冈计划建设太阳能和农业工厂，以满足其电力需求",
-      "originalTitle": "NEWS: Let there be sunlight: Vatican plans solar and agriculture plant to cover its electricity needs",
-      "url": "https://www.energycentral.com/renewables-9zth006i/post/news-let-there-be-sunlight-vatican-plans-solar-and-agriculture-plant-to-kvCBenrYJo7OyN9",
-      "summary": "Holy solar. The Vatican is certainly putting its faith [https://www.reuters.com/business/energy/vatican-build-100-million-renewable-energy-…",
-      "whyItMatters": "光伏与风电；关键数字 90MW；媒体 Energy Central",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "of up to",
-          "value": 90,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T22:34:29.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d3c627d6ac73",
-      "title": "Invinity确认瑞士2.1GWh “标志性”液流电池的EPC合同授予",
-      "originalTitle": "Invinity confirms EPC contract award for 2.1GWh ‘landmark’ flow battery in Switzerland",
-      "url": "https://www.energy-storage.news/invinity-confirms-epc-contract-award-for-2-1gwh-landmark-flow-battery-in-switzerland/",
-      "summary": "Invinity Energy Systems has hired an EPC partner for its gigawatt-hour-scale vanadium redox flow battery (VRFB) energy storage project in L…",
-      "whyItMatters": "储能；关键数字 2.1GWh；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "contract award for",
-          "value": 2.1,
-          "unit": "GWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T08:23:24.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_4fb62fdc3df8",
-      "title": "Quinbrook利用GE Vernova和CATL打造澳大利亚最大电池存储系统的第三阶段",
-      "originalTitle": "Quinbrook taps GE Vernova and CATL for the third stage of Australia’s largest battery storage system",
-      "url": "https://www.energy-storage.news/quinbrook-taps-ge-vernova-and-catl-for-the-third-stage-of-australias-largest-battery-storage-system/",
-      "summary": "GE Vernova and CATL selected for 1,216MWh Supernode Stage 3 in Queensland, which will expand Australia's largest battery storage system.",
-      "whyItMatters": "储能；关键数字 1216MWh；关联 CATL、GE Vernova；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [
-        "CATL",
-        "GE Vernova"
-      ],
-      "metrics": [
-        {
-          "label": "CATL selected for",
-          "value": 1216,
-          "unit": "MWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T01:27:43.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_66b81aef6e62",
-      "title": "两个英特尔芯片几个月来首次突破亚马逊前十大CPU —酷睿Ultra 7 270K和酷睿i7-14700K终于挑战AMD台式机主导地位",
-      "originalTitle": " Two Intel chips break Amazon's top 10 CPUs for the first time in months — Core Ultra 7 270K and Core i7-14700K finally challenge AMD desktop dominance ",
-      "url": "https://www.tomshardware.com/pc-components/cpus/two-intel-chips-break-amazons-top-10-cpus-for-the-first-time-in-months-core-ultra-7-270k-and-core-i7-14700k-finally-challenge-amd-desktop-dominance",
-      "summary": "AMD has dominated the DIY space so thoroughly over the last few years that an Intel chip appearing in the top 10 at all is notable, but it'…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Amazon、Intel、英特尔；媒体 Tom's Hardware",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "Amazon",
-        "Intel",
-        "英特尔",
-        "AMD"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T14:11:31.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/intel-outlines-architectures-for-agentic-ai-at-hot-chips-2026/"
-        }
-      ],
-      "wechat": false
-    },
-    {
-      "id": "evt_2f7693385ae5",
-      "title": "XPU如何与世界一流的人工智能工厂相遇",
-      "originalTitle": "How XPUs Meet a World-Class AI Factory",
-      "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
-      "summary": "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, t…",
-      "whyItMatters": "地区 全球；一手来源 NVIDIA Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-24T15:00:54.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -878,24 +1182,28 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-24T22:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_cbe9d260dbf2",
-      "title": "微软、PowerHouse Hillwood对数据中心服务协议提出异议",
-      "originalTitle": "Microsoft, PowerHouse Hillwood dispute data center service agreements",
-      "url": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
-      "summary": "Data center agreements in Wisconsin fail to protect ratepayers, Microsoft says. Separately, PowerHouse Hillwood has accused Exelon’s ComEd…",
-      "whyItMatters": "数据中心电力需求；关联 Microsoft；媒体 Utility Dive",
-      "topic": "data-center-power",
+      "id": "evt_45a551c506c0",
+      "title": "Commonwealth Fusion Systems旨在以10亿$的资金回合完成示范反应堆",
+      "originalTitle": "Commonwealth Fusion Systems aims to complete demonstration reactor with $1B funding round",
+      "url": "https://www.utilitydive.com/news/what-a-billion-dollar-funding-means-for-commonwealth-fusion-systems-and-its/828515/",
+      "summary": "CEO Bob Mumgaard said the reactor, SPARC, is now “about 80% complete.” Experts remain divided over how soon they believe fusion technology…",
+      "whyItMatters": "核电与 SMR；关键数字 80%；媒体 Utility Dive",
+      "topic": "nuclear-smr",
       "tags": [],
       "region": "未知",
-      "entities": [
-        "Microsoft"
+      "entities": [],
+      "metrics": [
+        {
+          "label": "is now “about",
+          "value": 80,
+          "unit": "%"
+        }
       ],
-      "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
@@ -903,73 +1211,237 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T13:05:21.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T15:40:24.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_d1bd22ab91db",
-      "title": "英伟达不断增长的能源收藏",
-      "originalTitle": "Nvidia’s growing collection of energy stakes",
-      "url": "https://www.latitudemedia.com/news/nvidias-growing-collection-of-energy-stakes/",
-      "summary": "With a partnership with Cloverleaf Infrastructure, the chip maker adds powered land to its growing list of energy investments. The post Nvi…",
-      "whyItMatters": "关联 NVIDIA、英伟达；媒体 Latitude Media",
-      "topic": "other-energy",
+      "id": "evt_84407bfaff68",
+      "title": "用于人工智能基础设施的300mm碳化硅衬底的相干样品",
+      "originalTitle": "Coherent Samples 300mm SiC Substrates for AI Infrastructure",
+      "url": "https://www.powerelectronicsnews.com/coherent-samples-300mm-sic-substrates-for-ai-infrastructure/",
+      "summary": "Customer sampling validates Coherent’s 300mm SiC platform for advanced thermal management, packaging and high-density computing. The post C…",
+      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
+      "topic": "pcs",
       "tags": [],
       "region": "未知",
-      "entities": [
-        "NVIDIA",
-        "英伟达"
-      ],
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Latitude Media",
+        "name": "Power Electronics News",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T20:07:55.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_6e2c2c8a7882",
-      "title": "特斯拉将另一位顶级芯片工程师输给前Dojo创业公司DensityAI",
-      "originalTitle": "Tesla loses another top chip engineer to ex-Dojo startup DensityAI",
-      "url": "https://electrek.co/2026/08/24/tesla-chip-engineer-shishuang-sun-densityai/",
-      "summary": "Tesla has lost another senior chip engineer to DensityAI, the AI hardware startup built out of its own former Dojo team. Shishuang Sun, who…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 Tesla、特斯拉；媒体 Electrek",
-      "topic": "chips-compute",
+      "id": "evt_ec21f8a63ae7",
+      "title": "保时捷将氮化镓技术引入高端汽车音响",
+      "originalTitle": "Porsche Brings GaN Technology to High-End Automotive Audio",
+      "url": "https://www.powerelectronicsnews.com/porsche-brings-gan-technology-to-high-end-automotive-audio/",
+      "summary": "The GaN-based power stage reduces heat and cooling requirements, enabling a lighter amplifier with smaller passive components. The post Por…",
+      "whyItMatters": "储能变流器（PCS）；媒体 Power Electronics News",
+      "topic": "pcs",
       "tags": [],
       "region": "未知",
-      "entities": [
-        "Tesla",
-        "特斯拉"
-      ],
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Electrek",
+        "name": "Power Electronics News",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T13:09:54.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T12:59:23.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_177234dd4359",
-      "title": "美国能源部公布一项新的、有争议的乏核燃料处置计划",
-      "originalTitle": "DOE unveils a new, controversial spent nuclear fuel disposal plan",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/doe-unveils-a-new-controversial-spent-nuclear-fuel-disposal-plan-XT8vxZGiKvdQ4JP",
-      "summary": "By Kennedy Maize Washington’s latest attempt to deal with the nation’s high-level nuclear waste– mostly used nuclear fuel–kicking the canis…",
-      "whyItMatters": "核电与 SMR；关联 DOE、美国能源部；地区 美国；媒体 Energy Central",
+      "id": "evt_c7ca747b36d9",
+      "title": "POWERGRID赢得古吉拉特邦输电项目",
+      "originalTitle": "POWERGRID wins Gujarat transmission project",
+      "url": "https://transformer-magazine.com/news/powergrid-wins-gujarat-transmission-project/",
+      "summary": "The project will integrate 6.5 GW of renewable energy through a new GIS substation, 765 kV lines and substation upgrades",
+      "whyItMatters": "电网与并网；关键数字 6.5GW、765kV；媒体 Transformer Magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "egrate",
+          "value": 6.5,
+          "unit": "GW"
+        },
+        {
+          "label": "new GIS substation,",
+          "value": 765,
+          "unit": "kV"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T07:09:45.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_a0df0bda2d3d",
+      "title": "NRIC在核能发射台上增加了13个项目，扩大了先进的反应堆和燃料循环管道",
+      "originalTitle": "NRIC Adds 13 Projects to Nuclear Energy Launch Pad, Expanding Advanced Reactor and Fuel-Cycle Pipeline",
+      "url": "https://www.powermag.com/nric-adds-13-projects-to-nuclear-energy-launch-pad-expanding-advanced-reactor-and-fuel-cycle-pipeline/",
+      "summary": "The Department of Energy’s (DOE’s) National Reactor Innovation Center (NRIC) has selected 13 new projects across 12 companies for its Nucle…",
+      "whyItMatters": "核电与 SMR；关联 DOE；媒体 POWER Magazine",
       "topic": "nuclear-smr",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "DOE"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "POWER Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T11:09:05.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_dc7ebd16614d",
+      "title": "港电着眼于GIS进行电网现代化改造",
+      "originalTitle": "HK Electric Looks to GIS for Grid Modernization",
+      "url": "https://www.energycentral.com/intelligent-utility-qck4sqsl/post/hk-electric-looks-to-gis-for-grid-modernization-Tf6jmEL7bYboiuR",
+      "summary": "HK Electric, one of the world’s longest-established power companies, is responsible for electric production, transmission, and distribution…",
+      "whyItMatters": "电网与并网；关联 现代；地区 全球；媒体 Energy Central",
+      "topic": "grid",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "现代"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T12:51:05.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0a15d2585f81",
+      "title": "壳牌在七年后卸载住宅电池存储和VPP提供商sonnen",
+      "originalTitle": "Shell offloads residential battery storage and VPP provider sonnen after seven years",
+      "url": "https://www.energy-storage.news/shell-offloads-residential-battery-storage-vpp-provider-sonnen/",
+      "summary": "Shell has sold sonnen, the residential battery storage company it acquired in 2019, as the oil & gas major focuses its attention on “portfo…",
+      "whyItMatters": "储能；关联 Shell、壳牌；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Shell",
+        "壳牌"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T11:01:37.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_6c260e4ebeb4",
+      "title": "收购Northvolt后，美国公司Lyten将目光投向挪威的Morrow Batteries",
+      "originalTitle": "US firm Lyten sets sights on Norway’s Morrow Batteries following Northvolt acquisition",
+      "url": "https://www.energy-storage.news/us-firm-lyten-sets-sights-on-norways-morrow-batteries-following-northvolt-acquisition/",
+      "summary": "US lithium-sulphur battery company Lyten is aiming to acquire another of Europe’s failed homegrown battery startups, Norway’s Morrow Batter…",
+      "whyItMatters": "储能；关联 Northvolt；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "Northvolt"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T10:46:23.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d3c627d6ac73",
+      "title": "Invinity确认瑞士2.1GWh “标志性”液流电池的EPC合同授予",
+      "originalTitle": "Invinity confirms EPC contract award for 2.1GWh ‘landmark’ flow battery in Switzerland",
+      "url": "https://www.energy-storage.news/invinity-confirms-epc-contract-award-for-2-1gwh-landmark-flow-battery-in-switzerland/",
+      "summary": "Invinity Energy Systems has hired an EPC partner for its gigawatt-hour-scale vanadium redox flow battery (VRFB) energy storage project in L…",
+      "whyItMatters": "储能；关键数字 2.1GWh；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "contract award for",
+          "value": 2.1,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T08:23:24.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_e5fad359c076",
+      "title": "美国能源部和普林斯顿大学续签合作伙伴关系以运营PPPL",
+      "originalTitle": "DOE and Princeton Renew Partnership to Operate PPPL",
+      "url": "https://www.hpcwire.com/off-the-wire/doe-and-princeton-renew-partnership-to-operate-pppl/",
+      "summary": "Aug. 25, 2026 — The U.S. Department of Energy (DOE) and Princeton University have extended the contract for Princeton’s management and oper…",
+      "whyItMatters": "关联 DOE、美国能源部；地区 美国；媒体 HPCwire",
+      "topic": "other-energy",
       "tags": [],
       "region": "美国",
       "entities": [
@@ -980,38 +1452,147 @@
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Energy Central",
+        "name": "HPCwire",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T12:06:41.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T14:00:12.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_8b877f3ee2d4",
-      "title": "美国数据中心电力分配： Sunrun与谷歌供应商Voltus签署VPP协议",
-      "originalTitle": "US data centre power goes distributed: Sunrun signs VPP deal with Google supplier Voltus",
-      "url": "https://www.energy-storage.news/us-data-centre-power-goes-distributed-sunrun-signs-vpp-deal-with-google-supplier-voltus/",
-      "summary": "Sunrun has agreed with distributed energy resource platform Voltus to support its Bring Your Own Capacity (BYOC) programmes for AI hypersca…",
-      "whyItMatters": "数据中心电力需求；关联 Google；地区 美国；媒体 Energy Storage News",
-      "topic": "data-center-power",
+      "id": "evt_09d34f4836af",
+      "title": "英特尔Wildcat Lake ：合适尺寸的硅而不会降低性能",
+      "originalTitle": "Intel Wildcat Lake: Right-Sizing Silicon Without Sinking Performance",
+      "url": "https://semiwiki.com/semiconductor-manufacturers/intel/372653-intel-wildcat-lake-right-sizing-silicon-without-sinking-performance/",
+      "summary": "Lance Hacking, Intel Intel Core Series 3, code-named Wildcat Lake, is a mainstream client system-on-chip derived from the Panther Lake-base…",
+      "whyItMatters": "关联 Intel、英特尔；媒体 SemiWiki",
+      "topic": "other-energy",
       "tags": [],
-      "region": "美国",
+      "region": "未知",
       "entities": [
-        "Google"
+        "Intel",
+        "英特尔"
       ],
       "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Energy Storage News",
+        "name": "SemiWiki",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T14:24:43.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T21:00:35.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_e1b8a757984d",
+      "title": "热芯片2026 ：三星通过内存中的逻辑单元使LPDDR5X变得智能— LPDDR5X-PIM在人工智能推断方面比LPDDR5X快3.01倍，带宽是LPDDR5X的8倍",
+      "originalTitle": " Hot Chips 2026: Samsung makes LPDDR5X smart with logic unit in memory — LPDDR5X-PIM is 3.01x faster than LPDDR5X in AI inference with 8x the bandwidth ",
+      "url": "https://www.tomshardware.com/pc-components/dram/hot-chips-2026-samsung-makes-lpddr5x-smart-with-logic-unit-in-memory-lpddr5x-pim-is-3-01x-faster-than-lpddr5x-in-ai-inference-with-8x-the-bandwidth",
+      "summary": "Samsung detailed the industry's first LPDDR5X-PIM at Hot Chips 2026, adding logic directly to memory to speed up data-intensive workloads l…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Samsung、三星；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Samsung",
+        "三星"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T18:31:37.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_e0c3c53668a1",
+      "title": "Hot Chips 2026 ：英特尔深入研究Crescent Island AI加速器—更大的缓存和更深的XMX引擎的目标是每瓦最大AI FLOPS",
+      "originalTitle": " Hot Chips 2026: Intel dives deep on Crescent Island AI accelerator — larger caches and deeper XMX engines target maximum AI FLOPS per watt ",
+      "url": "https://www.tomshardware.com/pc-components/gpus/hot-chips-2026-intel-dives-deep-on-crescent-island-ai-accelerator-larger-caches-and-deeper-xmx-engines-target-maximum-ai-flops-per-watt",
+      "summary": "At Hot Chips 2026, Intel detailed more about its Crescent Island AI accelerator, which uses the Xe3P architecture. The accelerator will use…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Intel、英特尔；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Intel",
+        "英特尔"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T15:12:44.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_0f83e9f09448",
+      "title": "苹果推出全新M6和M5 Ultra苹果芯片--在全新Mac Mini和Mac Studio中首次亮相",
+      "originalTitle": " Apple launches new M6 and M5 Ultra Apple silicon chips — debuting in new Mac Mini and Mac Studio ",
+      "url": "https://www.tomshardware.com/pc-components/cpus/apple-launches-new-m6-and-m5-ultra-apple-silicon-chips-debuting-in-new-mac-mini-and-mac-studio",
+      "summary": "Apple has announced new M6 and M5 Ultra chips, a new Mac mini, and a new Mac Studio.",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Apple、苹果；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Apple",
+        "苹果"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T13:26:19.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_78ac46b16331",
+      "title": "2026年热芯片：美光警告HBM晶圆罚款随着每一代而扩大—人工智能内存使用的硅比DDR5多3倍，该公司表示，随着价格上涨，内存墙“变得更糟”",
+      "originalTitle": " Hot Chips 2026: Micron warns HBM wafer penalty is widening with every generation — AI memory uses 3x more silicon than DDR5, company says memory wall is 'getting worse' as prices rise ",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/micron-says-the-silicon-gap-between-hbm-and-ddr5-is-widening-with-every-generation",
+      "summary": "Micron Fellow Raghu Sreeramaneni told the Hot Chips 2026 conference that the silicon penalty HBM carries against DDR5 is growing with every…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 Micron、美光；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Micron",
+        "美光"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T12:19:38.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1037,44 +1618,42 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-20T07:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_160d9ace2528",
-      "title": "与CodeAI合作，准备第一代人工智能",
-      "originalTitle": "Partnering with CodeAI to prepare the first AI generation",
-      "url": "https://openai.com/index/partnering-with-codeai",
-      "summary": "OpenAI and CodeAI are partnering to help students build AI literacy, think critically about AI, and develop the skills to use and shape it…",
-      "whyItMatters": "关联 OpenAI；一手来源 OpenAI News",
+      "id": "evt_2f7693385ae5",
+      "title": "XPU如何与世界一流的人工智能工厂相遇",
+      "originalTitle": "How XPUs Meet a World-Class AI Factory",
+      "url": "https://blogs.nvidia.com/blog/nvlink-fusion-xpu-ai-factory/",
+      "summary": "To generate intelligence at scale, AI factories run continuously, and their economics are defined by delivered output: tokens per second, t…",
+      "whyItMatters": "地区 全球；一手来源 NVIDIA Blog",
       "topic": "other-energy",
       "tags": [],
-      "region": "未知",
-      "entities": [
-        "OpenAI"
-      ],
+      "region": "全球",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "OpenAI News",
+        "name": "NVIDIA Blog",
         "type": "primary",
         "isPrimary": true
       },
-      "publishedAt": "2026-08-18T11:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T15:00:54.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_d4d3f71a0b82",
-      "title": "亚利桑那州的电网电池增长迅猛。会持续下去吗？",
-      "originalTitle": "Arizona is having a grid battery growth spurt. Will that last?",
-      "url": "https://www.canarymedia.com/articles/batteries/arizona-grid-battery-growth",
-      "summary": "California and Texas have led the charge on America's grid battery revolution . Now, a third state is racing to catch up: Arizona. The Gran…",
-      "whyItMatters": "储能；地区 美国；媒体 Canary Media",
-      "topic": "energy-storage",
+      "id": "evt_49cd440323e3",
+      "title": "随着俄亥俄州努力应对有关清洁能源的虚假评论，一些人希望打击",
+      "originalTitle": "As Ohio grapples with fake comments on clean energy, some want crackdown",
+      "url": "https://www.canarymedia.com/articles/clean-energy/ohio-fake-comments-clean-energy",
+      "summary": "A troubling trend has shown up in some communities around the U.S.: Public officials are being inundated with seemingly fake public feedbac…",
+      "whyItMatters": "地区 美国；媒体 Canary Media",
+      "topic": "other-energy",
       "tags": [],
       "region": "美国",
       "entities": [],
@@ -1086,21 +1665,21 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T07:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T07:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_3b164c67c339",
-      "title": "PJM终于为许多新的清洁能源点亮了绿灯。它能建成吗？",
-      "originalTitle": "PJM has finally greenlit a lot of new clean power. Can it get built?",
-      "url": "https://www.canarymedia.com/articles/energy-markets/pjm-greenlit-new-clean-power",
-      "summary": "The country’s biggest energy market has a problem: It can’t build enough power plants to keep up with electricity demand. For PJM Interconn…",
-      "whyItMatters": "数据中心电力需求；媒体 Canary Media",
-      "topic": "data-center-power",
+      "id": "evt_3bde86a7f3ce",
+      "title": "随着欧洲发电厂在炎热和干旱中挣扎，太阳能提供了",
+      "originalTitle": "Solar delivers as Europe’s power plants struggle amid heat and drought",
+      "url": "https://www.canarymedia.com/articles/solar/solar-delivers-europe-heat-drought",
+      "summary": "This story was originally published by Grist . Sign up for Grist’s newsletter. Repeated record-breaking heat waves cooked the European cont…",
+      "whyItMatters": "光伏与风电；地区 欧盟；媒体 Canary Media",
+      "topic": "solar-wind",
       "tags": [],
-      "region": "未知",
+      "region": "欧盟",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -1110,22 +1689,24 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T07:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T07:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_fcfb1a41cd41",
-      "title": "当公用事业公司使用相互矛盾的预测来推动天然气和电力投资时，账单会增加",
-      "originalTitle": "Bills rise when utilities use conflicting forecasts to drive gas and electric investment",
-      "url": "https://www.utilitydive.com/news/how-misaligned-utility-forecasts-drive-higher-bills-and-the-new-york-legi/827025/",
-      "summary": "Integrated planning can lower costs to ratepayers by reducing duplicative spending, and New York could lead the way, write experts at Curre…",
-      "whyItMatters": "天然气与备用电源；媒体 Utility Dive",
-      "topic": "gas-backup",
+      "id": "evt_cbe9d260dbf2",
+      "title": "微软、PowerHouse Hillwood对数据中心服务协议提出异议",
+      "originalTitle": "Microsoft, PowerHouse Hillwood dispute data center service agreements",
+      "url": "https://www.utilitydive.com/news/microsoft-powerhouse-hillwood-data-center-service-ferc/828566/",
+      "summary": "Data center agreements in Wisconsin fail to protect ratepayers, Microsoft says. Separately, PowerHouse Hillwood has accused Exelon’s ComEd…",
+      "whyItMatters": "数据中心电力需求；关联 Microsoft；媒体 Utility Dive",
+      "topic": "data-center-power",
       "tags": [],
       "region": "未知",
-      "entities": [],
+      "entities": [
+        "Microsoft"
+      ],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
@@ -1134,32 +1715,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T16:28:11.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_a44ac8529089",
-      "title": "人+垂直人工智能：能源和公用事业的新运营模式",
-      "originalTitle": "People + Vertical AI: The new operating model for energy and utilities",
-      "url": "https://www.utilitydive.com/spons/people-vertical-ai-the-new-operating-model-for-energy-and-utilities/828314/",
-      "summary": "People + Vertical AI is redefining how utilities scale human expertise, intelligence and impact.",
-      "whyItMatters": "媒体 Utility Dive",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T09:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T13:05:21.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1194,42 +1751,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T12:34:58.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ad5091b34219",
-      "title": "杜克大学的卡罗来纳州资源计划的目标是到2041年新增18.5吉瓦的太阳能",
-      "originalTitle": "Duke’s Carolinas resource plan targets 18.5 GW new solar by 2041",
-      "url": "https://www.utilitydive.com/news/dukes-carolinas-resource-plan-solar-gas-nuclear/828402/",
-      "summary": "The utility’s North Carolina and South Carolina territory “continues to experience significant growth,” with both states ranked among the f…",
-      "whyItMatters": "光伏与风电；关键数字 18.5GW、18.5吉瓦；媒体 Utility Dive",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "resource plan targets",
-          "value": 18.5,
-          "unit": "GW"
-        },
-        {
-          "label": "041年新增",
-          "value": 18.5,
-          "unit": "吉瓦"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T15:16:56.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1253,55 +1775,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T03:12:21.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_a638311853e4",
-      "title": "联盟敦促美国环保署保持对航空许可证的公众参与要求",
-      "originalTitle": "Coalition Urges EPA to Keep Public Participation Requirements for Air Permits",
-      "url": "https://cleantechnica.com/2026/08/24/coalition-urges-epa-to-keep-public-participation-requirements-for-air-permits/",
-      "summary": "WASHINGTON — A coalition of nearly 200 environmental, health, and community groups filed comments late Friday urging the U.S. Environmental…",
-      "whyItMatters": "地区 美国；媒体 CleanTechnica",
-      "topic": "other-energy",
+      "id": "evt_a96e0ef4c26b",
+      "title": "电子设备亮点： 4400马力Wabtec FLXDrive电力机车",
+      "originalTitle": "E-quipment highlight: 4,400 hp Wabtec FLXDrive electric locomotive",
+      "url": "https://electrek.co/2026/08/25/e-quipment-highlight-4400-hp-wabtec-flxdrive-electric-locomotive/",
+      "summary": "After nearly a year of operation on a dedicated track line at the Jimblebar iron ore mine in Australia, BHP is proving that these 4,400 hp…",
+      "whyItMatters": "储能；地区 澳大利亚；媒体 Electrek",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "美国",
+      "region": "澳大利亚",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "CleanTechnica",
+        "name": "Electrek",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T17:33:27.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_17eb6f4b8cb6",
-      "title": "加油站正在全球范围内发生变化。您所在的城镇发生了怎样的变化？ （第3部分：非洲）",
-      "originalTitle": "Gas Stations are Changing Globally. How Has It Changed in Your Town? (Part 3: Africa)",
-      "url": "https://cleantechnica.com/2026/08/24/gas-stations-are-changing-globally-how-has-it-changed-in-your-town-part-3-africa/",
-      "summary": "While Europe and Asia redesign their roadside service stations around high-powered charging plugs for passenger cars, the African continent…",
-      "whyItMatters": "电网与并网；地区 非洲；媒体 CleanTechnica",
-      "topic": "grid",
-      "tags": [],
-      "region": "非洲",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T16:33:40.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T11:10:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1325,44 +1823,20 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-24T22:21:19.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_459206c55d58",
-      "title": "巴西的电池供应链计划",
-      "originalTitle": "Brazil’s plan for a battery supply chain",
-      "url": "https://www.pv-magazine.com/2026/08/25/brazils-plan-for-a-battery-supply-chain/",
-      "summary": "Battery manufacturing in Brazil is being spurred by local content requirements for country’s December 2026 energy storage auction, as well…",
-      "whyItMatters": "储能；地区 巴西；媒体 pv magazine",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "巴西",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-25T04:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d633051cd908",
-      "title": "日本太阳能储能调查中最节省成本的灾难准备",
-      "originalTitle": "Cost savings top disaster prep in Japan solar-storage survey",
-      "url": "https://www.pv-magazine.com/2026/08/24/cost-savings-top-disaster-prep-in-japan-solar-storage-survey/",
-      "summary": "Battery storage is emerging as a financial tool for Japanese households rather than just a disaster-preparedness measure, according to a ne…",
-      "whyItMatters": "光伏与风电；地区 日本；媒体 pv magazine",
+      "id": "evt_bded57e6d9bf",
+      "title": "Kepco通过新技术子公司瞄准韩国逆变器竞争力",
+      "originalTitle": "Kepco targets South Korean inverter competitiveness with new tech subsidiary",
+      "url": "https://www.pv-magazine.com/2026/08/25/kepco-targets-south-korean-inverter-competitiveness-with-new-tech-subsidiary/",
+      "summary": "South Korean state utility Kepco has launched a technology-commercialization subsidiary aimed at bringing thousands of its patents to marke…",
+      "whyItMatters": "光伏与风电；地区 韩国；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "日本",
+      "region": "韩国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -1372,17 +1846,17 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T14:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T15:45:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_9901704af10b",
-      "title": "人工智能平台旨在转变太阳能现场评估",
-      "originalTitle": "AI platform aims to transform solar site assessment",
-      "url": "https://www.pv-magazine.com/2026/08/24/ai-platform-aims-to-transform-solar-site-assessment-3/",
-      "summary": "Learnewable uses AI-based insights to detail local solar opposition before developers invest time or energy in projects. The post AI platfo…",
+      "id": "evt_301632e5e7e1",
+      "title": "瑞典每年可能面临15万吨报废面板",
+      "originalTitle": "Sweden could face 150,000 metric tons of end-of-life panels annually",
+      "url": "https://www.pv-magazine.com/2026/08/25/sweden-could-face-150000-metric-tons-of-end-of-life-panels-annually/",
+      "summary": "Sweden decommissioned just 17 metric tons (MT) of solar panels in 2021, but a new industry roadmap warns that figure could reach 150,000 MT…",
       "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
@@ -1396,134 +1870,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T13:20:01.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1585bd137abd",
-      "title": "摩尔多瓦简化了太阳能、热泵和储能系统的管理规则",
-      "originalTitle": "Moldova simplifies rules governing solar, heat pumps, storage systems",
-      "url": "https://www.pv-magazine.com/2026/08/24/moldova-simplifies-rules-governing-solar-heat-pumps-storage-systems/",
-      "summary": "Legislative changes in Moldova allow solar panels, heat pumps and energy storage systems to be installed without a building permit or urban…",
-      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T13:08:13.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_632483948e2c",
-      "title": "FCC从国外禁令中删除了符合条件的45倍逆变器，包括有线逆变器",
-      "originalTitle": "FCC removes eligible 45X inverters from foreign ban, includes wired ones",
-      "url": "https://www.pv-tech.org/fcc-removes-eligible-45x-inverters-from-foreign-ban-includes-wired-ones/",
-      "summary": "The Federal Communications Commission (FCC) has made two updates on its foreign inverter ban, including a revision of the definition of a p…",
-      "whyItMatters": "光伏与风电；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T11:46:49.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9dfc9af75ea9",
-      "title": "Nextpower包NX PowerMerge后备箱总线技术的美国专利",
-      "originalTitle": "Nextpower bags US patent for NX PowerMerge trunk bus tech",
-      "url": "https://www.pv-tech.org/nextpower-bags-us-patent-for-nx-powermerge-trunk-bus-tech/",
-      "summary": "Solar PV equipment provider Nextpower has been issued a new US patent for its electrical balance of system (eBOS) offering.",
-      "whyItMatters": "光伏与风电；地区 美国；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T09:55:45.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_f0c81bb59f46",
-      "title": "SWIFT Current Energy为“可靠”的美国清洁能源项目提供7.5亿美元$",
-      "originalTitle": "Swift Current Energy bags US$750 million for ‘reliable’ US clean energy projects",
-      "url": "https://www.pv-tech.org/swift-current-energy-bags-us750-million-for-reliable-us-clean-energy-projects/",
-      "summary": "US IPP Swift Current Energy has secured a US$750 million credit facility to support what it called “reliable, clean energy projects” in the…",
-      "whyItMatters": "关键数字 7.5亿美元；地区 美国；媒体 PV-Tech",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "能源项目提供",
-          "value": 7.5,
-          "unit": "亿美元"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-21T14:16:43.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_a161285e1a25",
-      "title": "Lotus Microsystems将电源转换置于AI处理器之下",
-      "originalTitle": "Lotus Microsystems Moves Power Conversion Under AI Processors",
-      "url": "https://www.powerelectronicsnews.com/lotus-microsystems-moves-power-conversion-under-ai-processors/",
-      "summary": "LSC0580 combines silicon interconnects, integrated passives, and thermal management to reduce the power delivery path to AI processors. The…",
-      "whyItMatters": "媒体 Power Electronics News",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Power Electronics News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T13:20:52.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T11:45:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1558,7 +1906,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T14:11:04.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1582,7 +1930,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T13:35:01.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1617,31 +1965,71 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T09:40:01.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_643c86586472",
-      "title": "尼亚加拉电力变压器计划$ 7100万Cheektowaga扩建",
-      "originalTitle": "Niagara Power Transformer Plans $71 million Cheektowaga Expansion",
-      "url": "https://transformer-technology.com/niagara-power-transformer-plans-71-million-cheektowaga-expansion/",
-      "summary": "Niagara Power Transformer is planning a $71 million expansion in Cheektowaga, New York, that would add 73 jobs and significantly increase t…",
-      "whyItMatters": "固态变压器（SST）；媒体 Transformer Technology",
-      "topic": "sst",
+      "id": "evt_b949ff77d86e",
+      "title": "英国在网络攻击后向能源主管汇报情况",
+      "originalTitle": "UK briefs energy chiefs after cyberattack",
+      "url": "https://transformer-magazine.com/news/uk-briefs-energy-chiefs-after-cyberattack/",
+      "summary": "A small British generator was reportedly forced offline for four days in July, prompting new discussions on energy-sector cybersecurity",
+      "whyItMatters": "地区 英国；媒体 Transformer Magazine",
+      "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "英国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "Transformer Technology",
+        "name": "Transformer Magazine",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-19T08:41:22.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T08:35:35.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_346d638acd03",
+      "title": "印度新增35.7 GVA变电站容量",
+      "originalTitle": "India adds 35.7 GVA substation capacity",
+      "url": "https://transformer-magazine.com/news/india-adds-35-7-gva-substation-capacity/",
+      "summary": "India commissioned 35,670 MVA of transformation capacity in April–July FY27, with PGCIL contributing nearly 45 % of the total",
+      "whyItMatters": "电网与并网；关键数字 35670MVA、27w、45%；地区 印度；媒体 Transformer Magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "印度",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "sioned",
+          "value": 35670,
+          "unit": "MVA"
+        },
+        {
+          "label": "in April–July FY",
+          "value": 27,
+          "unit": "w"
+        },
+        {
+          "label": "PGCIL contributing nearly",
+          "value": 45,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T06:20:16.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1668,7 +2056,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-23T15:25:23.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1698,46 +2086,94 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T17:42:37.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_f7c42ec71414",
-      "title": "西弗吉尼亚州有争议的5GW Ridgeline天然气、太阳能和数据中心综合体解决了现场控制问题",
-      "originalTitle": "Contested 5-GW Ridgeline Gas, Solar, and Data-Center Complex in West Virginia Clears Site-Control Question",
-      "url": "https://www.powermag.com/contested-5-gw-ridgeline-gas-solar-and-data-center-complex-in-west-virginia-clears-site-control-question/",
-      "summary": "The West Virginia Department of Environmental Protection’s (WVDEP) Division of Air Quality (DAQ) has determined that Purcellville, Virginia…",
-      "whyItMatters": "光伏与风电；关键数字 5GW；媒体 POWER Magazine",
-      "topic": "solar-wind",
+      "id": "evt_f1c8192d7be2",
+      "title": "研究：人工智能数据中心激增，到2030年美国电力需求可能激增32%",
+      "originalTitle": "Study: U.S. Electricity Demand Could Jump 32% by 2030 Amid AI Data Center Surge",
+      "url": "https://www.tdworld.com/reliability-and-resiliency/news/55399939/study-us-electricity-demand-could-jump-32-by-2030-amid-ai-data-center-surge",
+      "summary": "The UH Energy team states that while the pace of this demand remains uncertain, natural gas, solar and battery storage are expected to hand…",
+      "whyItMatters": "数据中心电力需求；关键数字 32%；地区 美国；媒体 T&D World",
+      "topic": "data-center-power",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [],
       "metrics": [
         {
-          "label": "亚州有争议的",
-          "value": 5,
-          "unit": "GW"
+          "label": "Demand Could Jump",
+          "value": 32,
+          "unit": "%"
         }
       ],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "POWER Magazine",
+        "name": "T&D World",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-18T16:45:19.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-21T19:19:48.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_066766fcb9a1",
-      "title": "数字负载：数据中心能源、基础设施和政策智能",
-      "originalTitle": "THE DIGITAL LOAD: Data Center Energy, Infrastructure &amp; Policy Intelligence",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/the-digital-load-data-center-energy-infrastructure-policy-intelligence-yhycSYqdPXoyv6h",
-      "summary": "A Production of Hedley & Company | Charleston, W.Va [http://W.Va]. Vol. 1, No. 1 | Week Ending August 23, 2026 | Data: Week 34 (Aug. 17-23,…",
+      "id": "evt_f3d7bc091baf",
+      "title": "海底采矿、电网存储和关键矿产瓶颈",
+      "originalTitle": "Seabed Mining, Grid Storage, and the Critical Mineral Bottleneck",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/seabed-mining-grid-storage-and-the-critical-mineral-bottleneck-h4NnLMN5vwIfs4i",
+      "summary": "Electric utility executives planning long-term battery energy storage system (BESS) deployments face a persistent supply chain vulnerabilit…",
+      "whyItMatters": "储能；媒体 Energy Central",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T16:56:56.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2c95c6ea68e6",
+      "title": "哈佛法律专家解释人工智能数据中心如何改变您的电费账单",
+      "originalTitle": "Harvard Law Expert Explains How AI Data Centers Could Change Your Electricity Bill",
+      "url": "https://www.energycentral.com/power-perspectives-om0ntkvn/post/harvard-law-expert-explains-how-ai-data-centers-could-change-your-jlZq80q9bdwNHB8",
+      "summary": "AI data centers are driving unprecedented electricity demand—but who should pay for it all? Energy Central’s Matt Chester sits down with Ar…",
+      "whyItMatters": "数据中心电力需求；媒体 Energy Central",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-25T16:25:52.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9f6370bd9db3",
+      "title": "当每个电力客户都可以不断检查他们是否使用了错误的电价时，会发生什么？",
+      "originalTitle": "What happens when every electricity customer can continuously check if they are on the wrong tariff?",
+      "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/what-happens-when-every-electricity-customer-can-continuously-check-if-n13iigToaAxdjwn",
+      "summary": "This idea actually came to me from retail electricity. There are two very different ways a customer can lose money. The obvious one is: the…",
       "whyItMatters": "电力市场与政策；媒体 Energy Central",
       "topic": "power-market-policy",
       "tags": [],
@@ -1751,45 +2187,21 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-25T04:23:59.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T09:31:07.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_981349927e2e",
-      "title": "新闻：有争议的东北天然气管道正在取得胜利。",
-      "originalTitle": "NEWS: Controversial Northeast gas pipelines are notching court wins.",
-      "url": "https://www.energycentral.com/fossil-thermal-ujoy2csr/post/news-controversial-northeast-gas-pipelines-are-notching-court-wins-UjqqvH4qSkpZwNz",
-      "summary": "* Six years after Williams abandoned its 125-mile Constitution Pipeline, the project is back in action. A FERC environmental review has now…",
-      "whyItMatters": "天然气与备用电源；媒体 Energy Central",
-      "topic": "gas-backup",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T22:33:47.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_33c1dfefd72e",
-      "title": "新闻：在西部和南部，免费的日间电力正在获得动力。",
-      "originalTitle": "NEWS: Out West and down South, free daytime power is gaining steam.",
-      "url": "https://www.energycentral.com/customer-engagement-experience-w1gekukg/post/news-out-west-and-down-south-free-daytime-power-is-gaining-steam-INhgbfYx84QdFa1",
-      "summary": "You might’ve heard about a recent proposal from California governor candidate Xavier Becerra—he wants [https://www.xavierbecerra2026.com/pr…",
-      "whyItMatters": "媒体 Energy Central",
+      "id": "evt_ab053f124d31",
+      "title": "可以与哪些巴西电力贸易公司签订合同？",
+      "originalTitle": "Which Brazilian power trading companies can be contracted?",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/which-brazilian-power-trading-companies-can-be-contracted-nmJjkZxVdjX2wD6",
+      "summary": "Which Brazilian power trading companies can be contracted? The immediate answer is: all those registered with the Electric Power Trading Ch…",
+      "whyItMatters": "地区 巴西；媒体 Energy Central",
       "topic": "other-energy",
       "tags": [],
-      "region": "未知",
+      "region": "巴西",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -1799,21 +2211,21 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T22:32:37.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T08:27:10.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_bafb3cd76f7d",
-      "title": "当数据中心驱动一半的电网建设时，谁来支付账单？",
-      "originalTitle": "When Data Centers Drive Half the Grid Buildout, Who Pays the Bill?",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/when-data-centers-drive-half-the-grid-buildout-who-pays-the-bill-eh3A3PS9aiE8F6P",
-      "summary": "Every utility planner in the country is now wrestling with the same question, and Illinois just put a number on it. In January, Commonwealt…",
-      "whyItMatters": "电网与并网；媒体 Energy Central",
-      "topic": "grid",
+      "id": "evt_8af017002eaa",
+      "title": "为什么热能而不是电池可以决定印度的下一场储能竞赛",
+      "originalTitle": "Why heat, not batteries, could decide India’s next energy-storage race",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/why-heat-not-batteries-could-decide-india-s-next-energy-storage-race-vsib8kuKM1038jK",
+      "summary": "For years, India’s energy storage conversation has revolved almost entirely around lithium-ion batteries and pumped hydro. Quietly, though,…",
+      "whyItMatters": "储能；地区 印度；媒体 Energy Central",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "印度",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -1823,21 +2235,21 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T21:39:36.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T08:07:25.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_e26c25f24733",
-      "title": "CESA的Scott Murtishaw关于安全、错误信息和加州BESS里程碑",
-      "originalTitle": "CESA’s Scott Murtishaw on safety, misinformation, and California’s BESS milestones",
-      "url": "https://www.energy-storage.news/cesas-scott-murtishaw-on-safety-misinformation-and-californias-bess-milestones/",
-      "summary": "Scott Murtishaw, executive director at the California Energy Storage Alliance, discusses local opposition, safety misconceptions, and why t…",
-      "whyItMatters": "储能；媒体 Energy Storage News",
+      "id": "evt_a415389b5f1c",
+      "title": "美国长期储能整合面临的财务现实",
+      "originalTitle": "The financial realities facing US long-duration energy storage integration",
+      "url": "https://www.energy-storage.news/the-financial-realities-facing-us-long-duration-energy-storage-integration/",
+      "summary": "Raafe Khan of Camelot Energy Group breaks down financial realities, market contradictions, and other dynamics shaping the energy storage sp…",
+      "whyItMatters": "储能；地区 美国；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -1847,68 +2259,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T13:32:42.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_7a6c9e687a71",
-      "title": "新泽西州公用事业委员会发布150MW BTM储能方案",
-      "originalTitle": "New Jersey Board of Public Utilities releases 150MW BTM energy storage proposal",
-      "url": "https://www.energy-storage.news/new-jersey-board-of-public-utilities-releases-150mw-btm-energy-storage-proposal/",
-      "summary": "The New Jersey Board of Public Utilities (NJBPU) has released a proposal for the next phase of its Garden State Energy Storage Programme (G…",
-      "whyItMatters": "储能；关键数字 150MW；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Public Utilities releases",
-          "value": 150,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-21T09:58:35.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ebf3ef45a10e",
-      "title": "Key Capture Energy从渣打银行筹集了3亿美元（ $ ） ，并考虑到NY-ISO和MISO的部署",
-      "originalTitle": "Key Capture Energy raises US$300 million from Standard Chartered, with NY-ISO and MISO deployments in mind",
-      "url": "https://www.energy-storage.news/key-capture-energy-raises-us300-million-from-standard-chartered-with-ny-iso-and-miso-deployments-in-mind/",
-      "summary": "US battery storage developer Key Capture Energy (KCE) has closed a US$300 million financing agreement with British multinational bank Stand…",
-      "whyItMatters": "储能；关键数字 3亿美元；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "打银行筹集了",
-          "value": 3,
-          "unit": "亿美元"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T16:08:32.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T13:42:28.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1932,66 +2284,18 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-19T14:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_3976ae06ab99",
-      "title": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
-      "originalTitle": "单芯片到万卡集群体系化突破 中诚华隆HL200推理芯片及超节点集群重磅发布",
-      "url": "https://www.qbitai.com/2026/08/478469.html",
-      "summary": "定义国产推理算力新范式 赋能万卡级AI推理算力规模化落地",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 量子位",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "量子位",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T07:04:36.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_385c1dc83dd2",
-      "title": "IBM推出适用于IBM Z和LinuxONE的下一代双体系结构处理器",
-      "originalTitle": "IBM Unveils Next Gen Dual-Architecture Processor for IBM Z and LinuxONE",
-      "url": "https://www.hpcwire.com/off-the-wire/ibm-unveils-next-gen-dual-architecture-processor-for-ibm-z-and-linuxone/",
-      "summary": "ARMONK, N.Y., Aug. 24, 2026 — At the annual Hot Chips conference, IBM today is announcing the first dual-architecture mainframe processor,…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 HPCwire",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T20:26:16.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_de64c054cfc6",
-      "title": "SiFive借助BigSky平台将RISC-V引入机架式服务器",
-      "originalTitle": "SiFive Brings RISC-V to Rackable Servers with BigSky Platform",
-      "url": "https://www.hpcwire.com/off-the-wire/sifive-brings-risc-v-to-rackable-servers-with-bigsky-platform/",
-      "summary": "SANTA CLARA, Calif., Aug. 24, 2026 — SiFive today, at an event coinciding with Hot Chips, introduced the SiFive BigSky SF-2U870 datacenter…",
-      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 HPCwire",
-      "topic": "chips-compute",
+      "id": "evt_dc8b626c7a15",
+      "title": "Teledyne LeCroy扩展适用于人工智能和高性能计算网络的超以太网验证",
+      "originalTitle": "Teledyne LeCroy Expands Ultra Ethernet Validation for AI and HPC Networks",
+      "url": "https://www.hpcwire.com/off-the-wire/teledyne-lecroy-expands-ultra-ethernet-validation-for-ai-and-hpc-networks/",
+      "summary": "Integrated traffic generation, protocol analysis, error injection, and debugging streamline validation of next-generation AI networks. MILP…",
+      "whyItMatters": "地区 全球；媒体 HPCwire",
+      "topic": "other-energy",
       "tags": [],
       "region": "全球",
       "entities": [],
@@ -2003,113 +2307,17 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T18:11:54.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T21:00:12.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_f58e9e8d0864",
-      "title": "Avestra ：用于SystemVerilog断言生成的Agentic AI",
-      "originalTitle": "Avestra: Agentic AI for SystemVerilog Assertion Generation",
-      "url": "https://semiwiki.com/semiconductor-services/372299-avestra-agentic-ai-for-systemverilog-assertion-generation/",
-      "summary": "Modern ASIC, SoC, CPU, and GPU development depends on verification processes that detect subtle functional defects before tapeout. SystemVe…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiWiki",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T21:00:33.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5b70073f1448",
-      "title": "RISC-V在Sixteen ：从模块化ISA到Hot Chips 2026的标准化平台",
-      "originalTitle": "RISC-V at Sixteen: From Modular ISA to Standardized Platforms at Hot Chips 2026",
-      "url": "https://semiwiki.com/ip/sifive/372639-risc-v-at-sixteen-from-modular-isa-to-standardized-platforms-at-hot-chips-2026/",
-      "summary": "RISC-V has evolved from a Berkeley research architecture into a global instruction-set standard spanning embedded controllers, application…",
-      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 SemiWiki",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiWiki",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T19:00:01.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_2ee402bb1372",
-      "title": "热门芯片：不断发展的人工智能内存架构",
-      "originalTitle": "Hot Chips: Evolving Memory Architectures for Artificial Intelligence",
-      "url": "https://semiwiki.com/semiconductor-manufacturers/372632-hot-chips-evolving-memory-architectures-for-artificial-intelligence/",
-      "summary": "Artificial intelligence performance is increasingly constrained by memory rather than arithmetic throughput. Scaling laws show that model q…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiWiki",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T17:00:52.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_99dc747cd354",
-      "title": "天空的极限： SiFive的BigSky将RISC-V引入数据中心",
-      "originalTitle": "The Sky’s the Limit: SiFive’s BigSky Brings RISC-V to the Datacenter",
-      "url": "https://semiwiki.com/ip/sifive/372506-the-skys-the-limit-sifives-bigsky-brings-risc-v-to-the-datacenter/",
-      "summary": "SiFive is bringing RISC-V closer to mainstream datacenter deployment with the BigSky SF-2U870, an enterprise-grade development server desig…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiWiki",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T13:00:27.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_27a6c086457a",
-      "title": "2纳米及以下的多模组件占主导地位",
-      "originalTitle": "Multi-Die Assemblies Dominate At 2nm And Below",
-      "url": "https://semiengineering.com/multi-die-assemblies-dominate-at-2nm-and-below/",
-      "summary": "Chips are getting bigger, more modular, and much more capable as new innovations mix with existing processes and long-researched projects g…",
+      "id": "evt_225b5751855e",
+      "title": "重新定义边缘和云AI的角色",
+      "originalTitle": "Redefining Roles For Edge And Cloud AI",
+      "url": "https://semiengineering.com/redefining-roles-for-edge-and-cloud-ai/",
+      "summary": "The race is on for localized intelligence. The post Redefining Roles For Edge And Cloud AI appeared first on Semiconductor Engineering.",
       "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
       "topic": "chips-compute",
       "tags": [],
@@ -2123,45 +2331,21 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T07:01:03.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T07:15:21.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_0c172fb1b586",
-      "title": "Hot Chips 2026 ： IBM首款双ISA内核在同一内核中本地执行ARM和z/Architecture ；所有内核均以5.7 GHz基频运行—下一代大型机AI处理器构建在2nm节点上，具有11个内核",
-      "originalTitle": " Hot Chips 2026: IBM's first dual-ISA core natively executes ARM and z/Architecture in the same core; all cores run at 5.7 GHz base frequency — next-gen mainframe AI processor is built on 2nm node with 11 cores ",
-      "url": "https://www.tomshardware.com/pc-components/cpus/ibms-first-dual-isa-core-natively-executes-arm-and-z-architecture-in-the-same-core-all-cores-run-at-5-7-ghz-base-frequency-next-gen-mainframe-ai-processor-is-built-on-2nm-node-with-11-cores",
-      "summary": "IBM is vastly expanding softwarte support on its mainframes with its first dual-ISA CPU core that natively supports z/Architecture and ARM…",
-      "whyItMatters": "媒体 Tom's Hardware",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T17:42:34.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_e1c9136b8c96",
-      "title": "在多年来最严重的DRAM短缺中， Marvell副总裁推动用于CXL内存的DDR4回收—公司推出三层AI内存基础设施",
-      "originalTitle": " Marvell VP pushes for DDR4 recycling for use in CXL memory, amid the worst DRAM shortage in years — company introduces three-tier AI memory infrastructure ",
-      "url": "https://www.tomshardware.com/pc-components/dram/marvell-sells-cxl-memory-recycling-into-the-worst-dram-shortage-in-years",
-      "summary": "Marvell has introduced a three-tier \"AI memory infrastructure\" portfolio, announced at FMS 2026 in Santa Clara on August 4.",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 Tom's Hardware",
+      "id": "evt_398e74ecab0d",
+      "title": "中国战略性地放缓了对台半导体制造所用关键材料的出口--锗和石英对该地区的出口也威胁到光学和机器人供应链",
+      "originalTitle": " China strategically slows exports of critical materials used in semiconductor fabrication to Taiwan — germanium and quartz exports to the region also threaten optical and robotics supply chain ",
+      "url": "https://www.tomshardware.com/tech-industry/china-strategically-slows-exports-of-critical-materials-used-in-semiconductor-fabrication-to-taiwan-germanium-and-quartz-exports-to-the-region-also-threaten-optical-and-robotics-supply-chain",
+      "summary": "China slows exports of germanium, quartz-based materials, and magnets. The move potentially disrupts the optical connectivity, semiconducto…",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 中国；媒体 Tom's Hardware",
       "topic": "chips-compute",
       "tags": [],
-      "region": "未知",
+      "region": "中国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -2171,58 +2355,128 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-24T13:11:37.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-25T13:00:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_169578db7569",
-      "title": "京都大学建造的晶体管可承受600°C的温度，与标准晶圆厂兼容—标准离子注入和底栅设计固定泄漏和电压漂移",
-      "originalTitle": " Kyoto University builds transistor that survives 600C temperatures, compatible with standard fabs — Standard ion implantation and bottom-gate design fix leakage and voltage drift ",
-      "url": "https://www.tomshardware.com/tech-industry/kyoto-university-demonstrates-a-sic-transistor-that-runs-at-600c-using-standard-ion-implantation",
-      "summary": "A research team at Kyoto University has built a silicon carbide transistor that operates at 600°C (873 K) using ion implantation.",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 Tom's Hardware",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T10:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_29320e935ec0",
-      "title": "Enphase推出用于商业储能的IQ Battery C80",
-      "originalTitle": "Enphase Launches IQ Battery C80 for Commercial Energy Storage",
-      "url": "https://www.powerelectronicsnews.com/enphase-launches-iq-battery-c80-for-commercial-energy-storage/",
-      "summary": "The system supports demand charge management, solar self-consumption and grid services, with shipments scheduled to begin in early 2027. Th…",
-      "whyItMatters": "储能；关联 Enphase；媒体 Power Electronics News",
+      "id": "evt_d4d3f71a0b82",
+      "title": "亚利桑那州的电网电池增长迅猛。会持续下去吗？",
+      "originalTitle": "Arizona is having a grid battery growth spurt. Will that last?",
+      "url": "https://www.canarymedia.com/articles/batteries/arizona-grid-battery-growth",
+      "summary": "California and Texas have led the charge on America's grid battery revolution . Now, a third state is racing to catch up: Arizona. The Gran…",
+      "whyItMatters": "储能；地区 美国；媒体 Canary Media",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
-      "entities": [
-        "Enphase"
-      ],
+      "region": "美国",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2,
       "source": {
-        "name": "Power Electronics News",
+        "name": "Canary Media",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-20T13:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "publishedAt": "2026-08-24T07:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3b164c67c339",
+      "title": "PJM终于为许多新的清洁能源点亮了绿灯。它能建成吗？",
+      "originalTitle": "PJM has finally greenlit a lot of new clean power. Can it get built?",
+      "url": "https://www.canarymedia.com/articles/energy-markets/pjm-greenlit-new-clean-power",
+      "summary": "The country’s biggest energy market has a problem: It can’t build enough power plants to keep up with electricity demand. For PJM Interconn…",
+      "whyItMatters": "数据中心电力需求；媒体 Canary Media",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T07:30:00.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_fcfb1a41cd41",
+      "title": "当公用事业公司使用相互矛盾的预测来推动天然气和电力投资时，账单会增加",
+      "originalTitle": "Bills rise when utilities use conflicting forecasts to drive gas and electric investment",
+      "url": "https://www.utilitydive.com/news/how-misaligned-utility-forecasts-drive-higher-bills-and-the-new-york-legi/827025/",
+      "summary": "Integrated planning can lower costs to ratepayers by reducing duplicative spending, and New York could lead the way, write experts at Curre…",
+      "whyItMatters": "天然气与备用电源；媒体 Utility Dive",
+      "topic": "gas-backup",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T16:28:11.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_a638311853e4",
+      "title": "联盟敦促美国环保署保持对航空许可证的公众参与要求",
+      "originalTitle": "Coalition Urges EPA to Keep Public Participation Requirements for Air Permits",
+      "url": "https://cleantechnica.com/2026/08/24/coalition-urges-epa-to-keep-public-participation-requirements-for-air-permits/",
+      "summary": "WASHINGTON — A coalition of nearly 200 environmental, health, and community groups filed comments late Friday urging the U.S. Environmental…",
+      "whyItMatters": "地区 美国；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T17:33:27.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_17eb6f4b8cb6",
+      "title": "加油站正在全球范围内发生变化。您所在的城镇发生了怎样的变化？ （第3部分：非洲）",
+      "originalTitle": "Gas Stations are Changing Globally. How Has It Changed in Your Town? (Part 3: Africa)",
+      "url": "https://cleantechnica.com/2026/08/24/gas-stations-are-changing-globally-how-has-it-changed-in-your-town-part-3-africa/",
+      "summary": "While Europe and Asia redesign their roadside service stations around high-powered charging plugs for passenger cars, the African continent…",
+      "whyItMatters": "电网与并网；地区 非洲；媒体 CleanTechnica",
+      "topic": "grid",
+      "tags": [],
+      "region": "非洲",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T16:33:40.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2246,7 +2500,79 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T22:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_f58e9e8d0864",
+      "title": "Avestra ：用于SystemVerilog断言生成的Agentic AI",
+      "originalTitle": "Avestra: Agentic AI for SystemVerilog Assertion Generation",
+      "url": "https://semiwiki.com/semiconductor-services/372299-avestra-agentic-ai-for-systemverilog-assertion-generation/",
+      "summary": "Modern ASIC, SoC, CPU, and GPU development depends on verification processes that detect subtle functional defects before tapeout. SystemVe…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T21:00:33.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_5b70073f1448",
+      "title": "RISC-V在Sixteen ：从模块化ISA到Hot Chips 2026的标准化平台",
+      "originalTitle": "RISC-V at Sixteen: From Modular ISA to Standardized Platforms at Hot Chips 2026",
+      "url": "https://semiwiki.com/ip/sifive/372639-risc-v-at-sixteen-from-modular-isa-to-standardized-platforms-at-hot-chips-2026/",
+      "summary": "RISC-V has evolved from a Berkeley research architecture into a global instruction-set standard spanning embedded controllers, application…",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 SemiWiki",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T19:00:01.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_27a6c086457a",
+      "title": "2纳米及以下的多模组件占主导地位",
+      "originalTitle": "Multi-Die Assemblies Dominate At 2nm And Below",
+      "url": "https://semiengineering.com/multi-die-assemblies-dominate-at-2nm-and-below/",
+      "summary": "Chips are getting bigger, more modular, and much more capable as new innovations mix with existing processes and long-researched projects g…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-24T07:01:03.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2272,7 +2598,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T07:01:08.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2298,7 +2624,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T07:06:29.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2322,199 +2648,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T07:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_7cd6dbd524db",
-      "title": "PJM希望数据中心自带电源。宾夕法尼亚州正在做这件事。",
-      "originalTitle": "PJM wants data centers to bring their own power. Pennsylvania’s on it.",
-      "url": "https://www.canarymedia.com/articles/data-centers/pjm-data-centers-pennsylvania",
-      "summary": "Last month, grid operator PJM Interconnection unveiled a long-awaited proposal to prevent data centers from spiking power prices — but the…",
-      "whyItMatters": "电网与并网；媒体 Canary Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T21:00:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_61af8933c397",
-      "title": "杜克能源向其最贫穷的北卡罗来纳州客户提供双重打击",
-      "originalTitle": "Duke Energy deals double whammy to its poorest North Carolina customers",
-      "url": "https://www.canarymedia.com/articles/utilities/duke-energy-poorest-nc-customers",
-      "summary": "For the better part of the year, Duke Energy’s bid to jack up electric rates in North Carolina has been hotly contested by politicians, con…",
-      "whyItMatters": "媒体 Canary Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T07:30:00.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_37357e2bc5d3",
-      "title": "电气工程师希望从他们的工作中得到什么",
-      "originalTitle": "What electrical engineers want from their jobs",
-      "url": "https://www.latitudemedia.com/news/what-electrical-engineers-want-from-their-jobs/",
-      "summary": "Data centers and the power sector are sparring for talent, which gives the employees more power than ever. The post What electrical enginee…",
-      "whyItMatters": "媒体 Latitude Media",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-21T15:28:58.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9674ee2e8375",
-      "title": "人工智能能否彻底改变电网运营？",
-      "originalTitle": "Can AI revolutionize grid operations?",
-      "url": "https://www.latitudemedia.com/news/catalyst-can-ai-revolutionize-grid-operations/",
-      "summary": "ThinkLabs AI CEO Josh Wong on the real pressure points for the grid — and how AI can help. The post Can AI revolutionize grid operations? a…",
-      "whyItMatters": "电网与并网；媒体 Latitude Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T15:30:46.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5938081aae2f",
-      "title": "人工智能需要不同类型的发电厂",
-      "originalTitle": "AI needs a different kind of power plant",
-      "url": "https://www.latitudemedia.com/news/ai-needs-a-different-kind-of-power-plant/",
-      "summary": "Arbor Energy’s solution combines modular turbines, 3D printing, and a different approach to emissions and water. The post AI needs a differ…",
-      "whyItMatters": "光伏与风电；媒体 Latitude Media",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-19T18:32:32.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_38b3969afc55",
-      "title": "德克萨斯州的电网问题变得更加严重",
-      "originalTitle": "The grid’s woes just got bigger in Texas",
-      "url": "https://www.latitudemedia.com/news/the-grids-woes-just-got-bigger-in-texas/",
-      "summary": "Gov. Abbott's interconnection pause will simply push data center development off-grid — at least for now. The post The grid’s woes just got…",
-      "whyItMatters": "电网与并网；媒体 Latitude Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "Latitude Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-18T21:35:38.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_36c45996e07f",
-      "title": "水资源设计：为什么洪水风险必须转移到公用事业规模太阳能设计的前沿",
-      "originalTitle": "Designing for water: why flood risk must move to the front of utility-scale solar design",
-      "url": "https://www.pv-tech.org/designing-for-water-why-flood-risk-must-move-to-the-front-of-utility-scale-solar-design/",
-      "summary": "Drawing on his experience of flood risk engineering, Hossein Ghoveisi makes the case for early, accurate hydrology in solar project design.",
-      "whyItMatters": "光伏与风电；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-21T15:10:58.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8dd7a64df702",
-      "title": "ES Foundry在美国光伏制造转向n型时支持PERC",
-      "originalTitle": "ES Foundry backs PERC amid US PV manufacturing shift to n-type",
-      "url": "https://www.pv-tech.org/es-foundry-backs-perc-amid-us-pv-manufacturing-shift-to-n-type/",
-      "summary": "ES Foundry's Alex Zhu outlines how the US cell maker is betting on PERC while navigating shifting regulations and supply-chain constraints.",
-      "whyItMatters": "光伏与风电；地区 美国；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-21T13:45:47.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2538,7 +2672,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T14:33:41.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2562,7 +2696,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T12:28:44.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2586,7 +2720,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-21T18:40:34.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2610,7 +2744,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T21:11:56.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2634,7 +2768,127 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T18:05:38.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_83ab0c9c0eb8",
+      "title": "重新思考变电站保护：为什么越来越多的工程师转向虚拟化",
+      "originalTitle": "Rethinking Substation Protection: Why More Engineers Are Turning to Virtualization",
+      "url": "https://www.tdworld.com/substations/blog/55396329/rethinking-substation-protection-why-more-engineers-are-turning-to-virtualization",
+      "summary": "As energy demands surge and grid modernization accelerates, virtualization enables utilities to deploy scalable, software-driven protection…",
+      "whyItMatters": "电网与并网；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T20:46:34.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_72f7e68b68b3",
+      "title": "宾夕法尼亚州州长的竞赛最近在数据中心政策、电力方面升温",
+      "originalTitle": "PA Governor’s Race is Latest to Heat Up Over Data Center Policy, Electricity",
+      "url": "https://www.tdworld.com/policy/article/55399932/pa-governors-race-is-latest-to-heat-up-over-data-center-policy-electricity",
+      "summary": "Shapiro, a Democrat, released an ad calling Garrity “Pennsylvania’s #1 fan of data centers.”",
+      "whyItMatters": "电力市场与政策；媒体 T&D World",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T18:28:21.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3e6126fdfcbb",
+      "title": "五项电网创新。一位获奖者。您在T&D World Live上决定",
+      "originalTitle": "Five Grid Innovations. One Winner. You Decide at T&D World Live",
+      "url": "https://www.tdworld.com/grid-innovations/news/55399894/six-grid-innovations-one-winner-you-decide-at-td-world-live",
+      "summary": "Experience the future of electric utilities at T&D World Live 2026's Innovation Shares. This interactive session features presentations on…",
+      "whyItMatters": "电网与并网；地区 全球；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T17:17:44.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2acbd63edfb3",
+      "title": "TVA创建新的数据中心速率以保护消费者，提高可靠性",
+      "originalTitle": "TVA Creates New Data Center Rate to Protect Consumers, Boost Reliability",
+      "url": "https://www.tdworld.com/utility-business/article/55399847/tva-creates-new-data-center-rate-to-protect-consumers-boost-reliability",
+      "summary": "The board approved updates to TVA’s wholesale rate structure to increase transparency, be more aligned to cost and protect residential and…",
+      "whyItMatters": "数据中心电力需求；媒体 T&D World",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-21T15:33:46.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b28f4ddba7a8",
+      "title": "下一代教育： UNC夏洛特能源学院培训未来的美国劳动力，解决关键的电网需求",
+      "originalTitle": "Next-Gen Education: UNC Charlotte's School of Energy to Train Future U.S. Workforce, Tackle Critical Grid Demands",
+      "url": "https://www.tdworld.com/reliability-and-resiliency/news/55399623/next-gen-education-unc-charlottes-school-of-energy-to-train-future-us-workforce-tackle-critical-grid-demands",
+      "summary": "The new school will focus solely on grid modernization and the interdisciplinary hurdles facing the nation's electrical infrastructure. It…",
+      "whyItMatters": "电网与并网；地区 美国；媒体 T&D World",
+      "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "T&D World",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-20T19:25:28.000Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2658,7 +2912,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T07:03:43.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2682,31 +2936,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-20T07:02:29.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6e45e5f4d13f",
-      "title": "通过可持续发展和创新为客户减少范围3的价值链排放",
-      "originalTitle": "Reducing Scope 3 Value Chain Emissions For Customers Through Sustainability And Innovation",
-      "url": "https://semiengineering.com/reducing-scope-3-value-chain-emissions-for-customers-through-sustainability-and-innovation/",
-      "summary": "Reducing manufacturing-related emissions may support lowering the embedded carbon footprint of the chips customers use in their products. T…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-20T07:02:04.000Z",
-      "discoveredAt": "2026-08-25T04:31:40.630Z",
+      "discoveredAt": "2026-08-25T21:15:25.274Z",
       "relatedSources": [],
       "wechat": false
     }
