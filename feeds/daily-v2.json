@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-08-30",
-  "generatedAt": "2026-08-29T22:51:50.862Z",
+  "generatedAt": "2026-08-30T09:37:24.162Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
     "sourcesSucceeded": 38,
     "articlesFetched": 404,
-    "eventsPublished": 101
+    "eventsPublished": 98
   },
   "items": [
     {
@@ -38,7 +38,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T09:58:58.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "Transformer Technology",
@@ -53,6 +53,36 @@
           "url": "https://transformer-magazine.com/news/ls-electric-and-ge-vernova-form-joint-venture/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_5e0c79ed0192",
+      "title": "美国铀产量在2025年增长了两倍多，是2017年以来的最高水平",
+      "originalTitle": "U.S. uranium production more than tripled in 2025 and was the highest since 2017",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68044",
+      "summary": "In 2025, uranium concentrate production in the United States totaled 2.1 million pounds of triuranium octoxide (U3O8), the base component o…",
+      "whyItMatters": "核电与 SMR；关键数字 2025w；地区 美国；一手来源 EIA Electricity Data",
+      "topic": "nuclear-smr",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "U3O8 production in",
+          "value": 2025,
+          "unit": "w"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "EIA Electricity Data",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-28T14:00:00.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -77,24 +107,127 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4.5,
+      "importance": 4,
       "source": {
         "name": "HPCwire",
         "type": "media",
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T00:04:52.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "HPCwire",
           "url": "https://www.hpcwire.com/off-the-wire/nvidia-nvlink-fusion-expands-with-nvhbm-custom-high-bandwidth-memory/"
-        },
-        {
-          "name": "SemiEngineering",
-          "url": "https://semiengineering.com/chip-industry-week-in-review-153/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_3ab7d9d63285",
+      "title": "借助全面生产的Groq 3 LPX ， NVIDIA为代理商扩展了Vera Rubin推理",
+      "originalTitle": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
+      "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
+      "summary": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the…",
+      "whyItMatters": "关键数字 72w；关联 NVIDIA；一手来源 NVIDIA Blog",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "NVIDIA"
+      ],
+      "metrics": [
+        {
+          "label": "Vera Rubin NVL",
+          "value": 72,
+          "unit": "w"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-24T15:00:41.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_3f699efba32e",
+      "title": "波兰的煤炭问题已经改变",
+      "originalTitle": "Poland’s Coal Problem Has Changed",
+      "url": "https://cleantechnica.com/2026/08/30/poland-coal-capacity-transition/",
+      "summary": "Poland’s coal transition is moving much faster than the country’s reputation suggests. Coal supplied 72.5% of Polish electricity in 2021. B…",
+      "whyItMatters": "其他能源动态；关键数字 72.5%、52.7%、31.4%；地区 波兰；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "波兰",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "suggests. Coal supplied",
+          "value": 72.5,
+          "unit": "%"
+        },
+        {
+          "label": "was down to",
+          "value": 52.7,
+          "unit": "%"
+        },
+        {
+          "label": "while renewables reached",
+          "value": 31.4,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:05:33.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_1aba6361da81",
+      "title": "Aratas为3.3kV系统推出紧凑型碳化硅继电器",
+      "originalTitle": "Aratas Introduces Compact SiC Relay for 3.3kV Systems",
+      "url": "https://www.powerelectronicsnews.com/aratas-introduces-compact-sic-relay-for-3-3kv-systems/",
+      "summary": "The G3VH relay combines low RDS(ON) resistance, fast switching and 5 kVrms isolation in a compact package. The post Aratas Introduces Compa…",
+      "whyItMatters": "储能变流器（PCS）；关键数字 3.3kV、5kV；媒体 Power Electronics News",
+      "topic": "pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "SiC Relay for",
+          "value": 3.3,
+          "unit": "kV"
+        },
+        {
+          "label": "fast switching and",
+          "value": 5,
+          "unit": "kV"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Power Electronics News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-26T13:00:00.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -126,14 +259,14 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T02:39:45.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -170,141 +303,14 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T07:24:20.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_5e0c79ed0192",
-      "title": "美国铀产量在2025年增长了两倍多，是2017年以来的最高水平",
-      "originalTitle": "U.S. uranium production more than tripled in 2025 and was the highest since 2017",
-      "url": "https://www.eia.gov/todayinenergy/detail.php?id=68044",
-      "summary": "In 2025, uranium concentrate production in the United States totaled 2.1 million pounds of triuranium octoxide (U3O8), the base component o…",
-      "whyItMatters": "核电与 SMR；关键数字 2025w；地区 美国；一手来源 EIA Electricity Data",
-      "topic": "nuclear-smr",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "U3O8 production in",
-          "value": 2025,
-          "unit": "w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "EIA Electricity Data",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-28T14:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_3ab7d9d63285",
-      "title": "借助全面生产的Groq 3 LPX ， NVIDIA为代理商扩展了Vera Rubin推理",
-      "originalTitle": "With Groq 3 LPX in Full Production, NVIDIA Extends Vera Rubin Inference for Agents",
-      "url": "https://blogs.nvidia.com/blog/vera-rubin-lpx-spectrum-x-nvlink-fusion/",
-      "summary": "The next era of AI inference won’t be defined by a single breakthrough chip, network or system. It’ll be defined by how every layer of the…",
-      "whyItMatters": "关键数字 72w；关联 NVIDIA；一手来源 NVIDIA Blog",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "NVIDIA"
-      ],
-      "metrics": [
-        {
-          "label": "Vera Rubin NVL",
-          "value": 72,
-          "unit": "w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-24T15:00:41.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_05a2a2fdc6e4",
-      "title": "智利的混合英雄",
-      "originalTitle": "Chile’s hybrid heroics",
-      "url": "https://www.pv-magazine.com/2026/08/29/chiles-hybrid-heroics/",
-      "summary": "In 2024, Chile passed a law incentivizing battery development paired with utility-scale solar. This move quickly led to a flood of big batt…",
-      "whyItMatters": "储能；关键数字 6GW；地区 智利；媒体 pv magazine",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "智利",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "expected to surpass",
-          "value": 6,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-29T04:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1aba6361da81",
-      "title": "Aratas为3.3kV系统推出紧凑型碳化硅继电器",
-      "originalTitle": "Aratas Introduces Compact SiC Relay for 3.3kV Systems",
-      "url": "https://www.powerelectronicsnews.com/aratas-introduces-compact-sic-relay-for-3-3kv-systems/",
-      "summary": "The G3VH relay combines low RDS(ON) resistance, fast switching and 5 kVrms isolation in a compact package. The post Aratas Introduces Compa…",
-      "whyItMatters": "储能变流器（PCS）；关键数字 3.3kV、5kV；媒体 Power Electronics News",
-      "topic": "pcs",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "SiC Relay for",
-          "value": 3.3,
-          "unit": "kV"
-        },
-        {
-          "label": "fast switching and",
-          "value": 5,
-          "unit": "kV"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Power Electronics News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-26T13:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -334,7 +340,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T09:04:22.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -360,13 +366,67 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-25T07:05:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "HPCwire",
           "url": "https://www.hpcwire.com/off-the-wire/openai-details-jalapeno-inference-chip-performance-and-multigenerational-roadmap/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_c53834bf4d4e",
+      "title": "本征极化超结促进GaN-On-Silicon功率器件(EPFL)",
+      "originalTitle": "Intrinsic Polarization Superjunctions Boost GaN-On-Silicon Power Devices (EPFL)",
+      "url": "https://semiengineering.com/intrinsic-polarization-superjunctions-boost-gan-on-silicon-power-devices-epfl/",
+      "summary": "Researchers from École Polytechnique Fédérale de Lausanne (EPFL) published a technical paper titled “Intrinsic polarization superjunctions…",
+      "whyItMatters": "储能变流器（PCS）；媒体 SemiEngineering",
+      "topic": "pcs",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:03:28.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_73014a2d5497",
+      "title": "适用于AI工作负载的分布式GPU的循环级模拟器（ Purdue ）",
+      "originalTitle": "Cycle-Level Simulator for Distributed GPUs For AI Workloads (Purdue)",
+      "url": "https://semiengineering.com/cycle-level-simulator-for-distributed-gpus-for-ai-workloads-purdue/",
+      "summary": "Researchers from Purdue University published a technical paper titled “Architecting the Next Generation of Asynchronous, Distributed GPUs f…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 99%；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "including a “",
+          "value": 99,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:02:05.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -391,7 +451,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-28T02:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -417,7 +477,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-28T07:20:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -443,7 +503,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-27T13:00:17.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -478,7 +538,37 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T13:02:31.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_05a2a2fdc6e4",
+      "title": "智利的混合英雄",
+      "originalTitle": "Chile’s hybrid heroics",
+      "url": "https://www.pv-magazine.com/2026/08/29/chiles-hybrid-heroics/",
+      "summary": "In 2024, Chile passed a law incentivizing battery development paired with utility-scale solar. This move quickly led to a flood of big batt…",
+      "whyItMatters": "储能；关键数字 6GW；地区 智利；媒体 pv magazine",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "智利",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "expected to surpass",
+          "value": 6,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-29T04:00:00.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -508,7 +598,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:38:09.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -543,7 +633,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:25:26.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -588,7 +678,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T11:18:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -623,7 +713,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T10:04:23.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -658,7 +748,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T08:03:04.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -688,7 +778,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T14:35:39.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -723,7 +813,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T12:03:20.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -753,7 +843,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T03:09:28.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -793,7 +883,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:49:52.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -817,7 +907,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:18:15.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -847,7 +937,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T11:17:57.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -871,7 +961,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -906,7 +996,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T12:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -936,7 +1026,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T08:27:39.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "Transformer Magazine",
@@ -984,76 +1074,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-24T12:17:03.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_b12027232341",
-      "title": "Kshema Power降落315兆瓦输电订单",
-      "originalTitle": "Kshema Power lands 315 MW transmission order",
-      "url": "https://transformer-magazine.com/news/kshema-power-lands-315-mw-transmission-order/",
-      "summary": "The Karnataka project includes 220 kV transmission lines, unit substations and 33 kV infrastructure to connect new wind capacity to the grid",
-      "whyItMatters": "电网与并网；关键数字 315MW、315兆瓦、220kV；媒体 Transformer Magazine",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Kshema Power lands",
-          "value": 315,
-          "unit": "MW"
-        },
-        {
-          "label": "ower降落",
-          "value": 315,
-          "unit": "兆瓦"
-        },
-        {
-          "label": "Karnataka project includes",
-          "value": 220,
-          "unit": "kV"
-        },
-        {
-          "label": "unit substations and",
-          "value": 33,
-          "unit": "kV"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-27T09:00:27.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_de11ea330bb3",
-      "title": "特朗普订单重塑美国变压器采购",
-      "originalTitle": "Trump order reshapes US transformer sourcing",
-      "url": "https://transformer-magazine.com/news/trump-order-reshapes-us-transformer-sourcing/",
-      "summary": "New US grid-security rules could favour Korean power equipment manufacturers with factories in Tennessee, Alabama and Utah",
-      "whyItMatters": "固态变压器（SST）；地区 美国；媒体 Transformer Magazine",
-      "topic": "sst",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-27T07:16:24.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1083,7 +1104,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T21:45:05.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1118,7 +1139,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T03:22:11.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1158,37 +1179,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T11:34:26.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_6691207fea22",
-      "title": "生成式设计优化了2.5D和3D封装的液体冷却通道（ UM-Dearborn ）",
-      "originalTitle": "Generative Design Optimizes Liquid-Cooling Channels For 2.5D And 3D Packages (UM-Dearborn)",
-      "url": "https://semiengineering.com/generative-design-optimizes-liquid-cooling-channels-for-2-5d-and-3d-packages-um-dearborn/",
-      "summary": "Researchers from University of Michigan-Dearborn published a technical paper titled “Generative Design of Liquid-Cooling Channels for Therm…",
-      "whyItMatters": "冷却、UPS 与 PUE；关键数字 2.7kW；媒体 SemiEngineering",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "in a “",
-          "value": 2.7,
-          "unit": "kW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-28T17:34:14.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1214,7 +1205,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-29T11:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1240,7 +1231,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-26T10:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1266,7 +1257,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-25T07:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1293,7 +1284,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-25T16:11:02.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1319,7 +1310,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T15:00:19.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1345,7 +1336,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T18:02:29.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1369,7 +1360,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T07:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1393,7 +1384,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T13:58:29.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [
         {
           "name": "Energy Central",
@@ -1422,90 +1413,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T15:07:56.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_73879d9fa971",
-      "title": "NRDC表示，特朗普的能源政策可能会耗费540吉瓦的可再生能源",
-      "originalTitle": "Trump’s energy policy could cost US 540 GW of renewables, says NRDC",
-      "url": "https://www.utilitydive.com/news/trumps-energy-policy-could-cost-us-540-gw-of-renewables-says-nrdc/828826/",
-      "summary": "“We lose more than half of everything that we expected to be able to build with the combination of market forces and proactive policy,” sai…",
-      "whyItMatters": "电力市场与政策；关键数字 540GW、540吉瓦；地区 美国；媒体 Utility Dive",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "could cost US",
-          "value": 540,
-          "unit": "GW"
-        },
-        {
-          "label": "策可能会耗费",
-          "value": 540,
-          "unit": "吉瓦"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Utility Dive",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-26T14:01:37.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_9f4985437cab",
-      "title": "甲烷热解存在碳市场问题",
-      "originalTitle": "Methane Thermolysis Has A Carbon Market Problem",
-      "url": "https://cleantechnica.com/2026/08/29/methane-thermolysis-carbon-market-problem/",
-      "summary": "Methane thermolysis has one of the cleaner propositions in the hydrogen space. The process is also commonly called methane pyrolysis, but I…",
-      "whyItMatters": "电力市场与政策；媒体 CleanTechnica",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-29T06:36:18.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_840db9444b43",
-      "title": "加州起诉特朗普取消荒谬的风力发电计划",
-      "originalTitle": "California Sues Trump Over Ridiculous Wind Power Cancellations",
-      "url": "https://cleantechnica.com/2026/08/28/california-sues-trump-over-ridiculous-wind-power-cancellations/",
-      "summary": "I was going to say that one of the craziest things Trump has done as president is cancel billions of dollars of wind power leases and pay o…",
-      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-29T01:03:28.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1531,7 +1439,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T16:43:56.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1558,7 +1466,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1585,7 +1493,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T14:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1609,7 +1517,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T14:40:14.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1639,7 +1547,76 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T08:42:51.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b12027232341",
+      "title": "Kshema Power降落315兆瓦输电订单",
+      "originalTitle": "Kshema Power lands 315 MW transmission order",
+      "url": "https://transformer-magazine.com/news/kshema-power-lands-315-mw-transmission-order/",
+      "summary": "The Karnataka project includes 220 kV transmission lines, unit substations and 33 kV infrastructure to connect new wind capacity to the grid",
+      "whyItMatters": "电网与并网；关键数字 315MW、315兆瓦、220kV；媒体 Transformer Magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Kshema Power lands",
+          "value": 315,
+          "unit": "MW"
+        },
+        {
+          "label": "ower降落",
+          "value": 315,
+          "unit": "兆瓦"
+        },
+        {
+          "label": "Karnataka project includes",
+          "value": 220,
+          "unit": "kV"
+        },
+        {
+          "label": "unit substations and",
+          "value": 33,
+          "unit": "kV"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-27T09:00:27.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_de11ea330bb3",
+      "title": "特朗普订单重塑美国变压器采购",
+      "originalTitle": "Trump order reshapes US transformer sourcing",
+      "url": "https://transformer-magazine.com/news/trump-order-reshapes-us-transformer-sourcing/",
+      "summary": "New US grid-security rules could favour Korean power equipment manufacturers with factories in Tennessee, Alabama and Utah",
+      "whyItMatters": "固态变压器（SST）；地区 美国；媒体 Transformer Magazine",
+      "topic": "sst",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-27T07:16:24.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1674,7 +1651,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T09:43:17.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1698,7 +1675,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T07:29:56.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1728,7 +1705,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T16:54:20.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1752,7 +1729,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-29T13:44:33.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1779,7 +1756,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:08:33.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1805,7 +1782,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T05:34:25.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1832,7 +1809,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:00:40.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1858,7 +1835,79 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T21:00:29.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_08c56be298ba",
+      "title": "法学硕士推理中的混合HBM-HBF架构（牛津大学）",
+      "originalTitle": "Hybrid HBM-HBF Architecture in LLM Inference (University of Oxford)",
+      "url": "https://semiengineering.com/hybrid-hbm-hbf-architecture-in-llm-inference-university-of-oxford/",
+      "summary": "Researchers at the University of Oxford published a technical paper titled “Hardware-Managed Heterogeneous High-Bandwidth Memory and Flash…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:06:37.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_524de4f44de4",
+      "title": "M3D 6T SRAM带2纳米BEOL通道门（乔治亚理工学院，新思科技）",
+      "originalTitle": "M3D 6T SRAM With BEOL Pass-Gates at 2nm (Georgia Tech, Synopsys)",
+      "url": "https://semiengineering.com/m3d-6t-sram-with-beol-pass-gates-at-2nm-georgia-tech-synopsys/",
+      "summary": "Researchers from Georgia Institute of Technology and Synopsys published a technical paper titled “A Process-Aware Hybrid Si/IGO Monolithic-…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:04:34.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d83ae4e155e7",
+      "title": "分子动力学研究解释4H-SiC中的铝掺杂活化（ TU Wien ， Silvaco ）",
+      "originalTitle": "Molecular Dynamics Study Explains Aluminum Dopant Activation In 4H-SiC (TU Wien, Silvaco)",
+      "url": "https://semiengineering.com/molecular-dynamics-study-explains-aluminum-dopant-activation-in-4h-sic-tu-wien-silvaco/",
+      "summary": "Researchers from TU Wien and Silvaco Europe published a technical paper titled “The influence of implantation conditions on dopant activati…",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 欧盟；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-30T07:01:27.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1882,31 +1931,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-29T17:00:22.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_bf3a8a0ce7f8",
-      "title": "推理期间的Rowhammer后门注入攻击（东北）",
-      "originalTitle": "Rowhammer Backdoor Injection Attack During Inference (Northeastern)",
-      "url": "https://semiengineering.com/rowhammer-backdoor-injection-attack-during-inference-northeastern/",
-      "summary": "Researchers from Northeastern University published a technical paper titled “ROBBIN: Rowhammer-Based Backdoor Injection during Inference.”…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-29T07:01:49.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1933,7 +1958,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T15:19:27.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1957,7 +1982,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-24T15:00:54.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1981,7 +2006,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:35:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2005,7 +2030,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T07:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2029,31 +2054,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T21:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cbee10c2feb5",
-      "title": "纽约的电网正在努力应对高温",
-      "originalTitle": "New York’s grid is struggling to handle the heat",
-      "url": "https://www.canarymedia.com/articles/clean-energy/new-york-power-grid-struggle-heat-summer",
-      "summary": "This article originally appeared on Inside Climate News , a nonprofit, non-partisan news organization that covers climate, energy and the e…",
-      "whyItMatters": "电网与并网；媒体 Canary Media",
-      "topic": "grid",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-27T07:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2080,7 +2081,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-24T22:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_88ff160e99c0",
+      "title": "联邦当局破坏中国支持的针对美国关键基础设施的黑客行动",
+      "originalTitle": "Federal authorities disrupt China-backed hacking operation targeting US critical infrastructure",
+      "url": "https://www.utilitydive.com/news/federal-authorities-disrupt-china-hacking-US-critical-infrastructure/829094/",
+      "summary": "Compromised IoT devices were used in a yearslong campaign against key sectors and federal agencies, including the U.S. Department of Energy…",
+      "whyItMatters": "地区 中国；媒体 Utility Dive",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-28T12:33:36.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2104,7 +2129,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T16:53:43.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2128,7 +2153,55 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:38:51.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_9f4985437cab",
+      "title": "甲烷热解存在碳市场问题",
+      "originalTitle": "Methane Thermolysis Has A Carbon Market Problem",
+      "url": "https://cleantechnica.com/2026/08/29/methane-thermolysis-carbon-market-problem/",
+      "summary": "Methane thermolysis has one of the cleaner propositions in the hydrogen space. The process is also commonly called methane pyrolysis, but I…",
+      "whyItMatters": "电力市场与政策；媒体 CleanTechnica",
+      "topic": "power-market-policy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-29T06:36:18.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_840db9444b43",
+      "title": "加州起诉特朗普取消荒谬的风力发电计划",
+      "originalTitle": "California Sues Trump Over Ridiculous Wind Power Cancellations",
+      "url": "https://cleantechnica.com/2026/08/28/california-sues-trump-over-ridiculous-wind-power-cancellations/",
+      "summary": "I was going to say that one of the craziest things Trump has done as president is cancel billions of dollars of wind power leases and pay o…",
+      "whyItMatters": "光伏与风电；媒体 CleanTechnica",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-29T01:03:28.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2152,31 +2225,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T22:44:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_58df2eb86178",
-      "title": "能源安全正在提高跨境电力的价值",
-      "originalTitle": "Energy Security Is Increasing The Value Of Cross-Border Electricity",
-      "url": "https://cleantechnica.com/2026/08/28/cross-border-electricity-energy-security-hvdc/",
-      "summary": "Energy independence was an understandable slogan in Europe after Russia’s invasion of Ukraine sent gas and electricity prices through the r…",
-      "whyItMatters": "电力市场与政策；地区 欧盟；媒体 CleanTechnica",
-      "topic": "power-market-policy",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-28T07:25:59.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2200,7 +2249,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T19:59:26.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2224,7 +2273,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T15:30:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2248,7 +2297,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T12:37:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2272,7 +2321,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T10:45:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2296,7 +2345,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T15:56:10.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2320,7 +2369,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T09:43:23.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2344,7 +2393,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T16:42:59.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2370,7 +2419,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T11:09:05.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2397,62 +2446,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-23T15:25:23.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_487f1cb8c857",
-      "title": "日立能源在CIGRE 2026上扩展无SF6开关设备产品组合",
-      "originalTitle": "Hitachi Energy Expands SF6-Free Switchgear Portfolio at CIGRE 2026",
-      "url": "https://www.tdworld.com/substations/news/55400445/hitachi-energy-expands-sf6-free-switchgear-portfolio-at-cigre-2026",
-      "summary": "The new EconiQ lineup addresses the global push to phase out SF6 gas by offering environmentally friendly high-voltage equipment with incre…",
-      "whyItMatters": "电网与并网；关联 Hitachi Energy、日立能源、Hitachi；地区 美国；媒体 T&D World",
-      "topic": "grid",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "Hitachi Energy",
-        "日立能源",
-        "Hitachi",
-        "日立"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "T&D World",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T20:54:30.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_39a01c2f3ddb",
-      "title": "美国代表团将探索南部非洲电网现代化伙伴关系",
-      "originalTitle": "U.S. Delegation to Explore Grid Modernization Partnerships in Southern Africa",
-      "url": "https://www.tdworld.com/overhead-distribution/news/55400438/us-delegation-to-explore-grid-modernization-partnerships-in-southern-africa",
-      "summary": "A U.S. trip for Southern African power officials aims to foster partnerships, showcase innovative grid control solutions, and explore comme…",
-      "whyItMatters": "电网与并网；关联 现代；地区 美国；媒体 T&D World",
-      "topic": "grid",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "现代"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "T&D World",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T20:48:07.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2476,7 +2470,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T00:35:24.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2500,7 +2494,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T21:43:56.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2524,7 +2518,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:12:20.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2548,7 +2542,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T17:35:22.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2572,7 +2566,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T08:00:32.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2596,7 +2590,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T17:00:34.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2620,79 +2614,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T15:00:33.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_2d474a93e250",
-      "title": "在LLM培训中，铁电调谐减少了光学互连失速（佐治亚理工学院）",
-      "originalTitle": "Ferroelectric Tuning Reduces Optical-Interconnect Stalls In LLM Training (Georgia Tech)",
-      "url": "https://semiengineering.com/ferroelectric-tuning-reduces-optical-interconnect-stalls-in-llm-training-georgia-tech/",
-      "summary": "Researchers from Georgia Institute of Technology published a technical paper titled “Thermal Tuning Overhead in Wafer-Scale Optical Interco…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-28T21:41:18.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_83a637b70997",
-      "title": "2.5D/3D物理设计异构集成研究的开源基准套件（加州大学洛杉矶分校）",
-      "originalTitle": "Open-Source Benchmark Suite For 2.5D/3D Heterogeneous Integration Research in Physical Design (UCLA)",
-      "url": "https://semiengineering.com/open-source-benchmark-suite-for-2-5d-3d-heterogeneous-integration-research-in-physical-design-ucla/",
-      "summary": "Researchers from University of California, Los Angeles published a technical paper titled “An Open-Source Benchmark Suite of 3D-IC Testcase…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-28T17:49:57.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_19a766ac194b",
-      "title": "蓝宝石表面改性实现晶圆级2D半导体增长（ Peking U., CAS et al. ）",
-      "originalTitle": "Sapphire Surface Modification Enables Wafer-Scale 2D Semiconductor Growth (Peking U., CAS et al.)",
-      "url": "https://semiengineering.com/sapphire-surface-modification-enables-wafer-scale-2d-semiconductor-growth-peking-u-cas-et-al/",
-      "summary": "Researchers from Peking University, Chinese Academy of Sciences et al. published a technical paper titled “Homo-metal-element mediated surf…",
-      "whyItMatters": "芯片、服务器与算力基础设施；地区 中国；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-28T17:28:19.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2716,7 +2638,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T15:47:46.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_cbee10c2feb5",
+      "title": "纽约的电网正在努力应对高温",
+      "originalTitle": "New York’s grid is struggling to handle the heat",
+      "url": "https://www.canarymedia.com/articles/clean-energy/new-york-power-grid-struggle-heat-summer",
+      "summary": "This article originally appeared on Inside Climate News , a nonprofit, non-partisan news organization that covers climate, energy and the e…",
+      "whyItMatters": "电网与并网；媒体 Canary Media",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-27T07:30:00.000Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2740,7 +2686,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T12:59:43.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2764,7 +2710,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T11:00:00.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2788,7 +2734,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T19:07:29.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2812,31 +2758,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T16:28:58.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_1f6f53f63464",
-      "title": "印第安纳州长时间停电，州长呼吁展开调查",
-      "originalTitle": "Long Power Outages Plague Indiana, Governor Calls for Investigation",
-      "url": "https://www.tdworld.com/disaster-response/article/55400206/long-power-outages-plague-indiana-governor-calls-for-investigation",
-      "summary": "Indiana Governor Mike Braun is directing his office to investigate electric utility NIPSCO following power outages that began with severe s…",
-      "whyItMatters": "媒体 T&D World",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "T&D World",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-24T15:50:21.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2860,7 +2782,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T10:10:28.000Z",
-      "discoveredAt": "2026-08-29T22:51:50.862Z",
+      "discoveredAt": "2026-08-30T09:37:24.162Z",
       "relatedSources": [],
       "wechat": false
     }
