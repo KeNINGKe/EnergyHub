@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-01",
-  "generatedAt": "2026-09-01T00:09:46.949Z",
+  "generatedAt": "2026-09-01T05:39:39.436Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 46,
     "sourcesSucceeded": 37,
     "articlesFetched": 389,
-    "eventsPublished": 89
+    "eventsPublished": 94
   },
   "items": [
     {
@@ -38,7 +38,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:07:10.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -48,83 +48,109 @@
       "wechat": false
     },
     {
-      "id": "evt_208a5e65004d",
-      "title": "丹麦在H1增加了337兆瓦的太阳能",
-      "originalTitle": "Denmark adds 337 MW of solar in H1",
-      "url": "https://www.pv-magazine.com/2026/08/31/denmark-adds-337-mw-of-solar-in-h1/",
-      "summary": "Denmark installed more solar during the first half of 2026 than it did during the first half of 2025, with market growth currently driven b…",
-      "whyItMatters": "光伏与风电；关键数字 337MW、337兆瓦、2025w；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_f88e9bcc81b4",
+      "title": "新闻： PJM将Oklo的750兆瓦项目从其简化的互连过程中切断，下一代核电开发商正在发烟。",
+      "originalTitle": "NEWS: PJM cut Oklo’s 750-MW project from its streamlined interconnection process—and the next-gen nuclear developer is fuming.",
+      "url": "https://www.energycentral.com/nuclear-ke7q9aco/post/news-pjm-cut-oklo-s-750-mw-project-from-its-streamlined-interconnection-WnGjUnvN94f11Yc",
+      "summary": "* The project is “of critical national importance,” according to the complaint [https://elibrary.ferc.gov/eLibrary/filelist?_sp=79f21c8c-e3…",
+      "whyItMatters": "其他能源动态；关键数字 750兆瓦、150MW、300MW；关联 Oklo；媒体 Energy Central",
+      "topic": "other-energy",
       "tags": [],
-      "region": "全球",
-      "entities": [],
+      "region": "未知",
+      "entities": [
+        "Oklo"
+      ],
       "metrics": [
         {
-          "label": "Denmark adds",
-          "value": 337,
-          "unit": "MW"
-        },
-        {
-          "label": "在H1增加了",
-          "value": 337,
+          "label": "将Oklo的",
+          "value": 750,
           "unit": "兆瓦"
         },
         {
-          "label": "first half of",
-          "value": 2025,
-          "unit": "w"
+          "label": "Friday. It includes",
+          "value": 150,
+          "unit": "MW"
+        },
+        {
+          "label": "of advanced nuclear,",
+          "value": 300,
+          "unit": "MW"
         }
       ],
       "impact": "unknown",
       "importance": 4,
       "source": {
-        "name": "pv magazine",
+        "name": "Energy Central",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T08:23:26.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/31/el-mercado-mundial-de-om-solar-alcanza-348-gw-y-acelera-su-concentracion/"
-        }
-      ],
+      "publishedAt": "2026-09-01T02:09:36.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_26d5712d2e3c",
-      "title": "未来之旅： JA路演2026 ，聚焦综合能源解决方案",
-      "originalTitle": "Journey Ahead: JA Roadshow 2026 to spotlight integrated energy solutions",
-      "url": "https://www.pv-magazine.com/2026/08/31/journey-ahead-ja-roadshow-2026-to-spotlight-integrated-energy-solutions/",
-      "summary": "As energy resilience rises on the agenda across Europe, JA’s first roadshow, Journey Ahead: JA Roadshow 2026, will bring the company's expa…",
-      "whyItMatters": "储能；关键数字 2026w；地区 欧盟；媒体 pv magazine",
-      "topic": "energy-storage",
+      "id": "evt_d2fe6761c638",
+      "title": "ChronoScale计划与微软合作部署50兆瓦人工智能计算",
+      "originalTitle": "ChronoScale Plans 50 MW AI Compute Deployment with Microsoft",
+      "url": "https://www.hpcwire.com/off-the-wire/chronoscale-plans-50-mw-ai-compute-deployment-with-microsoft/",
+      "summary": "MENLO PARK, Calif., Aug. 31, 2026 — ChronoScale Corporation has announced plans with Microsoft for a 50-megawatt AI compute deployment in N…",
+      "whyItMatters": "冷却、UPS 与 PUE；关键数字 50MW、50兆瓦；关联 Microsoft、NVIDIA；地区 美国；媒体 HPCwire",
+      "topic": "cooling-pue",
       "tags": [],
-      "region": "欧盟",
-      "entities": [],
+      "region": "美国",
+      "entities": [
+        "Microsoft",
+        "NVIDIA"
+      ],
       "metrics": [
         {
-          "label": "Ahead: JA Roadshow",
-          "value": 2026,
-          "unit": "w"
+          "label": "ChronoScale Plans",
+          "value": 50,
+          "unit": "MW"
+        },
+        {
+          "label": "微软合作部署",
+          "value": 50,
+          "unit": "兆瓦"
         }
       ],
       "impact": "unknown",
       "importance": 4,
       "source": {
-        "name": "pv magazine",
+        "name": "HPCwire",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T09:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [
-        {
-          "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/08/31/battery-installations-hit-record-as-australias-clean-energy-shift-accelerates/"
-        }
+      "publishedAt": "2026-08-31T19:46:08.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_a5b1f54adb7c",
+      "title": "OpenAI支持加州推进青少年人工智能安全的法案",
+      "originalTitle": "OpenAI supports California’s bill to advance youth AI safety",
+      "url": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+      "summary": "OpenAI supports California SB 1119, advancing strong, age-appropriate AI safeguards for teens while preserving opportunities to learn, crea…",
+      "whyItMatters": "关联 OpenAI；一手来源 OpenAI News",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "OpenAI"
       ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "OpenAI News",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-31T07:00:00.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -149,7 +175,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-31T07:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -179,7 +205,177 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T20:38:02.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_2e339bd000fe",
+      "title": "美国在短短3个月内增加了创纪录的20.2 GWh电池储能",
+      "originalTitle": "The US added a record 20.2 GWh of battery storage in just 3 months",
+      "url": "https://electrek.co/2026/08/31/the-us-added-a-record-20-2-gwh-of-battery-storage-in-just-3-months/",
+      "summary": "The US battery storage market just posted its biggest quarter ever, adding 20.2 gigawatt-hours (GWh) of new capacity in Q2 2026. more…",
+      "whyItMatters": "储能；关键数字 20.2GWh；地区 美国；媒体 Electrek",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "added a record",
+          "value": 20.2,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T04:01:00.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_7975cb234d21",
+      "title": "澳大利亚制造商计划建造500兆瓦钙钛矿硅串联太阳能组件工厂",
+      "originalTitle": "Australian manufacturer plans 500 MW perovskite-silicon tandem solar module factory",
+      "url": "https://www.pv-magazine.com/2026/09/01/researchers-team-with-queensland-manufacturer-to-drive-perovskite-silicon-tandem-solar-cell-development/",
+      "summary": "University of Sydney researchers will team with a Queensland-based solar panel manufacturer to accelerate the commercialisation of next-gen…",
+      "whyItMatters": "光伏与风电；关键数字 500MW、500兆瓦；地区 澳大利亚；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Australian manufacturer plans",
+          "value": 500,
+          "unit": "MW"
+        },
+        {
+          "label": "造商计划建造",
+          "value": 500,
+          "unit": "兆瓦"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T05:36:33.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b1e57da6836a",
+      "title": "第232条关税将美国组件价格推高至2023年水平，但分析师预计将回落至0.30 $/W",
+      "originalTitle": "Section 232 tariffs push U.S. module prices to 2023 levels, but analysts see a path back to $0.30/W",
+      "url": "https://www.pv-magazine.com/2026/09/01/section-232-tariffs-push-u-s-module-prices-to-2023-levels-but-analysts-see-a-path-back-to-30-cents-per-watt/",
+      "summary": "New minimum import prices and tariffs imposed under Section 232 have driven solar module spot prices to above 40 cents per watt, but market…",
+      "whyItMatters": "光伏与风电；关键数字 0.3$/W；地区 美国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "path back to",
+          "value": 0.3,
+          "unit": "$/W"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T05:29:20.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_bc2502f0dbad",
+      "title": "出货千兆瓦时的电池存储",
+      "originalTitle": "Shipping gigawatt-hours of battery storage",
+      "url": "https://www.pv-magazine.com/2026/09/01/shipping-gigawatt-hours-of-battery-storage/",
+      "summary": "BW ESS has broken ground at the 5.7 GWh Klostermansfeld battery energy storage system (BESS), making a splash in the German market and buil…",
+      "whyItMatters": "储能；关键数字 5.7GWh；地区 德国；媒体 pv magazine",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "德国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "ground at the",
+          "value": 5.7,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T04:00:00.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d3b8f6149e50",
+      "title": "随着整合的加速，全球太阳能运维市场达到348吉瓦",
+      "originalTitle": "Global solar O&M market reaches 348 GW as consolidation accelerates",
+      "url": "https://www.pv-magazine.com/2026/08/31/el-mercado-mundial-de-om-solar-alcanza-348-gw-y-acelera-su-concentracion/",
+      "summary": "The global solar PV O&M market reached 348 GW in 2025, with the 15 largest providers controlling 57% of managed capacity as consolidation a…",
+      "whyItMatters": "光伏与风电；关键数字 348GW、348吉瓦、2025w；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "O&M market reaches",
+          "value": 348,
+          "unit": "GW"
+        },
+        {
+          "label": "运维市场达到",
+          "value": 348,
+          "unit": "吉瓦"
+        },
+        {
+          "label": "348 GW in",
+          "value": 2025,
+          "unit": "w"
+        },
+        {
+          "label": "largest providers controlling",
+          "value": 57,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-31T14:21:53.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -214,7 +410,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:54:18.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -264,7 +460,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:01:46.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -288,7 +484,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T15:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -312,7 +508,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -336,7 +532,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -371,7 +567,47 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:13:14.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_49d06040e551",
+      "title": "随着澳大利亚的清洁能源转变加速，电池安装量创纪录",
+      "originalTitle": "Battery installations hit record as Australia’s clean energy shift accelerates",
+      "url": "https://www.ess-news.com/2026/08/31/battery-installations-hit-record-as-australias-clean-energy-shift-accelerates/",
+      "summary": "Australia recorded its strongest three-month stretch for small-scale battery installations in the second quarter of 2026, with more than 11…",
+      "whyItMatters": "储能；关键数字 2026w、3.6GWh、4.2GWh；地区 澳大利亚；媒体 ESS News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "second quarter of",
+          "value": 2026,
+          "unit": "w"
+        },
+        {
+          "label": "systems approved and",
+          "value": 3.6,
+          "unit": "GWh"
+        },
+        {
+          "label": "GWh installed, while",
+          "value": 4.2,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "ESS News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-31T11:45:00.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -401,7 +637,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:12:19.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -441,7 +677,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T08:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -465,7 +701,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:45:25.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -495,7 +731,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T11:18:58.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -527,13 +763,78 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T09:58:58.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [
         {
           "name": "Transformer Technology",
           "url": "https://transformer-technology.com/ls-electric-and-ge-vernova-launch-hvdc-technology-joint-venture/"
         }
       ],
+      "wechat": false
+    },
+    {
+      "id": "evt_592a597e79de",
+      "title": "新闻： Quaise Energy筹集了1.8亿美元，用于建造世界上第一座商业“超热”地热发电厂。",
+      "originalTitle": "NEWS: Quaise Energy has raised $180M to build the world’s first commercial ‘superhot’ geothermal plant.",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/news-quaise-energy-has-raised-180m-to-build-the-world-s-first-oL6KSHAhn3iF36Z",
+      "summary": "* Now that’s hot: Startup Quaise wants [https://www.energycentral.com/renewables/post/news-quaise-energy-is-raising-200m-for-ultra-hot-geot…",
+      "whyItMatters": "关键数字 1.8亿美元；地区 全球；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "rgy筹集了",
+          "value": 1.8,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T02:10:27.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ff406e368b8d",
+      "title": "新闻：美国需要更多的太阳能电池工厂--计划在俄克拉荷马州建造一个新的2GW工厂可能会有所帮助。",
+      "originalTitle": "NEWS: The US needs more solar cell factories—a new 2-GW facility planned in Oklahoma could help.",
+      "url": "https://www.energycentral.com/renewables-9zth006i/post/news-the-us-needs-more-solar-cell-factories--a-new-2-gw-facility-planned-qF5czAJfMDktcdr",
+      "summary": "* The timeline: Nextnova will begin [https://www.pv-magazine.com/2026/08/28/nextnova-announces-plans-for-2-gw-solar-cell-manufacturing-in-o…",
+      "whyItMatters": "光伏与风电；关键数字 2GW、5GW；地区 美国；媒体 Energy Central",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "建造一个新的",
+          "value": 2,
+          "unit": "GW"
+        },
+        {
+          "label": "its capacity to",
+          "value": 5,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T02:10:03.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
       "wechat": false
     },
     {
@@ -556,37 +857,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:55:45.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_d056a807647a",
-      "title": "哥本哈根基础设施合作伙伴从澳大利亚Windlab收购104MW并网BESS项目",
-      "originalTitle": "Copenhagen Infrastructure Partners acquires 104MW grid-forming BESS project from Windlab in Australia",
-      "url": "https://www.energy-storage.news/copenhagen-infrastructure-partners-acquires-104mw-grid-forming-bess-project-from-windlab-in-australia/",
-      "summary": "CIP has acquired full ownership of the 104MW Gawara Baya wind-plus-storage project in North Queensland, Australia, from developer Windlab.",
-      "whyItMatters": "电网与并网；关键数字 104MW；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "grid",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "frastructure Partners acquires",
-          "value": 104,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T05:33:45.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -616,93 +887,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-28T14:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_2ff931be534e",
-      "title": "金士顿的NV3 1TB PCIe 4.0 SSD在Newegg降至156.99 $ — 27 ％的折扣使其降至每GB仅15.7美分",
-      "originalTitle": " Kingston's NV3 1TB PCIe 4.0 SSD drops to $156.99 at Newegg — 27% off brings it down to just 15.7 cents per GB ",
-      "url": "https://www.tomshardware.com/pc-components/ssds/kingstons-nv3-1tb-pcie-4-0-ssd-drops-to-usd156-99-at-newegg-27-percent-off-brings-it-down-to-just-15-7-cents-per-gb",
-      "summary": "The Kingston NV3 may not be built for heavy workloads, but its respectable gaming performance and low power consumption make this PCIe 4.0…",
-      "whyItMatters": "关键数字 27%；媒体 Tom's Hardware",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "at Newegg —",
-          "value": 27,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T18:16:28.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_702d406c3058",
-      "title": "SpaceX开始内部涡轮叶片制造，以提高Elon人工智能数据中心的燃气发电机输出—新的制造策略将发电机延迟减少了18个月",
-      "originalTitle": " SpaceX starts in-house turbine blade manufacturing to boost gas-powered generator output for Elon's AI data centers — new manufacturing strategy cuts generator delays by 18 months ",
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/spacex-starts-in-house-turbine-blade-manufacturing-to-boost-gas-powered-generator-output-for-elons-ai-data-centers-new-manufacturing-strategy-cuts-generator-delays-by-18-months",
-      "summary": "Turbine blades and vanes are among the most complicated turbine engine parts to build, with processes taking as long as 60 to 90 weeks. Bec…",
-      "whyItMatters": "AIDC 项目与区域布局；关键数字 90w；关联 SpaceX；媒体 Tom's Hardware",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "SpaceX"
-      ],
-      "metrics": [
-        {
-          "label": "as 60 to",
-          "value": 90,
-          "unit": "w"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-30T14:49:50.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_ed42085f52fe",
-      "title": "扩大人工智能访问权限的里程碑",
-      "originalTitle": "A milestone in expanding access to AI",
-      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
-      "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and afford…",
-      "whyItMatters": "一手来源 OpenAI News",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "OpenAI News",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-31T04:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -728,7 +913,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T07:30:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -754,7 +939,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:20:51.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -780,64 +965,28 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:18:03.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_3f699efba32e",
-      "title": "波兰的煤炭问题已经改变",
-      "originalTitle": "Poland’s Coal Problem Has Changed",
-      "url": "https://cleantechnica.com/2026/08/30/poland-coal-capacity-transition/",
-      "summary": "Poland’s coal transition is moving much faster than the country’s reputation suggests. Coal supplied 72.5% of Polish electricity in 2021. B…",
-      "whyItMatters": "其他能源动态；关键数字 72.5%、52.7%、31.4%；地区 波兰；媒体 CleanTechnica",
-      "topic": "other-energy",
+      "id": "evt_d056a807647a",
+      "title": "哥本哈根基础设施合作伙伴从澳大利亚Windlab收购104MW并网BESS项目",
+      "originalTitle": "Copenhagen Infrastructure Partners acquires 104MW grid-forming BESS project from Windlab in Australia",
+      "url": "https://www.energy-storage.news/copenhagen-infrastructure-partners-acquires-104mw-grid-forming-bess-project-from-windlab-in-australia/",
+      "summary": "CIP has acquired full ownership of the 104MW Gawara Baya wind-plus-storage project in North Queensland, Australia, from developer Windlab.",
+      "whyItMatters": "电网与并网；关键数字 104MW；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "grid",
       "tags": [],
-      "region": "波兰",
+      "region": "澳大利亚",
       "entities": [],
       "metrics": [
         {
-          "label": "suggests. Coal supplied",
-          "value": 72.5,
-          "unit": "%"
-        },
-        {
-          "label": "was down to",
-          "value": 52.7,
-          "unit": "%"
-        },
-        {
-          "label": "while renewables reached",
-          "value": 31.4,
-          "unit": "%"
+          "label": "frastructure Partners acquires",
+          "value": 104,
+          "unit": "MW"
         }
       ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-30T07:05:33.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_51a29ff7b6d6",
-      "title": "“澳大利亚是电池制造市场” ：瓦锡兰战略在波动性和储能业务案例方面处于领先地位",
-      "originalTitle": "‘Australia is a market made for batteries’: Wärtsilä strategy lead on volatility and the business case for energy storage",
-      "url": "https://www.energy-storage.news/australia-is-a-market-made-for-batteries-wartsila-strategy-lead-on-volatility-and-the-business-case-for-energy-storage/",
-      "summary": "Speaking to ESN Premium, Kashish Shah of Wärtsilä explains why Australia's volatile market structure makes it uniquely suited for battery s…",
-      "whyItMatters": "储能；关联 Wärtsilä；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [
-        "Wärtsilä"
-      ],
-      "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
@@ -845,36 +994,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T05:12:34.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_8a9fbd84f4c9",
-      "title": "OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了",
-      "originalTitle": "OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了",
-      "url": "https://www.qbitai.com/2026/08/481759.html",
-      "summary": "什么样的AI业务，英伟达GPU和谷歌TPU搞不定，非得用Mac",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 OpenAI、英伟达、苹果；媒体 量子位",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "OpenAI",
-        "英伟达",
-        "苹果"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "量子位",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T03:24:34.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "publishedAt": "2026-08-31T05:33:45.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -900,7 +1021,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T22:00:47.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -926,7 +1047,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T20:13:57.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -950,7 +1071,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-30T07:03:28.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -980,7 +1101,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-30T07:02:05.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1006,7 +1127,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T14:52:59.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ed42085f52fe",
+      "title": "扩大人工智能访问权限的里程碑",
+      "originalTitle": "A milestone in expanding access to AI",
+      "url": "https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads",
+      "summary": "ChatGPT Ads reaches $1 billion in annualized revenue run rate and expands globally, supporting broader access to AI through free and afford…",
+      "whyItMatters": "一手来源 OpenAI News",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "OpenAI News",
+        "type": "primary",
+        "isPrimary": true
+      },
+      "publishedAt": "2026-08-31T04:00:00.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1032,7 +1177,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-28T02:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1058,7 +1203,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-26T10:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1084,33 +1229,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-25T07:05:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_99926e4befb0",
-      "title": "Jalapeño的首批结果显示了业界领先的人工智能推理速度和效率",
-      "originalTitle": "Jalapeño’s first results show industry-leading speed and efficiency in AI inference",
-      "url": "https://openai.com/index/jalapeno-first-results",
-      "summary": "Jalapeño is a custom inference chip from OpenAI that delivers faster, more power-efficient AI inference, with higher throughput and lower l…",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 OpenAI；一手来源 OpenAI News",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "OpenAI"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "OpenAI News",
-        "type": "primary",
-        "isPrimary": true
-      },
-      "publishedAt": "2026-08-25T07:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1137,7 +1256,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-25T16:11:02.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1163,7 +1282,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-28T07:20:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1189,7 +1308,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-27T13:00:17.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1215,7 +1334,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-08-26T21:05:30.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1239,7 +1358,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T07:30:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1263,7 +1382,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T07:30:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1287,7 +1406,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T14:38:56.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1311,7 +1430,79 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T09:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b06be43cb1c8",
+      "title": "撒哈拉以南地区妇女获得融资“加强气候适应能力”",
+      "originalTitle": "Access to Finance “Strengthens Climate Resilience” Among Sub-Saharan Women",
+      "url": "https://cleantechnica.com/2026/08/31/access-to-finance-strengthens-climate-resilience-among-sub-saharan-women/",
+      "summary": "Empowering women through greater access to finance could “strengthen” households’ resilience to “climate shocks,” according to a new study.…",
+      "whyItMatters": "地区 非洲；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "非洲",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T03:57:16.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_d570dd3f01fc",
+      "title": "从托尼·斯塔克（ Tony Stark ）到欧比·万·克诺比（ Obi Wan Kenobi ） ：认识4位（共7位）西门研究员",
+      "originalTitle": "From Tony Stark to Obi Wan Kenobi: Meet 4 (of 7) West Gate Fellows and Their Technologies",
+      "url": "https://cleantechnica.com/2026/08/31/from-tony-stark-to-obi-wan-kenobi-meet-4-of-7-west-gate-fellows-and-their-technologies/",
+      "summary": "Fellows Aim To Make Critical Minerals in the US, Generate Affordable Geothermal Energy, and Build Ultralight and Advanced Batteries—With So…",
+      "whyItMatters": "地区 美国；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T02:30:49.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_ce4cb9c6936c",
+      "title": "特朗普将接待大型石油公司的首席执行官，因为天然气平均价格仍在每加仑4 $以上",
+      "originalTitle": "Trump to Host Big Oil CEOs as Gas Price Average Remains Over $4 a Gallon",
+      "url": "https://cleantechnica.com/2026/08/31/trump-to-host-big-oil-ceos-as-gas-price-average-remains-over-4-a-gallon/",
+      "summary": "Washington, DC — Reporting today indicates that Donald Trump plans to host oil industry executives at the White House tomorrow, even as the…",
+      "whyItMatters": "其他能源动态；媒体 CleanTechnica",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T02:02:57.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1335,7 +1526,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T22:57:01.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1359,55 +1550,31 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T08:25:17.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_4044b8dd71ff",
-      "title": "房地产投资信托能否成为可再生能源的资本回收引擎？",
-      "originalTitle": "Can REITs become a capital-recycling engine for renewables?",
-      "url": "https://www.pv-magazine.com/2026/08/31/can-reits-become-a-capital-recycling-engine-for-renewables/",
-      "summary": "China’s emerging renewable energy real estate investment trust (REIT) market could give developers a new way to recycle capital from operat…",
-      "whyItMatters": "光伏与风电；地区 中国；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_abbe08830ceb",
+      "title": "清洁能源监管机构：随着第二季度的记录下滑，澳大利亚的清洁能源转型“加速”",
+      "originalTitle": "Clean Energy Regulator: Australia’s clean energy transition ‘accelerating’ as Q2 records tumble",
+      "url": "https://www.pv-tech.org/clean-energy-regulator-australias-clean-energy-transition-accelerating-as-q2-records-tumble/",
+      "summary": "Australia recorded its strongest quarter yet for rooftop solar installations, household battery storage uptake and large-scale solar invest…",
+      "whyItMatters": "电力市场与政策；地区 澳大利亚；媒体 PV-Tech",
+      "topic": "power-market-policy",
       "tags": [],
-      "region": "中国",
+      "region": "澳大利亚",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "pv magazine",
+        "name": "PV-Tech",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T15:30:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_c716eb1a880f",
-      "title": "奥地利初创公司为离网应用提供混合光伏风系统",
-      "originalTitle": "Austrian startup offers hybrid PV-wind system for off-grid applications",
-      "url": "https://www.pv-magazine.com/2026/08/31/austrian-startup-offers-hybrid-pv-wind-system-for-off-grid-applications/",
-      "summary": "Novventos Clean Energy has developed a container-based hybrid system combining modular photovoltaics with small vertical-axis wind turbines…",
-      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T14:35:49.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "publishedAt": "2026-09-01T03:56:05.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1431,31 +1598,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T07:34:59.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_cdb15efd8da9",
-      "title": "ARENA承诺为澳大利亚下一波太阳能研究投入1.056亿澳元（ $ 1.056亿澳元）",
-      "originalTitle": "ARENA commits AU$105.6 million to next wave of solar research in Australia",
-      "url": "https://www.pv-tech.org/arena-commits-au105-6-million-to-next-wave-of-solar-research-in-australia/",
-      "summary": "ARENA has announced up to AU$105.6 million for 20 research and development projects aimed at reducing the cost of large-scale solar.",
-      "whyItMatters": "光伏与风电；地区 澳大利亚；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "澳大利亚",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T05:18:27.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1485,7 +1628,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T14:35:39.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1520,7 +1663,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T12:03:20.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1550,7 +1693,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T03:09:28.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1590,7 +1733,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:49:52.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1614,7 +1757,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1638,7 +1781,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T09:45:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1662,31 +1805,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T08:50:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_728822832c17",
-      "title": "Enervis表示， 7月份德国存储收入仍然很高",
-      "originalTitle": "German storage revenues remained high in July, says Enervis",
-      "url": "https://www.ess-news.com/2026/08/31/german-storage-revenues-remained-high-in-july-says-enervis/",
-      "summary": "Enervis estimates that battery storage revenues in Germany reached €16,950 ($19,650)/MW in July, supported by high evening prices and stron…",
-      "whyItMatters": "储能；地区 德国；媒体 ESS News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "德国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "ESS News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T07:15:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1710,7 +1829,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T14:40:14.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1740,7 +1859,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T08:42:51.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1770,7 +1889,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T08:27:39.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1800,18 +1919,42 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T16:54:20.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_c576c730619e",
-      "title": "244.人工智能改造配电网-重新定义能源播客",
-      "originalTitle": "244. AI Transforming Distribution Grids - Redefining Energy podcast",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/244-ai-transforming-distribution-grids---redefining-energy-podcast-WqQQTGg0uI7j3iD",
-      "summary": "There is no shortage of discussion about the role of AI in the energy transition. Yet while many talk about the future of intelligent grids…",
-      "whyItMatters": "电网与并网；媒体 Energy Central",
+      "id": "evt_5e73a00d325f",
+      "title": "新闻： Bonneville电力管理员Travis Kavulla希望将其打造成“北美最安全的公用事业公司”。",
+      "originalTitle": "NEWS: Bonneville Power Administrator Travis Kavulla wants to make it ‘the safest utility in North America.’",
+      "url": "https://www.energycentral.com/r-announcements-l1zjzoox/post/news-bonneville-power-administrator-travis-kavulla-wants-to-make-it-the-uQ5K5kDPYG8OwEN",
+      "summary": "* The goals: BPA has released [https://www.bpa.gov/-/media/Aep/about/who-we-are/strategic-plan/bpa-strategic-plan.pdf] its 2026-2030 strate…",
+      "whyItMatters": "电网与并网；地区 美国；媒体 Energy Central",
       "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-01T02:09:11.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_245801b0f08a",
+      "title": "新闻： Palisades现在距离成为该国第一个复兴的核电站又近了一步。",
+      "originalTitle": "NEWS: Palisades is now a step closer to becoming the country’s first revived nuclear plant.",
+      "url": "https://www.energycentral.com/nuclear-ke7q9aco/post/news-palisades-is-now-a-step-closer-to-becoming-the-country-s-first-19zOxMArTsR4suE",
+      "summary": "* Fuel'er up: After over two years of prep, Holtec International officially “began [https://holtecinternational.com/hh-47-17/] the process…",
+      "whyItMatters": "核电与 SMR；媒体 Energy Central",
+      "topic": "nuclear-smr",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -1823,43 +1966,19 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T17:32:45.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "publishedAt": "2026-09-01T02:07:46.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_80ec285f2aec",
-      "title": "印度煤炭供应紧缩与全球市场反弹相撞",
-      "originalTitle": "India’s coal supply crunch collides with a rallying global market",
-      "url": "https://www.energycentral.com/fossil-thermal-ujoy2csr/post/india-s-coal-supply-crunch-collides-with-a-rallying-global-market-Vc7jwTE1csIapTY",
-      "summary": "The most striking story of the week was not a price chart but a stock chart. Central Electricity Authority data through 25 August showed fo…",
-      "whyItMatters": "其他能源动态；地区 印度；媒体 Energy Central",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "印度",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Energy Central",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-08-31T15:04:36.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
-      "relatedSources": [],
-      "wechat": false
-    },
-    {
-      "id": "evt_312d970b7ddb",
-      "title": "Natural Power为Eastern Green Link 5地面调查服务签订SSEN传输合同",
-      "originalTitle": "Natural Power secures SSEN Transmission contract for Eastern Green Link 5 ground investigation services",
-      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/natural-power-secures-ssen-transmission-contract-for-eastern-green-link-5-Bfc2grCdVEHD7wq",
-      "summary": "Leading renewable energy consultancy and service provider, Natural Power, has secured a new contract under its framework agreement with SSE…",
-      "whyItMatters": "电网与并网；媒体 Energy Central",
-      "topic": "grid",
+      "id": "evt_2b94e687afaf",
+      "title": "新闻：特朗普推动的自由加油站出售天然气，经销商称未支付",
+      "originalTitle": "NEWS: Trump-promoted Freedom Fuel stations sold gas a distributor says went unpaid for",
+      "url": "https://www.energycentral.com/fossil-thermal-ujoy2csr/post/news-trump-promoted-freedom-fuel-stations-sold-gas-a-distributor-says-m2MtWOA0nbvgzpE",
+      "summary": "As the Iran War sends gas prices skyrocketing, the White House-promoted Freedom Fuel stations promise [https://www.energycentral.com/energy…",
+      "whyItMatters": "电力市场与政策；媒体 Energy Central",
+      "topic": "power-market-policy",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -1871,8 +1990,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T10:29:37.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "publishedAt": "2026-09-01T02:07:22.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1896,21 +2015,23 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T13:46:38.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
     {
-      "id": "evt_8fc43549d275",
-      "title": "“你买的是负债” ：专家小组警告开发商不要在澳大利亚购买老化的电池存储资产",
-      "originalTitle": "‘You’re buying a liability’: panel warns developers on buying ageing battery storage assets in Australia",
-      "url": "https://www.energy-storage.news/youre-buying-a-liability-panel-warns-developers-on-buying-ageing-battery-storage-assets-in-australia/",
-      "summary": "Developers who buy or flip battery storage projects mid-life risk inheriting decommissioning liabilities they had not properly accounted fo…",
-      "whyItMatters": "储能；地区 澳大利亚；媒体 Energy Storage News",
+      "id": "evt_51a29ff7b6d6",
+      "title": "“澳大利亚是电池制造市场” ：瓦锡兰战略在波动性和储能业务案例方面处于领先地位",
+      "originalTitle": "‘Australia is a market made for batteries’: Wärtsilä strategy lead on volatility and the business case for energy storage",
+      "url": "https://www.energy-storage.news/australia-is-a-market-made-for-batteries-wartsila-strategy-lead-on-volatility-and-the-business-case-for-energy-storage/",
+      "summary": "Speaking to ESN Premium, Kashish Shah of Wärtsilä explains why Australia's volatile market structure makes it uniquely suited for battery s…",
+      "whyItMatters": "储能；关联 Wärtsilä；地区 澳大利亚；媒体 Energy Storage News",
       "topic": "energy-storage",
       "tags": [],
       "region": "澳大利亚",
-      "entities": [],
+      "entities": [
+        "Wärtsilä"
+      ],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
@@ -1919,8 +2040,71 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-08-31T05:30:53.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "publishedAt": "2026-08-31T05:12:34.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_b23ac135d107",
+      "title": "Octopus Australia提交4.8GWh Hanworth电池项目申请EPBC法案批准",
+      "originalTitle": "Octopus Australia submits 4.8GWh Hanworth Battery Project for EPBC Act approval",
+      "url": "https://www.energy-storage.news/octopus-australia-submits-4-8gwh-hanworth-battery-project-for-epbc-act-approval/",
+      "summary": "Octopus Australia, via its development partner Enervest, has submitted a 1.2GW/4.8GWh BESS for assessment under Australia's EPBC Act.",
+      "whyItMatters": "储能；关键数字 4.8GWh、1.2GW；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Octopus Australia submits",
+          "value": 4.8,
+          "unit": "GWh"
+        },
+        {
+          "label": "has submitted a",
+          "value": 1.2,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-28T03:22:11.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
+      "relatedSources": [],
+      "wechat": false
+    },
+    {
+      "id": "evt_8a9fbd84f4c9",
+      "title": "OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了",
+      "originalTitle": "OpenAI买几万台Mac搞强化训练！英伟达的活被苹果抢了",
+      "url": "https://www.qbitai.com/2026/08/481759.html",
+      "summary": "什么样的AI业务，英伟达GPU和谷歌TPU搞不定，非得用Mac",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 OpenAI、英伟达、苹果；媒体 量子位",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "OpenAI",
+        "英伟达",
+        "苹果"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "量子位",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-08-31T03:24:34.000Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1944,7 +2128,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T19:57:13.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1968,7 +2152,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T17:00:31.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -1992,7 +2176,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T17:25:59.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2016,7 +2200,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T07:03:35.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2040,7 +2224,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T17:05:57.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2064,7 +2248,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T15:40:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2091,7 +2275,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T14:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2117,7 +2301,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-25T11:09:05.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2141,7 +2325,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-31T07:34:02.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2165,7 +2349,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-30T19:00:06.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2189,7 +2373,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-30T07:06:37.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2213,7 +2397,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-30T07:04:34.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2237,7 +2421,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T13:35:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2261,7 +2445,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T07:30:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2285,7 +2469,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T21:00:00.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2309,7 +2493,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-28T12:33:36.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2333,7 +2517,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T16:53:43.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2357,7 +2541,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-27T16:42:59.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2381,7 +2565,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T19:07:29.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2405,7 +2589,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T16:28:58.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     },
@@ -2429,7 +2613,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-08-26T10:10:28.000Z",
-      "discoveredAt": "2026-09-01T00:09:46.949Z",
+      "discoveredAt": "2026-09-01T05:39:39.436Z",
       "relatedSources": [],
       "wechat": false
     }
