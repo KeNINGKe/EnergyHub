@@ -368,3 +368,57 @@ energy-info-hub/
 | 被墙 | 4 | Reuters、Bloomberg、Baxtel、Chip Letter（已标翻墙） |
 
 唯一存疑：中国核能行业协会 `china-nea.cn`（403/110字节，建议人工确认）。
+
+---
+
+## 10. 2026-09-01 会话：钉钉每日热点推送 + 过滤词表修补 + 管理后台 P1 内容运营
+
+### 10.1 钉钉机器人每日热点推送（本日重点，已全链路上线）
+
+**背景**：日报数据只躺在站点里，无主动触达。需求：每天把「热点榜 + 今日观察」自动推给指定的人。
+
+**关键认知**：
+- 钉钉**没有**官方"推送 CLI"，标准做法是**群自定义机器人 Webhook（加签）**；所谓 CLI 即本项目自写的 Node 脚本。
+- 本机装有 `dingtalk-workspace-cli`（命令 `dws`，global npm），已登录宁珂账号，可搜群/直接发群消息（`+send-to-group`）——但**不能创建 webhook 机器人**（钉钉只允许客户端里建），仅能作为测试/运营辅助工具。
+
+**实现**（commit `361ae5f`）：
+- `scripts/lib/dingtalk.mjs`：加签（HmacSHA256→base64→urlencode，`timestamp\nsecret`）、签名 URL 拼装、热点条目解析（`hotEventIds` 缺失回退 `featuredEventIds` 前 5）、markdown 组装。9 个单测含固定签名向量。
+- `scripts/notify-dingtalk.mjs`：CLI 读 env + feeds → POST；`--dry-run` 本地预览；未配 webhook 跳过（exit 0）；发送失败 exit 1。
+- `fetch-feeds.yml` 末尾推送 step：**只在 `0 4 * * *`（北京 12:00）窗口或手动 dispatch 触发**，`continue-on-error` 不阻塞抓取/部署；每天最多一条。
+- 内容格式：热点榜 ≤5（标题链接｜来源）+ 今日观察 3 条 + 站点链接；**不 @ 人**（用户决策，原 atMobiles 功能已移除）。
+
+**配置（已全部完成，无需再做）**：
+- 机器人「EnergyHub 日报」建在**测试群（2 人）**，安全设置为加签。
+- GitHub secrets `DINGTALK_WEBHOOK`、`DINGTALK_WEBHOOK_SECRET` 已由本会话直接写入（用本机 git 凭据 + `gh secret set`）。
+- 端到端验证：手动 dispatch run `33474433316` 成功，测试群收到当日（9/1）热点。
+
+**重要发现——GitHub 定时任务严重延迟**：免费 runner 高峰排队，北京 12:00 的 cron 实际 **17:30~18:30** 才跑（历史数据 5.5~6.5h 延迟）；05:00 的实际 07:00~08:00 跑。推送到达时间同理。若要准点，备选方案：外部定时器（如 cron-job.org）每天准点打 workflow_dispatch（不排队），**尚未实施**。
+
+**后续换群/换机器人**：在目标群重建机器人 → 换掉两个 GitHub secret 即可，代码不用动。
+
+### 10.2 过滤词表修补（commit `7c116f4`）
+
+- 案例：金士顿 SSD 电商促销文（Tom's Hardware）混进日报——构建时靠原始摘要里 power+storage 两个泛词凑够"通用词×2"兜底线。
+- 修补：negative 词表新增 `折扣/特价/秒杀/清仓/比价/券后/到手价` + `percent off / % off / per GB / Newegg / best buy`（负面词优先级最高）。**刻意不加英文 `deal`**——会误杀 "signs deal to supply" 类供应链新闻。
+- 评估：112 条标注样本前后 precision/recall/F1 完全一致（0.956/0.844/0.897），零误伤。同类残留（Jackery 便携电站促销）词表杀不干净，靠管理后台隐藏兜底。
+
+### 10.3 管理后台 P1 内容运营 + 过滤沙箱（commit `f474215`，P0+P1 均入库）
+
+- **管线修复（关键）**：`validateOverrides` 原把"引用 id 不在今日 daily"一律判致命——而隐藏操作恰恰会删事件，**隐藏一条就堵死部署**。现对 hiddenIds/mergeGroups/globalHiddenIds 缺失降级 warning；forced/hot/map 类仍拦截。
+- **新协议字段**：`data/editorial-overrides.json` 顶层 `globalHiddenIds` 文章级永久黑名单（事件 id=URL 稳定哈希，跨天生效），构建时最先应用。
+- 内容运营页四子 tab：今日事件（强制精选/永久隐藏/改主题影响摘要理由/覆盖预览）、微信种子、深度阅读、**过滤沙箱**（候选词对今日+历史语料试杀，>10 条命中标红）。
+- 测试 187→206；replay A/B 零差异（无覆盖时管线行为不变）。
+- 教训：前端事件监听必须绑在 innerHTML 产生的新鲜元素上，勿绑长寿命容器（重渲染会叠加监听器，一次点击 N 次请求）。
+
+### 10.4 Git 提交（本会话，均已推送）
+
+| commit | 内容 |
+|---|---|
+| `86ec97d` | admin 计划移入项目 .claude/plans + 优先级重排 |
+| `361ae5f` | 钉钉每日热点推送（加签 webhook + CI 接入） |
+| `7c116f4` | filters.json 补零售促销类负面词 |
+| `f474215` | 管理后台 P1 内容运营+过滤沙箱+校验判级修复 |
+
+### 10.5 待办
+
+- P2 信源管理（source-check.mjs 已抽出未入库）；P3 发布流（后台内提交/推送/触发构建，做完后 overrides 改动可一键生效）；P5 流量；钉钉准点推送外部定时器（可选）。
