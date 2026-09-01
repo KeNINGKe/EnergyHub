@@ -71,3 +71,19 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/pages.yml/dispatches" \
             -d '{"ref":"main"}' -w "pages trigger: %{http_code}\n"
+
+      - name: Push daily hot list to DingTalk
+        # 每天只推一次：仅在北京 12:00 的构建窗口（UTC 04:00）执行；手动
+        # workflow_dispatch 也推送，便于测试。改成早上推则把 cron 换成 '0 21 * * *'。
+        # 推送是 best-effort：失败不阻塞抓取/部署（见 continue-on-error）。
+        if: |
+          github.event_name == 'workflow_dispatch' ||
+          github.event.schedule == '0 4 * * *'
+        continue-on-error: true
+        run: node scripts/notify-dingtalk.mjs
+        env:
+          # 在仓库 Settings → Secrets and variables → Actions 配置：
+          # DINGTALK_WEBHOOK（完整 webhook URL）、DINGTALK_WEBHOOK_SECRET（加签 secret，
+          # 关键词/白名单模式可留空）。
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_WEBHOOK_SECRET: ${{ secrets.DINGTALK_WEBHOOK_SECRET }}

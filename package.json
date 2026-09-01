@@ -18,6 +18,9 @@
     "test": "node --test --test-concurrency=1 \"tests/**/*.test.mjs\"",
     "verify": "npm test && npm run validate && node --check assets/app.js",
     "preview": "npx --yes serve . -l 5173",
+    "admin": "node scripts/admin/server.mjs",
+    "notify": "node scripts/notify-dingtalk.mjs",
+    "notify:dry": "node scripts/notify-dingtalk.mjs --dry-run",
     "deploy": "wrangler deploy"
   },
   "dependencies": {

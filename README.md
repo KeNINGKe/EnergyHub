@@ -56,6 +56,27 @@ npm run fetch
 
 任务会抓取 `data/sources.json` 中配置的 RSS 与显式页面型信源，生成 `feeds/daily-v2.json` 和 `feeds/featured.json`，并提交回仓库触发静态站点重新部署。部署前会运行测试与数据校验。
 
+## 钉钉每日热点推送
+
+构建成功后，可把当天「热点榜 + 今日观察」自动推送到钉钉群（自定义机器人，加签）。默认只在**北京 12:00** 那个构建窗口推，每天最多一次；推送失败不阻塞抓取/部署。
+
+**配置步骤**
+
+1. 钉钉群 → 群设置 → 智能群助手 → 添加机器人 → **自定义（通过 Webhook 接入）**，安全设置选**加签**，记下 **webhook 地址**和**加签 secret**。
+2. 仓库 Settings → Secrets and variables → Actions 新建 2 个 secret：
+   - `DINGTALK_WEBHOOK`：完整 webhook URL（含 access_token）
+   - `DINGTALK_WEBHOOK_SECRET`：加签 secret（用关键词/白名单模式可留空）
+3. （可选）站点链接默认 `https://keningke.github.io/EnergyHub`，可用环境变量 `ENERGYHUB_URL` 覆盖。
+
+**本地调试**
+
+```bash
+npm run notify:dry   # 只打印将发送的 markdown，不发送、无需凭据
+npm run notify       # 真实发送（需先在环境变量里给 DINGTALK_WEBHOOK 等）
+```
+
+改推送时间窗口（如改成早上）或推送内容，见 `.github/workflows/fetch-feeds.yml` 的 `Push daily hot list to DingTalk` 步骤与 `scripts/notify-dingtalk.mjs`。
+
 ## 目录结构
 
 ```
