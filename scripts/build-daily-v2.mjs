@@ -185,7 +185,7 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 }
 
 export async function processItems(rawItems, ctx) {
-  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate } = ctx;
+  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds } = ctx;
   const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
 
   // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
@@ -310,9 +310,9 @@ export async function processItems(rawItems, ctx) {
   stats.featured = featuredEventIds.length;
   stats.hot = hotEventIds.length;
 
-  // 8. 人工覆盖（B-11）
-  if (overridesForDate) {
-    const { errors, warnings } = applyOverrides(daily, featured, overridesForDate, enums);
+  // 8. 人工覆盖（B-11）：全局永久黑名单总是应用；当日配置存在时叠加应用
+  {
+    const { errors, warnings } = applyOverrides(daily, featured, overridesForDate || {}, enums, globalHiddenIds || []);
     if (errors.length) console.error(`  [覆盖错误] ${errors.join('; ')}`);
     if (warnings.length) console.warn(`  [覆盖警告] ${warnings.join('; ')}`);
     stats.overrideErrors = errors.length;
@@ -379,6 +379,7 @@ async function main() {
       const { daily, featured, stats } = await processItems(items, {
         date, now: replayNow, filters, enums, sourceTypes, sourceMap,
         overridesForDate: overrides.byDate?.[date],
+        globalHiddenIds: overrides.globalHiddenIds || [],
         sourcesTotal, sourcesSucceeded
       });
       await logStats(date, stats, daily, featured);
@@ -423,6 +424,7 @@ async function main() {
   const { daily, featured, stats } = await processItems(rawItems, {
     date, now, filters, enums, sourceTypes, sourceMap,
     overridesForDate: overrides.byDate?.[date],
+    globalHiddenIds: overrides.globalHiddenIds || [],
     sourcesTotal, sourcesSucceeded
   });
   await logStats(date, stats, daily, featured);

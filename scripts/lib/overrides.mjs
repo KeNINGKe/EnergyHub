@@ -15,6 +15,8 @@
  *   summaries / whyItMatters 覆盖文本
  *   observations       覆盖今日观察
  *   mergeGroups        合并事件（保留第一个为主，其余并入 relatedSources）
+ *   globalHiddenIds    【第 5 参】文章级永久黑名单（跨天生效，先于当日配置应用；
+ *                      id 已随文章滚出 7 天采集窗口时静默跳过，不记错误）
  *
  * 用法：
  *   import { loadOverrides, applyOverrides } from './overrides.mjs';
@@ -40,13 +42,30 @@ export async function loadOverrides() {
  * 应用某日期的覆盖配置。
  * @param {object} daily daily V2（含 items）
  * @param {object} featured featured
- * @param {object} config 覆盖配置对象（byDate[date] 部分）
+ * @param {object} config 覆盖配置对象（byDate[date] 部分，可为 {}）
  * @param {object} enums 枚举（用于校验 topic/impact 合法性）
+ * @param {string[]} [globalHiddenIds] 文章级永久黑名单（跨天生效，先应用）
  * @returns {{ errors: string[], warnings: string[] }}
  */
-export function applyOverrides(daily, featured, config, enums) {
+export function applyOverrides(daily, featured, config, enums, globalHiddenIds = []) {
   const errors = [];
   const warnings = [];
+  const ensure = (list) => Array.isArray(list) ? list : [];
+
+  // 0. 全局永久黑名单：与 hiddenIds 同样的删除逻辑，但 (a) 先于当日配置、
+  // (b) 无论当日是否有配置都应用、(c) id 不存在时静默跳过（文章过期属常态）。
+  const global = ensure(globalHiddenIds);
+  if (global.length) {
+    for (const id of global) {
+      if (!daily.items.some(e => e.id === id)) continue;
+      daily.items = daily.items.filter(e => e.id !== id);
+      featured.featuredEventIds = featured.featuredEventIds.filter(x => x !== id);
+      if (Array.isArray(featured.hotEventIds)) {
+        featured.hotEventIds = featured.hotEventIds.filter(x => x !== id);
+      }
+    }
+  }
+
   if (!config || typeof config !== 'object') return { errors, warnings };
 
   const byId = new Map();
@@ -54,8 +73,6 @@ export function applyOverrides(daily, featured, config, enums) {
 
   const validTopic = new Set(enums.topics.map(t => t.id));
   const validImpact = new Set(enums.impacts.map(i => i.id));
-
-  const ensure = (list) => Array.isArray(list) ? list : [];
 
   // 1. 隐藏事件（同步移出精选与热点榜，避免引用悬空导致校验失败）
   for (const id of ensure(config.hiddenIds)) {

@@ -371,6 +371,21 @@ export async function validateOverrides(overrides, daily) {
     return { valid: false, errors, warnings };
   }
 
+  // 顶层全局黑名单（文章级永久隐藏，跨天生效）。id 不在当前 daily 属正常——
+  // 该文章要么已被隐藏移除、要么滚出了 7 天采集窗口，只记 warning 不堵部署。
+  if (overrides.globalHiddenIds != null) {
+    const g = overrides.globalHiddenIds;
+    if (!Array.isArray(g) || g.some(x => typeof x !== 'string')) {
+      push(errors, 'globalHiddenIds: 应为字符串数组');
+    } else if (daily && Array.isArray(daily.items)) {
+      for (const id of g) {
+        if (!daily.items.some(it => it.id === id)) {
+          push(warnings, `globalHiddenIds: id "${id}" 不在当前 daily（已应用或文章已过期）`);
+        }
+      }
+    }
+  }
+
   for (const [date, conf] of Object.entries(byDate)) {
     const where = `byDate["${date}"]`;
     if (!DATE_RE.test(date)) {
@@ -381,7 +396,11 @@ export async function validateOverrides(overrides, daily) {
       continue;
     }
 
-    const stringIdArray = (field) => {
+    // 引用检查分两档：
+    // - 严格档（error）：应用后事件仍留在 daily 的字段，缺失 = 真坏引用，必须拦
+    // - 宽松档（warning）：应用后事件会从 daily 移除的字段（hiddenIds），缺失属
+    //   "已应用/文章已过期"，判 error 会堵死紧随构建的部署校验（validateCurrentData）
+    const refCheck = (field, { missing = 'error' } = {}) => {
       const v = conf[field];
       if (v == null) return;
       if (!Array.isArray(v) || v.some(x => typeof x !== 'string')) {
@@ -390,14 +409,18 @@ export async function validateOverrides(overrides, daily) {
       }
       for (const id of v) {
         if (daily && Array.isArray(daily.items) && !daily.items.some(it => it.id === id)) {
-          push(errors, `${where}.${field}: id "${id}" 不存在于 daily items`);
+          if (missing === 'error') {
+            push(errors, `${where}.${field}: id "${id}" 不存在于 daily items`);
+          } else {
+            push(warnings, `${where}.${field}: id "${id}" 已应用或已过期（不在当前 daily）`);
+          }
         }
       }
     };
-    stringIdArray('forcedFeaturedIds');
-    stringIdArray('hiddenIds');
-    stringIdArray('unfeaturedIds');
-    stringIdArray('hotEventIds');   // 整体替换今日热点榜
+    refCheck('forcedFeaturedIds');
+    refCheck('unfeaturedIds');
+    refCheck('hotEventIds');                    // 整体替换今日热点榜
+    refCheck('hiddenIds', { missing: 'warning' });
 
     const E = await loadEnums();
     const mapField = (field, allowedSet, label) => {
@@ -453,7 +476,8 @@ export async function validateOverrides(overrides, daily) {
           } else if (daily && Array.isArray(daily.items)) {
             for (const id of g) {
               if (!daily.items.some(it => it.id === id)) {
-                push(errors, `${where}.mergeGroups[${gi}]: id "${id}" 不存在于 daily items`);
+                // 被合并方应用后已从 daily 移除；缺失属已应用/已过期，降级 warning
+                push(warnings, `${where}.mergeGroups[${gi}]: id "${id}" 已应用或已过期（不在当前 daily）`);
               }
             }
           }

@@ -115,7 +115,7 @@ package.json                   # 加 "admin": "node scripts/admin/server.mjs"
 ## 实施阶段(每阶段独立可验收)
 
 - **P0 脚手架**(✅已完成):server/router/static/jsonfile/git + UI 壳 + status API + npm script。验收:npm run admin 起服务,五 tab 切换,状态条正确,curl /api/status 通,非 GET 缺头 403
-- **P1 内容运营**(🔴最高优先):today 视图+override 操作+preview+stale 清理+wechat 种子+deep。验收:强制精选某条→preview 显示变化→validate 通过(overrides 文件首次诞生)→build:v2 --replay 回归不受损
+- **P1 内容运营**(🔴最高优先)(✅已完成 2026-09-01):today 视图+override 操作(hide 走顶层 globalHiddenIds 永久黑名单)+preview+stale 扫描/清理+wechat 种子+deep+过滤沙箱(自 P4 提前)。配套管线修复:validateOverrides 对 hiddenIds/mergeGroups/globalHiddenIds 缺失引用降级 warning,否则隐藏后必堵部署;验收:206 测试全绿+replay 零差异+八端点手测通过
 - **P2 信源管理**:先抽 source-check.mjs(check-sources.mjs 改薄壳,npm run check 输出比对一致)→ CRUD API+UI+检查任务+微信子页。验收:增删改后 git diff 最小化;小范围检查任务跑通
 - **P3 发布流**:plan/diff/run/sync+手动回退块。验收:**先在 %TEMP% 克隆+本地 bare origin 演练场跑全流程到 push 成功**(含人为制造 behind 验证拦截)→ 再对真库做一次只提交 docs/ADMIN.md 的真实发布
 - **P4 配置**:六文件读写+enums 结构化编辑器+沙箱+resetEnumsCache。验收:改 keyword 后服务器内校验用新枚举;坏正则被拒;verify 绿
