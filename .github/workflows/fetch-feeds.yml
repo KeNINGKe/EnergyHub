@@ -72,13 +72,22 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/actions/workflows/pages.yml/dispatches" \
             -d '{"ref":"main"}' -w "pages trigger: %{http_code}\n"
 
+      - name: Wait until 08:00 Beijing time
+        # 早晨构建受 GitHub 免费 runner 排队影响，实际在北京 06:00~08:00 之间
+        # 完成。推送定在 08:00 整：构建早于 08:00 完成就在此睡到准点，晚于
+        # 08:00 完成则脚本直接放行。仅早晨窗口等待；手动 dispatch 不等待，
+        # 便于随时测试。等待失败也放行（后面照常推送）。
+        if: github.event.schedule == '0 21 * * *'
+        continue-on-error: true
+        run: node scripts/lib/wait-until.mjs 08:00
+
       - name: Push daily hot list to DingTalk
-        # 每天只推一次：仅在北京 12:00 的构建窗口（UTC 04:00）执行；手动
-        # workflow_dispatch 也推送，便于测试。改成早上推则把 cron 换成 '0 21 * * *'。
+        # 每天只推一次：早晨构建窗口（UTC 21:00）之后、北京时间 08:00 准点
+        # 推送当天最新数据；手动 workflow_dispatch 也推送（不等待），便于测试。
         # 推送是 best-effort：失败不阻塞抓取/部署（见 continue-on-error）。
         if: |
           github.event_name == 'workflow_dispatch' ||
-          github.event.schedule == '0 4 * * *'
+          github.event.schedule == '0 21 * * *'
         continue-on-error: true
         run: node scripts/notify-dingtalk.mjs
         env:
