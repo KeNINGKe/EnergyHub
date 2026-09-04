@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "note": "相关性硬过滤配置（B-01）。匹配语义：负面词命中→直接过滤（优先级最高）；强词命中→相关；组合词：同组命中数 ≥ min 才相关；通用词：跨表命中数 ≥ min 才相关（兜底，防止单个泛词误收）。中英文匹配：中文子串；英文整词（含数字相邻边界）。",
   "strong": [
-    "储能电站", "电化学储能", "抽水蓄能", "液流电池", "长时储能", "光储", "风储", "储充", "BESS",
+    "储能电站", "电化学储能", "抽水蓄能", "液流电池", "长时储能", "光储", "风储", "储充", "移动储能", "户外电源", "BESS",
     "光伏", "PV", "solar", "太阳能", "光伏电站", "光伏装机", "光伏市场", "光伏组件", "太阳能电池", "逆变器", "硅料", "硅片", "海上风电", "陆上风电", "风电装机", "风电项目",
     "核电站", "核电", "SMR", "小型堆", "反应堆", "核燃料", "铀",
     "燃气轮机", "天然气发电", "燃气发电", "LNG", "备用电源", "柴油发电机", "调峰电厂",
@@ -21,7 +21,7 @@
     "中压电力电子", "功率半导体", "功率器件", "碳化硅", "氮化镓", "宽禁带",
     "IGBT", "SiC", "GaN", "MVDC", "STATCOM", "SVG",
     "solid-state transformer", "solid state transformer", "power electronic transformer",
-    "energy storage converter", "battery inverter", "power conversion system",
+    "energy storage converter", "battery inverter", "power conversion system", "portable power station",
     "grid-forming", "grid forming", "grid-forming inverter",
     "wide bandgap", "power semiconductor", "DC transformer",
     "能量管理系统", "储能EMS", "能量管理", "EMS", "虚拟电厂", "VPP", "DERMS", "需求响应",
