@@ -43,6 +43,7 @@ async function api(path, opts = {}) {
     const err = new Error((json.error || `HTTP ${res.status}`) + detail);
     err.errors = json.errors || [];
     err.warnings = json.warnings || [];
+    err.payload = json; // 结构化错误码（如 dup-url）从这里取
     throw err;
   }
   return json.data;
@@ -172,13 +173,460 @@ function registerView(name, def) {
 
 /* —— P0 占位视图（后续阶段替换实现）—— */
 
+/* ===== P2 信源管理 ===== */
+
+const ISSUE_LABEL = {
+  'http-404': 'HTTP 404', 'http-403': 'HTTP 403', 'http-410': 'HTTP 410',
+  'http-500': 'HTTP 500', 'http-502': 'HTTP 502', 'http-503': 'HTTP 503',
+  'unreachable': '连不上', 'timeout': '超时', 'wechat-invalid': '微信失效',
+  'parked': '域名停放', 'err-title': '错误页标题', 'redirected-to-root': '重定向到首页',
+  'thin': '内容过少'
+};
+/** 这两类只是疑似（改版/软重定向），标黄不标红 */
+const WARN_ISSUES = new Set(['thin', 'redirected-to-root']);
+
+const sourcesState = {
+  sub: 'all',        // all | wechat
+  catId: '',         // 分类过滤
+  q: '',
+  issue: '',         // 问题类型过滤
+  data: null,
+  job: null,         // 进行中的健康检查任务快照
+  jobTimer: null
+};
+
 registerView('sources', {
   title: '信源管理',
   sub: 'data/sources.json · 健康检查',
   async render(area) {
-    area.innerHTML = '<div class="card"><div class="placeholder">信源管理建设中（P1）</div></div>';
+    await renderSourcesView(area);
   }
 });
+
+async function renderSourcesView(area) {
+  area.innerHTML = '<div class="loading-state">加载中…</div>';
+  const [data, latest] = await Promise.all([api('/api/sources'), api('/api/check/latest')]);
+  sourcesState.data = data;
+  // 页面刷新后找回进行中的检查任务
+  if (latest && latest.status === 'running' && !sourcesState.job) {
+    sourcesState.job = latest;
+    pollCheckJob();
+  }
+
+  const s = data.stats;
+  area.innerHTML = `
+    <div class="content-toolbar">
+      <span class="pill">信源 <b>${s.total}</b></span>
+      ${s.ok ? `<span class="pill pill-ok">正常 <b>${s.ok}</b></span>` : ''}
+      ${s.problems ? `<span class="pill pill-danger">异常 <b>${s.problems}</b></span>` : ''}
+      ${s.noLink ? `<span class="pill">说明卡 <b>${s.noLink}</b></span>` : ''}
+      <span class="pill pill-muted">未检查 <b>${s.unchecked}</b></span>
+      ${data.checkedAt ? `<span class="pill pill-muted">上次检查 ${esc(new Date(data.checkedAt).toLocaleString())}</span>` : ''}
+      <span style="flex:1"></span>
+      <button class="btn btn-primary btn-sm" id="srcCheck">运行健康检查</button>
+      <button class="btn btn-sm" id="srcAdd">＋ 添加信源</button>
+      <button class="btn btn-sm" id="catAdd">＋ 新增分类</button>
+    </div>
+    <div id="checkProgressBox"></div>
+    <div class="subtabs" id="srcSubtabs">
+      <button class="subtab ${sourcesState.sub === 'all' ? 'active' : ''}" data-sub="all">全部信源</button>
+      <button class="subtab ${sourcesState.sub === 'wechat' ? 'active' : ''}" data-sub="wechat">微信公众号源</button>
+    </div>
+    <div id="sourcesBody"></div>`;
+
+  $('#srcCheck').addEventListener('click', startCheckAll);
+  $('#srcAdd').addEventListener('click', () => openSourceModal(sourcesState.catId || '', null));
+  $('#catAdd').addEventListener('click', openCategoryModal);
+  $$('#srcSubtabs .subtab').forEach(btn =>
+    btn.addEventListener('click', () => { sourcesState.sub = btn.dataset.sub; renderSourcesSub(); }));
+
+  if (sourcesState.job) renderCheckProgress();
+  renderSourcesSub();
+}
+
+function renderSourcesSub() {
+  const el = $('#sourcesBody');
+  if (!el) return;
+  $$('#srcSubtabs .subtab').forEach(b => b.classList.toggle('active', b.dataset.sub === sourcesState.sub));
+  if (sourcesState.sub === 'wechat') renderWechatSourcesView(el);
+  else renderSourcesTable(el);
+}
+
+/* ---- 主表 + 分类树 ---- */
+
+function healthBadge(src) {
+  // 两种形状：/api/sources 的 src.check；wechat-report 的 checked/issue/lastTitle
+  const c = src.check || (src.checked ? { issue: src.issue, title: src.lastTitle || '' } : null);
+  if (!c) return '<span class="mini-badge">未检查</span>';
+  if (c.issue === 'ok') return '<span class="mini-badge mb-ok">正常</span>';
+  if (c.issue === 'no-link') return '<span class="mini-badge">说明卡</span>';
+  const label = ISSUE_LABEL[c.issue] || c.issue;
+  return WARN_ISSUES.has(c.issue)
+    ? `<span class="mini-badge mb-warn" title="${esc(c.title || '')}">${esc(label)}</span>`
+    : `<span class="mini-badge mb-hot" title="${esc(c.title || '')}">${esc(label)}</span>`;
+}
+
+function renderSourcesTable(el) {
+  const { data } = sourcesState;
+  const q = sourcesState.q.trim().toLowerCase();
+
+  const rows = [];
+  for (const cat of data.categories) {
+    if (sourcesState.catId && cat.id !== sourcesState.catId) continue;
+    for (const src of cat.sources) {
+      if (sourcesState.issue && !(src.check && src.check.issue === sourcesState.issue)) continue;
+      if (q && !`${src.name} ${src.url} ${src.desc || ''} ${(src.tags || []).join(' ')}`.toLowerCase().includes(q)) continue;
+      rows.push(sourceRow(src, cat));
+    }
+  }
+
+  el.innerHTML = `
+    <div class="sources-layout">
+      <div class="card">
+        <div class="card-title">分类（${data.categories.length}）</div>
+        <div class="cat-list">
+          <div class="cat-item ${sourcesState.catId === '' ? 'active' : ''}" data-cat="">
+            <span class="cat-name">全部</span>
+            <span class="cat-count">${data.stats.total}</span>
+          </div>
+          ${data.categories.map(cat => `
+            <div class="cat-item ${sourcesState.catId === cat.id ? 'active' : ''}" data-cat="${esc(cat.id)}" title="${esc(cat.name)}">
+              <span class="cat-name">${esc(cat.name)}</span>
+              <span class="cat-count">${cat.count}</span>
+              <span class="cat-ops">
+                <button class="cat-add-src" data-cat="${esc(cat.id)}" title="往此分类添加信源">＋</button>
+                <button class="cat-rename" data-cat="${esc(cat.id)}" title="重命名">✎</button>
+                <button class="cat-del" data-cat="${esc(cat.id)}" title="删除分类">✕</button>
+              </span>
+            </div>`).join('')}
+        </div>
+        <div class="side-actions"><button class="btn btn-sm" id="catAdd2">＋ 新增分类</button></div>
+      </div>
+      <div>
+        <div class="card filter-bar">
+          <input id="srcQ" class="filter-input" placeholder="搜索名称 / url / 标签…" value="${esc(sourcesState.q)}">
+          ${Object.entries(data.issueCounts).map(([issue, n]) =>
+            `<button class="chip ${sourcesState.issue === issue ? 'active' : ''}" data-issue="${esc(issue)}">${esc(ISSUE_LABEL[issue] || issue)} <b>${n}</b></button>`).join('')}
+          ${sourcesState.issue ? '<button class="chip" data-issue="">✕ 清除筛选</button>' : ''}
+          <span class="filter-count">${rows.length} 条</span>
+        </div>
+        <div class="card">
+          <div class="table-wrap"><table class="evt-table">
+            <thead><tr><th>信源</th><th>健康</th><th>属性</th><th>操作</th></tr></thead>
+            <tbody>${rows.join('') || '<tr><td colspan="4"><div class="empty-state">没有匹配的信源</div></td></tr>'}</tbody>
+          </table></div>
+        </div>
+      </div>
+    </div>`;
+
+  bindSourcesActions(el);
+}
+
+function sourceRow(src, cat) {
+  const tags = (src.tags || []).map(t => `<span class="mini-badge">${esc(t)}</span>`).join(' ');
+  const region = src.region ? `<span class="mini-badge">${esc(src.region)}</span>` : '';
+  return `<tr data-cat="${esc(cat.id)}" data-name="${esc(src.name)}" data-url="${esc(src.url || '')}">
+    <td class="evt-title">
+      ${src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">${esc(src.name)}</a>` : esc(src.name)}
+      ${src.rss ? '<span class="mini-badge mb-ok">RSS</span>' : ''}
+      <div class="evt-orig">${esc(src.url || '（无外链）')}</div>
+      ${src.desc ? `<div class="evt-meta">${esc(src.desc)}</div>` : ''}
+    </td>
+    <td>${healthBadge(src)}</td>
+    <td>${tags} ${region}</td>
+    <td class="evt-actions">
+      <button class="btn btn-sm act-edit">编辑</button>
+      <button class="btn btn-sm act-del btn-danger">删除</button>
+    </td></tr>`;
+}
+
+function bindSourcesActions(el) {
+  // 分类树
+  el.querySelectorAll('.cat-item').forEach(item => item.addEventListener('click', (e) => {
+    if (e.target.closest('.cat-ops')) return;
+    sourcesState.catId = item.dataset.cat;
+    renderSourcesTable(el);
+  }));
+  el.querySelectorAll('.cat-add-src').forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation(); openSourceModal(btn.dataset.cat, null);
+  }));
+  el.querySelectorAll('.cat-rename').forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation(); renameCategoryFlow(btn.dataset.cat);
+  }));
+  el.querySelectorAll('.cat-del').forEach(btn => btn.addEventListener('click', (e) => {
+    e.stopPropagation(); deleteCategoryFlow(btn.dataset.cat);
+  }));
+  $('#catAdd2').addEventListener('click', openCategoryModal);
+
+  // 问题 chips
+  el.querySelectorAll('.chip[data-issue]').forEach(chip => chip.addEventListener('click', () => {
+    sourcesState.issue = chip.dataset.issue === sourcesState.issue ? '' : chip.dataset.issue;
+    renderSourcesTable(el);
+  }));
+
+  // 搜索（重绘后保焦点）
+  $('#srcQ').addEventListener('input', () => {
+    sourcesState.q = $('#srcQ').value;
+    renderSourcesTable(el);
+    const box = $('#srcQ'); box.focus(); box.setSelectionRange(box.value.length, box.value.length);
+  });
+
+  // 行操作
+  el.querySelectorAll('tr[data-name]').forEach(tr => {
+    const ref = () => ({ catId: tr.dataset.cat, name: tr.dataset.name, url: tr.dataset.url });
+    tr.querySelector('.act-edit').addEventListener('click', () => {
+      const src = findSourceInState(ref());
+      openSourceModal(ref().catId, src, ref());
+    });
+    tr.querySelector('.act-del').addEventListener('click', async () => {
+      if (!(await confirmDialog(`删除信源「${ref().name}」？`, { danger: true }))) return;
+      try {
+        await api(`/api/sources/item?${new URLSearchParams(ref())}`, { method: 'DELETE' });
+        toast('已删除', 'success');
+        await reloadSourcesData();
+      } catch (e) { toast(`删除失败：${e.message}`, 'error'); }
+    });
+  });
+}
+
+function findSourceInState(ref) {
+  for (const cat of sourcesState.data.categories) {
+    if (cat.id !== ref.catId) continue;
+    const src = cat.sources.find(s => s.name === ref.name && (s.url || '') === (ref.url || ''));
+    if (src) return src;
+  }
+  return null;
+}
+
+async function reloadSourcesData() {
+  sourcesState.data = await api('/api/sources');
+  renderSourcesSub();
+  refreshStatus();
+}
+
+/* ---- 健康检查任务 ---- */
+
+async function startCheckAll() {
+  const total = sourcesState.data.stats.total;
+  if (!(await confirmDialog(`对全部 ${total} 个信源做健康检查？\n并发 10，约需 1-2 分钟，期间可继续其他操作。`))) return;
+  try {
+    const job = await api('/api/check/start', { method: 'POST', body: { scope: 'all' } });
+    sourcesState.job = job;
+    renderCheckProgress();
+    pollCheckJob();
+  } catch (e) { toast(`启动失败：${e.message}`, 'error'); }
+}
+
+function renderCheckProgress() {
+  const box = $('#checkProgressBox');
+  if (!box) return;
+  const j = sourcesState.job;
+  if (!j) { box.innerHTML = ''; return; }
+  const pct = j.total ? Math.round(j.done / j.total * 100) : 0;
+  const statusText = j.status === 'running' ? '检查中' : j.status === 'done' ? '已完成' : '失败';
+  box.innerHTML = `
+    <div class="check-progress">
+      <span class="pill ${j.status === 'done' ? 'pill-ok' : j.status === 'error' ? 'pill-danger' : ''}">${statusText}</span>
+      <div class="progress"><i style="width:${pct}%"></i></div>
+      <span class="evt-imp">${j.done}/${j.total}</span>
+    </div>`;
+}
+
+function pollCheckJob() {
+  if (sourcesState.jobTimer) clearInterval(sourcesState.jobTimer);
+  sourcesState.jobTimer = setInterval(async () => {
+    const j = sourcesState.job;
+    if (!j) { clearInterval(sourcesState.jobTimer); return; }
+    try {
+      const snap = await api(`/api/check/jobs/${j.id}`);
+      sourcesState.job = snap;
+      renderCheckProgress();
+      if (snap.status === 'done') {
+        clearInterval(sourcesState.jobTimer);
+        sourcesState.job = null;
+        renderCheckProgress();
+        const c = snap.counts || {};
+        toast(`检查完成：正常 ${c.ok ?? '-'}，异常 ${c.problems ?? '-'}，说明卡 ${c.noLink ?? '-'}`, 'success');
+        await reloadSourcesData();
+      } else if (snap.status === 'error') {
+        clearInterval(sourcesState.jobTimer);
+        sourcesState.job = null;
+        renderCheckProgress();
+        toast(`检查失败：${snap.error || '未知错误'}`, 'error');
+      }
+    } catch { /* 轮询抖动忽略，下轮再试 */ }
+  }, 2000);
+}
+
+/* ---- 信源编辑模态 ---- */
+
+function openSourceModal(catId, src, origRef) {
+  const isEdit = !!src;
+  const cats = sourcesState.data.categories;
+  const cat = cats.find(c => c.id === (src ? src.catId : catId));
+  const s = src || {};
+  openModal({
+    title: isEdit ? `编辑信源（${esc(cat ? cat.name : '')}）` : '添加信源',
+    bodyHtml: `
+      <div class="form-row">
+        <label class="field">名称<input id="fName" type="text" value="${esc(s.name || '')}"></label>
+        <label class="field">分类<select id="fCat">${cats.map(c =>
+          `<option value="${esc(c.id)}" ${(c.id === (src ? src.catId : catId)) ? 'selected' : ''}>${esc(c.name)}</option>`).join('')}</select></label>
+      </div>
+      <label class="field">url<input id="fUrl" type="url" value="${esc(s.url || '')}" placeholder="https://…（微信说明卡可留空）"></label>
+      <label class="field">RSS 地址<input id="fRss" type="url" value="${esc(s.rss || '')}" placeholder="可留空"></label>
+      <label class="field">描述<input id="fDesc" type="text" value="${esc(s.desc || '')}"></label>
+      <div class="form-row">
+        <label class="field">标签（逗号分隔）<input id="fTags" type="text" value="${esc((s.tags || []).join(', '))}"></label>
+        <label class="field">区域<input id="fRegion" type="text" value="${esc(s.region || '')}" placeholder="cn / global…"></label>
+      </div>`,
+    actions: [
+      { label: '取消' },
+      {
+        label: isEdit ? '保存' : '添加', primary: true,
+        onClick: async (close) => {
+          const body = {
+            name: $('#fName').value.trim(),
+            url: $('#fUrl').value.trim(),
+            rss: $('#fRss').value.trim() || null,
+            desc: $('#fDesc').value.trim(),
+            tags: $('#fTags').value.split(/[,，]/).map(x => x.trim()).filter(Boolean),
+            region: $('#fRegion').value.trim()
+          };
+          if (!body.name) { toast('名称不能为空', 'error'); return; }
+          const targetCat = $('#fCat').value;
+          const ref = origRef || { catId: catId || targetCat, name: '', url: '' };
+          try {
+            if (isEdit) {
+              // 先移动（身份不变），再改字段
+              if (targetCat !== ref.catId) {
+                await api('/api/sources/move', { method: 'POST', body: { ...ref, toCatId: targetCat } });
+                ref.catId = targetCat;
+              }
+              await api('/api/sources/item', { method: 'PUT', body: { ...ref, patch: body } });
+            } else {
+              await api('/api/sources', { method: 'POST', body: { catId: targetCat, source: body } });
+            }
+            toast(isEdit ? '已保存' : '已添加', 'success');
+            close(undefined);
+            await reloadSourcesData();
+          } catch (e) {
+            if (e.payload && e.payload.code === 'dup-url') {
+              const goOn = await confirmDialog(`${e.message}\n\n跨分类重复链接有时是故意的（同一发行方服务不同领域）。仍要保存吗？`);
+              if (goOn) {
+                try {
+                  if (isEdit) {
+                    await api('/api/sources/item', { method: 'PUT', body: { ...ref, patch: body, allowDupUrl: true } });
+                  } else {
+                    await api('/api/sources', { method: 'POST', body: { catId: $('#fCat').value, source: body, allowDupUrl: true } });
+                  }
+                  toast('已保存（允许重复链接）', 'success');
+                  close(undefined);
+                  await reloadSourcesData();
+                } catch (e2) { toast(`保存失败：${e2.message}`, 'error'); }
+              }
+            } else {
+              toast(`保存失败：${e.message}`, 'error');
+            }
+          }
+        }
+      }
+    ]
+  });
+}
+
+/* ---- 分类操作 ---- */
+
+function openCategoryModal() {
+  openModal({
+    title: '新增分类',
+    bodyHtml: `
+      <label class="field">分类 id（小写字母/数字/连杠）<input id="cId" type="text" placeholder="energy-storage"></label>
+      <label class="field">分类名<input id="cName" type="text" placeholder="储能"></label>`,
+    actions: [
+      { label: '取消' },
+      { label: '创建', primary: true, onClick: async (close) => {
+          try {
+            await api('/api/sources/category', { method: 'POST', body: { id: $('#cId').value.trim(), name: $('#cName').value.trim() } });
+            toast('分类已创建', 'success');
+            close(undefined);
+            await reloadSourcesData();
+          } catch (e) { toast(`创建失败：${e.message}`, 'error'); }
+        } }
+    ]
+  });
+}
+
+function renameCategoryFlow(catId) {
+  const cat = sourcesState.data.categories.find(c => c.id === catId);
+  if (!cat) return;
+  openModal({
+    title: `重命名分类「${esc(cat.name)}」`,
+    bodyHtml: `<label class="field">新分类名<input id="cName" type="text" value="${esc(cat.name)}"></label>`,
+    actions: [
+      { label: '取消' },
+      { label: '保存', primary: true, onClick: async (close) => {
+          try {
+            await api(`/api/sources/category/${encodeURIComponent(catId)}`, { method: 'PUT', body: { name: $('#cName').value.trim() } });
+            toast('已重命名', 'success');
+            close(undefined);
+            await reloadSourcesData();
+          } catch (e) { toast(`重命名失败：${e.message}`, 'error'); }
+        } }
+    ]
+  });
+}
+
+async function deleteCategoryFlow(catId) {
+  const cat = sourcesState.data.categories.find(c => c.id === catId);
+  if (!cat) return;
+  if (!(await confirmDialog(`删除分类「${cat.name}」？（有信源时会被拒绝）`, { danger: true }))) return;
+  try {
+    await api(`/api/sources/category/${encodeURIComponent(catId)}`, { method: 'DELETE' });
+    if (sourcesState.catId === catId) sourcesState.catId = '';
+    toast('分类已删除', 'success');
+    await reloadSourcesData();
+  } catch (e) { toast(`删除失败：${e.message}`, 'error'); }
+}
+
+/* ---- 子页：微信公众号源 ---- */
+
+async function renderWechatSourcesView(el) {
+  el.innerHTML = '<div class="loading-state">加载中…</div>';
+  const report = await api('/api/sources/wechat-report');
+  if (!report.total) {
+    el.innerHTML = `<div class="card"><div class="empty-state">当前没有微信公众号类信源（mp.weixin 链接或无外链说明卡）</div></div>`;
+    return;
+  }
+  el.innerHTML = `
+    <div class="card">
+      <div class="card-title">微信公众号源（${report.total}，其中异常 ${report.invalid.length}）</div>
+      <p class="muted-note">含 mp.weixin.qq.com 链接与无外链说明卡；文章被删除/违规的会在健康检查后给出建议。</p>
+      <div class="table-wrap"><table class="evt-table">
+        <thead><tr><th>信源</th><th>分类</th><th>状态</th><th>建议</th><th></th></tr></thead>
+        <tbody>${report.items.map(it => `
+          <tr data-cat="${esc(it.catId)}" data-name="${esc(it.name)}" data-url="${esc(it.url)}">
+            <td class="evt-title">${it.url ? `<a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.name)}</a>` : esc(it.name)}
+              ${it.lastTitle ? `<div class="evt-orig">${esc(it.lastTitle)}</div>` : ''}</td>
+            <td>${esc(it.catName)}</td>
+            <td>${healthBadge(it)}</td>
+            <td class="evt-meta">${esc(it.suggestion)}</td>
+            <td class="evt-actions"><button class="btn btn-sm btn-danger wx-del">删除</button></td>
+          </tr>`).join('')}</tbody>
+      </table></div>
+    </div>`;
+
+  el.querySelectorAll('.wx-del').forEach(btn => btn.addEventListener('click', async () => {
+    const tr = btn.closest('tr');
+    const ref = { catId: tr.dataset.cat, name: tr.dataset.name, url: tr.dataset.url };
+    if (!(await confirmDialog(`删除信源「${ref.name}」？`, { danger: true }))) return;
+    try {
+      await api(`/api/sources/item?${new URLSearchParams(ref)}`, { method: 'DELETE' });
+      toast('已删除', 'success');
+      renderWechatSourcesView(el);
+    } catch (e) { toast(`删除失败：${e.message}`, 'error'); }
+  }));
+}
 
 registerView('content', {
   title: '内容运营',

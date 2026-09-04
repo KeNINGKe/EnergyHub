@@ -18,6 +18,7 @@ import { createStaticHandler } from './lib/static.mjs';
 
 import * as statusApi from './api/status.mjs';
 import * as contentApi from './api/content.mjs';
+import * as sourcesApi from './api/sources.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ADMIN_DIR = path.resolve(__dirname, '../../admin');
@@ -50,7 +51,8 @@ function buildRouter() {
   const router = createRouter();
   statusApi.register(router);
   contentApi.register(router);
-  // 后续阶段在此追加：sources / config / publish
+  sourcesApi.register(router);
+  // 后续阶段在此追加：config / publish
   return router;
 }
 
