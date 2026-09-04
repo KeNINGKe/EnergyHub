@@ -46,7 +46,7 @@ test('resolveHotItems：跳过 daily 中不存在的陈旧 id', () => {
   assert.deepEqual(resolveHotItems(featured, daily).map(x => x.id), ['a']);
 });
 
-test('buildHotMessage：含标题链接、来源、今日观察、站点链接', () => {
+test('buildHotMessage：含标题链接、来源、站点链接，且不含今日观察', () => {
   const featured = {
     date: '2026-09-01',
     observations: ['【储能】观察A'],
@@ -58,15 +58,15 @@ test('buildHotMessage：含标题链接、来源、今日观察、站点链接',
   assert.ok(text.includes('2026-09-01'));
   assert.ok(text.includes('[热点标题](https://x.com/a)'));
   assert.ok(text.includes('｜pv magazine'));
-  assert.ok(text.includes('> 【储能】观察A'));
+  assert.ok(!text.includes('今日观察'));
+  assert.ok(!text.includes('观察A'));
   assert.ok(text.includes('[查看完整日报 →](https://site.example)'));
 });
 
-test('buildHotMessage：无观察/无站点链接时不输出对应块', () => {
+test('buildHotMessage：无站点链接时不输出站点链接', () => {
   const featured = { date: '2026-09-01', hotEventIds: ['a'] };
   const daily = { items: [{ id: 'a', title: 'T', url: 'https://x.com/a' }] };
   const { text } = buildHotMessage(featured, daily, {});
-  assert.ok(!text.includes('今日观察'));
   assert.ok(!text.includes('查看完整日报'));
   assert.ok(text.includes('[T](https://x.com/a)'));
 });

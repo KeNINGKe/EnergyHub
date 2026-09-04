@@ -51,8 +51,8 @@ export function resolveHotItems(featured, daily, max = 5) {
 }
 
 /**
- * 组「热点榜 + 今日观察」消息。
- * @param {object} featured feeds/featured.json（date/observations/hotEventIds/featuredEventIds）
+ * 组「热点榜」消息。
+ * @param {object} featured feeds/featured.json（date/hotEventIds/featuredEventIds）
  * @param {object} daily feeds/daily-v2.json（items[]）
  * @param {{siteUrl?:string}} opts
  * @returns {{title:string, text:string}}
@@ -61,15 +61,9 @@ export function buildHotMessage(featured, daily, opts = {}) {
   const { siteUrl = '' } = opts;
   const date = featured?.date || '';
   const hot = resolveHotItems(featured, daily, 5);
-  const observations = featured?.observations || [];
 
   const lines = [];
   lines.push(`## ⚡ EnergyHub 热点（${date}）`);
-  if (observations.length) {
-    lines.push('');
-    lines.push('**今日观察**');
-    for (const o of observations) lines.push(`> ${o}`);
-  }
   lines.push('');
   lines.push('**热点榜**');
   hot.forEach((it, i) => {

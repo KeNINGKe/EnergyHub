@@ -3,7 +3,7 @@
  * 每日热点 → 钉钉群机器人推送（加签 + markdown，发到群里，不 @ 人）。
  *
  * 读 feeds/featured.json + feeds/daily-v2.json（缺则回退 daily.json），
- * 组「热点榜 + 今日观察」markdown，POST 到钉钉自定义机器人。
+ * 组「热点榜」markdown，POST 到钉钉自定义机器人。
  *
  * 用法：
  *   node scripts/notify-dingtalk.mjs             # 真实发送（需 DINGTALK_WEBHOOK）
