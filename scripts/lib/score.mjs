@@ -36,6 +36,10 @@ export function importance(item, ctx = {}) {
     else if (ageH <= 72) s += 0.5;
   }
   if (Array.isArray(ctx.priorityTopics) && ctx.priorityTopics.includes(item.topic)) s += 1;
+  // 重点公司（enums.priorityCompanies，与 entities.json 实体名对齐）：命中 +1，
+  // 让宁德时代/Fluence/Vertiv 等重点跟踪对象不被普通媒体分埋没（中英实体名都算命中）
+  if (Array.isArray(ctx.priorityCompanies) && ctx.priorityCompanies.length &&
+      (item.entities || []).some(e => ctx.priorityCompanies.includes(e))) s += 1;
   // 多源报道：合并聚类中其他信源的数量，1 家 +0.5，封顶 +1.5（≥3 家视为充分交叉验证）
   const related = item.relatedSources?.length || 0;
   if (related > 0) s += Math.min(1.5, related * 0.5);

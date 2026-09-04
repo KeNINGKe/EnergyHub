@@ -275,8 +275,13 @@ export async function processItems(rawItems, ctx) {
     });
   }
 
-  // 6. 重要性评分 + 单来源限制（priorityTopics 让 sst-pcs 等优先主题有机会进精选）
-  for (const ev of events) ev.importance = importance(ev, { now: now.toISOString(), priorityTopics: enums.priorityTopics || [] });
+  // 6. 重要性评分 + 单来源限制（priorityTopics 让 sst-pcs 等优先主题有机会进精选；
+  //    priorityCompanies 让重点公司动态同享 +1）
+  for (const ev of events) ev.importance = importance(ev, {
+    now: now.toISOString(),
+    priorityTopics: enums.priorityTopics || [],
+    priorityCompanies: enums.priorityCompanies || []
+  });
   events.sort((a, b) => b.importance - a.importance);
   const capped = capPerSource(events, { max: 6 });
   stats.events = capped.length;

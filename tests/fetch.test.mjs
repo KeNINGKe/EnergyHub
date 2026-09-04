@@ -5,16 +5,31 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import {
   collectFeeds, parseJinaArticle, parseJinaPage, parseWechatArticleHtml, loadSources, fetchWechatSeeds,
-  isWechatArticleUrl, parseGenericPageHtml
+  isWechatArticleUrl, parseGenericPageHtml, stripSearchSuffix
 } from '../scripts/lib/fetch.mjs';
 
 const data = await loadSources();
 
-test('collectFeeds 默认只收 rss，全部标记 fetchType:rss', () => {
+test('collectFeeds 默认只收 rss/search，标记 fetchType 正确', () => {
   const feeds = collectFeeds(data);
   assert.ok(feeds.length >= 30, `rss 信源应 ≥30，实际 ${feeds.length}`);
-  assert.ok(feeds.every(f => f.fetchType === 'rss'));
+  assert.ok(feeds.every(f => f.fetchType === 'rss' || f.fetchType === 'search'));
   assert.ok(feeds.every(f => f.rss), '每个都应有 rss');
+  // 重点公司检索源（company-intel 分类）应被标记为 search
+  const search = feeds.filter(f => f.fetchType === 'search');
+  assert.ok(search.length >= 15, `检索源应 ≥15，实际 ${search.length}`);
+  assert.ok(search.every(f => f.rss.includes('news.google.com')), '检索源应指向 Google News');
+});
+
+test('stripSearchSuffix：剥「 - 媒体名」尾巴，正文含连字符时只剥最后一段', () => {
+  assert.equal(stripSearchSuffix('宁德时代发布新品 - 北极星储能网'), '宁德时代发布新品');
+  assert.equal(stripSearchSuffix('CATL - Energy-Storage.News'), 'CATL');
+  // 正文自身含「 - 」时只剥最后一段（媒体名）
+  assert.equal(stripSearchSuffix('Tesla Megapack - what changed - PV Magazine'), 'Tesla Megapack - what changed');
+  // 剥完为空 / 无尾巴：保留原样
+  assert.equal(stripSearchSuffix(' - 北极星'), ' - 北极星');
+  assert.equal(stripSearchSuffix('无尾巴标题'), '无尾巴标题');
+  assert.equal(stripSearchSuffix(''), '');
 });
 
 test('collectFeeds includePages=true 只收 RSS + 显式 fetchType:page，不误扫普通 url 站', () => {

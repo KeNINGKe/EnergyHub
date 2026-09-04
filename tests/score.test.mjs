@@ -48,6 +48,21 @@ test('importance：优先主题 +1，且不依赖 priorityTopics 也能跑', () 
   assert.equal(importance(base, { now: NOW }), 2.5, '无 priorityTopics 仍正常计算');
 });
 
+test('importance：重点公司命中 +1（叠加实体在场 +0.5），未命中不加', () => {
+  const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
+  const noBoost = importance(base, { now: NOW });
+  const pc = ['宁德时代', 'CATL', 'Fluence'];
+  const hitZh = importance({ ...base, entities: ['宁德时代'] }, { now: NOW, priorityCompanies: pc });
+  const hitEn = importance({ ...base, entities: ['CATL'] }, { now: NOW, priorityCompanies: pc });
+  const miss = importance({ ...base, entities: ['其他公司'] }, { now: NOW, priorityCompanies: pc });
+  // 差值 = 公司加权 1 + 实体在场 0.5；未命中公司只有实体在场 0.5
+  assert.equal(hitZh - noBoost, 1.5);
+  assert.equal(hitEn - noBoost, 1.5);
+  assert.equal(miss - noBoost, 0.5);
+  // 未传 priorityCompanies 时正常跑（向后兼容）
+  assert.equal(importance({ ...base, entities: ['宁德时代'] }, { now: NOW }) - noBoost, 0.5);
+});
+
 test('importance：多源报道加分，封顶 +1.5', () => {
   const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
   const solo = importance(base, { now: NOW });

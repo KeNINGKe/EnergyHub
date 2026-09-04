@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-09-02",
+  "updatedAt": "2026-09-04",
   "categories": [
     {
       "id": "power-general",
@@ -2093,6 +2093,228 @@
           ],
           "region": "global",
           "rss": null
+        }
+      ]
+    },
+    {
+      "id": "company-intel",
+      "name": "重点公司情报（检索）",
+      "sources": [
+        {
+          "name": "宁德时代（检索）",
+          "url": "https://www.catl.com/",
+          "rss": "https://news.google.com/rss/search?q=%E5%AE%81%E5%BE%B7%E6%97%B6%E4%BB%A3%20%E5%82%A8%E8%83%BD%20OR%20CATL%20%E5%82%A8%E8%83%BD&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "比亚迪储能（检索）",
+          "url": "https://www.byd.com/",
+          "rss": "https://news.google.com/rss/search?q=%E6%AF%94%E4%BA%9A%E8%BF%AA%20%E5%82%A8%E8%83%BD&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "阳光电源（检索）",
+          "url": "https://www.sungrowpower.com/",
+          "rss": "https://news.google.com/rss/search?q=%E9%98%B3%E5%85%89%E7%94%B5%E6%BA%90%20%E5%82%A8%E8%83%BD%20OR%20Sungrow&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "华为数字能源（检索）",
+          "url": "https://digitalpower.huawei.com/",
+          "rss": "https://news.google.com/rss/search?q=%E5%8D%8E%E4%B8%BA%E6%95%B0%E5%AD%97%E8%83%BD%E6%BA%90%20OR%20Huawei%20Digital%20Power&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "上能电气（检索）",
+          "url": "https://www.sinengelectric.com/",
+          "rss": "https://news.google.com/rss/search?q=%E4%B8%8A%E8%83%BD%E7%94%B5%E6%B0%94&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "科华数据（检索）",
+          "url": "https://www.kehua.com.cn/",
+          "rss": "https://news.google.com/rss/search?q=%E7%A7%91%E5%8D%8E%E6%95%B0%E6%8D%AE&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "盛弘股份（检索）",
+          "url": "https://www.sinexcel.com/",
+          "rss": "https://news.google.com/rss/search?q=%E7%9B%9B%E5%BC%98%E8%82%A1%E4%BB%BD&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "英维克（检索）",
+          "url": "https://www.envicool.com/",
+          "rss": "https://news.google.com/rss/search?q=%E8%8B%B1%E7%BB%B4%E5%85%8B%20OR%20Envicool&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "台达（检索）",
+          "url": "https://www.deltaww.com/",
+          "rss": "https://news.google.com/rss/search?q=%E5%8F%B0%E8%BE%BE%E7%94%B5%E5%AD%90%20%E5%82%A8%E8%83%BD%20OR%20%E5%8F%B0%E8%BE%BE%20%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "特变电工（检索）",
+          "url": "https://www.tbea.com/",
+          "rss": "https://news.google.com/rss/search?q=%E7%89%B9%E5%8F%98%E7%94%B5%E5%B7%A5&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "远景能源（检索）",
+          "url": "https://www.envisionenergy.com/",
+          "rss": "https://news.google.com/rss/search?q=%E8%BF%9C%E6%99%AF%E8%83%BD%E6%BA%90%20%E5%82%A8%E8%83%BD%20OR%20Envision%20Energy&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "南瑞继保（检索）",
+          "url": "https://www.nrec.com/",
+          "rss": "https://news.google.com/rss/search?q=%E5%8D%97%E7%91%9E%E7%BB%A7%E4%BF%9D%20OR%20NR%20Electric&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "曙光数创（检索）",
+          "url": "https://www.sugon.com/",
+          "rss": "https://news.google.com/rss/search?q=%E6%9B%99%E5%85%89%E6%95%B0%E5%88%9B&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "固德威（检索）",
+          "url": "https://www.goodwe.com/",
+          "rss": "https://news.google.com/rss/search?q=%E5%9B%BA%E5%BE%B7%E5%A8%81&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "Fluence（检索）",
+          "url": "https://fluenceenergy.com/",
+          "rss": "https://news.google.com/rss/search?q=Fluence%20Energy&hl=en-US&gl=US&ceid=US:en",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "Wärtsilä ES&O（检索）",
+          "url": "https://www.wartsila.com/",
+          "rss": "https://news.google.com/rss/search?q=W%C3%A4rtsil%C3%A4%20energy%20storage&hl=en-US&gl=US&ceid=US:en",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "Tesla Energy（检索）",
+          "url": "https://www.tesla.com/energy",
+          "rss": "https://news.google.com/rss/search?q=Tesla%20Megapack%20OR%20Tesla%20Energy%20storage&hl=en-US&gl=US&ceid=US:en",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "LG 新能源（检索）",
+          "url": "https://www.lgensol.com/",
+          "rss": "https://news.google.com/rss/search?q=LG%E6%96%B0%E8%83%BD%E6%BA%90%20OR%20LG%20Energy%20Solution%20%E5%82%A8%E8%83%BD&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "无 RSS 厂商：Google News 检索聚合（when:2d 限近两日）",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "cn",
+          "fetchType": "search"
         }
       ]
     }

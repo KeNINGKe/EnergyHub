@@ -74,6 +74,21 @@ export function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+/**
+ * 剥掉 Google News 检索结果标题尾部的「 - 媒体名」后缀。
+ * Google News 每条都带出版商尾巴（出版商名可含连字符/空格，如 Energy-Storage.News），
+ * 所以取最后一个「 - 」段剥除：后缀非空且 ≤50 字符、剥完仍有剩余才生效。
+ */
+export function stripSearchSuffix(title) {
+  const t = String(title || '');
+  const i = t.lastIndexOf(' - ');
+  if (i > 0) {
+    const suffix = t.slice(i + 3).trim();
+    if (suffix && suffix.length <= 50) return t.slice(0, i).trim() || t;
+  }
+  return t;
+}
+
 /** 是否为微信公众号单篇文章 URL（mp.weixin.qq.com/s/xxx 或 /s?__biz=... 参数式）。 */
 export function isWechatArticleUrl(url) {
   return /mp\.weixin\.qq\.com\/s(\/|\?)/i.test(url);
@@ -178,7 +193,8 @@ export async function loadSources() {
  * @param {{includePages?: boolean}} [opts] includePages=true 时才会把「无 rss 但有 url」的
  *   页面型信源纳入采集。即便开启，也只纳入公众号（tags 含 微信公众号）或显式标记
  *   fetchType:'page' 的信源，避免误抓普通 url 站。
- *   返回项带 fetchType: 'rss' | 'page'，fetchFeed 据此分支。
+ *   返回项带 fetchType: 'rss' | 'search' | 'page'，fetchFeed 据此分支。
+ *   'search' = rss 字段存的是检索聚合 feed（Google News RSS），标题带「 - 媒体名」尾巴需要剥。
  */
 export function collectFeeds(data, opts = {}) {
   const includePages = !!opts.includePages;
@@ -186,7 +202,7 @@ export function collectFeeds(data, opts = {}) {
   for (const cat of data.categories) {
     for (const src of cat.sources) {
       if (src.rss) {
-        feeds.push({ ...src, category: cat.name, fetchType: 'rss' });
+        feeds.push({ ...src, category: cat.name, fetchType: src.fetchType === 'search' ? 'search' : 'rss' });
       } else if (includePages && src.url) {
         const isWechat = Array.isArray(src.tags) && src.tags.includes('微信公众号');
         if (isWechat || src.fetchType === 'page') {
@@ -507,15 +523,19 @@ export async function fetchFeed(source) {
     }
   }
 
-  const items = rawItems.slice(0, 15).map(item => ({
-    title: item.title || '无标题',
-    link: item.link || item.guid || source.url,
-    guid: item.guid || item.id || null,
-    pubDate: item.isoDate || item.pubDate || null,
-    summary: pickSummary(item),
-    source: source.name,
-    sourceUrl: source.url
-  }));
+  const items = rawItems.slice(0, 15).map(item => {
+    let title = item.title || '无标题';
+    if (source.fetchType === 'search') title = stripSearchSuffix(title);
+    return {
+      title,
+      link: item.link || item.guid || source.url,
+      guid: item.guid || item.id || null,
+      pubDate: item.isoDate || item.pubDate || null,
+      summary: pickSummary(item),
+      source: source.name,
+      sourceUrl: source.url
+    };
+  });
   console.log(`[成功${via === 'jina' ? ' (Jina)' : ''}] ${source.name}: ${items.length} 条`);
   return { items, via };
 }
