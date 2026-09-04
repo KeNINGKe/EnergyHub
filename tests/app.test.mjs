@@ -37,38 +37,33 @@ test('isValidFeatured：拒绝缺失、结构错误和跨日期数据', () => {
   assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-10', observations: null, featuredEventIds: [] }, daily), false);
 });
 
-test('isNorthAmerica 判定已迁至构建端配置：前端 getPriority 按 regionBoost 置顶北美', () => {
+test('getPriority：rank 只表达主题档位，北美是标注/软加分而非硬分档', () => {
   const t = loadPriority();
-  // 前端不再导出 isNorthAmerica/priorityEvents；北美置顶效果通过 getPriority rank 体现
+  // rank 现在等于主题档位：0=热点主题 1=次级 2=其他（北美不再单独分档）
   assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '美国' })).rank, 0);
-  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '加拿大' })).rank, 0);
-  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '北美' })).rank, 0);
-  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '中国' })).rank, 1);
-  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '未知' })).rank, 1);
-  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '欧盟' })).rank, 1);
+  assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '中国' })).rank, 0);
+  assert.equal(t.getPriority(ev({ topic: 'gas-backup' })).rank, 1);
+  assert.equal(t.getPriority(ev({ topic: 'solar-wind' })).rank, 2);
+  // na 标记 + 徽章文案
+  const na = t.getPriority(ev({ topic: 'energy-storage', region: '美国' }));
+  assert.equal(na.na, true);
+  assert.equal(na.label, '储能·北美');
+  const cn = t.getPriority(ev({ topic: 'energy-storage', region: '中国' }));
+  assert.equal(cn.na, false);
+  assert.equal(cn.label, '储能');
+  assert.equal(t.getPriority(ev({ topic: 'aidc-project', region: '加拿大' })).label, 'AIDC·北美');
 });
 
-test('getPriority：储能/AIDC 最高，北美最优先，发电次级', () => {
+test('sortForTimeline：内容分为主，北美 +0.5 软加分不硬置顶', () => {
   const t = loadPriority();
-  const naStorage = t.getPriority(ev({ topic: 'energy-storage', region: '美国' }));
-  assert.equal(naStorage.rank, 0, '储能+北美 → rank 0');
-  assert.equal(naStorage.label, '储能·北美');
-
-  const cnStorage = t.getPriority(ev({ topic: 'energy-storage', region: '中国' }));
-  assert.equal(cnStorage.rank, 1, '储能非北美 → rank 1');
-  assert.equal(cnStorage.label, '储能');
-
-  const naAidc = t.getPriority(ev({ topic: 'aidc-project', region: '加拿大' }));
-  assert.equal(naAidc.rank, 0);
-  assert.equal(naAidc.label, 'AIDC·北美');
-
-  const gas = t.getPriority(ev({ topic: 'gas-backup' }));
-  assert.equal(gas.rank, 2, '发电 → rank 2');
-  assert.equal(gas.label, '发电');
-
-  const other = t.getPriority(ev({ topic: 'solar-wind' }));
-  assert.equal(other.rank, 3, '其他 → rank 3');
-  assert.equal(other.label, '');
+  const mk = (over) => ev({ publishedAt: '2026-09-04T02:00:00Z', ...over });
+  const sorted = t.sortForTimeline([
+    mk({ id: 'cn5', topic: 'energy-storage', region: '中国', importance: 5 }),
+    mk({ id: 'us4', topic: 'energy-storage', region: '美国', importance: 4 }),   // 4+0.5
+    mk({ id: 'eu4', topic: 'energy-storage', region: '德国', importance: 4 }),
+    mk({ id: 'gas', topic: 'gas-backup', region: '美国', importance: 9 })        // 次级主题仍在热点主题之后
+  ]);
+  assert.deepEqual([...sorted.map(x => x.id)], ['cn5', 'us4', 'eu4', 'gas']);
 });
 
 test('renderHotList：按构建端 featured.hotEventIds 渲染，空/缺失时返回空串', () => {

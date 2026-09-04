@@ -164,7 +164,7 @@
     "Mitsubishi"
   ],
   "hot": {
-    "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC），secondaryTopics=次级档（发电），regionBoost=最高档内北美置顶，exclude=核电极外（产品决策：核电不进热点榜）。修改后构建端与前端同时生效。",
+    "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC），secondaryTopics=次级档（发电），regionBoost+regionBoostScore=最高档内北美软加分（内容分 importance 为主，北美同分/近分时靠前，不硬置顶），exclude=核电极外（产品决策：核电不进热点榜）。修改后构建端与前端同时生效。",
     "topics": ["energy-storage", "aidc-project"],
     "labels": { "energy-storage": "储能", "aidc-project": "AIDC" },
     "secondaryTopics": ["gas-backup", "nuclear-smr"],
@@ -175,6 +175,7 @@
       { "pattern": "\\bSST\\b|固态变压器|solid\\s*state\\s*transformer", "label": "发电" }
     ],
     "regionBoost": ["美国", "加拿大", "北美"],
+    "regionBoostScore": 0.5,
     "maxItems": 5,
     "exclude": {
       "topics": ["nuclear-smr"],

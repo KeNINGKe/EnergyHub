@@ -138,9 +138,11 @@ export function selectFeatured(events, enums, opts = {}) {
 /**
  * 今日热点榜（构建端产出 featured.hotEventIds，前端只渲染）。
  * 配置取 data/enums.json 的 hot 段：topics=最高优先档（储能/AIDC），
- * regionBoost 内的地区（北美）置顶，exclude 的主题/关键词（核电）排除。
- * 排序：北美优先 → importance 降序；同分为稳定输入序（确定性）。
- * 人工可通过 editorial-overrides 的 hotEventIds 整体替换。
+ * exclude 的主题/关键词（核电）排除。
+ * 排序：importance（内容分）为主；regionBoost 命中的地区（北美）加
+ * regionBoostScore 软加分（默认 0.5）——同分/近分时北美靠前，
+ * 不再硬置顶（高分的中国/欧洲事件可以压过低分北美事件）。
+ * 同分为稳定输入序（确定性）。人工可通过 editorial-overrides 的 hotEventIds 整体替换。
  * @returns {string[]} 事件 id 列表（≤ hot.maxItems）
  */
 export function selectHot(events, enums, _opts = {}) {
@@ -151,6 +153,7 @@ export function selectHot(events, enums, _opts = {}) {
   const exclKws = cfg.exclude?.keywords || [];
   const regionRe = (cfg.regionBoost || []).length
     ? new RegExp(cfg.regionBoost.join('|'), 'i') : null;
+  const boostScore = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
   const maxItems = cfg.maxItems ?? 5;
 
   const candidates = [];
@@ -159,10 +162,10 @@ export function selectHot(events, enums, _opts = {}) {
     const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
       .filter(Boolean).join(' ');
     if (exclKws.some(k => keywordHit(hay, k))) continue;
-    candidates.push({ ev, na: regionRe ? regionRe.test(ev.region || '') : false });
+    const boost = regionRe && regionRe.test(ev.region || '') ? boostScore : 0;
+    candidates.push({ ev, score: (ev.importance || 0) + boost });
   }
-  candidates.sort((a, b) =>
-    (a.na === b.na ? 0 : a.na ? -1 : 1) || ((b.ev.importance || 0) - (a.ev.importance || 0)));
+  candidates.sort((a, b) => b.score - a.score);
   return candidates.slice(0, maxItems).map(x => x.ev.id);
 }
 

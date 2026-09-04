@@ -39,6 +39,7 @@ const FALLBACK_HOT = {
     { pattern: '\\bSST\\b|固态变压器|solid\\s*state\\s*transformer', label: '发电' },
   ],
   regionBoost: ['美国', '加拿大', '北美'],
+  regionBoostScore: 0.5,
 };
 
 const RE_CACHE = new Map();
@@ -262,7 +263,7 @@ function renderCategory(cat) {
   });
 }
 
-/* ===== 优先级判定（配置来自 enums.json hot 段：储能/AIDC 最高、北美置顶；发电次级） ===== */
+/* ===== 优先级判定（配置来自 enums.json hot 段：储能/AIDC 最高；发电次级） ===== */
 function getPriority(ev) {
   const cfg = getHotCfg();
   const topic = ev && ev.topic;
@@ -281,10 +282,10 @@ function getPriority(ev) {
       if (compileRe(k.pattern).test(hay)) { label = k.label; tier = 1; break; }
     }
   }
-  // 热点主题且命中 regionBoost（北美）→ rank 0（最优先）；热点主题非北美 → 1；发电 → 2；其他 → 3
+  // 北美命中：只做徽章标注（·北美）与时间线软加分，不再硬分档置顶——
+  // 内容分（importance）为主，北美同分/近分时靠前（见 sortForTimeline）。
   const na = tier === 0 && (cfg.regionBoost || []).some(r => String(ev.region || '').includes(r));
-  const rank = na ? 0 : (tier === 0 ? 1 : (tier === 1 ? 2 : 3));
-  return { rank, label: na ? `${label}·北美` : label, tier };
+  return { rank: tier, label: na ? `${label}·北美` : label, tier, na };
 }
 
 function formatScore(imp) {
@@ -294,14 +295,19 @@ function formatScore(imp) {
 
 /* ===== 时间线排布（参考 aihot.virxact.com，保留本站视觉） ===== */
 function sortForTimeline(events) {
+  const cfg = getHotCfg();
+  const boost = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
+  const adjScore = (ev, p) => (ev.importance || 0) + (p.na ? boost : 0);
   return [...(events || [])].sort((a, b) => {
-    const pa = getPriority(a).rank;
-    const pb = getPriority(b).rank;
-    if (pa !== pb) return pa - pb;
+    const pa = getPriority(a);
+    const pb = getPriority(b);
+    if (pa.tier !== pb.tier) return pa.tier - pb.tier;   // 主题档位仍是第一排序键（储能/AIDC 最上）
+    const sa = adjScore(a, pa);
+    const sb = adjScore(b, pb);
+    if (sa !== sb) return sb - sa;                        // 内容分为主，北美软加分
     const ta = new Date(a.publishedAt || a.pubDate || a.isoDate || a.date).getTime() || 0;
     const tb = new Date(b.publishedAt || b.pubDate || b.isoDate || b.date).getTime() || 0;
-    if (tb !== ta) return tb - ta;
-    return (b.importance || 0) - (a.importance || 0);
+    return tb - ta;
   });
 }
 

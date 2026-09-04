@@ -169,22 +169,25 @@ test('selectFeatured：默认收紧到 12 条、门槛 3', () => {
   assert.ok(!featuredEventIds.includes('evt_low'), '低于门槛 3 不入选');
 });
 
-test('selectHot：储能/AIDC 入榜、北美置顶、核电排除、上限生效', () => {
+test('selectHot：储能/AIDC 入榜、北美软加分、核电排除、上限生效', () => {
   const mk = (id, importance, topic, region, over = {}) => ({
     id, importance, topic, region,
     title: '', originalTitle: '', summary: '', entities: [],
     source: { name: 'S' + id }, publishedAt: FPUB, ...over
   });
   const events = [
-    mk('evt_us', 4, 'energy-storage', '美国'),
-    mk('evt_eu', 4.5, 'energy-storage', '德国'),
+    mk('evt_cn', 5, 'energy-storage', '中国'),                                 // 内容分最高 → 榜首
+    mk('evt_us', 4, 'energy-storage', '美国'),                                 // 4 + 0.5 软加分
+    mk('evt_eu', 4, 'energy-storage', '德国'),                                 // 4，同基础分输给北美
     mk('evt_nuke', 5, 'energy-storage', '美国', { title: '核电储能混合项目 nuclear' }),
     mk('evt_aidc', 3, 'aidc-project', '中国'),
     mk('evt_grid', 9, 'grid', '美国') // 非热点主题，不入榜
   ];
   const ids = selectHot(events, enums);
-  assert.equal(ids[0], 'evt_us', '北美置顶');
-  assert.ok(ids.includes('evt_eu') && ids.includes('evt_aidc'));
+  assert.equal(ids[0], 'evt_cn', '高分中国事件压过低分北美事件（内容为主）');
+  assert.equal(ids[1], 'evt_us', '同基础分时北美软加分靠前');
+  assert.equal(ids[2], 'evt_eu');
+  assert.ok(ids.includes('evt_aidc'));
   assert.ok(!ids.includes('evt_nuke'), '核电关键词排除');
   assert.ok(!ids.includes('evt_grid'), '非热点主题不入榜');
   assert.ok(ids.length <= (enums.hot?.maxItems ?? 5));
