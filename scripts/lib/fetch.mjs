@@ -13,6 +13,7 @@ import fs from 'node:fs/promises';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import Parser from 'rss-parser';
+import { createRequire } from 'node:module';
 
 const execFileAsync = promisify(execFile);
 
@@ -544,6 +545,54 @@ export async function fetchFeed(source) {
  * 并发抓取所有 feed。
  * @returns {Promise<{items: Array, succeeded: number, failed: Array<string>, total: number}>}
  */
+// ---- Google News 跳转链接解析 ----
+// 检索源（无 RSS 厂商）的条目链接是 news.google.com 跳转页，大陆用户无法访问第一跳，
+// 也不知真实出处。这里在抓取阶段解析成原网站 URL（CI 在境外可达 Google；本地需代理）。
+const GOOGLE_NEWS_URL_RE = /^https?:\/\/news\.google\.com\/(rss\/)?(articles|read)\//;
+const GNEWS_RESOLVE_CONCURRENCY = 4;
+const GNEWS_RESOLVE_TIMEOUT_MS = 25_000;
+
+/** 单条解析，失败返回 null（调用方保留原链接兜底）。 */
+async function decodeOneGoogleNewsUrl(decoder, url) {
+  const run = decoder.decode(url).then(
+    (r) => (r && r.status && r.decoded_url && /^https?:\/\//.test(r.decoded_url) ? r.decoded_url : null),
+    () => null
+  );
+  const timeout = new Promise((resolve) => setTimeout(() => resolve(null), GNEWS_RESOLVE_TIMEOUT_MS));
+  return Promise.race([run, timeout]);
+}
+
+/**
+ * 把条目里的 Google News 跳转链接就地替换为原网站 URL。
+ * 解析失败/超时保留原链接（可用但大陆需代理）。返回解析统计。
+ */
+export async function resolveGoogleNewsUrls(items, { log = console.error } = {}) {
+  const targets = [...new Set(items.filter((it) => GOOGLE_NEWS_URL_RE.test(it.url || '')).map((it) => it.url))];
+  if (!targets.length) return { resolved: 0, failed: 0, total: 0 };
+
+  const require = createRequire(import.meta.url);
+  const { GoogleDecoder } = require('google-news-url-decoder');
+  const decoder = new GoogleDecoder();
+
+  const map = new Map();
+  let failed = 0;
+  for (let i = 0; i < targets.length; i += GNEWS_RESOLVE_CONCURRENCY) {
+    const chunk = targets.slice(i, i + GNEWS_RESOLVE_CONCURRENCY);
+    const settled = await Promise.all(chunk.map((u) => decodeOneGoogleNewsUrl(decoder, u)));
+    chunk.forEach((u, j) => {
+      if (settled[j]) map.set(u, settled[j]);
+      else failed++;
+    });
+  }
+
+  for (const it of items) {
+    if (GOOGLE_NEWS_URL_RE.test(it.url || '') && map.has(it.url)) it.url = map.get(it.url);
+  }
+  const resolved = map.size;
+  log(`[gnews-resolve] 解析成功 ${resolved}/${targets.length}，失败保留原链接 ${failed}`);
+  return { resolved, failed, total: targets.length };
+}
+
 export async function fetchAllFeeds(feeds) {
   const results = await Promise.allSettled(feeds.map(fetchFeed));
   const items = [];
@@ -558,6 +607,7 @@ export async function fetchAllFeeds(feeds) {
       failed.push(feeds[i].name);
     }
   }
+  await resolveGoogleNewsUrls(items);
   return { items, succeeded, failed, total: feeds.length };
 }
 
