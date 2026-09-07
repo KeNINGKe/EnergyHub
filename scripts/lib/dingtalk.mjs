@@ -63,7 +63,7 @@ export function buildHotMessage(featured, daily, opts = {}) {
   const hot = resolveHotItems(featured, daily, 5);
 
   const lines = [];
-  lines.push(`## ⚡ EnergyHub 热点（${date}）`);
+  lines.push(`## EnergyHub 热点（${date}）`);
   lines.push('');
   lines.push('**热点榜**');
   hot.forEach((it, i) => {
