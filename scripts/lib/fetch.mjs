@@ -79,13 +79,17 @@ export function sleep(ms) {
  * 剥掉 Google News 检索结果标题尾部的「 - 媒体名」后缀。
  * Google News 每条都带出版商尾巴（出版商名可含连字符/空格，如 Energy-Storage.News），
  * 所以取最后一个「 - 」段剥除：后缀非空且 ≤50 字符、剥完仍有剩余才生效。
+ * 例外：标语型尾巴（≥3 段的逗号/顿号枚举，如 energynow 的
+ * "Energy News, Top Headlines, Commentaries, Features & Events"）不限长度直接剥——
+ * 这种站点模板尾巴超过 50 字符上限会被留下，还跟着翻译进中文标题。
  */
 export function stripSearchSuffix(title) {
   const t = String(title || '');
   const i = t.lastIndexOf(' - ');
   if (i > 0) {
     const suffix = t.slice(i + 3).trim();
-    if (suffix && suffix.length <= 50) return t.slice(0, i).trim() || t;
+    const isTagline = (suffix.match(/,|、/g) || []).length >= 2;
+    if (suffix && (isTagline || suffix.length <= 50)) return t.slice(0, i).trim() || t;
   }
   return t;
 }

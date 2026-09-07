@@ -42,6 +42,30 @@ function eventId(it) {
 }
 
 /**
+ * 「榜单不可用」事件：精选/热点榜的条目必须既真是今日新闻、又点得开。
+ * ① 旧文翻出：Google News 检索源会把陈年旧文重新翻出（RSS pubDate 是重新抓取
+ *    时间，不是文章日期，2026-09-07 energynow 一篇 3 月旧文因此登顶热点榜）。
+ *    URL 路径内嵌 /YYYY/MM/ 且比发布时间早 60 天以上视为旧文。
+ * ② 大陆不可达域名（enums.cnBlockedDomains）：源站对大陆 IP 返回 403（真实浏览器
+ *    同样被拒），进了榜单同事也点不开。
+ * 两类都只挡榜单，保留在全量列表（内容本身仍可能重要）。
+ */
+export function isUnlistableEvent(ev, enums) {
+  try {
+    const u = new URL(ev.url);
+    const host = u.hostname.replace(/^www\./, '');
+    if ((enums?.cnBlockedDomains || []).includes(host)) return true;
+    const m = /^\/(\d{4})\/(\d{1,2})\//.exec(u.pathname);
+    if (m && ev.publishedAt) {
+      const urlMs = new Date(+m[1], +m[2] - 1, 15).getTime();
+      const pubMs = new Date(ev.publishedAt).getTime();
+      if (Number.isFinite(urlMs) && Number.isFinite(pubMs) && pubMs - urlMs > 60 * 86400e3) return true;
+    }
+  } catch { /* 非法 URL 交给其他环节处理 */ }
+  return false;
+}
+
+/**
  * 精选选择：重要性降序 + 主题多样性 + 来源多样性 + 质量门槛 + 时效窗口。
  * 微信来源事件（wechat:true）在主题/来源配额上保底入选（默认 1 条），
  * 保证公众号内容可靠地进入精选，而非只靠重要性竞争。
@@ -76,6 +100,7 @@ export function selectFeatured(events, enums, opts = {}) {
   const topicCount = {};
   const srcCount = {};
   const reserved = new Set();
+  events = events.filter(ev => !isUnlistableEvent(ev, enums)); // 旧文翻出/大陆不可达不进精选
   const admit = (ev) => {
     reserved.add(ev.id);
     selected.push(ev);
@@ -158,6 +183,7 @@ export function selectHot(events, enums, _opts = {}) {
 
   const candidates = [];
   for (const ev of events) {
+    if (isUnlistableEvent(ev, enums)) continue; // 旧文翻出/大陆不可达不进热点榜
     if (!topics.has(ev.topic) || exclTopics.has(ev.topic)) continue;
     const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
       .filter(Boolean).join(' ');

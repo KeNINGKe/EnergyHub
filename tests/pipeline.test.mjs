@@ -7,7 +7,7 @@ import { loadEnums, validateDailyV2, validateFeatured } from '../scripts/lib/sch
 import { loadFilters } from '../scripts/lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap } from '../scripts/lib/source.mjs';
 import {
-  processItems, selectFeatured, selectHot, atomicWrite, resolveReplayNow, ensureNonEmptyBuild
+  processItems, selectFeatured, selectHot, atomicWrite, resolveReplayNow, ensureNonEmptyBuild, isUnlistableEvent
 } from '../scripts/build-daily-v2.mjs';
 
 const enums = await loadEnums();
@@ -50,6 +50,22 @@ test('selectFeatured：门槛与多样性', () => {
   const { featuredEventIds } = selectFeatured(events, enums, FSELECT);
   assert.ok(!featuredEventIds.includes('evt_d'), '低门槛事件不入精选');
   assert.ok(featuredEventIds.includes('evt_a') && featuredEventIds.includes('evt_c'));
+});
+
+test('榜单守卫：旧文翻出与大陆不可达域名不进精选/热点榜（2026-09-07 energynow 403 事故）', () => {
+  const mk = (id, url) => ({ id, url, importance: 4, topic: 'energy-storage', source: { name: 'S' + id }, publishedAt: FPUB });
+  const stale = mk('evt_old', 'https://energynow.com/2026/03/lg-to-supply-tesla/'); // URL 日期比发布早 ~5 个月
+  const blocked = mk('evt_blk', 'https://www.energynow.com/2026/08/fresh-item/');   // 域名黑名单（www 前缀归一）
+  const good = mk('evt_ok', 'https://www.energy-storage.news/amazon-signs-first-deal/');
+  const events = [stale, blocked, good];
+  assert.deepEqual(selectFeatured(events, enums, FSELECT).featuredEventIds, ['evt_ok']);
+  assert.deepEqual(selectHot(events, enums), ['evt_ok']);
+  assert.equal(isUnlistableEvent(stale, enums), true);
+  assert.equal(isUnlistableEvent(blocked, enums), true);
+  assert.equal(isUnlistableEvent(good, enums), false);
+  // URL 无日期路径 + 非黑名单域名 → 正常可用；非法 URL 不误杀判定本身
+  assert.equal(isUnlistableEvent(mk('evt_x', 'https://example.com/news/item?u=/2026/03/'), enums), false);
+  assert.equal(isUnlistableEvent({ ...mk('evt_y', 'not a url') }, enums), false);
 });
 
 test('selectFeatured：同主题最多 2 条', () => {

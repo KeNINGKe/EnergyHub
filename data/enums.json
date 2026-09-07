@@ -186,6 +186,10 @@
       "keywords": ["核电", "核电站", "核反应堆", "核电机组", "小型模块化反应堆", "SMR", "nuclear"]
     }
   },
+  "cnBlockedDomains": {
+    "note": "大陆不可达域名：源站对大陆 IP 直接 403/拒绝（真实浏览器同样被拒，同事点不开）。命中域名的事件不进精选与热点榜，保留在全量列表。2026-09-07 energynow.com 首例：热点榜第一点开 403 Forbidden（nginx 源站拒绝）。加入前先确认是『大陆真实浏览器也 403』，而非个别网络问题。",
+    "domains": ["energynow.com"]
+  },
   "categories": [
     { "id": "all", "label": "全部", "topics": [], "keywords": [] },
     { "id": "pcs", "label": "PCS", "topics": ["pcs"], "keywords": [] },

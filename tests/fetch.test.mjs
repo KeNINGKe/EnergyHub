@@ -32,6 +32,19 @@ test('stripSearchSuffix：剥「 - 媒体名」尾巴，正文含连字符时只
   assert.equal(stripSearchSuffix(''), '');
 });
 
+test('stripSearchSuffix：标语型长尾巴（≥3 段逗号枚举）不限长度剥除', () => {
+  // energynow 站点模板尾巴 60 字符，超过 50 上限曾漏剥、还跟着翻译进中文标题
+  assert.equal(
+    stripSearchSuffix('LG to Supply Tesla With US$4.3 Billion of Batteries - Energy News, Top Headlines, Commentaries, Features & Events'),
+    'LG to Supply Tesla With US$4.3 Billion of Batteries'
+  );
+  // 两段枚举不算标语，走 ≤50 常规规则：26 字符正常剥
+  assert.equal(stripSearchSuffix('标题A - Energy News, Top Headlines'), '标题A');
+  // 恰好 3 段枚举（2 个逗号）也算标语，超过 50 也剥
+  const long3 = '标题B - News, Headlines, Commentaries & More From Our Editorial Team Across The Network';
+  assert.equal(stripSearchSuffix(long3), '标题B');
+});
+
 test('collectFeeds includePages=true 只收 RSS + 显式 fetchType:page，不误扫普通 url 站', () => {
   const feeds = collectFeeds(data, { includePages: true });
   const pageFeeds = feeds.filter(f => f.fetchType === 'page');

@@ -24,10 +24,11 @@
     "deploy": "wrangler deploy"
   },
   "dependencies": {
-    "rss-parser": "^3.13.0",
-    "google-news-url-decoder": "^1.2.2"
+    "google-news-url-decoder": "^1.2.2",
+    "rss-parser": "^3.13.0"
   },
   "devDependencies": {
+    "tweetsodium": "^0.0.4",
     "wrangler": "^4.0.0"
   }
 }
