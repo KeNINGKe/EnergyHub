@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare
+name: Deploy (Cloudflare 备份 + EdgeOne 大陆主入口)
 
 on:
   push:
@@ -41,3 +41,12 @@ jobs:
           npm install -g @cloudbase/cli
           tcb login --apiKeyId "${{ secrets.TCB_SECRET_ID }}" --apiKey "${{ secrets.TCB_SECRET_KEY }}"
           tcb hosting deploy ./dist --envId "$TCB_ENV_ID" --concurrency 10
+
+      # 腾讯 EdgeOne Pages（大陆免备案直连主入口，https://energyhub.edgeone.app）。
+      # 2026-09-07：github.io 在公司办公网被拦/IPv6 黑洞，EdgeOne 腾讯自家域名不受影响。
+      # 配置 EDGEONE_API_TOKEN secret 后自动生效；未配置时跳过。项目不存在会自动创建。
+      - name: Deploy to EdgeOne Pages (大陆主入口)
+        if: env.EDGEONE_API_TOKEN != ''
+        env:
+          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
+        run: npx edgeone pages deploy ./dist -n energyhub -t "$EDGEONE_API_TOKEN"
