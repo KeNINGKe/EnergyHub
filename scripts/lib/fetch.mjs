@@ -567,8 +567,15 @@ async function decodeOneGoogleNewsUrl(decoder, url) {
  * 解析失败/超时保留原链接（可用但大陆需代理）。返回解析统计。
  */
 export async function resolveGoogleNewsUrls(items, { log = console.error } = {}) {
-  const targets = [...new Set(items.filter((it) => GOOGLE_NEWS_URL_RE.test(it.url || '')).map((it) => it.url))];
-  if (!targets.length) return { resolved: 0, failed: 0, total: 0 };
+  // 兼容两个字段名：fetchAllFeeds 阶段条目用 link（rss-parser 原生），
+  // 构建后段会改名为 url。只处理 google 跳转链接，其余原样保留。
+  const pick = (it) => (GOOGLE_NEWS_URL_RE.test(it.link || '') ? it.link
+    : GOOGLE_NEWS_URL_RE.test(it.url || '') ? it.url : null);
+  const targets = [...new Set(items.map(pick).filter(Boolean))];
+  if (!targets.length) {
+    log(`[gnews-resolve] 无 Google News 链接，跳过`);
+    return { resolved: 0, failed: 0, total: 0 };
+  }
 
   const require = createRequire(import.meta.url);
   const { GoogleDecoder } = require('google-news-url-decoder');
@@ -586,7 +593,11 @@ export async function resolveGoogleNewsUrls(items, { log = console.error } = {})
   }
 
   for (const it of items) {
-    if (GOOGLE_NEWS_URL_RE.test(it.url || '') && map.has(it.url)) it.url = map.get(it.url);
+    const cur = pick(it);
+    if (cur && map.has(cur)) {
+      if (it.link !== undefined) it.link = map.get(cur);
+      if (it.url !== undefined) it.url = map.get(cur);
+    }
   }
   const resolved = map.size;
   log(`[gnews-resolve] 解析成功 ${resolved}/${targets.length}，失败保留原链接 ${failed}`);
