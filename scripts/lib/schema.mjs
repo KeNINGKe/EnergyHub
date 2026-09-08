@@ -33,6 +33,7 @@ export async function loadEnums() {
     priorityCompanies: data.priorityCompanies || [], // 重点公司名单（与 entities.json 实体名对齐），评分端命中 +1
     hot: data.hot || null,             // 今日热点榜配置（构建端 selectHot / 前端徽章共用）
     cnBlockedDomains: data.cnBlockedDomains?.domains || [], // 大陆不可达域名（403），不进精选/热点榜
+    exposureDays: data.exposure?.days ?? 3, // 跨日曝光记忆窗口（天），见 enums.exposure
     categories: data.categories || [], // 精选页分类配置（前端分类栏）
     topicIds: new Set((data.topics || []).map(t => t.id)),
     sourceTypeIds: new Set((data.sourceTypes || []).map(t => t.id)),

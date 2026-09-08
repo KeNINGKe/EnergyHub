@@ -287,6 +287,61 @@ test('processItems：确定性（同输入两次结果一致）', async () => {
   assert.deepEqual(r1.daily.items[0], r2.daily.items[0]);
 });
 
+test('跨日曝光记忆：热点榜已上榜者让位新事，新事不足时回填（2026-09-08 重复霸榜修复）', () => {
+  const mk = (id, importance, topic, over = {}) => ({
+    id, importance, topic, title: '', originalTitle: '', summary: '', entities: [],
+    source: { name: 'S' + id }, publishedAt: FPUB, ...over
+  });
+  const exposed = new Set(['https://a.com/yesterday']);
+  const hotEvents = [
+    mk('evt_exposed', 5, 'energy-storage', { url: 'https://a.com/yesterday?utm=rss' }), // 分最高但昨天上过榜
+    mk('evt_new1', 4, 'energy-storage', { url: 'https://b.com/new1' }),
+    mk('evt_new2', 3, 'energy-storage', { url: 'https://c.com/new2' }),
+    mk('evt_new3', 2, 'energy-storage', { url: 'https://d.com/new3' })
+  ];
+  const ids = selectHot(hotEvents, enums, { exposedUrls: exposed });
+  assert.deepEqual(ids.slice(0, 3), ['evt_new1', 'evt_new2', 'evt_new3'], '已曝光者沉底，新事按分上榜');
+  assert.ok(ids.includes('evt_exposed'), '新事不足 maxItems 时已曝光者回填补位');
+
+  const many = [...hotEvents, mk('evt_new4', 2, 'aidc-project', { url: 'https://e.com/new4' }), mk('evt_new5', 2, 'energy-storage', { url: 'https://f.com/new5' })];
+  assert.ok(!selectHot(many, enums, { exposedUrls: exposed }).includes('evt_exposed'), '新事件充足时已曝光者不入榜');
+  // 不传 exposedUrls 行为与旧版一致（回放/测试零影响）
+  assert.equal(selectHot(hotEvents, enums)[0], 'evt_exposed');
+});
+
+test('跨日曝光记忆：精选先选新事，不足 maxFeatured 才按分回填已曝光', () => {
+  const mk = (id, importance, topic) => ({
+    id, importance, topic, url: `https://x.com/${id}`, relatedSources: [],
+    source: { name: 'S' + id }, publishedAt: FPUB
+  });
+  const exposed = new Set(['https://x.com/evt_exp1', 'https://x.com/evt_exp2']);
+  const events = [
+    mk('evt_exp1', 5, 'grid'),
+    mk('evt_exp2', 4.5, 'solar-wind'),
+    mk('evt_fresh', 3.5, 'grid'),
+    mk('evt_low', 2, 'grid') // 低于门槛
+  ];
+  const { featuredEventIds } = selectFeatured(events, enums, { ...FSELECT, exposedUrls: exposed });
+  assert.deepEqual(featuredEventIds, ['evt_fresh', 'evt_exp1', 'evt_exp2'], '新事优先，已曝光按分回填');
+  // 旧式最小事件（无 url 字段）不受曝光过滤影响（向后兼容）
+  const noUrl = [{ id: 'evt_nourl', importance: 4, topic: 'grid', source: { name: 'S' }, publishedAt: FPUB }];
+  assert.deepEqual(selectFeatured(noUrl, enums, { ...FSELECT, exposedUrls: exposed }).featuredEventIds, ['evt_nourl']);
+});
+
+test('processItems：ctx.exposedUrls 贯通到热点榜（全曝光时回填原榜单、不开天窗）', async () => {
+  const items = [
+    raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/bess', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),
+    raw({ title: '2GWh 储能项目签约落地', link: 'https://a.com/bess2', summary: '储能项目签约', source: 'Electrek' }),
+    raw({ title: '3GWh 独立储能电站开工', link: 'https://a.com/bess3', summary: '独立储能开工', source: 'pv magazine' })
+  ];
+  const base = { date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null };
+  const r1 = await processItems(items, { ...base });
+  assert.ok(r1.featured.hotEventIds.length > 0, '候选里有热点事件');
+  const exposedUrls = new Set(r1.daily.items.map(e => e.url));
+  const r2 = await processItems(items, { ...base, exposedUrls });
+  assert.deepEqual(r2.featured.hotEventIds, r1.featured.hotEventIds, '全部已曝光时回填出与原先一致的热点榜');
+});
+
 test('atomicWrite：校验失败不覆盖现有文件', async () => {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'eih-'));
   const file = path.join(dir, 'x.json');

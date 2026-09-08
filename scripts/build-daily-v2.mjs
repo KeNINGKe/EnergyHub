@@ -26,6 +26,7 @@ import { pickPrimary } from './lib/select.mjs';
 import { importance, capPerSource } from './lib/score.mjs';
 import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
 import { loadOverrides, applyOverrides } from './lib/overrides.mjs';
+import { isRecentlyExposed, exposedUrlSet, recordExposure, pruneExposure } from './lib/exposure.mjs';
 import { hashId, canonicalUrl } from './lib/compat.mjs';
 import {
   toISODate, loadSources, collectFeeds, fetchAllFeeds, translateTitles,
@@ -35,6 +36,7 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DAILY_MAX_AGE_DAYS = 7;
+const EXPOSURE_HISTORY_PATH = path.join(ROOT, 'feeds', 'exposure-history.json');
 
 function eventId(it) {
   const key = canonicalUrl(it.url) || it.originalTitle || it.title;
@@ -136,15 +138,25 @@ export function selectFeatured(events, enums, opts = {}) {
   }
 
   // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信/优先主题事件跳过）
-  for (const ev of events) {
-    if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
-    if (selected.length >= maxFeatured) break;
-    if (reserved.has(ev.id)) continue;
-    if (!isFresh(ev)) continue; // 超过时效窗口的旧事件不进精选
-    const t = ev.topic || 'other-energy';
-    if ((topicCount[t] || 0) >= maxPerTopic) continue;
-    if ((srcCount[ev.source.name] || 0) >= maxPerSource) continue;
-    admit(ev);
+  // 跨日曝光记忆：近 N 天上过榜的事件先靠后——新事件选满 maxFeatured 才轮到
+  // 它们按原配额回填（防止同一新闻连续几天霸榜，见 lib/exposure.mjs 头注）。
+  const runMainSelect = (list) => {
+    for (const ev of list) {
+      if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
+      if (selected.length >= maxFeatured) break;
+      if (reserved.has(ev.id)) continue;
+      if (!isFresh(ev)) continue; // 超过时效窗口的旧事件不进精选
+      const t = ev.topic || 'other-energy';
+      if ((topicCount[t] || 0) >= maxPerTopic) continue;
+      if ((srcCount[ev.source.name] || 0) >= maxPerSource) continue;
+      admit(ev);
+    }
+  };
+  if (opts.exposedUrls?.size) {
+    runMainSelect(events.filter(ev => !isRecentlyExposed(ev, opts.exposedUrls)));
+    runMainSelect(events.filter(ev => isRecentlyExposed(ev, opts.exposedUrls))); // 回填
+  } else {
+    runMainSelect(events);
   }
 
   const featuredEventIds = selected.map(ev => ev.id);
@@ -167,10 +179,12 @@ export function selectFeatured(events, enums, opts = {}) {
  * 排序：importance（内容分）为主；regionBoost 命中的地区（北美）加
  * regionBoostScore 软加分（默认 0.5）——同分/近分时北美靠前，
  * 不再硬置顶（高分的中国/欧洲事件可以压过低分北美事件）。
+ * 跨日曝光记忆：近 N 天上过榜的事件重罚沉底（opts.exposedUrls，见 lib/exposure.mjs），
+ * 新事件不足 maxItems 时自然由它们补位。
  * 同分为稳定输入序（确定性）。人工可通过 editorial-overrides 的 hotEventIds 整体替换。
  * @returns {string[]} 事件 id 列表（≤ hot.maxItems）
  */
-export function selectHot(events, enums, _opts = {}) {
+export function selectHot(events, enums, opts = {}) {
   const cfg = enums.hot || {};
   const topics = new Set(cfg.topics || []);
   if (!topics.size) return [];
@@ -180,6 +194,7 @@ export function selectHot(events, enums, _opts = {}) {
     ? new RegExp(cfg.regionBoost.join('|'), 'i') : null;
   const boostScore = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
   const maxItems = cfg.maxItems ?? 5;
+  const EXPOSED_PENALTY = 1000; // 足够沉到所有新事件之下，仅补位用
 
   const candidates = [];
   for (const ev of events) {
@@ -189,7 +204,8 @@ export function selectHot(events, enums, _opts = {}) {
       .filter(Boolean).join(' ');
     if (exclKws.some(k => keywordHit(hay, k))) continue;
     const boost = regionRe && regionRe.test(ev.region || '') ? boostScore : 0;
-    candidates.push({ ev, score: (ev.importance || 0) + boost });
+    const exposed = opts.exposedUrls?.size && isRecentlyExposed(ev, opts.exposedUrls);
+    candidates.push({ ev, score: (ev.importance || 0) + boost - (exposed ? EXPOSED_PENALTY : 0) });
   }
   candidates.sort((a, b) => b.score - a.score);
   return candidates.slice(0, maxItems).map(x => x.ev.id);
@@ -214,7 +230,7 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 }
 
 export async function processItems(rawItems, ctx) {
-  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds } = ctx;
+  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls } = ctx;
   const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
 
   // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
@@ -315,9 +331,10 @@ export async function processItems(rawItems, ctx) {
   const capped = capPerSource(events, { max: 6 });
   stats.events = capped.length;
 
-  // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now）
-  const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString() });
-  const hotEventIds = selectHot(capped, enums);
+  // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now；
+  //    exposedUrls 为跨日曝光记忆，近 N 天上过榜的事件靠后/回填，可为空）
+  const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls });
+  const hotEventIds = selectHot(capped, enums, { exposedUrls });
 
   const daily = {
     schemaVersion: 2,
@@ -455,11 +472,25 @@ async function main() {
 
   const date = toISODate(now);
   console.log(`\n===== 生成 ${date} =====`);
+
+  // 跨日曝光记忆：读最近上榜事件的 URL 指纹历史（缺失/损坏按无历史处理）。
+  // 近 enums.exposureDays（默认 3）天上过精选/热点榜的事件本次靠后/仅回填，
+  // 防同一新闻连续多日霸榜（见 lib/exposure.mjs 头注）。dry-run 只预览不写回。
+  const exposureDays = enums.exposureDays ?? 3;
+  let exposureHistory = { exposed: {} };
+  try {
+    const rawHistory = JSON.parse(await fs.readFile(EXPOSURE_HISTORY_PATH, 'utf8'));
+    if (rawHistory && typeof rawHistory.exposed === 'object' && rawHistory.exposed) exposureHistory = rawHistory;
+  } catch { /* 首次运行或文件损坏：按无历史处理 */ }
+  const exposedUrls = exposedUrlSet(exposureHistory, date, exposureDays);
+  if (exposedUrls.size) console.log(`曝光记忆: 近 ${exposureDays} 天已上榜 URL ${exposedUrls.size} 条（靠后/回填）`);
+
   const { daily, featured, stats } = await processItems(rawItems, {
     date, now, filters, enums, sourceTypes, sourceMap,
     overridesForDate: overrides.byDate?.[date],
     globalHiddenIds: overrides.globalHiddenIds || [],
-    sourcesTotal, sourcesSucceeded
+    sourcesTotal, sourcesSucceeded,
+    exposedUrls
   });
   await logStats(date, stats, daily, featured);
 
@@ -498,6 +529,16 @@ async function main() {
   // 避免新 featured 引用尚未落盘的事件 ID。
   await atomicWrite(path.join(ROOT, 'feeds', 'featured.json'), featured, (d) => validateFeatured(d, daily, enums));
   console.log('✅ 已写入 feeds/featured.json');
+
+  // 曝光记忆落盘：按最终榜单（人工覆盖之后）记录——被隐藏的不记、人工置顶的也记。
+  // 走到这里说明校验已通过、构建确实发布，校验失败的路径不会污染历史。
+  const byId = new Map(daily.items.map(it => [it.id, it]));
+  const listedIds = [...new Set([...(featured.hotEventIds || []), ...(featured.featuredEventIds || [])])];
+  const listedEvents = listedIds.map(id => byId.get(id)).filter(Boolean);
+  const updatedHistory = pruneExposure(recordExposure(exposureHistory, listedEvents, date), date, exposureDays);
+  await atomicWrite(EXPOSURE_HISTORY_PATH, updatedHistory,
+    (h) => Promise.resolve({ valid: !!(h && typeof h.exposed === 'object' && h.exposed), errors: [] }));
+  console.log(`✅ 已更新曝光历史（共 ${Object.keys(updatedHistory.exposed).length} 条 URL，窗口 ${exposureDays} 天）`);
 }
 
 async function logStats(date, stats, daily, featured) {

@@ -190,6 +190,10 @@
     "note": "大陆不可达域名：源站对大陆 IP 直接 403/拒绝（真实浏览器同样被拒，同事点不开）。命中域名的事件不进精选与热点榜，保留在全量列表。2026-09-07 energynow.com 首例：热点榜第一点开 403 Forbidden（nginx 源站拒绝）。加入前先确认是『大陆真实浏览器也 403』，而非个别网络问题。",
     "domains": ["energynow.com"]
   },
+  "exposure": {
+    "note": "跨日曝光记忆：已上过精选/热点榜的事件（按 主URL+relatedSources 的 URL 集合指纹，canonical 归一）N 天内不再上榜，候选不足时按分回填；全量列表不受影响。历史在 feeds/exposure-history.json，随每日 bot commit 跨日传递，文件缺失视为无历史。2026-09-08 起：修同一新闻连续多日霸榜（阳光电源埃及两天热点第一，当天 5 条里 4 条是前一天上榜过的）。",
+    "days": 3
+  },
   "categories": [
     { "id": "all", "label": "全部", "topics": [], "keywords": [] },
     { "id": "pcs", "label": "PCS", "topics": ["pcs"], "keywords": [] },
