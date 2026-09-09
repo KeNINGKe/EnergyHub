@@ -321,11 +321,12 @@ export async function processItems(rawItems, ctx) {
   }
 
   // 6. 重要性评分 + 单来源限制（priorityTopics 让 sst-pcs 等优先主题有机会进精选；
-  //    priorityCompanies 让重点公司动态同享 +1）
+  //    priorityCompanies 让重点公司动态同享 +1；policyBoost 政策标准落地加分）
   for (const ev of events) ev.importance = importance(ev, {
     now: now.toISOString(),
     priorityTopics: enums.priorityTopics || [],
-    priorityCompanies: enums.priorityCompanies || []
+    priorityCompanies: enums.priorityCompanies || [],
+    policyBoost: enums.policyBoost || null
   });
   events.sort((a, b) => b.importance - a.importance);
   const capped = capPerSource(events, { max: 6 });

@@ -8,10 +8,13 @@
  *   - 时效：24h 内 +1、72h 内 +0.5
  *   - 多源报道：每有 1 家其他信源报道同一事件 +0.5，封顶 +1.5
  *     （合并聚类给出的 relatedSources 是「事件重要性」最可靠的免费代理指标）
+ *   - 政策标准落地（policyBoost）：政策动作词与供电技术词同时命中 +score，
+ *     让不挂重点公司的政策文（「七部门 800V 高压直流」）不被媒体分埋没
  *
  * 用法：
  *   import { importance, capPerSource } from './score.mjs';
  */
+import { keywordHit } from './filter.mjs';
 
 const TYPE_SCORE = { primary: 2, research: 1.5, media: 1, community: 0.5 };
 
@@ -40,6 +43,16 @@ export function importance(item, ctx = {}) {
   // 让宁德时代/Fluence/Vertiv 等重点跟踪对象不被普通媒体分埋没（中英实体名都算命中）
   if (Array.isArray(ctx.priorityCompanies) && ctx.priorityCompanies.length &&
       (item.entities || []).some(e => ctx.priorityCompanies.includes(e))) s += 1;
+  // 政策标准落地信号（enums.policyBoost，匹配沿用 filter 的中英语义：中文子串/英文整词）：
+  // 政策动作词（发布/标准/征求意见…）与供电技术词（800V/HVDC/PUE…）在
+  // 标题+原标题+摘要里同时命中才 +score——单命中「发布」或单命中「储能」都不算。
+  const pb = ctx.policyBoost;
+  if (pb && typeof pb.score === 'number' && Array.isArray(pb.actions) && Array.isArray(pb.techs)) {
+    const text = [item.title, item.originalTitle, item.summary].filter(Boolean).join(' ');
+    if (text && pb.actions.some(k => keywordHit(text, k)) && pb.techs.some(k => keywordHit(text, k))) {
+      s += pb.score;
+    }
+  }
   // 多源报道：合并聚类中其他信源的数量，1 家 +0.5，封顶 +1.5（≥3 家视为充分交叉验证）
   const related = item.relatedSources?.length || 0;
   if (related > 0) s += Math.min(1.5, related * 0.5);

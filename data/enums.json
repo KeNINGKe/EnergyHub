@@ -167,6 +167,12 @@
     "三菱",
     "Mitsubishi"
   ],
+  "policyBoost": {
+    "note": "政策标准落地信号（2026-09-09 起，学 WorkBuddy AIDC 情报台 P0 规则①：国家/行业级政策或标准落地=最高优先）。标题+原标题+摘要同时命中 actions（政策动作词）与 techs（供电技术词）时 importance +score；匹配语义与 filters 相同（中文子串、英文整词）。双命中才加分：单有「发布」或单有「储能」都不算，避免厂商日常新品文误触发。",
+    "actions": ["政策", "标准", "规范", "征求意见", "印发", "发布", "获批", "立法", "管理办法", "policy", "standard", "regulation", "directive", "mandate", "rule"],
+    "techs": ["高压直流", "800V", "800 V", "800VDC", "HVDC", "直流供电", "直流配电", "PUE", "能效", "并网", "备电", "供电", "电力需求"],
+    "score": 1
+  },
   "hot": {
     "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC），secondaryTopics=次级档（发电），regionBoost+regionBoostScore=最高档内北美软加分（内容分 importance 为主，北美同分/近分时靠前，不硬置顶），exclude=核电极外（产品决策：核电不进热点榜）。修改后构建端与前端同时生效。",
     "topics": ["energy-storage", "aidc-project"],

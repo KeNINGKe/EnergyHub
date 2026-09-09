@@ -76,6 +76,31 @@ test('importance：无 relatedSources 字段正常计算（兼容旧条目）', 
   assert.equal(importance(item({ sourceType: 'media' }), { now: NOW }), importance(item({ sourceType: 'media', relatedSources: [] }), { now: NOW }));
 });
 
+test('importance：政策标准落地双命中 +1，单命中/未配置不加分', () => {
+  const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
+  const pb = {
+    actions: ['政策', '标准', '发布', 'regulation', 'standard'],
+    techs: ['高压直流', '800V', 'HVDC', 'PUE', '供电'],
+    score: 1
+  };
+  const noBoost = importance(base, { now: NOW });
+  // 双命中（中文：政策动作词 + 技术词都在标题里）
+  const hitZh = importance({ ...base, title: '七部门发布数据中心800V高压直流政策' }, { now: NOW, policyBoost: pb });
+  assert.equal(hitZh - noBoost, 1, `双命中应 +1，${hitZh} vs ${noBoost}`);
+  // 双命中（英文，扫 originalTitle）
+  const hitEn = importance({ ...base, originalTitle: 'EU unveils HVDC regulation for data centers' }, { now: NOW, policyBoost: pb });
+  assert.equal(hitEn - noBoost, 1, `英文双命中应 +1`);
+  // 只有动作词、没有技术词 → 不加
+  const onlyAction = importance({ ...base, title: '七部门发布新能源汽车下乡政策' }, { now: NOW, policyBoost: pb });
+  assert.equal(onlyAction, noBoost, '单命中动作词不加分');
+  // 只有技术词、没有动作词 → 不加
+  const onlyTech = importance({ ...base, title: '某园区采用800V高压直流供电方案' }, { now: NOW, policyBoost: pb });
+  assert.equal(onlyTech, noBoost, '单命中技术词不加分');
+  // 未传 policyBoost → 向后兼容
+  const noCfg = importance({ ...base, title: '七部门发布数据中心800V高压直流政策' }, { now: NOW });
+  assert.equal(noCfg, noBoost, '未配置时不加分');
+});
+
 test('capPerSource：每来源限量', () => {
   const items = [
     item({ source: 'A', title: 'a1' }),
