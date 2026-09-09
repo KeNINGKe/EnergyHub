@@ -44,6 +44,17 @@ test('通用词：≥2 泛词兜底相关', () => {
   assert.equal(classify('清洁能源与电力转型报告', filters).relevant, true);
 });
 
+test('负面词：个股/指数行情播报封杀（北证50 等，2026-09-09 真实噪音）', () => {
+  // 曙光数创检索源拉进的北证50行情快讯
+  const ticker = classify('北证50日内跌幅达1.03%，成分股中，三协电机跌6.39%，艾融软件跌4.39%，曙光数创跌2.92%', filters);
+  assert.equal(ticker.relevant, false);
+  assert.match(ticker.reason, /负面词:/);
+  // 英维克源拉进的个股涨停/基金仓新闻（含液冷强词也不放行）
+  assert.equal(classify('飞龙股份涨停！英维克获54只公募基金押注，液冷板块重仓名单曝光', filters).relevant, false);
+  // 英维克源拉进的资金流向行情
+  assert.equal(classify('机械设备行业今日净流出资金59.31亿元，英维克等21股净流出资金超亿元', filters).relevant, false);
+});
+
 test('负面词：命中即过滤，且优先于强词', () => {
   const r = classify('储能电池电饭煲促销 优惠券 车评 手机评测', filters);
   assert.equal(r.relevant, false);
