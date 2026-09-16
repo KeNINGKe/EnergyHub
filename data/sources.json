@@ -637,14 +637,15 @@
         },
         {
           "name": "Fraunhofer ISE 电力电子与电网部",
-          "url": "https://www.ise.fraunhofer.de/en/business-areas/power-electronics-and-grids.html",
-          "desc": "MW 级变流器/中压电力电子测试与并网研究",
+          "url": "https://www.ise.fraunhofer.de/en/press-media.html",
+          "desc": "MW 级变流器/中压电力电子测试与并网研究；2026-09-16 起抓取其新闻稿页（Jina 页面源）",
           "tags": [
             "官方",
             "研报"
           ],
           "region": "global",
-          "rss": null
+          "rss": null,
+          "fetchType": "page"
         },
         {
           "name": "EPRI StorageWiki",
@@ -2486,6 +2487,118 @@
           "tags": [
             "检索",
             "事件情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        }
+      ]
+    },
+    {
+      "id": "research-intel",
+      "name": "科研前沿检索",
+      "sources": [
+        {
+          "name": "arXiv·SST 预印本",
+          "url": "https://arxiv.org/",
+          "rss": "https://export.arxiv.org/api/query?search_query=all:%22solid-state%20transformer%22&sortBy=submittedDate&sortOrder=descending&max_results=15",
+          "desc": "科研直连（2026-09-16）：arXiv SST 论文按提交日取最新 15 篇（Atom 检索 API，rss-parser 原生可解析）",
+          "tags": [
+            "研报",
+            "科研情报"
+          ],
+          "region": "global"
+        },
+        {
+          "name": "arXiv·构网型预印本",
+          "url": "https://arxiv.org/",
+          "rss": "https://export.arxiv.org/api/query?search_query=all:%22grid-forming%20inverter%22%20OR%20all:%22grid-forming%20converter%22&sortBy=submittedDate&sortOrder=descending&max_results=15",
+          "desc": "科研直连（2026-09-16）：arXiv 构网型变流器论文最新 15 篇",
+          "tags": [
+            "研报",
+            "科研情报"
+          ],
+          "region": "global"
+        },
+        {
+          "name": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/",
+          "rss": "https://spectrum.ieee.org/feeds/topic/energy.rss",
+          "desc": "科研直连（2026-09-16）：IEEE Spectrum 能源频道，电力电子/储能技术深度报道",
+          "tags": [
+            "研报",
+            "媒体",
+            "科研情报"
+          ],
+          "region": "global"
+        },
+        {
+          "name": "SST 科研动态",
+          "url": "https://news.google.com/search?q=%22solid-state%20transformer%22%20OR%20%22solid%20state%20transformer%22%20research%20OR%20prototype%20OR%20demonstration%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=%22solid-state%20transformer%22%20OR%20%22solid%20state%20transformer%22%20research%20OR%20prototype%20OR%20demonstration%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "科研检索（2026-09-16）：SST 研发/样机/示范动态（企业+高校+实验室）",
+          "tags": [
+            "检索",
+            "科研情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "SST 机构动态",
+          "url": "https://news.google.com/search?q=%22solid-state%20transformer%22%20university%20OR%20institute%20OR%20%22national%20laboratory%22%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=%22solid-state%20transformer%22%20university%20OR%20institute%20OR%20%22national%20laboratory%22%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "科研检索（2026-09-16）：高校/科研院所/国家实验室的 SST 进展",
+          "tags": [
+            "检索",
+            "科研情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "SST 中文科研",
+          "url": "https://news.google.com/search?q=%E5%9B%BA%E6%80%81%E5%8F%98%E5%8E%8B%E5%99%A8%20%E7%A0%94%E7%A9%B6%20OR%20%E6%A0%B7%E6%9C%BA%20OR%20%E7%A4%BA%E8%8C%83%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "rss": "https://news.google.com/rss/search?q=%E5%9B%BA%E6%80%81%E5%8F%98%E5%8E%8B%E5%99%A8%20%E7%A0%94%E7%A9%B6%20OR%20%E6%A0%B7%E6%9C%BA%20OR%20%E7%A4%BA%E8%8C%83%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "科研检索（2026-09-16）：国内 SST 研究/样机/示范工程动态",
+          "tags": [
+            "检索",
+            "科研情报"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "构网型 PCS 科研",
+          "url": "https://news.google.com/search?q=grid-forming%20inverter%20OR%20converter%20research%20OR%20demonstration%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=grid-forming%20inverter%20OR%20converter%20research%20OR%20demonstration%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "科研检索（2026-09-16）：构网型变流器研究/示范（PCS 前沿方向）",
+          "tags": [
+            "检索",
+            "科研情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "储能变流器技术动态",
+          "url": "https://news.google.com/search?q=%E5%82%A8%E8%83%BD%E5%8F%98%E6%B5%81%E5%99%A8%20OR%20%E6%9E%84%E7%BD%91%E5%9E%8B%20%E6%8A%80%E6%9C%AF%20OR%20%E7%AA%81%E7%A0%B4%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "rss": "https://news.google.com/rss/search?q=%E5%82%A8%E8%83%BD%E5%8F%98%E6%B5%81%E5%99%A8%20OR%20%E6%9E%84%E7%BD%91%E5%9E%8B%20%E6%8A%80%E6%9C%AF%20OR%20%E7%AA%81%E7%A0%B4%20when%3A7d&hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+          "desc": "科研检索（2026-09-16）：国内储能变流器/构网型技术突破（华为构网型储能等）",
+          "tags": [
+            "检索",
+            "科研情报"
+          ],
+          "region": "cn",
+          "fetchType": "search"
+        },
+        {
+          "name": "SiC 宽禁带器件",
+          "url": "https://news.google.com/search?q=SiC%20MOSFET%20OR%20%22wide%20bandgap%22%20power%20converter%20research%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=SiC%20MOSFET%20OR%20%22wide%20bandgap%22%20power%20converter%20research%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "科研检索（2026-09-16）：SiC/GaN 宽禁带器件与变流器研究（PCS/SST 器件层）",
+          "tags": [
+            "检索",
+            "科研情报"
           ],
           "region": "全球",
           "fetchType": "search"
