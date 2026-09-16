@@ -26,7 +26,7 @@ import { pickPrimary } from './lib/select.mjs';
 import { importance, capPerSource } from './lib/score.mjs';
 import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
 import { loadOverrides, applyOverrides } from './lib/overrides.mjs';
-import { isRecentlyExposed, exposedUrlSet, recordExposure, pruneExposure } from './lib/exposure.mjs';
+import { isRecentlyExposed, exposedUrlSet, exposedUrlAgeMap, recordExposure, pruneExposure, eventFingerprint } from './lib/exposure.mjs';
 import { hashId, canonicalUrl } from './lib/compat.mjs';
 import {
   toISODate, loadSources, collectFeeds, fetchAllFeeds, translateTitles,
@@ -174,16 +174,58 @@ export function selectFeatured(events, enums, opts = {}) {
 
 /**
  * 今日热点榜（构建端产出 featured.hotEventIds，前端只渲染）。
- * 配置取 data/enums.json 的 hot 段：topics=最高优先档（储能/AIDC），
- * exclude 的主题/关键词（核电）排除。
- * 排序：importance（内容分）为主；regionBoost 命中的地区（北美）加
- * regionBoostScore 软加分（默认 0.5）——同分/近分时北美靠前，
- * 不再硬置顶（高分的中国/欧洲事件可以压过低分北美事件）。
- * 跨日曝光记忆：近 N 天上过榜的事件重罚沉底（opts.exposedUrls，见 lib/exposure.mjs），
- * 新事件不足 maxItems 时自然由它们补位。
- * 同分为稳定输入序（确定性）。人工可通过 editorial-overrides 的 hotEventIds 整体替换。
+ *
+ * 第一性原理：热点榜 5 席要回答「今天储能/AIDC 圈最重要的几件事」——
+ * 像报纸头版，要 覆盖（全球主要市场）+ 重要（事件规模）+ 不重复（防霸榜），
+ * 而不是「欧洲行业媒体今天的产量流」。2026-09-16 重构前的三个结构性缺陷：
+ *   ① importance 只度量信息完整度（有数字/摘要/实体），候选池大面积平分，
+ *      170MWh 小项目与 3GWh 大单同分 → 加 scaleTiers 规模分区分；
+ *   ② 平局落回稳定输入序=信源抓取序，欧洲媒体高产 → 同分裁决改为
+ *      多源报道数、发布时间（确定性且与媒体产量无关）；
+ *   ③ 曝光惩罚 -1000 一刀切沉底 3 天，大事件次日清场、席位被小新闻填满
+ *      → 改 exposurePenaltyByAge 按天龄衰减的软惩罚；
+ *   ④ 地区白名单（regionGroups×allowedRegionGroups）+ 单源上限（maxPerSource）：
+ *      用户决策（2026-09-16）——热点榜只收 北美/中国/中东 三组，欧洲/亚太/
+ *      全球/未知一律不入候选，候选不足 maxItems 就少展示、不用其他地区回填；
+ *      单一媒体最多 2 席不包场，源配额导致不满时第二轮忽略源配额回填。
+ * 配置取 data/enums.json 的 hot 段；topics=最高优先档，exclude 排除核电。
+ * regionBoost 命中的地区（北美）加 regionBoostScore 软加分（保留：产品决策的北美倾向）。
+ * 人工可通过 editorial-overrides 的 hotEventIds 整体替换。
  * @returns {string[]} 事件 id 列表（≤ hot.maxItems）
  */
+
+// 单位归一表（extractMetrics 产出单位的子集；价格类 $/MWh、亿元、% 不参与规模分）
+const ENERGY_UNIT_MWH = { GWh: 1000, MWh: 1, kWh: 0.001, TWh: 1e6, 吉瓦时: 1000, 兆瓦时: 1, 万千瓦时: 10, 亿千瓦时: 1e5 };
+const POWER_UNIT_MW = { GW: 1000, MW: 1, kW: 0.001, TW: 1e6, 吉瓦: 1000, 兆瓦: 1, 万千瓦: 10 };
+
+/** 事件规模分：能量/功率各自归一后对照阈值档取最高档加分，两者取 max（≤ +1.5）。 */
+export function scaleScore(ev, tiers) {
+  if (!tiers) return 0;
+  let energyMWh = 0;
+  let powerMW = 0;
+  for (const m of ev.metrics || []) {
+    const u = String(m.unit || '').trim();
+    if (ENERGY_UNIT_MWH[u] && Number.isFinite(m.value)) {
+      energyMWh = Math.max(energyMWh, m.value * ENERGY_UNIT_MWH[u]);
+    } else if (POWER_UNIT_MW[u] && Number.isFinite(m.value)) {
+      powerMW = Math.max(powerMW, m.value * POWER_UNIT_MW[u]);
+    }
+  }
+  const tier = (v, list) => {
+    for (const [min, s] of list) if (v >= min) return s; // 阈值降序排列，先命中先得
+    return 0;
+  };
+  return Math.max(tier(energyMWh, tiers.energyMWh || []), tier(powerMW, tiers.powerMW || []));
+}
+
+/** 地区 → 地区组（enums.hot.regionGroups 精确匹配；未配置/未匹配归「其他」）。 */
+export function regionGroup(region, groups) {
+  for (const [g, regions] of Object.entries(groups || {})) {
+    if ((regions || []).includes(region)) return g;
+  }
+  return '其他';
+}
+
 export function selectHot(events, enums, opts = {}) {
   const cfg = enums.hot || {};
   const topics = new Set(cfg.topics || []);
@@ -194,21 +236,69 @@ export function selectHot(events, enums, opts = {}) {
     ? new RegExp(cfg.regionBoost.join('|'), 'i') : null;
   const boostScore = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
   const maxItems = cfg.maxItems ?? 5;
-  const EXPOSED_PENALTY = 1000; // 足够沉到所有新事件之下，仅补位用
+  const penalties = Array.isArray(cfg.exposurePenaltyByAge) ? cfg.exposurePenaltyByAge : [];
+  const groups = cfg.regionGroups && Object.keys(cfg.regionGroups).length ? cfg.regionGroups : null;
+  const allowedGroups = Array.isArray(cfg.allowedRegionGroups) && cfg.allowedRegionGroups.length
+    ? new Set(cfg.allowedRegionGroups) : null;
+  const srcMax = typeof cfg.maxPerSource === 'number' ? cfg.maxPerSource : 0;
+
+  // 曝光天龄：事件指纹 URL 里取最近一次上榜距今天数（0=同日），未上榜 -1
+  const ageOf = (ev) => {
+    if (!opts.exposedAges?.size) return -1;
+    let age = -1;
+    for (const u of eventFingerprint(ev)) {
+      const a = opts.exposedAges.get(u);
+      if (a !== undefined && (age < 0 || a < age)) age = a;
+    }
+    return age;
+  };
 
   const candidates = [];
   for (const ev of events) {
     if (isUnlistableEvent(ev, enums)) continue; // 旧文翻出/大陆不可达不进热点榜
     if (!topics.has(ev.topic) || exclTopics.has(ev.topic)) continue;
+    // 地区白名单：只收 allowedRegionGroups 三组（北美/中国/中东），其余不进候选
+    if (allowedGroups && !allowedGroups.has(regionGroup(ev.region, groups))) continue;
     const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
       .filter(Boolean).join(' ');
     if (exclKws.some(k => keywordHit(hay, k))) continue;
     const boost = regionRe && regionRe.test(ev.region || '') ? boostScore : 0;
-    const exposed = opts.exposedUrls?.size && isRecentlyExposed(ev, opts.exposedUrls);
-    candidates.push({ ev, score: (ev.importance || 0) + boost - (exposed ? EXPOSED_PENALTY : 0) });
+    const age = ageOf(ev);
+    const penalty = age >= 0 && penalties.length ? penalties[Math.min(age, penalties.length - 1)] : 0;
+    candidates.push({ ev, score: (ev.importance || 0) + scaleScore(ev, cfg.scaleTiers) + boost - penalty });
   }
-  candidates.sort((a, b) => b.score - a.score);
-  return candidates.slice(0, maxItems).map(x => x.ev.id);
+  // 确定性排序：score 降序 → 多源报道数降序 → 发布时间降序（不再落回抓取序）
+  candidates.sort((a, b) =>
+    b.score - a.score ||
+    ((b.ev.relatedSources?.length || 0) - (a.ev.relatedSources?.length || 0)) ||
+    ((new Date(b.ev.publishedAt || 0)).getTime() - (new Date(a.ev.publishedAt || 0)).getTime())
+  );
+
+  // 两轮选择：第一轮带单源配额（单一媒体不包场），不足额第二轮忽略源配额回填（不缺岗）。
+  // 注意：地区白名单在候选阶段已过滤，回填也只用白名单内事件——候选不足就少展示。
+  const picked = [];
+  const pickedIds = new Set();
+  const srcCount = {};
+  const take = (c, enforceQuotas) => {
+    const src = c.ev.source?.name;
+    if (enforceQuotas && srcMax && (srcCount[src] || 0) >= srcMax) return false;
+    picked.push(c.ev.id);
+    pickedIds.add(c.ev.id);
+    srcCount[src] = (srcCount[src] || 0) + 1;
+    return true;
+  };
+  for (const c of candidates) {
+    if (picked.length >= maxItems) break;
+    take(c, true);
+  }
+  if (picked.length < maxItems) {
+    for (const c of candidates) {
+      if (picked.length >= maxItems) break;
+      if (pickedIds.has(c.ev.id)) continue;
+      take(c, false);
+    }
+  }
+  return picked;
 }
 
 /**
@@ -230,7 +320,7 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 }
 
 export async function processItems(rawItems, ctx) {
-  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls } = ctx;
+  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls, exposedAges } = ctx;
   const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
 
   // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
@@ -333,9 +423,10 @@ export async function processItems(rawItems, ctx) {
   stats.events = capped.length;
 
   // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now；
-  //    exposedUrls 为跨日曝光记忆，近 N 天上过榜的事件靠后/回填，可为空）
+  //    exposedUrls/exposedAges 为跨日曝光记忆：精选用布尔视角靠后/回填，
+  //    热点榜用天龄视角做衰减软惩罚，均可为空）
   const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls });
-  const hotEventIds = selectHot(capped, enums, { exposedUrls });
+  const hotEventIds = selectHot(capped, enums, { exposedAges });
 
   const daily = {
     schemaVersion: 2,
@@ -475,8 +566,8 @@ async function main() {
   console.log(`\n===== 生成 ${date} =====`);
 
   // 跨日曝光记忆：读最近上榜事件的 URL 指纹历史（缺失/损坏按无历史处理）。
-  // 近 enums.exposureDays（默认 3）天上过精选/热点榜的事件本次靠后/仅回填，
-  // 防同一新闻连续多日霸榜（见 lib/exposure.mjs 头注）。dry-run 只预览不写回。
+  // 近 enums.exposureDays（默认 3）天上过精选/热点榜的事件：精选靠后/仅回填，
+  // 热点榜按天龄衰减软惩罚（见 lib/exposure.mjs 头注）。dry-run 只预览不写回。
   const exposureDays = enums.exposureDays ?? 3;
   let exposureHistory = { exposed: {} };
   try {
@@ -484,14 +575,16 @@ async function main() {
     if (rawHistory && typeof rawHistory.exposed === 'object' && rawHistory.exposed) exposureHistory = rawHistory;
   } catch { /* 首次运行或文件损坏：按无历史处理 */ }
   const exposedUrls = exposedUrlSet(exposureHistory, date, exposureDays);
-  if (exposedUrls.size) console.log(`曝光记忆: 近 ${exposureDays} 天已上榜 URL ${exposedUrls.size} 条（靠后/回填）`);
+  const exposedAges = exposedUrlAgeMap(exposureHistory, date, exposureDays);
+  if (exposedUrls.size) console.log(`曝光记忆: 近 ${exposureDays} 天已上榜 URL ${exposedUrls.size} 条（精选靠后/回填，热点软惩罚）`);
 
   const { daily, featured, stats } = await processItems(rawItems, {
     date, now, filters, enums, sourceTypes, sourceMap,
     overridesForDate: overrides.byDate?.[date],
     globalHiddenIds: overrides.globalHiddenIds || [],
     sourcesTotal, sourcesSucceeded,
-    exposedUrls
+    exposedUrls,
+    exposedAges
   });
   await logStats(date, stats, daily, featured);
 

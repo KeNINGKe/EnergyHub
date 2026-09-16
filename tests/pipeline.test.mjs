@@ -53,7 +53,7 @@ test('selectFeatured：门槛与多样性', () => {
 });
 
 test('榜单守卫：旧文翻出与大陆不可达域名不进精选/热点榜（2026-09-07 energynow 403 事故）', () => {
-  const mk = (id, url) => ({ id, url, importance: 4, topic: 'energy-storage', source: { name: 'S' + id }, publishedAt: FPUB });
+  const mk = (id, url) => ({ id, url, region: '中国', importance: 4, topic: 'energy-storage', source: { name: 'S' + id }, publishedAt: FPUB });
   const stale = mk('evt_old', 'https://energynow.com/2026/03/lg-to-supply-tesla/'); // URL 日期比发布早 ~5 个月
   const blocked = mk('evt_blk', 'https://www.energynow.com/2026/08/fresh-item/');   // 域名黑名单（www 前缀归一）
   const good = mk('evt_ok', 'https://www.energy-storage.news/amazon-signs-first-deal/');
@@ -185,7 +185,7 @@ test('selectFeatured：默认收紧到 12 条、门槛 3', () => {
   assert.ok(!featuredEventIds.includes('evt_low'), '低于门槛 3 不入选');
 });
 
-test('selectHot：储能/AIDC 入榜、北美软加分、核电排除、上限生效', () => {
+test('selectHot：地区白名单（北美/中国/中东）、北美软加分、核电排除、上限生效', () => {
   const mk = (id, importance, topic, region, over = {}) => ({
     id, importance, topic, region,
     title: '', originalTitle: '', summary: '', entities: [],
@@ -194,7 +194,8 @@ test('selectHot：储能/AIDC 入榜、北美软加分、核电排除、上限�
   const events = [
     mk('evt_cn', 5, 'energy-storage', '中国'),                                 // 内容分最高 → 榜首
     mk('evt_us', 4, 'energy-storage', '美国'),                                 // 4 + 0.5 软加分
-    mk('evt_eu', 4, 'energy-storage', '德国'),                                 // 4，同基础分输给北美
+    mk('evt_eu', 4, 'energy-storage', '德国'),                                 // 欧洲不在白名单 → 不入候选
+    mk('evt_global', 5, 'energy-storage', '全球'),                             // 全球同样排除
     mk('evt_nuke', 5, 'energy-storage', '美国', { title: '核电储能混合项目 nuclear' }),
     mk('evt_aidc', 3, 'aidc-project', '中国'),
     mk('evt_grid', 9, 'grid', '美国') // 非热点主题，不入榜
@@ -202,7 +203,8 @@ test('selectHot：储能/AIDC 入榜、北美软加分、核电排除、上限�
   const ids = selectHot(events, enums);
   assert.equal(ids[0], 'evt_cn', '高分中国事件压过低分北美事件（内容为主）');
   assert.equal(ids[1], 'evt_us', '同基础分时北美软加分靠前');
-  assert.equal(ids[2], 'evt_eu');
+  assert.ok(!ids.includes('evt_eu'), '欧洲事件被地区白名单排除');
+  assert.ok(!ids.includes('evt_global'), '全球事件被地区白名单排除');
   assert.ok(ids.includes('evt_aidc'));
   assert.ok(!ids.includes('evt_nuke'), '核电关键词排除');
   assert.ok(!ids.includes('evt_grid'), '非热点主题不入榜');
@@ -287,25 +289,29 @@ test('processItems：确定性（同输入两次结果一致）', async () => {
   assert.deepEqual(r1.daily.items[0], r2.daily.items[0]);
 });
 
-test('跨日曝光记忆：热点榜已上榜者让位新事，新事不足时回填（2026-09-08 重复霸榜修复）', () => {
+test('跨日曝光记忆：热点榜已上榜者按天龄软惩罚，让位更高分新事（2026-09-16 软惩罚重构）', () => {
   const mk = (id, importance, topic, over = {}) => ({
-    id, importance, topic, title: '', originalTitle: '', summary: '', entities: [],
+    id, importance, topic, region: '中国', title: '', originalTitle: '', summary: '', entities: [], metrics: [],
     source: { name: 'S' + id }, publishedAt: FPUB, ...over
   });
-  const exposed = new Set(['https://a.com/yesterday']);
+  // 键为 canonical URL（eventFingerprint 产出）；?utm=rss 归一后命中
+  const ages = new Map([['https://a.com/yesterday', 1]]); // 昨天上榜 → -1.5
   const hotEvents = [
-    mk('evt_exposed', 5, 'energy-storage', { url: 'https://a.com/yesterday?utm=rss' }), // 分最高但昨天上过榜
+    mk('evt_exposed', 5, 'energy-storage', { url: 'https://a.com/yesterday?utm=rss' }), // 5-1.5=3.5
     mk('evt_new1', 4, 'energy-storage', { url: 'https://b.com/new1' }),
     mk('evt_new2', 3, 'energy-storage', { url: 'https://c.com/new2' }),
     mk('evt_new3', 2, 'energy-storage', { url: 'https://d.com/new3' })
   ];
-  const ids = selectHot(hotEvents, enums, { exposedUrls: exposed });
-  assert.deepEqual(ids.slice(0, 3), ['evt_new1', 'evt_new2', 'evt_new3'], '已曝光者沉底，新事按分上榜');
-  assert.ok(ids.includes('evt_exposed'), '新事不足 maxItems 时已曝光者回填补位');
+  const ids = selectHot(hotEvents, enums, { exposedAges: ages });
+  // 软惩罚下已上榜者让位给更高分新事，但仍可凭剩余分上榜（不再 -1000 清场）
+  assert.equal(ids[0], 'evt_new1', '更高分新事压过昨日上榜者');
+  assert.ok(ids.includes('evt_exposed'), '已上榜者凭剩余分仍在榜内，席位不被小新闻清场式填满');
+  assert.deepEqual([...ids].sort(), ['evt_exposed', 'evt_new1', 'evt_new2', 'evt_new3']);
 
-  const many = [...hotEvents, mk('evt_new4', 2, 'aidc-project', { url: 'https://e.com/new4' }), mk('evt_new5', 2, 'energy-storage', { url: 'https://f.com/new5' })];
-  assert.ok(!selectHot(many, enums, { exposedUrls: exposed }).includes('evt_exposed'), '新事件充足时已曝光者不入榜');
-  // 不传 exposedUrls 行为与旧版一致（回放/测试零影响）
+  // 同日上榜惩罚最重（-2）：5-2=3 仍高于 evt_new3(2)，但低于 evt_new2(3) 时按平局裁决
+  const sameDay = selectHot(hotEvents, enums, { exposedAges: new Map([['https://a.com/yesterday', 0]]) });
+  assert.equal(sameDay[0], 'evt_new1', '同日惩罚下新事居首');
+  // 不传 exposedAges 时无惩罚（回放/测试零影响）
   assert.equal(selectHot(hotEvents, enums)[0], 'evt_exposed');
 });
 
@@ -330,16 +336,18 @@ test('跨日曝光记忆：精选先选新事，不足 maxFeatured 才按分回�
 
 test('processItems：ctx.exposedUrls 贯通到热点榜（全曝光时回填原榜单、不开天窗）', async () => {
   const items = [
-    raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/bess', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),
-    raw({ title: '2GWh 储能项目签约落地', link: 'https://a.com/bess2', summary: '储能项目签约', source: 'Electrek' }),
-    raw({ title: '3GWh 独立储能电站开工', link: 'https://a.com/bess3', summary: '独立储能开工', source: 'pv magazine' })
+    raw({ title: '中国 1GWh BESS 储能电站并网投运', link: 'https://a.com/bess', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),
+    raw({ title: '美国 2GWh 储能项目签约落地', link: 'https://a.com/bess2', summary: '储能项目签约', source: 'Electrek' }),
+    raw({ title: '沙特 3GWh 独立储能电站开工', link: 'https://a.com/bess3', summary: '独立储能开工', source: 'pv magazine' })
   ];
   const base = { date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null };
   const r1 = await processItems(items, { ...base });
   assert.ok(r1.featured.hotEventIds.length > 0, '候选里有热点事件');
   const exposedUrls = new Set(r1.daily.items.map(e => e.url));
-  const r2 = await processItems(items, { ...base, exposedUrls });
-  assert.deepEqual(r2.featured.hotEventIds, r1.featured.hotEventIds, '全部已曝光时回填出与原先一致的热点榜');
+  // 全部同日已上榜：统一 -2 软惩罚不改变相对排序，榜单与原先一致（不开天窗）
+  const exposedAges = new Map(r1.daily.items.map(e => [e.url, 0]));
+  const r2 = await processItems(items, { ...base, exposedUrls, exposedAges });
+  assert.deepEqual(r2.featured.hotEventIds, r1.featured.hotEventIds, '全部已曝光时软惩罚均摊，榜单与原先一致');
 });
 
 test('atomicWrite：校验失败不覆盖现有文件', async () => {

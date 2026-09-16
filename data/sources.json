@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-09-09",
+  "updatedAt": "2026-09-16",
   "categories": [
     {
       "id": "power-general",
@@ -2327,6 +2327,30 @@
           ],
           "region": "cn",
           "fetchType": "search"
+        },
+        {
+          "name": "ACWA Power",
+          "url": "https://www.acwapower.com/",
+          "rss": "https://news.google.com/rss/search?q=%22ACWA%20Power%22%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "中东检索（2026-09-16）：沙特国有新能源/储能开发商，海湾储能大单主力买方",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "Masdar",
+          "url": "https://www.masdar.ae/",
+          "rss": "https://news.google.com/rss/search?q=Masdar%20renewable%20OR%20storage%20OR%20hydrogen%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "中东检索（2026-09-16）：阿布扎比未来能源公司，RTC 光储项目开发商",
+          "tags": [
+            "检索",
+            "重点公司"
+          ],
+          "region": "全球",
+          "fetchType": "search"
         }
       ]
     },
@@ -2423,6 +2447,42 @@
           "url": "https://news.google.com/search?q=AI%20data%20center%20power%20infrastructure%20contract%20OR%20order%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
           "rss": "https://news.google.com/rss/search?q=AI%20data%20center%20power%20infrastructure%20contract%20OR%20order%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
           "desc": "事件检索：主体×动作×技术词（when:7d 限近 7 日，与构建时效窗对齐）",
+          "tags": [
+            "检索",
+            "事件情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "沙特储能与AIDC",
+          "url": "https://news.google.com/search?q=%22Saudi%20Arabia%22%20battery%20storage%20OR%20BESS%20OR%20%22data%20center%22%20power%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=%22Saudi%20Arabia%22%20battery%20storage%20OR%20BESS%20OR%20%22data%20center%22%20power%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "中东检索（2026-09-16）：沙特储能/AIDC——Gotion 6GWh 储能单等此前因无信源进不了候选池",
+          "tags": [
+            "检索",
+            "事件情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "阿联酋储能与AIDC",
+          "url": "https://news.google.com/search?q=UAE%20OR%20Dubai%20OR%20%22Abu%20Dhabi%22%20battery%20storage%20OR%20%22data%20center%22%20power%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=UAE%20OR%20Dubai%20OR%20%22Abu%20Dhabi%22%20battery%20storage%20OR%20%22data%20center%22%20power%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "中东检索（2026-09-16）：阿联酋（含迪拜/阿布扎比）储能/AIDC",
+          "tags": [
+            "检索",
+            "事件情报"
+          ],
+          "region": "全球",
+          "fetchType": "search"
+        },
+        {
+          "name": "中东新能源项目",
+          "url": "https://news.google.com/search?q=Middle%20East%20energy%20storage%20BESS%20OR%20solar%20project%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "rss": "https://news.google.com/rss/search?q=Middle%20East%20energy%20storage%20BESS%20OR%20solar%20project%20when%3A7d&hl=en-US&gl=US&ceid=US:en",
+          "desc": "中东检索（2026-09-16）：区域级储能/光伏项目兜底（卡塔尔/科威特/阿曼等无专属源）",
           "tags": [
             "检索",
             "事件情报"

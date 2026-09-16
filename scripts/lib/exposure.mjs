@@ -59,6 +59,21 @@ export function exposedUrlSet(history, today, days = 3) {
 }
 
 /**
+ * 从历史文件数据取「近 days 天已曝光」的 URL → 距今天数 Map（0=同日）。
+ * 热点榜软惩罚用：上榜越近罚越重（enums.hot.exposurePenaltyByAge 按天龄索引），
+ * 与 exposedUrlSet 的布尔视角互补。
+ */
+export function exposedUrlAgeMap(history, today, days = 3) {
+  const out = new Map();
+  const exposed = history?.exposed || {};
+  for (const [url, date] of Object.entries(exposed)) {
+    const diff = dayDiff(today, date);
+    if (Number.isFinite(diff) && diff >= 0 && diff < days) out.set(url, diff);
+  }
+  return out;
+}
+
+/**
  * 记录曝光：把事件们的指纹并入历史（已存在的 URL 刷新日期），不改变入参。
  * @returns {object} 新历史对象 { exposed: {url: date} }
  */

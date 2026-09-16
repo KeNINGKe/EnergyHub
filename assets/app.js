@@ -29,8 +29,8 @@ const FALLBACK_CATEGORIES = [
   { id: 'aidc', label: 'AIDC', topics: ['data-center-power', 'aidc-project', 'cooling-pue'], keywords: ['800\\s*VDC', 'power architecture', '电源架构', '直流供电'] },
 ];
 const FALLBACK_HOT = {
-  topics: ['energy-storage', 'aidc-project'],
-  labels: { 'energy-storage': '储能', 'aidc-project': 'AIDC' },
+  topics: ['energy-storage', 'aidc-project', 'data-center-power'],
+  labels: { 'energy-storage': '储能', 'aidc-project': 'AIDC', 'data-center-power': 'AIDC' },
   secondaryTopics: ['gas-backup', 'nuclear-smr'],
   secondaryLabels: { 'gas-backup': '发电', 'nuclear-smr': '发电' },
   keywordLabels: [

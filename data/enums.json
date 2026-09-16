@@ -174,9 +174,9 @@
     "score": 1
   },
   "hot": {
-    "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC），secondaryTopics=次级档（发电），regionBoost+regionBoostScore=最高档内北美软加分（内容分 importance 为主，北美同分/近分时靠前，不硬置顶），exclude=核电极外（产品决策：核电不进热点榜）。修改后构建端与前端同时生效。",
-    "topics": ["energy-storage", "aidc-project"],
-    "labels": { "energy-storage": "储能", "aidc-project": "AIDC" },
+    "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC；2026-09-16 起补 data-center-power——北美 AIDC 需求侧新闻主要落在该主题，此前根本进不了热点候选池），secondaryTopics=次级档（发电），regionBoost+regionBoostScore=最高档内北美软加分（内容分 importance 为主，北美同分/近分时靠前，不硬置顶），exclude=核电极外（产品决策：核电不进热点榜）。2026-09-16 重构：①regionGroups+allowedRegionGroups 地区白名单（用户决策：热点榜只收 北美/中国/中东 三组，欧洲/亚太/全球/未知一律不入候选；候选不足 5 席就少展示，不用其他地区回填——修『热点榜=欧洲行业媒体产量榜』；中东组=GCC 六国+埃及+土耳其，同步补 regions.json 别名迪拜/阿布扎比/利雅得/NEOM/卡塔尔等并新增中东检索信源）；②scaleTiers 规模分（3GWh 大单 > 170MWh 小项目，importance 只度量信息完整度、对此无区分度）；③exposurePenaltyByAge 衰减软惩罚（替代 -1000 一刀切沉底——大事件上榜次日被清场，席位全被欧洲小新闻填满）；④同分裁决改为多源数/发布时间，不再依赖输入序=抓取序=媒体产量。修改后构建端与前端同时生效。",
+    "topics": ["energy-storage", "aidc-project", "data-center-power"],
+    "labels": { "energy-storage": "储能", "aidc-project": "AIDC", "data-center-power": "AIDC" },
     "secondaryTopics": ["gas-backup", "nuclear-smr"],
     "secondaryLabels": { "gas-backup": "发电", "nuclear-smr": "发电" },
     "keywordLabels": [
@@ -186,6 +186,20 @@
     ],
     "regionBoost": ["美国", "加拿大", "北美"],
     "regionBoostScore": 0.5,
+    "regionGroups": {
+      "欧洲": ["欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙", "意大利", "波兰", "乌克兰"],
+      "北美": ["美国", "加拿大"],
+      "中国": ["中国"],
+      "中东": ["中东", "沙特", "阿联酋", "卡塔尔", "科威特", "阿曼", "巴林", "埃及", "土耳其"],
+      "亚太": ["日本", "韩国", "印度", "澳大利亚", "东南亚", "新加坡", "马来西亚", "越南", "泰国", "印尼"]
+    },
+    "allowedRegionGroups": ["北美", "中国", "中东"],
+    "maxPerSource": 2,
+    "scaleTiers": {
+      "energyMWh": [[3000, 1.5], [1000, 1], [300, 0.5]],
+      "powerMW": [[1000, 1], [300, 0.5]]
+    },
+    "exposurePenaltyByAge": [2, 1.5, 0.75],
     "maxItems": 5,
     "exclude": {
       "topics": ["nuclear-smr"],
@@ -228,7 +242,8 @@
       "全球", "未知",
       "中国", "美国", "欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙",
       "日本", "韩国", "印度", "澳大利亚", "加拿大", "新加坡", "马来西亚",
-      "东南亚", "中东", "沙特", "阿联酋", "拉美", "非洲", "俄罗斯",
+      "东南亚", "中东", "沙特", "阿联酋", "卡塔尔", "科威特", "阿曼", "巴林", "埃及",
+      "拉美", "非洲", "俄罗斯",
       "意大利", "智利", "波兰", "菲律宾", "越南", "泰国", "印尼", "土耳其", "乌克兰"
     ]
   }
