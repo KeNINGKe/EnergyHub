@@ -368,7 +368,10 @@ export async function processItems(rawItems, ctx) {
       region: ex.region,
       entities: ex.entities,
       metrics: ex.metrics,
-      wechat: it.wechat || false
+      wechat: it.wechat || false,
+      // 科研标记：来源属 research-intel「科研前沿检索」分类（arXiv/IEEE Spectrum/
+      // SST·PCS 科研检索源）。事件簇任一成员来自科研源即标记（见下方 cluster 汇总）。
+      research: src.category === 'research-intel'
     });
   }
 
@@ -406,7 +409,8 @@ export async function processItems(rawItems, ctx) {
       publishedAt: primary.publishedAt,
       discoveredAt: primary.discoveredAt,
       relatedSources,
-      wechat: primary.wechat || false
+      wechat: primary.wechat || false,
+      research: members.some(m => m.research)
     });
   }
 

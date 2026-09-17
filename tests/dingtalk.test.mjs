@@ -70,3 +70,28 @@ test('buildHotMessage：无站点链接时不输出站点链接', () => {
   assert.ok(!text.includes('查看完整日报'));
   assert.ok(text.includes('[T](https://x.com/a)'));
 });
+
+test('buildHotMessage：research 标记事件进「科研速递」，按重要性取前 3，无则不输出该节', () => {
+  const mk = (id, importance, research) => ({
+    id, importance, research, title: `标题${id}`, url: `https://x.com/${id}`, source: { name: `S${id}` }
+  });
+  const featured = { date: '2026-09-17', hotEventIds: ['a'] };
+  const daily = { items: [
+    mk('a', 4, false),
+    mk('r1', 5.5, true),   // arXiv/科研检索源事件
+    mk('r2', 4, true),
+    mk('r3', 3.5, true),
+    mk('r4', 2.9, true),   // 第 4 条科研事件被截掉
+    mk('m1', 5, false)
+  ] };
+  const { text } = buildHotMessage(featured, daily, {});
+  assert.ok(text.includes('**科研速递（SST/PCS）**'));
+  assert.ok(text.includes('[标题r1](https://x.com/r1)'));
+  assert.ok(text.includes('[标题r2](https://x.com/r2)'));
+  assert.ok(text.includes('[标题r3](https://x.com/r3)'));
+  assert.ok(!text.includes('标题r4'), '只取前 3 条');
+  assert.ok(!text.includes('标题m1'), '非科研事件不进科研速递');
+  // 无科研事件时不输出该节
+  const noResearch = buildHotMessage(featured, { items: [mk('a', 4, false)] }, {});
+  assert.ok(!noResearch.text.includes('科研速递'));
+});

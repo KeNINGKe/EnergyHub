@@ -224,6 +224,20 @@ test('selectFeatured：优先主题保底仍要求 ≥threshold 与时效，低�
   assert.ok(featuredEventIds.includes('evt_ok'), '合格的优先主题事件保底入选');
 });
 
+test('processItems：research-intel 分类来源的事件带 research 标记，普通媒体不带', async () => {
+  const items = [
+    raw({ title: 'Current-limiting control for LLC solid-state transformer', link: 'https://a.com/sst-paper', summary: 'solid-state transformer fault ride-through', source: 'arXiv·SST 预印本' }),
+    raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/bess', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' })
+  ];
+  const { daily } = await processItems(items, {
+    date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null
+  });
+  const paper = daily.items.find(e => e.source.name === 'arXiv·SST 预印本');
+  const media = daily.items.find(e => e.source.name === 'Energy Storage News');
+  assert.equal(paper.research, true, '科研源事件被标记');
+  assert.equal(media.research, false, '普通媒体事件不标记');
+});
+
 test('processItems：产出合法 daily + featured', async () => {
   const items = [
     raw({ title: '1GWh BESS 储能电站并网投运', link: 'https://a.com/1', summary: '某地 1GWh 电池储能并网', source: 'Energy Storage News' }),

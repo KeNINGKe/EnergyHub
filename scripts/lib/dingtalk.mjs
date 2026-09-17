@@ -51,7 +51,10 @@ export function resolveHotItems(featured, daily, max = 5) {
 }
 
 /**
- * 组「热点榜」消息。
+ * 组「热点榜 + 科研速递」消息。
+ * 热点榜 = featured.hotEventIds；科研速递 = research 标记事件按重要性取前 3
+ * （2026-09-17 用户反馈：日报里看不到科研内容——热点榜只收储能/AIDC 主题，
+ * sst/pcs 科研动态永远进不了榜，需单独一节露出并标记）。
  * @param {object} featured feeds/featured.json（date/hotEventIds/featuredEventIds）
  * @param {object} daily feeds/daily-v2.json（items[]）
  * @param {{siteUrl?:string}} opts
@@ -61,6 +64,10 @@ export function buildHotMessage(featured, daily, opts = {}) {
   const { siteUrl = '' } = opts;
   const date = featured?.date || '';
   const hot = resolveHotItems(featured, daily, 5);
+  const research = (daily?.items || [])
+    .filter(it => it.research === true)
+    .sort((a, b) => (b.importance || 0) - (a.importance || 0))
+    .slice(0, 3);
 
   const lines = [];
   lines.push(`## EnergyHub 热点（${date}）`);
@@ -70,6 +77,14 @@ export function buildHotMessage(featured, daily, opts = {}) {
     const src = it.source?.name ? `｜${it.source.name}` : '';
     lines.push(`${i + 1}. [${it.title}](${it.url})${src}`);
   });
+  if (research.length) {
+    lines.push('');
+    lines.push('**科研速递（SST/PCS）**');
+    research.forEach(it => {
+      const src = it.source?.name ? `｜${it.source.name}` : '';
+      lines.push(`- [${it.title}](${it.url})${src}`);
+    });
+  }
   if (siteUrl) {
     lines.push('');
     lines.push(`[查看完整日报 →](${siteUrl})`);
