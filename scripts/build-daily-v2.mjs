@@ -18,6 +18,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
+import { jevConfigured, reviewRejected, shouldRescue } from './lib/jev.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
 import { extractItem } from './lib/extract.mjs';
 import { dedupItems } from './lib/dedup.mjs';
@@ -340,13 +341,34 @@ export async function processItems(rawItems, ctx) {
   const { kept: deduped, removed: dupRemoved } = dedupItems(timelyItems);
   stats.duplicatesRemoved = dupRemoved.length;
 
-  // 2. 相关性硬过滤（记录原因）
+  // 2. 相关性硬过滤（记录原因）；被拒条目暂存，供 Jev 复审
   const passed = [];
+  const rejected = [];
   for (const it of deduped) {
     const r = classifyItem(it, filters);
     if (r.relevant) passed.push(it);
+    else rejected.push(it);
   }
-  stats.filteredOut = deduped.length - passed.length;
+
+  // 2b. Jev 复审捞回误杀（TypeSafe AI 决策模型，经 Vercel AI Gateway）。
+  //     关键词零命中 ≠ 必然无关；配置 AI_GATEWAY_API_KEY 后自动启用，
+  //     JEV_REVIEW=off 显式关闭，未配置时行为与旧版完全一致。
+  //     只有 relevant 概率 ≥ 阈值（默认 0.8）才捞回；失败/超时维持被拒。
+  if (rejected.length && jevConfigured()) {
+    const verdicts = await reviewRejected(rejected, enums);
+    let rescued = 0;
+    for (let i = 0; i < rejected.length; i++) {
+      if (shouldRescue(verdicts[i])) {
+        rejected[i]._jev = verdicts[i]; // 捞回条目主题用 Jev 判定（关键词没命中，extract 主题不可靠）
+        passed.push(rejected[i]);
+        rescued++;
+      }
+    }
+    stats.jevReviewed = rejected.length;
+    stats.jevRescued = rescued;
+    if (rescued > 0) console.log(`Jev 复审: 被拒 ${rejected.length} 条中捞回 ${rescued} 条`);
+  }
+  stats.filteredOut = rejected.length - (stats.jevRescued || 0);
 
   // 3. 提取 + 来源类型
   const enriched = [];
@@ -364,7 +386,7 @@ export async function processItems(rawItems, ctx) {
       discoveredAt: now.toISOString(),
       source: it.source || '未知来源',
       sourceType: st.type,
-      topic: ex.topics[0] || null,
+      topic: it._jev?.topic || ex.topics[0] || null,
       region: ex.region,
       entities: ex.entities,
       metrics: ex.metrics,

@@ -38,6 +38,9 @@ jobs:
           # Settings → Secrets → Actions 配置 MYMEMORY_EMAIL；未配置时
           # 退回匿名 5000 字符/天，批量新标题可能漏翻。
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
+          # Jev 复审（TypeSafe AI 决策模型，Vercel AI Gateway）。配置后自动
+          # 启用关键词误杀捞回；未配置或 JEV_REVIEW=off 时跳过，行为同旧版。
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
 
       - name: Commit and push
         id: commit
