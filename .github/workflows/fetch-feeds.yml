@@ -40,6 +40,9 @@ jobs:
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
           # Jev 复审（TypeSafe AI 决策模型，Vercel AI Gateway）。配置后自动
           # 启用关键词误杀捞回；未配置或 JEV_REVIEW=off 时跳过，行为同旧版。
+          # 注意：Vercel 免费档对该模型限流很紧（2026-09-18 实测约 4 条/数分钟
+          # 且封锁期长），代码已按串行+退避+8min 预算降级处理；要全额捞回
+          # 需购买 AI Gateway Credits 转 paid tier（解除网关限流）。
           AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
 
       - name: Commit and push

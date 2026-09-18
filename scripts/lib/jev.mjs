@@ -10,8 +10,16 @@
  *   JEV_REVIEW=off      显式关闭复审
  *   JEV_RESCUE_THRESHOLD  捞回阈值，relevant 概率 ≥ 该值才捞回（默认 0.8）
  *
- * 容错：单条调用失败/超时返回 null verdict，条目维持被拒——复审是增益，
- * 不能阻塞构建。AI SDK 的 evaluate 仅在 AI SDK 7+ 提供，无 OpenAI 兼容端点。
+ * 限流（2026-09-18 实测，Vercel 免费档）：
+ *   - 该模型限额远低于预期：并发 3 连发约 4 条后全线 429
+ *     （GatewayRateLimitError: Free tier requests are rate-limited）；
+ *   - 429 后封锁持续数分钟，且每次失败请求本身会维持热点——
+ *     所以必须 maxRetries:0（SDK 默认 3 连重试每次白耗 ~8s 还火上浇油）；
+ *   - 文档不给固定数字（"describes behavior rather than fixed numbers"），
+ *     只能保守串行 + 最小间隔 + 退避，另设总预算防拖死构建。
+ *
+ * 容错：单条失败/超时/限流放弃 → verdict 为 null，条目维持被拒——
+ * 复审是增益，不能阻塞构建。AI SDK 的 evaluate 仅在 AI SDK 7+ 提供。
  *
  * 用法：
  *   import { jevConfigured, reviewRejected, shouldRescue } from './jev.mjs';
@@ -22,8 +30,14 @@ import { pathToFileURL, fileURLToPath } from 'node:url';
 import { experimental_evaluate as evaluate } from 'ai';
 
 const MODEL = 'typesafe-ai/jev';
-const CONCURRENCY = 3;          // 并发上限，避免触发 Gateway 限流
-const TIMEOUT_MS = 20_000;      // 单条超时；超时视为「无 verdict」
+const MIN_INTERVAL_MS = 15_000;   // 串行最小间隔：实测 8s 间隔 4 条即封，取保守值
+const RATE_LIMIT_WAIT_MS = 90_000; // 429 后退避等待（封锁实测持续数分钟）
+const MAX_RATE_LIMIT_RETRIES = 2;  // 单条最多退避重试次数
+const BUDGET_MS = 8 * 60_000;     // 整批复审总预算：超时放弃剩余条目（CI 保护）
+const TIMEOUT_MS = 20_000;        // 单条超时；超时视为「无 verdict」
+
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const isRateLimit = (e) => /rate.?limit/i.test(String(e?.message || e));
 
 /** Jev 复审是否启用（有 key 且未被显式关闭）。 */
 export function jevConfigured() {
@@ -50,7 +64,10 @@ export function topicCriteria(enums) {
   return out;
 }
 
-/** 单条判定：relevant 布尔 + 主题 Choice，一次请求并行回答。 */
+/**
+ * 单条判定：relevant 布尔 + 主题 Choice，一次请求并行回答。
+ * 出错时抛出（含限流错误），由调用方决定退避/放弃——单条超时抛 Error('jev timeout')。
+ */
 export async function reviewOne(item, enums) {
   const state = {
     title: item.translatedTitle || item.title || '',
@@ -59,8 +76,11 @@ export async function reviewOne(item, enums) {
   };
   if (!state.title && !state.summary) return null;
 
+  // maxRetries:0 关键——限流时 SDK 默认 3 连重试每次耗 ~8s 且持续打热点，
+  // 让 429 快速失败交给上层统一退避（2026-09-18 实测）。
   const op = evaluate({
     model: MODEL,
+    maxRetries: 0,
     state,
     questions: {
       relevant: {
@@ -90,7 +110,7 @@ export async function reviewOne(item, enums) {
   const result = await Promise.race([
     op,
     new Promise((_, rej) => setTimeout(() => rej(new Error('jev timeout')), TIMEOUT_MS)),
-  ]).catch(() => null);
+  ]);
   if (!result?.answers?.relevant) return null;
 
   const rel = result.answers.relevant;
@@ -105,24 +125,40 @@ export async function reviewOne(item, enums) {
 }
 
 /**
- * 批量复判被拒条目。返回与 items 等长的 verdict 数组（失败位为 null）。
+ * 批量复判被拒条目（串行 + 限流退避 + 总预算）。
+ * 返回与 items 等长的 verdict 数组（失败/放弃位为 null）。
  * @param {Array<object>} items 关键词过滤被拒的原始条目
  * @param {object} enums data/enums.json（提供主题枚举）
  */
-export async function reviewRejected(items, enums) {
+export async function reviewRejected(items, enums, opts = {}) {
+  const budgetMs = opts.budgetMs ?? BUDGET_MS;
   const verdicts = new Array(items.length).fill(null);
-  let cursor = 0;
+  const startedAt = Date.now();
+  let lastCallAt = 0;
+  for (let i = 0; i < items.length; i++) {
+    if (Date.now() - startedAt > budgetMs) {
+      console.warn(`Jev 复审: 总预算 ${budgetMs / 60000}min 已耗尽，剩余 ${items.length - i} 条跳过`);
+      break;
+    }
+    // 串行最小间隔：免费档限流敏感，宁可慢不可触发封锁
+    const wait = MIN_INTERVAL_MS - (Date.now() - lastCallAt);
+    if (wait > 0) await sleep(wait);
 
-  async function worker() {
-    while (cursor < items.length) {
-      const i = cursor++;
-      verdicts[i] = await reviewOne(items[i], enums);
+    for (let attempt = 0; ; attempt++) {
+      lastCallAt = Date.now();
+      try {
+        verdicts[i] = await reviewOne(items[i], enums);
+        break;
+      } catch (e) {
+        if (isRateLimit(e) && attempt < MAX_RATE_LIMIT_RETRIES) {
+          console.warn(`Jev 复审: 第 ${i + 1} 条触发限流，退避 ${RATE_LIMIT_WAIT_MS / 1000}s 重试（${attempt + 1}/${MAX_RATE_LIMIT_RETRIES}）`);
+          await sleep(RATE_LIMIT_WAIT_MS);
+          continue;
+        }
+        break; // 非限流错误/超时/重试耗尽：该条放弃，维持被拒
+      }
     }
   }
-
-  await Promise.all(
-    Array.from({ length: Math.min(CONCURRENCY, items.length) }, () => worker())
-  );
   return verdicts;
 }
 
@@ -135,6 +171,11 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   const enums = JSON.parse(await fs.readFile(
     path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../data/enums.json'), 'utf8'));
   const title = process.argv[2] || 'NVIDIA unveils 800 VDC power architecture for AI data centers';
-  const v = await reviewOne({ title, summary: '', source: 'manual' }, enums);
-  console.log(JSON.stringify(v, null, 2));
+  try {
+    const v = await reviewOne({ title, summary: '', source: 'manual' }, enums);
+    console.log(JSON.stringify(v, null, 2));
+  } catch (e) {
+    console.error('失败:', e?.message || e);
+    process.exit(1);
+  }
 }
