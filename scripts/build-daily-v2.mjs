@@ -18,11 +18,11 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
-import { jevConfigured, reviewRejected, shouldRescue } from './lib/jev.mjs';
+import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration } from './lib/jev.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
 import { extractItem } from './lib/extract.mjs';
 import { dedupItems } from './lib/dedup.mjs';
-import { mergeEvents } from './lib/merge.mjs';
+import { mergeEvents, grayPairs } from './lib/merge.mjs';
 import { pickPrimary } from './lib/select.mjs';
 import { importance, capPerSource } from './lib/score.mjs';
 import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
@@ -350,8 +350,8 @@ export async function processItems(rawItems, ctx) {
     else rejected.push(it);
   }
 
-  // 2b. Jev 复审捞回误杀（TypeSafe AI 决策模型，经 Vercel AI Gateway）。
-  //     关键词零命中 ≠ 必然无关；配置 AI_GATEWAY_API_KEY 后自动启用，
+  // 2b. Jev 复审捞回误杀（TypeSafe AI 决策模型，直连 api.typesafe.ai）。
+  //     关键词零命中 ≠ 必然无关；配置 TYPESAFE_API_KEY 后自动启用，
   //     JEV_REVIEW=off 显式关闭，未配置时行为与旧版完全一致。
   //     只有 relevant 概率 ≥ 阈值（默认 0.8）才捞回；失败/超时维持被拒。
   if (rejected.length && jevConfigured()) {
@@ -372,10 +372,12 @@ export async function processItems(rawItems, ctx) {
 
   // 3. 提取 + 来源类型
   const enriched = [];
+  const arbIdx = []; // 需要主题仲裁的条目下标（关键词主题为空/兜底档）
   for (const it of passed) {
     const ex = await extractItem(it, enums);
     const src = sourceMap.get(it.source) || { name: it.source, tags: [] };
     const st = classifySourceType(src, sourceTypes);
+    if (needsTopicArbitration(ex, it)) arbIdx.push(enriched.length);
     enriched.push({
       title: it.translatedTitle || it.title || '无标题',
       originalTitle: it.title || '',
@@ -397,8 +399,68 @@ export async function processItems(rawItems, ctx) {
     });
   }
 
+  // 3b. Jev 主题仲裁：关键词主题提取给出空主题或 other-energy 兜底档的条目，
+  //     交 Jev Choice 归入具体主题（约 2 成条目，多为关键词覆盖不到的表述方式）。
+  //     失败/超时维持原主题（other-energy）；有具体关键词命中的条目不仲裁。
+  if (arbIdx.length && jevConfigured()) {
+    const verdicts = await reviewTopics(arbIdx.map(i => enriched[i]), enums);
+    let assigned = 0;
+    for (let k = 0; k < arbIdx.length; k++) {
+      if (verdicts[k]) {
+        enriched[arbIdx[k]].topic = verdicts[k];
+        assigned++;
+      }
+    }
+    stats.jevTopicArbitrated = arbIdx.length;
+    stats.jevTopicAssigned = assigned;
+    if (assigned > 0) console.log(`Jev 主题仲裁: ${arbIdx.length} 条中 ${assigned} 条归入具体主题`);
+  }
+
   // 4. 相似事件合并
   const { clusters } = mergeEvents(enriched);
+
+  // 4b. Jev 语义合并仲裁：确定性相似度落在灰区（0.2 ≤ 分 < 0.45，未达合并线
+  //     但有可疑信号——多为跨语言改写/实体提取不一致的漏合）的配对，交 Jev
+  //     判「是否同一事件」。误合比漏合伤害大（丢失独立事件），判定阈值取保守
+  //     0.75（未校准，积累标注后复核）；每日配对上限 JEV_MERGE_PAIRS（默认 30）
+  //     控成本。失败/超时/未配置时不合并，行为同旧版。
+  if (jevConfigured() && enriched.length > 1) {
+    const memberCluster = new Array(enriched.length);
+    clusters.forEach((c, ci) => c.members.forEach(m => { memberCluster[m] = ci; }));
+    const gray = grayPairs(enriched).filter(p => memberCluster[p.i] !== memberCluster[p.j]);
+    const cap = Number(process.env.JEV_MERGE_PAIRS) || 30;
+    const pairs = gray.slice(0, cap);
+    if (pairs.length) {
+      const verdicts = await reviewPairs(pairs.map(p => [enriched[p.i], enriched[p.j]]));
+      const roots = clusters.map((_, ci) => ci);
+      const find = (x) => { while (roots[x] !== x) { roots[x] = roots[roots[x]]; x = roots[x]; } return x; };
+      let mergedPairs = 0;
+      for (let k = 0; k < pairs.length; k++) {
+        if (verdicts[k] != null && verdicts[k] >= 0.75) {
+          const ra = find(memberCluster[pairs[k].i]);
+          const rb = find(memberCluster[pairs[k].j]);
+          if (ra !== rb) { roots[ra] = rb; mergedPairs++; }
+        }
+      }
+      stats.jevMergePairs = pairs.length;
+      stats.jevMergedPairs = mergedPairs;
+      if (mergedPairs > 0) {
+        const byRoot = new Map();
+        clusters.forEach((c, ci) => {
+          const r = find(ci);
+          if (!byRoot.has(r)) byRoot.set(r, { reason: c.reason, members: [] });
+          byRoot.get(r).members.push(...c.members);
+        });
+        const before = clusters.length;
+        const mergedClusters = [...byRoot.values()].map(c => ({ reason: c.reason, members: c.members.sort((a, b) => a - b) }));
+        clusters.length = 0;
+        clusters.push(...mergedClusters);
+        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对中 ${mergedPairs} 对确认同一事件，事件簇 ${before} → ${clusters.length}`);
+      } else {
+        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对均未达合并线，无合并`);
+      }
+    }
+  }
 
   // 5. 逐簇选主条目 → 构建事件
   const events = [];

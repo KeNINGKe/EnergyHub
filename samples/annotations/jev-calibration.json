@@ -1,82 +1,94 @@
 {
-  "generatedAt": "2026-09-18T03:10:52.269Z",
+  "generatedAt": "2026-09-21T01:36:23.493Z",
   "sampleCount": 112,
-  "failures": 105,
+  "failures": 0,
   "confusion": [
     {
       "threshold": 0.5,
-      "tp": 2,
-      "fp": 0,
-      "tn": 2,
-      "fn": 3,
-      "precision": 1,
-      "recall": 0.4,
-      "f1": 0.5714285714285715
+      "tp": 57,
+      "fp": 5,
+      "tn": 30,
+      "fn": 20,
+      "precision": 0.9193548387096774,
+      "recall": 0.7402597402597403,
+      "f1": 0.8201438848920863
     },
     {
       "threshold": 0.6,
-      "tp": 2,
-      "fp": 0,
-      "tn": 2,
-      "fn": 3,
-      "precision": 1,
-      "recall": 0.4,
-      "f1": 0.5714285714285715
+      "tp": 53,
+      "fp": 3,
+      "tn": 32,
+      "fn": 24,
+      "precision": 0.9464285714285714,
+      "recall": 0.6883116883116883,
+      "f1": 0.7969924812030074
     },
     {
       "threshold": 0.7,
-      "tp": 2,
-      "fp": 0,
-      "tn": 2,
-      "fn": 3,
-      "precision": 1,
-      "recall": 0.4,
-      "f1": 0.5714285714285715
+      "tp": 48,
+      "fp": 2,
+      "tn": 33,
+      "fn": 29,
+      "precision": 0.96,
+      "recall": 0.6233766233766234,
+      "f1": 0.7559055118110236
     },
     {
       "threshold": 0.8,
-      "tp": 2,
+      "tp": 46,
       "fp": 0,
-      "tn": 2,
-      "fn": 3,
+      "tn": 35,
+      "fn": 31,
       "precision": 1,
-      "recall": 0.4,
-      "f1": 0.5714285714285715
+      "recall": 0.5974025974025974,
+      "f1": 0.7479674796747967
     },
     {
       "threshold": 0.9,
-      "tp": 2,
+      "tp": 36,
       "fp": 0,
-      "tn": 2,
-      "fn": 3,
+      "tn": 35,
+      "fn": 41,
       "precision": 1,
-      "recall": 0.4,
-      "f1": 0.5714285714285715
+      "recall": 0.4675324675324675,
+      "f1": 0.6371681415929203
     },
     {
       "threshold": 0.95,
-      "tp": 1,
+      "tp": 21,
       "fp": 0,
-      "tn": 2,
-      "fn": 4,
+      "tn": 35,
+      "fn": 56,
       "precision": 1,
-      "recall": 0.2,
-      "f1": 0.33333333333333337
+      "recall": 0.2727272727272727,
+      "f1": 0.42857142857142855
     }
   ],
   "buckets": {
     "<0.2": {
-      "relevant": 3,
-      "irrelevant": 2
+      "relevant": 14,
+      "irrelevant": 25
     },
     "0.9+": {
-      "relevant": 2,
+      "relevant": 36,
       "irrelevant": 0
+    },
+    "0.5-0.8": {
+      "relevant": 11,
+      "irrelevant": 5
+    },
+    "0.8-0.9": {
+      "relevant": 10,
+      "irrelevant": 0
+    },
+    "0.2-0.5": {
+      "relevant": 6,
+      "irrelevant": 5
     }
   },
   "topic": {
-    "hit": 4,
-    "total": 5
+    "hit": 65,
+    "total": 77
   },
   "results": [
     {
@@ -92,7 +104,7 @@
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": 0.11,
+      "probability": 0.1,
       "topic": "chips-compute"
     },
     {
@@ -116,7 +128,7 @@
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": 0.14,
+      "probability": 0.13,
       "topic": "other-energy"
     },
     {
@@ -124,496 +136,496 @@
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.08,
+      "topic": "other-energy"
     },
     {
       "id": "s0007",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.06,
+      "topic": "other-energy"
     },
     {
       "id": "s0008",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.92,
+      "topic": "solar-wind"
     },
     {
       "id": "s0009",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.75,
+      "topic": "other-energy"
     },
     {
       "id": "s0010",
       "label": "irrelevant",
       "labeledTopic": "other-energy",
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.76,
+      "topic": "other-energy"
     },
     {
       "id": "s0011",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.11,
+      "topic": "chips-compute"
     },
     {
       "id": "s0012",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.97,
+      "topic": "solar-wind"
     },
     {
       "id": "s0013",
       "label": "relevant",
       "labeledTopic": "aidc-project",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.6,
+      "topic": "aidc-project"
     },
     {
       "id": "s0014",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.94,
+      "topic": "solar-wind"
     },
     {
       "id": "s0015",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "solar-wind"
     },
     {
       "id": "s0016",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.06,
+      "topic": "chips-compute"
     },
     {
       "id": "s0017",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.94,
+      "topic": "solar-wind"
     },
     {
       "id": "s0018",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.63,
+      "topic": "energy-storage"
     },
     {
       "id": "s0019",
       "label": "irrelevant",
       "labeledTopic": "grid",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.54,
+      "topic": "other-energy"
     },
     {
       "id": "s0020",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.06,
+      "topic": "chips-compute"
     },
     {
       "id": "s0021",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.97,
+      "topic": "solar-wind"
     },
     {
       "id": "s0022",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.97,
+      "topic": "solar-wind"
     },
     {
       "id": "s0023",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.85,
+      "topic": "other-energy"
     },
     {
       "id": "s0024",
       "label": "relevant",
       "labeledTopic": "data-center-power",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "aidc-project"
     },
     {
       "id": "s0025",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.64,
+      "topic": "energy-storage"
     },
     {
       "id": "s0026",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "solar-wind"
     },
     {
       "id": "s0027",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.98,
+      "topic": "energy-storage"
     },
     {
       "id": "s0028",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.25,
+      "topic": "chips-compute"
     },
     {
       "id": "s0029",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.11,
+      "topic": "chips-compute"
     },
     {
       "id": "s0030",
       "label": "relevant",
       "labeledTopic": "power-market-policy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "power-market-policy"
     },
     {
       "id": "s0031",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.23,
+      "topic": "chips-compute"
     },
     {
       "id": "s0032",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.12,
+      "topic": "other-energy"
     },
     {
       "id": "s0033",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.24,
+      "topic": "chips-compute"
     },
     {
       "id": "s0034",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.08,
+      "topic": "chips-compute"
     },
     {
       "id": "s0035",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.97,
+      "topic": "energy-storage"
     },
     {
       "id": "s0036",
       "label": "relevant",
       "labeledTopic": "power-market-policy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.88,
+      "topic": "power-market-policy"
     },
     {
       "id": "s0037",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.06,
+      "topic": "other-energy"
     },
     {
       "id": "s0038",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.03,
+      "topic": "chips-compute"
     },
     {
       "id": "s0039",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "solar-wind"
     },
     {
       "id": "s0040",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.21,
+      "topic": "chips-compute"
     },
     {
       "id": "s0041",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.14,
+      "topic": "other-energy"
     },
     {
       "id": "s0042",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.58,
+      "topic": "other-energy"
     },
     {
       "id": "s0043",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "energy-storage"
     },
     {
       "id": "s0044",
       "label": "relevant",
       "labeledTopic": "grid",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.89,
+      "topic": "power-market-policy"
     },
     {
       "id": "s0045",
       "label": "relevant",
       "labeledTopic": "data-center-power",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.39,
+      "topic": "chips-compute"
     },
     {
       "id": "s0046",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.14,
+      "topic": "chips-compute"
     },
     {
       "id": "s0047",
       "label": "relevant",
       "labeledTopic": "power-market-policy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "power-market-policy"
     },
     {
       "id": "s0048",
       "label": "relevant",
       "labeledTopic": "data-center-power",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.76,
+      "topic": "chips-compute"
     },
     {
       "id": "s0049",
       "label": "relevant",
       "labeledTopic": "power-market-policy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "power-market-policy"
     },
     {
       "id": "s0050",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.12,
+      "topic": "other-energy"
     },
     {
       "id": "s0051",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.85,
+      "topic": "solar-wind"
     },
     {
       "id": "s0052",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "solar-wind"
     },
     {
       "id": "s0053",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.67,
+      "topic": "other-energy"
     },
     {
       "id": "s0054",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.8,
+      "topic": "other-energy"
     },
     {
       "id": "s0055",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.14,
+      "topic": "other-energy"
     },
     {
       "id": "s0056",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.13,
+      "topic": "other-energy"
     },
     {
       "id": "s0057",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.82,
+      "topic": "other-energy"
     },
     {
       "id": "s0058",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.9,
+      "topic": "solar-wind"
     },
     {
       "id": "s0059",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.54,
+      "topic": "energy-storage"
     },
     {
       "id": "s0060",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.29,
+      "topic": "other-energy"
     },
     {
       "id": "s0061",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.01,
+      "topic": "other-energy"
     },
     {
       "id": "s0062",
       "label": "relevant",
       "labeledTopic": "grid",
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.53,
+      "topic": "other-energy"
     },
     {
       "id": "s0063",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.39,
+      "topic": "other-energy"
     },
     {
       "id": "s0064",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.07,
+      "topic": "other-energy"
     },
     {
       "id": "s0065",
       "label": "relevant",
       "labeledTopic": "gas-backup",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.82,
+      "topic": "gas-backup"
     },
     {
       "id": "s0066",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.13,
+      "topic": "other-energy"
     },
     {
       "id": "s0067",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.94,
+      "topic": "energy-storage"
     },
     {
       "id": "s0068",
@@ -628,344 +640,344 @@
       "label": "relevant",
       "labeledTopic": "ppa-green-power",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.86,
+      "topic": "solar-wind"
     },
     {
       "id": "s0070",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.54,
+      "topic": "energy-storage"
     },
     {
       "id": "s0071",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.16,
+      "topic": "chips-compute"
     },
     {
       "id": "s0072",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.65,
+      "topic": "other-energy"
     },
     {
       "id": "s0073",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.34,
+      "topic": "other-energy"
     },
     {
       "id": "s0074",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.11,
+      "topic": "chips-compute"
     },
     {
       "id": "s0075",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.09,
+      "topic": "chips-compute"
     },
     {
       "id": "s0076",
       "label": "relevant",
       "labeledTopic": "grid",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "grid"
     },
     {
       "id": "s0077",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.92,
+      "topic": "solar-wind"
     },
     {
       "id": "s0078",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.89,
+      "topic": "solar-wind"
     },
     {
       "id": "s0079",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.24,
+      "topic": "other-energy"
     },
     {
       "id": "s0080",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.07,
+      "topic": "other-energy"
     },
     {
       "id": "s0081",
       "label": "relevant",
       "labeledTopic": "other-energy",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.63,
+      "topic": "other-energy"
     },
     {
       "id": "s0082",
       "label": "irrelevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.06,
+      "topic": "chips-compute"
     },
     {
       "id": "s0083",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.1,
+      "topic": "chips-compute"
     },
     {
       "id": "s0084",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.94,
+      "topic": "solar-wind"
     },
     {
       "id": "s0085",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.02,
+      "topic": "other-energy"
     },
     {
       "id": "s0086",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.18,
+      "topic": "other-energy"
     },
     {
       "id": "s0087",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.05,
+      "topic": "chips-compute"
     },
     {
       "id": "s0088",
       "label": "relevant",
       "labeledTopic": "gas-backup",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "gas-backup"
     },
     {
       "id": "s0089",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.91,
+      "topic": "energy-storage"
     },
     {
       "id": "s0090",
       "label": "relevant",
       "labeledTopic": "grid",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "ems"
     },
     {
       "id": "s0091",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.11,
+      "topic": "chips-compute"
     },
     {
       "id": "s0092",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.21,
+      "topic": "other-energy"
     },
     {
       "id": "s0093",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "energy-storage"
     },
     {
       "id": "s0094",
       "label": "irrelevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.5,
+      "topic": "solar-wind"
     },
     {
       "id": "s0095",
       "label": "relevant",
       "labeledTopic": "grid",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "energy-storage"
     },
     {
       "id": "s0096",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "solar-wind"
     },
     {
       "id": "s0097",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.97,
+      "topic": "energy-storage"
     },
     {
       "id": "s0098",
       "label": "relevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "solar-wind"
     },
     {
       "id": "s0099",
       "label": "relevant",
       "labeledTopic": "aidc-project",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.84,
+      "topic": "data-center-power"
     },
     {
       "id": "s0100",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.12,
+      "topic": "chips-compute"
     },
     {
       "id": "s0101",
       "label": "relevant",
       "labeledTopic": "data-center-power",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "data-center-power"
     },
     {
       "id": "s0102",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.93,
+      "topic": "energy-storage"
     },
     {
       "id": "s0103",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.19,
+      "topic": "chips-compute"
     },
     {
       "id": "s0104",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "low",
-      "probability": null,
-      "topic": null
+      "probability": 0.4,
+      "topic": "other-energy"
     },
     {
       "id": "s0105",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.17,
+      "topic": "chips-compute"
     },
     {
       "id": "s0106",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.16,
+      "topic": "chips-compute"
     },
     {
       "id": "s0107",
       "label": "relevant",
       "labeledTopic": "chips-compute",
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.05,
+      "topic": "chips-compute"
     },
     {
       "id": "s0108",
       "label": "irrelevant",
       "labeledTopic": null,
       "confidence": "medium",
-      "probability": null,
-      "topic": null
+      "probability": 0.16,
+      "topic": "chips-compute"
     },
     {
       "id": "s0109",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.96,
+      "topic": "solar-wind"
     },
     {
       "id": "s0110",
       "label": "relevant",
       "labeledTopic": "energy-storage",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.95,
+      "topic": "energy-storage"
     },
     {
       "id": "s0111",
       "label": "irrelevant",
       "labeledTopic": "solar-wind",
       "confidence": "high",
-      "probability": null,
-      "topic": null
+      "probability": 0.72,
+      "topic": "solar-wind"
     },
     {
       "id": "s0112",

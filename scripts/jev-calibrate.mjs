@@ -6,7 +6,7 @@
  * 官方文档建议用标注数据 calibrate 概率输出；本脚本输出各阈值下的
  * 混淆矩阵 + 概率分桶，供人工决定阈值，不自动改配置。
  *
- * 用法：AI_GATEWAY_API_KEY=... node scripts/jev-calibrate.mjs
+ * 用法：TYPESAFE_API_KEY=... node scripts/jev-calibrate.mjs
  * 输出：samples/annotations/jev-calibration.json（结果快照，供对比复盘）
  */
 import fs from 'node:fs/promises';
@@ -35,7 +35,7 @@ function confusion(samples, threshold) {
 
 const enums = await loadEnums();
 if (!jevConfigured()) {
-  console.error('未配置 AI_GATEWAY_API_KEY');
+  console.error('未配置 TYPESAFE_API_KEY');
   process.exit(1);
 }
 
@@ -52,9 +52,9 @@ const items = JSON.parse(set).map(s => ({
 })).filter(s => s.label);
 console.log(`标注样本 ${items.length} 条（relevant ${items.filter(s => s.label === 'relevant').length} / irrelevant ${items.filter(s => s.label === 'irrelevant').length}）`);
 
-// 逐条跑 Jev：走 reviewRejected 的串行+退避路径（免费档限流敏感，见 lib/jev.mjs 头注），
+// 逐条跑 Jev：走 reviewRejected 的并发+退避路径（直连 API，见 lib/jev.mjs 头注），
 // 且复用同一套问题定义，保证校准对象 = 线上行为。
-console.log(`串行限速执行中（${items.length} 条 × ≥15s 间隔，预计 ${Math.ceil(items.length * 15 / 60)}~${Math.ceil(items.length * 25 / 60)} 分钟）...`);
+console.log(`并发执行中（${items.length} 条，4 并发，预计 ~${Math.ceil(items.length * 2 / 4 / 60)} 分钟）...`);
 const verdicts = await reviewRejected(
   items.map(s => ({ title: s.title, summary: s.summary, source: s.source })), enums,
   { budgetMs: 90 * 60_000 });

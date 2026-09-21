@@ -139,6 +139,27 @@ export function mergeEvents(items, opts = {}) {
   return { clusters, standaloneCount: standalone };
 }
 
+/**
+ * 灰区配对：事件相似度落在 [floor, threshold) 的条目对——有可疑信号但
+ * 未达确定性合并线的组合（如同主题但实体没提取到、同实体但主题不一致的
+ * 跨语言改写），供 Jev 语义仲裁补漏合。确定性排序：分数降序、下标升序。
+ * @param {Array} items 条目（需含 eventSimilarity 所需字段）
+ * @param {object} opts { threshold=0.45, floor=0.2, mergeWindowMs }
+ * @returns {Array<{i:number, j:number, score:number}>}
+ */
+export function grayPairs(items, opts = {}) {
+  const { threshold = 0.45, floor = 0.2 } = opts;
+  const pairs = [];
+  for (let i = 0; i < items.length; i++) {
+    for (let j = i + 1; j < items.length; j++) {
+      const { score } = eventSimilarity(items[i], items[j], opts);
+      if (score >= floor && score < threshold) pairs.push({ i, j, score });
+    }
+  }
+  pairs.sort((a, b) => b.score - a.score || a.i - b.i || a.j - b.j);
+  return pairs;
+}
+
 // CLI 自检：node scripts/lib/merge.mjs
 if (process.argv[1] && import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}`) {
   console.log(titleSimilarity('Eolian 1.06GWh BESS in Ohio', 'Eolian submits 1.06GWh battery storage in Ohio'));

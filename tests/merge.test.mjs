@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { tokenize, titleSimilarity, eventSimilarity, sharedMetric, sharedEntity, mergeEvents } from '../scripts/lib/merge.mjs';
+import { tokenize, titleSimilarity, eventSimilarity, sharedMetric, sharedEntity, mergeEvents, grayPairs } from '../scripts/lib/merge.mjs';
 
 const T0 = '2026-08-05T02:00:00Z';
 
@@ -106,4 +106,35 @@ test('mergeEvents：不相似条目不合并', () => {
   ];
   const { clusters } = mergeEvents(items);
   assert.equal(clusters.length, 2);
+});
+
+test('grayPairs：灰区配对提取（0.2 ≤ 分 < 0.45）+ 确定性排序', () => {
+  const items = [
+    // 0,1：同主题(pcs)同实体 → 0.55 ≥ 0.45，确定性合并，不进灰区
+    item({ title: 'Fluence stock drops', topic: 'pcs', entities: ['Fluence'] }),
+    item({ title: 'Fluence shares fall', topic: 'pcs', entities: ['Fluence'] }),
+    // 2,3：同主题(energy-storage)无实体 → 0.2，进灰区
+    item({ title: '储能电站招标', topic: 'energy-storage' }),
+    item({ title: '锂电池产能过剩', topic: 'energy-storage' }),
+    // 4,5：不同主题无重叠 → 0，不进灰区
+    item({ title: 'Solar panel price', topic: 'solar-wind' }),
+    item({ title: 'GPU shortage', topic: 'chips-compute' })
+  ];
+  const gray = grayPairs(items);
+  assert.deepEqual(gray.map(p => [p.i, p.j]), [[2, 3]]);
+  assert.ok(gray[0].score >= 0.2 && gray[0].score < 0.45);
+});
+
+test('grayPairs：多对按分数降序、下标升序（确定性）', () => {
+  const items = [
+    // 0-1：同实体不同主题，标题无重叠 → 0.35；2-3：同主题 → 0.2
+    item({ title: '储能新品发布', topic: 'energy-storage', entities: ['宁德时代'] }),
+    item({ title: 'CATL announces', topic: 'pcs', entities: ['宁德时代'] }),
+    item({ title: '风电招标', topic: 'solar-wind' }),
+    item({ title: '光伏价格', topic: 'solar-wind' })
+  ];
+  const gray = grayPairs(items);
+  assert.deepEqual(gray.map(p => p.score), [0.35, 0.2]);
+  const again = grayPairs(items);
+  assert.deepEqual(gray, again, '同输入同输出');
 });
