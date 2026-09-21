@@ -51,10 +51,12 @@ export function resolveHotItems(featured, daily, max = 5) {
 }
 
 /**
- * 组「热点榜 + 科研速递」消息。
- * 热点榜 = featured.hotEventIds；科研速递 = research 标记事件按重要性取前 3
- * （2026-09-17 用户反馈：日报里看不到科研内容——热点榜只收储能/AIDC 主题，
- * sst/pcs 科研动态永远进不了榜，需单独一节露出并标记）。
+ * 组「热点榜」消息（科研内容融合版）。
+ * 热点榜 = featured.hotEventIds 前 5 条 + research 标记事件按重要性取前 3
+ * 接续编号（每日 5~8 条，整体仍是一张榜，不单列科研小节）。
+ * 沿革：2026-09-17 科研内容曾单列「科研速递」一节（当时热点榜只收储能/AIDC
+ * 主题，sst/pcs 科研动态进不了榜）；2026-09-21 用户反馈改为融合进热点榜、
+ * 去掉「科研速递」标题——前 5 条不变，科研条目排在其后。
  * @param {object} featured feeds/featured.json（date/hotEventIds/featuredEventIds）
  * @param {object} daily feeds/daily-v2.json（items[]）
  * @param {{siteUrl?:string}} opts
@@ -64,8 +66,9 @@ export function buildHotMessage(featured, daily, opts = {}) {
   const { siteUrl = '' } = opts;
   const date = featured?.date || '';
   const hot = resolveHotItems(featured, daily, 5);
+  const hotIds = new Set(hot.map(it => it.id));
   const research = (daily?.items || [])
-    .filter(it => it.research === true)
+    .filter(it => it.research === true && !hotIds.has(it.id))
     .sort((a, b) => (b.importance || 0) - (a.importance || 0))
     .slice(0, 3);
 
@@ -73,18 +76,10 @@ export function buildHotMessage(featured, daily, opts = {}) {
   lines.push(`## EnergyHub 热点（${date}）`);
   lines.push('');
   lines.push('**热点榜**');
-  hot.forEach((it, i) => {
+  [...hot, ...research].forEach((it, i) => {
     const src = it.source?.name ? `｜${it.source.name}` : '';
     lines.push(`${i + 1}. [${it.title}](${it.url})${src}`);
   });
-  if (research.length) {
-    lines.push('');
-    lines.push('**科研速递（SST/PCS）**');
-    research.forEach(it => {
-      const src = it.source?.name ? `｜${it.source.name}` : '';
-      lines.push(`- [${it.title}](${it.url})${src}`);
-    });
-  }
   if (siteUrl) {
     lines.push('');
     lines.push(`[查看完整日报 →](${siteUrl})`);

@@ -71,11 +71,11 @@ test('buildHotMessage：无站点链接时不输出站点链接', () => {
   assert.ok(text.includes('[T](https://x.com/a)'));
 });
 
-test('buildHotMessage：research 标记事件进「科研速递」，按重要性取前 3，无则不输出该节', () => {
+test('buildHotMessage：research 标记事件融合进热点榜，按重要性接续编号取前 3', () => {
   const mk = (id, importance, research) => ({
     id, importance, research, title: `标题${id}`, url: `https://x.com/${id}`, source: { name: `S${id}` }
   });
-  const featured = { date: '2026-09-17', hotEventIds: ['a'] };
+  const featured = { date: '2026-09-21', hotEventIds: ['a'] };
   const daily = { items: [
     mk('a', 4, false),
     mk('r1', 5.5, true),   // arXiv/科研检索源事件
@@ -85,13 +85,28 @@ test('buildHotMessage：research 标记事件进「科研速递」，按重要�
     mk('m1', 5, false)
   ] };
   const { text } = buildHotMessage(featured, daily, {});
-  assert.ok(text.includes('**科研速递（SST/PCS）**'));
+  assert.ok(!text.includes('科研速递'), '不再单列科研小节');
   assert.ok(text.includes('[标题r1](https://x.com/r1)'));
   assert.ok(text.includes('[标题r2](https://x.com/r2)'));
   assert.ok(text.includes('[标题r3](https://x.com/r3)'));
-  assert.ok(!text.includes('标题r4'), '只取前 3 条');
-  assert.ok(!text.includes('标题m1'), '非科研事件不进科研速递');
-  // 无科研事件时不输出该节
+  assert.ok(!text.includes('标题r4'), '只取前 3 条科研');
+  assert.ok(!text.includes('标题m1'), '非科研事件不进榜尾');
+  // 接续编号：热点第 1 条后科研从 2 开始
+  assert.ok(text.includes('1. [标题a]'));
+  assert.ok(text.includes('2. [标题r1]'));
+  // 无科研事件时榜单只有热点条目
   const noResearch = buildHotMessage(featured, { items: [mk('a', 4, false)] }, {});
-  assert.ok(!noResearch.text.includes('科研速递'));
+  assert.ok(noResearch.text.includes('1. [标题a]'));
+  assert.ok(!noResearch.text.includes('2. '));
+});
+
+test('buildHotMessage：已在热点榜前 5 的科研事件不重复出现', () => {
+  const mk = (id, importance, research) => ({
+    id, importance, research, title: `标题${id}`, url: `https://x.com/${id}`
+  });
+  const featured = { date: '2026-09-21', hotEventIds: ['r1'] };
+  const daily = { items: [mk('r1', 5.5, true), mk('r2', 4, true), mk('r3', 3, true), mk('r4', 2, true)] };
+  const { text } = buildHotMessage(featured, daily, {});
+  assert.equal(text.split('[标题r1]').length - 1, 1, 'r1 只出现一次');
+  assert.ok(text.includes('[标题r4]'), '去重后空出的名额由第 4 条科研补上');
 });
