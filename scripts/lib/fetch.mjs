@@ -62,6 +62,22 @@ export function withinDays(dateStr, days, now) {
   return (base.getTime() - d.getTime()) <= days * 24 * 60 * 60 * 1000;
 }
 
+/**
+ * 取 XML 节点的文本。xml2js（rss-parser 底层）把带属性的节点解析成
+ * 无原型对象 {_:'文本', $:{…}}（如 <guid isPermaLink="false">…</guid>），
+ * 直接 String() 会抛 "Cannot convert object to primitive value"
+ * （2026-09-25 线上事故）。这里取节点文本，取不到降级 null。
+ */
+export function xmlText(v) {
+  if (v == null) return null;
+  if (typeof v === 'string') return v;
+  if (typeof v === 'object') {
+    const t = v._ ?? v['#text'];
+    return typeof t === 'string' ? t : null;
+  }
+  return String(v);
+}
+
 export function pickSummary(item) {
   if (item.contentSnippet) return item.contentSnippet;
   if (item.summary) return item.summary;
@@ -529,13 +545,14 @@ export async function fetchFeed(source) {
   }
 
   const items = rawItems.slice(0, 15).map(item => {
-    let title = item.title || '无标题';
+    let title = xmlText(item.title) || '无标题';
     if (source.fetchType === 'search') title = stripSearchSuffix(title);
+    const guid = xmlText(item.guid) || xmlText(item.id) || null;
     return {
       title,
-      link: item.link || item.guid || source.url,
-      guid: item.guid || item.id || null,
-      pubDate: item.isoDate || item.pubDate || null,
+      link: xmlText(item.link) || guid || source.url,
+      guid,
+      pubDate: item.isoDate || xmlText(item.pubDate) || null,
       summary: pickSummary(item),
       source: source.name,
       sourceUrl: source.url

@@ -53,6 +53,19 @@ test('dedupItems：相同 GUID 去重', () => {
   assert.equal(removed[0].reason, 'guid');
 });
 
+test('dedupItems：对象型 guid（xml2js 带属性节点）不再抛错', () => {
+  // 回归：2026-09-25 线上构建被 <guid isPermaLink="false"> 解析出的
+  // 无原型对象炸掉（String() 抛 Cannot convert object to primitive value）
+  const bad = Object.assign(Object.create(null), { _: 'tag:x,2026:9', $: { isPermaLink: 'false' } });
+  const { kept, removed } = dedupItems([
+    { url: 'https://x.com/1', guid: bad, title: 'A' },
+    { url: 'https://x.com/2', guid: bad, title: 'B' }
+  ]);
+  // 对象型 guid 不参与去重键：两条都保留（URL 不同）
+  assert.equal(kept.length, 2);
+  assert.equal(removed.length, 0);
+});
+
 test('dedupItems：完全相同标题去重', () => {
   const { kept, removed } = dedupItems([
     { url: 'https://x.com/1', title: '  Battery  Storage! Boom ' },

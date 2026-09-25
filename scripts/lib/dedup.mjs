@@ -65,7 +65,10 @@ export function dedupItems(items) {
   const removed = [];
   for (const item of items) {
     const ukey = item.url ? canonicalUrl(item.url) : null;
-    const gkey = item.guid ? String(item.guid).trim() : null;
+    // xml2js 会把带属性的节点（如 <guid isPermaLink="false">）解析成无原型
+    // 对象，String() 直接抛 "Cannot convert object to primitive value"——
+    // 2026-09-25 曾因此炸掉整次构建。对象型 guid 一律不参与去重键。
+    const gkey = item.guid != null && typeof item.guid !== 'object' ? String(item.guid).trim() : null;
     const tkey = item.title ? normalizeTitle(item.title) : null;
 
     let reason = null;

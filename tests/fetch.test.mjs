@@ -5,10 +5,24 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import {
   collectFeeds, parseJinaArticle, parseJinaPage, parseWechatArticleHtml, loadSources, fetchWechatSeeds,
-  isWechatArticleUrl, parseGenericPageHtml, stripSearchSuffix
+  isWechatArticleUrl, parseGenericPageHtml, stripSearchSuffix, xmlText
 } from '../scripts/lib/fetch.mjs';
 
 const data = await loadSources();
+
+test('xmlText：xml2js 带属性节点（无原型对象）取文本不炸', () => {
+  // 回归：2026-09-25 <guid isPermaLink="false"> 被 xml2js 解析成无原型对象，
+  // String() 直接抛 Cannot convert object to primitive value 炸掉线上构建
+  const node = Object.assign(Object.create(null), { _: 'tag:x,2026:9', $: { isPermaLink: 'false' } });
+  assert.equal(xmlText(node), 'tag:x,2026:9');
+  assert.equal(xmlText('#text 节点'), '#text 节点');
+  assert.equal(xmlText(null), null);
+  assert.equal(xmlText(undefined), null);
+  assert.equal(xmlText('plain'), 'plain');
+  assert.equal(xmlText(123), '123');
+  // 无文本的纯属性节点降级 null
+  assert.equal(xmlText(Object.assign(Object.create(null), { $: { a: '1' } })), null);
+});
 
 test('collectFeeds 默认只收 rss/search，标记 fetchType 正确', () => {
   const feeds = collectFeeds(data);
