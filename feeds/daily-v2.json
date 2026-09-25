@@ -1,13 +1,13 @@
 {
   "schemaVersion": 2,
   "date": "2026-09-25",
-  "generatedAt": "2026-09-25T09:02:43.008Z",
+  "generatedAt": "2026-09-25T09:14:38.691Z",
   "status": "ok",
   "stats": {
     "sourcesTotal": 90,
-    "sourcesSucceeded": 81,
-    "articlesFetched": 925,
-    "eventsPublished": 268
+    "sourcesSucceeded": 82,
+    "articlesFetched": 894,
+    "eventsPublished": 265
   },
   "items": [
     {
@@ -39,7 +39,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T00:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Vertiv Newsroom",
@@ -85,7 +85,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Power Electronics News",
@@ -100,40 +100,39 @@
       "research": true
     },
     {
-      "id": "evt_b702eea4d22f",
-      "title": "宁德时代将供应918MWh罗马尼亚BESS ，另有500MWh项目在中东欧其他地方取得进展",
-      "originalTitle": "CATL to supply 918MWh Romania BESS, another 500MWh of projects progress elsewhere in CEE",
-      "url": "https://www.energy-storage.news/catl-supply-918mwh-romania-bess-another-500mwh-projects-progress-elsewhere-in-cee/",
-      "summary": "A flurry of project completions, financings and supplier deals for large-scale BESS across the Central and Eastern Europe (CEE) region, fro…",
-      "whyItMatters": "储能；关键数字 918MWh、500MWh；关联 CATL、宁德时代；地区 中东；媒体 Energy Storage News",
+      "id": "evt_562ab451b7c3",
+      "title": "丰田砸139亿美元、宁德时代冲到772GWh：全球电动车的钱，正在流向\"车\"以外",
+      "originalTitle": "丰田砸139亿美元、宁德时代冲到772GWh：全球电动车的钱，正在流向\"车\"以外",
+      "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704z386.html",
+      "summary": "丰田砸139亿美元、宁德时代冲到772GWh：全球电动车的钱，正在流向\"车\"以外 手机新浪网",
+      "whyItMatters": "储能；关键数字 139亿美元、772GWh；关联 宁德时代；地区 全球；媒体 比亚迪储能",
       "topic": "energy-storage",
       "tags": [],
-      "region": "中东",
+      "region": "全球",
       "entities": [
-        "CATL",
         "宁德时代"
       ],
       "metrics": [
         {
-          "label": "CATL to supply",
-          "value": 918,
-          "unit": "MWh"
+          "label": "丰田砸",
+          "value": 139,
+          "unit": "亿美元"
         },
         {
-          "label": "Romania BESS, another",
-          "value": 500,
-          "unit": "MWh"
+          "label": "宁德时代冲到",
+          "value": 772,
+          "unit": "GWh"
         }
       ],
       "impact": "unknown",
       "importance": 6,
       "source": {
-        "name": "Energy Storage News",
+        "name": "比亚迪储能",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-23T10:21:46.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-23T02:09:18.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -154,6 +153,10 @@
         {
           "name": "Energy Storage News",
           "url": "https://www.energy-storage.news/developers-valent-akaysha-advance-550mw-of-nem-connected-bess-in-victoria-australia/"
+        },
+        {
+          "name": "Energy Storage News",
+          "url": "https://www.energy-storage.news/catl-supply-918mwh-romania-bess-another-500mwh-projects-progress-elsewhere-in-cee/"
         },
         {
           "name": "宁德时代",
@@ -182,10 +185,6 @@
         {
           "name": "比亚迪储能",
           "url": "https://chejiahao.autohome.com.cn/info/24919594"
-        },
-        {
-          "name": "比亚迪储能",
-          "url": "https://mcn.solarbe.com/news/20260925/50029706.html"
         },
         {
           "name": "Tesla Energy",
@@ -225,11 +224,7 @@
         },
         {
           "name": "Tesla Energy",
-          "url": "https://www.indexbox.io/blog/nvidia-dsx-ready-program-includes-battery-storage-solutions-from-hitachi-energy-lg-energy-solution-and-tesla/"
-        },
-        {
-          "name": "数据中心供电招标",
-          "url": "https://mcn.solarbe.com/news/20260923/50029592.html"
+          "url": "https://www.storagereview.com/news/nvidia-dsx-ready-qualifies-tesla-lg-and-hitachi-batteries-and-vertiv-liquidstack-and-lg-cdus-for-ai-factories"
         },
         {
           "name": "宁德时代",
@@ -264,6 +259,10 @@
           "url": "https://finance.sina.cn/2026-09-22/detail-inissitm5735907.d.html?oid=WA%200859%203970%200884%20Rincian%20Pembangunan%20Rumah%20Kayu%20Minimalis%204x6%20Berpengalaman%20%20Solo&vt=4"
         },
         {
+          "name": "比亚迪储能",
+          "url": "https://mcn.solarbe.com/news/20260925/50029706.html"
+        },
+        {
           "name": "台达",
           "url": "https://k.sina.com.cn/article_5953190046_162d6789e06703st6k.html"
         },
@@ -280,8 +279,16 @@
           "url": "https://www.thecooldown.com/green-tech/tesla-powerwall-3p-orders-portugal-european-rollout/"
         },
         {
+          "name": "LG 新能源",
+          "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704z1e2.html?from=tech"
+        },
+        {
           "name": "数据中心储能备电",
           "url": "https://www.cls.cn/detail/2434633"
+        },
+        {
+          "name": "数据中心供电招标",
+          "url": "https://mcn.solarbe.com/news/20260923/50029592.html"
         }
       ],
       "wechat": false,
@@ -315,7 +322,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T09:13:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Transformer Magazine",
@@ -326,12 +333,12 @@
           "url": "https://i.ifeng.com/c/8waysSSt6Tl"
         },
         {
-          "name": "数据中心供电招标",
-          "url": "https://finance.eastmoney.com/a/202609233882692598.html"
-        },
-        {
           "name": "数据中心储能备电",
           "url": "https://m.21jingji.com/article/20260924/herald/438d77a8d64c4a6d1e211a2b290f43a7_zaker.html"
+        },
+        {
+          "name": "数据中心供电招标",
+          "url": "https://wap.eastmoney.com/a/202609243883372139.html"
         }
       ],
       "wechat": false,
@@ -366,7 +373,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T15:06:57.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Canary Media",
@@ -389,7 +396,7 @@
       "title": "阳光电源、禾望、特变、上能…入围，800MW逆变器集采！",
       "originalTitle": "阳光电源、禾望、特变、上能…入围，800MW逆变器集采！",
       "url": "https://finance.sina.com.cn/wm/2026-09-19/doc-iniskimt2286248.shtml?froms=ggmp",
-      "summary": "阳光电源、禾望、特变、上能…入围，800MW逆变器集采！ finance.sina.com.cn",
+      "summary": "阳光电源、禾望、特变、上能…入围，800MW逆变器集采！ 新浪财经",
       "whyItMatters": "光伏与风电；关键数字 800MW；关联 阳光电源；媒体 上能电气",
       "topic": "solar-wind",
       "tags": [],
@@ -412,7 +419,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T10:10:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "ESS News",
@@ -424,11 +431,7 @@
         },
         {
           "name": "阳光电源",
-          "url": "https://mcn.solarbe.com/news/20260924/50029699.html"
-        },
-        {
-          "name": "阳光电源",
-          "url": "https://finance.sina.com.cn/jjxw/2026-09-21/doc-inisqzxv7598782.shtml"
+          "url": "https://cj.sina.cn/articles/view/5952915720/162d2490806704vhle?froms=ggmp&vt=4"
         },
         {
           "name": "阳光电源",
@@ -460,6 +463,10 @@
         },
         {
           "name": "阳光电源",
+          "url": "https://mcn.solarbe.com/news/20260924/50029699.html"
+        },
+        {
+          "name": "阳光电源",
           "url": "https://www.guandian.cn/m/show/604812"
         },
         {
@@ -475,151 +482,16 @@
           "url": "https://finance.sina.com.cn/roll/2026-09-21/doc-inisqvrx7641590.shtml?froms=ggmp"
         },
         {
-          "name": "上能电气",
-          "url": "https://www.eet-china.com/mp/a526697.html"
-        },
-        {
           "name": "盛弘股份",
           "url": "https://www.worldjournal.com/wj/story/121347/9769539?from=wj_maintab_cate&zh-cn"
         },
         {
           "name": "盛弘股份",
           "url": "https://www.wedoany.com/shortnews/480414.html"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_26218ac6b213",
-      "title": "EVE Energy与美国存储供应商Fluence签署206 GWh电池框架协议",
-      "originalTitle": "EVE Energy signs 206 GWh battery framework with US storage supplier Fluence",
-      "url": "https://www.pv-magazine.com/2026/09/18/eve-energy-signs-206-gwh-battery-framework-with-us-storage-supplier-fluence/",
-      "summary": "EVE Energy signs 206 GWh battery framework with US storage supplier Fluence pv magazine Global",
-      "whyItMatters": "储能；关键数字 206GWh；关联 Fluence；地区 美国；媒体 Fluence",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [
-        "Fluence"
-      ],
-      "metrics": [
-        {
-          "label": "EVE Energy signs",
-          "value": 206,
-          "unit": "GWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 5.5,
-      "source": {
-        "name": "Fluence",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-18T12:45:29.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "阳光电源",
-          "url": "https://www.seetao.com/details/278953.html"
         },
         {
-          "name": "Fluence",
-          "url": "https://www.energy-storage.news/fluence-and-eve-energy-agree-206gwh-battery-supply-deal/"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://www.renewableenergymagazine.com/storage/fluence-secures-longterm-battery-supply-through-multiyear-20260924"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://www.marketscreener.com/news/fluence-energy-eve-power-sign-multiyear-battery-supply-deal-ce785aded18af32d"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://www.stocktitan.net/news/FLNC/fluence-secures-long-term-battery-supply-through-multiyear-agreement-nn4xq14k1ppl.html"
-        },
-        {
-          "name": "数据中心储能备电",
-          "url": "https://www.bjnews.com.cn/detail/1790072406169171.html"
-        },
-        {
-          "name": "数据中心储能备电",
-          "url": "https://finance.sina.com.cn/wm/2026-09-18/doc-inishkur3077809.shtml"
-        },
-        {
-          "name": "数据中心储能备电",
-          "url": "https://m.thepaper.cn/newsDetail_forward_34103862"
-        },
-        {
-          "name": "数据中心储能备电",
-          "url": "https://finance.sina.com.cn/roll/2026-09-20/doc-inismrff2645384.shtml?froms=ggmp"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/fluence-energy-shares-fall-jefferies-190644538.html"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://www.globenewswire.com/news-release/2026/09/22/3365933/0/en/fluence-energy-nasdaq-flnc-faces-investor-scrutiny-amid-additional-surprises-about-houston-facility-hbss.html"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://seekingalpha.com/news/4644496-fluence-energy-falls-again-as-jefferies-downgrades-on-weaker-outlook"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://simplywall.st/stocks/us/capital-goods/nasdaq-flnc/fluence-energy/news/fluence-energy-flnc-cuts-2026-revenue-guidance-is-the-55-und/amp"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://www.investing.com/news/analyst-ratings/jefferies-downgrades-fluence-energy-stock-rating-on-facility-issues-93CH-4906927"
-        },
-        {
-          "name": "Fluence",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/jefferies-downgrades-fluence-energy-hold-103137760.html"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_b4e89798d750",
-      "title": "英伟达：人工智能数据中心失去三分之一的电力",
-      "originalTitle": "Nvidia: AI data center loses a third of its power",
-      "url": "https://www.techzine.eu/blogs/infrastructure/144511/nvidia-ai-data-center-loses-a-third-of-its-power/",
-      "summary": "Nvidia: AI data center loses a third of its power Techzine Global",
-      "whyItMatters": "AIDC 项目与区域布局；关联 NVIDIA、英伟达；地区 全球；媒体 DC Power Infra",
-      "topic": "aidc-project",
-      "tags": [],
-      "region": "全球",
-      "entities": [
-        "NVIDIA",
-        "英伟达"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 5.5,
-      "source": {
-        "name": "DC Power Infra",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T09:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "Tesla Energy",
-          "url": "https://www.ess-news.com/2026/09/22/nvidia-launches-bess-qualification-program-for-ai-data-centers-names-just-tesla-lg-hitachi/"
-        },
-        {
-          "name": "DC Power Standards",
-          "url": "https://energiesmedia.com/800-vdc-protection-ai-data-solar/"
-        },
-        {
-          "name": "DC Power Standards",
-          "url": "https://energiesmedia.com/solaredge-infineon-solid-state-breakers/"
+          "name": "台达",
+          "url": "https://www.eet-china.com/mp/a526697.html"
         }
       ],
       "wechat": false,
@@ -653,7 +525,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T02:56:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -686,7 +558,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T08:07:41.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -713,7 +585,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T16:00:10.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "NVIDIA Blog",
@@ -722,44 +594,6 @@
         {
           "name": "NVIDIA Blog",
           "url": "https://blogs.nvidia.com/blog/isaac-ros-5-0-agentic-open-source-robotics/"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_beb929a885b7",
-      "title": "台达携手官田钢铁打造80MW大型储能系统",
-      "originalTitle": "台达携手官田钢铁打造80MW大型储能系统",
-      "url": "https://www.ctimes.com.tw:8443/DispArt/cn/260826160236.shtml",
-      "summary": "台达携手官田钢铁打造80MW大型储能系统 CTIMES",
-      "whyItMatters": "储能；关键数字 80MW；关联 台达；媒体 台达",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "台达"
-      ],
-      "metrics": [
-        {
-          "label": "官田钢铁打造",
-          "value": 80,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 5,
-      "source": {
-        "name": "台达",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-22T20:09:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "远景能源",
-          "url": "https://mcn.solarbe.com/news/20260924/50029692.html"
         }
       ],
       "wechat": false,
@@ -787,7 +621,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T23:37:30.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -814,7 +648,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-23T00:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "CleanTechnica",
@@ -859,7 +693,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T11:34:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -903,7 +737,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T08:33:12.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -934,7 +768,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T09:19:25.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -967,7 +801,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T09:22:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1003,7 +837,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T08:01:11.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1030,7 +864,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-23T12:46:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "AWS News Blog",
@@ -1039,6 +873,148 @@
         {
           "name": "AWS News Blog",
           "url": "https://aws.amazon.com/blogs/aws/introducing-amazon-cloudwatch-omni-ai-powered-observability-for-generative-ai-and-agentic-workloads/"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_beb929a885b7",
+      "title": "台达携手官田钢铁打造80MW大型储能系统",
+      "originalTitle": "台达携手官田钢铁打造80MW大型储能系统",
+      "url": "https://www.ctimes.com.tw:8443/DispArt/cn/260826160236.shtml",
+      "summary": "台达携手官田钢铁打造80MW大型储能系统 CTIMES",
+      "whyItMatters": "储能；关键数字 80MW；关联 台达；媒体 台达",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "台达"
+      ],
+      "metrics": [
+        {
+          "label": "官田钢铁打造",
+          "value": 80,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "台达",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-22T20:09:14.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_03a426ac4b24",
+      "title": "昱能科技与Axle Energy、Enode两大能源平台达成战略合作， 加码欧洲光储VPP布局",
+      "originalTitle": "昱能科技与Axle Energy、Enode两大能源平台达成战略合作， 加码欧洲光储VPP布局",
+      "url": "https://mcn.solarbe.com/news/20260924/50029692.html",
+      "summary": "昱能科技与Axle Energy、Enode两大能源平台达成战略合作， 加码欧洲光储VPP布局 mcn.solarbe.com",
+      "whyItMatters": "能量管理系统（EMS）；关联 台达；地区 欧盟；媒体 远景能源",
+      "topic": "ems",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [
+        "台达"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "远景能源",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T06:14:32.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_d7dc77b592b3",
+      "title": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地",
+      "originalTitle": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-09-21/doc-inisqmaa5836469.shtml",
+      "summary": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地 新浪财经",
+      "whyItMatters": "冷却、UPS 与 PUE；关联 曙光数创；媒体 曙光数创",
+      "topic": "cooling-pue",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "曙光数创"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "曙光数创",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-21T05:21:00.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "曙光数创",
+          "url": "https://wap.eastmoney.com/a/202609223881481183.html"
+        },
+        {
+          "name": "曙光数创",
+          "url": "https://www.sina.cn/news/detail/5346631831782849.html"
+        },
+        {
+          "name": "曙光数创",
+          "url": "https://k.sina.com.cn/article_1784473157_6a5ce64502003up8u.html"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b78c65f12e6a",
+      "title": "SolarEdge和英飞凌扩大合作伙伴关系，为800 VDC人工智能数据中心开发固态断路器",
+      "originalTitle": "SolarEdge and Infineon extend partnership to develop solid-state circuit breakers for 800 VDC AI data centers",
+      "url": "https://energiesmedia.com/solaredge-infineon-solid-state-breakers/",
+      "summary": "SolarEdge and Infineon extend partnership to develop solid-state circuit breakers for 800 VDC AI data centers Energies Media",
+      "whyItMatters": "AIDC 项目与区域布局；关联 SolarEdge、Infineon、英飞凌；媒体 DC Power Standards",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "SolarEdge",
+        "Infineon",
+        "英飞凌"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "DC Power Standards",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-21T12:15:16.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "Tesla Energy",
+          "url": "https://www.ess-news.com/2026/09/22/nvidia-launches-bess-qualification-program-for-ai-data-centers-names-just-tesla-lg-hitachi/"
+        },
+        {
+          "name": "DC Power Standards",
+          "url": "https://energiesmedia.com/800-vdc-protection-ai-data-solar/"
+        },
+        {
+          "name": "DC Power Infra",
+          "url": "https://www.techzine.eu/blogs/infrastructure/144511/nvidia-ai-data-center-loses-a-third-of-its-power/"
         }
       ],
       "wechat": false,
@@ -1075,7 +1051,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T09:40:15.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "中东新能源项目",
@@ -1125,7 +1101,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T20:52:48.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1161,7 +1137,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T07:20:05.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "pv magazine",
@@ -1193,91 +1169,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_1d880351e38b",
-      "title": "GridStor完成对400MWh Arizona BESS 2.2亿美元的融资",
-      "originalTitle": "GridStor closes US$220 million financing for 400MWh Arizona BESS",
-      "url": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/",
-      "summary": "GridStor, a US-based developer and operator of grid-scale battery energy storage systems (BESS) has closed a US$220 million financing agree…",
-      "whyItMatters": "储能；关键数字 400MWh、2.2亿美元、100MW；地区 美国；媒体 Energy Storage News",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "million financing for",
-          "value": 400,
-          "unit": "MWh"
-        },
-        {
-          "label": "a BESS",
-          "value": 2.2,
-          "unit": "亿美元"
-        },
-        {
-          "label": "agreement for the",
-          "value": 100,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "Energy Storage News",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-23T11:38:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/09/24/taaleri-kjk-back-192-mw-420-mwh-battery-in-estonia/"
-        },
-        {
-          "name": "沙特储能与AIDC",
-          "url": "https://www.ess-news.com/2026/09/22/gridstor-wins-financing-for-400-mwh-bess-in-arizona-tolling-secured-with-state-utility/"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_1f214e63b8dc",
-      "title": "安装了Hornsea 3的第二个2.9GW高压直流转换站",
-      "originalTitle": "Hornsea 3’s Second 2.9-GW HVDC Converter Station Installed",
-      "url": "https://transformer-technology.com/hornsea-3s-second-2-9-gw-hvdc-converter-station-installed/",
-      "summary": "The second HVDC converter station for Ørsted’s 2.9-GW Hornsea 3 offshore wind farm has been installed in the UK, completing the project’s t…",
-      "whyItMatters": "光伏与风电；关键数字 2.9GW；关联 Hitachi Energy、Hitachi；地区 英国；媒体 Transformer Technology",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "英国",
-      "entities": [
-        "Hitachi Energy",
-        "Hitachi"
-      ],
-      "metrics": [
-        {
-          "label": "3的第二个",
-          "value": 2.9,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T09:08:33.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1313,7 +1205,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T09:35:21.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1344,7 +1236,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T09:30:55.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1375,7 +1267,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:22:16.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Energy Central",
@@ -1416,7 +1308,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-22T14:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1444,7 +1336,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T15:24:49.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1477,7 +1369,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T13:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1504,79 +1396,54 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T10:00:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_3995e4e20d8e",
-      "title": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站",
-      "originalTitle": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站",
-      "url": "https://chejiahao.autohome.com.cn/info/24956899",
-      "summary": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站 汽车之家",
-      "whyItMatters": "储能；关联 比亚迪；媒体 比亚迪储能",
+      "id": "evt_0f677ed4015c",
+      "title": "206GWh！中国锂电企业拿下储能史上最大框架订单",
+      "originalTitle": "206GWh！中国锂电企业拿下储能史上最大框架订单",
+      "url": "https://finance.sina.com.cn/wm/2026-09-18/doc-inishkur3077809.shtml",
+      "summary": "206GWh！中国锂电企业拿下储能史上最大框架订单 新浪财经",
+      "whyItMatters": "储能；关键数字 206GWh；地区 中国；媒体 数据中心储能备电",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
-      "entities": [
-        "比亚迪"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "比亚迪储能",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-19T06:13:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
+      "region": "中国",
+      "entities": [],
+      "metrics": [
         {
-          "name": "比亚迪储能",
-          "url": "https://finance.sina.com.cn/roll/2026-09-19/doc-inisiwvx2481979.shtml"
-        },
-        {
-          "name": "比亚迪储能",
-          "url": "https://m.36kr.com/p/3991019818875653"
+          "label": "GWh",
+          "value": 206,
+          "unit": "GWh"
         }
       ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_1e20fee5b385",
-      "title": "“强算·驭电·释冷——论道AI算力下的基础设施变革与重构”科华数据专场论坛成功举办",
-      "originalTitle": "“强算·驭电·释冷——论道AI算力下的基础设施变革与重构”科华数据专场论坛成功举办",
-      "url": "https://www.doit.com.cn/itnews/851258489720901.html",
-      "summary": "“强算·驭电·释冷——论道AI算力下的基础设施变革与重构”科华数据专场论坛成功举办 doit.com.cn",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 科华数据、科华；媒体 科华数据",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "科华数据",
-        "科华"
-      ],
-      "metrics": [],
       "impact": "unknown",
       "importance": 4,
       "source": {
-        "name": "科华数据",
+        "name": "数据中心储能备电",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-21T04:02:26.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-18T13:30:00.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
-          "name": "科华数据",
-          "url": "https://finance.sina.cn/stock/relnews/dongmiqa/2026-09-23/detail-inisusyf8558978.d.html?vt=4"
+          "name": "阳光电源",
+          "url": "https://www.seetao.com/details/278953.html"
         },
         {
-          "name": "科华数据",
-          "url": "https://m.sohu.com/a/1079806273_121613636?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+          "name": "数据中心储能备电",
+          "url": "https://www.bjnews.com.cn/detail/1790072406169171.html"
+        },
+        {
+          "name": "数据中心储能备电",
+          "url": "https://m.thepaper.cn/newsDetail_forward_34103862"
+        },
+        {
+          "name": "数据中心储能备电",
+          "url": "https://finance.sina.com.cn/roll/2026-09-20/doc-inismrff2645384.shtml?froms=ggmp"
         }
       ],
       "wechat": false,
@@ -1604,80 +1471,11 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T02:55:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "台达",
           "url": "https://m.sohu.com/a/1079953966_120188377?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_d7dc77b592b3",
-      "title": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地",
-      "originalTitle": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-09-21/doc-inisqmaa5836469.shtml",
-      "summary": "曙光数创携手昆山，打造人工智能先进热管理技术产业示范基地 finance.sina.com.cn",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 曙光数创；媒体 曙光数创",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "曙光数创"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "曙光数创",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-21T05:21:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "曙光数创",
-          "url": "https://wap.eastmoney.com/a/202609223881481183.html"
-        },
-        {
-          "name": "曙光数创",
-          "url": "https://k.sina.com.cn/article_1784473157_6a5ce64502003up8u.html"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_9e992330e804",
-      "title": "\"全球仅3家\"：英伟达AI数据中心储能认证名单里，LG新能源是唯一的韩国面孔",
-      "originalTitle": "\"全球仅3家\"：英伟达AI数据中心储能认证名单里，LG新能源是唯一的韩国面孔",
-      "url": "https://k.sina.com.cn/article_5953189932_162d6782c06704z1e2.html?from=tech",
-      "summary": "\"全球仅3家\"：英伟达AI数据中心储能认证名单里，LG新能源是唯一的韩国面孔 k.sina.com.cn",
-      "whyItMatters": "数据中心电力需求；关联 英伟达、LG新能源；地区 韩国；媒体 LG 新能源",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "韩国",
-      "entities": [
-        "英伟达",
-        "LG新能源"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "LG 新能源",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-22T11:54:55.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "AIDC 政策标准",
-          "url": "https://m.thepaper.cn/newsDetail_forward_34100179"
         }
       ],
       "wechat": false,
@@ -1719,7 +1517,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T06:32:59.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "ACWA Power",
@@ -1742,7 +1540,7 @@
       "title": "OMV将在Masdar退出后独自参与140兆瓦的奥地利绿色H2项目",
       "originalTitle": "OMV to go solo on 140-MW Austrian green H2 project after Masdar exit",
       "url": "https://renewablesnow.com/news/omv-to-go-solo-on-140-mw-austrian-green-h2-project-after-masdar-exit-1301565/",
-      "summary": "OMV to go solo on 140-MW Austrian green H2 project after Masdar exit Renewables Now",
+      "summary": "OMV to go solo on 140-MW Austrian green H2 project after Masdar exit renewablesnow.com",
       "whyItMatters": "其他能源动态；关键数字 140兆瓦；媒体 Masdar",
       "topic": "other-energy",
       "tags": [],
@@ -1763,7 +1561,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T10:53:38.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Masdar",
@@ -1809,53 +1607,8 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T22:35:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_760dbaa45dd1",
-      "title": "2G Energy赢得美国数据中心Energy Vault的275兆瓦订单",
-      "originalTitle": "2G Energy Wins 275 MW Order From Energy Vault for U.S. Data Centers",
-      "url": "https://energynews.pro/en/2g-energy-wins-275-mw-order-from-energy-vault-for-us-data-centers",
-      "summary": "2G Energy Wins 275 MW Order From Energy Vault for U.S. Data Centers energynews.pro",
-      "whyItMatters": "数据中心电力需求；关键数字 275MW、275兆瓦；地区 美国；媒体 DC Energy Storage",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "2G Energy Wins",
-          "value": 275,
-          "unit": "MW"
-        },
-        {
-          "label": "Vault的",
-          "value": 275,
-          "unit": "兆瓦"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4,
-      "source": {
-        "name": "DC Energy Storage",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-23T21:12:15.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "DC Energy Storage",
-          "url": "https://inspenet.com/en/news/2g-energy-order-275-mw-energy/"
-        },
-        {
-          "name": "DC Power Infra",
-          "url": "https://www.unite.ai/2g-energy-books-275-mw-order-for-energy-vault-ai-data-center-power/"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -1881,7 +1634,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T12:00:04.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -1908,7 +1661,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:50:54.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -1918,7 +1671,7 @@
       "title": "英伟达追加15亿美元投资SB Energy 总投入增至30亿美元",
       "originalTitle": "英伟达追加15亿美元投资SB Energy 总投入增至30亿美元",
       "url": "https://www.wedoany.com/shortnews/480597.html",
-      "summary": "英伟达追加15亿美元投资SB Energy 总投入增至30亿美元 维度网",
+      "summary": "英伟达追加15亿美元投资SB Energy 总投入增至30亿美元 wedoany.com",
       "whyItMatters": "光伏与风电；关键数字 15亿美元、30亿美元；关联 英伟达；媒体 台达",
       "topic": "solar-wind",
       "tags": [],
@@ -1946,7 +1699,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T03:53:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -1956,7 +1709,7 @@
       "title": "视频 | 再投100亿! 特变电工张新在第十二届全球湘商大会“加码” 湖南",
       "originalTitle": "视频 | 再投100亿! 特变电工张新在第十二届全球湘商大会“加码” 湖南",
       "url": "https://finance.sina.com.cn/jjxw/2026-09-23/doc-inisvqcx5300505.shtml?cre=tianyi&mod=pchp&loc=27&r=0&rfunc=71&tj=cxvertical_pc_hp&tr=12",
-      "summary": "视频 | 再投100亿! 特变电工张新在第十二届全球湘商大会“加码” 湖南 finance.sina.com.cn",
+      "summary": "视频 | 再投100亿! 特变电工张新在第十二届全球湘商大会“加码” 湖南 新浪财经",
       "whyItMatters": "其他能源动态；关联 特变电工；地区 全球；媒体 特变电工",
       "topic": "other-energy",
       "tags": [],
@@ -1973,7 +1726,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T13:27:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "特变电工",
@@ -2005,7 +1758,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T13:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "特变电工",
@@ -2037,7 +1790,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T11:26:16.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "固德威",
@@ -2077,7 +1830,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T16:39:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "盛弘股份",
@@ -2113,7 +1866,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T08:40:17.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2144,7 +1897,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T07:38:48.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2180,7 +1933,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:38:20.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2211,7 +1964,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T11:38:56.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
@@ -2247,7 +2000,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:05:50.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2278,7 +2031,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T12:52:03.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2309,7 +2062,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:46:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2345,7 +2098,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:09:26.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2370,7 +2123,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T13:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2406,7 +2159,87 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T12:58:45.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_1d880351e38b",
+      "title": "GridStor完成对400MWh Arizona BESS 2.2亿美元的融资",
+      "originalTitle": "GridStor closes US$220 million financing for 400MWh Arizona BESS",
+      "url": "https://www.energy-storage.news/gridstor-closes-us220-million-financing-for-400mwh-arizona-bess/",
+      "summary": "GridStor, a US-based developer and operator of grid-scale battery energy storage systems (BESS) has closed a US$220 million financing agree…",
+      "whyItMatters": "储能；关键数字 400MWh、2.2亿美元、100MW；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "million financing for",
+          "value": 400,
+          "unit": "MWh"
+        },
+        {
+          "label": "a BESS",
+          "value": 2.2,
+          "unit": "亿美元"
+        },
+        {
+          "label": "agreement for the",
+          "value": 100,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-23T11:38:18.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "ESS News",
+          "url": "https://www.ess-news.com/2026/09/24/taaleri-kjk-back-192-mw-420-mwh-battery-in-estonia/"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_1f214e63b8dc",
+      "title": "安装了Hornsea 3的第二个2.9GW高压直流转换站",
+      "originalTitle": "Hornsea 3’s Second 2.9-GW HVDC Converter Station Installed",
+      "url": "https://transformer-technology.com/hornsea-3s-second-2-9-gw-hvdc-converter-station-installed/",
+      "summary": "The second HVDC converter station for Ørsted’s 2.9-GW Hornsea 3 offshore wind farm has been installed in the UK, completing the project’s t…",
+      "whyItMatters": "光伏与风电；关键数字 2.9GW；关联 Hitachi Energy、Hitachi；地区 英国；媒体 Transformer Technology",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "英国",
+      "entities": [
+        "Hitachi Energy",
+        "Hitachi"
+      ],
+      "metrics": [
+        {
+          "label": "3的第二个",
+          "value": 2.9,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T09:08:33.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2442,7 +2275,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T14:43:49.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Transformer Magazine",
@@ -2472,7 +2305,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T07:31:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2497,7 +2330,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T09:34:11.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2528,7 +2361,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:05:55.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2564,7 +2397,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:20:34.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2595,7 +2428,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:56:33.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2622,7 +2455,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T07:01:42.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "SemiWiki",
@@ -2654,40 +2487,8 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-23T07:02:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_94deb1a1398a",
-      "title": "300万实盘挑战第34天。周一早评英维克走势与思路",
-      "originalTitle": "300万实盘挑战第34天。周一早评英维克走势与思路",
-      "url": "https://caifuhao.eastmoney.com/news/20260921001833185022030?from=guba&name=6Iux57u05YWL5ZCn&gubaurl=aHR0cDovL2d1YmFwb3N0LmVhc3Rtb25leS5jb20vbGlzdC8sMDAyODM3Lmh0bWw%3D",
-      "summary": "300万实盘挑战第34天。周一早评英维克走势与思路 财富号",
-      "whyItMatters": "冷却、UPS 与 PUE；关联 英维克；媒体 英维克",
-      "topic": "cooling-pue",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "英维克"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "英维克",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-20T22:04:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "英维克",
-          "url": "https://www.moomoo.com/hans/news/post/1000034614"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -2696,7 +2497,7 @@
       "title": "算力的尽头不只电力，台达解构AI时代的「电热协同」账本",
       "originalTitle": "算力的尽头不只电力，台达解构AI时代的「电热协同」账本",
       "url": "https://finance.sina.com.cn/wm/2026-09-23/doc-inisuhkr1529284.shtml",
-      "summary": "算力的尽头不只电力，台达解构AI时代的「电热协同」账本 finance.sina.com.cn",
+      "summary": "算力的尽头不只电力，台达解构AI时代的「电热协同」账本 新浪财经",
       "whyItMatters": "芯片、服务器与算力基础设施；关联 台达；媒体 台达",
       "topic": "chips-compute",
       "tags": [],
@@ -2713,7 +2514,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T00:16:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2738,7 +2539,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T05:31:04.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2765,7 +2566,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T00:52:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2775,7 +2576,7 @@
       "title": "远景能源摩洛哥首个大型储能项目并网",
       "originalTitle": "远景能源摩洛哥首个大型储能项目并网",
       "url": "https://www.seetao.com/details/279338.html",
-      "summary": "远景能源摩洛哥首个大型储能项目并网 见道网",
+      "summary": "远景能源摩洛哥首个大型储能项目并网 seetao.com",
       "whyItMatters": "电网与并网；关联 远景能源；媒体 远景能源",
       "topic": "grid",
       "tags": [],
@@ -2792,7 +2593,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T01:34:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2819,34 +2620,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T11:33:31.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_e7153483b820",
-      "title": "2026年9月19日，昆山高新区与曙光数创举行签约仪式，共同推进新一代人工智能先进热管理技术产业化项目建设。根据项目规划，双方将聚焦先进热管理技术前沿，紧跟人工智能基础设施产业发展需求，在昆山建设集中试、量产、检测于一体的绿色算力散热产业基地，",
-      "originalTitle": "2026年9月19日，昆山高新区与曙光数创举行签约仪式，共同推进新一代人工智能先进热管理技术产业化项目建设。根据项目规划，双方将聚焦先进热管理技术前沿，紧跟人工智能基础设施产业发展需求，在昆山建设集中试、量产、检测于一体的绿色算力散热产业基地，",
-      "url": "https://www.sina.cn/news/detail/5346631831782849.html",
-      "summary": "2026年9月19日，昆山高新区与曙光数创举行签约仪式，共同推进新一代人工智能先进热管理技术产业化项目建设。根据项目规划，双方将聚焦先进热管理技术前沿，紧跟人工智能基础设施产业发展需求，在昆山建设集中试、量产、检测于一体的绿色算力散热产业基地， sina.cn",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 曙光数创；媒体 曙光数创",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "曙光数创"
-      ],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "曙光数创",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T03:17:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2873,7 +2647,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:28:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2900,7 +2674,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T03:03:58.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2910,7 +2684,7 @@
       "title": "Acwa在两家沙特天然气厂启动2.55 GW的初始运营",
       "originalTitle": "Acwa starts 2.55GW of initial operations at two Saudi gas plants",
       "url": "https://www.utilities-me.com/news/acwa-starts-two-saudi-plants",
-      "summary": "Acwa starts 2.55GW of initial operations at two Saudi gas plants utilities-me.com",
+      "summary": "Acwa starts 2.55GW of initial operations at two Saudi gas plants Utilities Middle East",
       "whyItMatters": "天然气与备用电源；关键数字 2.55GW；地区 沙特；媒体 ACWA Power",
       "topic": "gas-backup",
       "tags": [],
@@ -2931,7 +2705,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:55:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -2941,7 +2715,7 @@
       "title": "Masdar在2025年结束时，运营和建设中的装机容量为45.8吉瓦",
       "originalTitle": "Masdar ends 2025 with 45.8 GW in operation, construction",
       "url": "https://renewablesnow.com/news/masdar-ends-2025-with-45-8-gw-in-operation-construction-1301850/",
-      "summary": "Masdar ends 2025 with 45.8 GW in operation, construction Renewables Now",
+      "summary": "Masdar ends 2025 with 45.8 GW in operation, construction renewablesnow.com",
       "whyItMatters": "光伏与风电；关键数字 2025w、45.8GW、45.8吉瓦；媒体 Masdar",
       "topic": "solar-wind",
       "tags": [],
@@ -2972,7 +2746,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:51:58.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3003,7 +2777,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T00:22:48.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3034,7 +2808,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:37:11.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3061,7 +2835,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T13:03:59.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "AIDC 项目动态",
@@ -3109,7 +2883,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T10:25:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Hyperscale Projects",
@@ -3139,7 +2913,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T16:06:37.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3175,8 +2949,49 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:26:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_760dbaa45dd1",
+      "title": "2G Energy赢得美国数据中心Energy Vault的275兆瓦订单",
+      "originalTitle": "2G Energy Wins 275 MW Order From Energy Vault for U.S. Data Centers",
+      "url": "https://energynews.pro/en/2g-energy-wins-275-mw-order-from-energy-vault-for-us-data-centers",
+      "summary": "2G Energy Wins 275 MW Order From Energy Vault for U.S. Data Centers energynews.pro",
+      "whyItMatters": "数据中心电力需求；关键数字 275MW、275兆瓦；地区 美国；媒体 DC Energy Storage",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "2G Energy Wins",
+          "value": 275,
+          "unit": "MW"
+        },
+        {
+          "label": "Vault的",
+          "value": 275,
+          "unit": "兆瓦"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "DC Energy Storage",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-23T21:12:15.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "DC Energy Storage",
+          "url": "https://inspenet.com/en/news/2g-energy-order-275-mw-energy/"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -3206,7 +3021,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:54:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3231,7 +3046,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T14:40:26.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -3277,7 +3092,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:22:50.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -3313,7 +3128,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:37:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -3323,7 +3138,7 @@
       "title": "面向工业孤网与弱网场景，天传微网发布新一代全工况构网型储能PCS",
       "originalTitle": "面向工业孤网与弱网场景，天传微网发布新一代全工况构网型储能PCS",
       "url": "https://mcn.solarbe.com/news/20260925/50029714.html",
-      "summary": "面向工业孤网与弱网场景，天传微网发布新一代全工况构网型储能PCS 碳索储能网",
+      "summary": "面向工业孤网与弱网场景，天传微网发布新一代全工况构网型储能PCS mcn.solarbe.com",
       "whyItMatters": "储能变流器（PCS）；媒体 储能变流器技术动态",
       "topic": "pcs",
       "tags": [],
@@ -3338,10 +3153,42 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:03:16.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
+    },
+    {
+      "id": "evt_3995e4e20d8e",
+      "title": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站",
+      "originalTitle": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站",
+      "url": "https://chejiahao.autohome.com.cn/info/24956899",
+      "summary": "闪充站成本太高建不起？河南省高速规划建设130个比亚迪闪充站 汽车之家",
+      "whyItMatters": "储能；关联 比亚迪；媒体 比亚迪储能",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "比亚迪"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "比亚迪储能",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-19T06:13:36.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "比亚迪储能",
+          "url": "https://m.36kr.com/p/3991019818875653"
+        }
+      ],
+      "wechat": false,
+      "research": false
     },
     {
       "id": "evt_0698b44f57b8",
@@ -3365,50 +3212,8 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T08:49:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_3593cb913fb5",
-      "title": "Acwa Power附属公司将启动沙特阿拉伯电厂的初始商业运营",
-      "originalTitle": "Acwa Power Affiliate to Start Initial Commercial Operation of Power Plant in Saudi Arabia",
-      "url": "https://www.marketscreener.com/news/acwa-power-affiliate-to-start-initial-commercial-operation-of-power-plant-in-saudi-arabia-ce785adeda8af52d",
-      "summary": "Acwa Power Affiliate to Start Initial Commercial Operation of Power Plant in Saudi Arabia marketscreener.com",
-      "whyItMatters": "其他能源动态；地区 沙特；媒体 ACWA Power",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "沙特",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "ACWA Power",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T05:34:46.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [
-        {
-          "name": "ACWA Power",
-          "url": "https://maaal.com/en/news/details/acwa-power-announces-init/"
-        },
-        {
-          "name": "ACWA Power",
-          "url": "https://www.marketscreener.com/news/acwa-power-s-taiba-1-plant-starts-initial-commercial-operations-in-saudi-arabia-ce785adeda8af12d"
-        },
-        {
-          "name": "ACWA Power",
-          "url": "https://www.argaam.com/en/article/articledetail/id/1938716"
-        },
-        {
-          "name": "ACWA Power",
-          "url": "https://tradersunion.com/news/institutions/show/3468331-acwa-power-qassim-1-saudi-arabia-operation/"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -3438,7 +3243,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T23:41:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -3463,7 +3268,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T18:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3494,7 +3299,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T15:56:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "Canary Media",
@@ -3530,7 +3335,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T15:12:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3561,7 +3366,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:41:22.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3586,7 +3391,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T06:31:48.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3611,7 +3416,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:20:08.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3638,7 +3443,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:02:52.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3674,7 +3479,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T03:48:26.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3685,8 +3490,8 @@
       "originalTitle": "AI Won’t Destroy Us, But It Will Improve Our Lives, DoE’s Darío Gil Says",
       "url": "https://www.hpcwire.com/2026/09/24/ai-wont-destroy-us-but-it-will-improve-our-lives-does-dario-gil-says/",
       "summary": "“AI will kill us all.” That’s the mantra we’ve heard repeatedly this month from researchers at frontier AI labs, who have called for a glob…",
-      "whyItMatters": "其他能源动态；关联 DOE、美国能源部；地区 美国；媒体 HPCwire",
-      "topic": "other-energy",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 DOE、美国能源部；地区 美国；媒体 HPCwire",
+      "topic": "chips-compute",
       "tags": [],
       "region": "美国",
       "entities": [
@@ -3702,7 +3507,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T19:44:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3729,7 +3534,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T13:00:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3756,7 +3561,34 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T19:00:05.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b42a732edd2a",
+      "title": "阳光电源新设能源科技公司，含AI相关业务",
+      "originalTitle": "阳光电源新设能源科技公司，含AI相关业务",
+      "url": "https://news.10jqka.com.cn/20260921/c680120670.shtml",
+      "summary": "阳光电源新设能源科技公司，含AI相关业务 同花顺财经",
+      "whyItMatters": "其他能源动态；关联 阳光电源；媒体 阳光电源",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "阳光电源"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "阳光电源",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-21T07:17:34.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3766,7 +3598,7 @@
       "title": "维斯塔斯发布7.2MW新型陆上风机 V182叶轮直径增至182米",
       "originalTitle": "维斯塔斯发布7.2MW新型陆上风机 V182叶轮直径增至182米",
       "url": "https://www.wedoany.com/shortnews/480294.html",
-      "summary": "维斯塔斯发布7.2MW新型陆上风机 V182叶轮直径增至182米 维度网",
+      "summary": "维斯塔斯发布7.2MW新型陆上风机 V182叶轮直径增至182米 wedoany.com",
       "whyItMatters": "光伏与风电；关键数字 7.2MW；关联 维斯塔斯；媒体 盛弘股份",
       "topic": "solar-wind",
       "tags": [],
@@ -3789,7 +3621,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T01:51:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3816,7 +3648,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T01:45:47.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3847,7 +3679,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T09:59:29.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "数据中心储能备电",
@@ -3879,7 +3711,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T20:59:32.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3906,7 +3738,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T02:34:32.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3937,7 +3769,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T08:13:32.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3962,7 +3794,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T11:28:42.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -3995,7 +3827,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T20:32:55.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4026,7 +3858,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T11:09:59.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4036,7 +3868,7 @@
       "title": "沙特阿拉伯在2026年增加了7吉瓦的太阳能和风能， 14吉瓦时的BESS",
       "originalTitle": "Saudi Arabia adds 7 GW of solar and wind, 14 GWh of BESS in 2026",
       "url": "https://renewablesnow.com/news/saudi-arabia-adds-7-gw-of-solar-and-wind-14-gwh-of-bess-in-2026-1301638/",
-      "summary": "Saudi Arabia adds 7 GW of solar and wind, 14 GWh of BESS in 2026 Renewables Now",
+      "summary": "Saudi Arabia adds 7 GW of solar and wind, 14 GWh of BESS in 2026 renewablesnow.com",
       "whyItMatters": "光伏与风电；关键数字 7GW、14GWh、7吉瓦；地区 沙特；媒体 沙特储能与AIDC",
       "topic": "solar-wind",
       "tags": [],
@@ -4072,7 +3904,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T11:22:59.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4103,7 +3935,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:30:47.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4134,7 +3966,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T10:35:02.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4165,7 +3997,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T05:21:12.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4175,7 +4007,7 @@
       "title": "到2025年，马斯达尔运营项目产生的清洁电力增加38%",
       "originalTitle": "Masdar operating projects generate 38% more clean electricity in 2025",
       "url": "https://www.tradingview.com/news/reuters.com,2026-09-24:newsml_Zaw2XpnFL:0-masdar-operating-projects-generate-38-more-clean-electricity-in-2025/",
-      "summary": "Masdar operating projects generate 38% more clean electricity in 2025 TradingView",
+      "summary": "Masdar operating projects generate 38% more clean electricity in 2025 tradingview.com",
       "whyItMatters": "光伏与风电；关键数字 38%；媒体 阿联酋储能与AIDC",
       "topic": "solar-wind",
       "tags": [],
@@ -4196,7 +4028,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T03:23:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4221,7 +4053,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T17:30:20.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4246,7 +4078,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T12:00:02.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4271,7 +4103,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:00:06.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4302,7 +4134,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T13:00:04.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4312,7 +4144,7 @@
       "title": "固态变压器（SST）应用及产业发展研讨会召开 赋能算电融合高质量发展",
       "originalTitle": "固态变压器（SST）应用及产业发展研讨会召开 赋能算电融合高质量发展",
       "url": "https://finance.sina.com.cn/roll/2026-09-22/doc-inistewx8871948.shtml",
-      "summary": "固态变压器（SST）应用及产业发展研讨会召开 赋能算电融合高质量发展 finance.sina.com.cn",
+      "summary": "固态变压器（SST）应用及产业发展研讨会召开 赋能算电融合高质量发展 新浪财经",
       "whyItMatters": "固态变压器（SST）；媒体 SST 中文科研",
       "topic": "sst",
       "tags": [],
@@ -4327,7 +4159,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T11:52:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4352,7 +4184,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:48:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4377,7 +4209,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T06:41:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4387,7 +4219,7 @@
       "title": "中国研发机构深耕第三代半导体 打通碳化硅产品到场景应用完整体系",
       "originalTitle": "中国研发机构深耕第三代半导体 打通碳化硅产品到场景应用完整体系",
       "url": "http://finance.sina.com.cn/roll/2026-09-23/doc-inisvqcz1087865.shtml",
-      "summary": "中国研发机构深耕第三代半导体 打通碳化硅产品到场景应用完整体系 finance.sina.com.cn",
+      "summary": "中国研发机构深耕第三代半导体 打通碳化硅产品到场景应用完整体系 新浪财经",
       "whyItMatters": "储能变流器（PCS）；地区 中国；媒体 SST 中文科研",
       "topic": "pcs",
       "tags": [],
@@ -4402,7 +4234,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T13:08:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4430,7 +4262,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T06:46:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4455,7 +4287,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:30:56.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4491,7 +4323,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:44:41.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4518,7 +4350,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T02:17:05.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4543,7 +4375,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:05:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4568,7 +4400,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:20:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4578,7 +4410,7 @@
       "title": "清源飞控高速飞轮就位，冀北构网型储能示范工程吊装启幕",
       "originalTitle": "清源飞控高速飞轮就位，冀北构网型储能示范工程吊装启幕",
       "url": "https://mcn.solarbe.com/news/20260923/50029606.html",
-      "summary": "清源飞控高速飞轮就位，冀北构网型储能示范工程吊装启幕 碳索储能网",
+      "summary": "清源飞控高速飞轮就位，冀北构网型储能示范工程吊装启幕 mcn.solarbe.com",
       "whyItMatters": "储能变流器（PCS）；媒体 储能变流器技术动态",
       "topic": "pcs",
       "tags": [],
@@ -4593,7 +4425,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T02:03:28.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4618,7 +4450,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T18:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4628,7 +4460,7 @@
       "title": "东芝推出具有高浪涌电流能力的3300V碳化硅MOSFET模块，有助于提高工业设备的可靠性",
       "originalTitle": "Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment",
       "url": "https://www.businesswire.com/news/home/20260923706775/en/Toshiba-Launches-3300V-SiC-MOSFET-Module-with-High-Surge-Current-Capability-that-Helps-Improve-Reliability-of-Industrial-Equipment",
-      "summary": "Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment business…",
+      "summary": "Toshiba Launches 3300V SiC MOSFET Module with High Surge Current Capability that Helps Improve Reliability of Industrial Equipment Business…",
       "whyItMatters": "储能变流器（PCS）；媒体 SiC 宽禁带器件",
       "topic": "pcs",
       "tags": [],
@@ -4643,7 +4475,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T02:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -4670,7 +4502,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T20:16:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4697,8 +4529,42 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T15:11:07.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_dd7b1565f7ea",
+      "title": "Acwa Power的Taiba 1工厂在沙特阿拉伯开始初步商业运营",
+      "originalTitle": "Acwa Power's Taiba 1 Plant Starts Initial Commercial Operations in Saudi Arabia",
+      "url": "https://www.marketscreener.com/news/acwa-power-s-taiba-1-plant-starts-initial-commercial-operations-in-saudi-arabia-ce785adeda8af12d",
+      "summary": "Acwa Power's Taiba 1 Plant Starts Initial Commercial Operations in Saudi Arabia marketscreener.com",
+      "whyItMatters": "光伏与风电；地区 沙特；媒体 ACWA Power",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "沙特",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "ACWA Power",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T05:42:49.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [
+        {
+          "name": "ACWA Power",
+          "url": "https://maaal.com/en/news/details/acwa-power-announces-init/"
+        },
+        {
+          "name": "ACWA Power",
+          "url": "https://www.argaam.com/en/article/articledetail/id/1938716"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -4722,7 +4588,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T21:33:41.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4747,7 +4613,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T07:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4772,7 +4638,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T16:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4799,7 +4665,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T20:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4826,7 +4692,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T07:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4851,7 +4717,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T16:12:30.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4876,15 +4742,15 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T15:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
       "id": "evt_ea7a9179a24e",
-      "title": "微电网必须超越飞行员，进入日常电网运营：面板",
-      "originalTitle": "Microgrids must push beyond pilots into everyday grid operations: panel",
+      "title": "微电网必须超越试点，进入日常电网运营：面板",
+      "originalTitle": "Microgrids must push beyond pilots, into everyday grid operations: panel",
       "url": "https://www.utilitydive.com/news/microgrid-pnm-epri-data-center/831153/",
       "summary": "EPRI’s Jackie Baum says microgrids have to do more than sit idle for emergencies. “The majority of the time, the power is on,” she said, ur…",
       "whyItMatters": "电网与并网；关联 EPRI；媒体 Utility Dive",
@@ -4903,7 +4769,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T15:33:19.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4928,7 +4794,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:46:56.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4953,7 +4819,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T22:59:37.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -4978,7 +4844,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T08:33:30.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5003,7 +4869,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T05:48:14.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5028,7 +4894,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5059,7 +4925,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T14:06:15.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5084,7 +4950,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T16:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5109,7 +4975,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:42:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5136,7 +5002,32 @@
         "isPrimary": false
       },
       "publishedAt": null,
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_53c146f614c6",
+      "title": "能源： 10种成熟的解决方案",
+      "originalTitle": "Energy: 10 Proven Solutions",
+      "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/energy-10-proven-solutions-U4onubnSGqrWwjX",
+      "summary": "Energy: 10 Proven Solutions Over the next two weeks, I will present solutions I have proposed to clients that yielded very interesting resu…",
+      "whyItMatters": "其他能源动态；媒体 Energy Central",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Central",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-25T09:12:46.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5161,7 +5052,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:36:13.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5186,7 +5077,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:07:03.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_816941e57987",
+      "title": "“FCA说服监管机构在德国电网费上妥协” ： Eco Stor的Georg Gallmetzer谈论巩固行业的未来",
+      "originalTitle": "‘FCAs convinced regulators to compromise on grid fees in Germany’: Eco Stor’s Georg Gallmetzer on cementing the industry’s future ",
+      "url": "https://www.energy-storage.news/fcas-convinced-regulators-to-compromise-on-grid-fees-in-germany-eco-stors-georg-gallmetzer-on-cementing-the-industrys-future/",
+      "summary": "We recently caught up with Georg Gallmetzer, managing director of German BESS platform Eco Stor, about the firm’s role in formulating flexi…",
+      "whyItMatters": "电网与并网；地区 德国；媒体 Energy Storage News",
+      "topic": "grid",
+      "tags": [],
+      "region": "德国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T13:01:50.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5211,7 +5127,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T20:57:13.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5236,7 +5152,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T18:31:29.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5261,7 +5177,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T18:27:16.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5286,7 +5202,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T17:22:23.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5311,7 +5227,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T15:00:30.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5336,7 +5252,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:35:12.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5361,7 +5277,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5386,7 +5302,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T11:25:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5411,7 +5327,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T12:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5436,7 +5352,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T16:00:46.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5461,7 +5377,7 @@
         "isPrimary": true
       },
       "publishedAt": "2026-09-21T14:51:34.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5497,7 +5413,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T07:47:01.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5522,7 +5438,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T05:35:19.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5553,7 +5469,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T00:43:17.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_de21146f6eec",
+      "title": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理",
+      "originalTitle": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理",
+      "url": "https://www.eet-china.com/mp/a526397.html",
+      "summary": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理 电子工程专辑",
+      "whyItMatters": "能量管理系统（EMS）；媒体 远景能源",
+      "topic": "ems",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "远景能源",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-21T01:35:00.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5580,38 +5521,13 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T03:51:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
-          "name": "英维克",
+          "name": "曙光数创",
           "url": "http://www.chinaiol.com/News/Content/202609/21_68609.html"
         }
       ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_de21146f6eec",
-      "title": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理",
-      "originalTitle": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理",
-      "url": "https://www.eet-china.com/mp/a526397.html",
-      "summary": "远景杨堃：高比例绿电支撑AIDC，关键在全链路能量管理 电子工程专辑",
-      "whyItMatters": "能量管理系统（EMS）；媒体 远景能源",
-      "topic": "ems",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "远景能源",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-21T01:35:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
       "wechat": false,
       "research": false
     },
@@ -5620,7 +5536,7 @@
       "title": "2年涨4倍，掘金新能源电池！",
       "originalTitle": "2年涨4倍，掘金新能源电池！",
       "url": "http://sc.stock.cnfol.com/shichangjuejin/20260924/32380911.shtml",
-      "summary": "2年涨4倍，掘金新能源电池！ 中金在线",
+      "summary": "2年涨4倍，掘金新能源电池！ sc.stock.cnfol.com",
       "whyItMatters": "储能；媒体 固德威",
       "topic": "energy-storage",
       "tags": [],
@@ -5635,7 +5551,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T13:15:03.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5645,7 +5561,7 @@
       "title": "西班牙工业用户加快“光伏+储能+套保”组合 4小时电池提升自发电利用率",
       "originalTitle": "西班牙工业用户加快“光伏+储能+套保”组合 4小时电池提升自发电利用率",
       "url": "https://www.wedoany.com/shortnews/482052.html",
-      "summary": "西班牙工业用户加快“光伏+储能+套保”组合 4小时电池提升自发电利用率 维度网",
+      "summary": "西班牙工业用户加快“光伏+储能+套保”组合 4小时电池提升自发电利用率 wedoany.com",
       "whyItMatters": "储能；地区 西班牙；媒体 固德威",
       "topic": "energy-storage",
       "tags": [],
@@ -5660,7 +5576,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T20:48:29.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5670,7 +5586,7 @@
       "title": "Flow Power启动223 MWh澳大利亚电池，计划扩建1.2 GWh",
       "originalTitle": "Flow Power begins 223 MWh Australian battery, plans 1.2 GWh expansion",
       "url": "https://www.ess-news.com/2026/09/18/flow-power-begins-223-mwh-australian-battery-plans-1-2-gwh-expansion/",
-      "summary": "Flow Power begins 223 MWh Australian battery, plans 1.2 GWh expansion ess-news.com",
+      "summary": "Flow Power begins 223 MWh Australian battery, plans 1.2 GWh expansion ESS News",
       "whyItMatters": "储能；关键数字 223MWh、1.2GWh；地区 澳大利亚；媒体 Wärtsilä ES&O",
       "topic": "energy-storage",
       "tags": [],
@@ -5696,7 +5612,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T12:51:45.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5721,17 +5637,17 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T06:14:46.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_d87b6ddde3cd",
+      "id": "evt_2bcd4b8d062e",
       "title": "通用汽车两度出售电池工厂股权 转向下一代电芯技术研发",
       "originalTitle": "通用汽车两度出售电池工厂股权 转向下一代电芯技术研发",
-      "url": "https://m.huxiu.com/article/4893896.html?type=text",
-      "summary": "通用汽车两度出售电池工厂股权 转向下一代电芯技术研发 虎嗅",
+      "url": "https://www.huxiu.com/article/4893896.html",
+      "summary": "通用汽车两度出售电池工厂股权 转向下一代电芯技术研发 huxiu.com",
       "whyItMatters": "储能；媒体 LG 新能源",
       "topic": "energy-storage",
       "tags": [],
@@ -5746,7 +5662,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T23:09:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5771,7 +5687,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:25:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "ACWA Power",
@@ -5801,7 +5717,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T04:18:27.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5828,7 +5744,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T15:55:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "数据中心储能备电",
@@ -5843,7 +5759,7 @@
       "title": "储能大厂新签206GWh 大单，只有 16GWh 能落袋为安，亿纬锂能这轮舞剑，意在美国AIDC 数据中心",
       "originalTitle": "储能大厂新签206GWh 大单，只有 16GWh 能落袋为安，亿纬锂能这轮舞剑，意在美国AIDC 数据中心",
       "url": "https://m.36kr.com/p/3991083876374408",
-      "summary": "储能大厂新签206GWh 大单，只有 16GWh 能落袋为安，亿纬锂能这轮舞剑，意在美国AIDC 数据中心 36kr.com",
+      "summary": "储能大厂新签206GWh 大单，只有 16GWh 能落袋为安，亿纬锂能这轮舞剑，意在美国AIDC 数据中心 36氪",
       "whyItMatters": "数据中心电力需求；关键数字 206GWh、16GWh；地区 美国；媒体 数据中心储能备电",
       "topic": "data-center-power",
       "tags": [],
@@ -5869,7 +5785,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T12:47:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5905,7 +5821,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T15:51:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5930,7 +5846,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T10:25:55.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5961,7 +5877,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T17:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -5992,7 +5908,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T10:00:49.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6017,7 +5933,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T07:58:06.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6027,7 +5943,7 @@
       "title": "碳化硅功率半导体市场将达到19.16美元",
       "originalTitle": "Silicon Carbide Power Semiconductor Market to Reach USD 19.16",
       "url": "https://www.openpr.com/news/4640823/silicon-carbide-power-semiconductor-market-to-reach-usd-19-16",
-      "summary": "Silicon Carbide Power Semiconductor Market to Reach USD 19.16 openpr.com",
+      "summary": "Silicon Carbide Power Semiconductor Market to Reach USD 19.16 openPR.com",
       "whyItMatters": "芯片、服务器与算力基础设施；地区 美国；媒体 SiC 宽禁带器件",
       "topic": "chips-compute",
       "tags": [],
@@ -6042,7 +5958,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T10:14:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "DC Power Standards",
@@ -6072,7 +5988,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T04:44:33.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6097,7 +6013,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T15:07:38.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6122,7 +6038,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T23:00:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6147,7 +6063,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T20:37:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_9a307a34e22f",
+      "title": "人工智能数据中心正在燃烧磨损的电网设备并阻止工业替代品",
+      "originalTitle": "AI Data Centers Are Burning Worn-Out Grid Equipment and Blocking Industrial Replacements",
+      "url": "https://www.techtimes.com/articles/327992/20260924/ai-data-centers-are-burning-worn-out-grid-equipment-blocking-industrial-replacements.htm",
+      "summary": "AI Data Centers Are Burning Worn-Out Grid Equipment and Blocking Industrial Replacements Tech Times",
+      "whyItMatters": "电网与并网；媒体 DC Power Infra",
+      "topic": "grid",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "DC Power Infra",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T13:36:46.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6178,7 +6119,38 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T10:55:04.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_2e335dd81965",
+      "title": "Kodiak Gas Services将为西德克萨斯州数据中心提供76MW的燃气电力",
+      "originalTitle": "Kodiak Gas Services to supply 76MW of behind-the-meter gas power to West Texas data center",
+      "url": "https://www.datacenterdynamics.com/en/news/kodiak-gas-services-to-supply-76mw-of-behind-the-meter-gas-power-to-west-texas-data-center/",
+      "summary": "Kodiak Gas Services to supply 76MW of behind-the-meter gas power to West Texas data center Data Center Dynamics",
+      "whyItMatters": "天然气与备用电源；关键数字 76MW；媒体 DC Power Infra",
+      "topic": "gas-backup",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Services to supply",
+          "value": 76,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "DC Power Infra",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-21T15:22:46.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6203,7 +6175,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T13:04:12.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6228,7 +6200,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:13:43.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "阿联酋储能与AIDC",
@@ -6264,7 +6236,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T13:36:10.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6295,7 +6267,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T04:05:45.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6320,32 +6292,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T14:00:04.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": true
-    },
-    {
-      "id": "evt_0b5cdb68f3ad",
-      "title": "高压固态变压器市场规模将达到",
-      "originalTitle": "High Voltage Solid-state Transformer Market Size Set to Reach",
-      "url": "https://www.openpr.com/news/4638437/high-voltage-solid-state-transformer-market-size-set-to-reach",
-      "summary": "High Voltage Solid-state Transformer Market Size Set to Reach openpr.com",
-      "whyItMatters": "固态变压器（SST）；媒体 SST 科研动态",
-      "topic": "sst",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SST 科研动态",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-21T18:44:11.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -6370,19 +6317,19 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T17:31:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
     },
     {
-      "id": "evt_7c284dc81ba5",
-      "title": "可负担性问题推动了基于绩效的费率制定的势头",
-      "originalTitle": "Affordability concerns drive momentum for performance-based ratemaking",
-      "url": "https://www.utilitydive.com/news/affordability-concerns-drive-momentum-for-performance-based-ratemaking/831120/",
-      "summary": "Michigan is among the states weighing reforms to rate case planning and utility profits. Experts and stakeholders told Utility Dive what wo…",
-      "whyItMatters": "电力市场与政策；媒体 Utility Dive",
-      "topic": "power-market-policy",
+      "id": "evt_49e11170e733",
+      "title": "纽约审计公用事业AI的使用，列举了“日益增长的依赖性”的风险",
+      "originalTitle": "New York audits utility AI use, cites risk in ‘growing dependency’",
+      "url": "https://www.utilitydive.com/news/new-york-audits-utility-ai-use-cites-risk-in-growing-dependency/831242/",
+      "summary": "Increasing use of AI systems to manage public utilities creates new risks for critical infrastructure, regulators said.",
+      "whyItMatters": "其他能源动态；媒体 Utility Dive",
+      "topic": "other-energy",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -6394,8 +6341,8 @@
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-24T13:11:07.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-24T12:36:58.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6420,7 +6367,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T00:01:37.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6445,7 +6392,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T14:05:53.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6481,7 +6428,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T13:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6506,7 +6453,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T02:04:20.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_9cbb95757b2a",
+      "title": "中国，沙特阿拉伯关注在海水淡化方面更密切的合作",
+      "originalTitle": "China, Saudi Arabia eye closer cooperation on seawater desalination",
+      "url": "https://sana.sy/en/international/2345600/",
+      "summary": "China, Saudi Arabia eye closer cooperation on seawater desalination سانا",
+      "whyItMatters": "其他能源动态；地区 中国；媒体 ACWA Power",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "ACWA Power",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T09:51:53.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6531,7 +6503,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:35:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6562,7 +6534,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T01:26:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6587,7 +6559,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-25T03:18:05.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6612,7 +6584,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T06:05:46.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6637,7 +6609,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6662,7 +6634,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T00:02:07.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6687,7 +6659,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T23:34:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6712,7 +6684,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T11:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6737,7 +6709,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T08:30:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6762,7 +6734,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T02:38:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6787,7 +6759,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T18:57:05.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6812,7 +6784,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T17:54:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6837,7 +6809,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T16:27:15.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6862,7 +6834,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T04:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6889,7 +6861,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T23:49:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6914,7 +6886,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:07:06.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6939,7 +6911,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:03:42.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6964,7 +6936,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:02:50.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -6989,7 +6961,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:02:21.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7014,7 +6986,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:01:12.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7039,7 +7011,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T05:04:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7049,7 +7021,7 @@
       "title": "2026中国民企500强出炉：新能源与储能制造力量持续崛起",
       "originalTitle": "2026中国民企500强出炉：新能源与储能制造力量持续崛起",
       "url": "https://mcn.solarbe.com/news/20260923/50029571.html",
-      "summary": "2026中国民企500强出炉：新能源与储能制造力量持续崛起 碳索储能网",
+      "summary": "2026中国民企500强出炉：新能源与储能制造力量持续崛起 mcn.solarbe.com",
       "whyItMatters": "储能；地区 中国；媒体 比亚迪储能",
       "topic": "energy-storage",
       "tags": [],
@@ -7064,82 +7036,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T01:07:18.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_f1b291e1ea75",
-      "title": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027",
-      "originalTitle": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027",
-      "url": "https://k.sina.com.cn/article_2342387077_8b9dfd8500101ha72.html?from=finance",
-      "summary": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027 k.sina.com.cn",
-      "whyItMatters": "储能；地区 欧盟；媒体 比亚迪储能",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "比亚迪储能",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-23T10:01:33.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_e47ecfb6ab57",
-      "title": "关注云计算50ETF东方红（562110），AI算力硬件权重较高",
-      "originalTitle": "关注云计算50ETF东方红（562110），AI算力硬件权重较高",
-      "url": "https://tidenews.com.cn/tmh_news.html?id=6ab4b694898fe40001aa4da1",
-      "summary": "关注云计算50ETF东方红（562110），AI算力硬件权重较高 潮新闻客户端",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 科华数据",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "科华数据",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T05:35:16.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_7690be654f82",
-      "title": "加拿大终止对华光伏“双反”，国内组件出口成本有望降低，光伏ETF博时(560310)跟踪指数小幅上涨",
-      "originalTitle": "加拿大终止对华光伏“双反”，国内组件出口成本有望降低，光伏ETF博时(560310)跟踪指数小幅上涨",
-      "url": "https://www.jiemian.com/article/15131383.html",
-      "summary": "加拿大终止对华光伏“双反”，国内组件出口成本有望降低，光伏ETF博时(560310)跟踪指数小幅上涨 Jiemian.com",
-      "whyItMatters": "光伏与风电；地区 加拿大；媒体 科华数据",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "加拿大",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "科华数据",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-23T03:03:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7164,7 +7061,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:40:51.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7189,63 +7086,13 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T14:02:37.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [
         {
           "name": "中东新能源项目",
           "url": "https://www.bestmag.co.uk/envision-morocco-first-large-scale-lfp-bess/"
         }
       ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_fb7137f9e8e2",
-      "title": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态",
-      "originalTitle": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态",
-      "url": "https://mcn.solarbe.com/news/20260924/50029693.html",
-      "summary": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态 碳索储能网",
-      "whyItMatters": "储能；地区 全球；媒体 固德威",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "固德威",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-24T06:34:10.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_550373383be3",
-      "title": "沙特ACWA电力公司大力推动PHL能源发展",
-      "originalTitle": "Saudi ACWA power makes big PHL energy push",
-      "url": "https://tribune.net.ph/2026/09/22/saudi-acwa-power-makes-big-phl-energy-push",
-      "summary": "Saudi ACWA power makes big PHL energy push Daily Tribune",
-      "whyItMatters": "其他能源动态；地区 沙特；媒体 ACWA Power",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "沙特",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "ACWA Power",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-22T20:28:52.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
       "wechat": false,
       "research": false
     },
@@ -7269,7 +7116,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T10:17:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7294,7 +7141,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T11:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7319,32 +7166,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:08:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_46ccca970fcd",
-      "title": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战",
-      "originalTitle": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战",
-      "url": "http://www.eeo.com.cn/2026/0923/1047105.shtml",
-      "summary": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战 eeo.com.cn",
-      "whyItMatters": "数据中心电力需求；地区 欧盟；媒体 AIDC 政策标准",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "欧盟",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "AIDC 政策标准",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-23T15:06:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7369,7 +7191,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T23:45:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_46ccca970fcd",
+      "title": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战",
+      "originalTitle": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战",
+      "url": "http://www.eeo.com.cn/2026/0923/1047105.shtml",
+      "summary": "【财经分析】从算力到电力：数据中心扩张给欧洲能源系统带来新挑战 eeo.com.cn",
+      "whyItMatters": "数据中心电力需求；地区 欧盟；媒体 AIDC 政策标准",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "欧盟",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "AIDC 政策标准",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-23T15:06:00.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7394,32 +7241,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T05:39:33.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_152c4ee86f96",
-      "title": "到2028年，美国数据中心可能拥有服务器，但无法运行它们",
-      "originalTitle": "By 2028, US Data Centers Could Have the Servers but Not the Power to Run Them",
-      "url": "https://insights.trendforce.com/p/us-data-center-power-gap",
-      "summary": "By 2028, US Data Centers Could Have the Servers but Not the Power to Run Them insights.trendforce.com",
-      "whyItMatters": "芯片、服务器与算力基础设施；地区 美国；媒体 DC Power Standards",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "DC Power Standards",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-22T09:02:58.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7444,32 +7266,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T15:40:42.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_abd896589f27",
-      "title": "美国人工智能的未来需要建筑许可",
-      "originalTitle": "America’s AI Future Needs a Building Permit",
-      "url": "https://www.nationalreview.com/corner/americas-ai-future-needs-a-building-permit/",
-      "summary": "America’s AI Future Needs a Building Permit National Review",
-      "whyItMatters": "数据中心电力需求；地区 美国；媒体 DC Power Infra",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "DC Power Infra",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-22T10:19:06.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7479,7 +7276,7 @@
       "title": "HYNET为混合交流/直流电网开发工具生态系统",
       "originalTitle": "HYNET develops tool ecosystem for hybrid AC/DC grids",
       "url": "https://www.enlit.world/library/hynet-develops-tool-ecosystem-for-hybrid-acdc-grids",
-      "summary": "HYNET develops tool ecosystem for hybrid AC/DC grids enlit.world",
+      "summary": "HYNET develops tool ecosystem for hybrid AC/DC grids Enlit World",
       "whyItMatters": "电网与并网；地区 全球；媒体 构网型 PCS 科研",
       "topic": "grid",
       "tags": [],
@@ -7494,7 +7291,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T14:55:39.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
@@ -7519,32 +7316,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T12:50:42.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": true
     },
     {
-      "id": "evt_5c9f0df525ba",
-      "title": "远景田庆军：储能安全是系统工程，六大能力缺一不可",
-      "originalTitle": "远景田庆军：储能安全是系统工程，六大能力缺一不可",
-      "url": "https://finance.sina.com.cn/roll/2026-09-23/doc-inisvivz5331795.shtml?froms=ggmp",
-      "summary": "远景田庆军：储能安全是系统工程，六大能力缺一不可 finance.sina.com.cn",
-      "whyItMatters": "储能；媒体 远景能源",
+      "id": "evt_f1b291e1ea75",
+      "title": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027",
+      "originalTitle": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027",
+      "url": "https://k.sina.com.cn/article_2342387077_8b9dfd8500101ha72.html?from=finance",
+      "summary": "2027年德国斯图加特欧洲电池展 The Battery Show Europe 2027 手机新浪网",
+      "whyItMatters": "储能；地区 欧盟；媒体 比亚迪储能",
       "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "欧盟",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2,
       "source": {
-        "name": "远景能源",
+        "name": "比亚迪储能",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-23T11:04:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-23T10:01:33.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7569,7 +7366,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T07:58:22.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_fb7137f9e8e2",
+      "title": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态",
+      "originalTitle": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态",
+      "url": "https://mcn.solarbe.com/news/20260924/50029693.html",
+      "summary": "云栖大会 | 携手阿里云，阳光源智深度融入全球顶尖算力生态 mcn.solarbe.com",
+      "whyItMatters": "芯片、服务器与算力基础设施；地区 全球；媒体 固德威",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "固德威",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T06:34:10.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7579,7 +7401,7 @@
       "title": "2027韩国电动车展：政府推快充扩容，多城仍陷充电荒。",
       "originalTitle": "2027韩国电动车展：政府推快充扩容，多城仍陷充电荒。",
       "url": "https://k.sina.com.cn/article_5845594646_15c6cb21600101dks0.html?from=auto",
-      "summary": "2027韩国电动车展：政府推快充扩容，多城仍陷充电荒。 k.sina.com.cn",
+      "summary": "2027韩国电动车展：政府推快充扩容，多城仍陷充电荒。 手机新浪网",
       "whyItMatters": "其他能源动态；地区 韩国；媒体 LG 新能源",
       "topic": "other-energy",
       "tags": [],
@@ -7594,7 +7416,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T05:57:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7619,7 +7441,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-24T02:58:57.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_5d9d13e2284f",
+      "title": "【涨停直击】签订数据中心相关业务大单，股价“一”字涨停",
+      "originalTitle": "【涨停直击】签订数据中心相关业务大单，股价“一”字涨停",
+      "url": "http://stock.10jqka.com.cn/20260924/c680250690.shtml",
+      "summary": "【涨停直击】签订数据中心相关业务大单，股价“一”字涨停 同花顺财经",
+      "whyItMatters": "数据中心电力需求；媒体 数据中心供电招标",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2,
+      "source": {
+        "name": "数据中心供电招标",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-24T04:50:32.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7644,7 +7491,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-23T10:10:03.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7669,32 +7516,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T23:54:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_a03f6278d192",
-      "title": "电力电子遇上数字能源：智光电气技术 IDEE 展会共探能源发展新局",
-      "originalTitle": "电力电子遇上数字能源：智光电气技术 IDEE 展会共探能源发展新局",
-      "url": "https://k.sina.com.cn/article_5953740931_162dee08306703za0q.html?cre=tianyi&mod=pcpager_auto&loc=1&r=0&rfunc=47&tj=cxvertical_pc_pager_spt&tr=174&from=tech",
-      "summary": "电力电子遇上数字能源：智光电气技术 IDEE 展会共探能源发展新局 k.sina.com.cn",
-      "whyItMatters": "其他能源动态；媒体 上能电气",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 1.5,
-      "source": {
-        "name": "上能电气",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-09-21T16:26:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7719,7 +7541,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T04:37:56.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7729,7 +7551,7 @@
       "title": "1200个电池模块自燃！加州储能电站第五次起火",
       "originalTitle": "1200个电池模块自燃！加州储能电站第五次起火",
       "url": "https://finance.sina.com.cn/roll/2026-09-19/doc-iniskccv2404891.shtml",
-      "summary": "1200个电池模块自燃！加州储能电站第五次起火 finance.sina.com.cn",
+      "summary": "1200个电池模块自燃！加州储能电站第五次起火 新浪财经",
       "whyItMatters": "储能；媒体 LG 新能源",
       "topic": "energy-storage",
       "tags": [],
@@ -7744,7 +7566,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T09:27:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7769,7 +7591,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T13:15:35.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7794,7 +7616,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-19T14:37:36.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7804,7 +7626,7 @@
       "title": "4 小时锂电难兜底：AI 算力倒逼科技巨头押注长时储能",
       "originalTitle": "4 小时锂电难兜底：AI 算力倒逼科技巨头押注长时储能",
       "url": "https://mcn.solarbe.com/news/20260922/50029505.html",
-      "summary": "4 小时锂电难兜底：AI 算力倒逼科技巨头押注长时储能 碳索储能网",
+      "summary": "4 小时锂电难兜底：AI 算力倒逼科技巨头押注长时储能 mcn.solarbe.com",
       "whyItMatters": "储能；媒体 数据中心储能备电",
       "topic": "energy-storage",
       "tags": [],
@@ -7819,7 +7641,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T00:28:44.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7844,7 +7666,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T14:42:07.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7869,7 +7691,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T07:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7894,7 +7716,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T22:25:03.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7919,7 +7741,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T15:03:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7929,7 +7751,7 @@
       "title": "阿布扎比大学EMERGE在阿联酋校园探索太阳能",
       "originalTitle": "Emerge, Abu Dhabi University explore solar at UAE campuses",
       "url": "https://renewablesnow.com/news/emerge-abu-dhabi-university-explore-solar-at-uae-campuses-1301482/",
-      "summary": "Emerge, Abu Dhabi University explore solar at UAE campuses Renewables Now",
+      "summary": "Emerge, Abu Dhabi University explore solar at UAE campuses renewablesnow.com",
       "whyItMatters": "光伏与风电；地区 阿联酋；媒体 阿联酋储能与AIDC",
       "topic": "solar-wind",
       "tags": [],
@@ -7944,7 +7766,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T09:21:09.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7954,7 +7776,7 @@
       "title": "欧洲电池储能系统（ BESS ） TIC市场规模、份额、趋势，增长分析报告， 2031年",
       "originalTitle": "europe Battery Energy Storage System (BESS) TIC Market Size, Share,Trends, Growth Analysis Report, 2031",
       "url": "https://www.marketsandmarkets.com/Market-Reports/geography/bess-tic-market/europe",
-      "summary": "europe Battery Energy Storage System (BESS) TIC Market Size, Share,Trends, Growth Analysis Report, 2031 marketsandmarkets.com",
+      "summary": "europe Battery Energy Storage System (BESS) TIC Market Size, Share,Trends, Growth Analysis Report, 2031 MarketsandMarkets",
       "whyItMatters": "储能；地区 欧盟；媒体 中东新能源项目",
       "topic": "energy-storage",
       "tags": [],
@@ -7969,7 +7791,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T16:41:52.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -7994,19 +7816,19 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T11:16:19.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_a87273657951",
-      "title": "算力狂奔，电力何以为继？",
-      "originalTitle": "算力狂奔，电力何以为继？",
-      "url": "http://paper.people.com.cn/zgnyb/pc/content/202609/21/content_30182775.html",
-      "summary": "算力狂奔，电力何以为继？ 人民日报",
-      "whyItMatters": "数据中心电力需求；媒体 科华数据",
-      "topic": "data-center-power",
+      "id": "evt_1b5ff08f84fe",
+      "title": "风电整机行业中报深度观察：盈利修复窗口开启，“两海”布局决胜中长期价值",
+      "originalTitle": "风电整机行业中报深度观察：盈利修复窗口开启，“两海”布局决胜中长期价值",
+      "url": "https://user.guancha.cn/main/content?id=1740991&s=fwtjgzwz",
+      "summary": "风电整机行业中报深度观察：盈利修复窗口开启，“两海”布局决胜中长期价值 风闻",
+      "whyItMatters": "光伏与风电；媒体 上能电气",
+      "topic": "solar-wind",
       "tags": [],
       "region": "未知",
       "entities": [],
@@ -8014,12 +7836,12 @@
       "impact": "unknown",
       "importance": 1.5,
       "source": {
-        "name": "科华数据",
+        "name": "上能电气",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-21T07:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-21T03:09:30.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -8044,7 +7866,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-21T12:59:17.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -8054,7 +7876,7 @@
       "title": "远景田庆军：中国储能面临从“规模领先”到“安全引领”的关键考验",
       "originalTitle": "远景田庆军：中国储能面临从“规模领先”到“安全引领”的关键考验",
       "url": "https://tech.ifeng.com/c/8wgbO061Rum",
-      "summary": "远景田庆军：中国储能面临从“规模领先”到“安全引领”的关键考验 凤凰网科技",
+      "summary": "远景田庆军：中国储能面临从“规模领先”到“安全引领”的关键考验 tech.ifeng.com",
       "whyItMatters": "储能；地区 中国；媒体 LG 新能源",
       "topic": "energy-storage",
       "tags": [],
@@ -8069,7 +7891,32 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-22T07:00:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_9f40c4d1edd1",
+      "title": "前10名 高能储存先进技术市场规模",
+      "originalTitle": "前10名 高能储存先进技术市场规模",
+      "url": "https://www.sphericalinsights.com/zh/blogs/top-10-high-power-energy-storage-advanced-technologies-market-companies-advancing-fast-response-and-grid-scale-storage",
+      "summary": "前10名 高能储存先进技术市场规模 Spherical Insights",
+      "whyItMatters": "储能；媒体 LG 新能源",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "LG 新能源",
+        "type": "media",
+        "isPrimary": false
+      },
+      "publishedAt": "2026-09-20T23:37:25.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -8094,19 +7941,19 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-20T20:16:00.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_2200d5d8a9d7",
-      "title": "半年报观中国动能｜投资近4000亿，算力需求井喷",
-      "originalTitle": "半年报观中国动能｜投资近4000亿，算力需求井喷",
-      "url": "https://www.cpnn.com.cn/news/hy/202609/t20260920_1916379.html",
-      "summary": "半年报观中国动能｜投资近4000亿，算力需求井喷 cpnn.com.cn",
-      "whyItMatters": "数据中心电力需求；地区 中国；媒体 数据中心供电招标",
-      "topic": "data-center-power",
+      "id": "evt_47a6c8c51cc8",
+      "title": "智冷向新，实力获奖 | 丹佛斯亮相第十八届中国冷暖产业发展峰会",
+      "originalTitle": "智冷向新，实力获奖 | 丹佛斯亮相第十八届中国冷暖产业发展峰会",
+      "url": "http://www.chinaiol.com/News/Content/202609/44_68650.html",
+      "summary": "智冷向新，实力获奖 | 丹佛斯亮相第十八届中国冷暖产业发展峰会 产业在线",
+      "whyItMatters": "冷却、UPS 与 PUE；地区 中国；媒体 AIDC 项目动态",
+      "topic": "cooling-pue",
       "tags": [],
       "region": "中国",
       "entities": [],
@@ -8114,12 +7961,12 @@
       "impact": "unknown",
       "importance": 1.5,
       "source": {
-        "name": "数据中心供电招标",
+        "name": "AIDC 项目动态",
         "type": "media",
         "isPrimary": false
       },
-      "publishedAt": "2026-09-20T07:30:27.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "publishedAt": "2026-09-20T07:22:16.000Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
@@ -8144,7 +7991,7 @@
         "isPrimary": false
       },
       "publishedAt": "2026-09-18T10:04:22.000Z",
-      "discoveredAt": "2026-09-25T09:02:43.008Z",
+      "discoveredAt": "2026-09-25T09:14:38.691Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
