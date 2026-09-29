@@ -1,0 +1,37 @@
+name: Daily Report Guard
+
+# 日报推送兜底：正常情况下 fetch-feeds 早晨构建（UTC 20:37）睡到北京
+# 08:00 准点推钉钉。但 GitHub 免费 runner 的 schedule 高峰期会延迟数小时
+# 甚至丢弃（2026-09-29 事故：迟到 3h40m，与手动补发并发撞车，双双死在
+# git push，日报一步没推）。守卫每天查两轮：
+#   08:13 —— 兜住「定时 run 被丢弃」：无成功推送且无在跑构建 → 自动补发；
+#   08:33 —— 兜住「08:13 时仍在跑 / 跑挂了」的情况。
+# 两轮都查到已推送则什么都不做（幂等）。
+
+on:
+  schedule:
+    # 北京时间 08:13 = UTC 00:13（故意避开整点高峰，见 fetch-feeds.yml 注释）
+    - cron: '13 0 * * *'
+    # 北京时间 08:33 = UTC 00:33
+    - cron: '33 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    permissions:
+      # 只需 dispatch fetch-feeds + 查询 runs/jobs，不动仓库内容
+      actions: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check daily report pushed, dispatch fetch-feeds if not
+        run: node scripts/guard-daily-report.mjs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
