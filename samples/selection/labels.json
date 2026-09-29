@@ -1,0 +1,1269 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-29T02:33:53.606Z",
+  "seed": 20260929,
+  "target": 180,
+  "note": "精选价值标注（内容质量升级方案 C-01）。decision: select|reject|either（该不该进每日精选 12 条；either=两可不计分母）；isMajorEvent: true|false|null（当天圈内大事件）；eventGroupId: 同一事件的条目填同一组号（dev/holdout 按事件组划分，防泄漏）；reason: 标注理由；confidence: high|medium|low。preAnnotation 仅为旧相关性标注的线索，不是本标注的结果。",
+  "labels": {
+    "q0001": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg003",
+      "reason": "",
+      "confidence": null
+    },
+    "q0002": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg008",
+      "reason": "",
+      "confidence": null
+    },
+    "q0003": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg014",
+      "reason": "",
+      "confidence": null
+    },
+    "q0004": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg002",
+      "reason": "",
+      "confidence": null
+    },
+    "q0005": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg004",
+      "reason": "",
+      "confidence": null
+    },
+    "q0006": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg001",
+      "reason": "",
+      "confidence": null
+    },
+    "q0007": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg009",
+      "reason": "",
+      "confidence": null
+    },
+    "q0008": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg018",
+      "reason": "",
+      "confidence": null
+    },
+    "q0009": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg012",
+      "reason": "",
+      "confidence": null
+    },
+    "q0010": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg013",
+      "reason": "",
+      "confidence": null
+    },
+    "q0011": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg017",
+      "reason": "",
+      "confidence": null
+    },
+    "q0012": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg015",
+      "reason": "",
+      "confidence": null
+    },
+    "q0013": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg030",
+      "reason": "",
+      "confidence": null
+    },
+    "q0014": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg027",
+      "reason": "",
+      "confidence": null
+    },
+    "q0015": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg020",
+      "reason": "",
+      "confidence": null
+    },
+    "q0016": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg023",
+      "reason": "",
+      "confidence": null
+    },
+    "q0017": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg028",
+      "reason": "",
+      "confidence": null
+    },
+    "q0018": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg029",
+      "reason": "",
+      "confidence": null
+    },
+    "q0019": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg024",
+      "reason": "",
+      "confidence": null
+    },
+    "q0020": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg035",
+      "reason": "",
+      "confidence": null
+    },
+    "q0021": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg031",
+      "reason": "",
+      "confidence": null
+    },
+    "q0022": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg027",
+      "reason": "",
+      "confidence": null
+    },
+    "q0023": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg022",
+      "reason": "",
+      "confidence": null
+    },
+    "q0024": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg021",
+      "reason": "",
+      "confidence": null
+    },
+    "q0025": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg026",
+      "reason": "",
+      "confidence": null
+    },
+    "q0026": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg033",
+      "reason": "",
+      "confidence": null
+    },
+    "q0027": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg041",
+      "reason": "",
+      "confidence": null
+    },
+    "q0028": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg052",
+      "reason": "",
+      "confidence": null
+    },
+    "q0029": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg046",
+      "reason": "",
+      "confidence": null
+    },
+    "q0030": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg043",
+      "reason": "",
+      "confidence": null
+    },
+    "q0031": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg051",
+      "reason": "",
+      "confidence": null
+    },
+    "q0032": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg037",
+      "reason": "",
+      "confidence": null
+    },
+    "q0033": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg044",
+      "reason": "",
+      "confidence": null
+    },
+    "q0034": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg050",
+      "reason": "",
+      "confidence": null
+    },
+    "q0035": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg039",
+      "reason": "",
+      "confidence": null
+    },
+    "q0036": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg047",
+      "reason": "",
+      "confidence": null
+    },
+    "q0037": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg042",
+      "reason": "",
+      "confidence": null
+    },
+    "q0038": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg048",
+      "reason": "",
+      "confidence": null
+    },
+    "q0039": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg053",
+      "reason": "",
+      "confidence": null
+    },
+    "q0040": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg038",
+      "reason": "",
+      "confidence": null
+    },
+    "q0041": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg045",
+      "reason": "",
+      "confidence": null
+    },
+    "q0042": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg058",
+      "reason": "",
+      "confidence": null
+    },
+    "q0043": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg057",
+      "reason": "",
+      "confidence": null
+    },
+    "q0044": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg056",
+      "reason": "",
+      "confidence": null
+    },
+    "q0045": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg066",
+      "reason": "",
+      "confidence": null
+    },
+    "q0046": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg075",
+      "reason": "",
+      "confidence": null
+    },
+    "q0047": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg071",
+      "reason": "",
+      "confidence": null
+    },
+    "q0048": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg073",
+      "reason": "",
+      "confidence": null
+    },
+    "q0049": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg074",
+      "reason": "",
+      "confidence": null
+    },
+    "q0050": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg069",
+      "reason": "",
+      "confidence": null
+    },
+    "q0051": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg068",
+      "reason": "",
+      "confidence": null
+    },
+    "q0052": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg064",
+      "reason": "",
+      "confidence": null
+    },
+    "q0053": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg061",
+      "reason": "",
+      "confidence": null
+    },
+    "q0054": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg017",
+      "reason": "",
+      "confidence": null
+    },
+    "q0055": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg078",
+      "reason": "",
+      "confidence": null
+    },
+    "q0056": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg091",
+      "reason": "",
+      "confidence": null
+    },
+    "q0057": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg086",
+      "reason": "",
+      "confidence": null
+    },
+    "q0058": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg077",
+      "reason": "",
+      "confidence": null
+    },
+    "q0059": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg088",
+      "reason": "",
+      "confidence": null
+    },
+    "q0060": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg080",
+      "reason": "",
+      "confidence": null
+    },
+    "q0061": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg087",
+      "reason": "",
+      "confidence": null
+    },
+    "q0062": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg076",
+      "reason": "",
+      "confidence": null
+    },
+    "q0063": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg105",
+      "reason": "",
+      "confidence": null
+    },
+    "q0064": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg093",
+      "reason": "",
+      "confidence": null
+    },
+    "q0065": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg098",
+      "reason": "",
+      "confidence": null
+    },
+    "q0066": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg104",
+      "reason": "",
+      "confidence": null
+    },
+    "q0067": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg103",
+      "reason": "",
+      "confidence": null
+    },
+    "q0068": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg108",
+      "reason": "",
+      "confidence": null
+    },
+    "q0069": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg099",
+      "reason": "",
+      "confidence": null
+    },
+    "q0070": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg100",
+      "reason": "",
+      "confidence": null
+    },
+    "q0071": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg095",
+      "reason": "",
+      "confidence": null
+    },
+    "q0072": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg096",
+      "reason": "",
+      "confidence": null
+    },
+    "q0073": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg094",
+      "reason": "",
+      "confidence": null
+    },
+    "q0074": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg109",
+      "reason": "",
+      "confidence": null
+    },
+    "q0075": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg097",
+      "reason": "",
+      "confidence": null
+    },
+    "q0076": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg107",
+      "reason": "",
+      "confidence": null
+    },
+    "q0077": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg101",
+      "reason": "",
+      "confidence": null
+    },
+    "q0078": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg005",
+      "reason": "",
+      "confidence": null
+    },
+    "q0079": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg006",
+      "reason": "",
+      "confidence": null
+    },
+    "q0080": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg007",
+      "reason": "",
+      "confidence": null
+    },
+    "q0081": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg016",
+      "reason": "",
+      "confidence": null
+    },
+    "q0082": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg011",
+      "reason": "",
+      "confidence": null
+    },
+    "q0083": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg010",
+      "reason": "",
+      "confidence": null
+    },
+    "q0084": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg025",
+      "reason": "",
+      "confidence": null
+    },
+    "q0085": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg034",
+      "reason": "",
+      "confidence": null
+    },
+    "q0086": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg032",
+      "reason": "",
+      "confidence": null
+    },
+    "q0087": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg019",
+      "reason": "",
+      "confidence": null
+    },
+    "q0088": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg049",
+      "reason": "",
+      "confidence": null
+    },
+    "q0089": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg040",
+      "reason": "",
+      "confidence": null
+    },
+    "q0090": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg036",
+      "reason": "",
+      "confidence": null
+    },
+    "q0091": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg055",
+      "reason": "",
+      "confidence": null
+    },
+    "q0092": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg059",
+      "reason": "",
+      "confidence": null
+    },
+    "q0093": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg054",
+      "reason": "",
+      "confidence": null
+    },
+    "q0094": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg060",
+      "reason": "",
+      "confidence": null
+    },
+    "q0095": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg062",
+      "reason": "",
+      "confidence": null
+    },
+    "q0096": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg072",
+      "reason": "",
+      "confidence": null
+    },
+    "q0097": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg067",
+      "reason": "",
+      "confidence": null
+    },
+    "q0098": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg065",
+      "reason": "",
+      "confidence": null
+    },
+    "q0099": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg070",
+      "reason": "",
+      "confidence": null
+    },
+    "q0100": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg063",
+      "reason": "",
+      "confidence": null
+    },
+    "q0101": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg092",
+      "reason": "",
+      "confidence": null
+    },
+    "q0102": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg084",
+      "reason": "",
+      "confidence": null
+    },
+    "q0103": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg079",
+      "reason": "",
+      "confidence": null
+    },
+    "q0104": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg090",
+      "reason": "",
+      "confidence": null
+    },
+    "q0105": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg081",
+      "reason": "",
+      "confidence": null
+    },
+    "q0106": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg089",
+      "reason": "",
+      "confidence": null
+    },
+    "q0107": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg082",
+      "reason": "",
+      "confidence": null
+    },
+    "q0108": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg083",
+      "reason": "",
+      "confidence": null
+    },
+    "q0109": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg085",
+      "reason": "",
+      "confidence": null
+    },
+    "q0110": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg106",
+      "reason": "",
+      "confidence": null
+    },
+    "q0111": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg092",
+      "reason": "",
+      "confidence": null
+    },
+    "q0112": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": "eg102",
+      "reason": "",
+      "confidence": null
+    },
+    "q0113": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0114": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0115": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0116": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0117": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0118": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0119": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0120": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0121": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0122": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0123": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0124": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0125": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0126": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0127": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0128": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0129": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0130": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0131": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0132": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0133": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0134": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0135": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0136": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0137": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0138": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0139": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0140": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0141": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0142": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0143": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0144": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0145": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0146": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0147": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0148": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0149": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0150": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0151": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0152": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0153": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0154": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0155": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0156": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0157": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0158": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0159": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0160": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0161": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0162": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0163": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0164": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0165": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0166": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0167": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0168": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0169": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0170": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0171": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0172": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0173": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0174": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0175": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0176": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0177": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0178": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0179": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    },
+    "q0180": {
+      "decision": null,
+      "isMajorEvent": null,
+      "eventGroupId": null,
+      "reason": "",
+      "confidence": null
+    }
+  }
+}

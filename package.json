@@ -9,6 +9,7 @@
     "check": "node scripts/check-sources.mjs",
     "samples": "node scripts/extract-samples.mjs --days=7",
     "annotate": "node scripts/build-annotation-set.mjs",
+    "annotate:selection": "node scripts/build-selection-set.mjs && node scripts/build-selection-review-page.mjs",
     "analyze": "node scripts/analyze-annotations.mjs",
     "baseline": "node scripts/build-baseline.mjs",
     "eval:filter": "node scripts/eval-filter.mjs",
