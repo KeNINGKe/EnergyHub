@@ -2,10 +2,12 @@ name: Fetch RSS Feeds
 
 on:
   schedule:
-    # 北京时间每天 05:00 = UTC 21:00（前一天）
-    - cron: '0 21 * * *'
-    # 北京时间每天 12:00 = UTC 04:00
-    - cron: '0 4 * * *'
+    # 北京时间每天 04:37 = UTC 20:37（前一天）。故意避开整点：GitHub 免费
+    # runner 在整点/高峰时段拥堵严重，09-28 的 UTC 21:00 定时 run 直接被
+    # 丢弃导致当日日报未发。构建完成后仍会睡到北京 08:00 准点推送。
+    - cron: '37 20 * * *'
+    # 北京时间每天 11:43 = UTC 03:43（同样避开整点）
+    - cron: '43 3 * * *'
   workflow_dispatch:
 
 jobs:
@@ -82,17 +84,17 @@ jobs:
         # 完成。推送定在 08:00 整：构建早于 08:00 完成就在此睡到准点，晚于
         # 08:00 完成则脚本直接放行。仅早晨窗口等待；手动 dispatch 不等待，
         # 便于随时测试。等待失败也放行（后面照常推送）。
-        if: github.event.schedule == '0 21 * * *'
+        if: github.event.schedule == '37 20 * * *'
         continue-on-error: true
         run: node scripts/lib/wait-until.mjs 08:00
 
       - name: Push daily hot list to DingTalk
-        # 每天只推一次：早晨构建窗口（UTC 21:00）之后、北京时间 08:00 准点
+        # 每天只推一次：早晨构建窗口（UTC 20:37）之后、北京时间 08:00 准点
         # 推送当天最新数据；手动 workflow_dispatch 也推送（不等待），便于测试。
         # 推送是 best-effort：失败不阻塞抓取/部署（见 continue-on-error）。
         if: |
           github.event_name == 'workflow_dispatch' ||
-          github.event.schedule == '0 21 * * *'
+          github.event.schedule == '37 20 * * *'
         continue-on-error: true
         run: node scripts/notify-dingtalk.mjs
         env:
