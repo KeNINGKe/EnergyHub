@@ -646,7 +646,89 @@ export async function fetchAllFeeds(feeds) {
 // ---- 微信公众号文章种子文件 ----
 // feeds/wechat-articles.json 由用户按需维护：有值得抓的公众号文章链接就丢进去，
 // 采集时只抓未抓取（fetched=false）的条目，抓完回写标记；已抓取记录保留 3 天。
+// 额外标记（借鉴 AIHOT mp.ts）：
+//   backfill —— 首次抓到时原文发布已超 7 天：按历史归档，不注入 items 流
+//               （不进「今天」、不推送），只留记录等 3 天清理；
+//   attempts/failed —— 网络失败重试计数，达 3 次标记 failed 终态放弃
+//               （不再重试、不注入），防止坏链接每次构建空转。
 export const WECHAT_SEEDS_PATH = 'feeds/wechat-articles.json';
+
+/** 首次发现时原文已发布超过该时长的按历史回灌处理（不进今天、不推送）。 */
+export const SEED_BACKFILL_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+/** 种子网络失败重试上限，达到后终态放弃。 */
+export const SEED_MAX_FETCH_ATTEMPTS = 3;
+
+/** 由种子已知信息构造最小链接卡条目（正文未取得时先入库，标题/链接仍可渲染）。 */
+function minimalSeedItem(a) {
+  return {
+    title: a.title,
+    link: a.url,
+    guid: a.url,
+    pubDate: a.pubDate || null,
+    summary: a.summary || '',
+    source: a.sourceName || '微信公众号',
+    sourceUrl: null,
+    wechat: true
+  };
+}
+
+/**
+ * 种子抓取成功后的注入决策（纯函数，便于测试）：
+ * 原文发布时间已知且距 now 超 7 天的条目按历史回灌跳过（全部跳过时标记
+ * a.backfill）；发布时间未知不视为旧文（未知≠一致，交给精选时效窗把关）。
+ * 调用方负责回填 a.title/a.pubDate/a.summary 等元数据。
+ * @returns {Array} 应注入 items 流的条目
+ */
+export function applySeedParseResult(a, parsed, nowMs = Date.now()) {
+  const items = [];
+  for (const it of parsed || []) {
+    const eff = it.pubDate || a.pubDate;
+    const t = eff ? new Date(eff).getTime() : NaN;
+    if (!isNaN(t) && nowMs - t > SEED_BACKFILL_MAX_AGE_MS) continue;
+    items.push({
+      title: it.title,
+      link: it.link || a.url,
+      guid: a.url,
+      pubDate: eff || null,
+      summary: it.summary || '',
+      source: a.sourceName || '微信公众号',
+      sourceUrl: null,
+      wechat: true
+    });
+  }
+  if (!items.length) a.backfill = true;
+  return items;
+}
+
+/**
+ * 网络失败记账（纯函数，便于测试）：尝试数 +1，达上限标记终态放弃；
+ * 未达上限且种子已知标题时返回最小链接卡，正文留待下次构建补抓。
+ * @returns {{gaveUp: boolean, item: object|null}}
+ */
+export function recordSeedFetchError(a) {
+  a.attempts = (a.attempts || 0) + 1;
+  if (a.attempts >= SEED_MAX_FETCH_ATTEMPTS) {
+    a.fetched = true;
+    a.failed = true;
+    return { gaveUp: true, item: null };
+  }
+  return { gaveUp: false, item: a.title ? minimalSeedItem(a) : null };
+}
+
+/** 已抓取种子的回填条目；放弃（failed）与历史回灌（backfill）只留记录不回填。 */
+export function seedReinjectItem(a) {
+  if (a.failed || a.backfill) return null;
+  return {
+    title: a.title || '无标题',
+    link: a.url,
+    guid: a.url,
+    pubDate: a.pubDate || null,
+    summary: a.summary || '',
+    source: a.sourceName || '微信公众号',
+    sourceUrl: null,
+    wechat: true
+  };
+}
 
 /** 支持测试用环境变量覆盖路径。 */
 function seedsPath() {
@@ -670,6 +752,8 @@ export async function saveWechatSeeds(seed) {
  * 抓取种子文件中的未抓取公众号文章，抓完回写 fetched 标记，并清理 3 天前的已抓取记录。
  * 保留期内的已抓取种子也回填 item 流（用抓取时存下的 title/pubDate/summary），
  * 保证公众号内容在重建后不消失（否则 V2 构建只注入一次，重跑即丢）。
+ * 正文获取与旧文规则见上方纯函数注释：失败重试上限 3 次（有标题先注入最小链接卡），
+ * 首次抓到已超 7 天的原文按历史回灌不注入。
  * @returns {Promise<Array>} 注入的 item 流（含本次新抓 + 保留期回填，可注入 rawItems）
  */
 export async function fetchWechatSeeds(seed) {
@@ -680,24 +764,20 @@ export async function fetchWechatSeeds(seed) {
   let done = 0;
   let pruned = 0;
   let reinjected = 0;
+  let backfilled = 0;
+  let gaveUp = 0;
 
   for (const a of seed.articles || []) {
     if (a.fetched) {
       const added = a.addedAt ? new Date(a.addedAt).getTime() : 0;
       if (!isNaN(added) && added >= cutoff) {
         remaining.push(a);
-        // 回填已抓取种子（无 summary 时留空，title/link 即可渲染链接卡）
-        items.push({
-          title: a.title || '无标题',
-          link: a.url,
-          guid: a.url,
-          pubDate: a.pubDate || null,
-          summary: a.summary || '',
-          source: a.sourceName || '微信公众号',
-          sourceUrl: null,
-          wechat: true
-        });
-        reinjected++;
+        // 回填已抓取种子（放弃/历史回灌的只留记录不回填）
+        const item = seedReinjectItem(a);
+        if (item) {
+          items.push(item);
+          reinjected++;
+        }
       } else {
         pruned++;
       }
@@ -723,40 +803,43 @@ export async function fetchWechatSeeds(seed) {
         }
       }
       if (!parsed || !parsed.length) {
-        // 页面可访问但无有效正文（已删除/失效/需关注）：标记 fetched，避免每次构建重试
+        // 页面可访问但无有效正文（已删除/失效/需关注）：不重试；已知标题则注入
+        // 最小链接卡（正文缺失也入库，借鉴 AIHOT 列表先行），否则只留记录跳过
         a.fetched = true;
-        console.warn(`[微信/转载] ${a.url.slice(0, 60)} 无有效正文，已标记跳过`);
-      } else {
-        for (const it of parsed) {
-          items.push({
-            title: it.title,
-            link: it.link || a.url,
-            guid: a.url,
-            pubDate: it.pubDate || a.pubDate || null,
-            summary: it.summary || '',
-            source: a.sourceName || '微信公众号',
-            sourceUrl: null,
-            wechat: true
-          });
+        if (a.title) {
+          items.push(minimalSeedItem(a));
+          done++;
+        } else {
+          console.warn(`[微信/转载] ${a.url.slice(0, 60)} 无有效正文且无标题，已标记跳过`);
         }
+      } else {
         if (!a.title && parsed[0]?.title) a.title = parsed[0].title;
         if (!a.pubDate && parsed[0]?.pubDate) a.pubDate = parsed[0].pubDate;
         if (parsed[0]?.summary) a.summary = parsed[0].summary;
         if (parsed[0]?.author) a.author = parsed[0].author;
+        const injected = applySeedParseResult(a, parsed, now.getTime());
+        items.push(...injected);
         a.fetched = true;
-        done++;
+        if (a.backfill) backfilled++; else done++;
       }
     } catch (err) {
-      // 网络错误：不标记，下次构建重试
-      console.error(`[微信/转载抓取失败] ${a.url.slice(0, 60)}: ${err.message}`);
+      // 网络错误：记一次尝试，达上限终态放弃；未达上限且有标题时先注入最小链接卡
+      const { gaveUp: giveUp, item } = recordSeedFetchError(a);
+      if (item) items.push(item);
+      if (giveUp) {
+        gaveUp++;
+        console.error(`[微信/转载] ${a.url.slice(0, 60)} 连续 ${SEED_MAX_FETCH_ATTEMPTS} 次抓取失败，放弃：${err.message}`);
+      } else {
+        console.error(`[微信/转载抓取失败] ${a.url.slice(0, 60)}（第 ${a.attempts} 次，将重试）: ${err.message}`);
+      }
     }
     remaining.push(a);
     await sleep(1200);
   }
 
-  if (items.length || done || pruned || reinjected) {
+  if (items.length || done || pruned || reinjected || backfilled || gaveUp) {
     await saveWechatSeeds({ version: '1.0.0', updatedAt: now.toISOString(), articles: remaining });
-    console.log(`[微信公众号种子] 本次新抓 ${done} 条 + 保留期回填 ${reinjected} 条 → 注入 ${items.length} 条，清理过期 ${pruned} 条（保留 ${remaining.length} 条记录）`);
+    console.log(`[微信公众号种子] 本次新抓 ${done} 条 + 保留期回填 ${reinjected} 条 → 注入 ${items.length} 条，历史回灌 ${backfilled} 条、放弃 ${gaveUp} 条，清理过期 ${pruned} 条（保留 ${remaining.length} 条记录）`);
   }
   return items;
 }

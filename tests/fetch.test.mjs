@@ -5,7 +5,8 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import {
   collectFeeds, parseJinaArticle, parseJinaPage, parseWechatArticleHtml, loadSources, fetchWechatSeeds,
-  isWechatArticleUrl, parseGenericPageHtml, stripSearchSuffix, xmlText
+  isWechatArticleUrl, parseGenericPageHtml, stripSearchSuffix, xmlText,
+  applySeedParseResult, recordSeedFetchError, seedReinjectItem
 } from '../scripts/lib/fetch.mjs';
 
 const data = await loadSources();
@@ -257,4 +258,87 @@ test('fetchWechatSeeds：保留期内已抓取种子回填 items，清理 3 天�
     await rm(dir, { recursive: true, force: true });
     delete process.env.WECHAT_SEEDS_PATH;
   }
+});
+
+test('fetchWechatSeeds：放弃(failed)与历史回灌(backfill)的已抓取种子只留记录不回填', async () => {
+  const dir = await mkdtemp(path.join(tmpdir(), 'wechat-seed-'));
+  const file = path.join(dir, 'wechat-articles.json');
+  process.env.WECHAT_SEEDS_PATH = file;
+  try {
+    const recentAt = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+    const seed = {
+      version: '1.0.0', updatedAt: null,
+      articles: [
+        { sourceName: '失败源', url: 'https://mp.weixin.qq.com/s/dead', addedAt: recentAt, fetched: true, failed: true, attempts: 3 },
+        { sourceName: '旧文源', url: 'https://mp.weixin.qq.com/s/oldart', addedAt: recentAt, fetched: true, backfill: true, title: '半年前的文章', pubDate: '2026-03-01T00:00:00.000Z' },
+        { sourceName: '正常源', url: 'https://mp.weixin.qq.com/s/ok', addedAt: recentAt, fetched: true, title: '正常文章', pubDate: new Date().toISOString(), summary: '摘要' }
+      ]
+    };
+    const items = await fetchWechatSeeds(seed);
+    assert.equal(items.length, 1, '只有正常源回填');
+    assert.equal(items[0].source, '正常源');
+    const saved = JSON.parse(await readFile(file, 'utf8'));
+    assert.equal(saved.articles.length, 3, '三条记录都保留（3 天窗口内），只是不回填');
+  } finally {
+    await rm(dir, { recursive: true, force: true });
+    delete process.env.WECHAT_SEEDS_PATH;
+  }
+});
+
+test('applySeedParseResult：原文发布超 7 天按历史回灌跳过，未知日期不视为旧文', () => {
+  const now = Date.now();
+  const day = 24 * 60 * 60 * 1000;
+  // 8 天前发布 → 回灌跳过
+  let a = { url: 'https://mp.weixin.qq.com/s/x', sourceName: '源' };
+  let items = applySeedParseResult(a, [{ title: '旧文', pubDate: new Date(now - 8 * day).toISOString(), summary: 's' }], now);
+  assert.equal(items.length, 0, '超 7 天不注入');
+  assert.equal(a.backfill, true, '标记 backfill');
+  // 3 天前发布 → 正常注入
+  a = { url: 'https://mp.weixin.qq.com/s/y', sourceName: '源' };
+  items = applySeedParseResult(a, [{ title: '新文', pubDate: new Date(now - 3 * day).toISOString() }], now);
+  assert.equal(items.length, 1);
+  assert.equal(items[0].title, '新文');
+  assert.equal(a.backfill, undefined);
+  // 无抓到日期但有种子自带旧日期 → 用生效日期判定，同样回灌
+  a = { url: 'https://mp.weixin.qq.com/s/z', sourceName: '源', pubDate: new Date(now - 30 * day).toISOString() };
+  items = applySeedParseResult(a, [{ title: '自带旧日期' }], now);
+  assert.equal(items.length, 0, '种子自带旧 pubDate 也按旧文处理');
+  // 日期完全未知 → 不注入判断为旧文（未知≠旧文，交精选时效窗把关）
+  a = { url: 'https://mp.weixin.qq.com/s/w', sourceName: '源' };
+  items = applySeedParseResult(a, [{ title: '无日期文章' }], now);
+  assert.equal(items.length, 1, '无日期文章正常注入');
+  assert.equal(items[0].pubDate, null);
+});
+
+test('recordSeedFetchError：重试计数与终态放弃；有标题返回最小链接卡', () => {
+  // 第 1、2 次失败：未放弃；有标题时返回最小链接卡
+  let a = { url: 'https://mp.weixin.qq.com/s/e', title: '已知标题', sourceName: '源' };
+  let r = recordSeedFetchError(a);
+  assert.equal(r.gaveUp, false);
+  assert.equal(a.attempts, 1);
+  assert.ok(r.item, '有标题 → 最小链接卡');
+  assert.equal(r.item.title, '已知标题');
+  assert.equal(r.item.wechat, true);
+  r = recordSeedFetchError(a);
+  assert.equal(r.gaveUp, false);
+  assert.equal(a.fetched, undefined, '未达上限不标记 fetched，下次重试');
+  // 第 3 次失败：终态放弃
+  r = recordSeedFetchError(a);
+  assert.equal(r.gaveUp, true);
+  assert.equal(a.fetched, true);
+  assert.equal(a.failed, true);
+  assert.equal(r.item, null);
+  // 无标题时不注入链接卡
+  const b = { url: 'https://mp.weixin.qq.com/s/n' };
+  r = recordSeedFetchError(b);
+  assert.equal(r.item, null);
+  assert.equal(b.attempts, 1);
+});
+
+test('seedReinjectItem：正常种子回填条目，failed/backfill 返回 null', () => {
+  const ok = seedReinjectItem({ url: 'u', title: 't', sourceName: 's', pubDate: 'p', summary: 'm' });
+  assert.equal(ok.title, 't');
+  assert.equal(ok.source, 's');
+  assert.equal(seedReinjectItem({ url: 'u', failed: true }), null);
+  assert.equal(seedReinjectItem({ url: 'u', backfill: true }), null);
 });
