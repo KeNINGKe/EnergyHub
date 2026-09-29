@@ -11,6 +11,12 @@
  *   TYPESAFE_API_KEY    TypeSafe API 密钥（apikey_ 前缀；未配置则整体跳过，行为同旧版）
  *   JEV_REVIEW=off      显式关闭 Jev 全部介入
  *   JEV_RESCUE_THRESHOLD  捞回阈值，relevant 概率 ≥ 该值才捞回（默认 0.65，校准见 scripts/jev-calibrate.mjs）
+ *   JEV_FALLBACK_BASE_URL / JEV_FALLBACK_API_KEY / JEV_FALLBACK_MODEL
+ *                       Plan B 备胎（OpenAI 兼容网关，如 LiteLLM）。Jev 调用失败
+ *                       （限流/欠费/服务不可用）时自动降级：问题结构翻译成提示词，
+ *                       应答解析回 Jev answers 同构格式，三处调用点零改动。
+ *                       默认模型 Jereh-qwen3.5-flash-no-think（实测 1~2s、概率两极
+ *                       分布，0.65 阈值可直接沿用；备胎转正时应重跑校准）。
  *
  * 传输（2026-09-21 由 Vercel AI Gateway 免费档切换为直连）：
  *   - 免费档网关对该模型限流极紧（并发 3 连发约 4 条即封、封锁数分钟），
@@ -93,6 +99,137 @@ async function callJev(payload) {
 
 const isRateLimit = (e) => e?.statusCode === 429 || e?.statusCode === 529 || /rate.?limit/i.test(String(e?.message || e));
 
+// ---- Plan B 备胎：OpenAI 兼容网关（LiteLLM 等） ----
+// Jev 失败时降级。备胎是普通 LLM：问题结构翻译成提示词（buildFallbackPrompt），
+// 应答 JSON 解析回 Jev answers 同构格式（parseFallbackContent），下游零改动。
+const FALLBACK_MODEL_DEFAULT = 'Jereh-qwen3.5-flash-no-think';
+
+/** 备胎配置（env 运行时读取，便于测试覆盖）。 */
+export function fallbackConfig() {
+  return {
+    baseUrl: process.env.JEV_FALLBACK_BASE_URL || '',
+    apiKey: process.env.JEV_FALLBACK_API_KEY || '',
+    model: process.env.JEV_FALLBACK_MODEL || FALLBACK_MODEL_DEFAULT,
+  };
+}
+
+/** 备胎是否已配置。 */
+export function fallbackConfigured() {
+  const c = fallbackConfig();
+  return Boolean(c.baseUrl && c.apiKey);
+}
+
+/**
+ * 把 Jev 问题结构翻译成备胎 LLM 提示词（纯函数，便于测试）。
+ * noul → {"<id>": {"value": bool, "probability": 0~1}}；
+ * choice → {"<id>": {"choice": "选项 id"}}。
+ */
+export function buildFallbackPrompt(payload) {
+  const parts = [
+    '你是自动判定程序。根据「内容」逐条回答「问题」，只输出一个 JSON 对象，不要任何解释或其他文字。',
+    '',
+    '【内容】',
+    JSON.stringify(payload.state ?? {}),
+    '',
+    '【问题】',
+  ];
+  const fmt = [];
+  for (const [id, q] of Object.entries(payload.questions || {})) {
+    if (q.type === 'noul') {
+      parts.push(`- ${id}：${q.instructions || ''} 判 true 的标准：${q.criteria?.true ?? ''}；判 false 的标准：${q.criteria?.false ?? ''}。`);
+      fmt.push(`"${id}": {"value": true或false, "probability": 0~1 的 true 概率}`);
+    } else if (q.type === 'choice') {
+      const opts = Object.entries(q.criteria || {}).map(([k, v]) => `${k}=${v}`).join('；');
+      parts.push(`- ${id}：${q.instructions || ''} 选项：${opts}。`);
+      fmt.push(`"${id}": {"choice": "选项 id"}`);
+    }
+  }
+  parts.push('', `【输出格式】\n{${fmt.join(', ')}}`);
+  return parts.join('\n');
+}
+
+/**
+ * 解析备胎应答为 Jev answers 同构结构（纯函数，便于测试）。
+ * 容忍 markdown 代码围栏与前后杂文字；任一问题缺失/非法 → 整体 null
+ * （与 Jev 失败同路径：该条维持原判定）。
+ */
+export function parseFallbackContent(content, payload) {
+  const m = String(content || '').match(/\{[\s\S]*\}/);
+  if (!m) return null;
+  let obj;
+  try { obj = JSON.parse(m[0]); } catch { return null; }
+  const answers = {};
+  for (const [id, q] of Object.entries(payload.questions || {})) {
+    const a = obj[id];
+    if (!a || typeof a !== 'object') return null;
+    if (q.type === 'noul') {
+      const p = Number(a.probability);
+      if (!Number.isFinite(p) || p < 0 || p > 1) return null;
+      answers[id] = { noul: p };
+    } else if (q.type === 'choice') {
+      if (!a.choice || !(q.criteria || {})[a.choice]) return null;
+      answers[id] = { choice: a.choice };
+    } else {
+      return null;
+    }
+  }
+  return { answers };
+}
+
+/** 调备胎网关（OpenAI 兼容 chat/completions），返回 Jev 同构 result 或抛错。 */
+async function callFallback(payload, cfg) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  try {
+    const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${cfg.apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: cfg.model,
+        messages: [{ role: 'user', content: buildFallbackPrompt(payload) }],
+        temperature: 0,
+        max_tokens: 300,
+      }),
+      signal: ctrl.signal,
+    });
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      const e = new Error(`fallback api ${res.status}: ${body.slice(0, 200)}`);
+      e.statusCode = res.status;
+      throw e;
+    }
+    const json = await res.json();
+    const content = json?.choices?.[0]?.message?.content;
+    const parsed = parseFallbackContent(content, payload);
+    if (!parsed) throw new Error(`fallback 应答无法解析: ${String(content).slice(0, 120)}`);
+    return parsed;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+let fallbackWarned = false;
+
+/**
+ * 判定入口：先 Jev，失败且备胎已配置时降级备胎（限流/欠费/服务不可用/超时）。
+ * 备胎同样失败则抛出，由 runPool 按既有容错处理。
+ */
+async function callJudge(payload) {
+  try {
+    return await callJev(payload);
+  } catch (e) {
+    if (!fallbackConfigured()) throw e;
+    if (!fallbackWarned) {
+      fallbackWarned = true;
+      console.warn(`Jev 调用失败，本次构建降级 Plan B 备胎（${fallbackConfig().model}）：${String(e?.message || e).slice(0, 150)}`);
+    }
+    return await callFallback(payload, fallbackConfig());
+  }
+}
+
 /**
  * 单条判定：relevant 布尔 + 主题 Choice，一次请求并行回答。
  * 出错时抛出（含限流/超时错误），由调用方决定退避/放弃。
@@ -105,7 +242,7 @@ export async function reviewOne(item, enums) {
   };
   if (!state.title && !state.summary) return null;
 
-  const result = await callJev({
+  const result = await callJudge({
     model: MODEL,
     state,
     questions: {
@@ -223,7 +360,7 @@ export async function reviewTopic(item, enums) {
   };
   if (!state.title && !state.summary) return null;
 
-  const result = await callJev({
+  const result = await callJudge({
     model: MODEL,
     state,
     questions: {
@@ -263,7 +400,7 @@ export async function reviewPair(a, b) {
   });
   const state = { first: brief(a), second: brief(b) };
 
-  const result = await callJev({
+  const result = await callJudge({
     model: MODEL,
     state,
     questions: {

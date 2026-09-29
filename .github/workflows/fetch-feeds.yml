@@ -45,6 +45,11 @@ jobs:
           # 2026-09-21 由 Vercel AI Gateway 免费档（限流极紧）切换为直连
           # （实测 4 并发无 429），代码按并发池+退避+8min 预算处理。
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          # Jev 备胎（Plan B，OpenAI 兼容网关）：Jev 失败（限流/欠费/不可用）时
+          # 自动降级，问题结构翻译成提示词、应答解析回同构格式。不配置则
+          # 备胎关闭，行为不变。URL 也是内部服务地址，一并放 secret。
+          JEV_FALLBACK_BASE_URL: ${{ secrets.JEV_FALLBACK_BASE_URL }}
+          JEV_FALLBACK_API_KEY: ${{ secrets.JEV_FALLBACK_API_KEY }}
 
       - name: Commit and push
         id: commit
