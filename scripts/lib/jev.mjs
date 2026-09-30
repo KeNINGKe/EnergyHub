@@ -17,6 +17,16 @@
  *                       应答解析回 Jev answers 同构格式，三处调用点零改动。
  *                       默认模型 Jereh-qwen3.5-flash-no-think（实测 1~2s、概率两极
  *                       分布，0.65 阈值可直接沿用；备胎转正时应重跑校准）。
+ *   JEV_REPLAY_FILE / JEV_RECORD_FILE
+ *                       固定回执夹具（阶段 A 基线回放，AIHOT_IMPLEMENTATION_PLAN §4）。
+ *                       两者互斥，且都不能与 TYPESAFE_API_KEY 半在线混用（record 除外）。
+ *                       REPLAY：离线回放已录制的判定回执，绝不发网络请求；未命中
+ *                       硬失败（静默降级会让基线无感知漂移）。
+ *                       RECORD：真实调用后把回执原子落盘。记录的是本次实际使用的
+ *                       回执——无直连 key 且备胎（JEV_FALLBACK_*）已配置时直接走备胎，
+ *                       夹具 header 的 source 字段标注来源（jev-direct / fallback:<模型>）。
+ *                       key = canonicalJson(payload) 的 sha256 前 16 位，payload 变
+ *                       （提示词/enums/输入）即失效需重录。
  *
  * 传输（2026-09-21 由 Vercel AI Gateway 免费档切换为直连）：
  *   - 免费档网关对该模型限流极紧（并发 3 连发约 4 条即封、封锁数分钟），
@@ -32,7 +42,9 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { pathToFileURL, fileURLToPath } from 'node:url';
+import { canonicalJson } from './digest.mjs';
 
 const API_URL = 'https://api.typesafe.ai/v1/systemone';
 const MODEL = 'jev-latest';
@@ -44,9 +56,9 @@ const TIMEOUT_MS = 20_000;         // 单条超时；超时视为「无 verdict�
 
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
-/** Jev 复审是否启用（有 key 且未被显式关闭）。 */
+/** Jev 复审是否启用（有 key、离线回放夹具或录制模式，且未被显式关闭）。 */
 export function jevConfigured() {
-  return Boolean(process.env.TYPESAFE_API_KEY) && process.env.JEV_REVIEW !== 'off';
+  return Boolean(process.env.TYPESAFE_API_KEY || process.env.JEV_REPLAY_FILE || process.env.JEV_RECORD_FILE) && process.env.JEV_REVIEW !== 'off';
 }
 
 /** 捞回阈值（可通过 JEV_RESCUE_THRESHOLD 覆盖）。 */
@@ -191,7 +203,9 @@ async function callFallback(payload, cfg) {
         model: cfg.model,
         messages: [{ role: 'user', content: buildFallbackPrompt(payload) }],
         temperature: 0,
-        max_tokens: 300,
+        // 带 reasoning 的模型（如 glm-5.3-flash）思维链会先烧输出预算，
+        // 300 会把 content 挤成 null；1000 足够覆盖推理+JSON（实测 <$0.0001/条）
+        max_tokens: 1000,
       }),
       signal: ctrl.signal,
     });
@@ -202,9 +216,13 @@ async function callFallback(payload, cfg) {
       throw e;
     }
     const json = await res.json();
-    const content = json?.choices?.[0]?.message?.content;
+    const choice = json?.choices?.[0];
+    const content = choice?.message?.content;
     const parsed = parseFallbackContent(content, payload);
-    if (!parsed) throw new Error(`fallback 应答无法解析: ${String(content).slice(0, 120)}`);
+    if (!parsed) {
+      const hint = choice?.finish_reason === 'length' ? '（finish_reason=length：输出被 max_tokens 截断）' : '';
+      throw new Error(`fallback 应答无法解析${hint}: ${String(content).slice(0, 120)}`);
+    }
     return parsed;
   } finally {
     clearTimeout(timer);
@@ -213,20 +231,165 @@ async function callFallback(payload, cfg) {
 
 let fallbackWarned = false;
 
+// ---- 固定回执夹具（阶段 A 基线回放，AIHOT_IMPLEMENTATION_PLAN §4）----
+// 回放离线复现录制回执；录制把真实回执落盘。key 稳定的前提是 payload 由
+// 字面量构造（键序确定）+ canonicalJson 再排序兜底。payload 不含 API key
+// （key 只出现在 HTTP header），夹具天然脱敏。
+
+/** 夹具条目 key：canonicalJson(payload) 的 sha256 前 16 位。 */
+export function fixtureKey(payload) {
+  return crypto.createHash('sha256').update(canonicalJson(payload)).digest('hex').slice(0, 16);
+}
+
+const FIXTURE_SCHEMA_VERSION = 1;
+
+/** 读取并校验夹具文件，返回完整文档 {schemaVersion, recordedAt, model, entries}。 */
+export async function loadFixtureEntries(file) {
+  let doc;
+  try {
+    doc = JSON.parse(await fs.readFile(file, 'utf8'));
+  } catch (e) {
+    throw new Error(`Jev 夹具文件不可读（${file}）：${e.message}`);
+  }
+  if (doc?.schemaVersion !== FIXTURE_SCHEMA_VERSION || !doc || typeof doc.entries !== 'object' || Array.isArray(doc.entries)) {
+    throw new Error(`Jev 夹具文件格式非法（${file}）：期望 {schemaVersion:${FIXTURE_SCHEMA_VERSION}, entries:{}}`);
+  }
+  return doc;
+}
+
+// 模块级夹具状态（按 env 路径缓存；测试用 _resetFixtureState 清空）。
+let fixtureState = null;
+
+/** 清空夹具缓存与写入错误（测试隔离/换日期用：改 env 后必须调用）。 */
+export function _resetFixtureState() {
+  fixtureState = null;
+  recordWriteError = null;
+}
+
+async function replayEntries(replayFile) {
+  if (fixtureState?.path === replayFile) return fixtureState.doc.entries;
+  const doc = await loadFixtureEntries(replayFile);
+  fixtureState = { path: replayFile, doc };
+  return doc.entries;
+}
+
+// 录制写入串行链：runPool 并发下避免整写竞态（后写覆盖前写丢条目）。
+// 单次写失败（如 Windows 文件锁 EPERM）不得 poison 整条链让后续静默跳过——
+// 记住首个错误，链继续跑；编排脚本（build-quality-baseline）在每日结束时
+// 校验夹具文件真实存在且有条目，杜绝「报成功实际没落盘」。
+let recordWriteChain = Promise.resolve();
+let recordWriteError = null;
+
+export function _fixtureWriteStatus() {
+  return { writeError: recordWriteError ? String(recordWriteError.message || recordWriteError) : null };
+}
+
 /**
- * 判定入口：先 Jev，失败且备胎已配置时降级备胎（限流/欠费/服务不可用/超时）。
- * 备胎同样失败则抛出，由 runPool 按既有容错处理。
+ * 夹具落盘：tmp+rename 原子写，Windows 文件锁（EPERM，杀软/同步盘扫描
+ * 新文件）时退避重试，仍失败则降级直接写目标文件（非原子但可用——下次
+ * 写入会整体重写，损坏文件在 loadFixtureEntries 处显式暴露）。
+ */
+async function writeFixtureFile(file, doc) {
+  const tmp = `${file}.tmp`;
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(tmp, JSON.stringify(doc, null, 2));
+  for (let i = 0; ; i++) {
+    try {
+      await fs.rename(tmp, file);
+      return;
+    } catch (e) {
+      if (e?.code !== 'EPERM' || i >= 5) {
+        // rename 持续失败：直接写目标（接受非原子），别让整条录制链挂掉
+        await fs.writeFile(file, JSON.stringify(doc, null, 2));
+        await fs.unlink(tmp).catch(() => {});
+        if (e?.code === 'EPERM') {
+          console.warn(`Jev 夹具 rename 持续 EPERM，已降级直接写（${file}）`);
+        }
+        return;
+      }
+      await sleep(50 * (i + 1));
+    }
+  }
+}
+
+function recordFixture(recordFile, payload, outcome) {
+  const key = fixtureKey(payload);
+  recordWriteChain = recordWriteChain.then(async () => {
+    if (fixtureState?.path !== recordFile) {
+      let doc;
+      try {
+        doc = await loadFixtureEntries(recordFile);
+      } catch {
+        // header 标注回执来源：直连 or 备胎（无直连 key 时走备胎录制的场景）
+        const fb = fallbackConfigured() ? fallbackConfig() : null;
+        doc = {
+          schemaVersion: FIXTURE_SCHEMA_VERSION,
+          recordedAt: new Date().toISOString(),
+          model: fb ? fb.model : MODEL,
+          source: fb ? `fallback:${fb.model}` : 'jev-direct',
+          entries: {},
+        };
+      }
+      fixtureState = { path: recordFile, doc };
+    }
+    fixtureState.doc.entries[key] = outcome;
+    await writeFixtureFile(recordFile, fixtureState.doc);
+  }).catch(e => {
+    recordWriteError = recordWriteError || e;
+    console.error(`Jev 夹具写入失败（${recordFile}）：${String(e?.message || e).slice(0, 150)}`);
+  });
+  return recordWriteChain;
+}
+
+/**
+ * 判定入口：夹具拦截 → Jev 直连 → 失败且备胎已配置时降级备胎
+ * （限流/欠费/服务不可用/超时）。备胎同样失败则抛出，由 runPool 按既有容错处理。
+ * 录制（JEV_RECORD_FILE）记录的是本次实际使用的回执——配置了备胎且直连无 key
+ * 时直接走备胎（直连必 401 没必要白打），夹具 header 的 source 字段标注来源。
  */
 async function callJudge(payload) {
+  const replayFile = process.env.JEV_REPLAY_FILE;
+  const recordFile = process.env.JEV_RECORD_FILE;
+  if (replayFile && recordFile) {
+    throw new Error('JEV_REPLAY_FILE 与 JEV_RECORD_FILE 不能同时设置');
+  }
+  if (replayFile) {
+    if (process.env.TYPESAFE_API_KEY) {
+      throw new Error('JEV_REPLAY_FILE 与 TYPESAFE_API_KEY 不能同时设置（防「半在线」回放）');
+    }
+    const entries = await replayEntries(replayFile);
+    const key = fixtureKey(payload);
+    const hit = entries[key];
+    if (!hit) {
+      throw new Error(`Jev 夹具未命中 key=${key}（${replayFile}）：代码/提示词/enums/输入变更已使回执失效，需用 --record 重录`);
+    }
+    if (hit.error) throw new Error(hit.error);
+    return structuredClone(hit.result);
+  }
   try {
-    return await callJev(payload);
+    // 无直连 key 且备胎已配置：跳过注定 401 的直连，直接备胎（录制备胎回执场景）
+    const result = (process.env.TYPESAFE_API_KEY || !fallbackConfigured())
+      ? await callJev(payload)
+      : await callFallback(payload, fallbackConfig());
+    if (recordFile) await recordFixture(recordFile, payload, { result });
+    return result;
   } catch (e) {
-    if (!fallbackConfigured()) throw e;
+    if (!fallbackConfigured()) {
+      if (recordFile) await recordFixture(recordFile, payload, { error: String(e?.message || e) });
+      throw e;
+    }
     if (!fallbackWarned) {
       fallbackWarned = true;
       console.warn(`Jev 调用失败，本次构建降级 Plan B 备胎（${fallbackConfig().model}）：${String(e?.message || e).slice(0, 150)}`);
     }
-    return await callFallback(payload, fallbackConfig());
+    try {
+      const fbResult = await callFallback(payload, fallbackConfig());
+      if (recordFile) await recordFixture(recordFile, payload, { result: fbResult });
+      return fbResult;
+    } catch (e2) {
+      if (recordFile) await recordFixture(recordFile, payload, { error: String(e2?.message || e2) });
+      throw e2;
+    }
   }
 }
 

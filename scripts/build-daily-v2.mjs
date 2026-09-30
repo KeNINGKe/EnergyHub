@@ -15,6 +15,7 @@
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import zlib from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
@@ -565,8 +566,27 @@ export async function atomicWrite(file, data, validator) {
   await fs.rename(tmp, file);
 }
 
-/** 读取样本回放输入。 */
-async function loadReplayItems(date) {
+/**
+ * 原始输入快照（阶段 A，导出供测试）：items / 曝光历史（构建读取前版本）/
+ * 微信种子（抓取后状态）三个 json.gz。只写新目录，不影响构建主流程。
+ */
+export async function writeRawSnapshot(dir, { date, rawItems, exposureHistory, wechatSeeds }) {
+  const outDir = path.join(dir, date);
+  await fs.mkdir(outDir, { recursive: true });
+  const files = {
+    'items.json.gz': rawItems,
+    'exposure-history.json.gz': exposureHistory ?? { exposed: {} },
+    'wechat-seeds.json.gz': wechatSeeds ?? { articles: [] },
+  };
+  for (const [name, data] of Object.entries(files)) {
+    const tmp = path.join(outDir, `${name}.tmp`);
+    await fs.writeFile(tmp, zlib.gzipSync(Buffer.from(JSON.stringify(data), 'utf8')));
+    await fs.rename(tmp, path.join(outDir, name));
+  }
+}
+
+/** 读取样本回放输入（导出供 build-quality-baseline.mjs 复用，勿复制映射逻辑）。 */
+export async function loadReplayItems(date) {
   const file = path.join(ROOT, 'samples', 'daily', `${date}.json`);
   const raw = JSON.parse(await fs.readFile(file, 'utf8'));
   const items = (raw.items || []).map(it => ({
@@ -665,6 +685,15 @@ async function main() {
   const exposedUrls = exposedUrlSet(exposureHistory, date, exposureDays);
   const exposedAges = exposedUrlAgeMap(exposureHistory, date, exposureDays);
   if (exposedUrls.size) console.log(`曝光记忆: 近 ${exposureDays} 天已上榜 URL ${exposedUrls.size} 条（精选靠后/回填，热点软惩罚）`);
+
+  // 原始输入快照（阶段 A，AIHOT_IMPLEMENTATION_PLAN §4）：CI 设 RAW_SNAPSHOT_DIR 后
+  // 把「管线真实输入」（翻译+种子注入后的 rawItems）连同当日跨日状态 gzip 落盘，
+  // 为未来基线积累 V2 时代日期——线上构建从不持久化原始输入，事后无法补齐。
+  // 快照在 processItems 之前、抓取/翻译之后，回放侧读 samples/raw/<date>/。
+  if (process.env.RAW_SNAPSHOT_DIR) {
+    await writeRawSnapshot(process.env.RAW_SNAPSHOT_DIR, { date, rawItems, exposureHistory, wechatSeeds: seed });
+    console.log(`原始输入快照: ${path.join(process.env.RAW_SNAPSHOT_DIR, date)}/`);
+  }
 
   const { daily, featured, stats } = await processItems(rawItems, {
     date, now, filters, enums, sourceTypes, sourceMap,

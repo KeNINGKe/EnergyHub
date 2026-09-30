@@ -69,7 +69,10 @@ const baseline = {
     '重复率基线 ≈ 2.7%（抽样内）：V1 仅按 URL/标题去重，不做事件合并；跨天重复与相似事件重复未计入，实际重复率应更高。',
     '日均成功来源 28.6/34 ≈ 84%，接近 V1.1 目标 85%。',
     '主题分布失衡：chips-compute 与 solar-wind 各占 19 条，而 AIDC 核心主题（data-center-power 4、aidc-project 2）供给明显不足，与 PRD 判断一致。',
-    'A-02 标注为 AI 预标注 v1，low 置信度 9 条需人工复核后此基线才可作为正式对比基准。'
+    // 复核状态动态读取 labels.json 顶层 review 块（2026-09-30 阶段 A-01 reconcile）
+    labelsData.review?.status === 'human-confirmed'
+      ? `A-02 标注已人工复核完成（${labelsData.review.reviewedAt}，112/112，低置信度 ${labelsData.review.lowConfidenceResolved?.length ?? 0} 条已确认），此基线可作为正式对比基准。`
+      : `A-02 标注为 AI 预标注 v1，low 置信度 ${lowConfidence} 条需人工复核后此基线才可作为正式对比基准。`
   ]
 };
 

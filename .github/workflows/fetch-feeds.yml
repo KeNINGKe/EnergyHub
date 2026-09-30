@@ -50,13 +50,21 @@ jobs:
           # 备胎关闭，行为不变。URL 也是内部服务地址，一并放 secret。
           JEV_FALLBACK_BASE_URL: ${{ secrets.JEV_FALLBACK_BASE_URL }}
           JEV_FALLBACK_API_KEY: ${{ secrets.JEV_FALLBACK_API_KEY }}
+          # 原始输入快照（阶段 A 基线积累）：把管线真实输入（翻译+种子注入后）
+          # gzip 进 samples/raw/<date>/，为未来基线保存 V2 时代日期。线上构建
+          # 从不持久化原始输入，不快照则事后无法补齐。滚动清理见 prune 步骤。
+          RAW_SNAPSHOT_DIR: samples/raw
+
+      - name: Prune raw snapshots
+        # 保留 30 天滚动清理（单日 gzip 后约 60~120KB）；先清理再 add。
+        run: node scripts/prune-raw-snapshots.mjs --keep=30
 
       - name: Commit and push
         id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add feeds/
+          git add feeds/ samples/raw/
           if git diff --cached --quiet; then
             echo "No changes to commit"
             echo "committed=false" >> $GITHUB_OUTPUT

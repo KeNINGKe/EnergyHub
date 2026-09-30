@@ -5,7 +5,7 @@
 ## 文件
 
 - `set.json`：112 条样本（7 天 × 每天 ≤18 条，固定种子 20260805，可复现）。
-- `labels.json`：逐条标注。**112/112 已人工复核完成**（相关 77 / 无关 35）。生成方式：`scripts/build-review-page.mjs` 生成复核页，在浏览器逐条确认后导出覆盖此文件。
+- `labels.json`：逐条标注。**112/112 已人工复核完成**（相关 77 / 无关 35）。生成方式：`scripts/build-review-page.mjs` 生成复核页，在浏览器逐条确认后导出覆盖此文件。复核状态以顶层 `review` 块为准：2026-09-30 人工确认剩余 9 条 low 置信度条目（见 `review.lowConfidenceResolved`），此前 README「已全部复核」与 `samples/baseline/baseline.json`「9 条待复核」的口径矛盾就此消除。
 
 ## 标注字段
 

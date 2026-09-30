@@ -82,8 +82,8 @@
       "topic": "other-energy",
       "duplicateOf": null,
       "isPrimary": true,
-      "confidence": "low",
-      "note": "气候/能源预测咨询，内容待复核",
+      "confidence": "high",
+      "note": "气候/能源预测咨询，内容待复核；2026-09-30 人工复核确认",
       "quality": "low"
     },
     "s0010": {
@@ -91,8 +91,8 @@
       "topic": "other-energy",
       "duplicateOf": null,
       "isPrimary": true,
-      "confidence": "low",
-      "note": "热泵概念，与电力需求弱相关",
+      "confidence": "high",
+      "note": "热泵概念，与电力需求弱相关；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0011": {
@@ -559,8 +559,8 @@
       "topic": "grid",
       "duplicateOf": null,
       "isPrimary": true,
-      "confidence": "low",
-      "note": "公交电气化，电力需求弱相关",
+      "confidence": "high",
+      "note": "公交电气化，电力需求弱相关；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0063": {
@@ -568,8 +568,8 @@
       "topic": null,
       "duplicateOf": null,
       "isPrimary": null,
-      "confidence": "low",
-      "note": "EV 销售排行，偏汽车行业",
+      "confidence": "high",
+      "note": "EV 销售排行，偏汽车行业；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0064": {
@@ -658,8 +658,8 @@
       "topic": null,
       "duplicateOf": null,
       "isPrimary": null,
-      "confidence": "low",
-      "note": "欧洲 EV 销售报告，偏汽车行业",
+      "confidence": "high",
+      "note": "欧洲 EV 销售报告，偏汽车行业；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0074": {
@@ -712,8 +712,8 @@
       "topic": "energy-storage",
       "duplicateOf": null,
       "isPrimary": true,
-      "confidence": "low",
-      "note": "电动滑板车与换电网络，偏消费，待复核",
+      "confidence": "high",
+      "note": "电动滑板车与换电网络，偏消费，待复核；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0080": {
@@ -748,8 +748,8 @@
       "topic": null,
       "duplicateOf": null,
       "isPrimary": null,
-      "confidence": "low",
-      "note": "趣味性 GPU 硬件实验，行业影响小",
+      "confidence": "high",
+      "note": "趣味性 GPU 硬件实验，行业影响小；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0084": {
@@ -829,8 +829,8 @@
       "topic": null,
       "duplicateOf": null,
       "isPrimary": null,
-      "confidence": "low",
-      "note": "军用电动坦克，能源关联弱",
+      "confidence": "high",
+      "note": "军用电动坦克，能源关联弱；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0093": {
@@ -937,8 +937,8 @@
       "topic": null,
       "duplicateOf": null,
       "isPrimary": null,
-      "confidence": "low",
-      "note": "混合拖车融资，交通领域",
+      "confidence": "high",
+      "note": "混合拖车融资，交通领域；2026-09-30 人工复核确认",
       "quality": null
     },
     "s0105": {
@@ -1013,5 +1013,22 @@
       "note": "IRENA 可再生项目融资",
       "quality": null
     }
+  },
+  "review": {
+    "status": "human-confirmed",
+    "reviewedAt": "2026-09-30",
+    "method": "预标注逐条人工确认（会话内确认 + 直接回写 confidence）；112/112 已复核",
+    "lowConfidenceResolved": [
+      "s0009",
+      "s0010",
+      "s0062",
+      "s0063",
+      "s0073",
+      "s0079",
+      "s0083",
+      "s0092",
+      "s0104"
+    ],
+    "note": "confidence 语义 = 标注把握度；此前 9 条 low 系 AI 预标注残留，本次复核后全部确认，README 与 samples/baseline/baseline.json 的口径矛盾就此消除"
   }
 }

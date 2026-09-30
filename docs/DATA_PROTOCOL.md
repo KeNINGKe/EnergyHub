@@ -7,8 +7,11 @@
 
 | 文件 | 用途 | 生成方 |
 |---|---|---|
-| `feeds/daily.json` | 全部动态（事件级） | 阶段 B 生成器（V1.1 后）；当前仍为 V1 旧版 |
-| `feeds/featured.json` | 今日观察 + 精选 ID 编排 | 阶段 B 生成器 |
+| `feeds/daily-v2.json` | **实际主数据**：全部动态（事件级），前端 `daily-v2 \|\| daily` 优先读取 | `build-daily-v2.mjs`（每日 CI） |
+| `feeds/daily.json` | V1 遗留兼容位：仅 `--activate` 时才被 V2 覆盖；前端作为回退 | `build-daily-v2.mjs` |
+| `feeds/featured.json` | 今日观察 + 精选 ID 编排 | `build-daily-v2.mjs` |
+| `feeds/exposure-history.json` | 跨日曝光记忆（近 N 天上榜 URL → 日期） | `build-daily-v2.mjs`（发布后回写） |
+| `feeds/translation-cache.json` | 标题翻译缓存（进仓库防配额耗尽） | 构建时回写 |
 | `data/editorial-overrides.json` | 人工覆盖配置（可选） | 人工维护 |
 | `data/enums.json` | 主题/来源类型/影响/地区枚举 | 人工维护（阶段 A-05 固化） |
 | `feeds/wechat-articles.json` | 微信公众号文章种子（可选） | 人工维护（采集时自动回写） |
@@ -126,8 +129,11 @@
 | 目录 | 内容 |
 |---|---|
 | `samples/daily/` | 7 天 V1 原始快照（回放夹具，`scripts/extract-samples.mjs`） |
-| `samples/annotations/` | 112 条样本 `set.json` + 标注 `labels.json`（AI 预标注 v1，9 条 low 待人工复核） |
-| `samples/baseline/` | V1 流程质量基线 `baseline.json`（`scripts/build-baseline.mjs`） |
+| `samples/annotations/` | 112 条样本 `set.json` + 标注 `labels.json`（AI 预标注 v1，复核状态见顶层 `review` 块） |
+| `samples/selection/` | C-01 精选业务价值标注队列（180 条 + 人工复审页） |
+| `samples/jev-fixtures/` | 逐日 Jev 固定回执夹具（`--record` 录制，见 §11） |
+| `samples/raw/` | CI 每日原始输入快照（gzip，30 天滚动，见 §11） |
+| `samples/baseline/` | V1 流程质量基线 `baseline.json`（`scripts/build-baseline.mjs`）+ `quality-upgrade/`（阶段 A 固定基线，见 §11） |
 
 基线（2026-08-05）：无关率 ≈ 26.8%、样本内重复率 ≈ 2.7%、日均成功来源 28.6/34 ≈ 84%、日均条目 45.3。供 F-01 回放前后对比。
 
@@ -163,5 +169,52 @@
 ```
 
 采集位置：`scripts/build-daily-v2.mjs` 线上抓取段在 `fetchAllFeeds` 之后读取并注入 items 流；实现见 `scripts/lib/fetch.mjs` 的 `loadWechatSeeds` / `saveWechatSeeds` / `fetchWechatSeeds`。
+
+## 10. 增量字段协议（阶段 B 起）
+
+> 来源：`docs/AIHOT_IMPLEMENTATION_PLAN.md` §4 A-02。规则先行、字段随后——
+> B/D/C 阶段真正引入下列字段时，本文表同步补充约束细节。
+
+三条兼容规则：
+
+1. **只新增可选字段**：旧消费端（前端 `assets/app.js`、管理后台、钉钉推送）遇到未知字段必须忽略，不得因新字段缺失或出现而报错（`tests/schema.test.mjs` 前瞻兼容用例把这一容忍性固化为契约）。
+2. **schemaVersion 不变**：`daily-v2.json` 保持 `schemaVersion: 2`、`featured.json` 保持 `1`。若实施中确需破坏兼容，另开版本迁移任务，不搭车。
+3. **来源身份优先配置 ID 与显式别名表**，域名只作兜底（公众号不能统一算 `mp.weixin.qq.com` 一家）；无法确认身份时保留未知标记，不宣称完成转载溯源。
+
+规划字段（首次引入阶段）：
+
+| 字段/文件 | 用途 | 首次引入 |
+|---|---|---|
+| `source.id`、关联报道 `sourceId` | 稳定的来源身份 | B |
+| `independentSourceCount` | 含主来源的去重来源总数 | B |
+| 关联报道 `publishedAt`（可选） | 后续热度衰减依据；未知不伪造 | B |
+| 内部文章 `articleId` | 基于保守归一 URL 的稳定身份 | B |
+| `data/event-overrides.json` | 跨日文章级必须合并/禁止合并约束 | B |
+| `featured.observationDetails` | 与字符串观察并存的事实与引用 | D |
+| 内部 `selectionTrace` | 规则分、业务分、理由、模型/提示词版本 | C |
+| `feeds/archive/`、`feeds/topics/` | 历史快照与主题索引 | E |
+
+## 11. 离线回放与固定回执夹具（阶段 A-01）
+
+固定可复现基线：固定输入 + 固定模型回执，离线重复回放同一输出，供 B 阶段改动前后对比。
+
+| 命令/机制 | 说明 |
+|---|---|
+| `npm run build:v2:replay` | 老回放入口：`samples/daily/*.json` 走完整管线，写 `feeds/dry-run/<date>/`（不碰正式数据） |
+| `npm run baseline:upgrade` | 基线编排：逐日回放 → `samples/baseline/quality-upgrade/<date>/{daily,featured}.json` + `report.json`（逐日指标：精选/热点/观察/漏合/合并决策日志/耗时）+ `manifest.json`（代码/配置/提示词/运行环境 sha256 摘要） |
+| `JEV_REPLAY_FILE` | 离线回放已录制 Jev 判定回执，**绝不发网络请求**；未命中硬失败（提示 `--record` 重录），不静默降级——否则基线会无感知漂移 |
+| `JEV_RECORD_FILE` | 真实调用后把回执原子落盘（`samples/jev-fixtures/<date>.json`，key=payload 的 sha256 前 16 位）。记录**本次实际使用的回执**：有 `TYPESAFE_API_KEY` 走直连；无 key 且配置了 `JEV_FALLBACK_*` 时直接走备胎，夹具 header 的 `source` 字段标注来源（`jev-direct` / `fallback:<模型>`），编排脚本逐日核验文件落盘且非全错 |
+
+夹具失效与重录：改动 `scripts/lib/jev.mjs` 提示词、`data/enums.json` topics 或回放输入，都会使旧 key 失效（这是特性——manifest 的版本摘要捕获的正是它）。重录一条命令：
+
+```
+TYPESAFE_API_KEY=<key> node scripts/build-quality-baseline.mjs --record
+```
+
+原始输入快照（`samples/raw/`，CI 常驻积累）：线上构建设 `RAW_SNAPSHOT_DIR=samples/raw` 后，把「管线真实输入」（翻译+种子注入后的 rawItems）连同当日 `exposure-history.json`、`wechat-articles.json` gzip 落盘到 `samples/raw/<date>/`；`scripts/prune-raw-snapshots.mjs --keep=30` 滚动清理。V2 时代日期由此积累，`baseline:upgrade` 自动纳入（输入来源优先 `samples/daily/`）。
+
+曝光记忆与回放：7 个既有基线日（2026-07-30~08-05）早于曝光记忆功能上线（2026-09-08），当时状态本就是空，按空集回放是**正确行为**而非缺陷；`samples/raw/` 快照日则按当日 `exposure-history.json` 还原。
+
+误合/漏合口径：漏合由 `samples/annotations` 的 duplicateOf 标注对按 URL 指纹（主 URL + relatedSources，canonical 归一）推导，覆盖面限于已标注样本；误合无负例标签，`report.json` 的 `mergeDecisionLog` 只供人工抽查，不给计数。
 
 > **公众号名册（2026-08-07 收集，未进 `data/sources.json`）**：公众号无公开主页可跳转，卡片无法直达，故不在信息源页展示，仅作种子文件抓取。名单：电网头条、能源新磁场、新能源产业家、创客能源、电气时代、能源新媒、蓝色碳能（电力/新能源）；SST渗透率、燃气轮机聚焦（发电）；储能与电力市场、储能头条、储能100人、兰木达电力现货、蓝海经研、阳光电源、光储星球、储能日参（储能）；AIDC储能、IDC Energy（AIDC）；华为数字能源（AI/云计算）。抓取某公众号文章时，将文章链接按本文件格式填入 `articles` 即可，`sourceName` 用上表名称。

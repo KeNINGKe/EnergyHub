@@ -273,3 +273,37 @@ test('overrides 日期键格式非法时报错', async () => {
   assert.equal(r.valid, false);
   assert.ok(r.errors.some(e => e.includes('YYYY-MM-DD')));
 });
+
+/* ===== 增量字段协议（阶段 A-02，AIHOT_IMPLEMENTATION_PLAN §4）===== */
+
+test('前瞻兼容: 注入 B 阶段增量字段后 daily/featured 校验仍通过（未知字段容忍为契约）', async () => {
+  const daily = makeValidDaily();
+  // B 阶段规划字段（见 docs/DATA_PROTOCOL.md §10）：正式引入前校验器必须容忍
+  daily.items[0].source.id = 'src_example';
+  daily.items[0].independentSourceCount = 3;
+  daily.items[0].articleId = 'art_abc123';
+  daily.items[0].relatedSources[0].sourceId = 'src_example_media';
+  daily.items[0].relatedSources[0].publishedAt = '2026-08-04T10:00:00.000Z';
+  daily.items[0].selectionTrace = { ruleScore: 78, businessScore: 62, reason: '测试注入' };
+  const rd = await validateDailyV2(daily);
+  assert.equal(rd.valid, true, JSON.stringify(rd.errors));
+
+  const featured = {
+    schemaVersion: 1,
+    date: '2026-08-05',
+    generatedAt: '2026-08-05T04:00:00.000Z',
+    observations: ['数据中心新增负荷继续推动电网扩建需求。'],
+    featuredEventIds: ['evt_abcdef123456', 'evt_zyx987654321'],
+    // D 阶段规划字段：结构化观察与旧字符串并存派生
+    observationDetails: [{
+      eventId: 'evt_abcdef123456',
+      fact: '某电网宣布新增 1 GW 并网容量。',
+      implication: '影响当地并网规划。',
+      watchNext: null,
+      evidenceUrls: ['https://example.com/article/1'],
+      mode: 'generated',
+    }],
+  };
+  const rf = await validateFeatured(featured, daily);
+  assert.equal(rf.valid, true, JSON.stringify(rf.errors));
+});

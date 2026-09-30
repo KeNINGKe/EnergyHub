@@ -12,6 +12,7 @@
     "annotate:selection": "node scripts/build-selection-set.mjs && node scripts/build-selection-review-page.mjs",
     "analyze": "node scripts/analyze-annotations.mjs",
     "baseline": "node scripts/build-baseline.mjs",
+    "baseline:upgrade": "node scripts/build-quality-baseline.mjs",
     "eval:filter": "node scripts/eval-filter.mjs",
     "build:v2": "node scripts/build-daily-v2.mjs",
     "build:v2:replay": "node scripts/build-daily-v2.mjs --replay",

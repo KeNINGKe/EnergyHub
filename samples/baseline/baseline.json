@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T05:41:58.342Z",
+  "generatedAt": "2026-09-30T02:01:30.592Z",
   "scope": "V1 流程基线（阶段 A-06）。基于 7 天 daily.json 样本 + 112 条人工标注（AI 预标注 v1）。",
   "metrics": {
     "sampleDays": 7,
@@ -15,7 +15,7 @@
     "avgSuccessSources": 28.6,
     "avgTotalSources": 34,
     "sourceSuccessRate": 0.84,
-    "lowConfidenceLabels": 9
+    "lowConfidenceLabels": 0
   },
   "topicDistribution": {
     "chips-compute": 19,
@@ -34,6 +34,6 @@
     "重复率基线 ≈ 2.7%（抽样内）：V1 仅按 URL/标题去重，不做事件合并；跨天重复与相似事件重复未计入，实际重复率应更高。",
     "日均成功来源 28.6/34 ≈ 84%，接近 V1.1 目标 85%。",
     "主题分布失衡：chips-compute 与 solar-wind 各占 19 条，而 AIDC 核心主题（data-center-power 4、aidc-project 2）供给明显不足，与 PRD 判断一致。",
-    "A-02 标注为 AI 预标注 v1，low 置信度 9 条需人工复核后此基线才可作为正式对比基准。"
+    "A-02 标注已人工复核完成（2026-09-30，112/112，低置信度 9 条已确认），此基线可作为正式对比基准。"
   ]
 }

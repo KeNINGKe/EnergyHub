@@ -1,0 +1,1040 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-30T06:25:45.425Z",
+  "mode": "offline-replay",
+  "dates": [
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05"
+  ],
+  "perDate": [
+    {
+      "date": "2026-07-30",
+      "replayNow": "2026-07-30T06:21:07.937Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 121,
+      "stats": {
+        "raw": 62,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 12,
+        "events": 33,
+        "featured": 9,
+        "hot": 0,
+        "jevReviewed": 21,
+        "jevRescued": 9,
+        "jevTopicArbitrated": 7,
+        "jevTopicAssigned": 7,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 16,
+        "overrideErrors": 0
+      },
+      "eventCount": 33,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 5,
+        "overTwo": 2
+      },
+      "featured": [
+        {
+          "id": "evt_9f082c22f01f",
+          "title": "美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题"
+        },
+        {
+          "id": "evt_862a73dd86dc",
+          "title": "RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh"
+        },
+        {
+          "id": "evt_b1bdebeec806",
+          "title": "为东帝汶首个太阳能储能项目获得融资"
+        },
+        {
+          "id": "evt_e01f48bd9671",
+          "title": "随着半导体设计中Agentic AI的需求增长， ChipAgents将A系列扩展至1.34亿美元（ $ ）"
+        },
+        {
+          "id": "evt_5e0c79ed0192",
+          "title": "原油价格下跌导致2025年美加能源贸易额下降"
+        },
+        {
+          "id": "evt_38201b999385",
+          "title": "《太阳能50州》报告— 2026年第二季度"
+        },
+        {
+          "id": "evt_068f6899fd11",
+          "title": "希捷将于2027年开始创纪录的50TB硬盘—到2028年，大多数硬盘都已售罄"
+        },
+        {
+          "id": "evt_db13be1f325b",
+          "title": "更低的密度带来服务器效率和冷却收益"
+        },
+        {
+          "id": "evt_7f56840ee3f0",
+          "title": "测试笔记本电脑的电池和交流电源—比较英特尔、高通、苹果和AMD"
+        }
+      ],
+      "hot": [],
+      "observations": [
+        "【储能】RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh",
+        "【固态变压器（SST）】美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
+        "【光伏与风电】为东帝汶首个太阳能储能项目获得融资"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_862a73dd86dc",
+          "title": "RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh",
+          "members": [
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/rwe-building-470mwh-bess-in-germany-kallista-enlists-envision-for-386mwh-in-france/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/quinbrook-submits-520mw-flat-rock-bess-in-australias-act-to-epbc-act/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/29/tesla-contourglobal-sign-long-term-power-agreement-covering-1-terawatt-hour-year-for-sterling-renewable-project/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/battery-storage-is-an-important-growth-driver-nextera-ceo-says-amid-merger-to-create-largest-regulated-utility-in-us/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/georgia-power-completes-construction-of-198mwh-bess-next-to-moody-air-force-base/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/tremendously-important-market-for-storage-us-bess-integrator-flexgen-on-its-start-of-european-operations/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/german-battery-manufacturer-files-for-self-administered-insolvency/"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/29/solid-state-ev-battery-leaders-team-up/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_9f082c22f01f",
+          "title": "美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
+          "members": [
+            {
+              "source": "Utility Dive",
+              "url": "https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/argonne-hackathon-helps-researchers-accelerate-scientific-discovery-on-aurora/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/doe-selects-brookfield-and-nextera-for-100b-kentucky-ai-data-center-project/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_b1bdebeec806",
+          "title": "为东帝汶首个太阳能储能项目获得融资",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/financing-secured-for-timor-lestes-first-solar-storage-project/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/29/first-of-its-kind-research-examines-the-factors-accelerating-and-stalling-solar-progress-in-california/"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/cab-solar-highlights-solar-cable-hanger-solutions-for-agricultural-projects/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/fcc-bans-foreign-produced-solar-inverters-grid-lockout-begins-today/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/serbia-adds-61-mw-of-solar-in-h1/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/fraunhofer-ise-unveils-propane-heat-pump-concepts-for-multi-family-buildings/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/29/why-consumers-are-choosing-solar-over-fossil-fuels/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_e01f48bd9671",
+          "title": "随着半导体设计中Agentic AI的需求增长， ChipAgents将A系列扩展至1.34亿美元（ $ ）",
+          "members": [
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/chipagents-expands-series-a-funding-to-134m-as-demand-grows-for-agentic-ai-in-semiconductor-design/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/eliyan-secures-145m-to-expand-ai-optical-interconnect-platform/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "replayNow": "2026-07-31T06:38:01.315Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 70,
+      "stats": {
+        "raw": 57,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 13,
+        "events": 28,
+        "featured": 12,
+        "hot": 0,
+        "jevReviewed": 20,
+        "jevRescued": 7,
+        "jevTopicArbitrated": 6,
+        "jevTopicAssigned": 6,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 10,
+        "overrideErrors": 0
+      },
+      "eventCount": 28,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 7,
+        "overTwo": 3
+      },
+      "featured": [
+        {
+          "id": "evt_bdcfc244f051",
+          "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电"
+        },
+        {
+          "id": "evt_15c6f6615820",
+          "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究"
+        },
+        {
+          "id": "evt_ef415876b502",
+          "title": "特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA"
+        },
+        {
+          "id": "evt_af2901b2cfe1",
+          "title": "人们希望我们不要报道埃隆·马斯克的政治，但他正在利用特斯拉的财富和权力来影响选举"
+        },
+        {
+          "id": "evt_3d2ef90b8c3e",
+          "title": "欧洲电动汽车需求、美国BESS推动LG Energy Solution第二季度恢复盈利"
+        },
+        {
+          "id": "evt_28b82c2d350b",
+          "title": "Xsight Labs以28亿美元的估值筹集了超过3亿美元的资金，为下一代人工智能和云网络提供动力"
+        },
+        {
+          "id": "evt_c6125d9110b5",
+          "title": "加利福尼亚州的碳定价计划为气候倡议创造了362亿美元$ ：报告"
+        },
+        {
+          "id": "evt_09c070163f67",
+          "title": "FirstEnergy数据中心合同在第二季度激增50%"
+        },
+        {
+          "id": "evt_d59249110808",
+          "title": "Aecon签署1200MWh Ontario BESS储能协议"
+        },
+        {
+          "id": "evt_11f3bfc4296d",
+          "title": "起亚EV3将很快上市销售，下周将在墨西哥开始生产"
+        },
+        {
+          "id": "evt_e471e004add9",
+          "title": "欧洲的废物在其他地方创造价值"
+        },
+        {
+          "id": "evt_ac5883dab5b0",
+          "title": "通过Mac Studio和M4 Max探索Apple Silicon的本地AI性能— M4 Max在解码吞吐量方面优于GB10和Strix Halo ，但内存带"
+        }
+      ],
+      "hot": [],
+      "observations": [
+        "【光伏与风电】南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
+        "【芯片、服务器与算力基础设施】DDN与NVIDIA合作支持海军研究生院的人工智能研究",
+        "【光伏与风电】特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_bdcfc244f051",
+          "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/30/south-africa-energizes-216-mw-solar-500-mwh-bess-project/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/thermal-energy-storage-company-1414-degrees-secures-1gw-data-centre-deal-in-south-australia/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/30/energy-storage-factory-made-carbon-blocks-us-startup-antora/"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/30/pjm-grid-largest-battery-is-now-under-construction-in-ohio/"
+            },
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/climatetech-finance/antora-550m-heat-batteries"
+            },
+            {
+              "source": "Latitude Media",
+              "url": "https://www.latitudemedia.com/news/catalyst-why-ci-storage-is-finally-taking-off/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/eolian-begins-construction-on-1-06gwh-ohio-bess-largest-system-built-in-pjm/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/30/colombia-awards-270-mw-of-solar-100-mw-of-storage-in-clean-energy-auction/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/central-eastern-europe-uks-alcemi-buys-2-3gwh-romania-projects-slovakias-biggest-bess-brought-online/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/30/bangladesh-opens-bids-for-220-mw-solar-project/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/axpo-and-zelestra-agree-207mw-italy-bess-toll-second-in-july-for-ipp/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_15c6f6615820",
+          "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究",
+          "members": [
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/ddn-backs-ai-research-at-naval-postgraduate-school-with-nvidia-partnership/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/scaleflux-introduces-ai-optimized-ssd-platform-designed-for-nvidia-cmx-and-kv-cache-offload/"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-could-build-more-ai-accelerators-than-nvidia-sells-in-2028-analyst-claims-could-push-the-company-to-use-intel-foundry-to-meet-its-goals"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_cdc0ff017088",
+          "title": "乌拉圭计划到2030年新增500兆瓦可再生能源",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/30/uruguay-plans-500-mw-of-new-renewables-by-2030/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/30/chinas-15th-five-year-plan-for-solar-wind-is-huge/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/30/indonesia-signals-start-of-100-gw-solar-initiative/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_e471e004add9",
+          "title": "欧洲的废物在其他地方创造价值",
+          "members": [
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/30/europes-waste-creates-value-elsewhere/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/chinas-15th-five-year-carbon-peaking-action-plan-aims-to-accelerate-shift-of-energy-mix-from-coal-dominant/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "replayNow": "2026-08-01T06:22:16.655Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 47,
+      "stats": {
+        "raw": 46,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 8,
+        "events": 23,
+        "featured": 7,
+        "hot": 0,
+        "jevReviewed": 15,
+        "jevRescued": 7,
+        "jevTopicArbitrated": 7,
+        "jevTopicAssigned": 7,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 13,
+        "overrideErrors": 0
+      },
+      "eventCount": 23,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 5,
+        "overTwo": 3
+      },
+      "featured": [
+        {
+          "id": "evt_b84c1017ae8e",
+          "title": "早期测试显示， AMD的新款Radeon RX 9050在游戏中比RTX 5050慢约30 ％ —最便宜的8GB RDNA 4 GPU可轻松处理1080p游戏，"
+        },
+        {
+          "id": "evt_4075a2c4fffa",
+          "title": "哥伦比亚在绿色能源拍卖的第二天授予725兆瓦的太阳能"
+        },
+        {
+          "id": "evt_c826955b8c75",
+          "title": "加利福尼亚州在5月份主要由太阳能供电—这是全球首次"
+        },
+        {
+          "id": "evt_cd6aff731c65",
+          "title": "大型科技公司在人工智能基础设施上的支出超过1万亿美元—预计仅在2026年就将增加7450亿美元"
+        },
+        {
+          "id": "evt_a3e90d74154c",
+          "title": "施耐德电气和AMD发布首个Helios平台参考设计以加速人工智能工厂部署"
+        },
+        {
+          "id": "evt_e8d02b0842ce",
+          "title": "威立雅将在俄亥俄州中部为人工智能数据中心运营350MW微电网"
+        },
+        {
+          "id": "evt_4e5b6fd6ca17",
+          "title": "新西兰希望将插电式太阳能合法化"
+        }
+      ],
+      "hot": [],
+      "observations": [
+        "【其他能源动态】早期测试显示， AMD的新款Radeon RX 9050在游戏中比RTX 5050慢约30 ％ —最便宜",
+        "【储能】哥伦比亚在绿色能源拍卖的第二天授予725兆瓦的太阳能",
+        "【光伏与风电】加利福尼亚州在5月份主要由太阳能供电—这是全球首次"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_b84c1017ae8e",
+          "title": "早期测试显示， AMD的新款Radeon RX 9050在游戏中比RTX 5050慢约30 ％ —最便宜的8GB RDNA 4 GPU可轻松处理1080p游戏，",
+          "members": [
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/gpus/amds-new-radeon-rx-9050-is-roughly-30-percent-slower-than-the-rtx-5050-in-games-early-testing-shows-the-cheapest-8gb-rdna-4-gpu-comfortably-handles-1080p-gaming-but-doesnt-impress"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/07/31/water-power-winners-emerge-as-collegiate-competitions-surge/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/the-hydrogen-stream-chinese-company-sets-record-for-green-ammonia-export/"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/31/hyundai-reveals-new-7-seat-electric-minivan-concept/"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/31/hmps-new-3999-electric-scooter-is-the-affordable-street-legal-commuter-the-us-needs/"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/ddr5/single-dimm-ddr5-gaming-works-better-than-you-probably-think-amds-3d-v-cache-chips-drop-less-than-3-percent-one-ddr5-dimm-beats-dual-channel-ddr4-ram"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_4075a2c4fffa",
+          "title": "哥伦比亚在绿色能源拍卖的第二天授予725兆瓦的太阳能",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/colombia-awards-725-mw-of-solar-on-second-day-of-green-energy-auction/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/01/lower-saxony-hydrogen-trains-battery-exit/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/antora-energy-closes-us550-million-series-c-to-scale-us-thermal-battery-deployment/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/business-as-usual-just-accelerated-harmony-energy-ceo-on-life-after-alpiq-acquisition/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/greenvolt-inaugurates-200mw-800mwh-capacity-market-contracted-bess-in-poland/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_c826955b8c75",
+          "title": "加利福尼亚州在5月份主要由太阳能供电—这是全球首次",
+          "members": [
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/solar/california-solar-power-record-may"
+            },
+            {
+              "source": "Electrek",
+              "url": "https://electrek.co/2026/07/31/this-huge-texas-solar-hub-is-nearly-1-gw-and-its-only-half-built/"
+            },
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/solar/new-york-solar-farms"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/uk-solar-capacity-hits-22-8-gw-as-market-prepares-for-plug-in-launch/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/solars-share-of-eu-electricity-demand-tops-20-for-three-consecutive-months/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/sierra-leone-switches-on-first-solar-storage-project/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/07/31/europes-heatwave-brings-high-irradiance-as-smoke-dust-impact-southern-pv-systems/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "replayNow": "2026-08-02T06:27:23.694Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 4,
+      "stats": {
+        "raw": 7,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 4,
+        "events": 3,
+        "featured": 1,
+        "hot": 0,
+        "jevReviewed": 5,
+        "jevRescued": 1,
+        "jevTopicArbitrated": 1,
+        "jevTopicAssigned": 0,
+        "overrideErrors": 0
+      },
+      "eventCount": 3,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 1,
+        "overTwo": 0
+      },
+      "featured": [
+        {
+          "id": "evt_51a584dab1ae",
+          "title": "骏利电池更换卡车一路领先"
+        }
+      ],
+      "hot": [],
+      "observations": [
+        "【储能】骏利电池更换卡车一路领先"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": []
+    },
+    {
+      "date": "2026-08-03",
+      "replayNow": "2026-08-03T06:53:25.107Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 17,
+      "stats": {
+        "raw": 15,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 6,
+        "events": 7,
+        "featured": 3,
+        "hot": 1,
+        "jevReviewed": 10,
+        "jevRescued": 4,
+        "jevTopicArbitrated": 1,
+        "jevTopicAssigned": 1,
+        "jevMergePairs": 6,
+        "jevMergedPairs": 2,
+        "overrideErrors": 0
+      },
+      "eventCount": 7,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 2,
+        "overTwo": 0
+      },
+      "featured": [
+        {
+          "id": "evt_cbc7abe90bc5",
+          "title": "试驾：比亚迪eMAX7和足球妈妈电动未来的宁静冲击"
+        },
+        {
+          "id": "evt_a99839b0a9b4",
+          "title": "SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将被1.2GW发电厂取代"
+        },
+        {
+          "id": "evt_7dab6a5acea3",
+          "title": "信不信由你，电动汽车电池更换即将来到美国"
+        }
+      ],
+      "hot": [
+        {
+          "id": "evt_7dab6a5acea3",
+          "title": "信不信由你，电动汽车电池更换即将来到美国"
+        }
+      ],
+      "observations": [
+        "【其他能源动态】试驾：比亚迪eMAX7和足球妈妈电动未来的宁静冲击",
+        "【光伏与风电】SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将",
+        "【储能】信不信由你，电动汽车电池更换即将来到美国"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_cbc7abe90bc5",
+          "title": "试驾：比亚迪eMAX7和足球妈妈电动未来的宁静冲击",
+          "members": [
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/02/test-drive-byd-emax7-the-quiet-shock-of-an-electric-future-for-the-soccer-mom/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/02/fuel-cell-buses-trucks-green-hydrogen-innovation/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_d3fb7187ae4a",
+          "title": "为亚洲和非洲的可再生能源提供资金",
+          "members": [
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/02/funding-for-renewables-in-asia-africa-ready/"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "replayNow": "2026-08-04T06:21:30.063Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 78,
+      "stats": {
+        "raw": 59,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 8,
+        "events": 36,
+        "featured": 12,
+        "hot": 2,
+        "jevReviewed": 18,
+        "jevRescued": 10,
+        "jevTopicArbitrated": 5,
+        "jevTopicAssigned": 5,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 14,
+        "overrideErrors": 0
+      },
+      "eventCount": 36,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 6,
+        "overTwo": 2
+      },
+      "featured": [
+        {
+          "id": "evt_caa8ea6afef1",
+          "title": "施耐德电气研究提供管理800 VDC电弧闪光安全的框架"
+        },
+        {
+          "id": "evt_45ea6887df7c",
+          "title": "荷兰研究人员推出光伏、电池、热泵、电动汽车的电源管理系统"
+        },
+        {
+          "id": "evt_5823da24f024",
+          "title": "三星SDI有望实现美国LFP电池产量，预计需求将超过产量"
+        },
+        {
+          "id": "evt_2811af0012c4",
+          "title": "一个令人不安的迹象是， Nvidia RTX 50系列的价格在韩国上涨了30 ％ —台积电晶圆上涨和20 $ GDDR7模块推动RTX 5090超过$ 5,10"
+        },
+        {
+          "id": "evt_bbad54af23ef",
+          "title": "弗吉尼亚州奠定了将更多太阳能与农业相结合的基础"
+        },
+        {
+          "id": "evt_5e0c79ed0192",
+          "title": "ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦"
+        },
+        {
+          "id": "evt_e5d9bd8bf706",
+          "title": "负载平滑、冷启动备份和电源速度： Fluence绘制了澳大利亚数据中心的电池存储机会图"
+        },
+        {
+          "id": "evt_607b4a8c422b",
+          "title": "沃尔沃的下一款电动SUV将从$ 40,000起步"
+        },
+        {
+          "id": "evt_6d4a5d35b6ae",
+          "title": "AEP确保13吉瓦的燃气轮机作为增长计划的“核心”发电量"
+        },
+        {
+          "id": "evt_3433cae96289",
+          "title": "PJM在FERC提交备份拍卖计划，以弥补容量短缺"
+        },
+        {
+          "id": "evt_f4e86d7efb28",
+          "title": "小岛秀夫推出Death Stranding 2主题无线CD播放器—限量版设备售价~ $ 160 ，配备蓝牙5.3和独家艺术品"
+        },
+        {
+          "id": "evt_12989fb4a8e3",
+          "title": "AMD的MI430X FP64 Boost比预期的更大"
+        }
+      ],
+      "hot": [
+        {
+          "id": "evt_5823da24f024",
+          "title": "三星SDI有望实现美国LFP电池产量，预计需求将超过产量"
+        },
+        {
+          "id": "evt_85bf89b0cf23",
+          "title": "年薪百万抢电工，Meta急到自己办技校"
+        }
+      ],
+      "observations": [
+        "【储能】三星SDI有望实现美国LFP电池产量，预计需求将超过产量",
+        "【固态变压器（SST）】施耐德电气研究提供管理800 VDC电弧闪光安全的框架",
+        "【光伏与风电】一个令人不安的迹象是， Nvidia RTX 50系列的价格在韩国上涨了30 ％ —台积电晶圆上涨和20 "
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_5823da24f024",
+          "title": "三星SDI有望实现美国LFP电池产量，预计需求将超过产量",
+          "members": [
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/"
+            },
+            {
+              "source": "量子位",
+              "url": "https://www.qbitai.com/2026/08/465732.html"
+            },
+            {
+              "source": "SemiWiki",
+              "url": "https://semiwiki.com/eda/synopsys/371800-synopsys-demonstrates-leadership-in-ai-powered-engineering-at-2026-dac-chips-to-systems-conference/"
+            },
+            {
+              "source": "SemiEngineering",
+              "url": "https://semiengineering.com/chip-bridges-neuromorphic-and-deep-network-computing-tu-dresden/"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/ddr5/lexar-lists-32gb-ddr5-memory-with-homegrown-chinese-chips-3-999-yuan-usd592-price-undercuts-hopes-for-cheaper-cxmt-powered-ram"
+            },
+            {
+              "source": "Latitude Media",
+              "url": "https://www.latitudemedia.com/news/perimeter-compute-turn-spare-office-power-into-edge-ai-data-centers/"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/co-packaged-optics-cpo-foundry-roadmaps-breaking-down-tsmc-intel-samsung-and-globalfoundries-approach-to-next-generation-scale-up-connectivity"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/gpus/worlds-smallest-gpu-silicon-passes-real-world-testing-240-000-transistor-tinygpu-v2-0-renders-3d-graphics-at-up-to-15-fps-while-v3-0-prepares-for-2026-release"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_bbad54af23ef",
+          "title": "弗吉尼亚州奠定了将更多太阳能与农业相结合的基础",
+          "members": [
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/food-and-farms/virginia-solar-with-farming"
+            },
+            {
+              "source": "Energy Storage News",
+              "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/03/blocking-new-imported-inverters-will-cost-america/"
+            },
+            {
+              "source": "Utility Dive",
+              "url": "https://www.utilitydive.com/news/dominion-offshore-wind-project-cost-rises-nearly-300m/826845/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/08/03/kazakhstans-solar-capacity-surpasses-1-37-gw/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/08/03/the-controversy-over-fire-classification-of-bipv-systems/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/"
+            },
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/08/03/peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-applications/"
+            },
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/solar/illinois-solar-for-all"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "replayNow": "2026-08-04T22:02:50.407Z",
+      "exposureState": "empty-feature-not-present-or-not-snapshotted",
+      "runtimeMs": 99,
+      "stats": {
+        "raw": 71,
+        "staleFiltered": 0,
+        "duplicatesRemoved": 0,
+        "filteredOut": 7,
+        "events": 41,
+        "featured": 11,
+        "hot": 4,
+        "jevReviewed": 15,
+        "jevRescued": 8,
+        "jevTopicArbitrated": 4,
+        "jevTopicAssigned": 4,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 14,
+        "overrideErrors": 0
+      },
+      "eventCount": 41,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 7,
+        "overTwo": 1
+      },
+      "featured": [
+        {
+          "id": "evt_9d6ccbf191e2",
+          "title": "南非：将总计2.7GWh的Deye家用电池系统纳入虚拟发电厂"
+        },
+        {
+          "id": "evt_ae42bb335b3c",
+          "title": "澳大利亚偏远矿业公司转向可再生混合动力系统"
+        },
+        {
+          "id": "evt_94208a1e9f0c",
+          "title": "铠侠和桑迪斯克推出具有更高密度和效率的下一代QLC闪光灯"
+        },
+        {
+          "id": "evt_83b60519144c",
+          "title": "捷克共和国最大的BESS调试，由CATL支持的CNTE提供"
+        },
+        {
+          "id": "evt_cfc260d3c786",
+          "title": "南方公司收缩大负荷上升至17吉瓦"
+        },
+        {
+          "id": "evt_1876e6ec057f",
+          "title": "谷歌，俄克拉荷马州RWE INK 155MW太阳能光伏PPA"
+        },
+        {
+          "id": "evt_a4f6d631af43",
+          "title": "南非能源技术公司Plentify与Deye合作建造非洲最大的住宅虚拟发电厂"
+        },
+        {
+          "id": "evt_c797cba4897f",
+          "title": "随着人工智能对内存的需求增加，存储也随之增加"
+        },
+        {
+          "id": "evt_d470f51b90d5",
+          "title": "根据IEEFA的数据，屋顶太阳能部署可以推动孟加拉国的节约"
+        },
+        {
+          "id": "evt_2c338daf6d1a",
+          "title": "清洁能源为满足美国电力需求提供了成本最低的途径"
+        },
+        {
+          "id": "evt_5bbad6afa3e5",
+          "title": "SK海力士在FMS 2026上与Sandisk推出首个HBF标准规格"
+        }
+      ],
+      "hot": [
+        {
+          "id": "evt_de1108643a48",
+          "title": "马萨诸塞州发布征求1000兆瓦BESS的建议书"
+        },
+        {
+          "id": "evt_2c338daf6d1a",
+          "title": "清洁能源为满足美国电力需求提供了成本最低的途径"
+        },
+        {
+          "id": "evt_9f54e554b2f0",
+          "title": "美国的许可危机发生在市政厅"
+        },
+        {
+          "id": "evt_a997601b8824",
+          "title": "美国正在考虑禁止中国关键网络技术打击数据中心组件--白宫希望在2026年施加限制，中国表示将在必要时做出回应"
+        }
+      ],
+      "observations": [
+        "【电网与并网】澳大利亚偏远矿业公司转向可再生混合动力系统",
+        "【能量管理系统（EMS）】南非：将总计2.7GWh的Deye家用电池系统纳入虚拟发电厂",
+        "【冷却、UPS 与 PUE】铠侠和桑迪斯克推出具有更高密度和效率的下一代QLC闪光灯"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_ae42bb335b3c",
+          "title": "澳大利亚偏远矿业公司转向可再生混合动力系统",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/08/04/remote-operations-emerge-as-proving-ground-for-high-renewables-future/"
+            },
+            {
+              "source": "CleanTechnica",
+              "url": "https://cleantechnica.com/2026/08/04/energy-discovery-awaits-within-the-spin-of-atoms/"
+            },
+            {
+              "source": "SemiWiki",
+              "url": "https://semiwiki.com/events/371719-dac-2026-accellera-luncheon-panel-on-embracing-ai-for-advanced-design-and-verification/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/nist-joins-does-genesis-mission-to-accelerate-ai-innovation/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/liqid-powers-pnnls-abaco-system-with-cxl-memory-pooling-for-ai-science/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/vdura-and-wasabi-unite-high-performance-ai-storage-with-cloud-economics/"
+            },
+            {
+              "source": "HPCwire",
+              "url": "https://www.hpcwire.com/off-the-wire/marvell-advances-ai-memory-infrastructure-portfolio-to-accelerate-agentic-ai-inference/"
+            },
+            {
+              "source": "SemiWiki",
+              "url": "https://semiwiki.com/ip/rambus/370722-how-socamm2-could-reshape-server-memory-for-ai/"
+            },
+            {
+              "source": "SemiEngineering",
+              "url": "https://semiengineering.com/invest-in-junior-engineers/"
+            },
+            {
+              "source": "SemiEngineering",
+              "url": "https://semiengineering.com/why-simulation-speed-is-holding-chiplets-back/"
+            },
+            {
+              "source": "SemiEngineering",
+              "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-aug-4/"
+            },
+            {
+              "source": "SemiEngineering",
+              "url": "https://semiengineering.com/from-blueprint-to-build-engineering-the-worlds-largest-ai-chips/"
+            },
+            {
+              "source": "量子位",
+              "url": "https://www.qbitai.com/2026/08/465732.html"
+            },
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/gpus/more-gpu-price-hikes-loom-for-asia-as-japanese-distributor-warns-of-new-increases-cfd-sales-signals-20-percent-to-40-percent-higher-prices-on-gigabyte-graphics-card-orders-starting-this-month"
+            },
+            {
+              "source": "SemiWiki",
+              "url": "https://semiwiki.com/prototyping/s2c-eda/371771-shift-left-with-s2c-prodigy-from-rtl-verification-to-real-world-software-validation/"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "误合无负例标签：mergeDecisionLog 供人工抽查，不给出计数",
+    "漏合由 annotations duplicateOf 对按 URL 指纹推导，覆盖面限于已标注样本",
+    "2026-07/08 基线日曝光记忆功能尚不存在，按空集回放"
+  ]
+}
