@@ -26,18 +26,22 @@
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 4.5,
+      "importance": 4,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cleantechnica.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-02T13:35:48.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [
         {
           "name": "CleanTechnica",
-          "url": "https://cleantechnica.com/2026/08/02/fuel-cell-buses-trucks-green-hydrogen-innovation/"
+          "url": "https://cleantechnica.com/2026/08/02/fuel-cell-buses-trucks-green-hydrogen-innovation/",
+          "sourceId": "cleantechnica.com",
+          "publishedAt": "2026-08-03T02:06:53.000Z"
         }
       ],
       "wechat": false,
@@ -66,8 +70,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-02T11:50:00.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],
@@ -97,8 +103,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cleantechnica.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-02T15:24:29.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],
@@ -122,14 +130,18 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cleantechnica.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-08-02T13:25:04.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/"
+          "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/",
+          "sourceId": "energy-storage.news",
+          "publishedAt": "2026-08-03T03:50:49.000Z"
         }
       ],
       "wechat": false,
@@ -152,8 +164,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T03:29:54.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],
@@ -177,8 +191,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-02T22:00:21.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],
@@ -202,8 +218,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-02T12:05:00.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],

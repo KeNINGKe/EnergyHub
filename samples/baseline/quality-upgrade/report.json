@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T04:27:28.865Z",
+  "generatedAt": "2026-10-09T04:38:33.387Z",
   "mode": "offline-replay",
   "dates": [
     "2026-07-30",
@@ -17,7 +17,7 @@
       "date": "2026-07-30",
       "replayNow": "2026-07-30T06:21:07.937Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 104,
+      "runtimeMs": 107,
       "stats": {
         "raw": 62,
         "staleFiltered": 0,
@@ -36,9 +36,15 @@
       },
       "eventCount": 33,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
-        "max": 5,
-        "overTwo": 2
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
+        "max": 4,
+        "overTwo": 2,
+        "distribution": {
+          "1": 30,
+          "2": 1,
+          "3": 1,
+          "4": 1
+        }
       },
       "featured": [
         {
@@ -50,16 +56,16 @@
           "title": "RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh"
         },
         {
+          "id": "evt_5e0c79ed0192",
+          "title": "原油价格下跌导致2025年美加能源贸易额下降"
+        },
+        {
           "id": "evt_b1bdebeec806",
           "title": "为东帝汶首个太阳能储能项目获得融资"
         },
         {
           "id": "evt_e01f48bd9671",
           "title": "随着半导体设计中Agentic AI的需求增长， ChipAgents将A系列扩展至1.34亿美元（ $ ）"
-        },
-        {
-          "id": "evt_5e0c79ed0192",
-          "title": "原油价格下跌导致2025年美加能源贸易额下降"
         },
         {
           "id": "evt_38201b999385",
@@ -82,7 +88,7 @@
       "observations": [
         "【储能】RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh",
         "【固态变压器（SST）】美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
-        "【光伏与风电】为东帝汶首个太阳能储能项目获得融资"
+        "【电力市场与政策】原油价格下跌导致2025年美加能源贸易额下降"
       ],
       "missedMerges": {
         "count": 0,
@@ -204,7 +210,7 @@
       "date": "2026-07-31",
       "replayNow": "2026-07-31T06:38:01.315Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 61,
+      "runtimeMs": 86,
       "stats": {
         "raw": 57,
         "staleFiltered": 0,
@@ -223,9 +229,14 @@
       },
       "eventCount": 28,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
-        "max": 7,
-        "overTwo": 3
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
+        "max": 6,
+        "overTwo": 1,
+        "distribution": {
+          "1": 24,
+          "2": 3,
+          "6": 1
+        }
       },
       "featured": [
         {
@@ -233,12 +244,12 @@
           "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电"
         },
         {
-          "id": "evt_15c6f6615820",
-          "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究"
-        },
-        {
           "id": "evt_ef415876b502",
           "title": "特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA"
+        },
+        {
+          "id": "evt_15c6f6615820",
+          "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究"
         },
         {
           "id": "evt_af2901b2cfe1",
@@ -280,8 +291,8 @@
       "hot": [],
       "observations": [
         "【光伏与风电】南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
-        "【芯片、服务器与算力基础设施】DDN与NVIDIA合作支持海军研究生院的人工智能研究",
-        "【光伏与风电】特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA"
+        "【光伏与风电】特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA",
+        "【芯片、服务器与算力基础设施】DDN与NVIDIA合作支持海军研究生院的人工智能研究"
       ],
       "missedMerges": {
         "count": 0,
@@ -395,7 +406,7 @@
       "date": "2026-08-01",
       "replayNow": "2026-08-01T06:22:16.655Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 47,
+      "runtimeMs": 50,
       "stats": {
         "raw": 46,
         "staleFiltered": 0,
@@ -414,9 +425,14 @@
       },
       "eventCount": 23,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
-        "max": 5,
-        "overTwo": 3
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
+        "max": 4,
+        "overTwo": 3,
+        "distribution": {
+          "1": 20,
+          "3": 2,
+          "4": 1
+        }
       },
       "featured": [
         {
@@ -556,7 +572,7 @@
       "date": "2026-08-02",
       "replayNow": "2026-08-02T06:27:23.694Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 5,
+      "runtimeMs": 4,
       "stats": {
         "raw": 7,
         "staleFiltered": 0,
@@ -573,9 +589,12 @@
       },
       "eventCount": 3,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
         "max": 1,
-        "overTwo": 0
+        "overTwo": 0,
+        "distribution": {
+          "1": 3
+        }
       },
       "featured": [
         {
@@ -598,7 +617,7 @@
       "date": "2026-08-03",
       "replayNow": "2026-08-03T06:53:25.107Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 10,
+      "runtimeMs": 12,
       "stats": {
         "raw": 15,
         "staleFiltered": 0,
@@ -617,9 +636,13 @@
       },
       "eventCount": 7,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
         "max": 2,
-        "overTwo": 0
+        "overTwo": 0,
+        "distribution": {
+          "1": 6,
+          "2": 1
+        }
       },
       "featured": [
         {
@@ -686,7 +709,7 @@
       "date": "2026-08-04",
       "replayNow": "2026-08-04T06:21:30.063Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 67,
+      "runtimeMs": 70,
       "stats": {
         "raw": 59,
         "staleFiltered": 0,
@@ -705,9 +728,14 @@
       },
       "eventCount": 36,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
         "max": 6,
-        "overTwo": 2
+        "overTwo": 2,
+        "distribution": {
+          "1": 34,
+          "5": 1,
+          "6": 1
+        }
       },
       "featured": [
         {
@@ -866,7 +894,7 @@
       "date": "2026-08-05",
       "replayNow": "2026-08-04T22:02:50.407Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 103,
+      "runtimeMs": 87,
       "stats": {
         "raw": 71,
         "staleFiltered": 0,
@@ -885,9 +913,13 @@
       },
       "eventCount": 41,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
         "max": 7,
-        "overTwo": 1
+        "overTwo": 1,
+        "distribution": {
+          "1": 40,
+          "7": 1
+        }
       },
       "featured": [
         {
@@ -1036,7 +1068,7 @@
       "date": "2026-10-09",
       "replayNow": "2026-10-09T15:59:59.000Z",
       "exposureState": "from-samples-raw-snapshot",
-      "runtimeMs": 934,
+      "runtimeMs": 1051,
       "stats": {
         "raw": 810,
         "staleFiltered": 247,
@@ -1055,9 +1087,16 @@
       },
       "eventCount": 219,
       "independentSourceCountProxy": {
-        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
-        "max": 5,
-        "overTwo": 5
+        "note": "B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)",
+        "max": 6,
+        "overTwo": 7,
+        "distribution": {
+          "1": 202,
+          "2": 10,
+          "3": 4,
+          "5": 1,
+          "6": 2
+        }
       },
       "featured": [
         {
@@ -1085,10 +1124,6 @@
           "title": "澳大利亚9月家用电池安装量达到966.5兆瓦时"
         },
         {
-          "id": "evt_c3981658c687",
-          "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计"
-        },
-        {
           "id": "evt_4cc2005c155f",
           "title": "IPS收购Belyea ，提供变压器服务"
         },
@@ -1107,6 +1142,10 @@
         {
           "id": "evt_1bc67a384aa3",
           "title": "CIQ的Fuzzball 4.3通过一个命令在客户的GPU上运行经过验证的开放式权重模型"
+        },
+        {
+          "id": "evt_25cd293bc080",
+          "title": "电池巨头″追″AI：宁德时代为何煞费苦心绑上DeepSeek"
         }
       ],
       "hot": [
@@ -1301,40 +1340,6 @@
           ]
         },
         {
-          "eventId": "evt_c3981658c687",
-          "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
-          "members": [
-            {
-              "source": "台达",
-              "url": "https://www.indexbox.io/zh-hans/blog/storage-containers-for-connectors-market-to-reach-8-5-cagr-through-2035-on-battery-storage-boom/"
-            },
-            {
-              "source": "LG 新能源",
-              "url": "https://www.indexbox.io/zh-hans/blog/battery-market-to-accelerate-on-grid-scale-storage-demand-forecast-points-higher-toward-2035/"
-            },
-            {
-              "source": "LG 新能源",
-              "url": "https://www.indexbox.io/zh-hans/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
-            },
-            {
-              "source": "DC Energy Storage",
-              "url": "https://www.indexbox.io/blog/absorbent-glass-mat-agm-battery-market-forecast-to-2035-safety-driven-demand-in-data-centers-and-grid-resilience-supports-growth/"
-            },
-            {
-              "source": "沙特储能与AIDC",
-              "url": "https://www.indexbox.io/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
-            },
-            {
-              "source": "中东新能源项目",
-              "url": "https://www.indexbox.io/blog/lithium-battery-shear-wrenches-market-forecast-to-2035-driven-by-global-bess-build-out/"
-            },
-            {
-              "source": "中东新能源项目",
-              "url": "https://www.indexbox.io/blog/lithium-battery-thermal-runaway-sensor-modules-market-to-accelerate-through-2035-driven-by-grid-scale-bess-safety-mandates/"
-            }
-          ]
-        },
-        {
           "eventId": "evt_37ebd985ddcf",
           "title": "塔塔电力与挪威的Ocean Sun一起试点基于膜的浮动太阳能",
           "members": [
@@ -1381,20 +1386,6 @@
           ]
         },
         {
-          "eventId": "evt_376d634a2183",
-          "title": "肯塔基州电力公司为1 GW数据园区开发765/345 kV变电站",
-          "members": [
-            {
-              "source": "Transformer Technology",
-              "url": "https://transformer-technology.com/kentucky-power-develops-765-345-kv-substation-for-1-gw-data-campus/"
-            },
-            {
-              "source": "Transformer Technology",
-              "url": "https://transformer-technology.com/50hertz-starts-380-kv-grid-upgrade-in-germany/"
-            }
-          ]
-        },
-        {
           "eventId": "evt_97089705d489",
           "title": "据报道， AMD的EPYC Verano AI主机CPU将使用特殊的SB1插槽",
           "members": [
@@ -1423,16 +1414,36 @@
           ]
         },
         {
-          "eventId": "evt_c1f10ffb22ef",
-          "title": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
+          "eventId": "evt_c3981658c687",
+          "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
           "members": [
             {
               "source": "台达",
-              "url": "https://www.indexbox.io/zh-hans/blog/multi-outlet-gang-strips-market-forecast-to-2035-data-center-and-renewable-demand-drives-6-9-cagr/"
+              "url": "https://www.indexbox.io/zh-hans/blog/storage-containers-for-connectors-market-to-reach-8-5-cagr-through-2035-on-battery-storage-boom/"
             },
             {
-              "source": "数据中心供电招标",
-              "url": "https://www.indexbox.io/zh-hans/blog/380v-400v-power-distribution-market-forecast-to-2035-growth-accelerates-on-data-center-and-renewable-demand/"
+              "source": "LG 新能源",
+              "url": "https://www.indexbox.io/zh-hans/blog/battery-market-to-accelerate-on-grid-scale-storage-demand-forecast-points-higher-toward-2035/"
+            },
+            {
+              "source": "LG 新能源",
+              "url": "https://www.indexbox.io/zh-hans/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
+            },
+            {
+              "source": "DC Energy Storage",
+              "url": "https://www.indexbox.io/blog/absorbent-glass-mat-agm-battery-market-forecast-to-2035-safety-driven-demand-in-data-centers-and-grid-resilience-supports-growth/"
+            },
+            {
+              "source": "沙特储能与AIDC",
+              "url": "https://www.indexbox.io/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/lithium-battery-shear-wrenches-market-forecast-to-2035-driven-by-global-bess-build-out/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/lithium-battery-thermal-runaway-sensor-modules-market-to-accelerate-through-2035-driven-by-grid-scale-bess-safety-mandates/"
             }
           ]
         },
@@ -1493,30 +1504,30 @@
           ]
         },
         {
-          "eventId": "evt_d36e81ef1ee3",
-          "title": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
+          "eventId": "evt_376d634a2183",
+          "title": "肯塔基州电力公司为1 GW数据园区开发765/345 kV变电站",
           "members": [
             {
-              "source": "阳光电源",
-              "url": "https://www.indexbox.io/zh-hans/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
+              "source": "Transformer Technology",
+              "url": "https://transformer-technology.com/kentucky-power-develops-765-345-kv-substation-for-1-gw-data-campus/"
             },
             {
-              "source": "中东新能源项目",
-              "url": "https://www.indexbox.io/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
+              "source": "Transformer Technology",
+              "url": "https://transformer-technology.com/50hertz-starts-380-kv-grid-upgrade-in-germany/"
             }
           ]
         },
         {
-          "eventId": "evt_51e8d55b20a7",
-          "title": "电力正成数据中心扩张最大瓶颈：有哪些值得关注的电力股？",
+          "eventId": "evt_c1f10ffb22ef",
+          "title": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
           "members": [
             {
-              "source": "数据中心储能备电",
-              "url": "https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262194931-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey"
+              "source": "台达",
+              "url": "https://www.indexbox.io/zh-hans/blog/multi-outlet-gang-strips-market-forecast-to-2035-data-center-and-renewable-demand-drives-6-9-cagr/"
             },
             {
-              "source": "DC Power Infra",
-              "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262200934-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey"
+              "source": "数据中心供电招标",
+              "url": "https://www.indexbox.io/zh-hans/blog/380v-400v-power-distribution-market-forecast-to-2035-growth-accelerates-on-data-center-and-renewable-demand/"
             }
           ]
         },
@@ -1531,6 +1542,20 @@
             {
               "source": "阿联酋储能与AIDC",
               "url": "https://www.indexbox.io/blog/rox-capital-group-launches-rox-gulf-energy-storage-platform-targeting-uae-and-oman/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_d36e81ef1ee3",
+          "title": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
+          "members": [
+            {
+              "source": "阳光电源",
+              "url": "https://www.indexbox.io/zh-hans/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
             }
           ]
         }

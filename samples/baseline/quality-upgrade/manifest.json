@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T04:27:28.865Z",
+  "generatedAt": "2026-10-09T04:38:33.387Z",
   "git": {
-    "sha": "d2fae2760051fc45bf8d071592490b619daaf401",
-    "short": "d2fae276",
+    "sha": "86d6f83e165cd93b0dad9e2938de7fccfe171be1",
+    "short": "86d6f83e",
     "branch": "main",
     "dirty": true
   },
   "code": {
-    "scripts/build-daily-v2.mjs": "14e21af5b7b103a30c4618b7a1ada488f9ec14224fa035387d2fb0d1766fc5ef",
+    "scripts/build-daily-v2.mjs": "f90512c225f4884a3728ff5c669bbebc7179e42670eb555e4831170c660aacc7",
     "scripts/lib/clean.mjs": "65d50d0e96f23e6c3c23740f96dd66b128720865f914084588f89611683d9fc4",
     "scripts/lib/compat.mjs": "8e62c0ae4d7a7cdee8979d05b8e80c1f70e59da2bb9bb7e945b3ce7a00b990fb",
     "scripts/lib/dedup.mjs": "0e912483382e0030ab3d4269fb4747779b588dca16e01fc0b701a5112b670724",
@@ -23,14 +23,14 @@
     "scripts/lib/jev.mjs": "ebe6c8cb7873fe5f21e1392124d33a85bd81eaf752419c3438e9f5de24fd0207",
     "scripts/lib/merge.mjs": "f82bd1945bdcb706fbb8811148b35e85d2e75e4bcfb156d6651484e0b6562cc6",
     "scripts/lib/overrides.mjs": "be18e55350e7cb4597180ebde28f08b1794fe35baa74e86261fd04c5e166e164",
-    "scripts/lib/schema.mjs": "6b67be522c3e9ead4c992820eb8cb6b6844cc5bef0cb7c5c4d1c7cb3d5a83f94",
-    "scripts/lib/score.mjs": "579745af77fc2c6309eaa1a1675bd66962eb8405a42ee285d013cae548976805",
+    "scripts/lib/schema.mjs": "38847329ab68c73f6aaa4b1cf316fd704f8efb711d3e7065359b8cac5b7369aa",
+    "scripts/lib/score.mjs": "b1c68bab1377980e53dbb43e71875c8cd3755d7f24e9a71352bcdc1c3806cac4",
     "scripts/lib/select.mjs": "c71342583461f0cb8abcea25f7219583af92d60948cc273926da0a477782406d",
     "scripts/lib/source-check.mjs": "9ba510e76a2958113c48c1667a0412f9b68ea588ccba80dd74a390cd5bcd8171",
     "scripts/lib/source.mjs": "73af73b07a68ac72e645992b2d526abd668be3ea09cd41b768af5e7c12bc4064",
     "scripts/lib/wait-until.mjs": "5599f02dbc86ad7940b33e6a659b1ab9c3e777cf8c97323592c5989784e736a6"
   },
-  "codeDigest": "703f35f2ae6a2a91a380e7f11f6f15ac54592919a282ac8fab7bc4f97ba1b8d8",
+  "codeDigest": "e21087b6d26558dca08a256bb27a7f0c4b50f270b9121981ced180b2f29c0e6d",
   "configs": {
     "data/sources.json": "93704a679c9b5b182cc4437d1fb7a5f4861f799a147953ffddc31bb8016748d8",
     "data/filters.json": "5c081684d8b7066e0278080747127e2f01b932bb662b90389630d9ed39cf2ac5",
@@ -54,80 +54,80 @@
     "node": "v24.18.0",
     "platform": "win32-x64"
   },
-  "totalRuntimeMs": 2110,
-  "runStartedAt": "2026-10-09T04:27:27.442Z",
+  "totalRuntimeMs": 2605,
+  "runStartedAt": "2026-10-09T04:38:31.826Z",
   "perDate": [
     {
       "date": "2026-07-30",
-      "runtimeMs": 104,
+      "runtimeMs": 107,
       "replayNow": "2026-07-30T06:21:07.937Z",
       "fixture": "samples\\jev-fixtures\\2026-07-30.json",
       "fixtureSha256": "112d9c284f070597602f34886191245418c8e5f7358957ddb32aa59dba310a6b",
-      "dailySha256": "3070f6eb550cbd7b547398ba43d14dba5d4852dd6e03de16780d25f22a56d219",
-      "featuredSha256": "f0ee6da1180d87ef5e4385f1e43f31af1fe590865b3cc0dad7f954cfcf3c9802"
+      "dailySha256": "d09d04def519d607796e64cc400289369630870a590489942e5e2099f4700447",
+      "featuredSha256": "1f23221dcd0ae8351da3cac3c8e294a707146ff993af1a5647eec616db0bc85f"
     },
     {
       "date": "2026-07-31",
-      "runtimeMs": 61,
+      "runtimeMs": 86,
       "replayNow": "2026-07-31T06:38:01.315Z",
       "fixture": "samples\\jev-fixtures\\2026-07-31.json",
       "fixtureSha256": "5830a2b4d94e4fd86f8447a28ca7d339740f29ff2e8676fe22c31680cb281f5a",
-      "dailySha256": "da1c3e8309367e4365983cb8366d0da1250f0ca39696d5e051f6a7cf09f2d9f5",
-      "featuredSha256": "0cd80b51b3709a957e69529270283774b07401201a0b69fcc44130d62a447e3c"
+      "dailySha256": "d3028ac5b1cffbf84b13d28fb0e5cade4cce9ecdbdf0f5d25a742812ffffa993",
+      "featuredSha256": "b289ddfe981e17da4debf7f91a09f83c4e68e8189ad864dc99636f333e013a2c"
     },
     {
       "date": "2026-08-01",
-      "runtimeMs": 47,
+      "runtimeMs": 50,
       "replayNow": "2026-08-01T06:22:16.655Z",
       "fixture": "samples\\jev-fixtures\\2026-08-01.json",
       "fixtureSha256": "237d393ccf3d26c2214d44f8e3471c5c16090eb33742406b430fa4f7912647b3",
-      "dailySha256": "057e44f9f2a9b2320ee1f793f34e4084a0d5c03101dbedfd8a30cfdfe5f92224",
+      "dailySha256": "b5552b2a751fa8b2a62cee08e233ea12499438b1b7b84a5927598e084800c4af",
       "featuredSha256": "8b23b0d31dc2eecdab1575efb53411535cf288b98420c255d6933fb4b11df857"
     },
     {
       "date": "2026-08-02",
-      "runtimeMs": 5,
+      "runtimeMs": 4,
       "replayNow": "2026-08-02T06:27:23.694Z",
       "fixture": "samples\\jev-fixtures\\2026-08-02.json",
       "fixtureSha256": "32259bd4309da91c21d11a7eb533409d006504b0f485f53786cddfeac80e9314",
-      "dailySha256": "c5f73c04cf76cdf2008be21df0457833345d2737bdfdd060c77f6a898714668d",
+      "dailySha256": "f9ee1badb8ab52b54125304d9ffc4ca942348da5cbddbbe397175fc1723d29b9",
       "featuredSha256": "b23f730f1b156f63617908a1a9d09dacbd2737ec93c3f07b5c02b1f9ac1360d7"
     },
     {
       "date": "2026-08-03",
-      "runtimeMs": 10,
+      "runtimeMs": 12,
       "replayNow": "2026-08-03T06:53:25.107Z",
       "fixture": "samples\\jev-fixtures\\2026-08-03.json",
       "fixtureSha256": "8d52caa8bbeeb6643bb29306e8511e76b9e38d219c68949bdda1c55716f13ee5",
-      "dailySha256": "02b4803f336dbf91d0167e3f97562e17c05fa121dba89b635acdd81cfbb229d3",
+      "dailySha256": "2cd97f0287885a8841862cb698a353db292f7d7b4768b42b20dea3f17b388741",
       "featuredSha256": "81e7c745ebf8e04fac1b3f8a889361723fe50a83fdae03dbe2b50ce33105852e"
     },
     {
       "date": "2026-08-04",
-      "runtimeMs": 67,
+      "runtimeMs": 70,
       "replayNow": "2026-08-04T06:21:30.063Z",
       "fixture": "samples\\jev-fixtures\\2026-08-04.json",
       "fixtureSha256": "7231e63333a7f51b4ccda96e6381cc9c9a69b1273ae53033563406a4a292b3da",
-      "dailySha256": "c65cac40c2e9d051e20a83ef8c1250f3d60180b188d781ac60c22cbeb4081b1c",
+      "dailySha256": "487ce6d1dee3db8fadbf22c0cbf964169d9dcedadec247a865cb668be72d97bf",
       "featuredSha256": "61072b01368bdea77568b3c74694f9c9366978e0a9c3ccf6315b9515d58f46de"
     },
     {
       "date": "2026-08-05",
-      "runtimeMs": 103,
+      "runtimeMs": 87,
       "replayNow": "2026-08-04T22:02:50.407Z",
       "fixture": "samples\\jev-fixtures\\2026-08-05.json",
       "fixtureSha256": "348b99b783a9c4a7d26286a8b2984ab7c43c35aea95ec4148cf649a7e6940d57",
-      "dailySha256": "24501954f883100745ef7ff38342ff6c27cbb67f2ca7203b5dbeec3414a48717",
+      "dailySha256": "4068759cf97b2e71b900828f8840e3f361c0a1bbbc512a5d632a7a069119af16",
       "featuredSha256": "74afa64d2583cef2a3e83e232219eb9481f744558c527a1455b1021764d038c3"
     },
     {
       "date": "2026-10-09",
-      "runtimeMs": 934,
+      "runtimeMs": 1051,
       "replayNow": "2026-10-09T15:59:59.000Z",
       "fixture": "samples\\jev-fixtures\\2026-10-09.json",
       "fixtureSha256": null,
-      "dailySha256": "109c97e07e0ba5f4aad180dbdcaad67a5f139a670dd806774482723534faa94c",
-      "featuredSha256": "cfe8368aebf665cf4893ce299d887463953e8aa4dcc659cd43d721515164e232"
+      "dailySha256": "35cf5176cec9229f2734949d4202852526f8831983cfc28d1e5c87ca672c4be6",
+      "featuredSha256": "7afc65747ed5ff270008aa7c5437f46339757035a64886ca50faf5aa1f8fab0a"
     }
   ]
 }

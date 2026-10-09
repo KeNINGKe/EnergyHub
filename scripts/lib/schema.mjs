@@ -236,6 +236,16 @@ export async function validateDailyV2(daily, enums) {
       } else if (src.isPrimary !== (src.type === 'primary')) {
         push(errors, `${where}.source: isPrimary 应与 type="primary" 保持一致`);
       }
+      // B-03 可选字段（协议 §10）：来源身份 id，出现时须为非空字符串
+      if (src.id != null && (typeof src.id !== 'string' || !src.id.trim())) {
+        push(errors, `${where}.source: id 出现时须为非空字符串`);
+      }
+    }
+
+    // B-03 可选字段（协议 §10）：独立来源数（含主来源），出现时须为 ≥1 整数
+    if (it.independentSourceCount != null &&
+        (!Number.isInteger(it.independentSourceCount) || it.independentSourceCount < 1)) {
+      push(errors, `${where}: independentSourceCount 出现时须为 ≥1 整数`);
     }
 
     // 时间字段
@@ -259,6 +269,13 @@ export async function validateDailyV2(daily, enums) {
             checkNonEmptyString(rs, 'name', errors, rw);
             if (!isHttpUrl(rs.url)) {
               push(errors, `${rw}: url 非法，必须为 http(s) 外链`);
+            }
+            // B-03 可选字段（协议 §10）：来源身份与发布时间，出现时校验类型
+            if (rs.sourceId != null && (typeof rs.sourceId !== 'string' || !rs.sourceId.trim())) {
+              push(errors, `${rw}: sourceId 出现时须为非空字符串`);
+            }
+            if (rs.publishedAt != null && !isIsoDate(rs.publishedAt)) {
+              push(errors, `${rw}: publishedAt 非法 ISO 时间`);
             }
           }
         });

@@ -21,6 +21,7 @@ import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
 import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration } from './lib/jev.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
+import { resolveSourceId, loadSourceAliases } from './lib/identity.mjs';
 import { extractItem } from './lib/extract.mjs';
 import { dedupItems } from './lib/dedup.mjs';
 import { mergeEvents, grayPairs } from './lib/merge.mjs';
@@ -271,10 +272,14 @@ export function selectHot(events, enums, opts = {}) {
     const penalty = age >= 0 && penalties.length ? penalties[Math.min(age, penalties.length - 1)] : 0;
     candidates.push({ ev, score: (ev.importance || 0) + scaleScore(ev, cfg.scaleTiers) + boost - penalty });
   }
-  // 确定性排序：score 降序 → 多源报道数降序 → 发布时间降序（不再落回抓取序）
+  // 确定性排序：score 降序 → 多源报道数降序 → 发布时间降序（不再落回抓取序）。
+  // B-03：同分裁决改用独立来源数（含主来源）；开关关或字段缺失回退旧口径。
+  const srcTie = (ev) => (enums.features?.independentSources !== false && Number.isFinite(ev.independentSourceCount))
+    ? ev.independentSourceCount
+    : (ev.relatedSources?.length || 0);
   candidates.sort((a, b) =>
     b.score - a.score ||
-    ((b.ev.relatedSources?.length || 0) - (a.ev.relatedSources?.length || 0)) ||
+    (srcTie(b.ev) - srcTie(a.ev)) ||
     ((new Date(b.ev.publishedAt || 0)).getTime() - (new Date(a.ev.publishedAt || 0)).getTime())
   );
 
@@ -326,6 +331,8 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 export async function processItems(rawItems, ctx) {
   const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls, exposedAges } = ctx;
   const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
+  // B-03 来源身份解析上下文：ctx.identityCtx 可注入（回放/测试），否则现加载别名表
+  const identityCtx = ctx.identityCtx || { sourceMap, aliases: await loadSourceAliases() };
 
   // 0. 全部动态只保留最近 7 天。无发布时间的页面型来源继续保留，交给后续
   // 精选时效规则和前端降级处理；非法、未来或超窗的明确日期直接剔除。
@@ -380,6 +387,11 @@ export async function processItems(rawItems, ctx) {
     const ex = await extractItem(it, enums);
     const src = sourceMap.get(it.source) || { name: it.source, tags: [] };
     const st = classifySourceType(src, sourceTypes);
+    // B-03 来源身份（协议 §10 规则 3）：配置 id/别名表 > 公众号独立身份 > 域名兜底 > unknown
+    const sid = resolveSourceId(
+      { name: it.source, url: it.link || it.url, wechat: it.wechat },
+      identityCtx
+    );
     if (needsTopicArbitration(ex, it)) arbIdx.push(enriched.length);
     enriched.push({
       title: it.translatedTitle || it.title || '无标题',
@@ -390,6 +402,8 @@ export async function processItems(rawItems, ctx) {
       publishedAt: it.pubDate || null,
       discoveredAt: now.toISOString(),
       source: it.source || '未知来源',
+      sourceId: sid.id,
+      sourceBasis: sid.basis,
       sourceType: st.type,
       topic: it._jev?.topic || ex.topics[0] || null,
       region: ex.region,
@@ -474,7 +488,20 @@ export async function processItems(rawItems, ctx) {
     const primary = members[index];
     const relatedSources = members
       .filter((m, i) => i !== index)
-      .map(m => ({ name: m.source, url: m.url }));
+      .map(m => ({
+        name: m.source,
+        url: m.url,
+        // B-03 协议 §10 可选字段：来源身份与发布时间（未知 null，不伪造）
+        sourceId: m.sourceId || null,
+        publishedAt: m.publishedAt || null
+      }));
+    // B-03 独立来源数：按来源身份去重后计数，主来源计入总数。
+    // unknown 无法确认身份不进 distinct——宁可低估加分，不虚高（协议 §10 规则 3）。
+    const primarySourceId = primary.sourceId || 'unknown';
+    const distinct = new Set(
+      members.map(m => m.sourceId).filter(id => id && id !== 'unknown' && id !== primarySourceId)
+    );
+    const independentSourceCount = 1 + distinct.size;
     const id = eventId(primary);
     if (idSeen.has(id)) continue; // 极端兜底：ID 冲突则丢弃
     idSeen.add(id);
@@ -492,7 +519,8 @@ export async function processItems(rawItems, ctx) {
       metrics: primary.metrics.map(m => ({ label: m.label || m.unit || '关键数字', value: m.value, unit: m.unit })),
       impact: 'unknown',
       importance: 0,
-      source: { name: primary.source, type: primary.sourceType, isPrimary: primary.sourceType === 'primary' },
+      source: { name: primary.source, type: primary.sourceType, isPrimary: primary.sourceType === 'primary', id: primarySourceId },
+      independentSourceCount,
       publishedAt: primary.publishedAt,
       discoveredAt: primary.discoveredAt,
       relatedSources,
@@ -507,7 +535,9 @@ export async function processItems(rawItems, ctx) {
     now: now.toISOString(),
     priorityTopics: enums.priorityTopics || [],
     priorityCompanies: enums.priorityCompanies || [],
-    policyBoost: enums.policyBoost || null
+    policyBoost: enums.policyBoost || null,
+    // B-03 开关：false 回退 relatedSources 条目数旧口径（回滚/新旧对比）
+    independentSources: enums.features?.independentSources !== false
   });
   events.sort((a, b) => b.importance - a.importance);
   const capped = capPerSource(events, { max: 6 });

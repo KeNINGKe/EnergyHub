@@ -53,9 +53,17 @@ export function importance(item, ctx = {}) {
       s += pb.score;
     }
   }
-  // 多源报道：合并聚类中其他信源的数量，1 家 +0.5，封顶 +1.5（≥3 家视为充分交叉验证）
-  const related = item.relatedSources?.length || 0;
-  if (related > 0) s += Math.min(1.5, related * 0.5);
+  // 多源报道：1 家 +0.5，封顶 +1.5（≥3 家视为充分交叉验证）。
+  // B-03：优先按来源身份去重后的独立来源数（含主来源）计分——同一家媒体十篇
+  // 稿件只算一家；开关关（enums.features.independentSources=false）或字段缺失
+  // 时回退旧口径 relatedSources 条目数（回滚/新旧对比用）。
+  if (ctx.independentSources !== false &&
+      Number.isFinite(item.independentSourceCount) && item.independentSourceCount >= 1) {
+    s += Math.min(1.5, Math.max(0, (item.independentSourceCount - 1) * 0.5));
+  } else {
+    const related = item.relatedSources?.length || 0;
+    if (related > 0) s += Math.min(1.5, related * 0.5);
+  }
   return Math.round(s * 10) / 10;
 }
 

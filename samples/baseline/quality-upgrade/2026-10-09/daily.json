@@ -31,8 +31,10 @@
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "blogs.nvidia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T18:45:28.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -64,18 +66,24 @@
       "source": {
         "name": "比亚迪储能",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cn.solarbe.com"
       },
+      "independentSourceCount": 3,
       "publishedAt": "2026-10-07T01:56:24.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "比亚迪储能",
-          "url": "https://www.guandian.cn/article/20261008/609932.html"
+          "url": "https://www.guandian.cn/article/20261008/609932.html",
+          "sourceId": "guandian.cn",
+          "publishedAt": "2026-10-08T02:08:00.000Z"
         },
         {
           "name": "比亚迪储能",
-          "url": "https://finance.sina.cn/2026-10-08/detail-iniumqcv4723354.d.html?oid=%E9%AB%98%E4%BB%BF%E6%B5%AA%E7%90%B4%E6%89%8B%E8%A1%A8%E6%80%8E%E4%B9%88%E8%BE%A8%E5%88%AB%E2%97%8F%E5%BE%AE%E4%BF%A1198099199%E2%97%8FyMCJ&vt=4&cid=76524&node_id=76524"
+          "url": "https://finance.sina.cn/2026-10-08/detail-iniumqcv4723354.d.html?oid=%E9%AB%98%E4%BB%BF%E6%B5%AA%E7%90%B4%E6%89%8B%E8%A1%A8%E6%80%8E%E4%B9%88%E8%BE%A8%E5%88%AB%E2%97%8F%E5%BE%AE%E4%BF%A1198099199%E2%97%8FyMCJ&vt=4&cid=76524&node_id=76524",
+          "sourceId": "finance.sina.cn",
+          "publishedAt": "2026-10-08T08:21:47.000Z"
         }
       ],
       "wechat": false,
@@ -107,30 +115,42 @@
       "source": {
         "name": "Tesla Energy",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pulse2.com"
       },
+      "independentSourceCount": 6,
       "publishedAt": "2026-10-03T11:07:57.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "Tesla Energy",
-          "url": "https://electrek.co/2026/10/05/not-sold-on-tesla-powerwall-there-are-some-great-home-battery-alternatives-out-there/"
+          "url": "https://electrek.co/2026/10/05/not-sold-on-tesla-powerwall-there-are-some-great-home-battery-alternatives-out-there/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-10-05T23:35:00.000Z"
         },
         {
           "name": "Tesla Energy",
-          "url": "https://finance.biggo.com/news/7e508abf-cb0c-42f7-becd-05da4f47a08c"
+          "url": "https://finance.biggo.com/news/7e508abf-cb0c-42f7-becd-05da4f47a08c",
+          "sourceId": "finance.biggo.com",
+          "publishedAt": "2026-10-08T12:25:00.000Z"
         },
         {
           "name": "Tesla Energy",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-q3-deliveries-beat-ubs-170331462.html"
+          "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-q3-deliveries-beat-ubs-170331462.html",
+          "sourceId": "finance.yahoo.com",
+          "publishedAt": "2026-10-05T17:03:31.000Z"
         },
         {
           "name": "Tesla Energy",
-          "url": "https://www.thecooldown.com/green-business/california-solar-battery-lease-options/"
+          "url": "https://www.thecooldown.com/green-business/california-solar-battery-lease-options/",
+          "sourceId": "thecooldown.com",
+          "publishedAt": "2026-10-05T04:26:00.000Z"
         },
         {
           "name": "Tesla Energy",
-          "url": "https://www.proactiveinvestors.com/companies/news/1099602/tesla-deliveries-top-consensus-but-energy-storage-deployments-miss-estimates-1099602.html"
+          "url": "https://www.proactiveinvestors.com/companies/news/1099602/tesla-deliveries-top-consensus-but-energy-storage-deployments-miss-estimates-1099602.html",
+          "sourceId": "proactiveinvestors.com",
+          "publishedAt": "2026-10-05T12:40:00.000Z"
         }
       ],
       "wechat": false,
@@ -167,26 +187,36 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 5,
       "publishedAt": "2026-10-07T16:25:54.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "Canary Media",
-          "url": "https://www.canarymedia.com/articles/nuclear/constellation-google-nuclear-uprates"
+          "url": "https://www.canarymedia.com/articles/nuclear/constellation-google-nuclear-uprates",
+          "sourceId": "canarymedia.com",
+          "publishedAt": "2026-10-08T19:00:00.000Z"
         },
         {
           "name": "Transformer Magazine",
-          "url": "https://transformer-magazine.com/news/google-signs-3-59-gw-power-deal/"
+          "url": "https://transformer-magazine.com/news/google-signs-3-59-gw-power-deal/",
+          "sourceId": "transformer-magazine.com",
+          "publishedAt": "2026-10-08T05:03:31.000Z"
         },
         {
           "name": "AIDC 项目动态",
-          "url": "https://www.guandian.cn/article/20261006/609631.html"
+          "url": "https://www.guandian.cn/article/20261006/609631.html",
+          "sourceId": "guandian.cn",
+          "publishedAt": "2026-10-06T02:52:09.000Z"
         },
         {
           "name": "IEEE Spectrum",
-          "url": "https://spectrum.ieee.org/ai-assistants-nuclear-power-plant"
+          "url": "https://spectrum.ieee.org/ai-assistants-nuclear-power-plant",
+          "sourceId": "spectrum.ieee.org",
+          "publishedAt": "2026-10-08T14:28:17.000Z"
         }
       ],
       "wechat": false,
@@ -211,8 +241,10 @@
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "blogs.nvidia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T21:06:35.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -244,14 +276,18 @@
       "source": {
         "name": "特变电工",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.com.cn"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-08T10:14:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "特变电工",
-          "url": "https://m.sohu.com/a/1085248318_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+          "url": "https://m.sohu.com/a/1085248318_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334",
+          "sourceId": "m.sohu.com",
+          "publishedAt": "2026-10-08T13:18:30.000Z"
         }
       ],
       "wechat": false,
@@ -287,18 +323,24 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wartsila.com"
       },
+      "independentSourceCount": 3,
       "publishedAt": "2026-10-05T10:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "Wärtsilä ES&O",
-          "url": "https://www.remio.ai/post/wartsila-data-center-power-deal-exposes-the-grid-constraint-behind-ai-growth"
+          "url": "https://www.remio.ai/post/wartsila-data-center-power-deal-exposes-the-grid-constraint-behind-ai-growth",
+          "sourceId": "remio.ai",
+          "publishedAt": "2026-10-05T16:18:35.000Z"
         },
         {
           "name": "Wärtsilä ES&O",
-          "url": "https://www.greenbuildingafrica.co.za/wartsila-emerges-as-major-data-centre-energy-solutions-provider-in-the-usa/"
+          "url": "https://www.greenbuildingafrica.co.za/wartsila-emerges-as-major-data-centre-energy-solutions-provider-in-the-usa/",
+          "sourceId": "greenbuildingafrica.co.za",
+          "publishedAt": "2026-10-06T03:14:54.000Z"
         }
       ],
       "wechat": false,
@@ -342,34 +384,48 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 6,
       "publishedAt": "2026-10-08T09:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/10/08/chile-approves-158-mw-solar-project-with-1-3-gwh-bess/"
+          "url": "https://www.ess-news.com/2026/10/08/chile-approves-158-mw-solar-project-with-1-3-gwh-bess/",
+          "sourceId": "ess-news.com",
+          "publishedAt": "2026-10-08T09:45:00.000Z"
         },
         {
           "name": "Transformer Technology",
-          "url": "https://transformer-technology.com/two-400-kv-transformers-energized-at-hams-hall-bess/"
+          "url": "https://transformer-technology.com/two-400-kv-transformers-energized-at-hams-hall-bess/",
+          "sourceId": "transformer-technology.com",
+          "publishedAt": "2026-10-08T09:04:21.000Z"
         },
         {
           "name": "阳光电源",
-          "url": "https://mchuneng.in-en.com/html/chunengy-58950.shtml"
+          "url": "https://mchuneng.in-en.com/html/chunengy-58950.shtml",
+          "sourceId": "mchuneng.in-en.com",
+          "publishedAt": "2026-10-08T00:59:56.000Z"
         },
         {
           "name": "储能变流器技术动态",
-          "url": "https://mcn.solarbe.com/news/20261007/50029949.html"
+          "url": "https://mcn.solarbe.com/news/20261007/50029949.html",
+          "sourceId": "mcn.solarbe.com",
+          "publishedAt": "2026-10-07T02:12:17.000Z"
         },
         {
           "name": "储能变流器技术动态",
-          "url": "https://www.gessey.com/h-nd-50966.html"
+          "url": "https://www.gessey.com/h-nd-50966.html",
+          "sourceId": "gessey.com",
+          "publishedAt": "2026-10-08T06:09:00.000Z"
         },
         {
           "name": "储能变流器技术动态",
-          "url": "https://www.sxcoal.com/news/detail/2107994565434875905"
+          "url": "https://www.sxcoal.com/news/detail/2107994565434875905",
+          "sourceId": "sxcoal.com",
+          "publishedAt": "2026-10-08T00:40:43.000Z"
         }
       ],
       "wechat": false,
@@ -400,8 +456,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T09:13:55.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -443,74 +501,24 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 3,
       "publishedAt": "2026-10-07T21:40:49.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "DC Energy Storage",
-          "url": "https://news.constructconnect.com/michigans-google-data-center-deal-with-dte-power-infrastructure-at-the-center-of-planning?hs_amp=true"
+          "url": "https://news.constructconnect.com/michigans-google-data-center-deal-with-dte-power-infrastructure-at-the-center-of-planning?hs_amp=true",
+          "sourceId": "news.constructconnect.com",
+          "publishedAt": "2026-10-07T19:21:43.000Z"
         },
         {
           "name": "DC Power Infra",
-          "url": "https://www.techbuzz.ai/articles/google-halts-finland-data-centers-amid-ai-infrastructure-crackdown"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_c3981658c687",
-      "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
-      "originalTitle": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
-      "url": "https://www.indexbox.io/zh-hans/blog/storage-containers-for-connectors-market-to-reach-8-5-cagr-through-2035-on-battery-storage-boom/",
-      "summary": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计 IndexBox",
-      "whyItMatters": "储能；关键数字 8.5%；媒体 台达",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "合年增长率达",
-          "value": 8.5,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 4.5,
-      "source": {
-        "name": "台达",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-10-08T10:06:04.000Z",
-      "discoveredAt": "2026-10-09T15:59:59.000Z",
-      "relatedSources": [
-        {
-          "name": "LG 新能源",
-          "url": "https://www.indexbox.io/zh-hans/blog/battery-market-to-accelerate-on-grid-scale-storage-demand-forecast-points-higher-toward-2035/"
-        },
-        {
-          "name": "LG 新能源",
-          "url": "https://www.indexbox.io/zh-hans/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
-        },
-        {
-          "name": "DC Energy Storage",
-          "url": "https://www.indexbox.io/blog/absorbent-glass-mat-agm-battery-market-forecast-to-2035-safety-driven-demand-in-data-centers-and-grid-resilience-supports-growth/"
-        },
-        {
-          "name": "沙特储能与AIDC",
-          "url": "https://www.indexbox.io/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
-        },
-        {
-          "name": "中东新能源项目",
-          "url": "https://www.indexbox.io/blog/lithium-battery-shear-wrenches-market-forecast-to-2035-driven-by-global-bess-build-out/"
-        },
-        {
-          "name": "中东新能源项目",
-          "url": "https://www.indexbox.io/blog/lithium-battery-thermal-runaway-sensor-modules-market-to-accelerate-through-2035-driven-by-grid-scale-bess-safety-mandates/"
+          "url": "https://www.techbuzz.ai/articles/google-halts-finland-data-centers-amid-ai-infrastructure-crackdown",
+          "sourceId": "techbuzz.ai",
+          "publishedAt": "2026-10-07T10:05:00.000Z"
         }
       ],
       "wechat": false,
@@ -536,8 +544,10 @@
       "source": {
         "name": "SST 中文科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T04:54:26.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -567,8 +577,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T15:49:23.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -598,8 +610,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T08:48:30.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -634,8 +648,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T09:01:02.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -661,8 +677,10 @@
       "source": {
         "name": "Vertiv Newsroom",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "vertiv.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T00:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -695,8 +713,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T18:23:28.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -728,8 +748,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:24:54.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -755,8 +777,10 @@
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "blogs.nvidia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T13:00:19.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -788,8 +812,10 @@
       "source": {
         "name": "特变电工",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T13:02:40.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -827,8 +853,10 @@
       "source": {
         "name": "Tesla Energy",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "teslaoracle.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-03T17:14:12.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -863,8 +891,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -890,8 +920,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -921,14 +953,18 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-08T09:49:16.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "PV-Tech",
-          "url": "https://www.pv-tech.org/tata-power-ocean-sun-to-pilot-membrane-based-floating-solar-technology-in-india/"
+          "url": "https://www.pv-tech.org/tata-power-ocean-sun-to-pilot-membrane-based-floating-solar-technology-in-india/",
+          "sourceId": "pv-tech.org",
+          "publishedAt": "2026-10-08T11:17:27.000Z"
         }
       ],
       "wechat": false,
@@ -962,8 +998,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-09T00:20:25.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1000,8 +1038,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T12:14:22.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1031,8 +1071,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T19:29:33.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1058,8 +1100,10 @@
       "source": {
         "name": "OpenAI News",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "openai.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T00:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1086,8 +1130,10 @@
       "source": {
         "name": "Microsoft Azure Blog",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "azure.microsoft.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T15:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1113,8 +1159,10 @@
       "source": {
         "name": "宁德时代",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "k.sina.com.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:20:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1140,8 +1188,10 @@
       "source": {
         "name": "宁德时代",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.com.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T09:40:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1165,8 +1215,10 @@
       "source": {
         "name": "台达",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T23:46:04.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1196,8 +1248,10 @@
       "source": {
         "name": "特变电工",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T22:28:13.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1223,8 +1277,10 @@
       "source": {
         "name": "远景能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T13:31:36.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1250,8 +1306,10 @@
       "source": {
         "name": "曙光数创",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cfi.net.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T08:56:31.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1277,8 +1335,10 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cyprusshippingnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T02:32:15.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1304,8 +1364,10 @@
       "source": {
         "name": "LG 新能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T22:40:49.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1331,8 +1393,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "doit.com.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T00:41:02.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1360,8 +1424,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "app.dealroom.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:41:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1391,8 +1457,10 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "igrownews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T22:20:02.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1422,8 +1490,10 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine-india.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T21:56:15.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1447,18 +1517,24 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "solarpowerworldonline.com"
       },
+      "independentSourceCount": 3,
       "publishedAt": "2026-10-08T13:41:21.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "Utility Dive",
-          "url": "https://www.utilitydive.com/news/4-hour-storage-cheaper-than-gas-peakers-across-global-markets-woodmac/832489/"
+          "url": "https://www.utilitydive.com/news/4-hour-storage-cheaper-than-gas-peakers-across-global-markets-woodmac/832489/",
+          "sourceId": "utilitydive.com",
+          "publishedAt": "2026-10-08T14:04:37.000Z"
         },
         {
           "name": "沙特储能与AIDC",
-          "url": "https://www.gadgetreview.com/4-hour-batteries-are-now-cheaper-to-install-than-gas-turbines-worldwide"
+          "url": "https://www.gadgetreview.com/4-hour-batteries-are-now-cheaper-to-install-than-gas-turbines-worldwide",
+          "sourceId": "gadgetreview.com",
+          "publishedAt": "2026-10-08T19:01:51.000Z"
         }
       ],
       "wechat": false,
@@ -1481,8 +1557,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T14:35:22.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1527,8 +1605,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T16:01:15.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1563,8 +1643,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:14:39.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1604,8 +1686,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1635,8 +1719,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:27:08.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1666,8 +1752,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:04:41.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1697,8 +1785,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:25:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1728,8 +1818,10 @@
       "source": {
         "name": "PV-Tech",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-tech.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T22:20:13.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1753,8 +1845,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:57:12.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1784,8 +1878,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T11:45:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1820,14 +1916,18 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine-usa.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-05T13:58:37.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "ESS News",
-          "url": "https://www.ess-news.com/2026/10/08/linea-energy-closes-financing-for-250-mw-500-mwh-texas-bess/"
+          "url": "https://www.ess-news.com/2026/10/08/linea-energy-closes-financing-for-250-mw-500-mwh-texas-bess/",
+          "sourceId": "ess-news.com",
+          "publishedAt": "2026-10-08T08:15:00.000Z"
         }
       ],
       "wechat": false,
@@ -1861,62 +1961,13 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T12:40:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_376d634a2183",
-      "title": "肯塔基州电力公司为1 GW数据园区开发765/345 kV变电站",
-      "originalTitle": "Kentucky Power develops 765/345 kV substation for 1 GW data campus",
-      "url": "https://transformer-technology.com/kentucky-power-develops-765-345-kv-substation-for-1-gw-data-campus/",
-      "summary": "Kentucky Power is developing a 765 kV/345 kV substation connected to the regional transmission network to serve TeraWulf’s Muskie Data Camp…",
-      "whyItMatters": "电网与并网；关键数字 345kV、1GW、765kV；地区 美国；媒体 Transformer Technology",
-      "topic": "grid",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Power develops 765/",
-          "value": 345,
-          "unit": "kV"
-        },
-        {
-          "label": "kV substation for",
-          "value": 1,
-          "unit": "GW"
-        },
-        {
-          "label": "is developing a",
-          "value": 765,
-          "unit": "kV"
-        },
-        {
-          "label": "has doubled from",
-          "value": 500,
-          "unit": "MW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "Transformer Technology",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-10-06T08:23:44.000Z",
-      "discoveredAt": "2026-10-09T15:59:59.000Z",
-      "relatedSources": [
-        {
-          "name": "Transformer Technology",
-          "url": "https://transformer-technology.com/50hertz-starts-380-kv-grid-upgrade-in-germany/"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -1937,8 +1988,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T08:47:27.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1962,8 +2015,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T05:01:26.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -1993,8 +2048,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T13:40:58.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2024,8 +2081,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T13:12:29.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2055,8 +2114,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T09:09:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2086,8 +2147,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T21:40:26.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2117,8 +2180,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T14:58:35.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2142,8 +2207,10 @@
       "source": {
         "name": "EIA Electricity Data",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "eia.gov"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T14:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2170,8 +2237,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T20:44:41.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2197,8 +2266,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T17:00:53.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2224,14 +2295,18 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-08T12:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "AIDC 项目动态",
-          "url": "https://k.sina.com.cn/article_5953740931_162dee0830670416s6.html"
+          "url": "https://k.sina.com.cn/article_5953740931_162dee0830670416s6.html",
+          "sourceId": "k.sina.com.cn",
+          "publishedAt": "2026-10-08T22:19:00.000Z"
         }
       ],
       "wechat": false,
@@ -2254,8 +2329,10 @@
       "source": {
         "name": "OpenAI News",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "openai.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T12:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2281,8 +2358,10 @@
       "source": {
         "name": "OpenAI News",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "openai.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T12:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2308,8 +2387,10 @@
       "source": {
         "name": "OpenAI News",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "openai.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T10:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2339,8 +2420,10 @@
       "source": {
         "name": "Our World in Data – Energy",
         "type": "research",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ourworldindata.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T00:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2370,14 +2453,18 @@
       "source": {
         "name": "阳光电源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cn.investing.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-06T05:43:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "宁德时代",
-          "url": "https://www.moomoo.com/hans/news/post/1000633065/trendforce-total-energy-storage-orders-in-china-reached-approximately-94"
+          "url": "https://www.moomoo.com/hans/news/post/1000633065/trendforce-total-energy-storage-orders-in-china-reached-approximately-94",
+          "sourceId": "moomoo.com",
+          "publishedAt": "2026-10-06T05:43:45.000Z"
         }
       ],
       "wechat": false,
@@ -2406,8 +2493,10 @@
       "source": {
         "name": "阳光电源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "gessey.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T06:14:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2431,8 +2520,10 @@
       "source": {
         "name": "科华数据",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "stock.stockstar.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T09:37:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2456,11 +2547,83 @@
       "source": {
         "name": "台达",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "eet-china.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T00:41:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_c3981658c687",
+      "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
+      "originalTitle": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
+      "url": "https://www.indexbox.io/zh-hans/blog/storage-containers-for-connectors-market-to-reach-8-5-cagr-through-2035-on-battery-storage-boom/",
+      "summary": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计 IndexBox",
+      "whyItMatters": "储能；关键数字 8.5%；媒体 台达",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "合年增长率达",
+          "value": 8.5,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "台达",
+        "type": "media",
+        "isPrimary": false,
+        "id": "indexbox.io"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-10-08T10:06:04.000Z",
+      "discoveredAt": "2026-10-09T15:59:59.000Z",
+      "relatedSources": [
+        {
+          "name": "LG 新能源",
+          "url": "https://www.indexbox.io/zh-hans/blog/battery-market-to-accelerate-on-grid-scale-storage-demand-forecast-points-higher-toward-2035/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-07T14:06:04.000Z"
+        },
+        {
+          "name": "LG 新能源",
+          "url": "https://www.indexbox.io/zh-hans/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T22:06:04.000Z"
+        },
+        {
+          "name": "DC Energy Storage",
+          "url": "https://www.indexbox.io/blog/absorbent-glass-mat-agm-battery-market-forecast-to-2035-safety-driven-demand-in-data-centers-and-grid-resilience-supports-growth/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-08T15:21:04.000Z"
+        },
+        {
+          "name": "沙特储能与AIDC",
+          "url": "https://www.indexbox.io/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T22:06:04.000Z"
+        },
+        {
+          "name": "中东新能源项目",
+          "url": "https://www.indexbox.io/blog/lithium-battery-shear-wrenches-market-forecast-to-2035-driven-by-global-bess-build-out/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T18:16:04.000Z"
+        },
+        {
+          "name": "中东新能源项目",
+          "url": "https://www.indexbox.io/blog/lithium-battery-thermal-runaway-sensor-modules-market-to-accelerate-through-2035-driven-by-grid-scale-bess-safety-mandates/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T18:11:04.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -2481,47 +2644,13 @@
       "source": {
         "name": "台达",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "eet-china.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:08:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_c1f10ffb22ef",
-      "title": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
-      "originalTitle": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
-      "url": "https://www.indexbox.io/zh-hans/blog/multi-outlet-gang-strips-market-forecast-to-2035-data-center-and-renewable-demand-drives-6-9-cagr/",
-      "summary": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计 IndexBox",
-      "whyItMatters": "数据中心电力需求；关键数字 9%；媒体 台达",
-      "topic": "data-center-power",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "需求推动6-",
-          "value": 9,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3,
-      "source": {
-        "name": "台达",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-10-03T10:51:04.000Z",
-      "discoveredAt": "2026-10-09T15:59:59.000Z",
-      "relatedSources": [
-        {
-          "name": "数据中心供电招标",
-          "url": "https://www.indexbox.io/zh-hans/blog/380v-400v-power-distribution-market-forecast-to-2035-growth-accelerates-on-data-center-and-renewable-demand/"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -2553,8 +2682,10 @@
       "source": {
         "name": "特变电工",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:54:30.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2584,8 +2715,10 @@
       "source": {
         "name": "远景能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ne21.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T02:45:48.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2615,8 +2748,10 @@
       "source": {
         "name": "固德威",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wedoany.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:34:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2642,8 +2777,10 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T11:04:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2669,8 +2806,10 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T06:27:57.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2705,8 +2844,10 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:23:27.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2732,8 +2873,10 @@
       "source": {
         "name": "Wärtsilä ES&O",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cyprusshippingnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T06:51:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2763,8 +2906,10 @@
       "source": {
         "name": "LG 新能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cls.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T04:24:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2790,8 +2935,10 @@
       "source": {
         "name": "LG 新能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "digitaltoday.co.kr"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T00:51:47.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2831,8 +2978,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "daryo.uz"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T09:30:45.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2862,8 +3011,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "chinaiol.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T05:30:45.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2893,8 +3044,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "seetao.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T02:26:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2924,8 +3077,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:31:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -2951,14 +3106,18 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "moomoo.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-08T12:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "DC Power Standards",
-          "url": "https://www.globenewswire.com/news-release/2026/10/08/3377274/0/en/quantumscape-announces-qs-powerblock-for-in-rack-energy-storage-in-ai-data-centers.html"
+          "url": "https://www.globenewswire.com/news-release/2026/10/08/3377274/0/en/quantumscape-announces-qs-powerblock-for-in-rack-energy-storage-in-ai-data-centers.html",
+          "sourceId": "globenewswire.com",
+          "publishedAt": "2026-10-08T12:30:00.000Z"
         }
       ],
       "wechat": false,
@@ -2987,14 +3146,18 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "theenergymag.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-06T11:06:49.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "Hyperscale Projects",
-          "url": "https://bebeez.eu/2026/10/06/applied-digital-to-develop-1gw-data-center-campus-in-finland/"
+          "url": "https://bebeez.eu/2026/10/06/applied-digital-to-develop-1gw-data-center-campus-in-finland/",
+          "sourceId": "bebeez.eu",
+          "publishedAt": "2026-10-06T15:08:06.000Z"
         }
       ],
       "wechat": false,
@@ -3017,8 +3180,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "aapnews.aap.com.au"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:55:24.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3048,8 +3213,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "thetimes-tribune.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T21:41:23.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3084,8 +3251,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "uk.finance.yahoo.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T14:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3112,8 +3281,10 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "techtarget.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-02T21:30:54.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3143,14 +3314,18 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "chosun.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-05T13:17:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "DC Power Infra",
-          "url": "https://finance.biggo.com/news/7447bde6-c67a-42ed-bb74-e12ca3573927"
+          "url": "https://finance.biggo.com/news/7447bde6-c67a-42ed-bb74-e12ca3573927",
+          "sourceId": "finance.biggo.com",
+          "publishedAt": "2026-10-05T14:05:00.000Z"
         }
       ],
       "wechat": false,
@@ -3184,14 +3359,18 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "solarquarter.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-05T11:49:42.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "沙特储能与AIDC",
-          "url": "https://www.mvapulse.com/mena-renewable-energy-projects-surge-18-gw-target-by-2030/"
+          "url": "https://www.mvapulse.com/mena-renewable-energy-projects-surge-18-gw-target-by-2030/",
+          "sourceId": "mvapulse.com",
+          "publishedAt": "2026-10-08T02:31:05.000Z"
         }
       ],
       "wechat": false,
@@ -3220,8 +3399,10 @@
       "source": {
         "name": "IEEE Spectrum",
         "type": "research",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "spectrum.ieee.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T13:00:01.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3245,8 +3426,10 @@
       "source": {
         "name": "SST 中文科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "eet-china.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:08:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3270,8 +3453,10 @@
       "source": {
         "name": "SST 中文科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T10:26:04.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3306,8 +3491,10 @@
       "source": {
         "name": "构网型 PCS 科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "openpr.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:30:24.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3336,8 +3523,10 @@
       "source": {
         "name": "构网型 PCS 科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "openpr.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T12:25:02.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3364,8 +3553,10 @@
       "source": {
         "name": "构网型 PCS 科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "openpr.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T05:37:25.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3395,8 +3586,10 @@
       "source": {
         "name": "储能变流器技术动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "mchuneng.in-en.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:59:19.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3431,8 +3624,10 @@
       "source": {
         "name": "储能变流器技术动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cn.solarbe.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T01:29:03.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3459,8 +3654,10 @@
       "source": {
         "name": "SiC 宽禁带器件",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T23:46:04.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3484,8 +3681,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:42:42.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3509,11 +3708,68 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T11:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_376d634a2183",
+      "title": "肯塔基州电力公司为1 GW数据园区开发765/345 kV变电站",
+      "originalTitle": "Kentucky Power develops 765/345 kV substation for 1 GW data campus",
+      "url": "https://transformer-technology.com/kentucky-power-develops-765-345-kv-substation-for-1-gw-data-campus/",
+      "summary": "Kentucky Power is developing a 765 kV/345 kV substation connected to the regional transmission network to serve TeraWulf’s Muskie Data Camp…",
+      "whyItMatters": "电网与并网；关键数字 345kV、1GW、765kV；地区 美国；媒体 Transformer Technology",
+      "topic": "grid",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Power develops 765/",
+          "value": 345,
+          "unit": "kV"
+        },
+        {
+          "label": "kV substation for",
+          "value": 1,
+          "unit": "GW"
+        },
+        {
+          "label": "is developing a",
+          "value": 765,
+          "unit": "kV"
+        },
+        {
+          "label": "has doubled from",
+          "value": 500,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Transformer Technology",
+        "type": "media",
+        "isPrimary": false,
+        "id": "transformer-technology.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-10-06T08:23:44.000Z",
+      "discoveredAt": "2026-10-09T15:59:59.000Z",
+      "relatedSources": [
+        {
+          "name": "Transformer Technology",
+          "url": "https://transformer-technology.com/50hertz-starts-380-kv-grid-upgrade-in-germany/",
+          "sourceId": "transformer-technology.com",
+          "publishedAt": "2026-10-08T08:35:20.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -3540,8 +3796,10 @@
       "source": {
         "name": "Transformer Technology",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T08:08:05.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3565,8 +3823,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T05:00:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3590,8 +3850,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:39:30.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3617,8 +3879,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T19:58:54.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3644,8 +3908,10 @@
       "source": {
         "name": "Fraunhofer ISE 电力电子与电网部",
         "type": "research",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ise.fraunhofer.de"
       },
+      "independentSourceCount": 1,
       "publishedAt": null,
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3669,8 +3935,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T19:40:22.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3694,8 +3962,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T20:37:23.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3719,8 +3989,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:04:49.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3747,8 +4019,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T15:00:23.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3774,8 +4048,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T15:52:45.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3799,11 +4075,53 @@
       "source": {
         "name": "NVIDIA Blog",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "blogs.nvidia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T13:00:57.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_c1f10ffb22ef",
+      "title": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
+      "originalTitle": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
+      "url": "https://www.indexbox.io/zh-hans/blog/multi-outlet-gang-strips-market-forecast-to-2035-data-center-and-renewable-demand-drives-6-9-cagr/",
+      "summary": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计 IndexBox",
+      "whyItMatters": "数据中心电力需求；关键数字 9%；媒体 台达",
+      "topic": "data-center-power",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "需求推动6-",
+          "value": 9,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "台达",
+        "type": "media",
+        "isPrimary": false,
+        "id": "indexbox.io"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-10-03T10:51:04.000Z",
+      "discoveredAt": "2026-10-09T15:59:59.000Z",
+      "relatedSources": [
+        {
+          "name": "数据中心供电招标",
+          "url": "https://www.indexbox.io/zh-hans/blog/380v-400v-power-distribution-market-forecast-to-2035-growth-accelerates-on-data-center-and-renewable-demand/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T04:16:04.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -3824,8 +4142,10 @@
       "source": {
         "name": "ACWA Power",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "middleeastmonitor.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T16:05:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3855,8 +4175,10 @@
       "source": {
         "name": "ACWA Power",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "trend.az"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T02:03:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3886,8 +4208,10 @@
       "source": {
         "name": "ACWA Power",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "agbi.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T05:50:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3927,8 +4251,10 @@
       "source": {
         "name": "ACWA Power",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "constructionreviewonline.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T13:24:34.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3952,8 +4278,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T19:11:26.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -3977,8 +4305,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "chinapower.org.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T19:41:15.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4002,8 +4332,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "huxiu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T23:16:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4033,8 +4365,10 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "itdcw.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T23:16:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4069,8 +4403,10 @@
       "source": {
         "name": "数据中心供电招标",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "digitaltoday.co.kr"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T07:27:14.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4100,8 +4436,10 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ir.applieddigital.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T10:00:07.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4125,8 +4463,10 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "southshorepress.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T22:14:26.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4150,8 +4490,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energiesmedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T13:12:44.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4175,8 +4517,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "prnewswire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T15:32:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4200,8 +4544,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "rystadenergy.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T19:10:31.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4225,8 +4571,10 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformernews.ai"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T15:02:11.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4256,8 +4604,10 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "bestmag.co.uk"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T08:08:46.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4287,8 +4637,10 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "maaal.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T13:27:11.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4318,8 +4670,10 @@
       "source": {
         "name": "沙特储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "aa.com.tr"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T09:46:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4359,8 +4713,10 @@
       "source": {
         "name": "储能变流器技术动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "itdcw.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-03T02:19:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4384,8 +4740,10 @@
       "source": {
         "name": "SiC 宽禁带器件",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy.gov"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T14:40:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4409,8 +4767,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4434,8 +4794,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4459,8 +4821,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T17:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4484,8 +4848,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T07:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4509,8 +4875,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:52:13.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4534,8 +4902,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T13:07:47.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4559,8 +4929,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T23:42:40.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4584,8 +4956,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4609,8 +4983,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T13:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4634,8 +5010,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T13:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4659,8 +5037,10 @@
       "source": {
         "name": "Power Electronics News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powerelectronicsnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T11:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4684,8 +5064,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T13:45:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4709,8 +5091,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T10:50:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4734,8 +5118,10 @@
       "source": {
         "name": "ESS News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ess-news.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4759,8 +5145,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T05:02:19.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4784,8 +5172,10 @@
       "source": {
         "name": "POWER Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "powermag.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T19:37:33.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4809,8 +5199,10 @@
       "source": {
         "name": "Energy Central",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energycentral.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:05:55.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4834,8 +5226,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T15:00:08.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4859,8 +5253,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T17:00:03.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4884,8 +5280,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiengineering.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:02:25.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4909,8 +5307,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiengineering.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:01:27.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4934,8 +5334,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T14:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4959,8 +5361,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:19:45.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -4984,8 +5388,10 @@
       "source": {
         "name": "宁德时代",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cn.solarbe.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T01:44:40.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5009,8 +5415,10 @@
       "source": {
         "name": "宁德时代",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ne21.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:26:05.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5034,41 +5442,13 @@
       "source": {
         "name": "比亚迪储能",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "k.sina.com.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T20:55:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_d36e81ef1ee3",
-      "title": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
-      "originalTitle": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
-      "url": "https://www.indexbox.io/zh-hans/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/",
-      "summary": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计 IndexBox",
-      "whyItMatters": "光伏与风电；媒体 阳光电源",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2,
-      "source": {
-        "name": "阳光电源",
-        "type": "media",
-        "isPrimary": false
-      },
-      "publishedAt": "2026-10-05T15:51:04.000Z",
-      "discoveredAt": "2026-10-09T15:59:59.000Z",
-      "relatedSources": [
-        {
-          "name": "中东新能源项目",
-          "url": "https://www.indexbox.io/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
-        }
-      ],
       "wechat": false,
       "research": false
     },
@@ -5089,8 +5469,10 @@
       "source": {
         "name": "阳光电源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cn.solarbe.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T02:31:48.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5114,8 +5496,10 @@
       "source": {
         "name": "阳光电源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "ne21.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:10:58.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5139,8 +5523,10 @@
       "source": {
         "name": "阳光电源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "mcn.solarbe.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T02:25:16.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5164,8 +5550,10 @@
       "source": {
         "name": "科华数据",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "gsi24.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T05:57:05.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5189,8 +5577,10 @@
       "source": {
         "name": "盛弘股份",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wedoany.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:09:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5214,8 +5604,10 @@
       "source": {
         "name": "固德威",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "icloudnews.net"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T02:44:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5239,8 +5631,10 @@
       "source": {
         "name": "Tesla Energy",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "simplywall.st"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T11:55:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5264,8 +5658,10 @@
       "source": {
         "name": "Tesla Energy",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T07:45:24.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5289,8 +5685,10 @@
       "source": {
         "name": "LG 新能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "itdcw.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T05:50:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5314,8 +5712,10 @@
       "source": {
         "name": "LG 新能源",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "digitaltoday.co.kr"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T22:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5339,8 +5739,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "trend.az"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T07:28:21.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5364,8 +5766,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "power-technology.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T09:58:08.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5389,8 +5793,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "chinaglobalsouth.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T13:37:13.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5414,8 +5820,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "uzdaily.uz"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T14:31:41.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5439,8 +5847,10 @@
       "source": {
         "name": "Masdar",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilities-me.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T09:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5464,8 +5874,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wallstreetcn.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:01:08.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5489,8 +5901,10 @@
       "source": {
         "name": "AIDC 项目动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T00:27:22.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5514,8 +5928,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wallstreetcn.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T06:44:25.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5539,8 +5955,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "m.sohu.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T03:30:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5564,8 +5982,10 @@
       "source": {
         "name": "AIDC 政策标准",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "mcn.solarbe.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T01:53:53.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5589,8 +6009,10 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.sina.com.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T01:53:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5614,8 +6036,10 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "user.guancha.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:32:18.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5639,8 +6063,10 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wallstreetcn.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T07:14:05.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5648,11 +6074,11 @@
       "research": false
     },
     {
-      "id": "evt_51e8d55b20a7",
-      "title": "电力正成数据中心扩张最大瓶颈：有哪些值得关注的电力股？",
-      "originalTitle": "电力正成数据中心扩张最大瓶颈：有哪些值得关注的电力股？",
-      "url": "https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262194931-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey",
-      "summary": "电力正成数据中心扩张最大瓶颈：有哪些值得关注的电力股？ TradingKey",
+      "id": "evt_fff56dba6a92",
+      "title": "AI 数据中心陷入“电荒”：电力缺口全解析，哪些半导体股票风险最大？",
+      "originalTitle": "AI 数据中心陷入“电荒”：电力缺口全解析，哪些半导体股票风险最大？",
+      "url": "https://www.odaily.news/zh-CN/post/5213288",
+      "summary": "AI 数据中心陷入“电荒”：电力缺口全解析，哪些半导体股票风险最大？ Odaily星球日报",
       "whyItMatters": "数据中心电力需求；媒体 数据中心储能备电",
       "topic": "data-center-power",
       "tags": [],
@@ -5664,16 +6090,13 @@
       "source": {
         "name": "数据中心储能备电",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "odaily.news"
       },
-      "publishedAt": "2026-10-05T09:00:00.000Z",
+      "independentSourceCount": 1,
+      "publishedAt": "2026-10-07T11:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
-      "relatedSources": [
-        {
-          "name": "DC Power Infra",
-          "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262200934-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey"
-        }
-      ],
+      "relatedSources": [],
       "wechat": false,
       "research": false
     },
@@ -5694,8 +6117,10 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "detroitnews.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T20:08:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5719,8 +6144,10 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "oregonlive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T21:23:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5744,8 +6171,10 @@
       "source": {
         "name": "Hyperscale Projects",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "datacenterfrontier.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T15:45:07.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5769,8 +6198,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "stocktitan.net"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T12:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5794,8 +6225,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "datacenterfrontier.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T19:30:04.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5819,8 +6252,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "munichre.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T01:18:54.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5844,8 +6279,10 @@
       "source": {
         "name": "DC Energy Storage",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T07:48:32.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5869,8 +6306,10 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "wilmerhale.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T15:03:03.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5894,8 +6333,10 @@
       "source": {
         "name": "DC Power Infra",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "finance.yahoo.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T12:31:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5919,14 +6360,18 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "rgj.com"
       },
+      "independentSourceCount": 2,
       "publishedAt": "2026-10-03T07:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [
         {
           "name": "阿联酋储能与AIDC",
-          "url": "https://www.indexbox.io/blog/rox-capital-group-launches-rox-gulf-energy-storage-platform-targeting-uae-and-oman/"
+          "url": "https://www.indexbox.io/blog/rox-capital-group-launches-rox-gulf-energy-storage-platform-targeting-uae-and-oman/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T13:04:05.000Z"
         }
       ],
       "wechat": false,
@@ -5949,8 +6394,10 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "rimac-newsroom.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T10:31:59.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5974,8 +6421,10 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "orfme.org"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T13:29:46.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -5999,8 +6448,10 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energetica-india.net"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T16:31:12.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6024,8 +6475,10 @@
       "source": {
         "name": "中东新能源项目",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "renewablesnow.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T13:18:20.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6049,8 +6502,10 @@
       "source": {
         "name": "储能变流器技术动态",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "workercn.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-08T01:59:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6074,8 +6529,10 @@
       "source": {
         "name": "SiC 宽禁带器件",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "quiverquant.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-07T15:10:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6099,8 +6556,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T18:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6124,8 +6583,10 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T07:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6149,8 +6610,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T15:45:17.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6174,8 +6637,10 @@
       "source": {
         "name": "Transformer Magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "transformer-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T05:01:10.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6199,11 +6664,47 @@
       "source": {
         "name": "宁德时代",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "stcn.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T09:30:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_d36e81ef1ee3",
+      "title": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
+      "originalTitle": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
+      "url": "https://www.indexbox.io/zh-hans/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/",
+      "summary": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计 IndexBox",
+      "whyItMatters": "光伏与风电；媒体 阳光电源",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 1.5,
+      "source": {
+        "name": "阳光电源",
+        "type": "media",
+        "isPrimary": false,
+        "id": "indexbox.io"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-10-05T15:51:04.000Z",
+      "discoveredAt": "2026-10-09T15:59:59.000Z",
+      "relatedSources": [
+        {
+          "name": "中东新能源项目",
+          "url": "https://www.indexbox.io/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/",
+          "sourceId": "indexbox.io",
+          "publishedAt": "2026-10-05T15:51:04.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -6224,8 +6725,10 @@
       "source": {
         "name": "盛弘股份",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cls.cn"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T00:34:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6249,8 +6752,10 @@
       "source": {
         "name": "南瑞继保",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T00:41:04.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6274,8 +6779,10 @@
       "source": {
         "name": "数据中心供电招标",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "indexbox.io"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T16:40:35.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6299,8 +6806,10 @@
       "source": {
         "name": "DC Power Standards",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "edb.gov.sg"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-04T07:00:00.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6324,8 +6833,10 @@
       "source": {
         "name": "阿联酋储能与AIDC",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "taiyangnews.info"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T06:38:53.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6349,8 +6860,10 @@
       "source": {
         "name": "中东新能源项目",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "grandviewresearch.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T09:37:51.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6374,8 +6887,10 @@
       "source": {
         "name": "构网型 PCS 科研",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "solarquarter.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-06T10:14:55.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],
@@ -6399,8 +6914,10 @@
       "source": {
         "name": "SiC 宽禁带器件",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy.gov"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-10-05T15:48:55.000Z",
       "discoveredAt": "2026-10-09T15:59:59.000Z",
       "relatedSources": [],

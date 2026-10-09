@@ -276,7 +276,7 @@ async function main() {
       ? computeMissedMerges(daily.items, annotationSet, annotationLabels)
       : { missedCount: null, groups: [], totalGroups: null };
 
-    const perEventSources = daily.items.map(independentSourceProxy);
+    const perEventSources = daily.items.map(ev => ev.independentSourceCount ?? independentSourceProxy(ev));
     perDate.push({
       date,
       replayNow: replayNow.toISOString(),
@@ -285,9 +285,10 @@ async function main() {
       stats,
       eventCount: daily.items.length,
       independentSourceCountProxy: {
-        note: '1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换',
+        note: 'B-03 起优先取正式字段 independentSourceCount（来源身份去重，含主来源）；缺失时回退 1 + distinct(relatedSources[].name)',
         max: Math.max(0, ...perEventSources),
         overTwo: perEventSources.filter(n => n > 2).length,
+        distribution: perEventSources.reduce((acc, n) => { acc[n] = (acc[n] || 0) + 1; return acc; }, {}),
       },
       featured: (featured.featuredEventIds || []).map(id => ({ id, title: titleOf(daily, id) })),
       hot: (featured.hotEventIds || []).map(id => ({ id, title: titleOf(daily, id) })),

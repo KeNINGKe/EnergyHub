@@ -194,6 +194,14 @@
 | 内部 `selectionTrace` | 规则分、业务分、理由、模型/提示词版本 | C |
 | `feeds/archive/`、`feeds/topics/` | 历史快照与主题索引 | E |
 
+### 10.1 B-03 来源身份与独立来源计数（已落地，2026-10）
+
+- **来源身份解析**（`scripts/lib/identity.mjs` `resolveSourceId`）：优先级 sources.json 配置 `id`（尚未批量下发，增量补）> `data/source-aliases.json` byName 别名 > 公众号独立身份 `wechat:<公众号名>`（不算 `mp.weixin.qq.com` 一家）> 域名兜底（去 `www.`）> `unknown`。每步产 `sourceBasis`（config/alias/wechat/domain/unknown）供核查。
+- **`independentSourceCount`**：事件簇成员按来源身份去重 +1（主来源计入）。`unknown` 不进去重集——宁可低估加分，不虚高。同一来源十篇稿件计 1 家。
+- **加分口径**（`scripts/lib/score.mjs`）：`min(1.5, max(0, independentSourceCount - 1) × 0.5)`；`enums.features.independentSources=false` 或字段缺失时回退旧口径（relatedSources 条目数 × 0.5）。热点同分裁决同开关（`build-daily-v2.mjs` `selectHot`）。
+- **校验**（`scripts/lib/schema.mjs`）：`source.id`/`relatedSources[].sourceId` 出现时须非空字符串；`independentSourceCount` 须 ≥1 整数；`relatedSources[].publishedAt` 出现时须合法 ISO 时间，未知为 `null` 不伪造。
+- `relatedSources` 保留全部有效原文链接，不为计数删证据。
+
 ## 11. 离线回放与固定回执夹具（阶段 A-01）
 
 固定可复现基线：固定输入 + 固定模型回执，离线重复回放同一输出，供 B 阶段改动前后对比。

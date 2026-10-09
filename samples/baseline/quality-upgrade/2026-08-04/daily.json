@@ -30,38 +30,54 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 6,
       "publishedAt": "2026-08-03T08:31:51.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [
         {
           "name": "量子位",
-          "url": "https://www.qbitai.com/2026/08/465732.html"
+          "url": "https://www.qbitai.com/2026/08/465732.html",
+          "sourceId": "qbitai.com",
+          "publishedAt": "2026-08-04T01:27:41.000Z"
         },
         {
           "name": "SemiWiki",
-          "url": "https://semiwiki.com/eda/synopsys/371800-synopsys-demonstrates-leadership-in-ai-powered-engineering-at-2026-dac-chips-to-systems-conference/"
+          "url": "https://semiwiki.com/eda/synopsys/371800-synopsys-demonstrates-leadership-in-ai-powered-engineering-at-2026-dac-chips-to-systems-conference/",
+          "sourceId": "semiwiki.com",
+          "publishedAt": "2026-08-03T17:00:49.000Z"
         },
         {
           "name": "SemiEngineering",
-          "url": "https://semiengineering.com/chip-bridges-neuromorphic-and-deep-network-computing-tu-dresden/"
+          "url": "https://semiengineering.com/chip-bridges-neuromorphic-and-deep-network-computing-tu-dresden/",
+          "sourceId": "semiengineering.com",
+          "publishedAt": "2026-08-03T15:51:42.000Z"
         },
         {
           "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/ddr5/lexar-lists-32gb-ddr5-memory-with-homegrown-chinese-chips-3-999-yuan-usd592-price-undercuts-hopes-for-cheaper-cxmt-powered-ram"
+          "url": "https://www.tomshardware.com/pc-components/ddr5/lexar-lists-32gb-ddr5-memory-with-homegrown-chinese-chips-3-999-yuan-usd592-price-undercuts-hopes-for-cheaper-cxmt-powered-ram",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-08-03T14:51:09.000Z"
         },
         {
           "name": "Latitude Media",
-          "url": "https://www.latitudemedia.com/news/perimeter-compute-turn-spare-office-power-into-edge-ai-data-centers/"
+          "url": "https://www.latitudemedia.com/news/perimeter-compute-turn-spare-office-power-into-edge-ai-data-centers/",
+          "sourceId": "latitudemedia.com",
+          "publishedAt": "2026-08-03T12:00:00.000Z"
         },
         {
           "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/co-packaged-optics-cpo-foundry-roadmaps-breaking-down-tsmc-intel-samsung-and-globalfoundries-approach-to-next-generation-scale-up-connectivity"
+          "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/co-packaged-optics-cpo-foundry-roadmaps-breaking-down-tsmc-intel-samsung-and-globalfoundries-approach-to-next-generation-scale-up-connectivity",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-08-03T11:45:50.000Z"
         },
         {
           "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/gpus/worlds-smallest-gpu-silicon-passes-real-world-testing-240-000-transistor-tinygpu-v2-0-renders-3d-graphics-at-up-to-15-fps-while-v3-0-prepares-for-2026-release"
+          "url": "https://www.tomshardware.com/pc-components/gpus/worlds-smallest-gpu-silicon-passes-real-world-testing-240-000-transistor-tinygpu-v2-0-renders-3d-graphics-at-up-to-15-fps-while-v3-0-prepares-for-2026-release",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-08-03T11:00:00.000Z"
         }
       ],
       "wechat": false,
@@ -87,8 +103,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T18:46:56.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -122,8 +140,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T16:39:36.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -149,42 +169,60 @@
       "source": {
         "name": "Canary Media",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "canarymedia.com"
       },
+      "independentSourceCount": 5,
       "publishedAt": "2026-08-03T07:30:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [
         {
           "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/"
+          "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/",
+          "sourceId": "energy-storage.news",
+          "publishedAt": "2026-08-04T03:28:43.000Z"
         },
         {
           "name": "CleanTechnica",
-          "url": "https://cleantechnica.com/2026/08/03/blocking-new-imported-inverters-will-cost-america/"
+          "url": "https://cleantechnica.com/2026/08/03/blocking-new-imported-inverters-will-cost-america/",
+          "sourceId": "cleantechnica.com",
+          "publishedAt": "2026-08-03T19:55:36.000Z"
         },
         {
           "name": "Utility Dive",
-          "url": "https://www.utilitydive.com/news/dominion-offshore-wind-project-cost-rises-nearly-300m/826845/"
+          "url": "https://www.utilitydive.com/news/dominion-offshore-wind-project-cost-rises-nearly-300m/826845/",
+          "sourceId": "utilitydive.com",
+          "publishedAt": "2026-08-03T16:07:45.000Z"
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/03/kazakhstans-solar-capacity-surpasses-1-37-gw/"
+          "url": "https://www.pv-magazine.com/2026/08/03/kazakhstans-solar-capacity-surpasses-1-37-gw/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-03T12:45:00.000Z"
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/03/the-controversy-over-fire-classification-of-bipv-systems/"
+          "url": "https://www.pv-magazine.com/2026/08/03/the-controversy-over-fire-classification-of-bipv-systems/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-03T10:30:00.000Z"
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/"
+          "url": "https://www.pv-magazine.com/2026/08/03/germany-reduces-solar-feed-in-tariffs-by-1/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-03T09:00:00.000Z"
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/08/03/peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-applications/"
+          "url": "https://www.pv-magazine.com/2026/08/03/peruvian-researchers-develop-foldable-solar-panels-for-naval-mining-applications/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-03T08:30:00.000Z"
         },
         {
           "name": "Canary Media",
-          "url": "https://www.canarymedia.com/articles/solar/illinois-solar-for-all"
+          "url": "https://www.canarymedia.com/articles/solar/illinois-solar-for-all",
+          "sourceId": "canarymedia.com",
+          "publishedAt": "2026-08-03T07:30:00.000Z"
         }
       ],
       "wechat": false,
@@ -218,8 +256,10 @@
       "source": {
         "name": "EIA Electricity Data",
         "type": "primary",
-        "isPrimary": true
+        "isPrimary": true,
+        "id": "eia.gov"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T14:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -245,8 +285,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-04T04:16:10.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -272,8 +314,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T15:49:39.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -308,8 +352,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T13:44:56.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -339,8 +385,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T12:22:40.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -380,8 +428,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T12:15:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -411,8 +461,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T11:23:32.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -442,8 +494,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T11:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -473,8 +527,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T09:30:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -504,8 +560,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T10:30:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -529,8 +587,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T10:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -556,8 +616,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T09:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -583,8 +645,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T23:18:26.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -610,8 +674,10 @@
       "source": {
         "name": "量子位",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "qbitai.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T07:11:13.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -635,8 +701,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T18:52:15.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -660,8 +728,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T18:42:20.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -685,8 +755,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T18:32:58.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -710,8 +782,10 @@
       "source": {
         "name": "Energy Storage News",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "energy-storage.news"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T13:06:10.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -735,8 +809,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T13:04:59.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -760,8 +836,10 @@
       "source": {
         "name": "HPCwire",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "hpcwire.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T13:00:06.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -785,8 +863,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T12:43:44.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -810,8 +890,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T12:30:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -835,8 +917,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T12:04:44.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -860,8 +944,10 @@
       "source": {
         "name": "pv magazine",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "pv-magazine.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T11:45:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -885,8 +971,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T09:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -910,8 +998,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cleantechnica.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T08:53:56.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -935,8 +1025,10 @@
       "source": {
         "name": "SemiEngineering",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiengineering.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T07:01:41.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -960,8 +1052,10 @@
       "source": {
         "name": "CleanTechnica",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "cleantechnica.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-04T01:10:17.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -985,8 +1079,10 @@
       "source": {
         "name": "SemiWiki",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "semiwiki.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T21:00:27.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -1010,8 +1106,10 @@
       "source": {
         "name": "Electrek",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "electrek.co"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T20:44:20.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -1035,8 +1133,10 @@
       "source": {
         "name": "Tom's Hardware",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "tomshardware.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T11:30:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],
@@ -1060,8 +1160,10 @@
       "source": {
         "name": "Utility Dive",
         "type": "media",
-        "isPrimary": false
+        "isPrimary": false,
+        "id": "utilitydive.com"
       },
+      "independentSourceCount": 1,
       "publishedAt": "2026-08-03T09:00:00.000Z",
       "discoveredAt": "2026-08-04T06:21:30.063Z",
       "relatedSources": [],

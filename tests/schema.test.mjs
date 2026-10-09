@@ -307,3 +307,17 @@ test('前瞻兼容: 注入 B 阶段增量字段后 daily/featured 校验仍通�
   const rf = await validateFeatured(featured, daily);
   assert.equal(rf.valid, true, JSON.stringify(rf.errors));
 });
+
+test('B-03 增量字段类型校验：independentSourceCount/source.id/relatedSources 扩展字段非法值被拒', async () => {
+  const daily = makeValidDaily();
+  daily.items[0].independentSourceCount = 0; // 须为 ≥1 整数
+  daily.items[1].source.id = '';             // 出现时须为非空字符串
+  daily.items[1].independentSourceCount = 2.5;
+  daily.items[0].relatedSources[0].publishedAt = 'not-a-date';
+  const r = await validateDailyV2(daily);
+  assert.equal(r.valid, false);
+  assert.ok(r.errors.some(e => e.includes('items[0]') && e.includes('independentSourceCount')), r.errors.join(';'));
+  assert.ok(r.errors.some(e => e.includes('source: id 出现时须为非空字符串')), r.errors.join(';'));
+  assert.ok(r.errors.some(e => e.includes('items[1]') && e.includes('independentSourceCount')), r.errors.join(';'));
+  assert.ok(r.errors.some(e => e.includes('publishedAt 非法')), r.errors.join(';'));
+});
