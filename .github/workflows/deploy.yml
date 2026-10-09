@@ -30,6 +30,25 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
 
+      # 日报外部守卫 worker（Workers Cron 兜底 GitHub schedule 静默丢弃，
+      # 2026-10-09 事故：fetch-feeds 与内置守卫双双没触发）。与静态站分离：
+      # 不依赖 dist，先部署 worker 再同步 secrets（首次部署前 worker 不存在，
+      # secret put 会失败）。secrets 从仓库 secrets 灌入，本地/本文件不落凭据；
+      # GUARD_GH_PAT 轮换后只需更新仓库 secret 并重跑 deploy。
+      - name: Deploy guard worker + sync secrets
+        if: env.GUARD_GH_PAT != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          GUARD_GH_PAT: ${{ secrets.GUARD_GH_PAT }}
+          DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
+          DINGTALK_WEBHOOK_SECRET: ${{ secrets.DINGTALK_WEBHOOK_SECRET }}
+        run: |
+          npm run deploy:guard
+          printf '%s' "$GUARD_GH_PAT" | npx wrangler secret put GH_PAT --config wrangler-guard.jsonc
+          printf '%s' "$DINGTALK_WEBHOOK" | npx wrangler secret put DINGTALK_WEBHOOK --config wrangler-guard.jsonc
+          printf '%s' "$DINGTALK_WEBHOOK_SECRET" | npx wrangler secret put DINGTALK_WEBHOOK_SECRET --config wrangler-guard.jsonc
+
       # 腾讯云 CloudBase 静态托管（大陆免备案直连）。配置 TCB_ENV_ID 等三个 secrets 后自动生效；
       # 未配置时本步骤跳过，不影响 Cloudflare 部署。
       - name: Deploy to CloudBase (腾讯云静态托管)

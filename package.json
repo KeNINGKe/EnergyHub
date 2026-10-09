@@ -23,7 +23,8 @@
     "admin": "node scripts/admin/server.mjs",
     "notify": "node scripts/notify-dingtalk.mjs",
     "notify:dry": "node scripts/notify-dingtalk.mjs --dry-run",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "deploy:guard": "wrangler deploy -c wrangler-guard.jsonc"
   },
   "dependencies": {
     "google-news-url-decoder": "^1.2.2",

@@ -1,0 +1,21 @@
+// 日报外部守卫 worker（与静态站 energyhub 分离部署，互不影响）。
+// 入口 worker/guard.mjs；判定逻辑与 GitHub 内置守卫单源（scripts/lib/guard-logic.mjs）。
+// secrets（GH_PAT / DINGTALK_WEBHOOK / DINGTALK_WEBHOOK_SECRET）由 deploy.yml
+// 在 CI 里从仓库 secrets 同步，本文件不落任何凭据。
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "energyhub-guard",
+  "main": "worker/guard.mjs",
+  "compatibility_date": "2026-07-17",
+  "triggers": {
+    // 北京 08:07 —— 早于 GitHub 内置守卫 08:13，兜"调度被整体丢弃"；
+    // 北京 08:41 —— 兜内置守卫两轮（08:13/08:33）都没跑/没起作用。
+    // 幂等：已推送则什么都不做，与内置守卫并发也不会重复补发
+    // （补发的 dispatch run 与 GitHub 迟到 run 的并发由 fetch-feeds 的
+    // push-rebase 重试兜住，见 fetch-feeds.yml「Commit and push」）。
+    "crons": ["7 0 * * *", "41 0 * * *"]
+  },
+  "vars": {
+    "GH_REPO": "KeNINGKe/EnergyHub"
+  }
+}
