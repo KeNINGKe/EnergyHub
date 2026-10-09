@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T06:25:45.425Z",
+  "generatedAt": "2026-10-09T04:11:56.994Z",
   "mode": "offline-replay",
   "dates": [
     "2026-07-30",
@@ -9,14 +9,15 @@
     "2026-08-02",
     "2026-08-03",
     "2026-08-04",
-    "2026-08-05"
+    "2026-08-05",
+    "2026-10-09"
   ],
   "perDate": [
     {
       "date": "2026-07-30",
       "replayNow": "2026-07-30T06:21:07.937Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 121,
+      "runtimeMs": 106,
       "stats": {
         "raw": 62,
         "staleFiltered": 0,
@@ -203,7 +204,7 @@
       "date": "2026-07-31",
       "replayNow": "2026-07-31T06:38:01.315Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 70,
+      "runtimeMs": 68,
       "stats": {
         "raw": 57,
         "staleFiltered": 0,
@@ -394,7 +395,7 @@
       "date": "2026-08-01",
       "replayNow": "2026-08-01T06:22:16.655Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 47,
+      "runtimeMs": 50,
       "stats": {
         "raw": 46,
         "staleFiltered": 0,
@@ -597,7 +598,7 @@
       "date": "2026-08-03",
       "replayNow": "2026-08-03T06:53:25.107Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 17,
+      "runtimeMs": 12,
       "stats": {
         "raw": 15,
         "staleFiltered": 0,
@@ -685,7 +686,7 @@
       "date": "2026-08-04",
       "replayNow": "2026-08-04T06:21:30.063Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 78,
+      "runtimeMs": 70,
       "stats": {
         "raw": 59,
         "staleFiltered": 0,
@@ -865,7 +866,7 @@
       "date": "2026-08-05",
       "replayNow": "2026-08-04T22:02:50.407Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 99,
+      "runtimeMs": 89,
       "stats": {
         "raw": 71,
         "staleFiltered": 0,
@@ -1026,6 +1027,510 @@
             {
               "source": "SemiWiki",
               "url": "https://semiwiki.com/prototyping/s2c-eda/371771-shift-left-with-s2c-prodigy-from-rtl-verification-to-real-world-software-validation/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "replayNow": "2026-10-09T15:59:59.000Z",
+      "exposureState": "from-samples-raw-snapshot",
+      "runtimeMs": 969,
+      "stats": {
+        "raw": 810,
+        "staleFiltered": 247,
+        "duplicatesRemoved": 43,
+        "filteredOut": 212,
+        "events": 219,
+        "featured": 12,
+        "hot": 5,
+        "jevReviewed": 212,
+        "jevRescued": 0,
+        "jevTopicArbitrated": 53,
+        "jevTopicAssigned": 0,
+        "jevMergePairs": 30,
+        "jevMergedPairs": 0,
+        "overrideErrors": 0
+      },
+      "eventCount": 219,
+      "independentSourceCountProxy": {
+        "note": "1 + distinct(relatedSources[].name)，B-03 引入正式字段后替换",
+        "max": 5,
+        "overTwo": 5
+      },
+      "featured": [
+        {
+          "id": "evt_e27d704e7edb",
+          "title": "英伟达、微软借助RTX Spark和人工智能代理为Windows PC开启新的起点"
+        },
+        {
+          "id": "evt_e3b3327e0ff3",
+          "title": "RWE将在德克萨斯州试行Heron Power固态变压器"
+        },
+        {
+          "id": "evt_cf6ee8e13019",
+          "title": "智能恒温器聚合器重塑品牌，推出“全屋”虚拟发电厂"
+        },
+        {
+          "id": "evt_b1b370aadb8b",
+          "title": "进入Omniverse ：开发人员如何通过前沿人工智能代理将创意转化为模拟"
+        },
+        {
+          "id": "evt_b00cf96e7fc9",
+          "title": "山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等"
+        },
+        {
+          "id": "evt_c5a91f5cec88",
+          "title": "澳大利亚9月家用电池安装量达到966.5兆瓦时"
+        },
+        {
+          "id": "evt_c3981658c687",
+          "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计"
+        },
+        {
+          "id": "evt_4cc2005c155f",
+          "title": "IPS收购Belyea ，提供变压器服务"
+        },
+        {
+          "id": "evt_e6e248760801",
+          "title": "美国陆军部承诺提供15亿美元贷款，以促进半导体供应链"
+        },
+        {
+          "id": "evt_4c83567f79bf",
+          "title": "德克萨斯州的一切都更大"
+        },
+        {
+          "id": "evt_62a91970824d",
+          "title": "Sungrow在安全研究人员获得访问权限后修补了iSolarCloud漏洞"
+        },
+        {
+          "id": "evt_1bc67a384aa3",
+          "title": "CIQ的Fuzzball 4.3通过一个命令在客户的GPU上运行经过验证的开放式权重模型"
+        }
+      ],
+      "hot": [
+        {
+          "id": "evt_f19a8754853a",
+          "title": "瓦锡兰将为美国数据中心提供282兆瓦的现场电力解决方案，因为人工智能的增长加剧了对可靠电力的需求"
+        },
+        {
+          "id": "evt_346ab3a68147",
+          "title": "Linea Energy完成德克萨斯州250MW/500MWh电池项目的债务融资和优先股权"
+        },
+        {
+          "id": "evt_0819e4b7fb2e",
+          "title": "Gotion赢得沙特阿拉伯75%的首个公用事业规模电池存储招标"
+        },
+        {
+          "id": "evt_5c5f09eb2ab0",
+          "title": "集邦咨询：Q3中国储能订单总量约94GWh 中企海外储能订单占比超九成 提供者 智通财经"
+        },
+        {
+          "id": "evt_f0e23814ef4c",
+          "title": "美国行政命令瞄准中国电网硬件，但服务于人工智能数据中心的电池存储更加曝光"
+        }
+      ],
+      "observations": [
+        "【储能变流器（PCS）】英伟达、微软借助RTX Spark和人工智能代理为Windows PC开启新的起点",
+        "【其他能源动态】进入Omniverse ：开发人员如何通过前沿人工智能代理将创意转化为模拟",
+        "【其他能源动态】山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等"
+      ],
+      "missedMerges": {
+        "count": 0,
+        "totalGroups": 3,
+        "groups": []
+      },
+      "mergeDecisionLog": [
+        {
+          "eventId": "evt_2124aa97ae70",
+          "title": "比亚迪供货！波兰2.4GWh储能项目开工",
+          "members": [
+            {
+              "source": "比亚迪储能",
+              "url": "https://cn.solarbe.com/news/20261007/50029943.html"
+            },
+            {
+              "source": "比亚迪储能",
+              "url": "https://www.guandian.cn/article/20261008/609932.html"
+            },
+            {
+              "source": "比亚迪储能",
+              "url": "https://finance.sina.cn/2026-10-08/detail-iniumqcv4723354.d.html?oid=%E9%AB%98%E4%BB%BF%E6%B5%AA%E7%90%B4%E6%89%8B%E8%A1%A8%E6%80%8E%E4%B9%88%E8%BE%A8%E5%88%AB%E2%97%8F%E5%BE%AE%E4%BF%A1198099199%E2%97%8FyMCJ&vt=4&cid=76524&node_id=76524"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_321952f4312a",
+          "title": "特斯拉2026年第三季度交付486,532辆汽车并部署13.7 GWh储能",
+          "members": [
+            {
+              "source": "Tesla Energy",
+              "url": "https://pulse2.com/tesla-delivers-486532-vehicles-and-deploys-13-7-gwh-of-energy-storage-in-q3-2026/"
+            },
+            {
+              "source": "Tesla Energy",
+              "url": "https://electrek.co/2026/10/05/not-sold-on-tesla-powerwall-there-are-some-great-home-battery-alternatives-out-there/"
+            },
+            {
+              "source": "Tesla Energy",
+              "url": "https://finance.biggo.com/news/7e508abf-cb0c-42f7-becd-05da4f47a08c"
+            },
+            {
+              "source": "Tesla Energy",
+              "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-q3-deliveries-beat-ubs-170331462.html"
+            },
+            {
+              "source": "Tesla Energy",
+              "url": "https://www.thecooldown.com/green-business/california-solar-battery-lease-options/"
+            },
+            {
+              "source": "Tesla Energy",
+              "url": "https://www.proactiveinvestors.com/companies/news/1099602/tesla-deliveries-top-consensus-but-energy-storage-deployments-miss-estimates-1099602.html"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_094134fce8cb",
+          "title": "谷歌支持11座PJM反应堆的890兆瓦Constellation核事故",
+          "members": [
+            {
+              "source": "POWER Magazine",
+              "url": "https://www.powermag.com/google-deal-backs-890-mw-of-constellation-nuclear-uprates-at-11-pjm-reactors/"
+            },
+            {
+              "source": "Canary Media",
+              "url": "https://www.canarymedia.com/articles/nuclear/constellation-google-nuclear-uprates"
+            },
+            {
+              "source": "Transformer Magazine",
+              "url": "https://transformer-magazine.com/news/google-signs-3-59-gw-power-deal/"
+            },
+            {
+              "source": "AIDC 项目动态",
+              "url": "https://www.guandian.cn/article/20261006/609631.html"
+            },
+            {
+              "source": "IEEE Spectrum",
+              "url": "https://spectrum.ieee.org/ai-assistants-nuclear-power-plant"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_b00cf96e7fc9",
+          "title": "山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等",
+          "members": [
+            {
+              "source": "特变电工",
+              "url": "https://finance.sina.com.cn/roll/2026-10-08/doc-iniuphnx7589355.shtml"
+            },
+            {
+              "source": "特变电工",
+              "url": "https://m.sohu.com/a/1085248318_122014422?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_f19a8754853a",
+          "title": "瓦锡兰将为美国数据中心提供282兆瓦的现场电力解决方案，因为人工智能的增长加剧了对可靠电力的需求",
+          "members": [
+            {
+              "source": "DC Power Infra",
+              "url": "https://www.wartsila.com/media/news/05-10-2026-wartsila-to-supply-282-mw-onsite-power-solution-for-a-u-s-data-center-as-ai-growth-intensifies-demand-for-reliable-power-3797450"
+            },
+            {
+              "source": "Wärtsilä ES&O",
+              "url": "https://www.remio.ai/post/wartsila-data-center-power-deal-exposes-the-grid-constraint-behind-ai-growth"
+            },
+            {
+              "source": "Wärtsilä ES&O",
+              "url": "https://www.greenbuildingafrica.co.za/wartsila-emerges-as-major-data-centre-energy-solutions-provider-in-the-usa/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_c5a91f5cec88",
+          "title": "澳大利亚9月家用电池安装量达到966.5兆瓦时",
+          "members": [
+            {
+              "source": "ESS News",
+              "url": "https://www.ess-news.com/2026/10/08/australia-home-battery-installs-hit-966-5-mwh-in-september/"
+            },
+            {
+              "source": "ESS News",
+              "url": "https://www.ess-news.com/2026/10/08/chile-approves-158-mw-solar-project-with-1-3-gwh-bess/"
+            },
+            {
+              "source": "Transformer Technology",
+              "url": "https://transformer-technology.com/two-400-kv-transformers-energized-at-hams-hall-bess/"
+            },
+            {
+              "source": "阳光电源",
+              "url": "https://mchuneng.in-en.com/html/chunengy-58950.shtml"
+            },
+            {
+              "source": "储能变流器技术动态",
+              "url": "https://mcn.solarbe.com/news/20261007/50029949.html"
+            },
+            {
+              "source": "储能变流器技术动态",
+              "url": "https://www.gessey.com/h-nd-50966.html"
+            },
+            {
+              "source": "储能变流器技术动态",
+              "url": "https://www.sxcoal.com/news/detail/2107994565434875905"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_9d9428ad1e38",
+          "title": "新闻： Black Hills Corp.正投资近20亿美元为谷歌数据中心提供燃料。",
+          "members": [
+            {
+              "source": "Energy Central",
+              "url": "https://www.energycentral.com/energy-biz-2ogxjzvz/post/news-black-hills-corp-is-investing-nearly-2b-to-fuel-a-google-data-YZULlHegu5p8bxv"
+            },
+            {
+              "source": "DC Energy Storage",
+              "url": "https://news.constructconnect.com/michigans-google-data-center-deal-with-dte-power-infrastructure-at-the-center-of-planning?hs_amp=true"
+            },
+            {
+              "source": "DC Power Infra",
+              "url": "https://www.techbuzz.ai/articles/google-halts-finland-data-centers-amid-ai-infrastructure-crackdown"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_c3981658c687",
+          "title": "电网级电池储能带动，连接器存储容器市场2035年前复合年增长率达8.5% - 新闻和统计",
+          "members": [
+            {
+              "source": "台达",
+              "url": "https://www.indexbox.io/zh-hans/blog/storage-containers-for-connectors-market-to-reach-8-5-cagr-through-2035-on-battery-storage-boom/"
+            },
+            {
+              "source": "LG 新能源",
+              "url": "https://www.indexbox.io/zh-hans/blog/battery-market-to-accelerate-on-grid-scale-storage-demand-forecast-points-higher-toward-2035/"
+            },
+            {
+              "source": "LG 新能源",
+              "url": "https://www.indexbox.io/zh-hans/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
+            },
+            {
+              "source": "DC Energy Storage",
+              "url": "https://www.indexbox.io/blog/absorbent-glass-mat-agm-battery-market-forecast-to-2035-safety-driven-demand-in-data-centers-and-grid-resilience-supports-growth/"
+            },
+            {
+              "source": "沙特储能与AIDC",
+              "url": "https://www.indexbox.io/blog/battery-storage-racks-market-forecast-to-2035-growth-accelerates-on-utility-scale-energy-storage-demand/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/lithium-battery-shear-wrenches-market-forecast-to-2035-driven-by-global-bess-build-out/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/lithium-battery-thermal-runaway-sensor-modules-market-to-accelerate-through-2035-driven-by-grid-scale-bess-safety-mandates/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_37ebd985ddcf",
+          "title": "塔塔电力与挪威的Ocean Sun一起试点基于膜的浮动太阳能",
+          "members": [
+            {
+              "source": "pv magazine",
+              "url": "https://www.pv-magazine.com/2026/10/08/tata-power-to-pilot-membrane-based-floating-solar-with-norways-ocean-sun/"
+            },
+            {
+              "source": "PV-Tech",
+              "url": "https://www.pv-tech.org/tata-power-ocean-sun-to-pilot-membrane-based-floating-solar-technology-in-india/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_d12bb4235633",
+          "title": "4小时电池储存比全球各地的燃气轮机更便宜",
+          "members": [
+            {
+              "source": "沙特储能与AIDC",
+              "url": "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/"
+            },
+            {
+              "source": "Utility Dive",
+              "url": "https://www.utilitydive.com/news/4-hour-storage-cheaper-than-gas-peakers-across-global-markets-woodmac/832489/"
+            },
+            {
+              "source": "沙特储能与AIDC",
+              "url": "https://www.gadgetreview.com/4-hour-batteries-are-now-cheaper-to-install-than-gas-turbines-worldwide"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_346ab3a68147",
+          "title": "Linea Energy完成德克萨斯州250MW/500MWh电池项目的债务融资和优先股权",
+          "members": [
+            {
+              "source": "Wärtsilä ES&O",
+              "url": "https://pv-magazine-usa.com/2026/10/05/linea-energy-closes-debt-financing-and-preferred-equity-for-250-mw-500-mwh-texas-battery-project/"
+            },
+            {
+              "source": "ESS News",
+              "url": "https://www.ess-news.com/2026/10/08/linea-energy-closes-financing-for-250-mw-500-mwh-texas-bess/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_376d634a2183",
+          "title": "肯塔基州电力公司为1 GW数据园区开发765/345 kV变电站",
+          "members": [
+            {
+              "source": "Transformer Technology",
+              "url": "https://transformer-technology.com/kentucky-power-develops-765-345-kv-substation-for-1-gw-data-campus/"
+            },
+            {
+              "source": "Transformer Technology",
+              "url": "https://transformer-technology.com/50hertz-starts-380-kv-grid-upgrade-in-germany/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_97089705d489",
+          "title": "据报道， AMD的EPYC Verano AI主机CPU将使用特殊的SB1插槽",
+          "members": [
+            {
+              "source": "Tom's Hardware",
+              "url": "https://www.tomshardware.com/pc-components/cpus/amds-epyc-verano-ai-host-cpu-will-reportedly-use-a-special-sb1-socket-zen-6-chip-pairs-72-cores-with-a-24-channel-lpddr5x-memory-subsystem"
+            },
+            {
+              "source": "AIDC 项目动态",
+              "url": "https://k.sina.com.cn/article_5953740931_162dee0830670416s6.html"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_5c5f09eb2ab0",
+          "title": "集邦咨询：Q3中国储能订单总量约94GWh 中企海外储能订单占比超九成 提供者 智通财经",
+          "members": [
+            {
+              "source": "阳光电源",
+              "url": "https://cn.investing.com/news/stock-market-news/article-3595714"
+            },
+            {
+              "source": "宁德时代",
+              "url": "https://www.moomoo.com/hans/news/post/1000633065/trendforce-total-energy-storage-orders-in-china-reached-approximately-94"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_c1f10ffb22ef",
+          "title": "多孔电源插排市场展望2035：数据中心与可再生能源需求推动6-9%复合增长 - 新闻和统计",
+          "members": [
+            {
+              "source": "台达",
+              "url": "https://www.indexbox.io/zh-hans/blog/multi-outlet-gang-strips-market-forecast-to-2035-data-center-and-renewable-demand-drives-6-9-cagr/"
+            },
+            {
+              "source": "数据中心供电招标",
+              "url": "https://www.indexbox.io/zh-hans/blog/380v-400v-power-distribution-market-forecast-to-2035-growth-accelerates-on-data-center-and-renewable-demand/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_fa2ba3b22652",
+          "title": "QuantumScape宣布推出QS PowerBlock，用于人工智能数据中心的机架内储能",
+          "members": [
+            {
+              "source": "数据中心储能备电",
+              "url": "https://www.moomoo.com/hans/news/post/1000766636/quantumscape-announces-qs-powerblock-for-in-rack-energy-storage-in"
+            },
+            {
+              "source": "DC Power Standards",
+              "url": "https://www.globenewswire.com/news-release/2026/10/08/3377274/0/en/quantumscape-announces-qs-powerblock-for-in-rack-energy-storage-in-ai-data-centers.html"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_8dd1c6fe45f9",
+          "title": "Applied Digital为芬兰人工智能数据中心扩建获得高达1 GW的电力协议",
+          "members": [
+            {
+              "source": "Hyperscale Projects",
+              "url": "https://www.theenergymag.com/news/market-news/applied-digital-secures-1-gw-power-agreement-ai"
+            },
+            {
+              "source": "Hyperscale Projects",
+              "url": "https://bebeez.eu/2026/10/06/applied-digital-to-develop-1gw-data-center-campus-in-finland/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_507a660bfb19",
+          "title": "LG电子在美国获得5GW AI数据中心冷却合同",
+          "members": [
+            {
+              "source": "DC Power Infra",
+              "url": "https://www.chosun.com/english/industry-en/2026/10/05/SUGLSGFCKFCVZCN7AWQLUUICMM/"
+            },
+            {
+              "source": "DC Power Infra",
+              "url": "https://finance.biggo.com/news/7447bde6-c67a-42ed-bb74-e12ca3573927"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_662f209c2a38",
+          "title": "到2030年，阿联酋将在14个项目中建设17.98吉瓦的可再生能源管道",
+          "members": [
+            {
+              "source": "阿联酋储能与AIDC",
+              "url": "https://solarquarter.com/2026/10/05/uae-builds-17-98-gw-renewable-energy-pipeline-across-14-projects-by-2030/"
+            },
+            {
+              "source": "沙特储能与AIDC",
+              "url": "https://www.mvapulse.com/mena-renewable-energy-projects-surge-18-gw-target-by-2030/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_d36e81ef1ee3",
+          "title": "混合太阳能风能储能市场展望至2035年：柴油替代与全天候清洁电力需求驱动增长 - 新闻和统计",
+          "members": [
+            {
+              "source": "阳光电源",
+              "url": "https://www.indexbox.io/zh-hans/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
+            },
+            {
+              "source": "中东新能源项目",
+              "url": "https://www.indexbox.io/blog/hybrid-solar-wind-energy-storage-market-forecast-to-2035-diesel-displacement-and-24-7-clean-power-demand-drive-growth/"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_51e8d55b20a7",
+          "title": "电力正成数据中心扩张最大瓶颈：有哪些值得关注的电力股？",
+          "members": [
+            {
+              "source": "数据中心储能备电",
+              "url": "https://www.tradingkey.com/zh-hans/analysis/stocks/us-stock/262194931-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey"
+            },
+            {
+              "source": "DC Power Infra",
+              "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262200934-ai-power-shortage-nvidia-ceo-five-layer-economy-tradingkey"
+            }
+          ]
+        },
+        {
+          "eventId": "evt_f4096bb4642f",
+          "title": "ROX Capital Group为阿联酋和阿曼推出海湾储能平台",
+          "members": [
+            {
+              "source": "阿联酋储能与AIDC",
+              "url": "https://www.rgj.com/press-release/story/231490/rox-capital-group-launches-gulf-energy-storage-platform-for-the-uae-and-oman/"
+            },
+            {
+              "source": "阿联酋储能与AIDC",
+              "url": "https://www.indexbox.io/blog/rox-capital-group-launches-rox-gulf-energy-storage-platform-targeting-uae-and-oman/"
             }
           ]
         }
