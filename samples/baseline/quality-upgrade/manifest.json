@@ -1,39 +1,40 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-09T04:11:56.994Z",
+  "generatedAt": "2026-10-09T04:27:28.865Z",
   "git": {
-    "sha": "ed8997330ae7cac463beb575d5ce020ab15dcae1",
-    "short": "ed899733",
+    "sha": "d2fae2760051fc45bf8d071592490b619daaf401",
+    "short": "d2fae276",
     "branch": "main",
     "dirty": true
   },
   "code": {
-    "scripts/build-daily-v2.mjs": "7a6506cde6e5da3bffab38cacaa66f9599d48e1980fa090226dd5aee9defe572",
+    "scripts/build-daily-v2.mjs": "14e21af5b7b103a30c4618b7a1ada488f9ec14224fa035387d2fb0d1766fc5ef",
     "scripts/lib/clean.mjs": "65d50d0e96f23e6c3c23740f96dd66b128720865f914084588f89611683d9fc4",
     "scripts/lib/compat.mjs": "8e62c0ae4d7a7cdee8979d05b8e80c1f70e59da2bb9bb7e945b3ce7a00b990fb",
     "scripts/lib/dedup.mjs": "0e912483382e0030ab3d4269fb4747779b588dca16e01fc0b701a5112b670724",
     "scripts/lib/digest.mjs": "1a56ba52fed28cd3b2cf718c4cd5249087f5729e82984c41564cdeb0818c247f",
-    "scripts/lib/dingtalk.mjs": "56ae3d2f9b56f4c6d7b326c748a31c38838963129646ab43e9d5bc696e98f2a5",
+    "scripts/lib/dingtalk.mjs": "1cddc31449890f4f9981ca7ac313ef5a1eab106518091aec11065e560f969ee6",
     "scripts/lib/exposure.mjs": "60ca3c22897e8e62a313532e42781602c98d6731e2b06cf02161c4cc2bd441a3",
     "scripts/lib/extract.mjs": "f4a35770dcf264640879306b577a8509d96adb80616e37fd9b0389cbe81efff5",
     "scripts/lib/fetch.mjs": "dce717f0da243bae3dd8de6afa93c43fd9cc09c59986dd18482e9b6b8ca415f1",
     "scripts/lib/filter.mjs": "975c6805f07cd6ff6c7ebcebd5cf3379306a77e2722c9055637d335f71ae015e",
     "scripts/lib/guard-logic.mjs": "66b067d0f924bbad10095f5b6f2e59953ec48a857e16e5ba273c465ad4267504",
+    "scripts/lib/identity.mjs": "4c238b8eedcacee8a78930539f647b109427b634fecaccc2413ef30348d837fd",
     "scripts/lib/jev.mjs": "ebe6c8cb7873fe5f21e1392124d33a85bd81eaf752419c3438e9f5de24fd0207",
     "scripts/lib/merge.mjs": "f82bd1945bdcb706fbb8811148b35e85d2e75e4bcfb156d6651484e0b6562cc6",
     "scripts/lib/overrides.mjs": "be18e55350e7cb4597180ebde28f08b1794fe35baa74e86261fd04c5e166e164",
-    "scripts/lib/schema.mjs": "ae571aa368a6b9e514e5e847e843fe0a7b2e334c727f85ac2e48d2578b6d6f93",
+    "scripts/lib/schema.mjs": "6b67be522c3e9ead4c992820eb8cb6b6844cc5bef0cb7c5c4d1c7cb3d5a83f94",
     "scripts/lib/score.mjs": "579745af77fc2c6309eaa1a1675bd66962eb8405a42ee285d013cae548976805",
     "scripts/lib/select.mjs": "c71342583461f0cb8abcea25f7219583af92d60948cc273926da0a477782406d",
     "scripts/lib/source-check.mjs": "9ba510e76a2958113c48c1667a0412f9b68ea588ccba80dd74a390cd5bcd8171",
     "scripts/lib/source.mjs": "73af73b07a68ac72e645992b2d526abd668be3ea09cd41b768af5e7c12bc4064",
     "scripts/lib/wait-until.mjs": "5599f02dbc86ad7940b33e6a659b1ab9c3e777cf8c97323592c5989784e736a6"
   },
-  "codeDigest": "76d4ee9795bb66f5e97360418f6a246770a9980488bd0b84ff4886b846a36dbd",
+  "codeDigest": "703f35f2ae6a2a91a380e7f11f6f15ac54592919a282ac8fab7bc4f97ba1b8d8",
   "configs": {
     "data/sources.json": "93704a679c9b5b182cc4437d1fb7a5f4861f799a147953ffddc31bb8016748d8",
     "data/filters.json": "5c081684d8b7066e0278080747127e2f01b932bb662b90389630d9ed39cf2ac5",
-    "data/enums.json": "e21015191da0eb2bb1051c7922ab0e9b331a4d0a3ae55e197fe7e7d307de3702",
+    "data/enums.json": "20edb9c7c374b733d813d5e8123b3267fa1e26fe6f0d3c0b91a7e9dc728bb95d",
     "data/source-types.json": "a84898a3e4b234b60b7531f3a3c5b0e863b1f1fc9cd1f264e647900623d9de5d",
     "data/entities.json": "2b8ce1c425623620bbd4ce94b2ce1293d7327eed7507249dd409d47d5cc36b57",
     "data/regions.json": "e9cab879c6e1b65acfdf70a8241204d099626cce49c74fbf72e933c7f25912ce",
@@ -53,12 +54,12 @@
     "node": "v24.18.0",
     "platform": "win32-x64"
   },
-  "totalRuntimeMs": 2102,
-  "runStartedAt": "2026-10-09T04:11:55.517Z",
+  "totalRuntimeMs": 2110,
+  "runStartedAt": "2026-10-09T04:27:27.442Z",
   "perDate": [
     {
       "date": "2026-07-30",
-      "runtimeMs": 106,
+      "runtimeMs": 104,
       "replayNow": "2026-07-30T06:21:07.937Z",
       "fixture": "samples\\jev-fixtures\\2026-07-30.json",
       "fixtureSha256": "112d9c284f070597602f34886191245418c8e5f7358957ddb32aa59dba310a6b",
@@ -67,7 +68,7 @@
     },
     {
       "date": "2026-07-31",
-      "runtimeMs": 68,
+      "runtimeMs": 61,
       "replayNow": "2026-07-31T06:38:01.315Z",
       "fixture": "samples\\jev-fixtures\\2026-07-31.json",
       "fixtureSha256": "5830a2b4d94e4fd86f8447a28ca7d339740f29ff2e8676fe22c31680cb281f5a",
@@ -76,16 +77,16 @@
     },
     {
       "date": "2026-08-01",
-      "runtimeMs": 50,
+      "runtimeMs": 47,
       "replayNow": "2026-08-01T06:22:16.655Z",
       "fixture": "samples\\jev-fixtures\\2026-08-01.json",
       "fixtureSha256": "237d393ccf3d26c2214d44f8e3471c5c16090eb33742406b430fa4f7912647b3",
       "dailySha256": "057e44f9f2a9b2320ee1f793f34e4084a0d5c03101dbedfd8a30cfdfe5f92224",
-      "featuredSha256": "ab94b7131a5142e3e52fb040a2e8ecb643cccdc5c61ee1a68c79d0a535abfee1"
+      "featuredSha256": "8b23b0d31dc2eecdab1575efb53411535cf288b98420c255d6933fb4b11df857"
     },
     {
       "date": "2026-08-02",
-      "runtimeMs": 4,
+      "runtimeMs": 5,
       "replayNow": "2026-08-02T06:27:23.694Z",
       "fixture": "samples\\jev-fixtures\\2026-08-02.json",
       "fixtureSha256": "32259bd4309da91c21d11a7eb533409d006504b0f485f53786cddfeac80e9314",
@@ -94,25 +95,25 @@
     },
     {
       "date": "2026-08-03",
-      "runtimeMs": 12,
+      "runtimeMs": 10,
       "replayNow": "2026-08-03T06:53:25.107Z",
       "fixture": "samples\\jev-fixtures\\2026-08-03.json",
       "fixtureSha256": "8d52caa8bbeeb6643bb29306e8511e76b9e38d219c68949bdda1c55716f13ee5",
       "dailySha256": "02b4803f336dbf91d0167e3f97562e17c05fa121dba89b635acdd81cfbb229d3",
-      "featuredSha256": "4078979536538c53817ff0c6e9ce8249c9056f299c5aacf4e6377d0f66767af8"
+      "featuredSha256": "81e7c745ebf8e04fac1b3f8a889361723fe50a83fdae03dbe2b50ce33105852e"
     },
     {
       "date": "2026-08-04",
-      "runtimeMs": 70,
+      "runtimeMs": 67,
       "replayNow": "2026-08-04T06:21:30.063Z",
       "fixture": "samples\\jev-fixtures\\2026-08-04.json",
       "fixtureSha256": "7231e63333a7f51b4ccda96e6381cc9c9a69b1273ae53033563406a4a292b3da",
       "dailySha256": "c65cac40c2e9d051e20a83ef8c1250f3d60180b188d781ac60c22cbeb4081b1c",
-      "featuredSha256": "078e39dd7a1cfb3a15e80f3410268c45b752deab7c4f6454fd688ec402597a55"
+      "featuredSha256": "61072b01368bdea77568b3c74694f9c9366978e0a9c3ccf6315b9515d58f46de"
     },
     {
       "date": "2026-08-05",
-      "runtimeMs": 89,
+      "runtimeMs": 103,
       "replayNow": "2026-08-04T22:02:50.407Z",
       "fixture": "samples\\jev-fixtures\\2026-08-05.json",
       "fixtureSha256": "348b99b783a9c4a7d26286a8b2984ab7c43c35aea95ec4148cf649a7e6940d57",
@@ -121,7 +122,7 @@
     },
     {
       "date": "2026-10-09",
-      "runtimeMs": 969,
+      "runtimeMs": 934,
       "replayNow": "2026-10-09T15:59:59.000Z",
       "fixture": "samples\\jev-fixtures\\2026-10-09.json",
       "fixtureSha256": null,

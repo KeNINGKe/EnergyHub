@@ -162,14 +162,16 @@ export function selectFeatured(events, enums, opts = {}) {
   }
 
   const featuredEventIds = selected.map(ev => ev.id);
-  // 今日观察：从最终入选集合按重要性降序取前 3（稳定排序，同分保持入选顺序）
+  // 今日观察：从最终入选集合按重要性降序取前 3（稳定排序，同分保持入选顺序）。
+  // B-04（AIHOT_IMPLEMENTATION_PLAN §5）：不再 .slice(0, 60) 硬截——截断会切坏
+  // 数字与单位（如「1.06GW」→「1.0」）；完整性优先，前端超长用可展开排版兜底。
   const observations = [...selected]
     .sort((a, b) => (b.importance || 0) - (a.importance || 0))
     .slice(0, 3)
     .map(ev => {
       const t = ev.topic || 'other-energy';
       const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
-      return `【${topicLabel}】${ev.title}`.slice(0, 60);
+      return `【${topicLabel}】${ev.title}`;
     });
   return { featuredEventIds, observations };
 }

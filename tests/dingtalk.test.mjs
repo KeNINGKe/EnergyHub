@@ -1,7 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  dingtalkSign, buildSignedUrl, resolveHotItems, buildHotMessage
+  dingtalkSign, buildSignedUrl, resolveHotItems, buildHotMessage,
+  fitLines, truncateAtSentence, MAX_TEXT_BYTES
 } from '../scripts/lib/dingtalk.mjs';
 
 test('dingtalkSign：固定向量（HmacSHA256 → base64）', () => {
@@ -109,4 +110,66 @@ test('buildHotMessage：已在热点榜前 5 的科研事件不重复出现', ()
   const { text } = buildHotMessage(featured, daily, {});
   assert.equal(text.split('[标题r1]').length - 1, 1, 'r1 只出现一次');
   assert.ok(text.includes('[标题r4]'), '去重后空出的名额由第 4 条科研补上');
+});
+
+/* ===== B-04 字节预算与句边界截取 ===== */
+
+test('fitLines：预算内全保留', () => {
+  const lines = fitLines(['H'], ['1. a', '2. b'], ['tail'], 1000);
+  assert.deepEqual(lines, ['H', '1. a', '2. b', 'tail']);
+});
+
+test('fitLines：超预算从尾部减条目，保底 1 条，header/tail 常留', () => {
+  const lines = fitLines(['H'], ['1. aaaaaaaaaa', '2. bbbbbbbbbb', '3. cccccccccc', '4. dddddddddd'], ['tail'], 40);
+  // 40 字节装得下 header+tail+2 条（34B），第 3 条起超限（48B）丢弃
+  assert.deepEqual(lines, ['H', '1. aaaaaaaaaa', '2. bbbbbbbbbb', 'tail']);
+});
+
+test('fitLines：保底 1 条也不够时仍保留该条（单行永不截断）', () => {
+  const huge = 'x'.repeat(100);
+  const lines = fitLines(['H'], [huge], ['tail'], 10);
+  assert.deepEqual(lines, ['H', huge, 'tail']);
+});
+
+test('buildHotMessage：超长消息先砍 research 尾、再砍 hot 倒序，保底榜单第 1 条', () => {
+  const mk = (id, importance, research) => ({
+    id, importance, research, title: `超长标题${id}${'内容'.repeat(60)}`, url: `https://x.com/${id}`, source: { name: `S${id}` }
+  });
+  const featured = { date: '2026-09-21', hotEventIds: ['h1', 'h2', 'h3'] };
+  const daily = { items: [mk('h1', 9, false), mk('h2', 8, false), mk('h3', 7, false), mk('r1', 6, true), mk('r2', 5, true)] };
+  const { text } = buildHotMessage(featured, daily, { siteUrl: 'https://site.example', maxBytes: 600 });
+  // 丢弃序：r2（research 尾）→ r1 → h3 → h2；h1 保底
+  assert.ok(text.includes('[超长标题h1'), '榜单第 1 条保底');
+  assert.ok(!text.includes('超长标题h2'), 'hot 倒序先砍');
+  assert.ok(!text.includes('超长标题r2'), 'research 尾最先砍');
+  assert.ok(text.includes('[查看完整日报 →](https://site.example)'), '站点链接常留');
+  assert.ok(text.includes('1. [超长标题h1'), '编号连续');
+  assert.ok(Buffer.byteLength(text, 'utf8') > 400, '该装的都装下（非异常缩水）');
+});
+
+test('buildHotMessage：默认预算 18000 字节内不改变正常消息', () => {
+  const mk = (id, i) => ({ id, importance: i, title: `标题${id}`, url: `https://x.com/${id}` });
+  const featured = { date: '2026-09-21', hotEventIds: ['a', 'b'] };
+  const daily = { items: [mk('a', 5), mk('b', 4)] };
+  const { text } = buildHotMessage(featured, daily, { siteUrl: 'https://site.example' });
+  assert.ok(text.includes('[标题a](https://x.com/a)'));
+  assert.ok(text.includes('[标题b](https://x.com/b)'));
+  assert.ok(Buffer.byteLength(text, 'utf8') < MAX_TEXT_BYTES);
+});
+
+test('truncateAtSentence：max 为硬上限，在 max 内回退到最后完整句边界', () => {
+  const s = '第一句。第二句更长的内容继续说。第三句被截';
+  const t = truncateAtSentence(s, 12);
+  // 前 12 字符「第一句。第二句更长的内」内最后句边界是第一个「。」
+  assert.equal(t, '第一句。');
+  // max 内含完整边界时尽量多保留
+  assert.equal(truncateAtSentence(s, 16), '第一句。第二句更长的内容继续说。');
+});
+
+test('truncateAtSentence：无句边界时硬截为前 max 字符', () => {
+  assert.equal(truncateAtSentence('没有任何标点的超长内容', 5), '没有任何标');
+});
+
+test('truncateAtSentence：短文本原样返回', () => {
+  assert.equal(truncateAtSentence('短。', 10), '短。');
 });
