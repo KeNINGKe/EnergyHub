@@ -1,6 +1,19 @@
 {
   "schemaVersion": 1,
   "note": "V1.1 结构化枚举单一数据源（阶段 A-05）。前端 fetch('data/enums.json')，Node 校验脚本通过 fs 读取。改动后需同步 scripts/ 中的加载逻辑与校验函数。",
+  "features": {
+    "note": "阶段 B 功能开关（AIHOT_IMPLEMENTATION_PLAN §5/§9）。false 回退旧行为，供回滚与新旧两跑基线对比。",
+    "mergeV2": true,
+    "independentSources": true
+  },
+  "merge": {
+    "note": "mergeV2 判定参数：strongTitle/nearTitle/partialTitle 为标题证据阈值（judgePair 第 4 层）；regionConflict 关闭地区冲突否决；locations 增补地点冲突词表（内置词表之外）。",
+    "strongTitle": 0.7,
+    "nearTitle": 0.5,
+    "partialTitle": 0.2,
+    "regionConflict": true,
+    "locations": []
+  },
   "topics": [
     {
       "id": "data-center-power",
