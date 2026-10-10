@@ -28,11 +28,11 @@ import { fileURLToPath } from 'node:url';
 // 判定逻辑与 Cloudflare Workers 外部守卫（worker/guard.mjs）单源复用
 import {
   PUSH_STEP_NAME, FETCH_WORKFLOW_FILE,
-  morningWindowStartUtc, pushStepSucceeded, decideGuardAction,
+  morningWindowStartUtc, pushStepSucceeded, decideGuardAction, decidePushGate,
 } from './lib/guard-logic.mjs';
 
 // 供 tests/guard-daily-report.test.mjs 沿用本文件导入路径
-export { morningWindowStartUtc, pushStepSucceeded, decideGuardAction };
+export { morningWindowStartUtc, pushStepSucceeded, decideGuardAction, decidePushGate };
 
 async function api(url, token, init = {}) {
   const res = await fetch(url, {

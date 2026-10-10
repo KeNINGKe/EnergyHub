@@ -49,3 +49,29 @@ export async function decideGuardAction(runs, hasPushed) {
   if (running.length > 0) return 'wait';
   return 'dispatch';
 }
+
+/**
+ * 推送防重闸门（2026-10-10 双推事故）：本 run 推送前检查早晨窗口内是否已有
+ * **其他** run 成功执行过推送步骤——有则本 run 跳过，保证「每天只推一次」。
+ *
+ * 事故还原：GitHub schedule 又被延迟（08:17 才跑），外部守卫 08:07 判定漏推
+ * 并 dispatch 补发（08:10 已推送）；迟到的主调度重建后 08:18 又推了一次，
+ * 两次构建相差 10 分钟导致内容不一致。守卫与迟到 run 各自行为都正确，
+ * 缺的是推送侧的幂等保护。
+ *
+ * 残余窗口：两个 run 的推送步骤在几秒内先后执行时仍可能双推（查询都在对方
+ * 完成前发生）——守卫 08:07 与 cron 最早 08:00 后到达，间隔通常在分钟级，
+ * 可接受。
+ *
+ * @param {Array<{id:number, status:string}>} runs 早晨窗口内的 fetch-feeds runs
+ * @param {(run) => Promise<boolean>} hasPushed 查询单个 run 是否包含成功的推送步骤
+ * @param {number} selfRunId 本 run 的 id（排除自己）
+ * @returns {Promise<'push'|'skip'>}
+ */
+export async function decidePushGate(runs, hasPushed, selfRunId) {
+  const others = runs.filter(r => r.id !== selfRunId && r.status === 'completed');
+  for (const run of others) {
+    if (await hasPushed(run)) return 'skip';
+  }
+  return 'push';
+}

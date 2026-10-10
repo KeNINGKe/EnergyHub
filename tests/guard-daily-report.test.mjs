@@ -4,6 +4,7 @@ import {
   morningWindowStartUtc,
   pushStepSucceeded,
   decideGuardAction,
+  decidePushGate,
 } from '../scripts/guard-daily-report.mjs';
 
 const utc = s => new Date(s);
@@ -75,4 +76,28 @@ test('decideGuardAction：没推过但有在跑 → wait（等第二轮再查）
 
 test('decideGuardAction：空列表 → dispatch', async () => {
   assert.equal(await decideGuardAction([], async () => false), 'dispatch');
+});
+
+/* ===== 推送防重闸门（2026-10-10 双推事故）===== */
+
+test('decidePushGate：其他 run 已推送成功 → skip（迟到主调度场景）', async () => {
+  // 守卫补发 run 100 已推送，迟到的主调度 run 200 推送前应跳过
+  const runs = [{ id: 100, status: 'completed' }, { id: 200, status: 'completed' }];
+  const action = await decidePushGate(runs, async run => run.id === 100, 200);
+  assert.equal(action, 'skip');
+});
+
+test('decidePushGate：只有自己推过不算（自己不在场时按无人推过处理）', async () => {
+  const runs = [{ id: 200, status: 'completed' }];
+  const action = await decidePushGate(runs, async () => true, 200);
+  assert.equal(action, 'push');
+});
+
+test('decidePushGate：其他 run 未推送（含失败/在跑）→ push', async () => {
+  const runs = [
+    { id: 100, status: 'completed' },
+    { id: 300, status: 'in_progress' },
+  ];
+  assert.equal(await decidePushGate(runs, async () => false, 200), 'push');
+  assert.equal(await decidePushGate([], async () => true, 200), 'push');
 });

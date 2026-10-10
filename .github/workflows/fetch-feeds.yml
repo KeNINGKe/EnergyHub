@@ -9,6 +9,11 @@ on:
     # 频率对读者无感，却省一半 Jev API 调用/翻译配额/Actions 时长。
     - cron: '37 20 * * *'
   workflow_dispatch:
+    inputs:
+      force_push:
+        description: '跳过推送防重闸门强制推送（测试/补发用）'
+        type: boolean
+        default: false
 
 jobs:
   fetch:
@@ -111,15 +116,32 @@ jobs:
       - name: Push daily hot list to DingTalk
         # 每天只推一次：早晨构建窗口（UTC 20:37）之后、北京时间 08:00 准点
         # 推送当天最新数据；手动 workflow_dispatch 也推送（不等待），便于测试。
+        # 2026-10-10 双推事故（守卫补发 08:10 推过、迟到主调度 08:18 又推）后
+        # 加防重闸门：推送前查早晨窗口内是否已有其他 run 推送成功，有则跳过。
+        # 闸门查询失败按可推送处理（宁可重复，不可缺报）；dispatch 传
+        # force_push=true 可跳过闸门（测试/人工补发用）。
         # 推送是 best-effort：失败不阻塞抓取/部署（见 continue-on-error）。
         if: |
           github.event_name == 'workflow_dispatch' ||
           github.event.schedule == '37 20 * * *'
         continue-on-error: true
-        run: node scripts/notify-dingtalk.mjs
+        run: |
+          rc=0
+          node scripts/gate-dingtalk-push.mjs || rc=$?
+          if [ "$rc" -eq 3 ]; then
+            echo "今日已推送，跳过重复推送。"
+          else
+            if [ "$rc" -eq 1 ]; then
+              echo "防重闸门查询失败，按可推送处理（宁可重复，不可缺报）。"
+            fi
+            node scripts/notify-dingtalk.mjs
+          fi
         env:
           # 在仓库 Settings → Secrets and variables → Actions 配置：
           # DINGTALK_WEBHOOK（完整 webhook URL）、DINGTALK_WEBHOOK_SECRET（加签 secret，
           # 关键词/白名单模式可留空）。
           DINGTALK_WEBHOOK: ${{ secrets.DINGTALK_WEBHOOK }}
           DINGTALK_WEBHOOK_SECRET: ${{ secrets.DINGTALK_WEBHOOK_SECRET }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          PUSH_GATE_BYPASS: ${{ github.event_name == 'workflow_dispatch' && inputs.force_push == true }}
