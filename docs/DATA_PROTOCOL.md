@@ -202,6 +202,15 @@
 - **校验**（`scripts/lib/schema.mjs`）：`source.id`/`relatedSources[].sourceId` 出现时须非空字符串；`independentSourceCount` 须 ≥1 整数；`relatedSources[].publishedAt` 出现时须合法 ISO 时间，未知为 `null` 不伪造。
 - `relatedSources` 保留全部有效原文链接，不为计数删证据。
 
+### 10.2 B-01 合并判定重构 mergeV2（已落地，2026-10）
+
+- **五层判定**（`scripts/lib/merge.mjs` `judgePair`）：①人工约束（mustLink/cannotLink，最高优先——对时间窗/召回短路免疫）→ ②时间窗+召回（`eventSimilarity` 降级为召回分，0 分出局）→ ③冲突否决 `detectConflict`（地点/阶段/地区；缺字段=未知≠一致，不否决；数字不同不硬否决）→ ④强证据（E1 标题≥0.7；E2 ≥0.5+共享实体；E3 ≥0.2+实体+数字，中英文同事件主覆盖；共享数字单独绝不构成证据）→ ⑤灰区交 Jev 仲裁。
+- **簇级一致性检查**：union 前遍历两簇成员 Cartesian 对，任一对 cannotLink/冲突命中即拦截（`cluster-conflict` 日志）——A≈B、B≈C 不再必然 A/C 同簇；Jev 灰区簇级 union 同样过检查（`rejected-by-constraint` 日志）。
+- **地点词表**只收次国家地名（州/省，内置常量 + `enums.merge.locations` 增补）；国家级冲突由 region 规则覆盖。一条标题命中 ≥2 地点或 ≥2 阶段视为未知，不否决。
+- **过程可查**：`stats.mergeLog`（summary 计数 + deterministic pairLog + manual + jev）；`MERGE_LOG_DIR` 环境变量可选落盘 `<dir>/<date>.json`（默认不落，feeds/ 是部署目录）。基线 report 并存 `mergeDecisions`（过程日志）与 `mergeMembers`（产物推导成员清单）。
+- **回退**：`enums.features.mergeV2=false` 走 `mergeEventsLegacy`（旧 0.45 评分口径，无簇检查无人工约束；E 阶段删除）。
+- **参数**：标题证据阈值在 `enums.merge`（strongTitle 0.7 / nearTitle 0.5 / partialTitle 0.2 / regionConflict）；Jev 灰区仲裁阈值 0.75 与 30 对上限不变（未校准，暂不动）。
+
 ## 11. 离线回放与固定回执夹具（阶段 A-01）
 
 固定可复现基线：固定输入 + 固定模型回执，离线重复回放同一输出，供 B 阶段改动前后对比。

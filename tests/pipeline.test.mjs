@@ -6,6 +6,8 @@ import path from 'node:path';
 import { loadEnums, validateDailyV2, validateFeatured } from '../scripts/lib/schema.mjs';
 import { loadFilters } from '../scripts/lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap } from '../scripts/lib/source.mjs';
+import { articleId } from '../scripts/lib/identity.mjs';
+import { fixtureKey, pairJudgePayload, _resetFixtureState } from '../scripts/lib/jev.mjs';
 import {
   processItems, selectFeatured, selectHot, atomicWrite, resolveReplayNow, ensureNonEmptyBuild, isUnlistableEvent
 } from '../scripts/build-daily-v2.mjs';
@@ -362,6 +364,66 @@ test('processItems：ctx.exposedUrls 贯通到热点榜（全曝光时回填原�
   const exposedAges = new Map(r1.daily.items.map(e => [e.url, 0]));
   const r2 = await processItems(items, { ...base, exposedUrls, exposedAges });
   assert.deepEqual(r2.featured.hotEventIds, r1.featured.hotEventIds, '全部已曝光时软惩罚均摊，榜单与原先一致');
+});
+
+/* ===== B-01 mergeV2 管线集成（AIHOT_IMPLEMENTATION_PLAN §5）===== */
+
+test('processItems：Jev 语义合并被簇内 cannotLink 拦截（rejected-by-constraint）', async (t) => {
+  // A/B 近重复标题确定性合并成簇；C 与 B 落灰区送 Jev（夹具判「同一事件」0.9），
+  // 但 C 与簇内 A 有人工 cannotLink → 簇级 union 被拦截，最终仍是 2 个事件
+  const A = raw({ title: 'Hypergrid 3GWh 独立储能电站二期', link: 'https://a.com/h1', summary: '独立储能电站二期进展', source: 'Energy Storage News' });
+  const B = raw({ title: 'Hypergrid 3GWh 独立储能电站二期项目', link: 'https://a.com/h2', summary: '独立储能电站二期项目', source: 'Electrek' });
+  const C = raw({ title: 'Hypergrid 公司储能电站业务动态汇总', link: 'https://a.com/h3', summary: '储能电站二期动态', source: 'pv magazine' });
+  const briefOf = (r) => ({ title: r.title, originalTitle: r.title, summary: r.summary, source: r.source, publishedAt: r.pubDate });
+  const entries = {
+    [fixtureKey(pairJudgePayload(briefOf(B), briefOf(C)))]: { result: { answers: { same: { noul: 0.9 } } } },
+  };
+  const os = await import('node:os');
+  const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'jevfix-'));
+  const fixtureFile = path.join(dir, 'pipeline.json');
+  await fs.writeFile(fixtureFile, JSON.stringify({
+    schemaVersion: 1, recordedAt: '2026-08-05T00:00:00Z', model: 'jev-latest', source: 'test', entries,
+  }));
+  process.env.JEV_REPLAY_FILE = fixtureFile;
+  _resetFixtureState();
+  t.after(() => {
+    delete process.env.JEV_REPLAY_FILE;
+    _resetFixtureState();
+    return fs.rm(dir, { recursive: true, force: true });
+  });
+
+  const idA = articleId({ url: A.link });
+  const idC = articleId({ url: C.link });
+  const { daily, stats } = await processItems([A, B, C], {
+    date: '2026-08-05', now: NOW, filters, enums, sourceTypes, sourceMap, overridesForDate: null,
+    eventLinks: { mustLink: [], cannotLink: [[idA, idC]] },
+  });
+  assert.equal(daily.items.length, 2, 'cannotLink 拦截后仍是 2 个事件');
+  assert.equal(stats.jevMergePairs, 1, '灰区只送 (B,C)——(A,C) 被单对判定直接拒绝');
+  assert.equal(stats.jevMergedPairs, 0);
+  const log = stats.mergeLog;
+  assert.equal(log.summary.graySent, 1);
+  assert.equal(log.summary.grayMerged, 0);
+  assert.equal(log.summary.grayRejectedByConstraint, 1);
+  assert.equal(log.jev[0].action, 'rejected-by-constraint');
+  assert.equal(log.jev[0].blockedBy.reason, 'manual-cannot-link');
+  assert.deepEqual([log.jev[0].blockedBy.a, log.jev[0].blockedBy.b], [0, 2]);
+  assert.ok(log.deterministic.some(p => p.action === 'reject' && p.rule === 'manual-cannot-link'), '(A,C) 单对判定拒绝入日志');
+});
+
+test('processItems：features.mergeV2=false 回退旧合并口径，mergeLog 为 null', async () => {
+  // 同一对条目：v2 下无实体共享数字 → 灰区不合并（2 事件）；legacy 口径 0.55 直接合并（1 事件）
+  const items = [
+    raw({ title: 'Eolian 1.06GWh BESS Ohio', link: 'https://a.com/e1', summary: 'battery storage project', source: 'Energy Storage News' }),
+    raw({ title: 'Eolian battery storage 1.06GWh', link: 'https://a.com/e2', summary: 'storage project', source: 'Electrek' }),
+  ];
+  const base = { date: '2026-08-05', now: NOW, filters, sourceTypes, sourceMap, overridesForDate: null };
+  const v2 = await processItems(items, { ...base, enums });
+  assert.equal(v2.daily.items.length, 2, 'v2：共享数字单独不构成证据');
+  assert.equal(v2.stats.mergeLog.summary.grayCandidates, 1);
+  const legacy = await processItems(items, { ...base, enums: { ...enums, features: { ...enums.features, mergeV2: false } } });
+  assert.equal(legacy.daily.items.length, 1, 'legacy：同主题+共享数字 0.55 直接合并');
+  assert.equal(legacy.stats.mergeLog, null);
 });
 
 test('atomicWrite：校验失败不覆盖现有文件', async () => {

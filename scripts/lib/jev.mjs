@@ -553,7 +553,11 @@ export async function reviewTopics(items, enums, opts = {}) {
  * 单对判定：两条内容是否报道同一个具体事件。
  * @returns {number|null} noul 概率（1=同一事件），失败/无有效回答为 null
  */
-export async function reviewPair(a, b) {
+/**
+ * 同事件判定 payload（导出供测试构造夹具 key；reviewPair 专用结构）。
+ * @param {object} a,b 条目 { title, originalTitle, summary, source, publishedAt }
+ */
+export function pairJudgePayload(a, b) {
   const brief = (x) => ({
     title: x.title || '',
     originalTitle: x.originalTitle || '',
@@ -561,11 +565,9 @@ export async function reviewPair(a, b) {
     source: x.source || '',
     publishedAt: x.publishedAt || null,
   });
-  const state = { first: brief(a), second: brief(b) };
-
-  const result = await callJudge({
+  return {
     model: MODEL,
-    state,
+    state: { first: brief(a), second: brief(b) },
     questions: {
       same: {
         type: 'noul',
@@ -580,7 +582,11 @@ export async function reviewPair(a, b) {
         },
       },
     },
-  });
+  };
+}
+
+export async function reviewPair(a, b) {
+  const result = await callJudge(pairJudgePayload(a, b));
   const n = result?.answers?.same?.noul;
   return typeof n === 'number' ? n : null;
 }

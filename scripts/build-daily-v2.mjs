@@ -21,10 +21,10 @@ import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
 import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration } from './lib/jev.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
-import { resolveSourceId, loadSourceAliases } from './lib/identity.mjs';
+import { resolveSourceId, loadSourceAliases, articleId } from './lib/identity.mjs';
 import { extractItem } from './lib/extract.mjs';
 import { dedupItems } from './lib/dedup.mjs';
-import { mergeEvents, grayPairs } from './lib/merge.mjs';
+import { mergeEvents, clusterUnionBlocked } from './lib/merge.mjs';
 import { pickPrimary } from './lib/select.mjs';
 import { importance, capPerSource } from './lib/score.mjs';
 import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
@@ -433,49 +433,102 @@ export async function processItems(rawItems, ctx) {
     if (assigned > 0) console.log(`Jev 主题仲裁: ${arbIdx.length} 条中 ${assigned} 条归入具体主题`);
   }
 
-  // 4. 相似事件合并
-  const { clusters } = mergeEvents(enriched);
+  // 4. 相似事件合并（B-01 mergeV2：人工约束 → 召回 → 冲突否决 → 强证据 → 灰区，
+  //    簇级一致性检查阻断链式误合；features.mergeV2=false 回退旧评分口径）。
+  //    人工约束 links 由 ctx.eventLinks 注入（C4：data/event-overrides.json）。
+  const eventLinks = ctx.eventLinks || { mustLink: [], cannotLink: [] };
+  const mergeResult = mergeEvents(enriched, { cfg: enums, links: eventLinks });
+  const { clusters, pairLog, grayPairs: gray } = mergeResult;
+  const manualLog = {
+    mustLinkGroups: eventLinks.mustLink?.length || 0,
+    cannotLinkPairs: eventLinks.cannotLink?.length || 0,
+  };
+  let jevMergeLog = [];
+  let graySent = 0;
 
-  // 4b. Jev 语义合并仲裁：确定性相似度落在灰区（0.2 ≤ 分 < 0.45，未达合并线
-  //     但有可疑信号——多为跨语言改写/实体提取不一致的漏合）的配对，交 Jev
-  //     判「是否同一事件」。误合比漏合伤害大（丢失独立事件），判定阈值取保守
-  //     0.75（未校准，积累标注后复核）；每日配对上限 JEV_MERGE_PAIRS（默认 30）
-  //     控成本。失败/超时/未配置时不合并，行为同旧版。
-  if (jevConfigured() && enriched.length > 1) {
+  // 4b. Jev 语义合并仲裁：mergeV2 判定落灰区（有召回信号但证据不足——多为跨语言
+  //     改写/实体提取不一致的漏合）且最终分属不同簇的配对，交 Jev 判「是否同一
+  //     事件」。误合比漏合伤害大（丢失独立事件），判定阈值取保守 0.75（未校准，
+  //     积累标注后复核）；每日配对上限 JEV_MERGE_PAIRS（默认 30）控成本。
+  //     B-01：簇级 union 前过 clusterUnionBlocked——人工 cannotLink 或冲突否决
+  //     命中即拦截（防第三篇绕过单对判定），拦截记入 mergeLog 供排查。
+  if (jevConfigured() && enriched.length > 1 && gray.length) {
     const memberCluster = new Array(enriched.length);
     clusters.forEach((c, ci) => c.members.forEach(m => { memberCluster[m] = ci; }));
-    const gray = grayPairs(enriched).filter(p => memberCluster[p.i] !== memberCluster[p.j]);
     const cap = Number(process.env.JEV_MERGE_PAIRS) || 30;
     const pairs = gray.slice(0, cap);
-    if (pairs.length) {
-      const verdicts = await reviewPairs(pairs.map(p => [enriched[p.i], enriched[p.j]]));
-      const roots = clusters.map((_, ci) => ci);
-      const find = (x) => { while (roots[x] !== x) { roots[x] = roots[roots[x]]; x = roots[x]; } return x; };
-      let mergedPairs = 0;
-      for (let k = 0; k < pairs.length; k++) {
-        if (verdicts[k] != null && verdicts[k] >= 0.75) {
-          const ra = find(memberCluster[pairs[k].i]);
-          const rb = find(memberCluster[pairs[k].j]);
-          if (ra !== rb) { roots[ra] = rb; mergedPairs++; }
-        }
+    graySent = pairs.length;
+    const verdicts = await reviewPairs(pairs.map(p => [enriched[p.i], enriched[p.j]]));
+    const roots = clusters.map((_, ci) => ci);
+    const find = (x) => { while (roots[x] !== x) { roots[x] = roots[roots[x]]; x = roots[x]; } return x; };
+    const liveMembers = clusters.map(c => [...c.members]);
+    const enrichedIds = enriched.map(it => articleId(it));
+    let mergedPairs = 0;
+    for (let k = 0; k < pairs.length; k++) {
+      if (!(verdicts[k] != null && verdicts[k] >= 0.75)) continue;
+      const ra = find(memberCluster[pairs[k].i]);
+      const rb = find(memberCluster[pairs[k].j]);
+      if (ra === rb) continue;
+      const blocked = clusterUnionBlocked(enriched, liveMembers[ra], liveMembers[rb], {
+        links: eventLinks, ids: enrichedIds, cfg: enums,
+      });
+      if (blocked) {
+        jevMergeLog.push({ action: 'rejected-by-constraint', pair: [pairs[k].i, pairs[k].j], verdict: verdicts[k], blockedBy: blocked });
+        continue;
       }
-      stats.jevMergePairs = pairs.length;
-      stats.jevMergedPairs = mergedPairs;
+      roots[ra] = rb;
+      liveMembers[rb].push(...liveMembers[ra]);
+      mergedPairs++;
+      jevMergeLog.push({ action: 'merge', pair: [pairs[k].i, pairs[k].j], verdict: verdicts[k] });
+    }
+    stats.jevMergePairs = pairs.length;
+    stats.jevMergedPairs = mergedPairs;
+    if (pairs.length > 0) {
+      const byRoot = new Map();
+      clusters.forEach((c, ci) => {
+        const r = find(ci);
+        if (!byRoot.has(r)) byRoot.set(r, { reason: c.reason, evidence: c.evidence, members: [] });
+        byRoot.get(r).members.push(...c.members);
+      });
+      const before = clusters.length;
+      const mergedClusters = [...byRoot.values()]
+        .map(c => ({ reason: c.reason, evidence: c.evidence, members: c.members.sort((a, b) => a - b) }));
+      clusters.length = 0;
+      clusters.push(...mergedClusters);
       if (mergedPairs > 0) {
-        const byRoot = new Map();
-        clusters.forEach((c, ci) => {
-          const r = find(ci);
-          if (!byRoot.has(r)) byRoot.set(r, { reason: c.reason, members: [] });
-          byRoot.get(r).members.push(...c.members);
-        });
-        const before = clusters.length;
-        const mergedClusters = [...byRoot.values()].map(c => ({ reason: c.reason, members: c.members.sort((a, b) => a - b) }));
-        clusters.length = 0;
-        clusters.push(...mergedClusters);
-        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对中 ${mergedPairs} 对确认同一事件，事件簇 ${before} → ${clusters.length}`);
+        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对中 ${mergedPairs} 对确认同一事件（${jevMergeLog.filter(e => e.action === 'rejected-by-constraint').length} 对被约束拦截），事件簇 ${before} → ${clusters.length}`);
       } else {
-        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对均未达合并线，无合并`);
+        console.log(`Jev 语义合并: 灰区 ${pairs.length} 对均未达合并线或被约束拦截，无合并`);
       }
+    }
+  }
+
+  // 合并决策日志（B-01）：过程理由（确定性 pairLog / 人工约束 / Jev 灰区仲裁）
+  // + 汇总计数。MERGE_LOG_DIR 设置时可选落盘 <dir>/<date>.json（默认不落——
+  // feeds/ 是部署目录）；legacy 口径无过程日志，记 null。
+  stats.mergeLog = pairLog ? {
+    summary: {
+      merges: pairLog.filter(p => p.action === 'merge').length,
+      rejects: pairLog.filter(p => p.action === 'reject').length,
+      clusterConflicts: pairLog.filter(p => p.action === 'cluster-conflict').length,
+      grayCandidates: gray.length,
+      graySent,
+      grayMerged: jevMergeLog.filter(e => e.action === 'merge').length,
+      grayRejectedByConstraint: jevMergeLog.filter(e => e.action === 'rejected-by-constraint').length,
+    },
+    manual: manualLog,
+    deterministic: pairLog,
+    jev: jevMergeLog,
+  } : null;
+  if (stats.mergeLog && process.env.MERGE_LOG_DIR) {
+    try {
+      await fs.mkdir(process.env.MERGE_LOG_DIR, { recursive: true });
+      await fs.writeFile(
+        path.join(process.env.MERGE_LOG_DIR, `${date}.json`),
+        JSON.stringify({ date, mergeLog: stats.mergeLog }, null, 2) + '\n'
+      );
+    } catch (e) {
+      console.warn(`  [合并日志] 落盘失败（不影响构建）：${e.message}`);
     }
   }
 

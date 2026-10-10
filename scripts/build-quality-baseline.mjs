@@ -294,7 +294,11 @@ async function main() {
       hot: (featured.hotEventIds || []).map(id => ({ id, title: titleOf(daily, id) })),
       observations: featured.observations || [],
       missedMerges: { count: missed.missedCount, totalGroups: missed.totalGroups, groups: missed.groups },
-      mergeDecisionLog: mergeDecisionLog(daily),
+      // B-01 起并存两份合并记录：mergeDecisions=管线过程日志（judgePair 决策/人工
+      // 约束/Jev 仲裁，legacy 口径为 null）；mergeMembers=产物推导版（最终成员清单，
+      // 人工抽查误合素材，仅记有相关报道的事件）
+      mergeDecisions: stats.mergeLog ?? null,
+      mergeMembers: mergeDecisionLog(daily),
     });
     manifestPerDate.push({
       date,
@@ -322,7 +326,7 @@ async function main() {
     dates,
     perDate,
     notes: [
-      '误合无负例标签：mergeDecisionLog 供人工抽查，不给出计数',
+      '误合无负例标签：mergeMembers（产物推导）+ mergeDecisions（B-01 过程日志）供人工抽查，不给出计数',
       '漏合由 annotations duplicateOf 对按 URL 指纹推导，覆盖面限于已标注样本',
       '2026-07/08 基线日曝光记忆功能尚不存在，按空集回放',
     ],
