@@ -19,94 +19,393 @@
       "id": "data-center-power",
       "label": "数据中心电力需求",
       "description": "数据中心/算力中心的电力需求、负荷预测、供电缺口、算电协同",
-      "keywords": ["数据中心电力", "算电协同", "电力需求", "算力中心", "智算中心", "超算中心", "数据中心", "data center power", "datacenter power demand", "hyperscaler load", "AI load", "server load", "electricity demand", "power demand", "load growth"]
+      "keywords": [
+        "数据中心电力",
+        "算电协同",
+        "电力需求",
+        "算力中心",
+        "智算中心",
+        "超算中心",
+        "数据中心",
+        "data center power",
+        "datacenter power demand",
+        "hyperscaler load",
+        "AI load",
+        "server load",
+        "electricity demand",
+        "power demand",
+        "load growth"
+      ]
     },
     {
       "id": "aidc-project",
       "label": "AIDC 项目与区域布局",
       "description": "AI 数据中心项目的选址、开工、投产与区域布局",
-      "keywords": ["数据中心项目", "智算项目", "算力基地", "机房建设", "数据产业园", "Stargate", "星门", "AI data center", "AI datacenter", "hyperscale campus", "data center project", "data center campus", "AI infrastructure project", "算力出海", "供应链白名单", "whitelist"]
+      "keywords": [
+        "数据中心项目",
+        "智算项目",
+        "算力基地",
+        "机房建设",
+        "数据产业园",
+        "Stargate",
+        "星门",
+        "AI data center",
+        "AI datacenter",
+        "hyperscale campus",
+        "data center project",
+        "data center campus",
+        "AI infrastructure project",
+        "算力出海",
+        "供应链白名单",
+        "whitelist"
+      ]
     },
     {
       "id": "grid",
       "label": "电网与并网",
       "description": "电网扩建、并网排队、输配电、变电站、特高压、调度与微电网",
-      "keywords": ["电网", "并网", "特高压", "变电站", "输配电", "智能电网", "微电网", "调度", "grid", "grid connection", "interconnection", "grid interconnection", "transmission", "substation", "HVDC", "queue", "curtailment", "microgrid", "demand response"]
+      "keywords": [
+        "电网",
+        "并网",
+        "特高压",
+        "变电站",
+        "输配电",
+        "智能电网",
+        "微电网",
+        "调度",
+        "grid",
+        "grid connection",
+        "interconnection",
+        "grid interconnection",
+        "transmission",
+        "substation",
+        "HVDC",
+        "queue",
+        "curtailment",
+        "microgrid",
+        "demand response"
+      ]
     },
     {
       "id": "sst",
       "label": "固态变压器（SST）",
       "description": "固态变压器、电力电子变压器、中压电力电子、直流配电与数据中心直流供电",
-      "keywords": ["固态变压器", "电力电子变压器", "智能变压器", "中压电力电子", "直流配电", "中压直流", "多端口变换器", "高频变压器", "中频变压器", "直流变压器", "数据中心直流供电", "变压器", "transformer", "中压", "开关设备", "电力设备", "电力电子设备", "MVDC", "solid-state transformer", "power electronic transformer", "DC transformer", "medium voltage DC", "800 VDC", "800VDC", "power architecture", "power distribution", "边柜", "sidecar", "OCP", "Open Compute Project", "变频器", "VFD"]
+      "keywords": [
+        "固态变压器",
+        "电力电子变压器",
+        "智能变压器",
+        "中压电力电子",
+        "直流配电",
+        "中压直流",
+        "多端口变换器",
+        "高频变压器",
+        "中频变压器",
+        "直流变压器",
+        "数据中心直流供电",
+        "变压器",
+        "transformer",
+        "中压",
+        "开关设备",
+        "电力设备",
+        "电力电子设备",
+        "MVDC",
+        "solid-state transformer",
+        "power electronic transformer",
+        "DC transformer",
+        "medium voltage DC",
+        "800 VDC",
+        "800VDC",
+        "power architecture",
+        "power distribution",
+        "边柜",
+        "sidecar",
+        "OCP",
+        "Open Compute Project",
+        "变频器",
+        "VFD"
+      ]
     },
     {
       "id": "pcs",
       "label": "储能变流器（PCS）",
       "description": "储能变流器、储能逆变器、构网型变流器、功率器件（SiC/GaN/IGBT）与并网控制",
-      "keywords": ["储能变流器", "储能逆变器", "变流器", "构网", "组串式", "功率半导体", "功率器件", "碳化硅", "氮化镓", "宽禁带", "IGBT", "SiC", "GaN", "PCS", "energy storage converter", "battery inverter", "power conversion system", "grid-forming", "grid forming", "grid-forming inverter", "virtual synchronous generator", "VSG"]
+      "keywords": [
+        "储能变流器",
+        "储能逆变器",
+        "变流器",
+        "构网",
+        "组串式",
+        "功率半导体",
+        "功率器件",
+        "碳化硅",
+        "氮化镓",
+        "宽禁带",
+        "IGBT",
+        "SiC",
+        "GaN",
+        "PCS",
+        "energy storage converter",
+        "battery inverter",
+        "power conversion system",
+        "grid-forming",
+        "grid forming",
+        "grid-forming inverter",
+        "virtual synchronous generator",
+        "VSG"
+      ]
     },
     {
       "id": "ems",
       "label": "能量管理系统（EMS）",
       "description": "电网调度EMS、储能EMS、工商业EMS、虚拟电厂（VPP）、DERMS与微电网能量管理",
-      "keywords": ["能量管理系统", "能量管理", "储能EMS", "EMS", "虚拟电厂", "VPP", "DERMS", "需求响应", "AGC", "AVC", "功率预测", "energy management system", "energy management", "virtual power plant", "demand response", "Autobidder"]
+      "keywords": [
+        "能量管理系统",
+        "能量管理",
+        "储能EMS",
+        "EMS",
+        "虚拟电厂",
+        "VPP",
+        "DERMS",
+        "需求响应",
+        "AGC",
+        "AVC",
+        "功率预测",
+        "energy management system",
+        "energy management",
+        "virtual power plant",
+        "demand response",
+        "Autobidder"
+      ]
     },
     {
       "id": "energy-storage",
       "label": "储能",
       "description": "电化学储能、长时储能、抽水蓄能、储充一体与储能市场",
-      "keywords": ["储能", "电池", "锂电池", "固态电池", "钠离子", "电化学储能", "抽水蓄能", "长时储能", "BESS", "液流电池", "储充", "移动储能", "户外电源", "光储", "风储", "储能电站", "battery", "lithium", "solid-state", "sodium-ion", "long-duration storage", "energy storage", "pumped hydro", "flow battery", "battery energy storage", "grid-scale storage"]
+      "keywords": [
+        "储能",
+        "电池",
+        "锂电池",
+        "固态电池",
+        "钠离子",
+        "电化学储能",
+        "抽水蓄能",
+        "长时储能",
+        "BESS",
+        "液流电池",
+        "储充",
+        "移动储能",
+        "户外电源",
+        "光储",
+        "风储",
+        "储能电站",
+        "battery",
+        "lithium",
+        "solid-state",
+        "sodium-ion",
+        "long-duration storage",
+        "energy storage",
+        "pumped hydro",
+        "flow battery",
+        "battery energy storage",
+        "grid-scale storage"
+      ]
     },
     {
       "id": "solar-wind",
       "label": "光伏与风电",
       "description": "光伏、风电的项目、装机、组件价格与制造",
-      "keywords": ["光伏", "太阳能", "风电", "风能", "组件", "逆变器", "硅料", "硅片", "光伏电站", "海上风电", "陆上风电", "solar", "PV", "photovoltaic", "wind", "onshore wind", "offshore wind", "module", "inverter", "polysilicon", "wafer", "turbine"]
+      "keywords": [
+        "光伏",
+        "太阳能",
+        "风电",
+        "风能",
+        "组件",
+        "逆变器",
+        "硅料",
+        "硅片",
+        "光伏电站",
+        "海上风电",
+        "陆上风电",
+        "solar",
+        "PV",
+        "photovoltaic",
+        "wind",
+        "onshore wind",
+        "offshore wind",
+        "module",
+        "inverter",
+        "polysilicon",
+        "wafer",
+        "turbine"
+      ]
     },
     {
       "id": "nuclear-smr",
       "label": "核电与 SMR",
       "description": "大型核电、小型模块化反应堆（SMR）与核燃料",
-      "keywords": ["核电", "核能", "反应堆", "SMR", "小型堆", "核燃料", "铀", "核电站", "nuclear", "reactor", "small modular", "uranium", "nuclear power plant", "nuclear fuel"]
+      "keywords": [
+        "核电",
+        "核能",
+        "反应堆",
+        "SMR",
+        "小型堆",
+        "核燃料",
+        "铀",
+        "核电站",
+        "nuclear",
+        "reactor",
+        "small modular",
+        "uranium",
+        "nuclear power plant",
+        "nuclear fuel"
+      ]
     },
     {
       "id": "gas-backup",
       "label": "天然气与备用电源",
       "description": "天然气发电、燃气轮机、备用电源与柴油/燃气调峰",
-      "keywords": ["天然气", "燃气", "燃气轮机", "调峰", "备用电源", "柴油机", "气电", "LNG", "gas turbine", "natural gas", "peaker", "backup power", "diesel generator", "gas-fired", "gas generation"]
+      "keywords": [
+        "天然气",
+        "燃气",
+        "燃气轮机",
+        "调峰",
+        "备用电源",
+        "柴油机",
+        "气电",
+        "LNG",
+        "gas turbine",
+        "natural gas",
+        "peaker",
+        "backup power",
+        "diesel generator",
+        "gas-fired",
+        "gas generation"
+      ]
     },
     {
       "id": "cooling-pue",
       "label": "冷却、UPS 与 PUE",
       "description": "液冷、水冷、UPS、不间断电源、PUE 与能效",
-      "keywords": ["液冷", "水冷", "风冷", "冷却", "UPS", "不间断电源", "PUE", "能效", "效率", "liquid cooling", "immersion cooling", "cooling", "uninterruptible", "power usage effectiveness", "energy efficiency", "efficiency"]
+      "keywords": [
+        "液冷",
+        "水冷",
+        "风冷",
+        "冷却",
+        "UPS",
+        "不间断电源",
+        "PUE",
+        "能效",
+        "效率",
+        "liquid cooling",
+        "immersion cooling",
+        "cooling",
+        "uninterruptible",
+        "power usage effectiveness",
+        "energy efficiency",
+        "efficiency"
+      ]
     },
     {
       "id": "ppa-green-power",
       "label": "绿电采购与 PPA",
       "description": "购电协议、绿电采购、可再生能源采购与绿证",
-      "keywords": ["购电协议", "电力采购", "绿电采购", "绿电", "绿证", "PPA", "power purchase", "offtake", "renewable energy procurement", "carbon-free energy", "green certificate", "REC", "virtual PPA"]
+      "keywords": [
+        "购电协议",
+        "电力采购",
+        "绿电采购",
+        "绿电",
+        "绿证",
+        "PPA",
+        "power purchase",
+        "offtake",
+        "renewable energy procurement",
+        "carbon-free energy",
+        "green certificate",
+        "REC",
+        "virtual PPA"
+      ]
     },
     {
       "id": "power-market-policy",
       "label": "电力市场与政策",
       "description": "电力市场、现货市场、辅助服务、电价与政策",
-      "keywords": ["电力市场", "现货市场", "辅助服务", "电价", "容量市场", "政策", "发改委", "能源局", "碳市场", "碳交易", "electricity market", "power market", "spot market", "ancillary services", "capacity market", "price", "tariff", "policy", "regulation", "carbon market"]
+      "keywords": [
+        "电力市场",
+        "现货市场",
+        "辅助服务",
+        "电价",
+        "容量市场",
+        "政策",
+        "发改委",
+        "能源局",
+        "碳市场",
+        "碳交易",
+        "electricity market",
+        "power market",
+        "spot market",
+        "ancillary services",
+        "capacity market",
+        "price",
+        "tariff",
+        "policy",
+        "regulation",
+        "carbon market"
+      ]
     },
     {
       "id": "chips-compute",
       "label": "芯片、服务器与算力基础设施",
       "description": "GPU、AI 芯片、服务器、半导体与算力基础设施",
-      "keywords": ["GPU", "AI芯片", "芯片", "半导体", "服务器", "晶圆", "HBM", "DRAM", "算力", "foundry", "AI chip", "semiconductor", "wafer", "server", "data center equipment", "compute"]
+      "keywords": [
+        "GPU",
+        "AI芯片",
+        "芯片",
+        "半导体",
+        "服务器",
+        "晶圆",
+        "HBM",
+        "DRAM",
+        "算力",
+        "foundry",
+        "AI chip",
+        "semiconductor",
+        "wafer",
+        "server",
+        "data center equipment",
+        "compute"
+      ]
     },
     {
       "id": "other-energy",
       "label": "其他能源动态",
       "description": "水电、氢能、燃料电池、煤炭、生物质及其他能源动态",
-      "keywords": ["氢能", "氢", "燃料电池", "电解槽", "水电", "煤炭", "煤电", "生物质", "石油", "油气", "hydrogen", "fuel cell", "electrolyzer", "hydro", "coal", "biomass", "oil", "gas"]
+      "keywords": [
+        "氢能",
+        "氢",
+        "燃料电池",
+        "电解槽",
+        "水电",
+        "煤炭",
+        "煤电",
+        "生物质",
+        "石油",
+        "油气",
+        "hydrogen",
+        "fuel cell",
+        "electrolyzer",
+        "hydro",
+        "coal",
+        "biomass",
+        "oil",
+        "gas"
+      ]
     }
   ],
-  "priorityTopics": ["sst", "pcs", "ems"],
+  "priorityTopics": [
+    "sst",
+    "pcs",
+    "ems"
+  ],
   "priorityCompanies": [
     "宁德时代",
     "CATL",
@@ -182,82 +481,344 @@
   ],
   "policyBoost": {
     "note": "政策标准落地信号（2026-09-09 起，学 WorkBuddy AIDC 情报台 P0 规则①：国家/行业级政策或标准落地=最高优先）。标题+原标题+摘要同时命中 actions（政策动作词）与 techs（供电技术词）时 importance +score；匹配语义与 filters 相同（中文子串、英文整词）。双命中才加分：单有「发布」或单有「储能」都不算，避免厂商日常新品文误触发。",
-    "actions": ["政策", "标准", "规范", "征求意见", "印发", "发布", "获批", "立法", "管理办法", "policy", "standard", "regulation", "directive", "mandate", "rule"],
-    "techs": ["高压直流", "800V", "800 V", "800VDC", "HVDC", "直流供电", "直流配电", "PUE", "能效", "并网", "备电", "供电", "电力需求"],
+    "actions": [
+      "政策",
+      "标准",
+      "规范",
+      "征求意见",
+      "印发",
+      "发布",
+      "获批",
+      "立法",
+      "管理办法",
+      "policy",
+      "standard",
+      "regulation",
+      "directive",
+      "mandate",
+      "rule"
+    ],
+    "techs": [
+      "高压直流",
+      "800V",
+      "800 V",
+      "800VDC",
+      "HVDC",
+      "直流供电",
+      "直流配电",
+      "PUE",
+      "能效",
+      "并网",
+      "备电",
+      "供电",
+      "电力需求"
+    ],
     "score": 1
   },
   "hot": {
     "note": "今日热点榜配置（单一数据源）：构建端据此产出 featured.hotEventIds，前端据此渲染热点徽章与时间线排序。topics=最高优先档（储能/AIDC；2026-09-16 起补 data-center-power——北美 AIDC 需求侧新闻主要落在该主题，此前根本进不了热点候选池），secondaryTopics=次级档（发电），regionBoost+regionBoostScore=最高档内北美软加分（内容分 importance 为主，北美同分/近分时靠前，不硬置顶），exclude=核电极外（产品决策：核电不进热点榜）。2026-09-16 重构：①regionGroups+allowedRegionGroups 地区白名单（用户决策：热点榜只收 北美/中国/中东 三组，欧洲/亚太/全球/未知一律不入候选；候选不足 5 席就少展示，不用其他地区回填——修『热点榜=欧洲行业媒体产量榜』；中东组=GCC 六国+埃及+土耳其，同步补 regions.json 别名迪拜/阿布扎比/利雅得/NEOM/卡塔尔等并新增中东检索信源）；②scaleTiers 规模分（3GWh 大单 > 170MWh 小项目，importance 只度量信息完整度、对此无区分度）；③exposurePenaltyByAge 衰减软惩罚（替代 -1000 一刀切沉底——大事件上榜次日被清场，席位全被欧洲小新闻填满）；④同分裁决改为多源数/发布时间，不再依赖输入序=抓取序=媒体产量。修改后构建端与前端同时生效。",
-    "topics": ["energy-storage", "aidc-project", "data-center-power"],
-    "labels": { "energy-storage": "储能", "aidc-project": "AIDC", "data-center-power": "AIDC" },
-    "secondaryTopics": ["gas-backup", "nuclear-smr"],
-    "secondaryLabels": { "gas-backup": "发电", "nuclear-smr": "发电" },
-    "keywordLabels": [
-      { "pattern": "燃气轮机|燃气发电|燃气机组|燃气联合循环|gas\\s*turbine|turbine", "label": "发电" },
-      { "pattern": "\\bPCS\\b|储能变流器|变流器", "label": "发电" },
-      { "pattern": "\\bSST\\b|固态变压器|solid\\s*state\\s*transformer", "label": "发电" }
+    "topics": [
+      "energy-storage",
+      "aidc-project",
+      "data-center-power"
     ],
-    "regionBoost": ["美国", "加拿大", "北美"],
+    "labels": {
+      "energy-storage": "储能",
+      "aidc-project": "AIDC",
+      "data-center-power": "AIDC"
+    },
+    "secondaryTopics": [
+      "gas-backup",
+      "nuclear-smr"
+    ],
+    "secondaryLabels": {
+      "gas-backup": "发电",
+      "nuclear-smr": "发电"
+    },
+    "keywordLabels": [
+      {
+        "pattern": "燃气轮机|燃气发电|燃气机组|燃气联合循环|gas\\s*turbine|turbine",
+        "label": "发电"
+      },
+      {
+        "pattern": "\\bPCS\\b|储能变流器|变流器",
+        "label": "发电"
+      },
+      {
+        "pattern": "\\bSST\\b|固态变压器|solid\\s*state\\s*transformer",
+        "label": "发电"
+      }
+    ],
+    "regionBoost": [
+      "美国",
+      "加拿大",
+      "北美"
+    ],
     "regionBoostScore": 0.5,
     "regionGroups": {
-      "欧洲": ["欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙", "意大利", "波兰", "乌克兰"],
-      "北美": ["美国", "加拿大"],
-      "中国": ["中国"],
-      "中东": ["中东", "沙特", "阿联酋", "卡塔尔", "科威特", "阿曼", "巴林", "埃及", "土耳其"],
-      "亚太": ["日本", "韩国", "印度", "澳大利亚", "东南亚", "新加坡", "马来西亚", "越南", "泰国", "印尼"]
+      "欧洲": [
+        "欧盟",
+        "英国",
+        "德国",
+        "法国",
+        "荷兰",
+        "北欧",
+        "西班牙",
+        "意大利",
+        "波兰",
+        "乌克兰"
+      ],
+      "北美": [
+        "美国",
+        "加拿大"
+      ],
+      "中国": [
+        "中国"
+      ],
+      "中东": [
+        "中东",
+        "沙特",
+        "阿联酋",
+        "卡塔尔",
+        "科威特",
+        "阿曼",
+        "巴林",
+        "埃及",
+        "土耳其"
+      ],
+      "亚太": [
+        "日本",
+        "韩国",
+        "印度",
+        "澳大利亚",
+        "东南亚",
+        "新加坡",
+        "马来西亚",
+        "越南",
+        "泰国",
+        "印尼"
+      ]
     },
-    "allowedRegionGroups": ["北美", "中国", "中东"],
+    "allowedRegionGroups": [
+      "北美",
+      "中国",
+      "中东"
+    ],
     "maxPerSource": 2,
     "scaleTiers": {
-      "energyMWh": [[3000, 1.5], [1000, 1], [300, 0.5]],
-      "powerMW": [[1000, 1], [300, 0.5]]
+      "energyMWh": [
+        [
+          3000,
+          1.5
+        ],
+        [
+          1000,
+          1
+        ],
+        [
+          300,
+          0.5
+        ]
+      ],
+      "powerMW": [
+        [
+          1000,
+          1
+        ],
+        [
+          300,
+          0.5
+        ]
+      ]
     },
-    "exposurePenaltyByAge": [2, 1.5, 0.75],
+    "exposurePenaltyByAge": [
+      2,
+      1.5,
+      0.75
+    ],
     "maxItems": 5,
     "exclude": {
-      "topics": ["nuclear-smr"],
-      "keywords": ["核电", "核电站", "核反应堆", "核电机组", "小型模块化反应堆", "SMR", "nuclear"]
+      "topics": [
+        "nuclear-smr"
+      ],
+      "keywords": [
+        "核电",
+        "核电站",
+        "核反应堆",
+        "核电机组",
+        "小型模块化反应堆",
+        "SMR",
+        "nuclear"
+      ]
     }
   },
   "cnBlockedDomains": {
     "note": "大陆不可达域名：源站对大陆 IP 直接 403/拒绝（真实浏览器同样被拒，同事点不开）。命中域名的事件不进精选与热点榜，保留在全量列表。2026-09-07 energynow.com 首例：热点榜第一点开 403 Forbidden（nginx 源站拒绝）。加入前先确认是『大陆真实浏览器也 403』，而非个别网络问题。",
-    "domains": ["energynow.com"]
+    "domains": [
+      "energynow.com"
+    ]
   },
   "exposure": {
     "note": "跨日曝光记忆：已上过精选/热点榜的事件（按 主URL+relatedSources 的 URL 集合指纹，canonical 归一）N 天内不再上榜，候选不足时按分回填；全量列表不受影响。历史在 feeds/exposure-history.json，随每日 bot commit 跨日传递，文件缺失视为无历史。2026-09-08 起：修同一新闻连续多日霸榜（阳光电源埃及两天热点第一，当天 5 条里 4 条是前一天上榜过的）。",
     "days": 3
   },
   "categories": [
-    { "id": "all", "label": "全部", "topics": [], "keywords": [] },
-    { "id": "pcs", "label": "PCS", "topics": ["pcs"], "keywords": [] },
-    { "id": "sst", "label": "SST", "topics": ["sst"], "keywords": ["变压器", "transformer", "固态变压器", "solid[- ]state transformer", "中压", "电力电子"] },
-    { "id": "ems", "label": "EMS", "topics": ["ems"], "keywords": ["\\bEMS\\b", "能量管理系统", "储能EMS", "能量管理", "\\bVPP\\b", "虚拟电厂", "DERMS"] },
-    { "id": "storage", "label": "储能", "topics": ["energy-storage"], "keywords": [] },
-    { "id": "aidc", "label": "AIDC", "topics": ["data-center-power", "aidc-project", "cooling-pue"], "keywords": ["800\\s*VDC", "power architecture", "电源架构", "直流供电"] }
+    {
+      "id": "all",
+      "label": "全部",
+      "topics": [],
+      "keywords": []
+    },
+    {
+      "id": "pcs",
+      "label": "PCS",
+      "topics": [
+        "pcs"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "sst",
+      "label": "SST",
+      "topics": [
+        "sst"
+      ],
+      "keywords": [
+        "变压器",
+        "transformer",
+        "固态变压器",
+        "solid[- ]state transformer",
+        "中压",
+        "电力电子"
+      ]
+    },
+    {
+      "id": "ems",
+      "label": "EMS",
+      "topics": [
+        "ems"
+      ],
+      "keywords": [
+        "\\bEMS\\b",
+        "能量管理系统",
+        "储能EMS",
+        "能量管理",
+        "\\bVPP\\b",
+        "虚拟电厂",
+        "DERMS"
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "储能",
+      "topics": [
+        "energy-storage"
+      ],
+      "keywords": []
+    },
+    {
+      "id": "aidc",
+      "label": "AIDC",
+      "topics": [
+        "data-center-power",
+        "aidc-project",
+        "cooling-pue"
+      ],
+      "keywords": [
+        "800\\s*VDC",
+        "power architecture",
+        "电源架构",
+        "直流供电"
+      ]
+    }
   ],
   "sourceTypes": [
-    { "id": "primary", "label": "一手来源", "description": "政府、监管机构、公司公告、项目文件等原始发布方" },
-    { "id": "media", "label": "媒体", "description": "行业媒体与综合媒体的报道" },
-    { "id": "research", "label": "研究机构", "description": "研究机构、咨询公司、行业协会的洞察与报告" },
-    { "id": "community", "label": "社区/KOL", "description": "社区、独立博主、意见领袖" }
+    {
+      "id": "primary",
+      "label": "一手来源",
+      "description": "政府、监管机构、公司公告、项目文件等原始发布方"
+    },
+    {
+      "id": "media",
+      "label": "媒体",
+      "description": "行业媒体与综合媒体的报道"
+    },
+    {
+      "id": "research",
+      "label": "研究机构",
+      "description": "研究机构、咨询公司、行业协会的洞察与报告"
+    },
+    {
+      "id": "community",
+      "label": "社区/KOL",
+      "description": "社区、独立博主、意见领袖"
+    }
   ],
   "impacts": [
-    { "id": "positive", "label": "利好" },
-    { "id": "negative", "label": "利空" },
-    { "id": "neutral", "label": "中性" },
-    { "id": "watch", "label": "待观察" },
-    { "id": "unknown", "label": "未知" }
+    {
+      "id": "positive",
+      "label": "利好"
+    },
+    {
+      "id": "negative",
+      "label": "利空"
+    },
+    {
+      "id": "neutral",
+      "label": "中性"
+    },
+    {
+      "id": "watch",
+      "label": "待观察"
+    },
+    {
+      "id": "unknown",
+      "label": "未知"
+    }
   ],
   "regions": {
     "kind": "open-with-known-set",
     "rule": "优先输出国家或经济体；无法判断时使用「全球」或「未知」，不得根据媒体所在地猜测。",
     "known": [
-      "全球", "未知",
-      "中国", "美国", "欧盟", "英国", "德国", "法国", "荷兰", "北欧", "西班牙",
-      "日本", "韩国", "印度", "澳大利亚", "加拿大", "新加坡", "马来西亚",
-      "东南亚", "中东", "沙特", "阿联酋", "卡塔尔", "科威特", "阿曼", "巴林", "埃及",
-      "拉美", "非洲", "俄罗斯",
-      "意大利", "智利", "波兰", "菲律宾", "越南", "泰国", "印尼", "土耳其", "乌克兰"
+      "全球",
+      "未知",
+      "中国",
+      "美国",
+      "欧盟",
+      "英国",
+      "德国",
+      "法国",
+      "荷兰",
+      "北欧",
+      "西班牙",
+      "日本",
+      "韩国",
+      "印度",
+      "澳大利亚",
+      "加拿大",
+      "新加坡",
+      "马来西亚",
+      "东南亚",
+      "中东",
+      "沙特",
+      "阿联酋",
+      "卡塔尔",
+      "科威特",
+      "阿曼",
+      "巴林",
+      "埃及",
+      "拉美",
+      "非洲",
+      "俄罗斯",
+      "意大利",
+      "智利",
+      "波兰",
+      "菲律宾",
+      "越南",
+      "泰国",
+      "印尼",
+      "土耳其",
+      "乌克兰"
     ]
   }
 }

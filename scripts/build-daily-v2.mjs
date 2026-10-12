@@ -439,7 +439,10 @@ export async function processItems(rawItems, ctx) {
   //    人工约束 links 由 ctx.eventLinks 注入（C4：data/event-overrides.json）。
   const eventLinks = ctx.eventLinks || { mustLink: [], cannotLink: [] };
   const mergeResult = mergeEvents(enriched, { cfg: enums, links: eventLinks });
-  const { clusters, pairLog, grayPairs: gray } = mergeResult;
+  // legacy 回退口径无 pairLog/grayPairs（空数组兜底，两跑对比实测曾在此抛
+  // TypeError——mergeV2=false 开关形同虚设）
+  const { clusters, pairLog } = mergeResult;
+  const gray = mergeResult.grayPairs || [];
   const manualLog = {
     mustLinkGroups: eventLinks.mustLink?.length || 0,
     cannotLinkPairs: eventLinks.cannotLink?.length || 0,
