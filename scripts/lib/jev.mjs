@@ -48,7 +48,9 @@ import { canonicalJson } from './digest.mjs';
 
 const API_URL = 'https://api.typesafe.ai/v1/systemone';
 const MODEL = 'jev-latest';
-const CONCURRENCY = 4;              // 小并发池：直连实测 4 并发无 429
+const CONCURRENCY = Number(process.env.JEV_CONCURRENCY) || 4; // 小并发池：直连实测 4 并发无 429。
+              // JEV_CONCURRENCY 可调低（如备胎网关限并发时串行录制）。注：10-12 曾疑 OpenRouter
+              // 并发 404，实际根因是 base URL 双 /v1（见 fallbackEndpoint），并发无关。
 const RATE_LIMIT_WAIT_MS = 20_000;  // 429/529 后退避等待（按次翻倍）
 const MAX_RATE_LIMIT_RETRIES = 2;   // 单条最多退避重试次数
 const BUDGET_MS = 8 * 60_000;      // 整批复审总预算：超时放弃剩余条目（CI 保护）
@@ -210,12 +212,20 @@ async function callFallback(payload, cfg) {
   throw lastErr; // 不可达（throw 在循环内），兜底保形
 }
 
+/** 备胎端点：base URL 容忍带尾 /v1 的写法（OpenRouter 惯例是给到 /api/v1，
+ *  LiteLLM 给到根域名）——统一剥掉尾 /v1 与尾斜杠后拼 /v1/chat/completions，
+ *  避免拼出 /v1/v1/… 静默 404（2026-10-12 夹具录制全 404 的根因）。 */
+export function fallbackEndpoint(baseUrl) {
+  return `${String(baseUrl || '').replace(/\/+$/, '').replace(/\/v1$/, '')}/v1/chat/completions`;
+}
+
 /** 备胎单次请求（callFallback 的重试内核）。 */
 async function callFallbackOnce(payload, cfg) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/v1/chat/completions`, {
+    const prompt = buildFallbackPrompt(payload);
+    const res = await fetch(fallbackEndpoint(cfg.baseUrl), {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${cfg.apiKey}`,
@@ -223,7 +233,7 @@ async function callFallbackOnce(payload, cfg) {
       },
       body: JSON.stringify({
         model: cfg.model,
-        messages: [{ role: 'user', content: buildFallbackPrompt(payload) }],
+        messages: [{ role: 'user', content: prompt }],
         temperature: 0,
         // 带 reasoning 的模型（如 glm-5.3-flash）思维链会先烧输出预算，
         // 300 会把 content 挤成 null；1000 足够覆盖推理+JSON（实测 <$0.0001/条）
@@ -233,6 +243,27 @@ async function callFallbackOnce(payload, cfg) {
     });
     if (!res.ok) {
       const body = await res.text().catch(() => '');
+      // 诊断开关（临时排查用）：失败时把实际请求 body + 应答落盘，定位确定性失败原因
+      if (process.env.JEV_DUMP_FAILED) {
+        await fs.mkdir(process.env.JEV_DUMP_FAILED, { recursive: true }).catch(() => {});
+        await fs.writeFile(
+          path.join(process.env.JEV_DUMP_FAILED, `${fixtureKey(payload)}.json`),
+          JSON.stringify({
+            statusCode: res.status,
+            at: new Date().toISOString(),
+            url: fallbackEndpoint(cfg.baseUrl),
+            model: cfg.model,
+            reqBody: JSON.stringify({
+              model: cfg.model,
+              messages: [{ role: 'user', content: prompt }],
+              temperature: 0,
+              max_tokens: 1000,
+            }),
+            body: body.slice(0, 1000),
+            payload,
+          }, null, 2)
+        ).catch(() => {});
+      }
       const e = new Error(`fallback api ${res.status}: ${body.slice(0, 200)}`);
       e.statusCode = res.status;
       throw e;

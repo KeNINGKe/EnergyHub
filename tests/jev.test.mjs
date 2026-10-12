@@ -81,6 +81,17 @@ test('fallbackConfig: env 运行时读取，未配置时 fallbackConfigured=fals
   }
 });
 
+test('fallbackEndpoint: base URL 带不带尾 /v1 都拼出唯一端点', async () => {
+  const { fallbackEndpoint } = await import('../scripts/lib/jev.mjs');
+  assert.equal(fallbackEndpoint('https://openrouter.ai/api/v1'), 'https://openrouter.ai/api/v1/chat/completions');
+  assert.equal(fallbackEndpoint('https://openrouter.ai/api/v1/'), 'https://openrouter.ai/api/v1/chat/completions');
+  assert.equal(fallbackEndpoint('https://openrouter.ai/api'), 'https://openrouter.ai/api/v1/chat/completions');
+  assert.equal(fallbackEndpoint('https://litellm.jereh.cn'), 'https://litellm.jereh.cn/v1/chat/completions');
+  assert.equal(fallbackEndpoint('https://litellm.jereh.cn/'), 'https://litellm.jereh.cn/v1/chat/completions');
+  // 回归：双 /v1 静默 404（2026-10-12 夹具录制事故根因）
+  assert.ok(!fallbackEndpoint('https://openrouter.ai/api/v1').includes('/v1/v1'));
+});
+
 const FB_PAYLOAD = {
   state: { title: '宁德时代发布新一代储能电芯', summary: '能量密度提升 15%' },
   questions: {
