@@ -236,8 +236,9 @@ async function callFallbackOnce(payload, cfg) {
         messages: [{ role: 'user', content: prompt }],
         temperature: 0,
         // 带 reasoning 的模型（如 glm-5.3-flash）思维链会先烧输出预算，
-        // 300 会把 content 挤成 null；1000 足够覆盖推理+JSON（实测 <$0.0001/条）
-        max_tokens: 1000,
+        // 300 会把 content 挤成 null；1000 覆盖绝大多数（10-12 实测 91 条里
+        // 仍 1 条 length 截断），提到 2000 兜底（单条成本增幅可忽略）
+        max_tokens: 2000,
       }),
       signal: ctrl.signal,
     });
@@ -418,6 +419,16 @@ async function callJudge(payload) {
     }
     if (hit.error) throw new Error(hit.error);
     return structuredClone(hit.result);
+  }
+  // 录制模式增量语义（2026-10-12）：已有成功回执的 key 直接复用，只真实调用
+  // 缺失/失败的——重跑 --record 成为廉价清扫（失败条目补齐），而不是把上千条
+  // 已成功条目重新掷骰子（瞬时 404 会把好回执覆盖成 error）。回放语义不变。
+  if (recordFile && process.env.JEV_RECORD_REUSE !== 'off') {
+    try {
+      const entries = await replayEntries(recordFile);
+      const hit = entries[fixtureKey(payload)];
+      if (hit && !hit.error) return structuredClone(hit.result);
+    } catch { /* 夹具文件不存在/不可读：正常全新录制 */ }
   }
   try {
     // 无直连 key 且备胎已配置：跳过注定 401 的直连，直接备胎（录制备胎回执场景）
