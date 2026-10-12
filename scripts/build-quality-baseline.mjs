@@ -29,6 +29,7 @@ import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters } from './lib/filter.mjs';
 import { loadSourceTypes, loadSourceMap } from './lib/source.mjs';
 import { loadOverrides } from './lib/overrides.mjs';
+import { loadEventOverrides, toLinks } from './lib/event-overrides.mjs';
 import { exposedUrlSet, exposedUrlAgeMap, eventFingerprint } from './lib/exposure.mjs';
 import { canonicalUrl } from './lib/compat.mjs';
 import { collectVersionManifest, sha256File, sha256String, canonicalJson } from './lib/digest.mjs';
@@ -187,10 +188,12 @@ async function main() {
   const dates = onlyDate ? [onlyDate] : await listDates();
   if (!dates.length) throw new Error(`samples/daily/ 下没有快照日期`);
 
-  const [enums, filters, sourceTypes, sourceMapData, overrides] = await Promise.all([
-    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides()
+  const [enums, filters, sourceTypes, sourceMapData, overrides, eventOverridesDoc] = await Promise.all([
+    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides(), loadEventOverrides()
   ]);
   const sourceMap = sourceMapData.byName;
+  // 事件级人工约束（B-02）与线上构建同口径注入，保证基线回放行为一致
+  const eventLinks = toLinks(eventOverridesDoc);
 
   // 标注（漏合推导素材；缺失时跳过该指标并如实记录）
   let annotationSet = null, annotationLabels = null;
@@ -234,6 +237,7 @@ async function main() {
       date, now: replayNow, filters, enums, sourceTypes, sourceMap,
       overridesForDate: overrides.byDate?.[date],
       globalHiddenIds: overrides.globalHiddenIds || [],
+      eventLinks,
       sourcesTotal: 0, sourcesSucceeded: 0,
       exposedUrls, exposedAges
     });

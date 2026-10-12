@@ -115,6 +115,9 @@ const isRateLimit = (e) => e?.statusCode === 429 || e?.statusCode === 529 || /ra
 // Jev 失败时降级。备胎是普通 LLM：问题结构翻译成提示词（buildFallbackPrompt），
 // 应答 JSON 解析回 Jev answers 同构格式（parseFallbackContent），下游零改动。
 const FALLBACK_MODEL_DEFAULT = 'Jereh-qwen3.5-flash-no-think';
+const FALLBACK_TRANSIENT_RETRIES = 2;   // 上游瞬时不可用（404/408/429/5xx）重试次数
+const FALLBACK_TRANSIENT_WAIT_MS = 1_500; // 短退避（按次线性递增），远小于 runPool 的限流退避
+const isTransientUpstream = (e) => [404, 408, 429, 500, 502, 503, 504].includes(e?.statusCode);
 
 /** 备胎配置（env 运行时读取，便于测试覆盖）。 */
 export function fallbackConfig() {
@@ -190,6 +193,25 @@ export function parseFallbackContent(content, payload) {
 
 /** 调备胎网关（OpenAI 兼容 chat/completions），返回 Jev 同构 result 或抛错。 */
 async function callFallback(payload, cfg) {
+  // 上游瞬时不可用短退避重试：聚合网关（如 OpenRouter）对同一模型的路由会
+  // 间歇 404/5xx 抖动，连发时更明显（2026-10-12 夹具录制实测 404 率可爬到
+  // 大半）。重试成功的不记 error——避免夹具被瞬时抖动污染成失败回执。
+  let lastErr;
+  for (let attempt = 0; ; attempt++) {
+    if (attempt) await sleep(FALLBACK_TRANSIENT_WAIT_MS * attempt);
+    try {
+      return await callFallbackOnce(payload, cfg);
+    } catch (e) {
+      lastErr = e;
+      if (!isTransientUpstream(e) || attempt >= FALLBACK_TRANSIENT_RETRIES) throw e;
+      console.warn(`fallback 瞬时错误（${e.statusCode}），退避重试 ${attempt + 1}/${FALLBACK_TRANSIENT_RETRIES}：${String(e?.message || e).slice(0, 100)}`);
+    }
+  }
+  throw lastErr; // 不可达（throw 在循环内），兜底保形
+}
+
+/** 备胎单次请求（callFallback 的重试内核）。 */
+async function callFallbackOnce(payload, cfg) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
