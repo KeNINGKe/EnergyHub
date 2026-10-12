@@ -29,6 +29,7 @@ import { pickPrimary } from './lib/select.mjs';
 import { importance, capPerSource } from './lib/score.mjs';
 import { cleanSummary, generateWhyItMatters } from './lib/clean.mjs';
 import { loadOverrides, applyOverrides } from './lib/overrides.mjs';
+import { loadEventOverrides, toLinks } from './lib/event-overrides.mjs';
 import { isRecentlyExposed, exposedUrlSet, exposedUrlAgeMap, recordExposure, pruneExposure, eventFingerprint } from './lib/exposure.mjs';
 import { hashId, canonicalUrl } from './lib/compat.mjs';
 import {
@@ -629,7 +630,7 @@ export async function processItems(rawItems, ctx) {
 
   // 8. 人工覆盖（B-11）：全局永久黑名单总是应用；当日配置存在时叠加应用
   {
-    const { errors, warnings } = applyOverrides(daily, featured, overridesForDate || {}, enums, globalHiddenIds || []);
+    const { errors, warnings } = applyOverrides(daily, featured, overridesForDate || {}, enums, globalHiddenIds || [], eventLinks);
     if (errors.length) console.error(`  [覆盖错误] ${errors.join('; ')}`);
     if (warnings.length) console.warn(`  [覆盖警告] ${warnings.join('; ')}`);
     stats.overrideErrors = errors.length;
@@ -693,10 +694,12 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const activate = args.includes('--activate');
 
-  const [enums, filters, sourceTypes, sourceMapData, overrides] = await Promise.all([
-    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides()
+  const [enums, filters, sourceTypes, sourceMapData, overrides, eventOverridesDoc] = await Promise.all([
+    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides(), loadEventOverrides()
   ]);
   const sourceMap = sourceMapData.byName;
+  // 事件级人工约束（B-02）：跨日 articleId 级 mustLink/cannotLink，注入合并判定
+  const eventLinks = toLinks(eventOverridesDoc);
 
   let now = new Date();
   let rawItems = [];
@@ -716,6 +719,7 @@ async function main() {
         date, now: replayNow, filters, enums, sourceTypes, sourceMap,
         overridesForDate: overrides.byDate?.[date],
         globalHiddenIds: overrides.globalHiddenIds || [],
+        eventLinks,
         sourcesTotal, sourcesSucceeded
       });
       await logStats(date, stats, daily, featured);
@@ -784,6 +788,7 @@ async function main() {
     date, now, filters, enums, sourceTypes, sourceMap,
     overridesForDate: overrides.byDate?.[date],
     globalHiddenIds: overrides.globalHiddenIds || [],
+    eventLinks,
     sourcesTotal, sourcesSucceeded,
     exposedUrls,
     exposedAges

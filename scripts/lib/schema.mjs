@@ -512,6 +512,119 @@ export async function validateOverrides(overrides, daily) {
   return { valid: errors.length === 0, errors, warnings };
 }
 
+/* ===== event-overrides.json（B-02 人工拆分/锁定） ===== */
+
+export const ARTICLE_ID_RE = /^art_[0-9a-f]{12}$/;
+
+/**
+ * 校验事件级人工约束。格式校验 + 冲突检查：
+ * - mustLinkGroups 做并查集传递闭包，任一 cannotLinkPair 两点同连通分量 → error
+ *   （拒绝保存：矛盾约束进管线会让强制点互相打架）
+ * - articleId 不在当前 daily 仅 warning（约束跨天生效，引用过期文章是常态）
+ * @param {object} doc event-overrides.json 内容
+ * @param {object} [daily] 提供时按事件 url + relatedSources 推导已知 articleId
+ */
+export async function validateEventOverrides(doc, daily) {
+  const errors = [];
+  const warnings = [];
+
+  if (!doc || typeof doc !== 'object' || Array.isArray(doc)) {
+    return { valid: false, errors: ['event-overrides 数据不是对象'], warnings };
+  }
+  if (doc.schemaVersion !== 1) {
+    push(errors, `event-overrides.schemaVersion 应为 1，实际为 ${JSON.stringify(doc.schemaVersion)}`);
+  }
+
+  const parent = new Map();
+  const find = (x) => {
+    if (!parent.has(x)) parent.set(x, x);
+    while (parent.get(x) !== x) {
+      parent.set(x, parent.get(parent.get(x)));
+      x = parent.get(x);
+    }
+    return x;
+  };
+  const union = (a, b) => { parent.set(find(a), find(b)); };
+
+  const checkIds = (field, entry, gi, minLen, maxLen = Infinity) => {
+    const where = `${field}[${gi}]`;
+    const ids = entry?.articleIds;
+    if (!Array.isArray(ids) || ids.some(x => typeof x !== 'string')) {
+      push(errors, `${where}.articleIds: 应为字符串数组`);
+      return null;
+    }
+    if (ids.length < minLen || ids.length > maxLen) {
+      const want = maxLen === minLen ? `恰好 ${minLen}` : maxLen === Infinity ? `至少 ${minLen}` : `${minLen}~${maxLen}`;
+      push(errors, `${where}.articleIds: 应有 ${want} 个 articleId，实际 ${ids.length} 个`);
+      return null;
+    }
+    if (new Set(ids).size !== ids.length) {
+      push(errors, `${where}.articleIds: 存在重复 articleId`);
+      return null;
+    }
+    for (const id of ids) {
+      if (!ARTICLE_ID_RE.test(id)) {
+        push(errors, `${where}: articleId "${id}" 不符合 art_+12 位十六进制格式（疑似抄错，永不命中）`);
+      }
+    }
+    if (entry?.reason != null && typeof entry.reason !== 'string') {
+      push(errors, `${where}.reason: 应为字符串`);
+    }
+    return ids;
+  };
+
+  const groups = Array.isArray(doc.mustLinkGroups) ? doc.mustLinkGroups : null;
+  if (doc.mustLinkGroups != null && !groups) {
+    push(errors, 'event-overrides.mustLinkGroups: 应为数组');
+  }
+  (groups || []).forEach((entry, gi) => {
+    const ids = checkIds('mustLinkGroups', entry, gi, 2);
+    if (!ids) return;
+    // 并入传递闭包：与已有成员逐对 union
+    for (const id of ids) union(id, ids[0]);
+  });
+
+  const pairs = Array.isArray(doc.cannotLinkPairs) ? doc.cannotLinkPairs : null;
+  if (doc.cannotLinkPairs != null && !pairs) {
+    push(errors, 'event-overrides.cannotLinkPairs: 应为数组');
+  }
+  const cannotLinks = [];
+  (pairs || []).forEach((entry, gi) => {
+    const ids = checkIds('cannotLinkPairs', entry, gi, 2, 2);
+    if (!ids) return;
+    if (find(ids[0]) === find(ids[1])) {
+      push(errors, `cannotLinkPairs[${gi}]: "${ids[0]}" 与 "${ids[1]}" 已被 mustLinkGroups 传递连通，约束互相矛盾`);
+    }
+    const key = [...ids].sort().join('|');
+    if (cannotLinks.includes(key)) {
+      push(warnings, `cannotLinkPairs[${gi}]: 与已有条目重复`);
+    }
+    cannotLinks.push(key);
+  });
+
+  // 引用检查（宽松档）：articleId 不在当前 daily 属正常——约束跨天生效，文章滚出
+  // 7 天采集窗口后约束自然闲置。已知集合按事件 url + relatedSources urls 推导。
+  if (daily && Array.isArray(daily.items)) {
+    const { articleId } = await import('./identity.mjs');
+    const known = new Set();
+    for (const ev of daily.items) {
+      const urls = [ev.url, ...(ev.relatedSources || []).map(s => s?.url)].filter(Boolean);
+      for (const u of urls) known.add(articleId({ url: u }));
+    }
+    const warnUnknown = (field, ids) => {
+      for (const id of ids || []) {
+        if (typeof id === 'string' && ARTICLE_ID_RE.test(id) && !known.has(id)) {
+          push(warnings, `${field}: articleId "${id}" 不在当前 daily（未生效或文章已过期）`);
+        }
+      }
+    };
+    (groups || []).forEach((e, gi) => warnUnknown(`mustLinkGroups[${gi}]`, e?.articleIds));
+    (pairs || []).forEach((e, gi) => warnUnknown(`cannotLinkPairs[${gi}]`, e?.articleIds));
+  }
+
+  return { valid: errors.length === 0, errors, warnings };
+}
+
 /* ===== 汇总入口 ===== */
 
 /**
@@ -577,6 +690,12 @@ export async function validateCurrentData() {
     if (!reports.overrides.valid) valid = false;
   } else {
     reports.overrides = { valid: true, errors: [], warnings: [] };
+  }
+
+  const eventOverrides = await readJson(path.join(root, 'data/event-overrides.json'));
+  if (eventOverrides) {
+    reports.eventOverrides = await validateEventOverrides(eventOverrides, daily);
+    if (!reports.eventOverrides.valid) valid = false;
   }
 
   return { valid, reports };

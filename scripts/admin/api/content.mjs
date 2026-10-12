@@ -12,11 +12,11 @@ import { fileURLToPath } from 'node:url';
 import { PATHS } from '../lib/paths.mjs';
 import { readJson, writeJson } from '../lib/jsonfile.mjs';
 import { jsonOk, jsonFail, httpError } from '../router.mjs';
-import { loadEnums, validateOverrides } from '../../lib/schema.mjs';
+import { loadEnums, validateOverrides, validateEventOverrides } from '../../lib/schema.mjs';
 import { applyOverrides } from '../../lib/overrides.mjs';
 import { keywordHit } from '../../lib/filter.mjs';
 import {
-  applyOverrideOp, scanStale, pruneOld, buildTodayPayload
+  applyOverrideOp, applyEventOverrideOp, scanStale, pruneOld, buildTodayPayload
 } from '../lib/content-ops.mjs';
 
 const KEEP_DAYS = 3;
@@ -124,6 +124,54 @@ export function register(router) {
     const { config, pruned } = pruneOld(overrides, daily.date, keepDays);
     if (pruned.length) await writeJson(PATHS.editorialOverrides, config, { bak: true });
     jsonOk(ctx, { pruned, todayConfig: config.byDate?.[daily.date] || {}, globalIds: config.globalHiddenIds || [] });
+  });
+
+  /* ---- 事件级人工约束（B-02 mustLink/cannotLink，articleId 级跨日生效）---- */
+  router.add('GET', '/api/content/event-overrides', async (ctx) => {
+    jsonOk(ctx, (await readJson(PATHS.eventOverrides)) ||
+      { schemaVersion: 1, updatedAt: null, updatedBy: 'admin', mustLinkGroups: [], cannotLinkPairs: [] });
+  });
+
+  router.add('POST', '/api/content/event-overrides', async (ctx) => {
+    const { op, articleIds, reason, index } = ctx.body || {};
+    if (!op) throw httpError(400, '缺少 op');
+    if (['addMustLink', 'addCannotLink'].includes(op) && !(Array.isArray(articleIds) && articleIds.length)) {
+      throw httpError(400, `操作 ${op} 需要 articleIds 数组`);
+    }
+    const [daily, doc] = await Promise.all([loadDaily(), readJson(PATHS.eventOverrides)]);
+
+    let result;
+    try {
+      result = applyEventOverrideOp(doc, { op, articleIds, reason, index });
+    } catch (e) {
+      throw httpError(400, e.message);
+    }
+
+    // 冲突检查（mustLink 传递闭包 vs cannotLink）在 validateEventOverrides 里做，
+    // 命中即拒写并回传冲突对明细
+    const { valid, errors, warnings } = await validateEventOverrides(result.doc, daily);
+    if (!valid) {
+      return jsonFail(ctx, 400, { error: '事件约束校验未通过，未落盘', errors, warnings });
+    }
+    if (result.changed) await writeJson(PATHS.eventOverrides, result.doc, { bak: true });
+    jsonOk(ctx, { doc: result.doc, changed: result.changed, warnings });
+  });
+
+  router.add('DELETE', '/api/content/event-overrides/:kind/:i', async (ctx) => {
+    const field = ctx.params.kind === 'mustLink' ? 'mustLinkGroups'
+      : ctx.params.kind === 'cannotLink' ? 'cannotLinkPairs' : null;
+    if (!field) throw httpError(400, `未知约束类型: ${ctx.params.kind}（应为 mustLink 或 cannotLink）`);
+    const doc = await readJson(PATHS.eventOverrides);
+    if (!doc || !Array.isArray(doc[field])) throw httpError(404, '约束文件不存在或为空');
+    const i = parseInt(ctx.params.i, 10);
+    if (!(i >= 0 && i < doc[field].length)) throw httpError(404, `序号越界: ${i}`);
+    const [removed] = doc[field].splice(i, 1);
+    doc.updatedAt = new Date().toISOString();
+    doc.updatedBy = 'admin';
+    const { valid, errors } = await validateEventOverrides(doc, await loadDaily());
+    if (!valid) return jsonFail(ctx, 400, { error: '删除后校验未通过，未落盘', errors });
+    await writeJson(PATHS.eventOverrides, doc, { bak: true });
+    jsonOk(ctx, { removed, doc });
   });
 
   /* ---- 微信公众号种子（管线会回写：写前必重读、按条操作）---- */

@@ -211,6 +211,15 @@
 - **回退**：`enums.features.mergeV2=false` 走 `mergeEventsLegacy`（旧 0.45 评分口径，无簇检查无人工约束；E 阶段删除）。
 - **参数**：标题证据阈值在 `enums.merge`（strongTitle 0.7 / nearTitle 0.5 / partialTitle 0.2 / regionConflict）；Jev 灰区仲裁阈值 0.75 与 30 对上限不变（未校准，暂不动）。
 
+### 10.3 B-02 事件级人工约束 event-overrides.json（已落地，2026-10）
+
+- **文件**：`data/event-overrides.json`，`{ schemaVersion:1, updatedAt, updatedBy, mustLinkGroups:[{articleIds,reason,updatedAt}], cannotLinkPairs:[{articleIds,reason,updatedAt}] }`。articleId 为 `scripts/lib/identity.mjs` 的 `art_`+12 位十六进制（保守归一 URL 哈希，跨日稳定），约束跨天生效、无日期维度。
+- **三处强制点**：①`judgePair` 第 1 层（最高优先，对时间窗/召回短路免疫）；②`clusterUnionBlocked` 簇级检查（防第三篇绕过单对判定）；③`applyOverrides` mergeGroups 合并前查双方文章集（主事件文章集随合并累计）。命中 cannotLink → 拒绝合并；mustLink → 强制合并并跳过簇检查。
+- **冲突校验**（`validateEventOverrides`）：mustLinkGroups 做传递闭包，任一 cannotLinkPair 两点同连通分量 → error 拒绝保存（admin 写入口 400 + 冲突对明细）；articleId 不符合 `art_`+12hex 格式 → error（防抄错永不命中）；不在当前 daily → 仅 warning（跨天生效是常态）。`validateCurrentData` 已纳入该文件（手工改坏会在部署校验暴露）。
+- **加载**：`scripts/lib/event-overrides.mjs` `loadEventOverrides()` 缺失/损坏返回空骨架（约束是增强，不堵构建）；`toLinks()` 归一为 `{mustLink:string[][], cannotLink:[a,b][]}` 供三处强制点共用。
+- **admin API**：`GET/POST /api/content/event-overrides`、`DELETE /api/content/event-overrides/:kind/:i`（kind=mustLink|cannotLink）；写入走「磁盘重读 → applyEventOverrideOp 纯函数 → validateEventOverrides → 拒写或原子落盘」。`GET /api/content/today` 的 items 增列 `articleIds`（主 url + relatedSources urls 的文章身份，下阶段 UI 选锚点用）。
+- **回滚**：数据级清空 `data/event-overrides.json` 即全量失效（空骨架 = 无约束），不需要动代码。
+
 ## 11. 离线回放与固定回执夹具（阶段 A-01）
 
 固定可复现基线：固定输入 + 固定模型回执，离线重复回放同一输出，供 B 阶段改动前后对比。

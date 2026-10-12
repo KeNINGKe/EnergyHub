@@ -2,14 +2,17 @@
  * 内容运营纯函数层（管理后台 P1）。
  *
  * 全部为无副作用函数（返回新对象，不改入参），供 api/content.mjs 与单测复用：
- * - applyOverrideOp   对「今日 config + 全局黑名单」施加一个操作，返回新状态
- * - scanStale         扫描全部覆盖里引用已失效 id 的条目（发布阻断项预警）
- * - pruneOld          清理超过保留期的 byDate 配置
- * - buildTodayPayload 组装内容运营页所需的今日数据
+ * - applyOverrideOp    对「今日 config + 全局黑名单」施加一个操作，返回新状态
+ * - applyEventOverrideOp 对 event-overrides.json（B-02 事件级 mustLink/cannotLink）
+ *                       施加一个操作，返回新文档（冲突由调用方 validateEventOverrides 拦）
+ * - scanStale          扫描全部覆盖里引用已失效 id 的条目（发布阻断项预警）
+ * - pruneOld           清理超过保留期的 byDate 配置
+ * - buildTodayPayload  组装内容运营页所需的今日数据
  *
- * 协议见 docs/DATA_PROTOCOL.md §4 与 scripts/lib/overrides.mjs 头注释。
+ * 协议见 docs/DATA_PROTOCOL.md §4/§10.3 与 scripts/lib/overrides.mjs 头注释。
  * 全局黑名单 overrides.globalHiddenIds：文章级永久隐藏（事件 id 是 URL 稳定哈希）。
  */
+import { articleId } from '../../lib/identity.mjs';
 
 /** 今日配置里引用事件 id 的字段（值为字符串数组）。 */
 const ID_LIST_FIELDS = ['forcedFeaturedIds', 'unfeaturedIds', 'hotEventIds'];
@@ -176,6 +179,66 @@ export function applyOverrideOp(overrides, globalIds, date, op) {
 }
 
 /**
+ * 对 event-overrides.json（B-02 事件级人工约束）施加一个操作。
+ * 只做结构变更与去重；mustLink/cannotLink 语义冲突由调用方随后跑
+ * validateEventOverrides 拒绝落盘（纯函数层不重复实现闭包检查）。
+ * @param {object} doc 现有文档（浅克隆后修改，可为 null → 空骨架）
+ * @param {object} op { op: 'addMustLink'|'addCannotLink'|'removeMustLink'|'removeCannotLink',
+ *                      articleIds?: string[], reason?: string, index?: number }
+ * @returns {{doc: object, changed: boolean}}
+ */
+export function applyEventOverrideOp(doc, op) {
+  const next = JSON.parse(JSON.stringify(doc || { schemaVersion: 1, updatedAt: null, updatedBy: 'admin', mustLinkGroups: [], cannotLinkPairs: [] }));
+  if (next.schemaVersion !== 1) next.schemaVersion = 1;
+  if (!Array.isArray(next.mustLinkGroups)) next.mustLinkGroups = [];
+  if (!Array.isArray(next.cannotLinkPairs)) next.cannotLinkPairs = [];
+
+  const stamp = () => { next.updatedAt = new Date().toISOString(); next.updatedBy = 'admin'; };
+  const cleanIds = (v, { min = 2, max = Infinity } = {}) => {
+    const ids = [...new Set(ensureArr(v).map(String).filter(Boolean))];
+    return ids.length >= min && ids.length <= max ? ids : null;
+  };
+
+  switch (op.op) {
+    case 'addMustLink': {
+      const ids = cleanIds(op.articleIds);
+      if (!ids) throw new Error('addMustLink 需要 ≥2 个 articleIds');
+      const key = [...ids].sort().join('|');
+      if (next.mustLinkGroups.some(g => [...(g.articleIds || [])].sort().join('|') === key)) {
+        return { doc: next, changed: false };
+      }
+      next.mustLinkGroups.push({ articleIds: ids, reason: op.reason ? String(op.reason) : '', updatedAt: new Date().toISOString() });
+      stamp();
+      return { doc: next, changed: true };
+    }
+    case 'addCannotLink': {
+      const ids = cleanIds(op.articleIds, { min: 2, max: 2 });
+      if (!ids) throw new Error('addCannotLink 需要恰好 2 个 articleIds');
+      const key = [...ids].sort().join('|');
+      if (next.cannotLinkPairs.some(p => [...(p.articleIds || [])].sort().join('|') === key)) {
+        return { doc: next, changed: false };
+      }
+      next.cannotLinkPairs.push({ articleIds: ids, reason: op.reason ? String(op.reason) : '', updatedAt: new Date().toISOString() });
+      stamp();
+      return { doc: next, changed: true };
+    }
+    case 'removeMustLink':
+    case 'removeCannotLink': {
+      const field = op.op === 'removeMustLink' ? 'mustLinkGroups' : 'cannotLinkPairs';
+      const i = Number(op.index);
+      if (!(Number.isInteger(i) && i >= 0 && i < next[field].length)) {
+        throw new Error(`${op.op}: 序号越界 ${op.index}`);
+      }
+      next[field].splice(i, 1);
+      stamp();
+      return { doc: next, changed: true };
+    }
+    default:
+      throw new Error(`未知事件约束操作: ${op.op}`);
+  }
+}
+
+/**
  * 扫描全部覆盖里引用「当前 daily 不存在 id」的条目。
  * 注意：hiddenIds/mergeGroups/globalHiddenIds 的缺失已降级为可容忍（构建应用后即消失），
  * 这里仍然列出，供 UI 提示"可清理"；forced/hot/map 类缺失才是真阻断项。
@@ -244,6 +307,10 @@ export function pruneOld(overrides, today, keepDays = 3) {
 
 /** 单条事件的 UI 投影。 */
 function projectItem(ev, featuredSet, hotSet, globalSet, overrideIds) {
+  // 事件簇文章级成员清单（B-02 UI 备数据）：主 url + relatedSources urls 的
+  // articleId——事件级约束（mustLink/cannotLink）以这些 id 为锚点
+  const articleIds = [ev.url, ...ensureArr(ev.relatedSources).map(s => s?.url)]
+    .filter(Boolean).map(u => articleId({ url: u }));
   return {
     id: ev.id,
     title: ev.title || '',
@@ -258,6 +325,7 @@ function projectItem(ev, featuredSet, hotSet, globalSet, overrideIds) {
     source: ev.source?.name || '未知来源',
     publishedAt: ev.publishedAt || null,
     wechat: ev.wechat === true,
+    articleIds: [...new Set(articleIds)],
     isFeatured: featuredSet.has(ev.id),
     isHot: hotSet.has(ev.id),
     hiddenGlobal: globalSet.has(ev.id),

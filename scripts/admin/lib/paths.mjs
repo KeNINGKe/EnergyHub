@@ -20,6 +20,7 @@ export const PATHS = {
   entities: path.join(ROOT, 'data', 'entities.json'),
   regions: path.join(ROOT, 'data', 'regions.json'),
   editorialOverrides: path.join(ROOT, 'data', 'editorial-overrides.json'),
+  eventOverrides: path.join(ROOT, 'data', 'event-overrides.json'),
 
   // —— 可写：人工内容 ——
   wechatSeeds: path.join(ROOT, 'feeds', 'wechat-articles.json'),

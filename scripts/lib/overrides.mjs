@@ -17,6 +17,10 @@
  *   mergeGroups        合并事件（保留第一个为主，其余并入 relatedSources）
  *   globalHiddenIds    【第 5 参】文章级永久黑名单（跨天生效，先于当日配置应用；
  *                      id 已随文章滚出 7 天采集窗口时静默跳过，不记错误）
+ *   eventLinks         【第 6 参】事件级人工约束（B-02，data/event-overrides.json
+ *                      的 toLinks 产物）：mergeGroups 合并前查 cannotLink——双方
+ *                      任一文章对被人工禁止合并时跳过该次合并并记 errors 诊断
+ *                      （编辑想合并的事件里有一对被拆分的文章，须先解除约束）
  *
  * 用法：
  *   import { loadOverrides, applyOverrides } from './overrides.mjs';
@@ -24,6 +28,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { articleId } from './identity.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '../..');
@@ -45,9 +50,10 @@ export async function loadOverrides() {
  * @param {object} config 覆盖配置对象（byDate[date] 部分，可为 {}）
  * @param {object} enums 枚举（用于校验 topic/impact 合法性）
  * @param {string[]} [globalHiddenIds] 文章级永久黑名单（跨天生效，先应用）
+ * @param {object} [eventLinks] 事件级人工约束 { cannotLink: [a,b][] }（B-02，默认空）
  * @returns {{ errors: string[], warnings: string[] }}
  */
-export function applyOverrides(daily, featured, config, enums, globalHiddenIds = []) {
+export function applyOverrides(daily, featured, config, enums, globalHiddenIds = [], eventLinks = null) {
   const errors = [];
   const warnings = [];
   const ensure = (list) => Array.isArray(list) ? list : [];
@@ -145,7 +151,19 @@ export function applyOverrides(daily, featured, config, enums, globalHiddenIds =
     featured.observations = config.observations.slice(0, 5);
   }
 
-  // 7. 事件合并：保留第一个为主，其余并入 relatedSources
+  // 7. 事件合并：保留第一个为主，其余并入 relatedSources。
+  //    B-02 强制点：合并双方（主事件累计的文章集 vs 被并事件）任一 articleId 组合
+  //    命中 cannotLinkPairs → 跳过该次合并 + errors 诊断。主事件的文章集随合并
+  //    累计（后续被并事件对先前成员同样受约束）。
+  const cannotPairs = (Array.isArray(eventLinks?.cannotLink) ? eventLinks.cannotLink : [])
+    .filter(p => Array.isArray(p) && p.length === 2);
+  const articleIdsOf = (ev) => {
+    const urls = [ev.url, ...ensure(ev.relatedSources).map(s => s?.url)].filter(Boolean);
+    return new Set(urls.map(u => articleId({ url: u })));
+  };
+  const blockedPair = (setA, setB) => cannotPairs.find(
+    p => (setA.has(p[0]) && setB.has(p[1])) || (setA.has(p[1]) && setB.has(p[0]))
+  );
   for (const group of ensure(config.mergeGroups)) {
     if (!Array.isArray(group) || group.length < 2) { warnings.push('mergeGroups 条目需 ≥2 个 id'); continue; }
     const ids = group.filter(id => byId.has(id));
@@ -154,12 +172,20 @@ export function applyOverrides(daily, featured, config, enums, globalHiddenIds =
     if (ids.length < 2) continue;
     const [main, ...rest] = ids;
     const mainEv = byId.get(main);
+    const mainIds = articleIdsOf(mainEv);
     for (const r of rest) {
       const rEv = byId.get(r);
+      const rIds = articleIdsOf(rEv);
+      const blocked = blockedPair(mainIds, rIds);
+      if (blocked) {
+        errors.push(`mergeGroups: ${r} 与主事件存在人工禁止合并的文章对（cannotLink ${blocked.join('↔')}），已跳过`);
+        continue;
+      }
       const seen = new Set(mainEv.relatedSources.map(s => s.url));
       if (!seen.has(rEv.url)) {
         mainEv.relatedSources.push({ name: rEv.source.name, url: rEv.url });
       }
+      for (const id of rIds) mainIds.add(id);
       daily.items = daily.items.filter(e => e.id !== r);
       byId.delete(r);
       featured.featuredEventIds = featured.featuredEventIds.filter(x => x !== r);
