@@ -7,7 +7,7 @@
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 62,
-    "eventsPublished": 33
+    "eventsPublished": 37
   },
   "items": [
     {
@@ -47,101 +47,102 @@
         }
       ],
       "impact": "unknown",
-      "importance": 6.5,
+      "importance": 5.5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
         "id": "energy-storage.news"
       },
-      "independentSourceCount": 4,
+      "independentSourceCount": 2,
       "publishedAt": "2026-07-29T10:46:34.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/quinbrook-submits-520mw-flat-rock-bess-in-australias-act-to-epbc-act/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-30T05:17:40.000Z"
-        },
-        {
-          "name": "CleanTechnica",
-          "url": "https://cleantechnica.com/2026/07/29/tesla-contourglobal-sign-long-term-power-agreement-covering-1-terawatt-hour-year-for-sterling-renewable-project/",
-          "sourceId": "cleantechnica.com",
-          "publishedAt": "2026-07-30T02:29:07.000Z"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/battery-storage-is-an-important-growth-driver-nextera-ceo-says-amid-merger-to-create-largest-regulated-utility-in-us/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-29T14:19:32.000Z"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/georgia-power-completes-construction-of-198mwh-bess-next-to-moody-air-force-base/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-29T12:52:29.000Z"
-        },
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/tremendously-important-market-for-storage-us-bess-integrator-flexgen-on-its-start-of-european-operations/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-29T10:56:03.000Z"
-        },
         {
           "name": "pv magazine",
           "url": "https://www.pv-magazine.com/2026/07/29/german-battery-manufacturer-files-for-self-administered-insolvency/",
           "sourceId": "pv-magazine.com",
           "publishedAt": "2026-07-29T08:20:00.000Z"
-        },
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/07/29/solid-state-ev-battery-leaders-team-up/",
-          "sourceId": "electrek.co",
-          "publishedAt": "2026-07-29T16:51:40.000Z"
         }
       ],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_9f082c22f01f",
-      "title": "美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
-      "originalTitle": "DOE mulls changes to Biden-era transformer rule, raising utility concerns",
-      "url": "https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/",
-      "summary": "Utility associations supported the 2024 efficiency requirements for distribution transformers and oppose their repeal. The rule may threate…",
-      "whyItMatters": "固态变压器（SST）；关联 DOE、美国能源部；地区 美国；媒体 Utility Dive",
-      "topic": "sst",
+      "id": "evt_d4e2521249b2",
+      "title": "特斯拉与ContourGlobal签署涵盖1太瓦时/年英镑可再生能源项目的长期电力协议",
+      "originalTitle": "Tesla & ContourGlobal Sign Long-Term Power Agreement Covering 1 Terawatt-Hour/Year for Sterling Renewable Project",
+      "url": "https://cleantechnica.com/2026/07/29/tesla-contourglobal-sign-long-term-power-agreement-covering-1-terawatt-hour-year-for-sterling-renewable-project/",
+      "summary": "This is one of the largest solar-plus-battery storage corporate PPA ever signed from a single plant in the U.S., and it will be served by t…",
+      "whyItMatters": "储能；关键数字 1.4GWh；关联 Tesla、特斯拉；地区 美国；媒体 CleanTechnica",
+      "topic": "energy-storage",
       "tags": [],
       "region": "美国",
       "entities": [
-        "DOE",
-        "美国能源部"
+        "Tesla",
+        "特斯拉"
       ],
-      "metrics": [],
+      "metrics": [
+        {
+          "label": "With more than",
+          "value": 1.4,
+          "unit": "GWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 5,
+      "source": {
+        "name": "CleanTechnica",
+        "type": "media",
+        "isPrimary": false,
+        "id": "cleantechnica.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-30T02:29:07.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_17c8462bd4c4",
+      "title": "NextEra首席执行官表示，在合并以创建美国最大的受监管公用事业公司之际，电池存储是一个重要的增长动力",
+      "originalTitle": "Battery storage is an important growth driver, NextEra CEO says, amid merger to create largest regulated utility in US",
+      "url": "https://www.energy-storage.news/battery-storage-is-an-important-growth-driver-nextera-ceo-says-amid-merger-to-create-largest-regulated-utility-in-us/",
+      "summary": "NextEra Energy recorded a 9.5% increase in its net earnings in Q2 2026, as the company advanced its plan to merge with Dominion Energy to f…",
+      "whyItMatters": "储能；关键数字 9.5%；关联 NextEra、NextEra Energy、Dominion；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "NextEra",
+        "NextEra Energy",
+        "Dominion"
+      ],
+      "metrics": [
+        {
+          "label": "rded a",
+          "value": 9.5,
+          "unit": "%"
+        }
+      ],
       "impact": "unknown",
       "importance": 4.5,
       "source": {
-        "name": "Utility Dive",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "utilitydive.com"
+        "id": "energy-storage.news"
       },
       "independentSourceCount": 2,
-      "publishedAt": "2026-07-29T10:40:40.000Z",
+      "publishedAt": "2026-07-29T14:19:32.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [
         {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/argonne-hackathon-helps-researchers-accelerate-scientific-discovery-on-aurora/",
-          "sourceId": "hpcwire.com",
-          "publishedAt": "2026-07-29T20:19:01.000Z"
-        },
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/doe-selects-brookfield-and-nextera-for-100b-kentucky-ai-data-center-project/",
-          "sourceId": "hpcwire.com",
-          "publishedAt": "2026-07-29T18:46:09.000Z"
+          "name": "Canary Media",
+          "url": "https://www.canarymedia.com/articles/batteries/eolian-build-pjm-biggest-battery-ai-ohio",
+          "sourceId": "canarymedia.com",
+          "publishedAt": "2026-07-29T20:30:00.000Z"
         }
       ],
       "wechat": false,
@@ -186,19 +187,33 @@
       "research": false
     },
     {
-      "id": "evt_b1bdebeec806",
-      "title": "为东帝汶首个太阳能储能项目获得融资",
-      "originalTitle": "Financing secured for Timor-Leste’s first solar-storage project",
-      "url": "https://www.pv-magazine.com/2026/07/29/financing-secured-for-timor-lestes-first-solar-storage-project/",
-      "summary": "The Asian Development Bank, World Bank and investors from Canada and Japan have partnered on a $85.7 million financing package for Timor-Le…",
-      "whyItMatters": "光伏与风电；关联 First Solar；地区 加拿大；媒体 pv magazine",
+      "id": "evt_c696cea177bc",
+      "title": "塞尔维亚在H1新增61兆瓦太阳能",
+      "originalTitle": "Serbia adds 61 MW of solar in H1",
+      "url": "https://www.pv-magazine.com/2026/07/29/serbia-adds-61-mw-of-solar-in-h1/",
+      "summary": "After the first six months of the year, Serbia’s solar capacity reached around 379 MW. While the country’s green energy market has been imp…",
+      "whyItMatters": "光伏与风电；关键数字 61MW、61兆瓦、379MW；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "加拿大",
-      "entities": [
-        "First Solar"
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Serbia adds",
+          "value": 61,
+          "unit": "MW"
+        },
+        {
+          "label": "亚在H1新增",
+          "value": 61,
+          "unit": "兆瓦"
+        },
+        {
+          "label": "capacity reached around",
+          "value": 379,
+          "unit": "MW"
+        }
       ],
-      "metrics": [],
       "impact": "unknown",
       "importance": 4,
       "source": {
@@ -207,8 +222,8 @@
         "isPrimary": false,
         "id": "pv-magazine.com"
       },
-      "independentSourceCount": 3,
-      "publishedAt": "2026-07-29T09:30:00.000Z",
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-29T11:30:00.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [
         {
@@ -218,40 +233,16 @@
           "publishedAt": "2026-07-30T02:19:06.000Z"
         },
         {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
-          "sourceId": "electrek.co",
-          "publishedAt": "2026-07-29T22:03:08.000Z"
+          "name": "CleanTechnica",
+          "url": "https://cleantechnica.com/2026/07/29/the-50-states-of-solar-report-q2-2026/",
+          "sourceId": "cleantechnica.com",
+          "publishedAt": "2026-07-30T00:45:07.000Z"
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/29/cab-solar-highlights-solar-cable-hanger-solutions-for-agricultural-projects/",
+          "url": "https://www.pv-magazine.com/2026/07/29/chinas-solar-market-heads-for-first-annual-contraction-since-2019/",
           "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-29T14:30:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/29/fcc-bans-foreign-produced-solar-inverters-grid-lockout-begins-today/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-29T12:00:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/29/serbia-adds-61-mw-of-solar-in-h1/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-29T11:30:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/29/fraunhofer-ise-unveils-propane-heat-pump-concepts-for-multi-family-buildings/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-29T11:00:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/29/why-consumers-are-choosing-solar-over-fossil-fuels/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-29T10:30:00.000Z"
+          "publishedAt": "2026-07-29T14:35:00.000Z"
         }
       ],
       "wechat": false,
@@ -288,47 +279,141 @@
       "independentSourceCount": 1,
       "publishedAt": "2026-07-29T19:41:06.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
-      "relatedSources": [
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/eliyan-secures-145m-to-expand-ai-optical-interconnect-platform/",
-          "sourceId": "hpcwire.com",
-          "publishedAt": "2026-07-29T20:04:43.000Z"
-        }
-      ],
+      "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_38201b999385",
-      "title": "《太阳能50州》报告— 2026年第二季度",
-      "originalTitle": "“The 50 States of Solar” Report — Q2 2026",
-      "url": "https://cleantechnica.com/2026/07/29/the-50-states-of-solar-report-q2-2026/",
-      "summary": "The Q2 2026 edition of “The 50 States of Solar” report finds that 45 states, plus the District of Columbia and Puerto Rico, took some type…",
-      "whyItMatters": "光伏与风电；关键数字 2026w；媒体 CleanTechnica",
-      "topic": "solar-wind",
+      "id": "evt_9f082c22f01f",
+      "title": "美国能源部考虑改变拜登时代的变压器规则，引发公用事业问题",
+      "originalTitle": "DOE mulls changes to Biden-era transformer rule, raising utility concerns",
+      "url": "https://www.utilitydive.com/news/doe-mulls-changes-to-biden-era-transformer-rule-raising-utility-concerns/826440/",
+      "summary": "Utility associations supported the 2024 efficiency requirements for distribution transformers and oppose their repeal. The rule may threate…",
+      "whyItMatters": "固态变压器（SST）；关联 DOE、美国能源部；地区 美国；媒体 Utility Dive",
+      "topic": "sst",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
+      "entities": [
+        "DOE",
+        "美国能源部"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Utility Dive",
+        "type": "media",
+        "isPrimary": false,
+        "id": "utilitydive.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-29T10:40:40.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b4f5d9ea74c9",
+      "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
+      "originalTitle": "Quinbrook submits 520MW Flat Rock BESS in Australia’s ACT to EPBC Act",
+      "url": "https://www.energy-storage.news/quinbrook-submits-520mw-flat-rock-bess-in-australias-act-to-epbc-act/",
+      "summary": "Quinbrook Infrastructure Partners has submitted a 520MW standalone BESS in the ACT to Australia's EPBC Act.",
+      "whyItMatters": "储能；关键数字 520MW；地区 澳大利亚；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "澳大利亚",
       "entities": [],
       "metrics": [
         {
-          "label": "action during Q2",
-          "value": 2026,
-          "unit": "w"
+          "label": "Quinbrook submits",
+          "value": 520,
+          "unit": "MW"
         }
       ],
       "impact": "unknown",
       "importance": 3.5,
       "source": {
-        "name": "CleanTechnica",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "cleantechnica.com"
+        "id": "energy-storage.news"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-30T00:45:07.000Z",
+      "publishedAt": "2026-07-30T05:17:40.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_9baba95e713e",
+      "title": "Eliyan获得1.45亿美元$以扩展AI光纤互连平台",
+      "originalTitle": "Eliyan Secures $145M to Expand AI Optical Interconnect Platform",
+      "url": "https://www.hpcwire.com/off-the-wire/eliyan-secures-145m-to-expand-ai-optical-interconnect-platform/",
+      "summary": "SANTA CLARA, Calif., July 29, 2026 — Eliyan Corporation, a leader in foundational connectivity technologies enabling next-generation AI com…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 1.45亿美元；媒体 HPCwire",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "iyan获得",
+          "value": 1.45,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false,
+        "id": "hpcwire.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-29T20:04:43.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_f5dd6becf11b",
+      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
+      "originalTitle": "DOE Selects Brookfield and NextEra for $100B Kentucky AI Data Center Project",
+      "url": "https://www.hpcwire.com/off-the-wire/doe-selects-brookfield-and-nextera-for-100b-kentucky-ai-data-center-project/",
+      "summary": "WASHINGTON, July 29, 2026 — The U.S. Department of Energy (DOE) today announced a partnership with Brookfield, NextEra Energy, Big Rivers E…",
+      "whyItMatters": "AIDC 项目与区域布局；关联 NextEra、NextEra Energy、DOE；地区 美国；媒体 HPCwire",
+      "topic": "aidc-project",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "NextEra",
+        "NextEra Energy",
+        "DOE"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false,
+        "id": "hpcwire.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-29T18:46:09.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/data-centers/teacher-arrested-for-clapping-in-support-of-opposition-at-an-ai-data-center-meeting-gigawatt-scale-project-gets-approved-anyway-despite-community-resistance",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-07-29T13:06:16.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -360,6 +445,44 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-07-29T16:40:53.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_8a0b414bc6e9",
+      "title": "佐治亚电力在穆迪空军基地旁边完成198MWh BESS的建设",
+      "originalTitle": "Georgia Power completes construction of 198MWh BESS next to Moody Air Force Base",
+      "url": "https://www.energy-storage.news/georgia-power-completes-construction-of-198mwh-bess-next-to-moody-air-force-base/",
+      "summary": "Utility Georgia Power has completed construction of the 49.5MW/198MWh Moody Battery Facility, located outside of Valdosta, Georgia, US.",
+      "whyItMatters": "储能；关键数字 198MWh、49.5MW；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "completes construction of",
+          "value": 198,
+          "unit": "MWh"
+        },
+        {
+          "label": "construction of the",
+          "value": 49.5,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false,
+        "id": "energy-storage.news"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-29T12:52:29.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,
@@ -431,35 +554,113 @@
       "research": false
     },
     {
-      "id": "evt_7f56840ee3f0",
-      "title": "测试笔记本电脑的电池和交流电源—比较英特尔、高通、苹果和AMD",
-      "originalTitle": " Testing laptops on battery and AC power — Comparing Intel, Qualcomm, Apple, and AMD ",
-      "url": "https://www.tomshardware.com/laptops/testing-laptops-on-battery-life-and-ac-power-comparing-intel-qualcomm-apple-and-amd",
-      "summary": "We tested laptops with processors from Intel, AMD, Qualcomm, and Apple to see the differences in how they perform on and off the charger.",
-      "whyItMatters": "其他能源动态；关联 Apple、苹果、Intel；媒体 Tom's Hardware",
-      "topic": "other-energy",
+      "id": "evt_d23cdc276c88",
+      "title": "美国禁止国外生产的太阳能逆变器",
+      "originalTitle": "US bans foreign-produced solar inverters",
+      "url": "https://www.pv-magazine.com/2026/07/29/fcc-bans-foreign-produced-solar-inverters-grid-lockout-begins-today/",
+      "summary": "In the United States, the Federal Communications Commission Public Safety and Homeland Security Bureau has added foreign-produced power inv…",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 pv magazine",
+      "topic": "solar-wind",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-29T12:00:00.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [
+        {
+          "name": "Canary Media",
+          "url": "https://www.canarymedia.com/articles/corporate-procurement/trump-admin-bans-new-foreign-inverters",
+          "sourceId": "canarymedia.com",
+          "publishedAt": "2026-07-29T21:00:00.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b169205cb30c",
+      "title": "阿贡黑客马拉松帮助研究人员加速极光的科学发现",
+      "originalTitle": "Argonne Hackathon Helps Researchers Accelerate Scientific Discovery on Aurora",
+      "url": "https://www.hpcwire.com/off-the-wire/argonne-hackathon-helps-researchers-accelerate-scientific-discovery-on-aurora/",
+      "summary": "July 29, 2026 — The Argonne Leadership Computing Facility (ALCF) recently hosted its annual hackathon, bringing together researchers and de…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 DOE；地区 美国；媒体 HPCwire",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "美国",
       "entities": [
-        "Apple",
-        "苹果",
-        "Intel",
-        "英特尔",
-        "AMD"
+        "DOE"
       ],
       "metrics": [],
       "impact": "unknown",
       "importance": 3,
       "source": {
-        "name": "Tom's Hardware",
+        "name": "HPCwire",
         "type": "media",
         "isPrimary": false,
-        "id": "tomshardware.com"
+        "id": "hpcwire.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T13:07:18.000Z",
+      "publishedAt": "2026-07-29T20:19:01.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b1bdebeec806",
+      "title": "为东帝汶首个太阳能储能项目获得融资",
+      "originalTitle": "Financing secured for Timor-Leste’s first solar-storage project",
+      "url": "https://www.pv-magazine.com/2026/07/29/financing-secured-for-timor-lestes-first-solar-storage-project/",
+      "summary": "The Asian Development Bank, World Bank and investors from Canada and Japan have partnered on a $85.7 million financing package for Timor-Le…",
+      "whyItMatters": "光伏与风电；关联 First Solar；地区 加拿大；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "加拿大",
+      "entities": [
+        "First Solar"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-29T09:30:00.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/07/29/cab-solar-highlights-solar-cable-hanger-solutions-for-agricultural-projects/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-07-29T14:30:00.000Z"
+        },
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/07/29/why-consumers-are-choosing-solar-over-fossil-fuels/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-07-29T10:30:00.000Z"
+        },
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/07/29/bhutan-tenders-solar-systems-for-three-schools/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-07-29T08:40:00.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -599,6 +800,33 @@
       "research": false
     },
     {
+      "id": "evt_ac632c0bdf05",
+      "title": "特朗普联邦调查局利用太阳能审查批准了公共土地上的第一个人工智能数据中心",
+      "originalTitle": "Trump feds use a solar review to approve the first AI data center on public land",
+      "url": "https://electrek.co/2026/07/29/trump-feds-solar-review-ai-data-center-public-land-boulder-city-nevada/",
+      "summary": "Apparently, a 19-megawatt (MW) solar farm and a 167-MW AI data center are “substantially the same” – at least according to the Trump admini…",
+      "whyItMatters": "光伏与风电；媒体 Electrek",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false,
+        "id": "electrek.co"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-29T22:03:08.000Z",
+      "discoveredAt": "2026-07-30T06:21:07.937Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
       "id": "evt_463f1c86cccc",
       "title": "预览FMS 2026 ：企业内存、CXL和人工智能时代存储的下一个前沿",
       "originalTitle": "Previewing FMS 2026: The Next Frontier of Enterprise Memory, CXL, and AI-Era Storage",
@@ -620,60 +848,6 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-07-29T21:00:17.000Z",
-      "discoveredAt": "2026-07-30T06:21:07.937Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_2e407bae6f95",
-      "title": "特朗普管理员禁止“新”外国制造的逆变器。这是什么意思？",
-      "originalTitle": "Trump admin bans ‘new’ foreign-made inverters. What does that mean?",
-      "url": "https://www.canarymedia.com/articles/corporate-procurement/trump-admin-bans-new-foreign-inverters",
-      "summary": "Citing national security concerns, the Trump administration has banned the import and domestic use of new power inverters made outside the…",
-      "whyItMatters": "光伏与风电；地区 美国；媒体 Canary Media",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "美国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": false,
-        "id": "canarymedia.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T21:00:00.000Z",
-      "discoveredAt": "2026-07-30T06:21:07.937Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_688d591f3464",
-      "title": "密西西比河以东最大的电池将有助于为人工智能综合体供电",
-      "originalTitle": "Biggest battery east of the Mississippi will help power AI complex",
-      "url": "https://www.canarymedia.com/articles/batteries/eolian-build-pjm-biggest-battery-ai-ohio",
-      "summary": "Just northeast of Columbus, Ohio, the leafy Main Street of New Albany gives way to lush green fields and agrarian ponds — but soon the coun…",
-      "whyItMatters": "储能；媒体 Canary Media",
-      "topic": "energy-storage",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Canary Media",
-        "type": "media",
-        "isPrimary": false,
-        "id": "canarymedia.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T20:30:00.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,
@@ -734,15 +908,15 @@
       "research": false
     },
     {
-      "id": "evt_68af745cefed",
-      "title": "中国太阳能市场自2019年以来首次出现年度收缩",
-      "originalTitle": "China’s solar market heads for first annual contraction since 2019",
-      "url": "https://www.pv-magazine.com/2026/07/29/chinas-solar-market-heads-for-first-annual-contraction-since-2019/",
-      "summary": "The China Photovoltaic Industry Association says domestic installations are returning to more sustainable levels but expects both China’s m…",
-      "whyItMatters": "光伏与风电；地区 中国；媒体 pv magazine",
+      "id": "evt_1d29d7dfe488",
+      "title": "Fraunhofer ISE推出多户住宅用丙烷热泵概念",
+      "originalTitle": "Fraunhofer ISE unveils propane heat pump concepts for multi-family buildings",
+      "url": "https://www.pv-magazine.com/2026/07/29/fraunhofer-ise-unveils-propane-heat-pump-concepts-for-multi-family-buildings/",
+      "summary": "Fraunhofer researchers developed several standardized propane heat pump concepts for retrofitting multi-family buildings after finding that…",
+      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "中国",
+      "region": "全球",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -754,34 +928,34 @@
         "id": "pv-magazine.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T14:35:00.000Z",
+      "publishedAt": "2026-07-29T11:00:00.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_55043954f4ee",
-      "title": "教师因在人工智能数据中心会议上鼓掌支持反对而被捕—尽管社区抵制，千兆瓦级项目仍获得批准",
-      "originalTitle": " Teacher arrested for clapping in support of opposition at an AI data center meeting — gigawatt-scale project gets approved anyway despite community resistance ",
-      "url": "https://www.tomshardware.com/tech-industry/data-centers/teacher-arrested-for-clapping-in-support-of-opposition-at-an-ai-data-center-meeting-gigawatt-scale-project-gets-approved-anyway-despite-community-resistance",
-      "summary": "A Physics teacher was arrested for clapping multiple times during a public hearing to rezone land for a proposed gigawatt-scale data center…",
-      "whyItMatters": "AIDC 项目与区域布局；媒体 Tom's Hardware",
-      "topic": "aidc-project",
+      "id": "evt_90cc8fc875fa",
+      "title": "“极其重要的存储市场” ：美国BESS集成商FlexGen开始在欧洲开展业务",
+      "originalTitle": "‘Tremendously important market for storage’: US BESS integrator FlexGen on its start of European operations",
+      "url": "https://www.energy-storage.news/tremendously-important-market-for-storage-us-bess-integrator-flexgen-on-its-start-of-european-operations/",
+      "summary": "ESN Premium speaks with Jason Abiecunas and Mike Wallace of FlexGen, one of a growing number of US BESS companies establishing operations i…",
+      "whyItMatters": "储能；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "未知",
+      "region": "美国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "Tom's Hardware",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "tomshardware.com"
+        "id": "energy-storage.news"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T13:06:16.000Z",
+      "publishedAt": "2026-07-29T10:56:03.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,
@@ -896,60 +1070,6 @@
       "research": false
     },
     {
-      "id": "evt_5f42c3c32bf0",
-      "title": "在50个任务（ NMIMS、IIT Roorkee、BITS Pilani ）的Verilog RTL生成上对开源LLM进行基准测试",
-      "originalTitle": "Benchmarking Open-Source LLMs on Verilog RTL Generation Across 50 Tasks (NMIMS, IIT Roorkee, BITS Pilani)",
-      "url": "https://semiengineering.com/benchmarking-open-source-llms-on-verilog-rtl-generation-across-50-tasks-nmims-iit-roorkee-bits-pilani/",
-      "summary": "Researchers from NMIMS Hyderabad, IIT Roorkee, and BITS Pilani published a technical paper titled “Benchmarking LLMs for Verilog Design Flo…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "SemiEngineering",
-        "type": "media",
-        "isPrimary": false,
-        "id": "semiengineering.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T22:12:20.000Z",
-      "discoveredAt": "2026-07-30T06:21:07.937Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_4dfd68276a04",
-      "title": "中国在互联和自动驾驶新能源汽车方面发出强有力的信号",
-      "originalTitle": "China Gives Strong Signal on Connected & Autonomous New Energy Vehicles",
-      "url": "https://cleantechnica.com/2026/07/29/china-gives-strong-signal-on-connected-autonomous-new-energy-vehicles/",
-      "summary": "It should come as a surprise to no one that the Chinese government is intent on leading continuing to lead on connected vehicles and electr…",
-      "whyItMatters": "其他能源动态；地区 中国；媒体 CleanTechnica",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "中国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false,
-        "id": "cleantechnica.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T20:39:33.000Z",
-      "discoveredAt": "2026-07-30T06:21:07.937Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
       "id": "evt_6291ac467cb7",
       "title": "法拉利$ 640K的Luce EV在2026年售罄：约500辆",
       "originalTitle": "Ferrari’s $640K Luce EV sells out 2026 allocation: ~500 units",
@@ -977,15 +1097,15 @@
       "research": false
     },
     {
-      "id": "evt_273eaf90b89c",
-      "title": "起亚在美国上市前在墨西哥开放EV3预订",
-      "originalTitle": "Kia opens EV3 pre-orders in Mexico ahead of US launch",
-      "url": "https://electrek.co/2026/07/29/kia-opens-ev3-pre-orders-mexico-us-launch/",
-      "summary": "Kia opened pre-orders for the highly anticipated EV3 in Mexico, where the electric SUV will be built and shipped to the US later this year.",
-      "whyItMatters": "其他能源动态；地区 美国；媒体 Electrek",
-      "topic": "other-energy",
+      "id": "evt_33874721251b",
+      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
+      "originalTitle": "Two solid-state EV battery leaders are joining forces to scale the ‘breakthrough’ tech",
+      "url": "https://electrek.co/2026/07/29/solid-state-ev-battery-leaders-team-up/",
+      "summary": "SK On and Factorial Energy announced a new alliance that will focus on bringing solid-state batteries to the masses.",
+      "whyItMatters": "储能；媒体 Electrek",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "美国",
+      "region": "未知",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -997,34 +1117,34 @@
         "id": "electrek.co"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T15:45:30.000Z",
+      "publishedAt": "2026-07-29T16:51:40.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_cbe3b05146f6",
-      "title": "不丹为三所学校招标太阳能系统",
-      "originalTitle": "Bhutan tenders solar systems for three schools",
-      "url": "https://www.pv-magazine.com/2026/07/29/bhutan-tenders-solar-systems-for-three-schools/",
-      "summary": "A tender is open in Bhutan for three rooftop solar systems to serve three separate schools. The deadline for applications is August 24. The…",
-      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_cc615b10fd30",
+      "title": "Huffy的儿童电动自行车非常适合踏板辅助骑行",
+      "originalTitle": "Huffy’s kids’ e-bike makes a compelling case for pedal-assisted riding",
+      "url": "https://electrek.co/2026/07/29/huffys-kids-e-bike-makes-a-compelling-case-for-pedal-assisted-riding/",
+      "summary": "For many parents, the idea of buying an electric bike for their kid might initially seem unnecessary. After all, didn’t we all grow up peda…",
+      "whyItMatters": "其他能源动态；媒体 Electrek",
+      "topic": "other-energy",
       "tags": [],
-      "region": "全球",
+      "region": "未知",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "pv magazine",
+        "name": "Electrek",
         "type": "media",
         "isPrimary": false,
-        "id": "pv-magazine.com"
+        "id": "electrek.co"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-29T08:40:00.000Z",
+      "publishedAt": "2026-07-29T14:45:00.000Z",
       "discoveredAt": "2026-07-30T06:21:07.937Z",
       "relatedSources": [],
       "wechat": false,

@@ -7,56 +7,38 @@
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 71,
-    "eventsPublished": 41
+    "eventsPublished": 50
   },
   "items": [
     {
-      "id": "evt_ae42bb335b3c",
-      "title": "澳大利亚偏远矿业公司转向可再生混合动力系统",
-      "originalTitle": "Australia’s remote mining companies turn to renewable hybrid power systems",
-      "url": "https://www.pv-magazine.com/2026/08/04/remote-operations-emerge-as-proving-ground-for-high-renewables-future/",
-      "summary": "Australia’s remote mining operations are emerging as the proving ground for high-renewable energy systems with operational data showing sev…",
-      "whyItMatters": "电网与并网；关键数字 80%；地区 澳大利亚；媒体 pv magazine",
-      "topic": "grid",
+      "id": "evt_c797cba4897f",
+      "title": "随着人工智能对内存的需求增加，存储也随之增加",
+      "originalTitle": "As AI Increases Demands on Memory, Storage Steps Up",
+      "url": "https://blogs.nvidia.com/blog/ai-storage-fms/",
+      "summary": "Surging AI demands are driving the need for massive datasets and context windows that burst past the confines of system memory. But rising…",
+      "whyItMatters": "芯片、服务器与算力基础设施；一手来源 NVIDIA Blog",
+      "topic": "chips-compute",
       "tags": [],
-      "region": "澳大利亚",
+      "region": "未知",
       "entities": [],
-      "metrics": [
-        {
-          "label": "penetration rates above",
-          "value": 80,
-          "unit": "%"
-        }
-      ],
+      "metrics": [],
       "impact": "unknown",
       "importance": 5,
       "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false,
-        "id": "pv-magazine.com"
+        "name": "NVIDIA Blog",
+        "type": "primary",
+        "isPrimary": true,
+        "id": "blogs.nvidia.com"
       },
-      "independentSourceCount": 7,
-      "publishedAt": "2026-08-04T10:30:00.000Z",
+      "independentSourceCount": 4,
+      "publishedAt": "2026-08-04T15:00:47.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [
-        {
-          "name": "CleanTechnica",
-          "url": "https://cleantechnica.com/2026/08/04/energy-discovery-awaits-within-the-spin-of-atoms/",
-          "sourceId": "cleantechnica.com",
-          "publishedAt": "2026-08-04T21:47:04.000Z"
-        },
         {
           "name": "SemiWiki",
           "url": "https://semiwiki.com/events/371719-dac-2026-accellera-luncheon-panel-on-embracing-ai-for-advanced-design-and-verification/",
           "sourceId": "semiwiki.com",
           "publishedAt": "2026-08-04T21:00:22.000Z"
-        },
-        {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/nist-joins-does-genesis-mission-to-accelerate-ai-innovation/",
-          "sourceId": "hpcwire.com",
-          "publishedAt": "2026-08-04T19:13:10.000Z"
         },
         {
           "name": "HPCwire",
@@ -71,58 +53,10 @@
           "publishedAt": "2026-08-04T17:25:08.000Z"
         },
         {
-          "name": "HPCwire",
-          "url": "https://www.hpcwire.com/off-the-wire/marvell-advances-ai-memory-infrastructure-portfolio-to-accelerate-agentic-ai-inference/",
-          "sourceId": "hpcwire.com",
-          "publishedAt": "2026-08-04T17:14:13.000Z"
-        },
-        {
-          "name": "SemiWiki",
-          "url": "https://semiwiki.com/ip/rambus/370722-how-socamm2-could-reshape-server-memory-for-ai/",
-          "sourceId": "semiwiki.com",
-          "publishedAt": "2026-08-04T13:00:24.000Z"
-        },
-        {
-          "name": "SemiEngineering",
-          "url": "https://semiengineering.com/invest-in-junior-engineers/",
-          "sourceId": "semiengineering.com",
-          "publishedAt": "2026-08-04T07:05:09.000Z"
-        },
-        {
-          "name": "SemiEngineering",
-          "url": "https://semiengineering.com/why-simulation-speed-is-holding-chiplets-back/",
-          "sourceId": "semiengineering.com",
-          "publishedAt": "2026-08-04T07:02:11.000Z"
-        },
-        {
-          "name": "SemiEngineering",
-          "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-aug-4/",
-          "sourceId": "semiengineering.com",
-          "publishedAt": "2026-08-04T07:01:23.000Z"
-        },
-        {
           "name": "SemiEngineering",
           "url": "https://semiengineering.com/from-blueprint-to-build-engineering-the-worlds-largest-ai-chips/",
           "sourceId": "semiengineering.com",
           "publishedAt": "2026-08-04T07:01:18.000Z"
-        },
-        {
-          "name": "量子位",
-          "url": "https://www.qbitai.com/2026/08/465732.html",
-          "sourceId": "qbitai.com",
-          "publishedAt": "2026-08-04T01:27:41.000Z"
-        },
-        {
-          "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/gpus/more-gpu-price-hikes-loom-for-asia-as-japanese-distributor-warns-of-new-increases-cfd-sales-signals-20-percent-to-40-percent-higher-prices-on-gigabyte-graphics-card-orders-starting-this-month",
-          "sourceId": "tomshardware.com",
-          "publishedAt": "2026-08-04T17:38:15.000Z"
-        },
-        {
-          "name": "SemiWiki",
-          "url": "https://semiwiki.com/prototyping/s2c-eda/371771-shift-left-with-s2c-prodigy-from-rtl-verification-to-real-world-software-validation/",
-          "sourceId": "semiwiki.com",
-          "publishedAt": "2026-08-04T17:00:02.000Z"
         }
       ],
       "wechat": false,
@@ -147,17 +81,113 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4.5,
+      "importance": 5,
       "source": {
         "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
         "id": "energy-storage.news"
       },
-      "independentSourceCount": 1,
+      "independentSourceCount": 2,
       "publishedAt": "2026-08-04T13:50:09.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [
+        {
+          "name": "CleanTechnica",
+          "url": "https://cleantechnica.com/2026/08/04/south-african-energy-tech-company-plentify-partners-with-deye-to-build-africas-largest-residential-virtual-power-plant/",
+          "sourceId": "cleantechnica.com",
+          "publishedAt": "2026-08-04T18:05:13.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_be59365f6fda",
+      "title": "赛格威Max G3 Plus电动滑板车350 $折扣预订优惠、Beatbot iSkim太阳能泳池撇水器319 $、Jackery 72小时闪购、工具等",
+      "originalTitle": "Segway Max G3 Plus e-scooter $350 off pre-order deal, Beatbot iSkim solar pool skimmer $319, Jackery 72-hour flash sale, tools, more",
+      "url": "https://electrek.co/2026/08/04/segway-max-g3-plus-e-scooter-pre-order-beatbot-iskim-solar-pool-skimmer-jackery-tools-more/",
+      "summary": "Leading today’s Green Deals is an exciting $350 off pre-order launch deal on Segway’s newest Max G3 Plus Electric Scooter that is absolutel…",
+      "whyItMatters": "其他能源动态；关键数字 3584W、500W；关联 Tesla；媒体 Electrek",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "Tesla"
+      ],
+      "metrics": [
+        {
+          "label": "bundles, like the",
+          "value": 3584,
+          "unit": "W"
+        },
+        {
+          "label": "Station and a",
+          "value": 500,
+          "unit": "W"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 5,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false,
+        "id": "electrek.co"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T18:00:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_1876e6ec057f",
+      "title": "谷歌，俄克拉荷马州RWE INK 155MW太阳能光伏PPA",
+      "originalTitle": "Google, RWE ink 155MW solar PV PPA in Oklahoma",
+      "url": "https://www.pv-tech.org/google-rwe-ink-155mw-solar-pv-ppa-in-oklahoma/",
+      "summary": "Solar developer RWE has signed a power purchase agreement (PPA) with tech giant Google to power data centre operations in Oklahoma, US.",
+      "whyItMatters": "光伏与风电；关键数字 155MW；关联 Google、RWE；地区 美国；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "Google",
+        "RWE"
+      ],
+      "metrics": [
+        {
+          "label": "Google, RWE ink",
+          "value": 155,
+          "unit": "MW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-tech.org"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-08-04T11:27:53.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/04/romanias-solar-capacity-exceeds-8-5-gw/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-04T11:45:00.000Z"
+        },
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/new-zealand-government-finds-solar-installation-process-more-complicated-than-it-needs-to-be/",
+          "sourceId": "pv-tech.org",
+          "publishedAt": "2026-08-04T03:41:54.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -228,6 +258,63 @@
       "research": false
     },
     {
+      "id": "evt_5a34f170e2e1",
+      "title": "2025年，分布式太阳能供应了巴基斯坦27%的电力",
+      "originalTitle": "Distributed solar supplied 27% of Pakistan’s electricity in 2025",
+      "url": "https://www.pv-magazine.com/2026/08/04/distributed-solar-supplied-27-of-pakistans-electricity-in-2025/",
+      "summary": "Analysis by the Pakistan Solar Association finds roughly 51 TWh of generation that never appears on grid-side data, as rooftop and off-grid…",
+      "whyItMatters": "光伏与风电；关键数字 27%、51TWh；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "Distributed solar supplied",
+          "value": 27,
+          "unit": "%"
+        },
+        {
+          "label": "Association finds roughly",
+          "value": 51,
+          "unit": "TWh"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-08-04T11:00:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/rooftop-solar-deployment-drive-savings-bangladesh-according-ieefa/",
+          "sourceId": "pv-tech.org",
+          "publishedAt": "2026-08-04T13:43:55.000Z"
+        },
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/04/china-draws-a-line-under-the-solar-price-war/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-04T12:30:00.000Z"
+        },
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/eindhoven-university-technology-unveils-solar-powered-ambulance-prototype/",
+          "sourceId": "pv-tech.org",
+          "publishedAt": "2026-08-04T15:35:11.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
       "id": "evt_cfc260d3c786",
       "title": "南方公司收缩大负荷上升至17吉瓦",
       "originalTitle": "Southern Co. contracted large load rises to 17 GW",
@@ -273,38 +360,42 @@
       "research": false
     },
     {
-      "id": "evt_1876e6ec057f",
-      "title": "谷歌，俄克拉荷马州RWE INK 155MW太阳能光伏PPA",
-      "originalTitle": "Google, RWE ink 155MW solar PV PPA in Oklahoma",
-      "url": "https://www.pv-tech.org/google-rwe-ink-155mw-solar-pv-ppa-in-oklahoma/",
-      "summary": "Solar developer RWE has signed a power purchase agreement (PPA) with tech giant Google to power data centre operations in Oklahoma, US.",
-      "whyItMatters": "光伏与风电；关键数字 155MW；关联 Google、RWE；地区 美国；媒体 PV-Tech",
+      "id": "evt_25e7f6277d1f",
+      "title": "Habitat Energy被任命为Octopus Australia优化直流耦合614MWh太阳能+储能产品组合",
+      "originalTitle": "Habitat Energy appointed to optimise DC-coupled 614MWh solar-plus-storage portfolio for Octopus Australia",
+      "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/",
+      "summary": "Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites.",
+      "whyItMatters": "光伏与风电；关键数字 614MWh；地区 澳大利亚；媒体 Energy Storage News",
       "topic": "solar-wind",
       "tags": [],
-      "region": "美国",
-      "entities": [
-        "Google",
-        "RWE"
-      ],
+      "region": "澳大利亚",
+      "entities": [],
       "metrics": [
         {
-          "label": "Google, RWE ink",
-          "value": 155,
-          "unit": "MW"
+          "label": "to optimise DC-coupled",
+          "value": 614,
+          "unit": "MWh"
         }
       ],
       "impact": "unknown",
       "importance": 4,
       "source": {
-        "name": "PV-Tech",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "pv-tech.org"
+        "id": "energy-storage.news"
       },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T11:27:53.000Z",
+      "independentSourceCount": 2,
+      "publishedAt": "2026-08-04T03:28:43.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
+      "relatedSources": [
+        {
+          "name": "PV-Tech",
+          "url": "https://www.pv-tech.org/scaling-solar-inspection-workflows-must-evolve-new-generation-energy-infrastructure/",
+          "sourceId": "pv-tech.org",
+          "publishedAt": "2026-08-04T08:11:54.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -332,93 +423,6 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-08-04T04:16:10.000Z",
-      "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_a4f6d631af43",
-      "title": "南非能源技术公司Plentify与Deye合作建造非洲最大的住宅虚拟发电厂",
-      "originalTitle": "South African Energy Tech Company Plentify Partners With Deye To Build Africa’s Largest Residential Virtual Power Plant",
-      "url": "https://cleantechnica.com/2026/08/04/south-african-energy-tech-company-plentify-partners-with-deye-to-build-africas-largest-residential-virtual-power-plant/",
-      "summary": "South Africa went through a rough patch a couple of years ago when the country’s available electricity generation capacity was not sufficie…",
-      "whyItMatters": "能量管理系统（EMS）；地区 非洲；媒体 CleanTechnica",
-      "topic": "ems",
-      "tags": [],
-      "region": "非洲",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "CleanTechnica",
-        "type": "media",
-        "isPrimary": false,
-        "id": "cleantechnica.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T18:05:13.000Z",
-      "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_c797cba4897f",
-      "title": "随着人工智能对内存的需求增加，存储也随之增加",
-      "originalTitle": "As AI Increases Demands on Memory, Storage Steps Up",
-      "url": "https://blogs.nvidia.com/blog/ai-storage-fms/",
-      "summary": "Surging AI demands are driving the need for massive datasets and context windows that burst past the confines of system memory. But rising…",
-      "whyItMatters": "芯片、服务器与算力基础设施；一手来源 NVIDIA Blog",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "NVIDIA Blog",
-        "type": "primary",
-        "isPrimary": true,
-        "id": "blogs.nvidia.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T15:00:47.000Z",
-      "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_d470f51b90d5",
-      "title": "根据IEEFA的数据，屋顶太阳能部署可以推动孟加拉国的节约",
-      "originalTitle": "Rooftop solar deployment could drive savings in Bangladesh, according to IEEFA",
-      "url": "https://www.pv-tech.org/rooftop-solar-deployment-drive-savings-bangladesh-according-ieefa/",
-      "summary": "More widespread deployment of rooftop solar PV projects in Bangladesh could save consumers up to US$0.061/kWh, according to IEEFA.",
-      "whyItMatters": "光伏与风电；关键数字 0.061$/kWh；媒体 PV-Tech",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "up to US",
-          "value": 0.061,
-          "unit": "$/kWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "PV-Tech",
-        "type": "media",
-        "isPrimary": false,
-        "id": "pv-tech.org"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T13:43:55.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -463,92 +467,6 @@
       "research": false
     },
     {
-      "id": "evt_fe72d42cc347",
-      "title": "罗马尼亚太阳能装机容量超过8.5吉瓦",
-      "originalTitle": "Romania’s solar capacity exceeds 8.5 GW",
-      "url": "https://www.pv-magazine.com/2026/08/04/romanias-solar-capacity-exceeds-8-5-gw/",
-      "summary": "Romania's solar market continues to grow with around 1.8 GW installed since the start of the year. The country appears on track to reach it…",
-      "whyItMatters": "光伏与风电；关键数字 8.5GW、8.5吉瓦、1.8GW；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "solar capacity exceeds",
-          "value": 8.5,
-          "unit": "GW"
-        },
-        {
-          "label": "装机容量超过",
-          "value": 8.5,
-          "unit": "吉瓦"
-        },
-        {
-          "label": "grow with around",
-          "value": 1.8,
-          "unit": "GW"
-        },
-        {
-          "label": "2030 target of",
-          "value": 10,
-          "unit": "GW"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false,
-        "id": "pv-magazine.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T11:45:00.000Z",
-      "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_5a34f170e2e1",
-      "title": "2025年，分布式太阳能供应了巴基斯坦27%的电力",
-      "originalTitle": "Distributed solar supplied 27% of Pakistan’s electricity in 2025",
-      "url": "https://www.pv-magazine.com/2026/08/04/distributed-solar-supplied-27-of-pakistans-electricity-in-2025/",
-      "summary": "Analysis by the Pakistan Solar Association finds roughly 51 TWh of generation that never appears on grid-side data, as rooftop and off-grid…",
-      "whyItMatters": "光伏与风电；关键数字 27%、51TWh；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [
-        {
-          "label": "Distributed solar supplied",
-          "value": 27,
-          "unit": "%"
-        },
-        {
-          "label": "Association finds roughly",
-          "value": 51,
-          "unit": "TWh"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 3.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false,
-        "id": "pv-magazine.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T11:00:00.000Z",
-      "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
       "id": "evt_08d20ba9a847",
       "title": "Prosalia和EDP在葡萄牙、西班牙将太阳能光伏/风能项目与电池相结合",
       "originalTitle": "Prosalia and EDP hybridise solar PV/wind projects with batteries in Portugal, Spain",
@@ -581,6 +499,39 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-08-04T10:56:28.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_ae42bb335b3c",
+      "title": "澳大利亚偏远矿业公司转向可再生混合动力系统",
+      "originalTitle": "Australia’s remote mining companies turn to renewable hybrid power systems",
+      "url": "https://www.pv-magazine.com/2026/08/04/remote-operations-emerge-as-proving-ground-for-high-renewables-future/",
+      "summary": "Australia’s remote mining operations are emerging as the proving ground for high-renewable energy systems with operational data showing sev…",
+      "whyItMatters": "电网与并网；关键数字 80%；地区 澳大利亚；媒体 pv magazine",
+      "topic": "grid",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "penetration rates above",
+          "value": 80,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T10:30:00.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -681,7 +632,14 @@
       "independentSourceCount": 1,
       "publishedAt": "2026-08-04T08:30:00.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
-      "relatedSources": [],
+      "relatedSources": [
+        {
+          "name": "pv magazine",
+          "url": "https://www.pv-magazine.com/2026/08/04/floating-pv-systems-may-face-lower-humidity-stress-than-ground-mounted-counterparts/",
+          "sourceId": "pv-magazine.com",
+          "publishedAt": "2026-08-04T08:00:00.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -724,33 +682,133 @@
       "research": false
     },
     {
-      "id": "evt_25e7f6277d1f",
-      "title": "Habitat Energy被任命为Octopus Australia优化直流耦合614MWh太阳能+储能产品组合",
-      "originalTitle": "Habitat Energy appointed to optimise DC-coupled 614MWh solar-plus-storage portfolio for Octopus Australia",
-      "url": "https://www.energy-storage.news/habitat-energy-appointed-to-optimise-dc-coupled-614mwh-solar-plus-storage-portfolio-for-octopus-australia/",
-      "summary": "Habitat Energy has been appointed by Octopus Australia to provide optimisation services for two DC-coupled solar-plus-storage sites.",
-      "whyItMatters": "光伏与风电；关键数字 614MWh；地区 澳大利亚；媒体 Energy Storage News",
-      "topic": "solar-wind",
+      "id": "evt_53719d23274b",
+      "title": "亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群",
+      "originalTitle": "亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群",
+      "url": "https://www.qbitai.com/2026/08/465732.html",
+      "summary": "出海AI，正被“三重算力锁链\"捆死",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 75%；媒体 量子位",
+      "topic": "chips-compute",
       "tags": [],
-      "region": "澳大利亚",
+      "region": "未知",
       "entities": [],
       "metrics": [
         {
-          "label": "to optimise DC-coupled",
-          "value": 614,
-          "unit": "MWh"
+          "label": "跨云架构砍掉",
+          "value": 75,
+          "unit": "%"
         }
       ],
       "impact": "unknown",
       "importance": 3.5,
       "source": {
-        "name": "Energy Storage News",
+        "name": "量子位",
         "type": "media",
         "isPrimary": false,
-        "id": "energy-storage.news"
+        "id": "qbitai.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T03:28:43.000Z",
+      "publishedAt": "2026-08-04T01:27:41.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_3e804c4244d0",
+      "title": "随着日本分销商警告新的增长，亚洲的GPU价格将进一步上涨—差价合约销售表明从本月开始， Gigabyte显卡订单的价格将上涨20 ％至40 ％",
+      "originalTitle": " More GPU price hikes loom for Asia as Japanese distributor warns of new increases — CFD Sales signals 20% to 40% higher prices on Gigabyte graphics card orders starting this month ",
+      "url": "https://www.tomshardware.com/pc-components/gpus/more-gpu-price-hikes-loom-for-asia-as-japanese-distributor-warns-of-new-increases-cfd-sales-signals-20-percent-to-40-percent-higher-prices-on-gigabyte-graphics-card-orders-starting-this-month",
+      "summary": "Japanese technology supplier and distributor confirms that the Gigabyte graphics card will cost between 20% and 40% more due to a new price…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 20%、40%；地区 日本；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "日本",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "CFD Sales signals",
+          "value": 20,
+          "unit": "%"
+        },
+        {
+          "label": "signals 20% to",
+          "value": 40,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false,
+        "id": "tomshardware.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T17:38:15.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_ffc241d6922c",
+      "title": "联想LOQ Essentials 15 Gen 11回顾：出色的显示屏与低功耗RTX 5060相得益彰",
+      "originalTitle": " Lenovo LOQ Essentials 15 Gen 11 Review: A good display meets a low-power RTX 5060 ",
+      "url": "https://www.tomshardware.com/laptops/gaming-laptops/lenovo-loq-essentials-15-gen-11-review",
+      "summary": "The Lenovo LOQ Essentials 15 Gen 11 pairs an RTX 5060, 144 Hz display, and excellent upgradeability with a comfortable keyboard, but its lo…",
+      "whyItMatters": "其他能源动态；关键数字 144Hz；媒体 Tom's Hardware",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "an RTX 5060,",
+          "value": 144,
+          "unit": "Hz"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false,
+        "id": "tomshardware.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T12:00:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_021b36c656b0",
+      "title": "NIST加入DOE的Genesis使命，加速人工智能创新",
+      "originalTitle": "NIST Joins DOE’s Genesis Mission to Accelerate AI Innovation",
+      "url": "https://www.hpcwire.com/off-the-wire/nist-joins-does-genesis-mission-to-accelerate-ai-innovation/",
+      "summary": "GAITHERSBURG, Md., Aug. 4, 2026 — The U.S. Department of Commerce’s National Institute of Standards and Technology (NIST) and the U.S. Depa…",
+      "whyItMatters": "其他能源动态；关联 DOE；地区 美国；媒体 HPCwire",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "美国",
+      "entities": [
+        "DOE"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 3,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false,
+        "id": "hpcwire.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T19:13:10.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -788,29 +846,27 @@
       "research": false
     },
     {
-      "id": "evt_bbc1173feda1",
-      "title": "埃因霍温理工大学推出太阳能救护车原型",
-      "originalTitle": "Eindhoven University of Technology unveils solar-powered ambulance prototype",
-      "url": "https://www.pv-tech.org/eindhoven-university-technology-unveils-solar-powered-ambulance-prototype/",
-      "summary": "The Eindhoven University of Technology announced 'Stella Juva', a prototype of the world's first solar-powered ambulance.",
-      "whyItMatters": "光伏与风电；关联 First Solar；地区 全球；媒体 PV-Tech",
-      "topic": "solar-wind",
+      "id": "evt_adb7c7ae838e",
+      "title": "在原子旋转中探索能量",
+      "originalTitle": "Energy Discovery Awaits Within the Spin of Atoms",
+      "url": "https://cleantechnica.com/2026/08/04/energy-discovery-awaits-within-the-spin-of-atoms/",
+      "summary": "National Laboratory of the Rockies Researchers Use Nuclear Magnetic Resonance To Advance Innovation in Batteries, Semiconductors, and Biopl…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 CleanTechnica",
+      "topic": "chips-compute",
       "tags": [],
-      "region": "全球",
-      "entities": [
-        "First Solar"
-      ],
+      "region": "未知",
+      "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 2.5,
       "source": {
-        "name": "PV-Tech",
+        "name": "CleanTechnica",
         "type": "media",
         "isPrimary": false,
-        "id": "pv-tech.org"
+        "id": "cleantechnica.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-08-04T15:35:11.000Z",
+      "publishedAt": "2026-08-04T21:47:04.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -838,6 +894,33 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-08-04T21:09:34.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_128c6a7fd6ad",
+      "title": "Marvell推进AI内存基础设施组合以加速Agentic AI推理",
+      "originalTitle": "Marvell Advances AI Memory Infrastructure Portfolio to Accelerate Agentic AI Inference",
+      "url": "https://www.hpcwire.com/off-the-wire/marvell-advances-ai-memory-infrastructure-portfolio-to-accelerate-agentic-ai-inference/",
+      "summary": "SANTA CLARA, Calif., Aug. 4, 2026 — Marvell Technology, Inc., a leader in data infrastructure semiconductor solutions, today announced new…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 HPCwire",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false,
+        "id": "hpcwire.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T17:14:13.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -1060,6 +1143,33 @@
       "research": false
     },
     {
+      "id": "evt_40c7e46c2573",
+      "title": "SOCAMM2如何为AI重塑服务器内存",
+      "originalTitle": "How SOCAMM2 Could Reshape Server Memory for AI",
+      "url": "https://semiwiki.com/ip/rambus/370722-how-socamm2-could-reshape-server-memory-for-ai/",
+      "summary": "As artificial intelligence systems become larger and more demanding, memory is becoming one of the most important constraints in server des…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiWiki",
+        "type": "media",
+        "isPrimary": false,
+        "id": "semiwiki.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T13:00:24.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
       "id": "evt_f137b5ff01af",
       "title": "赛格威全新MAX G3 Plus电动滑板车更进一步，动力更强，安全性更高",
       "originalTitle": "Segway’s new MAX G3 Plus electric scooter goes farther with more power and better safety",
@@ -1168,6 +1278,33 @@
       "research": false
     },
     {
+      "id": "evt_d06175e4a711",
+      "title": "研究人员设计了带有单个集成蒸发器的PVT热泵",
+      "originalTitle": "Researchers design PVT heat pump with single integrated evaporator",
+      "url": "https://www.pv-magazine.com/2026/08/04/researchers-design-pvt-heat-pump-with-single-integrated-evaporator/",
+      "summary": "The dual-source photovoltaic-thermal (PVT) heat pump combines solar and ambient-air heat collection in a single finned evaporator, eliminat…",
+      "whyItMatters": "光伏与风电；地区 全球；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "全球",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T10:00:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
       "id": "evt_66102efc9892",
       "title": "数据中心在威斯康星州州长竞选中占据中心位置",
       "originalTitle": "Data centers take center stage in Wisconsin governor’s race",
@@ -1216,6 +1353,114 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-08-04T07:30:00.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_8dcd7af9b9bb",
+      "title": "投资初级工程师",
+      "originalTitle": "Invest In Junior Engineers",
+      "url": "https://semiengineering.com/invest-in-junior-engineers/",
+      "summary": "Instead of working out how to replace junior engineers with AI, develop better ways to train and build fresh minds with new ideas. The post…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false,
+        "id": "semiengineering.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T07:05:09.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_8f3f9d8b2047",
+      "title": "为什么模拟速度会阻碍小芯片的发展",
+      "originalTitle": "Why Simulation Speed Is Holding Chiplets Back",
+      "url": "https://semiengineering.com/why-simulation-speed-is-holding-chiplets-back/",
+      "summary": "Toolchain capability is no longer the limiting factor in heterogeneous chiplet design. The bottleneck is the computational cost of multi-ph…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false,
+        "id": "semiengineering.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T07:02:11.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_5402513ee71a",
+      "title": "芯片行业技术论文综述： 8月4日",
+      "originalTitle": "Chip Industry Technical Paper Roundup: Aug. 4",
+      "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-aug-4/",
+      "summary": "Hybrid NAND flash-DRAM memory; neuromorphic many-core computing; modular HW-SW leakage verification; bridging p-type gap in oxide electroni…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiEngineering",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "SemiEngineering",
+        "type": "media",
+        "isPrimary": false,
+        "id": "semiengineering.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T07:01:23.000Z",
+      "discoveredAt": "2026-08-04T22:02:50.407Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_c4a3795b981b",
+      "title": "华信瞄准澳大利亚“缺失的中间环节” ，提供1亿澳元用于混合太阳能+储能项目（ AU $ 100 million for hybrid solar-plus-st",
+      "originalTitle": "CEFC targets Australia’s ‘missing middle’ with AU$100 million for hybrid solar-plus-storage projects",
+      "url": "https://www.pv-tech.org/cefc-targets-australias-missing-middle-with-au100-million-for-hybrid-solar-plus-storage-projects/",
+      "summary": "Australia's CEFC has committed AU$100 million (US$65.8 million) to a new programme targeting mid-scale hybrid solar-plus-storage projects.",
+      "whyItMatters": "光伏与风电；地区 澳大利亚；媒体 PV-Tech",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "澳大利亚",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "PV-Tech",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-tech.org"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-04T03:31:13.000Z",
       "discoveredAt": "2026-08-04T22:02:50.407Z",
       "relatedSources": [],
       "wechat": false,
@@ -1308,8 +1553,8 @@
       "originalTitle": "PJM “Hunger Games” Pits Energy Storage, Solar Against Natural Gas, Nuclear",
       "url": "https://cleantechnica.com/2026/08/04/pjm-capacity-715-projects-solar-energy-storage-gas/",
       "summary": "The sprawling PJM grid region is seeking more details on 715 new power plant proposals, with solar and energy storage leading by number tho…",
-      "whyItMatters": "电网与并网；媒体 CleanTechnica",
-      "topic": "grid",
+      "whyItMatters": "电力市场与政策；媒体 CleanTechnica",
+      "topic": "power-market-policy",
       "tags": [],
       "region": "未知",
       "entities": [],

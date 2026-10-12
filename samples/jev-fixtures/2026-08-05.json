@@ -8,7 +8,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.05
+            "noul": 0.92
           },
           "topic": {
             "choice": "other-energy"
@@ -44,7 +44,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.75
+            "noul": 0.8
           },
           "topic": {
             "choice": "other-energy"
@@ -56,7 +56,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.9
+            "noul": 0.05
           },
           "topic": {
             "choice": "chips-compute"
@@ -80,7 +80,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.8
+            "noul": 0.65
           },
           "topic": {
             "choice": "solar-wind"
@@ -95,7 +95,7 @@
             "noul": 0.95
           },
           "topic": {
-            "choice": "grid"
+            "choice": "power-market-policy"
           }
         }
       }
@@ -104,7 +104,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.9
+            "noul": 0.95
           },
           "topic": {
             "choice": "other-energy"
@@ -116,7 +116,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.03
+            "noul": 0.98
           },
           "topic": {
             "choice": "other-energy"
@@ -167,13 +167,22 @@
             "noul": 0.05
           },
           "topic": {
-            "choice": "other-energy"
+            "choice": "chips-compute"
           }
         }
       }
     },
     "bdd5809e4af4e24f": {
-      "error": "fallback 应答无法解析（finish_reason=length：输出被 max_tokens 截断）: null"
+      "result": {
+        "answers": {
+          "relevant": {
+            "noul": 0.25
+          },
+          "topic": {
+            "choice": "other-energy"
+          }
+        }
+      }
     },
     "a2f8139440f69ec5": {
       "result": {
@@ -233,7 +242,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.97
+            "noul": 0.02
           }
         }
       }
@@ -368,7 +377,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.98
+            "noul": 0.99
           }
         }
       }
@@ -449,7 +458,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.98
+            "noul": 0.97
           }
         }
       }
@@ -477,6 +486,231 @@
         "answers": {
           "same": {
             "noul": 0.05
+          }
+        }
+      }
+    },
+    "486bcf104acf4a5d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.95
+          }
+        }
+      }
+    },
+    "59855ff7aab95ac0": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.95
+          }
+        }
+      }
+    },
+    "568794b398aa6995": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.03
+          }
+        }
+      }
+    },
+    "5070295ae8343693": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "ba43327c557cd57d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "b0f7619c996daba9": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.03
+          }
+        }
+      }
+    },
+    "827322e82ab50f1f": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "7eb6b35d878f83ee": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "6bbd86475501e99f": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "23ba47b1985401a9": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "dae7dfe4b15e1cab": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "6e0d6961e90287b1": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "f3690ea586cd81a6": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "b88c35a93c026705": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "7a3aaca336d131af": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "5cc788ed5778b690": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.05
+          }
+        }
+      }
+    },
+    "eb788d7ec4482fc6": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "e36ce39eca166ad4": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "7c58b716c75f33de": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "0b94c9f59c90e60f": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "cb002ed50a299629": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "6de5f2bdd71a40f6": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "4a1642999d3c9593": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "cce7025ad9c4affa": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "c7d461fcca2fdfb7": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
           }
         }
       }

@@ -11,37 +11,84 @@
   },
   "items": [
     {
-      "id": "evt_cbc7abe90bc5",
-      "title": "试驾：比亚迪eMAX7和足球妈妈电动未来的宁静冲击",
-      "originalTitle": "Test Drive: BYD eMAX7 & the Quiet Shock of an Electric Future for the Soccer Mom",
-      "url": "https://cleantechnica.com/2026/08/02/test-drive-byd-emax7-the-quiet-shock-of-an-electric-future-for-the-soccer-mom/",
-      "summary": "There are test drives you walk into with expectations, and then there are test drives that quietly ambush you. The BYD eMAX7 belongs firmly…",
-      "whyItMatters": "其他能源动态；关联 BYD、比亚迪；媒体 CleanTechnica",
+      "id": "evt_2d308675cb25",
+      "title": "AMD即将推出的Zen 6处理器可以修复微口吃并改善游戏中1%的低点—下一代CPU具有针对热和功耗预算的每核优化功能",
+      "originalTitle": " AMD's upcoming Zen 6 processors could fix microstutters and improve 1% lows in games — Next-gen CPUs tipped to feature per-core optimizations for thermal and power budgets ",
+      "url": "https://www.tomshardware.com/pc-components/cpus/amds-upcoming-zen-6-processors-could-fix-microstutters-and-improve-1-percent-lows-in-games-next-gen-cpus-tipped-to-feature-per-core-optimizations-for-thermal-and-power-budgets",
+      "summary": "A new report suggests AMD is cooking up a range of per-core optimizations for Zen 6 that might not seem huge on their own, but they could a…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 1%；关联 AMD；地区 全球；媒体 Tom's Hardware",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "AMD"
+      ],
+      "metrics": [
+        {
+          "label": "microstutters and improve",
+          "value": 1,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false,
+        "id": "tomshardware.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-02T12:30:00.000Z",
+      "discoveredAt": "2026-08-03T06:53:25.107Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_bdac6bd2c718",
+      "title": "Ember的电动客车展示城际公交电气化已经到来",
+      "originalTitle": "Ember’s Electric Coaches Show Intercity Bus Electrification Is Already Here",
+      "url": "https://cleantechnica.com/2026/08/02/ember-electric-intercity-coaches-scotland/",
+      "summary": "Edinburgh makes electric transit visible. The city has electrified regional rail, trams and a growing number of electric buses, including l…",
+      "whyItMatters": "其他能源动态；关联 Ember、EMBER；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
       "region": "未知",
       "entities": [
-        "BYD",
-        "比亚迪"
+        "Ember",
+        "EMBER"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
         "name": "CleanTechnica",
         "type": "media",
         "isPrimary": false,
         "id": "cleantechnica.com"
       },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-02T13:35:48.000Z",
+      "independentSourceCount": 2,
+      "publishedAt": "2026-08-02T09:03:00.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [
+        {
+          "name": "CleanTechnica",
+          "url": "https://cleantechnica.com/2026/08/02/funding-for-renewables-in-asia-africa-ready/",
+          "sourceId": "cleantechnica.com",
+          "publishedAt": "2026-08-02T13:25:04.000Z"
+        },
         {
           "name": "CleanTechnica",
           "url": "https://cleantechnica.com/2026/08/02/fuel-cell-buses-trucks-green-hydrogen-innovation/",
           "sourceId": "cleantechnica.com",
           "publishedAt": "2026-08-03T02:06:53.000Z"
+        },
+        {
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/monitors/gaming-monitors/grab-this-240-hz-qd-oled-gaming-monitor-at-just-usd300-gigabytes-27-inch-go27q24a-is-now-usd150-off-at-newegg",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-08-02T16:16:41.000Z"
         }
       ],
       "wechat": false,
@@ -114,36 +161,29 @@
       "research": false
     },
     {
-      "id": "evt_d3fb7187ae4a",
-      "title": "为亚洲和非洲的可再生能源提供资金",
-      "originalTitle": "Funding for Renewables in Asia & Africa Ready",
-      "url": "https://cleantechnica.com/2026/08/02/funding-for-renewables-in-asia-africa-ready/",
-      "summary": "Ukko Renewable ready to implement long-term ambition to become a leading player in the energy transition across Asia The Emerging Africa an…",
-      "whyItMatters": "光伏与风电；地区 非洲；媒体 CleanTechnica",
+      "id": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "originalTitle": "‘You cannot build a whole electricity system purely on solar hybrids’: Squadron Energy CEO warns",
+      "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/",
+      "summary": "BESS and solar have driven Australia past the halfway mark in NEM renewable penetration, but the technology mix is not yet broad enough.",
+      "whyItMatters": "光伏与风电；地区 澳大利亚；媒体 Energy Storage News",
       "topic": "solar-wind",
       "tags": [],
-      "region": "非洲",
+      "region": "澳大利亚",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 3,
+      "importance": 2.5,
       "source": {
-        "name": "CleanTechnica",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "cleantechnica.com"
+        "id": "energy-storage.news"
       },
-      "independentSourceCount": 2,
-      "publishedAt": "2026-08-02T13:25:04.000Z",
+      "independentSourceCount": 1,
+      "publishedAt": "2026-08-03T03:50:49.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
-      "relatedSources": [
-        {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/you-cannot-build-a-whole-electricity-system-purely-on-solar-hybrids-squadron-energy-ceo-warns/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-08-03T03:50:49.000Z"
-        }
-      ],
+      "relatedSources": [],
       "wechat": false,
       "research": false
     },
@@ -196,33 +236,6 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-08-02T22:00:21.000Z",
-      "discoveredAt": "2026-08-03T06:53:25.107Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_9e1fa7fb8bbb",
-      "title": "以下是2026年8月您可以购买的各种价格水平的最佳电动自行车",
-      "originalTitle": "Here are the best electric bikes you can buy at every price level in August 2026",
-      "url": "https://electrek.co/2026/08/02/here-are-the-best-electric-bikes-you-can-buy-at-every-price-level/",
-      "summary": "I’ve spent countless hours here at Electrek doing detailed hands-on testing of hundreds of electric bikes. Through thousands of miles of ri…",
-      "whyItMatters": "其他能源动态；地区 全球；媒体 Electrek",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "全球",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "Electrek",
-        "type": "media",
-        "isPrimary": false,
-        "id": "electrek.co"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-08-02T12:05:00.000Z",
       "discoveredAt": "2026-08-03T06:53:25.107Z",
       "relatedSources": [],
       "wechat": false,

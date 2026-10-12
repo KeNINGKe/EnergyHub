@@ -7,85 +7,9 @@
     "sourcesTotal": 0,
     "sourcesSucceeded": 0,
     "articlesFetched": 46,
-    "eventsPublished": 23
+    "eventsPublished": 30
   },
   "items": [
-    {
-      "id": "evt_b84c1017ae8e",
-      "title": "早期测试显示， AMD的新款Radeon RX 9050在游戏中比RTX 5050慢约30 ％ —最便宜的8GB RDNA 4 GPU可轻松处理1080p游戏，但并不令人印象深刻",
-      "originalTitle": " AMD's new Radeon RX 9050 is roughly 30% slower than the RTX 5050 in games, early testing shows — the cheapest 8GB RDNA 4 GPU comfortably handles 1080p gaming but doesn't impress ",
-      "url": "https://www.tomshardware.com/pc-components/gpus/amds-new-radeon-rx-9050-is-roughly-30-percent-slower-than-the-rtx-5050-in-games-early-testing-shows-the-cheapest-8gb-rdna-4-gpu-comfortably-handles-1080p-gaming-but-doesnt-impress",
-      "summary": "The RX 9050 is slower than the RTX 5050 in every conceivable way except when the latter is constrained in some way. It performs worse in sy…",
-      "whyItMatters": "其他能源动态；关键数字 30%、42%、31%；关联 AMD；媒体 Tom's Hardware",
-      "topic": "other-energy",
-      "tags": [],
-      "region": "未知",
-      "entities": [
-        "AMD"
-      ],
-      "metrics": [
-        {
-          "label": "9050 is roughly",
-          "value": 30,
-          "unit": "%"
-        },
-        {
-          "label": "4K, it's about",
-          "value": 42,
-          "unit": "%"
-        },
-        {
-          "label": "1080p it's about",
-          "value": 31,
-          "unit": "%"
-        }
-      ],
-      "impact": "unknown",
-      "importance": 5.5,
-      "source": {
-        "name": "Tom's Hardware",
-        "type": "media",
-        "isPrimary": false,
-        "id": "tomshardware.com"
-      },
-      "independentSourceCount": 4,
-      "publishedAt": "2026-07-31T11:28:54.000Z",
-      "discoveredAt": "2026-08-01T06:22:16.655Z",
-      "relatedSources": [
-        {
-          "name": "CleanTechnica",
-          "url": "https://cleantechnica.com/2026/07/31/water-power-winners-emerge-as-collegiate-competitions-surge/",
-          "sourceId": "cleantechnica.com",
-          "publishedAt": "2026-08-01T00:53:20.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/31/the-hydrogen-stream-chinese-company-sets-record-for-green-ammonia-export/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-31T11:30:00.000Z"
-        },
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/07/31/hyundai-reveals-new-7-seat-electric-minivan-concept/",
-          "sourceId": "electrek.co",
-          "publishedAt": "2026-07-31T18:33:40.000Z"
-        },
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/07/31/hmps-new-3999-electric-scooter-is-the-affordable-street-legal-commuter-the-us-needs/",
-          "sourceId": "electrek.co",
-          "publishedAt": "2026-07-31T15:24:00.000Z"
-        },
-        {
-          "name": "Tom's Hardware",
-          "url": "https://www.tomshardware.com/pc-components/ddr5/single-dimm-ddr5-gaming-works-better-than-you-probably-think-amds-3d-v-cache-chips-drop-less-than-3-percent-one-ddr5-dimm-beats-dual-channel-ddr4-ram",
-          "sourceId": "tomshardware.com",
-          "publishedAt": "2026-07-31T11:43:24.000Z"
-        }
-      ],
-      "wechat": false,
-      "research": false
-    },
     {
       "id": "evt_4075a2c4fffa",
       "title": "哥伦比亚在绿色能源拍卖的第二天授予725兆瓦的太阳能",
@@ -138,22 +62,158 @@
           "publishedAt": "2026-08-01T06:20:01.000Z"
         },
         {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/antora-energy-closes-us550-million-series-c-to-scale-us-thermal-battery-deployment/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-31T11:48:18.000Z"
+          "name": "Volts",
+          "url": "https://www.volts.wtf/p/silicon-anodes-for-batteries-unlock",
+          "sourceId": "volts.wtf",
+          "publishedAt": "2026-07-31T10:20:09.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_a3e90d74154c",
+      "title": "施耐德电气和AMD发布首个Helios平台参考设计以加速人工智能工厂部署",
+      "originalTitle": "Schneider Electric and AMD Release 1st Helios Platform Reference Design to Accelerate AI Factory Deployment",
+      "url": "https://www.hpcwire.com/off-the-wire/schneider-electric-and-amd-release-1st-helios-platform-reference-design-to-accelerate-ai-factory-deployment/",
+      "summary": "SAN FRANCISCO, July 31, 2026 — Schneider Electric, a global energy technology leader, and AMD have announced a jointly developed and valida…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关联 AMD、施耐德、Schneider；地区 全球；媒体 HPCwire",
+      "topic": "chips-compute",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "AMD",
+        "施耐德",
+        "Schneider"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "HPCwire",
+        "type": "media",
+        "isPrimary": false,
+        "id": "hpcwire.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-31T11:52:49.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [
+        {
+          "name": "HPCwire",
+          "url": "https://www.hpcwire.com/off-the-wire/xcena-unveils-mx1-production-lineup-to-accelerate-push-into-hyperscale-ai-infrastructure/",
+          "sourceId": "hpcwire.com",
+          "publishedAt": "2026-07-31T18:08:48.000Z"
         },
         {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/business-as-usual-just-accelerated-harmony-energy-ceo-on-life-after-alpiq-acquisition/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-31T11:24:41.000Z"
+          "name": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/big-tech/big-tech-spends-more-than-usd1-trillion-on-ai-infrastructure-additional-usd745-billion-expected-to-be-added-to-the-figure-in-2026-alone",
+          "sourceId": "tomshardware.com",
+          "publishedAt": "2026-07-31T16:30:34.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_4b9a10a29f80",
+      "title": "单DIMM DDR5游戏的效果比您想象的要好—一个DDR5 DIMM优于双通道DDR4 RAM ， AMD的3D V-Cache芯片使用单棒时下降不到3%",
+      "originalTitle": " Single-DIMM DDR5 gaming works better than you probably think — one DDR5 DIMM beats dual-channel DDR4 RAM, AMD's 3D V-Cache chips drop less than 3% with single stick ",
+      "url": "https://www.tomshardware.com/pc-components/ddr5/single-dimm-ddr5-gaming-works-better-than-you-probably-think-amds-3d-v-cache-chips-drop-less-than-3-percent-one-ddr5-dimm-beats-dual-channel-ddr4-ram",
+      "summary": "To avoid rising RAM costs, some PC builders and OEMs have shifted toward using a single DDR5 module for gaming PCs. We test how much of a p…",
+      "whyItMatters": "其他能源动态；关键数字 3%；关联 AMD；媒体 Tom's Hardware",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "AMD"
+      ],
+      "metrics": [
+        {
+          "label": "drop less than",
+          "value": 3,
+          "unit": "%"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4.5,
+      "source": {
+        "name": "Tom's Hardware",
+        "type": "media",
+        "isPrimary": false,
+        "id": "tomshardware.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-31T11:43:24.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/31/lectric-ebikes-hits-1-billion-in-sales-surpasses-750000-e-bikes/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-08-01T00:04:12.000Z"
         },
         {
-          "name": "Energy Storage News",
-          "url": "https://www.energy-storage.news/greenvolt-inaugurates-200mw-800mwh-capacity-market-contracted-bess-in-poland/",
-          "sourceId": "energy-storage.news",
-          "publishedAt": "2026-07-31T10:40:19.000Z"
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/31/aventon-level-3-pace-4-smart-e-bikes-ecoflow-glacier-electric-cooler-anker-more/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-07-31T18:00:00.000Z"
+        },
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/31/hmps-new-3999-electric-scooter-is-the-affordable-street-legal-commuter-the-us-needs/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-07-31T15:24:00.000Z"
+        }
+      ],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_bb464fb5b96a",
+      "title": "随着市场准备推出插件，英国太阳能装机容量达到22.8吉瓦",
+      "originalTitle": "UK solar capacity hits 22.8 GW as market prepares for plug-in launch",
+      "url": "https://www.pv-magazine.com/2026/07/31/uk-solar-capacity-hits-22-8-gw-as-market-prepares-for-plug-in-launch/",
+      "summary": "The UK added over 2 GW of solar capacity in the 12 months to the end of June 2026. With new plug-in solar regulations soon to take effect,…",
+      "whyItMatters": "光伏与风电；关键数字 22.8GW、22.8吉瓦、2GW；地区 英国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "英国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "solar capacity hits",
+          "value": 22.8,
+          "unit": "GW"
+        },
+        {
+          "label": "装机容量达到",
+          "value": 22.8,
+          "unit": "吉瓦"
+        },
+        {
+          "label": "d over",
+          "value": 2,
+          "unit": "GW"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 2,
+      "publishedAt": "2026-07-31T12:30:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/31/this-huge-texas-solar-hub-is-nearly-1-gw-and-its-only-half-built/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-07-31T19:14:20.000Z"
         }
       ],
       "wechat": false,
@@ -178,35 +238,17 @@
         }
       ],
       "impact": "unknown",
-      "importance": 4.5,
+      "importance": 4,
       "source": {
         "name": "Canary Media",
         "type": "media",
         "isPrimary": false,
         "id": "canarymedia.com"
       },
-      "independentSourceCount": 3,
+      "independentSourceCount": 2,
       "publishedAt": "2026-07-31T07:30:00.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [
-        {
-          "name": "Electrek",
-          "url": "https://electrek.co/2026/07/31/this-huge-texas-solar-hub-is-nearly-1-gw-and-its-only-half-built/",
-          "sourceId": "electrek.co",
-          "publishedAt": "2026-07-31T19:14:20.000Z"
-        },
-        {
-          "name": "Canary Media",
-          "url": "https://www.canarymedia.com/articles/solar/new-york-solar-farms",
-          "sourceId": "canarymedia.com",
-          "publishedAt": "2026-07-31T16:20:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/31/uk-solar-capacity-hits-22-8-gw-as-market-prepares-for-plug-in-launch/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-31T12:30:00.000Z"
-        },
         {
           "name": "pv magazine",
           "url": "https://www.pv-magazine.com/2026/07/31/solars-share-of-eu-electricity-demand-tops-20-for-three-consecutive-months/",
@@ -215,41 +257,132 @@
         },
         {
           "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/31/sierra-leone-switches-on-first-solar-storage-project/",
+          "url": "https://www.pv-magazine.com/2026/07/31/new-zealand-looks-to-legalize-plug-in-solar/",
           "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-31T11:00:00.000Z"
-        },
-        {
-          "name": "pv magazine",
-          "url": "https://www.pv-magazine.com/2026/07/31/europes-heatwave-brings-high-irradiance-as-smoke-dust-impact-southern-pv-systems/",
-          "sourceId": "pv-magazine.com",
-          "publishedAt": "2026-07-31T10:00:00.000Z"
+          "publishedAt": "2026-07-31T09:00:00.000Z"
         }
       ],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_cd6aff731c65",
-      "title": "大型科技公司在人工智能基础设施上的支出超过1万亿美元—预计仅在2026年就将增加7450亿美元",
-      "originalTitle": " Big tech spends more than $1 trillion on AI infrastructure — additional $745 billion expected to be added to the figure in 2026 alone ",
-      "url": "https://www.tomshardware.com/tech-industry/big-tech/big-tech-spends-more-than-usd1-trillion-on-ai-infrastructure-additional-usd745-billion-expected-to-be-added-to-the-figure-in-2026-alone",
-      "summary": "Amazon, Google, Meta, and Microsoft have collectively spent more than $1 trillion on AI investments since the rush started in 2023. However…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 7450亿美元；关联 Google、Microsoft、Amazon；媒体 Tom's Hardware",
+      "id": "evt_8923e742c531",
+      "title": "塞拉利昂开启太阳能储能项目",
+      "originalTitle": "Sierra Leone switches on solar-storage project",
+      "url": "https://www.pv-magazine.com/2026/07/31/sierra-leone-switches-on-first-solar-storage-project/",
+      "summary": "Chinese manufacturer Sungrow, which commissioned the project, says its the country’s first national-scale power generation project connecte…",
+      "whyItMatters": "光伏与风电；关联 Sungrow；地区 中国；媒体 pv magazine",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "中国",
+      "entities": [
+        "Sungrow"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T11:00:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_4cdcdc1cf47a",
+      "title": "播客：特斯拉/SpaceX合并、Rivian R2进展、全新梅赛德斯GLA等",
+      "originalTitle": "Podcast: Tesla/SpaceX merger, Rivian R2 progress, new Mercedes GLA, and more",
+      "url": "https://electrek.co/2026/07/31/podcast-tesla-spacex-merger-rivian-r2-progress-new-mercedes-gla-and-more/",
+      "summary": "In the Electrek Podcast, we discuss the most popular news in the world of sustainable transport and energy. In this week’s episode, we disc…",
+      "whyItMatters": "其他能源动态；关联 Tesla、特斯拉、SpaceX；地区 全球；媒体 Electrek",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "全球",
+      "entities": [
+        "Tesla",
+        "特斯拉",
+        "SpaceX"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false,
+        "id": "electrek.co"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T19:46:20.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_92202664eb0a",
+      "title": "比亚迪在下个月推出新款Qin Max EV之前透露了图像",
+      "originalTitle": "BYD reveals images of the new Qin Max EV ahead of its launch next month",
+      "url": "https://electrek.co/2026/07/31/byd-reveals-images-new-qin-max-ev-launch/",
+      "summary": "The Qin Max is a “completely different new B-segment fast-charging sedan,” BYD claims. Ahead of its official launch next month, BYD release…",
+      "whyItMatters": "其他能源动态；关联 BYD、比亚迪；媒体 Electrek",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "未知",
+      "entities": [
+        "BYD",
+        "比亚迪"
+      ],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 4,
+      "source": {
+        "name": "Electrek",
+        "type": "media",
+        "isPrimary": false,
+        "id": "electrek.co"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T19:41:59.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_b84c1017ae8e",
+      "title": "早期测试显示， AMD的新款Radeon RX 9050在游戏中比RTX 5050慢约30 ％ —最便宜的8GB RDNA 4 GPU可轻松处理1080p游戏，但并不令人印象深刻",
+      "originalTitle": " AMD's new Radeon RX 9050 is roughly 30% slower than the RTX 5050 in games, early testing shows — the cheapest 8GB RDNA 4 GPU comfortably handles 1080p gaming but doesn't impress ",
+      "url": "https://www.tomshardware.com/pc-components/gpus/amds-new-radeon-rx-9050-is-roughly-30-percent-slower-than-the-rtx-5050-in-games-early-testing-shows-the-cheapest-8gb-rdna-4-gpu-comfortably-handles-1080p-gaming-but-doesnt-impress",
+      "summary": "The RX 9050 is slower than the RTX 5050 in every conceivable way except when the latter is constrained in some way. It performs worse in sy…",
+      "whyItMatters": "芯片、服务器与算力基础设施；关键数字 30%、42%、31%；关联 AMD；媒体 Tom's Hardware",
       "topic": "chips-compute",
       "tags": [],
       "region": "未知",
       "entities": [
-        "Google",
-        "Microsoft",
-        "Amazon",
-        "Meta"
+        "AMD"
       ],
       "metrics": [
         {
-          "label": "6年就将增加",
-          "value": 7450,
-          "unit": "亿美元"
+          "label": "9050 is roughly",
+          "value": 30,
+          "unit": "%"
+        },
+        {
+          "label": "4K, it's about",
+          "value": 42,
+          "unit": "%"
+        },
+        {
+          "label": "1080p it's about",
+          "value": 31,
+          "unit": "%"
         }
       ],
       "impact": "unknown",
@@ -261,40 +394,45 @@
         "id": "tomshardware.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T16:30:34.000Z",
+      "publishedAt": "2026-07-31T11:28:54.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_a3e90d74154c",
-      "title": "施耐德电气和AMD发布首个Helios平台参考设计以加速人工智能工厂部署",
-      "originalTitle": "Schneider Electric and AMD Release 1st Helios Platform Reference Design to Accelerate AI Factory Deployment",
-      "url": "https://www.hpcwire.com/off-the-wire/schneider-electric-and-amd-release-1st-helios-platform-reference-design-to-accelerate-ai-factory-deployment/",
-      "summary": "SAN FRANCISCO, July 31, 2026 — Schneider Electric, a global energy technology leader, and AMD have announced a jointly developed and valida…",
-      "whyItMatters": "芯片、服务器与算力基础设施；关联 AMD、施耐德、Schneider；地区 全球；媒体 HPCwire",
-      "topic": "chips-compute",
+      "id": "evt_a4a7fda5e351",
+      "title": "随着大学比赛激增，水电赢家涌现",
+      "originalTitle": "Water Power Winners Emerge As Collegiate Competitions Surge",
+      "url": "https://cleantechnica.com/2026/07/31/water-power-winners-emerge-as-collegiate-competitions-surge/",
+      "summary": "Top Teams Claim Prizes at 2026 Hydropower and Marine Energy Collegiate Competition Final Events, and DOE Welcomes a Record 45 Teams for the…",
+      "whyItMatters": "其他能源动态；关联 DOE；媒体 CleanTechnica",
+      "topic": "other-energy",
       "tags": [],
-      "region": "全球",
+      "region": "未知",
       "entities": [
-        "AMD",
-        "施耐德",
-        "Schneider"
+        "DOE"
       ],
       "metrics": [],
       "impact": "unknown",
-      "importance": 4,
+      "importance": 3.5,
       "source": {
-        "name": "HPCwire",
+        "name": "CleanTechnica",
         "type": "media",
         "isPrimary": false,
-        "id": "hpcwire.com"
+        "id": "cleantechnica.com"
       },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T11:52:49.000Z",
+      "independentSourceCount": 2,
+      "publishedAt": "2026-08-01T00:53:20.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
-      "relatedSources": [],
+      "relatedSources": [
+        {
+          "name": "Electrek",
+          "url": "https://electrek.co/2026/07/31/hyundai-reveals-new-7-seat-electric-minivan-concept/",
+          "sourceId": "electrek.co",
+          "publishedAt": "2026-07-31T18:33:40.000Z"
+        }
+      ],
       "wechat": false,
       "research": false
     },
@@ -326,6 +464,39 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-07-31T12:45:27.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_0cd2fdc5fce1",
+      "title": "Antora Energy完成5.5亿美元的C轮融资，以扩大美国热电池部署规模",
+      "originalTitle": "Antora Energy closes US$550 million Series C to scale US thermal battery deployment",
+      "url": "https://www.energy-storage.news/antora-energy-closes-us550-million-series-c-to-scale-us-thermal-battery-deployment/",
+      "summary": "Thermal energy storage (TES) technology provider Antora Energy has closed a US$550 million Series C funding round to accelerate deployment…",
+      "whyItMatters": "储能；关键数字 5.5亿美元；地区 美国；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [
+        {
+          "label": "ergy完成",
+          "value": 5.5,
+          "unit": "亿美元"
+        }
+      ],
+      "impact": "unknown",
+      "importance": 3.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false,
+        "id": "energy-storage.news"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T11:48:18.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
@@ -370,38 +541,38 @@
       "research": false
     },
     {
-      "id": "evt_4e5b6fd6ca17",
-      "title": "新西兰希望将插电式太阳能合法化",
-      "originalTitle": "New Zealand looks to legalize plug-in solar",
-      "url": "https://www.pv-magazine.com/2026/07/31/new-zealand-looks-to-legalize-plug-in-solar/",
-      "summary": "A solar regulatory review from New Zealand's Ministry for Regulation suggests legalizing plug-in solar, approving installations under 10 kW…",
-      "whyItMatters": "光伏与风电；关键数字 10kW、100kW；地区 全球；媒体 pv magazine",
-      "topic": "solar-wind",
+      "id": "evt_d306531b3713",
+      "title": "Greenvolt在波兰推出200MW/800MWh容量市场合同BESS",
+      "originalTitle": "Greenvolt inaugurates 200MW/800MWh capacity market-contracted BESS in Poland",
+      "url": "https://www.energy-storage.news/greenvolt-inaugurates-200mw-800mwh-capacity-market-contracted-bess-in-poland/",
+      "summary": "Greenvolt Power has inaugurated the 200MW Turośń Kościelna Battery Energy Storage Facility in Poland, which energy trader Entrix will optim…",
+      "whyItMatters": "储能；关键数字 200MW、800MWh；地区 波兰；媒体 Energy Storage News",
+      "topic": "energy-storage",
       "tags": [],
-      "region": "全球",
+      "region": "波兰",
       "entities": [],
       "metrics": [
         {
-          "label": "approving installations under",
-          "value": 10,
-          "unit": "kW"
+          "label": "Greenvolt inaugurates",
+          "value": 200,
+          "unit": "MW"
         },
         {
-          "label": "installation less than",
-          "value": 100,
-          "unit": "kW"
+          "label": "Greenvolt inaugurates 200MW/",
+          "value": 800,
+          "unit": "MWh"
         }
       ],
       "impact": "unknown",
       "importance": 3.5,
       "source": {
-        "name": "pv magazine",
+        "name": "Energy Storage News",
         "type": "media",
         "isPrimary": false,
-        "id": "pv-magazine.com"
+        "id": "energy-storage.news"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T09:00:00.000Z",
+      "publishedAt": "2026-07-31T10:40:19.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
@@ -491,33 +662,6 @@
       "research": false
     },
     {
-      "id": "evt_26f5703c26ff",
-      "title": "XCENA推出MX1生产线，加速推进超大规模人工智能基础设施",
-      "originalTitle": "XCENA Unveils MX1 Production Lineup to Accelerate Push into Hyperscale AI Infrastructure",
-      "url": "https://www.hpcwire.com/off-the-wire/xcena-unveils-mx1-production-lineup-to-accelerate-push-into-hyperscale-ai-infrastructure/",
-      "summary": "SANTA CLARA, Calif., July 31, 2026 — XCENA, providing memory-centric computing solutions for AI infrastructure, today introduced MX1, its p…",
-      "whyItMatters": "芯片、服务器与算力基础设施；媒体 HPCwire",
-      "topic": "chips-compute",
-      "tags": [],
-      "region": "未知",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "HPCwire",
-        "type": "media",
-        "isPrimary": false,
-        "id": "hpcwire.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T18:08:48.000Z",
-      "discoveredAt": "2026-08-01T06:22:16.655Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
       "id": "evt_18c256c32436",
       "title": "nVent扩大数据中心液体冷却能力",
       "originalTitle": "nVent Expands Data Center Liquid Cooling Capacity",
@@ -572,6 +716,87 @@
       "research": false
     },
     {
+      "id": "evt_f892adaf771f",
+      "title": "纽约接受了太阳能吞噬农田的神话",
+      "originalTitle": "New York takes on the myth that solar is swallowing farmland",
+      "url": "https://www.canarymedia.com/articles/solar/new-york-solar-farms",
+      "summary": "This analysis and news roundup come from the Canary Media Weekly newsletter. Sign up to get it every Friday. In rural areas across the U.S.…",
+      "whyItMatters": "光伏与风电；地区 美国；媒体 Canary Media",
+      "topic": "solar-wind",
+      "tags": [],
+      "region": "美国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Canary Media",
+        "type": "media",
+        "isPrimary": false,
+        "id": "canarymedia.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T16:20:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_20019d2368b2",
+      "title": "氢气流：中国公司创下绿色氨出口纪录",
+      "originalTitle": "The Hydrogen Stream: Chinese company sets record for green ammonia export",
+      "url": "https://www.pv-magazine.com/2026/07/31/the-hydrogen-stream-chinese-company-sets-record-for-green-ammonia-export/",
+      "summary": "Chinese company State Power Investment Corp set a global record for the largest single-batch export of green ammonia, shipping 3,750 tonnes…",
+      "whyItMatters": "其他能源动态；地区 中国；媒体 pv magazine",
+      "topic": "other-energy",
+      "tags": [],
+      "region": "中国",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "pv magazine",
+        "type": "media",
+        "isPrimary": false,
+        "id": "pv-magazine.com"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T11:30:00.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
+      "id": "evt_448ce8a2c780",
+      "title": "“一切照旧，刚刚加速” ： Harmony Energy首席执行官谈Alpiq收购后的生活",
+      "originalTitle": "‘Business as usual, just accelerated’: Harmony Energy CEO on life after Alpiq acquisition",
+      "url": "https://www.energy-storage.news/business-as-usual-just-accelerated-harmony-energy-ceo-on-life-after-alpiq-acquisition/",
+      "summary": "We caught up with Peter Kavanagh, CEO of BESS developer Harmony Energy, after it was acquired by Switzerland-headquartered power group Alpi…",
+      "whyItMatters": "储能；媒体 Energy Storage News",
+      "topic": "energy-storage",
+      "tags": [],
+      "region": "未知",
+      "entities": [],
+      "metrics": [],
+      "impact": "unknown",
+      "importance": 2.5,
+      "source": {
+        "name": "Energy Storage News",
+        "type": "media",
+        "isPrimary": false,
+        "id": "energy-storage.news"
+      },
+      "independentSourceCount": 1,
+      "publishedAt": "2026-07-31T11:24:41.000Z",
+      "discoveredAt": "2026-08-01T06:22:16.655Z",
+      "relatedSources": [],
+      "wechat": false,
+      "research": false
+    },
+    {
       "id": "evt_5fd8d5d692b9",
       "title": "意大利在上半年记录了88个零价格时段",
       "originalTitle": "Italy records 88 zero-price hours in H1",
@@ -599,15 +824,15 @@
       "research": false
     },
     {
-      "id": "evt_94aa128a3f80",
-      "title": "由于高效供应增加了压力，中国TOPCon模块价格下跌",
-      "originalTitle": "Chinese TOPCon module prices fall as high-efficiency supply adds pressure",
-      "url": "https://www.pv-magazine.com/2026/07/31/chinese-topcon-module-prices-fall-as-high-efficiency-supply-adds-pressure/",
-      "summary": "In a new weekly update for pv magazine, OPIS, a Dow Jones company, provides a quick look at the main price trends in the global PV industry…",
-      "whyItMatters": "光伏与风电；地区 中国；媒体 pv magazine",
+      "id": "evt_c2f16f133af1",
+      "title": "欧洲的热浪带来了高辐射，因为烟雾、灰尘影响了南方光伏系统",
+      "originalTitle": "Europe’s heatwave brings high irradiance as smoke, dust impact southern PV systems",
+      "url": "https://www.pv-magazine.com/2026/07/31/europes-heatwave-brings-high-irradiance-as-smoke-dust-impact-southern-pv-systems/",
+      "summary": "In a new weekly update for pv magazine, Solcast, a DNV company, reports that Europe's July heatwave led to positive irradiance anomalies ac…",
+      "whyItMatters": "光伏与风电；地区 欧盟；媒体 pv magazine",
       "topic": "solar-wind",
       "tags": [],
-      "region": "中国",
+      "region": "欧盟",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
@@ -619,7 +844,7 @@
         "id": "pv-magazine.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T09:30:00.000Z",
+      "publishedAt": "2026-07-31T10:00:00.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
@@ -647,33 +872,6 @@
       },
       "independentSourceCount": 1,
       "publishedAt": "2026-07-31T09:16:28.000Z",
-      "discoveredAt": "2026-08-01T06:22:16.655Z",
-      "relatedSources": [],
-      "wechat": false,
-      "research": false
-    },
-    {
-      "id": "evt_ca19c13436e4",
-      "title": "研究表明，光伏相关火灾的后果通常在严重程度上有限",
-      "originalTitle": "Study shows consequences of PV-related fires are generally limited in severity",
-      "url": "https://www.pv-magazine.com/2026/07/31/study-shows-consequences-of-pv-related-fires-are-generally-limited-in-severity/",
-      "summary": "An international study analyzed PV-related fires across the UK, Italy, Slovenia, and Sweden, showing that differences in reported fire rate…",
-      "whyItMatters": "光伏与风电；地区 英国；媒体 pv magazine",
-      "topic": "solar-wind",
-      "tags": [],
-      "region": "英国",
-      "entities": [],
-      "metrics": [],
-      "impact": "unknown",
-      "importance": 2.5,
-      "source": {
-        "name": "pv magazine",
-        "type": "media",
-        "isPrimary": false,
-        "id": "pv-magazine.com"
-      },
-      "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T08:00:00.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
@@ -761,54 +959,54 @@
       "research": false
     },
     {
-      "id": "evt_650e3b4a9417",
-      "title": "Wheel-E播客：大众电动自行车、Juiced Scrambler、Anyland Auto-wheelie等",
-      "originalTitle": "Wheel-E Podcast: VW e-bikes, Juiced Scrambler, Anyland Auto-wheelie, more",
-      "url": "https://electrek.co/2026/07/31/wheel-e-podcast-vw-e-bikes-juiced-scrambler-anyland-auto-wheelie-more/",
-      "summary": "This week on Electrek’s Wheel-E podcast, we discuss the most popular news stories from the world of electric bikes and other nontraditional…",
-      "whyItMatters": "其他能源动态；地区 全球；媒体 Electrek",
+      "id": "evt_31a780d71f21",
+      "title": "小米Sky Nomad获得技术实用性，失去激情",
+      "originalTitle": "Xiaomi Sky Nomad Gains Tech-Filled Practicality, Loses Passion",
+      "url": "https://cleantechnica.com/2026/07/31/xiaomi-sky-nomad-gains-tech-filled-practicality-loses-passion/",
+      "summary": "Xiaomi has been a big surprise in the Chinese EV market. The cell phone company quickly launched some of the hottest and most desirable EVs…",
+      "whyItMatters": "其他能源动态；地区 中国；媒体 CleanTechnica",
       "topic": "other-energy",
       "tags": [],
-      "region": "全球",
+      "region": "中国",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
       "importance": 2.5,
       "source": {
-        "name": "Electrek",
+        "name": "CleanTechnica",
         "type": "media",
         "isPrimary": false,
-        "id": "electrek.co"
+        "id": "cleantechnica.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T12:33:52.000Z",
+      "publishedAt": "2026-07-31T19:59:40.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,
       "research": false
     },
     {
-      "id": "evt_9ddbb563bcd9",
-      "title": "用于电池的硅阳极可释放更高的能量密度和更快的充电时间",
-      "originalTitle": "Silicon anodes for batteries unlock greater energy density and faster charging times",
-      "url": "https://www.volts.wtf/p/silicon-anodes-for-batteries-unlock",
-      "summary": "A conversation with Rick Costantino of Group14.",
-      "whyItMatters": "储能；社区 Volts",
-      "topic": "energy-storage",
+      "id": "evt_96e9087575da",
+      "title": "DAC 2026 ： John Cooley的麻烦制造者小组的麻烦",
+      "originalTitle": "DAC 2026: The Trouble with John Cooley’s Troublemaker Panel",
+      "url": "https://semiwiki.com/events/371717-dac-2026-the-trouble-with-john-cooleys-troublemaker-panel/",
+      "summary": "For quite a few years, John Cooley has hosted the Troublemaker Panel at DAC. The event consists of a panel of senior executives from the ED…",
+      "whyItMatters": "芯片、服务器与算力基础设施；媒体 SemiWiki",
+      "topic": "chips-compute",
       "tags": [],
       "region": "未知",
       "entities": [],
       "metrics": [],
       "impact": "unknown",
-      "importance": 2,
+      "importance": 2.5,
       "source": {
-        "name": "Volts",
-        "type": "community",
+        "name": "SemiWiki",
+        "type": "media",
         "isPrimary": false,
-        "id": "volts.wtf"
+        "id": "semiwiki.com"
       },
       "independentSourceCount": 1,
-      "publishedAt": "2026-07-31T10:20:09.000Z",
+      "publishedAt": "2026-07-31T17:00:41.000Z",
       "discoveredAt": "2026-08-01T06:22:16.655Z",
       "relatedSources": [],
       "wechat": false,

@@ -8,7 +8,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.1
+            "noul": 0.9
           },
           "topic": {
             "choice": "other-energy"
@@ -32,7 +32,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.2
+            "noul": 0.1
           },
           "topic": {
             "choice": "other-energy"
@@ -44,7 +44,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.75
+            "noul": 0.85
           },
           "topic": {
             "choice": "power-market-policy"
@@ -56,7 +56,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.9
+            "noul": 0.95
           },
           "topic": {
             "choice": "other-energy"
@@ -68,7 +68,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.1
+            "noul": 0.9
           },
           "topic": {
             "choice": "other-energy"
@@ -80,7 +80,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.15
+            "noul": 0.9
           },
           "topic": {
             "choice": "other-energy"
@@ -92,7 +92,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.15
+            "noul": 0.85
           },
           "topic": {
             "choice": "other-energy"
@@ -104,7 +104,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.08
+            "noul": 0.9
           },
           "topic": {
             "choice": "other-energy"
@@ -116,7 +116,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.95
+            "noul": 0.9
           },
           "topic": {
             "choice": "other-energy"
@@ -128,10 +128,10 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.05
+            "noul": 0.95
           },
           "topic": {
-            "choice": "other-energy"
+            "choice": "chips-compute"
           }
         }
       }
@@ -140,7 +140,7 @@
       "result": {
         "answers": {
           "relevant": {
-            "noul": 0.95
+            "noul": 0.05
           },
           "topic": {
             "choice": "other-energy"
@@ -167,13 +167,22 @@
             "noul": 0.95
           },
           "topic": {
-            "choice": "other-energy"
+            "choice": "chips-compute"
           }
         }
       }
     },
     "35d39fdd7030a88f": {
-      "error": "fallback 应答无法解析（finish_reason=length：输出被 max_tokens 截断）: null"
+      "result": {
+        "answers": {
+          "relevant": {
+            "noul": 0.1
+          },
+          "topic": {
+            "choice": "chips-compute"
+          }
+        }
+      }
     },
     "be34b4a078a88568": {
       "result": {
@@ -247,15 +256,6 @@
         }
       }
     },
-    "0d03e5e84805412a": {
-      "result": {
-        "answers": {
-          "same": {
-            "noul": 0.99
-          }
-        }
-      }
-    },
     "1d0dd7760399b328": {
       "result": {
         "answers": {
@@ -274,38 +274,11 @@
         }
       }
     },
-    "f3bb17ab0f7425bb": {
-      "result": {
-        "answers": {
-          "same": {
-            "noul": 0.99
-          }
-        }
-      }
-    },
-    "5162521a2e60193f": {
-      "result": {
-        "answers": {
-          "same": {
-            "noul": 0.99
-          }
-        }
-      }
-    },
-    "ead2b087c0ab2afb": {
-      "result": {
-        "answers": {
-          "same": {
-            "noul": 0.99
-          }
-        }
-      }
-    },
     "e8f3e0a55528ada3": {
       "result": {
         "answers": {
           "same": {
-            "noul": 0.02
+            "noul": 0.98
           }
         }
       }
@@ -359,7 +332,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.98
+            "noul": 0.02
           }
         }
       }
@@ -404,7 +377,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.98
+            "noul": 0.99
           }
         }
       }
@@ -427,15 +400,6 @@
         }
       }
     },
-    "e2faf544c7386a2c": {
-      "result": {
-        "answers": {
-          "same": {
-            "noul": 0.01
-          }
-        }
-      }
-    },
     "7ad81703d355f22c": {
       "result": {
         "answers": {
@@ -449,7 +413,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.02
+            "noul": 0.98
           }
         }
       }
@@ -458,7 +422,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.02
+            "noul": 0.99
           }
         }
       }
@@ -476,7 +440,7 @@
       "result": {
         "answers": {
           "same": {
-            "noul": 0.99
+            "noul": 0.01
           }
         }
       }
@@ -504,6 +468,186 @@
         "answers": {
           "same": {
             "noul": 0.02
+          }
+        }
+      }
+    },
+    "1fd4d0bdf21de16d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.97
+          }
+        }
+      }
+    },
+    "7337a50a326b88ae": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "046902cacde2a56f": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "f35ecf318a509c03": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "19871f5c19080f13": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "dfa8b2df3518db2d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "67dab20e1e3b097d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "8c0df3c0f7ccd41d": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "a2dd0e5b6c78a707": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "700046f8e9e7953a": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "d8b945e51f08f204": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "f4c8f993dc77637b": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
+          }
+        }
+      }
+    },
+    "2ad7f95d08d0b2d6": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "6195ae5dfaad75f4": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.02
+          }
+        }
+      }
+    },
+    "891e6b4ae73c0fdc": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "dafa8c7191ff44f7": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "b43c82594389c4e7": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.98
+          }
+        }
+      }
+    },
+    "52fc107243949c7e": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "d0a8adaa38d7af7e": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.01
+          }
+        }
+      }
+    },
+    "857b2e48f041a5f6": {
+      "result": {
+        "answers": {
+          "same": {
+            "noul": 0.99
           }
         }
       }
