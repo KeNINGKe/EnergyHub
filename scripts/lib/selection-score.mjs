@@ -34,7 +34,8 @@ import { withReceipts, receiptsEnabled, defaultStoreInstance, defaultGuardInstan
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..', '..');
 export const DEFAULT_WEIGHTS = { businessRelevance: 30, factualIncrement: 25, impact: 25, evidence: 20 };
-const TIMEOUT_MS = 20_000;
+const TIMEOUT_MS = 60_000; // 评分提示词带完整细则+事件简报，glm 类带思维链模型
+                      // 实测可超 20s（07-31 录制 18/35 超时）；60s 宽松档
 const FIXTURE_SCHEMA_VERSION = 1;
 
 const DIM_LABELS = {
@@ -185,7 +186,8 @@ function shadowKey(event, weights) {
 
 const TRANSIENT_RETRIES = 2;    // 上游瞬时不可用（404/408/429/5xx）重试（同 jev callFallback）
 const TRANSIENT_WAIT_MS = 1_500;
-const isTransientUpstream = (e) => [404, 408, 429, 500, 502, 503, 504].includes(e?.statusCode);
+const isTransientUpstream = (e) => [404, 408, 429, 500, 502, 503, 504].includes(e?.statusCode)
+  || /应答无 content/.test(String(e?.message || e)); // reasoning 烧光预算致 content null：重试可能好（非确定）
 
 /**
  * 单次 chat/completions 调用（超时 20s；瞬时错误短退避重试——聚合网关对同一
@@ -206,7 +208,9 @@ async function callValueOnce(prompt, cfg) {
           model: cfg.model,
           messages: [{ role: 'user', content: prompt }],
           temperature: 0,
-          max_tokens: 2000,
+          // 带思维链模型（glm-5.3-flash）评分任务推理更长，2000 会被 reasoning
+          // 烧光致 content null（07-31 录制实测）；4000 兜底，成本增幅可忽略
+          max_tokens: 4000,
         }),
         signal: ctrl.signal,
       });
