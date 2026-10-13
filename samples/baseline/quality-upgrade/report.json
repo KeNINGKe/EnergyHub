@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T06:49:47.485Z",
+  "generatedAt": "2026-10-13T11:17:33.168Z",
   "mode": "offline-replay",
   "dates": [
     "2026-07-30",
@@ -18,7 +18,7 @@
       "date": "2026-07-30",
       "replayNow": "2026-07-30T06:21:07.937Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 121,
+      "runtimeMs": 135,
       "stats": {
         "raw": 62,
         "staleFiltered": 0,
@@ -529,6 +529,82 @@
         "【储能】特斯拉与ContourGlobal签署涵盖1太瓦时/年英镑可再生能源项目的长期电力协议",
         "【电力市场与政策】原油价格下跌导致2025年美加能源贸易额下降"
       ],
+      "selectionTrace": {
+        "total": 37,
+        "selected": 9,
+        "byStage": {
+          "main": 8,
+          "not-selected": 28,
+          "priority-quota": 1
+        },
+        "byReason": {
+          "topic-quota": 7,
+          "source-quota": 1,
+          "below-threshold": 20
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_17c8462bd4c4",
+            "title": "NextEra首席执行官表示，在合并以创建美国最大的受监管公用事业公司之际，电池存储是一个重要的增长动力",
+            "ruleScore": 4.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_b4f5d9ea74c9",
+            "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_f5dd6becf11b",
+            "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
+            "ruleScore": 3.5,
+            "rejectReason": "source-quota"
+          },
+          {
+            "eventId": "evt_068f6899fd11",
+            "title": "希捷将于2027年开始创纪录的50TB硬盘—到2028年，大多数硬盘都已售罄",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_8a0b414bc6e9",
+            "title": "佐治亚电力在穆迪空军基地旁边完成198MWh BESS的建设",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_d23cdc276c88",
+            "title": "美国禁止国外生产的太阳能逆变器",
+            "ruleScore": 3,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_b169205cb30c",
+            "title": "阿贡黑客马拉松帮助研究人员加速极光的科学发现",
+            "ruleScore": 3,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_b1bdebeec806",
+            "title": "为东帝汶首个太阳能储能项目获得融资",
+            "ruleScore": 3,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_6a2ffc02b8c2",
+            "title": "AirTrunk表示，澳大利亚应将数据中心视为清洁能源基础设施的“主要租户”",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_2118b0e039fd",
+            "title": "问答：欧盟的碳市场审查对气候行动意味着什么",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -1054,13 +1130,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-07-31",
       "replayNow": "2026-07-31T06:38:01.315Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 72,
+      "runtimeMs": 85,
       "stats": {
         "raw": 57,
         "staleFiltered": 0,
@@ -1566,6 +1643,81 @@
         "【光伏与风电】中国研究人员基于硫化物建造29.71%的钙钛矿-CIGS串联太阳能电池",
         "【储能】“热块”热能存储初创公司再削减5.5亿美元用于追逐化石燃料"
       ],
+      "selectionTrace": {
+        "total": 35,
+        "selected": 9,
+        "byStage": {
+          "main": 9,
+          "not-selected": 26
+        },
+        "byReason": {
+          "topic-quota": 10,
+          "source-quota": 1,
+          "below-threshold": 15
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_4ee84eed7041",
+            "title": "分析师声称，谷歌可能会建造比英伟达在2028年销售的更多的人工智能加速器，这可能会推动该公司使用英特尔代工来实现其目标",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_b6f7e95ae161",
+            "title": "印尼宣布启动100吉瓦太阳能项目",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_6e6c742caaeb",
+            "title": "热能存储公司1414 Degrees获得南澳大利亚州1GW数据中心交易",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_3a6108dd1132",
+            "title": "PJM电网最大的电池目前正在俄亥俄州建造",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_28b82c2d350b",
+            "title": "Xsight Labs以28亿美元的估值筹集了超过3亿美元的资金，为下一代人工智能和云网络提供动力",
+            "ruleScore": 3.5,
+            "rejectReason": "source-quota"
+          },
+          {
+            "eventId": "evt_bdcfc244f051",
+            "title": "南非为216兆瓦太阳能、500兆瓦时BESS项目供电",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_d59249110808",
+            "title": "Aecon签署1200MWh Ontario BESS储能协议",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_9b2dfbd79180",
+            "title": "Eolian开始建造1.06 GWh Ohio BESS ，这是PJM建造的最大系统",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_19a2d7255773",
+            "title": "哥伦比亚在清洁能源拍卖中授予270兆瓦的太阳能和100兆瓦的储能",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_4825191aa78d",
+            "title": "中欧和东欧：英国的Alcemi购买2.3GWh罗马尼亚项目，斯洛伐克最大的BESS项目上线",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 1,
         "totalGroups": 3,
@@ -2106,13 +2258,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-08-01",
       "replayNow": "2026-08-01T06:22:16.655Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 63,
+      "runtimeMs": 69,
       "stats": {
         "raw": 46,
         "staleFiltered": 0,
@@ -2572,6 +2725,80 @@
         "【芯片、服务器与算力基础设施】施耐德电气和AMD发布首个Helios平台参考设计以加速人工智能工厂部署",
         "【其他能源动态】单DIMM DDR5游戏的效果比您想象的要好—一个DDR5 DIMM优于双通道DDR4 RAM ， AMD的3D V-Cache芯片使用单棒时下降不到3%"
       ],
+      "selectionTrace": {
+        "total": 30,
+        "selected": 9,
+        "byStage": {
+          "main": 9,
+          "not-selected": 21
+        },
+        "byReason": {
+          "topic-quota": 6,
+          "below-threshold": 15
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_8923e742c531",
+            "title": "塞拉利昂开启太阳能储能项目",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_92202664eb0a",
+            "title": "比亚迪在下个月推出新款Qin Max EV之前透露了图像",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_a4a7fda5e351",
+            "title": "随着大学比赛激增，水电赢家涌现",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_708bb4bdd529",
+            "title": "Lumentum首席执行官警告用于硅光子学的关键材料即将出现瓶颈—由于联合包装光学器件需求飙升，晶圆厂和材料短缺已经低于客户需求的30 ％",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_d306531b3713",
+            "title": "Greenvolt在波兰推出200MW/800MWh容量市场合同BESS",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_6257e7a3d9cf",
+            "title": "CoWoS-S和CoWoS-R的区别",
+            "ruleScore": 3,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_a7d0c75a436c",
+            "title": "当人工智能电力行业崩溃时会发生什么？",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_0f1d73d0ba50",
+            "title": "胜利：法院裁决支持Sierra Club ，批准FERC加快清洁能源项目的命令",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_18c256c32436",
+            "title": "nVent扩大数据中心液体冷却能力",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_ba258baf311a",
+            "title": "Supermicro通过精密工程AI机架系列扩展DCBBS ，以加速部署和上线时间",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -3065,7 +3292,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-08-02",
@@ -3122,6 +3350,31 @@
       "observations": [
         "【储能】骏利电池更换卡车一路领先"
       ],
+      "selectionTrace": {
+        "total": 3,
+        "selected": 1,
+        "byStage": {
+          "main": 1,
+          "not-selected": 2
+        },
+        "byReason": {
+          "below-threshold": 2
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_790d2a1386d4",
+            "title": "赞比亚政府兑现提高发电能力的承诺，太阳能将发挥关键作用",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_a2a03a95e5d4",
+            "title": "专栏：印尼对菲律宾最大地热公司的出价真的是关于地热的吗？",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -3144,7 +3397,8 @@
         "deterministic": [],
         "jev": []
       },
-      "mergeMembers": []
+      "mergeMembers": [],
+      "shadow": null
     },
     {
       "date": "2026-08-03",
@@ -3248,6 +3502,37 @@
         "【其他能源动态】Ember的电动客车展示城际公交电气化已经到来",
         "【光伏与风电】SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将被1.2GW发电厂取代"
       ],
+      "selectionTrace": {
+        "total": 7,
+        "selected": 4,
+        "byStage": {
+          "main": 4,
+          "not-selected": 3
+        },
+        "byReason": {
+          "below-threshold": 3
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_93af9dc8ee9e",
+            "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_79eff84dbe8c",
+            "title": "由于AEMO启动故障电流试验，电网形成BESS尚未确认澳大利亚的最低系统强度",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          },
+          {
+            "eventId": "evt_41d096d339fb",
+            "title": "Lattrex Inc.首席执行官Chuck McClish访谈",
+            "ruleScore": 2.5,
+            "rejectReason": "below-threshold"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -3318,13 +3603,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-08-04",
       "replayNow": "2026-08-04T06:21:30.063Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 90,
+      "runtimeMs": 93,
       "stats": {
         "raw": 59,
         "staleFiltered": 0,
@@ -4048,6 +4334,82 @@
         "【光伏与风电】一个令人不安的迹象是， Nvidia RTX 50系列的价格在韩国上涨了30 ％ —台积电晶圆上涨和20 $ GDDR7模块推动RTX 5090超过$ 5,100",
         "【电网与并网】ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦"
       ],
+      "selectionTrace": {
+        "total": 41,
+        "selected": 12,
+        "byStage": {
+          "priority-quota": 2,
+          "main": 10,
+          "not-selected": 29
+        },
+        "byReason": {
+          "topic-quota": 2,
+          "quota-full": 12,
+          "below-threshold": 15
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_ff3e31f6bec3",
+            "title": "Dominion海上风电项目成本增加近3亿美元$",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_4a2ab8890011",
+            "title": "雷克萨上市32GB DDR5内存搭载国产芯片--售价3999元人民币（ 592 $ ） ，打破了CXMT驱动内存更便宜的希望",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_3433cae96289",
+            "title": "PJM在FERC提交备份拍卖计划，以弥补容量短缺",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_fea9c5d5dbda",
+            "title": "神铃推出新型空对水热泵系列",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_05177324e63d",
+            "title": "欧盟委员会批准在斯洛文尼亚支持370MWh电池存储的计划",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_8ac6bfecbb79",
+            "title": "摩洛哥拥有非洲第一家电池制造工厂",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_af7c2b820223",
+            "title": "Ulanqab选择4.4 GWh并网存储扩建的开发商",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_4eb3166edff5",
+            "title": "德国将太阳能上网电价下调1%",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_f4e86d7efb28",
+            "title": "小岛秀夫推出Death Stranding 2主题无线CD播放器—限量版设备售价~ $ 160 ，配备蓝牙5.3和独家艺术品",
+            "ruleScore": 3.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_258e02a2a207",
+            "title": "由于美国禁止外国电源逆变器，对缺乏清晰度和透明度的担忧",
+            "ruleScore": 3,
+            "rejectReason": "quota-full"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -4753,13 +5115,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-08-05",
       "replayNow": "2026-08-04T22:02:50.407Z",
       "exposureState": "empty-feature-not-present-or-not-snapshotted",
-      "runtimeMs": 121,
+      "runtimeMs": 117,
       "stats": {
         "raw": 71,
         "staleFiltered": 0,
@@ -5418,6 +5781,82 @@
         "【芯片、服务器与算力基础设施】随着人工智能对内存的需求增加，存储也随之增加",
         "【其他能源动态】赛格威Max G3 Plus电动滑板车350 $折扣预订优惠、Beatbot iSkim太阳能泳池撇水器319 $、Jackery 72小时闪购、工具等"
       ],
+      "selectionTrace": {
+        "total": 50,
+        "selected": 11,
+        "byStage": {
+          "main": 10,
+          "priority-quota": 1,
+          "not-selected": 39
+        },
+        "byReason": {
+          "topic-quota": 8,
+          "source-quota": 3,
+          "below-threshold": 28
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_25e7f6277d1f",
+            "title": "Habitat Energy被任命为Octopus Australia优化直流耦合614MWh太阳能+储能产品组合",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_e5d9bd8bf706",
+            "title": "负载平滑、冷启动备份和电源速度： Fluence绘制了澳大利亚数据中心的电池存储机会图",
+            "ruleScore": 4,
+            "rejectReason": "source-quota"
+          },
+          {
+            "eventId": "evt_de1108643a48",
+            "title": "马萨诸塞州发布征求1000兆瓦BESS的建议书",
+            "ruleScore": 3.5,
+            "rejectReason": "source-quota"
+          },
+          {
+            "eventId": "evt_08d20ba9a847",
+            "title": "Prosalia和EDP在葡萄牙、西班牙将太阳能光伏/风能项目与电池相结合",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_2c338daf6d1a",
+            "title": "清洁能源为满足美国电力需求提供了成本最低的途径",
+            "ruleScore": 3.5,
+            "rejectReason": "source-quota"
+          },
+          {
+            "eventId": "evt_05d750c9c523",
+            "title": "使用国产电池的T1 Energy、Clearway墨水641MW模块供应交易",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_7042db42bd35",
+            "title": "IRENA呼吁为中美洲和加勒比地区的可再生能源项目提供资金",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_51cd4c159dc6",
+            "title": "7月光伏为德国公共电网注入创纪录的12太瓦时",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_3e804c4244d0",
+            "title": "随着日本分销商警告新的增长，亚洲的GPU价格将进一步上涨—差价合约销售表明从本月开始， Gigabyte显卡订单的价格将上涨20 ％至40 ％",
+            "ruleScore": 3.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_021b36c656b0",
+            "title": "NIST加入DOE的Genesis使命，加速人工智能创新",
+            "ruleScore": 3,
+            "rejectReason": "topic-quota"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -6094,13 +6533,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-10-09",
       "replayNow": "2026-10-09T15:59:59.000Z",
       "exposureState": "from-samples-raw-snapshot",
-      "runtimeMs": 2433,
+      "runtimeMs": 2436,
       "stats": {
         "raw": 810,
         "staleFiltered": 247,
@@ -15937,6 +16377,84 @@
         "【芯片、服务器与算力基础设施】进入Omniverse ：开发人员如何通过前沿人工智能代理将创意转化为模拟",
         "【光伏与风电】山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等"
       ],
+      "selectionTrace": {
+        "total": 280,
+        "selected": 12,
+        "byStage": {
+          "not-selected": 268,
+          "priority-quota": 3,
+          "main": 9
+        },
+        "byReason": {
+          "unlistable": 1,
+          "quota-full": 144,
+          "topic-quota": 3,
+          "stale": 2,
+          "below-threshold": 118
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_2124aa97ae70",
+            "title": "比亚迪供货！波兰2.4GWh储能项目开工",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_d7e3e10ac941",
+            "title": "英飞凌给伊顿供 SiC打造MVSST固态变压器，一路改到电网！",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_c898634c80ea",
+            "title": "东芝推出3300V大功率碳化硅MOSFET模块",
+            "ruleScore": 4,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_744cc88d46e1",
+            "title": "Virginia Transformer在加利福尼亚州交付80 MVA GSU",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_3f27c0dcb748",
+            "title": "Vertiv任命Michael Resha领导全球制造和卓越运营",
+            "ruleScore": 4,
+            "rejectReason": "stale"
+          },
+          {
+            "eventId": "evt_6a2e49f65b85",
+            "title": "GlobalFoundries将在美国为台积电的CoWoS生产硅中间体—价值20亿美元的五年协议",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_e6e248760801",
+            "title": "美国陆军部承诺提供15亿美元贷款，以促进半导体供应链",
+            "ruleScore": 4,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_66eabe8e1cea",
+            "title": "电信运营商为何在开放模型上构建人工智能战略",
+            "ruleScore": 4,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_ef40eddc2de1",
+            "title": "中煤拟收购阳光新能源、特变电工250MW风、光电站",
+            "ruleScore": 4,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_321952f4312a",
+            "title": "特斯拉2026年第三季度交付486,532辆汽车并部署13.7 GWh储能",
+            "ruleScore": 4,
+            "rejectReason": "quota-full"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -25964,13 +26482,14 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     },
     {
       "date": "2026-10-10",
       "replayNow": "2026-10-10T15:59:59.000Z",
       "exposureState": "from-samples-raw-snapshot",
-      "runtimeMs": 2552,
+      "runtimeMs": 2940,
       "stats": {
         "raw": 857,
         "staleFiltered": 216,
@@ -35614,6 +36133,84 @@
         "【储能】特斯拉的下一个大型清洁能源正在亚利桑那州的沙漠中崛起",
         "【光伏与风电】山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等"
       ],
+      "selectionTrace": {
+        "total": 300,
+        "selected": 12,
+        "byStage": {
+          "not-selected": 288,
+          "priority-quota": 3,
+          "main": 9
+        },
+        "byReason": {
+          "unlistable": 2,
+          "quota-full": 138,
+          "topic-quota": 10,
+          "stale": 5,
+          "below-threshold": 133
+        },
+        "topRejected": [
+          {
+            "eventId": "evt_b616557ba2ad",
+            "title": "特斯拉在亚特兰大和萨凡纳之间开设14个Semi Megacharger摊位",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_3cbb8f16b8f8",
+            "title": "Anker Solix宣布推出输出功率为4.5千瓦的S5000电站",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_ed8c13fa469d",
+            "title": "Vertiv宣布北美合作伙伴奖的获奖者，以实现人工智能就绪的基础设施和客户成功",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_2124aa97ae70",
+            "title": "比亚迪供货！波兰2.4GWh储能项目开工",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_3c6d9e89c527",
+            "title": "600MW/2.4GWh！比亚迪储能拿下欧洲波兰标杆大储项目",
+            "ruleScore": 4.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_3a78f323dfd6",
+            "title": "英维克：10月8日融券卖出2.29万股，融资融券余额37.89亿元",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_40054e1b21b9",
+            "title": "阳光电源600MWh储能系统落地芬兰，两座电站同期开工",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_225995ca8b85",
+            "title": "資料中心儲能熱潮助攻 LG新能源獲利衝上市場預期兩倍 股價飆7%",
+            "ruleScore": 4.5,
+            "rejectReason": "quota-full"
+          },
+          {
+            "eventId": "evt_24d1cab338b2",
+            "title": "四方股份跌2.64%，成交额6.19亿元，今日主力净流入-5043.69万",
+            "ruleScore": 4.5,
+            "rejectReason": "topic-quota"
+          },
+          {
+            "eventId": "evt_39bd27d02d9a",
+            "title": "LG向特斯拉供应43亿美元电池",
+            "ruleScore": 4,
+            "rejectReason": "unlistable"
+          }
+        ]
+      },
       "missedMerges": {
         "count": 0,
         "totalGroups": 3,
@@ -45441,7 +46038,8 @@
             }
           ]
         }
-      ]
+      ],
+      "shadow": null
     }
   ],
   "notes": [

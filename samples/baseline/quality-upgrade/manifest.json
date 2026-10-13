@@ -1,14 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T06:49:47.485Z",
+  "generatedAt": "2026-10-13T11:17:33.168Z",
   "git": {
-    "sha": "dee787084a68737e79e325e7c0034563488422d8",
-    "short": "dee78708",
+    "sha": "e82829cf7c4aad445b05e65ff3de921907b9b51f",
+    "short": "e82829cf",
     "branch": "main",
     "dirty": true
   },
   "code": {
-    "scripts/build-daily-v2.mjs": "c318e61cb7fc38f4b34bf531142c60fdd4887c7077a80e8881ac52463080f89e",
+    "scripts/build-daily-v2.mjs": "8f43ff86fafd3123cf4127a664f98748ae153f313e856930d8b5d719ae846d02",
+    "scripts/lib/ai-receipts.mjs": "e5ec34e36ed924233af999164a465fb0a28be013cde2ee813711764850d02592",
     "scripts/lib/clean.mjs": "65d50d0e96f23e6c3c23740f96dd66b128720865f914084588f89611683d9fc4",
     "scripts/lib/compat.mjs": "8e62c0ae4d7a7cdee8979d05b8e80c1f70e59da2bb9bb7e945b3ce7a00b990fb",
     "scripts/lib/dedup.mjs": "0e912483382e0030ab3d4269fb4747779b588dca16e01fc0b701a5112b670724",
@@ -21,17 +22,18 @@
     "scripts/lib/filter.mjs": "975c6805f07cd6ff6c7ebcebd5cf3379306a77e2722c9055637d335f71ae015e",
     "scripts/lib/guard-logic.mjs": "20b72bcfcc34a533a40f3d8ff454666b54d1f09ebbf383c545980f55b1338077",
     "scripts/lib/identity.mjs": "3a970e96b09b31323ba5ab7cf9e2a61310bf571360a5621aff6f07ace020ca8f",
-    "scripts/lib/jev.mjs": "76d3167353e5e3fc9b5f6acf631888760274c237b3a0632ee663a7f80e369b46",
+    "scripts/lib/jev.mjs": "cdbb344792033f63b739b0153212187604be5469afca8d565806499bb34f8535",
     "scripts/lib/merge.mjs": "cc9ac04cb0bb60a5f93f01874257440a64fb73a35abab00e2dd4a0c373f594d5",
     "scripts/lib/overrides.mjs": "8dab3cff191282b043965e76f17b4d7f5f3fa3ca28f22e2bac97a7b6606385f1",
-    "scripts/lib/schema.mjs": "6b89d93a3c76865c3b36a38a019e04f01ad6d1e56179ce96a960853bd37674b8",
+    "scripts/lib/schema.mjs": "9378f900977e5b008d1b0317f935418eeb80a68f3ba13c35be8f6dbe286b5744",
     "scripts/lib/score.mjs": "b1c68bab1377980e53dbb43e71875c8cd3755d7f24e9a71352bcdc1c3806cac4",
     "scripts/lib/select.mjs": "c71342583461f0cb8abcea25f7219583af92d60948cc273926da0a477782406d",
+    "scripts/lib/selection-score.mjs": "c18d018a974c5f3fb950b70986f22f094a11c0f86f245aacfa63ec29649f9e7c",
     "scripts/lib/source-check.mjs": "9ba510e76a2958113c48c1667a0412f9b68ea588ccba80dd74a390cd5bcd8171",
     "scripts/lib/source.mjs": "73af73b07a68ac72e645992b2d526abd668be3ea09cd41b768af5e7c12bc4064",
     "scripts/lib/wait-until.mjs": "5599f02dbc86ad7940b33e6a659b1ab9c3e777cf8c97323592c5989784e736a6"
   },
-  "codeDigest": "b7f15bac99c509ac6efe6870111207fb33b7c05bac3837ed5d5b274cce06949c",
+  "codeDigest": "f6a6ef7b15b3982a3cb2b45a96ae507efc54f0e022105b1821104898243588dd",
   "configs": {
     "data/sources.json": "93704a679c9b5b182cc4437d1fb7a5f4861f799a147953ffddc31bb8016748d8",
     "data/filters.json": "5c081684d8b7066e0278080747127e2f01b932bb662b90389630d9ed39cf2ac5",
@@ -43,7 +45,7 @@
   },
   "prompts": {
     "note": "prompt version proxied by scripts/lib/jev.mjs sha256",
-    "jevMjs": "76d3167353e5e3fc9b5f6acf631888760274c237b3a0632ee663a7f80e369b46",
+    "jevMjs": "cdbb344792033f63b739b0153212187604be5469afca8d565806499bb34f8535",
     "model": "jev-latest",
     "env": {
       "rescueThreshold": null,
@@ -55,12 +57,12 @@
     "node": "v24.18.0",
     "platform": "win32-x64"
   },
-  "totalRuntimeMs": 6880,
-  "runStartedAt": "2026-10-12T06:49:41.848Z",
+  "totalRuntimeMs": 7413,
+  "runStartedAt": "2026-10-13T11:17:27.089Z",
   "perDate": [
     {
       "date": "2026-07-30",
-      "runtimeMs": 121,
+      "runtimeMs": 135,
       "replayNow": "2026-07-30T06:21:07.937Z",
       "fixture": "samples\\jev-fixtures\\2026-07-30.json",
       "fixtureSha256": "193759d9b126ae52d187de0fb1d2ac9d4eb6cf9f940d6c8751817d090cfb5c42",
@@ -69,16 +71,16 @@
     },
     {
       "date": "2026-07-31",
-      "runtimeMs": 72,
+      "runtimeMs": 85,
       "replayNow": "2026-07-31T06:38:01.315Z",
       "fixture": "samples\\jev-fixtures\\2026-07-31.json",
-      "fixtureSha256": "2d9fd3aa3158b659e39b22cf04deb92a345d2afbdbd3223ce03563e1513d4ea8",
+      "fixtureSha256": "a97defc9ce9e998f77990b8c26f237fc991926866c9896cab9430683a2f90b5b",
       "dailySha256": "f637c3c83b76d0034c172feb9243705b4f16d575a91d21612e09258510c3c5c2",
       "featuredSha256": "db80a6480f3f4c2db2f20e35da88fef1a3580abf59586bc1a031e38667e79df5"
     },
     {
       "date": "2026-08-01",
-      "runtimeMs": 63,
+      "runtimeMs": 69,
       "replayNow": "2026-08-01T06:22:16.655Z",
       "fixture": "samples\\jev-fixtures\\2026-08-01.json",
       "fixtureSha256": "d1045259e926cb890df083d1e5e4aa27a974ef533c0bf4d920fc1e7e6bf811b2",
@@ -105,7 +107,7 @@
     },
     {
       "date": "2026-08-04",
-      "runtimeMs": 90,
+      "runtimeMs": 93,
       "replayNow": "2026-08-04T06:21:30.063Z",
       "fixture": "samples\\jev-fixtures\\2026-08-04.json",
       "fixtureSha256": "38e04302344443119d36c60d39f951716845a1f4221db133f6f6882a74b427ec",
@@ -114,7 +116,7 @@
     },
     {
       "date": "2026-08-05",
-      "runtimeMs": 121,
+      "runtimeMs": 117,
       "replayNow": "2026-08-04T22:02:50.407Z",
       "fixture": "samples\\jev-fixtures\\2026-08-05.json",
       "fixtureSha256": "af6de940e412e50da14620eb4fba3e38b06f875a3d374a7c437535dbb9ed22f1",
@@ -123,16 +125,16 @@
     },
     {
       "date": "2026-10-09",
-      "runtimeMs": 2433,
+      "runtimeMs": 2436,
       "replayNow": "2026-10-09T15:59:59.000Z",
       "fixture": "samples\\jev-fixtures\\2026-10-09.json",
-      "fixtureSha256": "1b1e2dd8f0b26d66b60b3cf15f3c6a28d37d2180c3cac5482959701887548dde",
+      "fixtureSha256": "8091020ee0a6a73567ee8c3ebb87b8257511b41e62d1ede12106672472403971",
       "dailySha256": "28261d428f3176f8fb74c028a565b3a7eed65a7b9ab57b6c8646170e10763894",
       "featuredSha256": "8a75344d0b76202054692a7148e7e6ecbdc91162537c56b94ac58df49f6f3c75"
     },
     {
       "date": "2026-10-10",
-      "runtimeMs": 2552,
+      "runtimeMs": 2940,
       "replayNow": "2026-10-10T15:59:59.000Z",
       "fixture": "samples\\jev-fixtures\\2026-10-10.json",
       "fixtureSha256": "a82f7ccbda92bc461d4f88271d43665276d41cfab9a0d60bd3d6dd73928467e2",

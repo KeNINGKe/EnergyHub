@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-03",
+  "generatedAt": "2026-08-03T06:53:25.107Z",
+  "mode": "shadow",
+  "weights": {
+    "businessRelevance": 30,
+    "factualIncrement": 25,
+    "impact": 25,
+    "evidence": 20
+  },
+  "counts": {
+    "selected": 4,
+    "nearBand": 3,
+    "audit": 0,
+    "scored": 7,
+    "failed": 0
+  },
+  "items": [
+    {
+      "group": "selected",
+      "eventId": "evt_2d308675cb25",
+      "title": "AMD即将推出的Zen 6处理器可以修复微口吃并改善游戏中1%的低点—下一代CPU具有针对热和功耗预算的每核优化功能",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 3
+      },
+      "total": 3,
+      "keyFact": "",
+      "rationale": "消费级CPU游戏体验传闻（微口吃/1% lows），与储能/PCS/SST/AIDC供电无任何传导关联，且属无新事实支撑的未发布产品预测，触发负向清单，单家媒体转述传言证据也弱，不值得占用12条席位。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_bdac6bd2c718",
+      "title": "Ember的电动客车展示城际公交电气化已经到来",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 5,
+        "impact": 3,
+        "evidence": 8
+      },
+      "total": 21,
+      "keyFact": "苏格兰运营商Ember的城际电动客车案例被用来论证城际巴士电气化已经落地",
+      "rationale": "CleanTechnica的观点性特稿，摘要无任何具体数字、订单、政策或时间点，对储能/PCS/SST/AIDC读者仅是电动交通背景叙事，12条名额下信息增量不足，不值得占位。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_a99839b0a9b4",
+      "title": "SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将被1.2GW发电厂取代",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 13,
+        "impact": 8,
+        "evidence": 10
+      },
+      "total": 46,
+      "keyFact": "SpaceXAI承诺一年内移除全部69台未经许可的拖车式涡轮发电机，改由1.2GW电厂替代供电",
+      "rationale": "属AIDC供电的外围消息（数据中心自备燃气电源的环保合规进展），有新时间点（一年内移除）和1.2GW替代规模，但仅影响单一项目、不触及储能/PCS/SST供应链，且仅单家媒体转述、区域与当事方信息残缺，12条额度下属可舍的边缘项"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_7dab6a5acea3",
+      "title": "信不信由你，电动汽车电池更换即将来到美国",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 6
+      },
+      "total": 17,
+      "keyFact": "初创公司 Revoy 正向美国市场推销其电动车换电方案，CleanTechnica 称换电'可能'终于进入美国",
+      "rationale": "换电属电动车基础设施而非储能/PCS/SST/AIDC 主线，仅背景相关；内容为单家媒体对初创公司设想的预测性报道（'if Revoy succeeds'），无时间点、订单或项目等新事实，命中'无新事实支撑的观点预测'负向项故影响记 0，证据为单源且要素残缺，在 12 条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 6,
+        "impact": 4,
+        "evidence": 10
+      },
+      "total": 35,
+      "keyFact": "BESS与光伏推动澳大利亚NEM可再生能源渗透率过半，Squadron Energy CEO警告仅靠光伏混合无法支撑整个电力系统",
+      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_79eff84dbe8c",
+      "title": "由于AEMO启动故障电流试验，电网形成BESS尚未确认澳大利亚的最低系统强度",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 25,
+        "factualIncrement": 15,
+        "impact": 12,
+        "evidence": 13
+      },
+      "total": 65,
+      "keyFact": "AEMO启动故障电流试验，构网型BESS尚未被确认满足澳大利亚NEM最高档系统强度要求。",
+      "rationale": "构网型BESS的系统强度认定直接关系PCS/储能厂商在澳价值空间，属核心读者议题；但仅为试验启动与'尚未确认'的阶段性状态，无数字、无项目、无结论，单一行业媒体来源，信息增量与格局影响有限，属版面有余才保留的边缘条目。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_41d096d339fb",
+      "title": "Lattrex Inc.首席执行官Chuck McClish访谈",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 2,
+        "factualIncrement": 5,
+        "impact": 2,
+        "evidence": 6
+      },
+      "total": 15,
+      "keyFact": "无时钟异步可重构处理器创业公司Lattrex创始人Chuck McClish接受SemiWiki访谈，介绍其Kyttar架构",
+      "rationale": "芯片架构创业公司访谈与储能/PCS/SST/AIDC供电无实质关联，摘要无任何数字、时间点或当事方进展，属观点性推广内容且仅单一行业媒体来源，对12条版面而言无信息增量。"
+    }
+  ],
+  "disagreements": [
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "valueScore": 35,
+      "selectedFloor": 17,
+      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_79eff84dbe8c",
+      "title": "由于AEMO启动故障电流试验，电网形成BESS尚未确认澳大利亚的最低系统强度",
+      "valueScore": 65,
+      "selectedFloor": 17,
+      "rationale": "构网型BESS的系统强度认定直接关系PCS/储能厂商在澳价值空间，属核心读者议题；但仅为试验启动与'尚未确认'的阶段性状态，无数字、无项目、无结论，单一行业媒体来源，信息增量与格局影响有限，属版面有余才保留的边缘条目。"
+    }
+  ]
+}
