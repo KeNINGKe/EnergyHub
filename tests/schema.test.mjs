@@ -10,7 +10,8 @@ import assert from 'node:assert/strict';
 import {
   validateDailyV2,
   validateFeatured,
-  validateOverrides
+  validateOverrides,
+  validateEditorialPolicy
 } from '../scripts/lib/schema.mjs';
 
 /** 构造一份合法的 daily.json V2 样例。 */
@@ -320,4 +321,35 @@ test('B-03 增量字段类型校验：independentSourceCount/source.id/relatedSo
   assert.ok(r.errors.some(e => e.includes('source: id 出现时须为非空字符串')), r.errors.join(';'));
   assert.ok(r.errors.some(e => e.includes('items[1]') && e.includes('independentSourceCount')), r.errors.join(';'));
   assert.ok(r.errors.some(e => e.includes('publishedAt 非法')), r.errors.join(';'));
+});
+
+// ---- C-01 editorial-policy（编辑政策校验）----
+
+test('validateEditorialPolicy：骨架合法，active 未冻结门槛报错', () => {
+  const ok = {
+    schemaVersion: 1, selectionMode: 'legacy',
+    weights: { businessRelevance: 30, factualIncrement: 25, impact: 25, evidence: 20 },
+    thresholds: { valueScoreSelect: null },
+    shadow: { ruleThreshold: 3, nearBand: 1, auditSample: 5 },
+  };
+  assert.equal(validateEditorialPolicy(ok).valid, true);
+  // active 但门槛未冻结 → error
+  const active = { ...ok, selectionMode: 'active' };
+  const r = validateEditorialPolicy(active);
+  assert.equal(r.valid, false);
+  assert.ok(r.errors.some(e => e.includes('valueScoreSelect')));
+  // active 且门槛已冻结 → 通过
+  assert.equal(validateEditorialPolicy({ ...active, thresholds: { valueScoreSelect: 60 } }).valid, true);
+});
+
+test('validateEditorialPolicy：非法 mode / 权重 / shadow 参数报错', () => {
+  const base = {
+    schemaVersion: 1, selectionMode: 'legacy',
+    weights: { businessRelevance: 30, factualIncrement: 25, impact: 25, evidence: 20 },
+  };
+  assert.ok(!validateEditorialPolicy({ ...base, selectionMode: 'yolo' }).valid);
+  assert.ok(!validateEditorialPolicy({ ...base, weights: { ...base.weights, impact: -1 } }).valid);
+  assert.ok(!validateEditorialPolicy({ ...base, shadow: { auditSample: 'many' } }).valid);
+  assert.ok(!validateEditorialPolicy(null).valid);
+  assert.ok(!validateEditorialPolicy({ schemaVersion: 2, selectionMode: 'legacy' }).valid);
 });

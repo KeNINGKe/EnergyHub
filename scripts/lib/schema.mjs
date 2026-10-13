@@ -625,6 +625,53 @@ export async function validateEventOverrides(doc, daily) {
   return { valid: errors.length === 0, errors, warnings };
 }
 
+/**
+ * 校验编辑政策（阶段 C-01，data/editorial-policy.json）。
+ * - selectionMode 只允许 legacy|shadow|active；active 须门槛已冻结
+ *   （thresholds.valueScoreSelect 为数字），否则 error——留出集门槛冻结前
+ *   正式评分不可启用（方案 §6 验收要求）。
+ * - weights 四维数值有限且 ≥0；shadow 参数（ruleThreshold/nearBand/auditSample）
+ *   数值有限。note 类字段为字符串注释，不校验语义。
+ * @param {object} doc editorial-policy.json 内容
+ */
+export function validateEditorialPolicy(doc) {
+  const errors = [];
+  const warnings = [];
+  if (!doc || typeof doc !== 'object' || Array.isArray(doc)) {
+    return { valid: false, errors: ['editorial-policy 数据不是对象'], warnings };
+  }
+  if (doc.schemaVersion !== 1) {
+    errors.push(`editorial-policy.schemaVersion 应为 1，实际为 ${JSON.stringify(doc.schemaVersion)}`);
+  }
+  const modes = ['legacy', 'shadow', 'active'];
+  if (!modes.includes(doc.selectionMode)) {
+    errors.push(`editorial-policy.selectionMode 应为 ${modes.join('|')} 之一，实际为 ${JSON.stringify(doc.selectionMode)}`);
+  }
+  if (doc.selectionMode === 'active') {
+    const t = doc.thresholds?.valueScoreSelect;
+    if (!Number.isFinite(t)) {
+      errors.push('selectionMode=active 但 thresholds.valueScoreSelect 未冻结（须先通过留出集门槛，方案 §6）');
+    }
+  }
+  const weightKeys = ['businessRelevance', 'factualIncrement', 'impact', 'evidence'];
+  const w = doc.weights || {};
+  for (const k of weightKeys) {
+    if (!Number.isFinite(w[k]) || w[k] < 0) {
+      errors.push(`editorial-policy.weights.${k}: 应为 ≥0 的数值（初值 ${k === 'businessRelevance' ? 30 : k === 'evidence' ? 20 : 25}，校准前不动门槛）`);
+    }
+  }
+  for (const k of ['ruleThreshold', 'nearBand', 'auditSample']) {
+    const v = doc.shadow?.[k];
+    if (v != null && (!Number.isFinite(v) || v < 0)) {
+      errors.push(`editorial-policy.shadow.${k}: 应为 ≥0 的数值`);
+    }
+  }
+  if (doc.updatedAt != null && !isIsoDate(String(doc.updatedAt))) {
+    warnings.push('editorial-policy.updatedAt 不是合法 ISO 日期');
+  }
+  return { valid: errors.length === 0, errors, warnings };
+}
+
 /* ===== 汇总入口 ===== */
 
 /**
@@ -696,6 +743,12 @@ export async function validateCurrentData() {
   if (eventOverrides) {
     reports.eventOverrides = await validateEventOverrides(eventOverrides, daily);
     if (!reports.eventOverrides.valid) valid = false;
+  }
+
+  const editorialPolicy = await readJson(path.join(root, 'data/editorial-policy.json'));
+  if (editorialPolicy) {
+    reports.editorialPolicy = validateEditorialPolicy(editorialPolicy);
+    if (!reports.editorialPolicy.valid) valid = false;
   }
 
   return { valid, reports };

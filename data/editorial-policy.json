@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-13T00:00:00.000Z",
+  "updatedBy": "dev",
+  "note": "编辑政策（阶段 C-01，AIHOT_IMPLEMENTATION_PLAN §6）。selectionMode: legacy=纯规则分（现行，行为不变）| shadow=影子评分（LLM 业务价值分只写 .state/shadow/，不碰 feeds/榜单/钉钉）| active=正式启用（须通过留出集门槛后方可设置）。weights 是价值评分四维的初始设计，须用 dev 集校准后才能动门槛，不是既定有效权重。",
+  "selectionMode": "legacy",
+  "weights": {
+    "businessRelevance": 30,
+    "factualIncrement": 25,
+    "impact": 25,
+    "evidence": 20
+  },
+  "thresholds": {
+    "note": "门槛在基线测得后冻结（方案 §6：明确标签样本查准率 ≥90%、查全率 ≥80% 等）；冻结前 active 模式不可用。",
+    "valueScoreSelect": null,
+    "conflictReviewBand": 0.5
+  },
+  "shadow": {
+    "note": "影子模式参数：对已选 12 条 + 近门槛带（importance ≥ ruleThreshold-1）评分；另按日期种子抽 auditSample 条未入候选事件做截断审计（方案 §6：防候选截断导致重要事件永远看不见）。",
+    "ruleThreshold": 3,
+    "nearBand": 1,
+    "auditSample": 5
+  }
+}
