@@ -15,6 +15,13 @@ on:
         type: boolean
         default: false
 
+# AI 回执状态（.state/ai）经 artifact 跨运行恢复（阶段 C-02）。并发 run
+# （迟到定时/守卫补发/手动）若同时写回执分片会交叉覆盖——串行排队不取消：
+# 后到的 run 排队执行，用最新 artifact 恢复，不丢任何一次的写入。
+concurrency:
+  group: fetch-feeds
+  cancel-in-progress: false
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -38,6 +45,16 @@ jobs:
       - name: Verify code and existing data
         run: npm run verify
 
+      # AI 回执缓存/用量账本恢复（阶段 C-02）：上一次 run 上传的 ai-state
+      # artifact 下载回 .state/ai——同输入的调用命中缓存不再付费重调。
+      # artifact 不存在（首次运行/已过期）按无缓存冷启动，不报错。
+      - name: Restore AI receipts state
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: ai-state
+          path: .state/ai
+
       - name: Build V2 daily feed
         run: npm run build:v2
         env:
@@ -55,6 +72,13 @@ jobs:
           # 备胎关闭，行为不变。URL 也是内部服务地址，一并放 secret。
           JEV_FALLBACK_BASE_URL: ${{ secrets.JEV_FALLBACK_BASE_URL }}
           JEV_FALLBACK_API_KEY: ${{ secrets.JEV_FALLBACK_API_KEY }}
+          # 阶段 C-02：AI 回执层（缓存/额度守卫）构建标识与预算。buildId 用
+          # run_id 归一；预算默认值见 lib/ai-receipts.mjs，未配 vars 时留空走默认。
+          AI_BUILD_ID: gh-run-${{ github.run_id }}
+          AI_BUDGET_CALLS_PER_BUILD: ${{ vars.AI_BUDGET_CALLS_PER_BUILD }}
+          AI_BUDGET_CALLS_24H: ${{ vars.AI_BUDGET_CALLS_24H }}
+          AI_BUDGET_TOKENS_24H: ${{ vars.AI_BUDGET_TOKENS_24H }}
+          AI_BUDGET_COST_24H: ${{ vars.AI_BUDGET_COST_24H }}
           # 原始输入快照（阶段 A 基线积累）：把管线真实输入（翻译+种子注入后）
           # gzip 进 samples/raw/<date>/，为未来基线保存 V2 时代日期。线上构建
           # 从不持久化原始输入，不快照则事后无法补齐。滚动清理见 prune 步骤。
@@ -63,6 +87,19 @@ jobs:
       - name: Prune raw snapshots
         # 保留 30 天滚动清理（单日 gzip 后约 60~120KB）；先清理再 add。
         run: node scripts/prune-raw-snapshots.mjs --keep=30
+
+      # AI 回执状态上传（阶段 C-02）：always() 保证构建失败也尽力保住已发生的
+      # 调用回执与账本（进程被强杀前的最后一次响应不保证落地——方案 §6 已声明
+      # 不承诺严格只计费一次）。artifact 只保留 30 天 bounding storage。
+      # 并发组保证同一时刻只有一个 run 写此 artifact，无交叉覆盖。
+      - name: Upload AI receipts state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-state
+          path: .state/ai
+          retention-days: 30
+          if-no-files-found: ignore
 
       - name: Commit and push
         id: commit

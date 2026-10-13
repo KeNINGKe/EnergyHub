@@ -32,3 +32,7 @@ scripts/check-results.json
 
 # 后台保存时自动备份的上一版
 *.bak
+
+# AI 调用回执缓存与用量账本（阶段 C-02）：不进 git（含运行状态，体积随调用
+# 增长），线上经 fetch-feeds.yml 的 ai-state artifact 跨运行恢复；不进部署包。
+.state/
