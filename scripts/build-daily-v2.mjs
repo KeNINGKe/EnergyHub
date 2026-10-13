@@ -106,9 +106,22 @@ export function selectFeatured(events, enums, opts = {}) {
   const topicCount = {};
   const srcCount = {};
   const reserved = new Set();
-  events = events.filter(ev => !isUnlistableEvent(ev, enums)); // 旧文翻出/大陆不可达不进精选
-  const admit = (ev) => {
+  // C-01 selectionTrace：逐事件记录入选阶段/落选原因（内部诊断，不入公开协议，
+  // 人工覆盖前的自动选择口径；人工 hotEventIds/featuredIds 整体替换另见 overrides）
+  const outcome = new Map();
+  const note = (ev, stage, reason) => outcome.set(ev.id, {
+    selectionStage: stage,
+    ...(reason ? { rejectReason: reason } : {}),
+  });
+  const unlistable = [];
+  events = events.filter(ev => { // 旧文翻出/大陆不可达不进精选
+    if (isUnlistableEvent(ev, enums)) { unlistable.push(ev); return false; }
+    return true;
+  });
+  for (const ev of unlistable) note(ev, 'not-selected', 'unlistable');
+  const admit = (ev, stage) => {
     reserved.add(ev.id);
+    note(ev, stage);
     selected.push(ev);
     const t = ev.topic || 'other-energy';
     topicCount[t] = (topicCount[t] || 0) + 1;
@@ -122,7 +135,7 @@ export function selectFeatured(events, enums, opts = {}) {
     if (selected.length >= wechatQuota) break;
     if (!(ev.wechat === true) || reserved.has(ev.id)) continue;
     if (!isFresh(ev)) continue;
-    admit(ev);
+    admit(ev, 'wechat-quota');
   }
 
   // 预选：优先主题保底（enums.priorityTopics，如 SST/PCS）。每个优先主题各占
@@ -137,30 +150,42 @@ export function selectFeatured(events, enums, opts = {}) {
     if (ev.importance < threshold) continue;
     if (reserved.has(ev.id)) continue;
     if (!isFreshPriority(ev)) continue;   // 优先主题用 7 天窗（见上）
-    admit(ev);
+    admit(ev, 'priority-quota');
     priorityUsed[ev.topic] = (priorityUsed[ev.topic] || 0) + 1;
   }
 
   // 主选：其余事件按重要性降序 + 主题/来源配额（已预选的微信/优先主题事件跳过）
   // 跨日曝光记忆：近 N 天上过榜的事件先靠后——新事件选满 maxFeatured 才轮到
   // 它们按原配额回填（防止同一新闻连续几天霸榜，见 lib/exposure.mjs 头注）。
-  const runMainSelect = (list) => {
+  const runMainSelect = (list, stage) => {
     for (const ev of list) {
-      if (ev.importance < threshold) break; // 已按重要性降序，低于门槛即可停
+      if (ev.importance < threshold) { // 已按重要性降序，低于门槛即可停
+        if (!outcome.has(ev.id)) note(ev, 'not-selected', 'below-threshold');
+        break;
+      }
       if (selected.length >= maxFeatured) break;
       if (reserved.has(ev.id)) continue;
-      if (!isFresh(ev)) continue; // 超过时效窗口的旧事件不进精选
+      if (!isFresh(ev)) { // 超过时效窗口的旧事件不进精选
+        if (!outcome.has(ev.id)) note(ev, 'not-selected', 'stale');
+        continue;
+      }
       const t = ev.topic || 'other-energy';
-      if ((topicCount[t] || 0) >= maxPerTopic) continue;
-      if ((srcCount[ev.source.name] || 0) >= maxPerSource) continue;
-      admit(ev);
+      if ((topicCount[t] || 0) >= maxPerTopic) {
+        if (!outcome.has(ev.id)) note(ev, 'not-selected', 'topic-quota');
+        continue;
+      }
+      if ((srcCount[ev.source.name] || 0) >= maxPerSource) {
+        if (!outcome.has(ev.id)) note(ev, 'not-selected', 'source-quota');
+        continue;
+      }
+      admit(ev, stage);
     }
   };
   if (opts.exposedUrls?.size) {
-    runMainSelect(events.filter(ev => !isRecentlyExposed(ev, opts.exposedUrls)));
-    runMainSelect(events.filter(ev => isRecentlyExposed(ev, opts.exposedUrls))); // 回填
+    runMainSelect(events.filter(ev => !isRecentlyExposed(ev, opts.exposedUrls)), 'main');
+    runMainSelect(events.filter(ev => isRecentlyExposed(ev, opts.exposedUrls)), 'exposure-backfill'); // 回填
   } else {
-    runMainSelect(events);
+    runMainSelect(events, 'main');
   }
 
   const featuredEventIds = selected.map(ev => ev.id);
@@ -175,7 +200,84 @@ export function selectFeatured(events, enums, opts = {}) {
       const topicLabel = enums.topics.find(x => x.id === t)?.label || t;
       return `【${topicLabel}】${ev.title}`;
     });
-  return { featuredEventIds, observations };
+
+  // selectionTrace：全部候选（含不可上榜者）的逐事件诊断快照。signals 与
+  // score.mjs importance 的判定材料同源（priorityCompany/policyBoost 用同一
+  // keywordHit 语义重查），保证「为什么这条没进精选」可回答。
+  const companies = Array.isArray(enums.priorityCompanies) ? enums.priorityCompanies : [];
+  const pb = enums.policyBoost;
+  const regionGroups = enums?.hot?.regionGroups || {};
+  const regionGroupOf = (region) => {
+    for (const [g, names] of Object.entries(regionGroups)) {
+      if (names.includes(region)) return g;
+    }
+    return null;
+  };
+  const ageH = (ev) => {
+    const t = new Date(ev.publishedAt).getTime();
+    return Number.isFinite(t) ? Math.round(((nowMs - t) / 3600e3) * 10) / 10 : null;
+  };
+  const traceOf = (ev) => {
+    const o = outcome.get(ev.id) || { selectionStage: 'not-selected', rejectReason: 'quota-full' };
+    const text = [ev.title, ev.originalTitle, ev.summary].filter(Boolean).join(' ');
+    return {
+      eventId: ev.id,
+      title: String(ev.title || '').slice(0, 120),
+      ruleScore: ev.importance,
+      selected: reserved.has(ev.id),
+      selectionStage: o.selectionStage,
+      ...(o.rejectReason ? { rejectReason: o.rejectReason } : {}),
+      signals: {
+        topic: ev.topic || 'other-energy',
+        sourceType: ev.source?.type ?? null,
+        sourceName: ev.source?.name ?? null,
+        region: ev.region || null,
+        regionGroup: regionGroupOf(ev.region),
+        priorityTopic: priorityTopics.includes(ev.topic),
+        priorityCompany: companies.length > 0 && (ev.entities || []).some(e => companies.includes(e)),
+        policyBoost: Boolean(pb && Array.isArray(pb.actions) && Array.isArray(pb.techs)
+          && pb.actions.some(k => keywordHit(text, k)) && pb.techs.some(k => keywordHit(text, k))),
+        independentSourceCount: Number.isFinite(ev.independentSourceCount) ? ev.independentSourceCount : null,
+        scaleTier: scaleScore(ev, enums?.hot?.scaleTiers),
+        ageH: ageH(ev),
+        wechat: ev.wechat === true,
+        recentlyExposed: Boolean(opts.exposedUrls?.size && isRecentlyExposed(ev, opts.exposedUrls)),
+      },
+    };
+  };
+  // 兜底：主选因 maxFeatured 提前 break 而未评估的高分事件（quota-full），
+  // 以及循环短路没碰到的 below-threshold
+  for (const ev of events) {
+    if (!outcome.has(ev.id)) note(ev, 'not-selected', ev.importance < threshold ? 'below-threshold' : 'quota-full');
+  }
+  const trace = [...unlistable, ...events].map(traceOf);
+  return { featuredEventIds, observations, trace };
+}
+
+/**
+ * selectionTrace 摘要（基线报告用，纯函数）：落选原因分布 + 最高分落选清单
+ * （人工审查「高分为什么没进精选」的第一入口）。
+ */
+export function summarizeSelectionTrace(trace) {
+  const rows = trace || [];
+  const byStage = {};
+  const byReason = {};
+  for (const t of rows) {
+    byStage[t.selectionStage] = (byStage[t.selectionStage] || 0) + 1;
+    if (t.rejectReason) byReason[t.rejectReason] = (byReason[t.rejectReason] || 0) + 1;
+  }
+  const topRejected = rows
+    .filter(t => !t.selected)
+    .sort((a, b) => (b.ruleScore || 0) - (a.ruleScore || 0))
+    .slice(0, 10)
+    .map(t => ({ eventId: t.eventId, title: t.title, ruleScore: t.ruleScore, rejectReason: t.rejectReason || null }));
+  return {
+    total: rows.length,
+    selected: rows.filter(t => t.selected).length,
+    byStage,
+    byReason,
+    topRejected,
+  };
 }
 
 /**
@@ -603,8 +705,20 @@ export async function processItems(rawItems, ctx) {
   // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now；
   //    exposedUrls/exposedAges 为跨日曝光记忆：精选用布尔视角靠后/回填，
   //    热点榜用天龄视角做衰减软惩罚，均可为空）
-  const { featuredEventIds, observations } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls });
+  const { featuredEventIds, observations, trace: selectionTrace } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls, exposedAges });
   const hotEventIds = selectHot(capped, enums, { exposedAges });
+  // C-01 selectionTrace 可选落盘（内部诊断，不进 feeds；人工覆盖前的自动口径）
+  if (process.env.SELECTION_TRACE_DIR && selectionTrace?.length) {
+    try {
+      await fs.mkdir(process.env.SELECTION_TRACE_DIR, { recursive: true });
+      await fs.writeFile(
+        path.join(process.env.SELECTION_TRACE_DIR, `${date}.json`),
+        JSON.stringify({ date, generatedAt: now.toISOString(), selectionTrace }, null, 2) + '\n'
+      );
+    } catch (e) {
+      console.warn(`  [选择轨迹] 落盘失败（不影响构建）：${e.message}`);
+    }
+  }
 
   const daily = {
     schemaVersion: 2,
@@ -639,7 +753,7 @@ export async function processItems(rawItems, ctx) {
     stats.overrideErrors = errors.length;
   }
 
-  return { daily, featured, stats };
+  return { daily, featured, stats, selectionTrace };
 }
 
 /** 原子写：先写 .tmp，校验通过后 rename 覆盖；失败则删除临时文件。 */

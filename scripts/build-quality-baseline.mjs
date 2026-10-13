@@ -34,7 +34,7 @@ import { exposedUrlSet, exposedUrlAgeMap, eventFingerprint } from './lib/exposur
 import { canonicalUrl } from './lib/compat.mjs';
 import { collectVersionManifest, sha256File, sha256String, canonicalJson } from './lib/digest.mjs';
 import { _resetFixtureState, _fixtureWriteStatus, loadFixtureEntries } from './lib/jev.mjs';
-import { loadReplayItems, resolveReplayNow, processItems, atomicWrite } from './build-daily-v2.mjs';
+import { loadReplayItems, resolveReplayNow, processItems, atomicWrite, summarizeSelectionTrace } from './build-daily-v2.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
@@ -233,7 +233,7 @@ async function main() {
     const exposedAges = exposureHistory ? exposedUrlAgeMap(exposureHistory, date, exposureDays) : new Map();
 
     const startedAt = Date.now();
-    const { daily, featured, stats } = await processItems(replayData.items, {
+    const { daily, featured, stats, selectionTrace } = await processItems(replayData.items, {
       date, now: replayNow, filters, enums, sourceTypes, sourceMap,
       overridesForDate: overrides.byDate?.[date],
       globalHiddenIds: overrides.globalHiddenIds || [],
@@ -297,6 +297,9 @@ async function main() {
       featured: (featured.featuredEventIds || []).map(id => ({ id, title: titleOf(daily, id) })),
       hot: (featured.hotEventIds || []).map(id => ({ id, title: titleOf(daily, id) })),
       observations: featured.observations || [],
+      // C-01 selectionTrace 摘要（内部诊断口径：人工覆盖前的自动选择；
+      // 落选原因分布 + 最高分落选清单，供精选评测与规则调优定位问题）
+      selectionTrace: selectionTrace ? summarizeSelectionTrace(selectionTrace) : null,
       missedMerges: { count: missed.missedCount, totalGroups: missed.totalGroups, groups: missed.groups },
       // B-01 起并存两份合并记录：mergeDecisions=管线过程日志（judgePair 决策/人工
       // 约束/Jev 仲裁，legacy 口径为 null）；mergeMembers=产物推导版（最终成员清单，

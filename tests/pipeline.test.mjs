@@ -452,3 +452,67 @@ test('atomicWrite：校验通过则原子替换', async () => {
   assert.deepEqual(after, good);
   await fs.rm(dir, { recursive: true, force: true });
 });
+
+// ---- C-01 selectionTrace（内部诊断轨迹）----
+
+test('selectFeatured：selectionTrace 逐事件记录入选阶段与落选原因', () => {
+  const mk = (id, importance, topic, source, extra = {}) => ({
+    id, importance, topic, source: { name: source, type: 'media' }, publishedAt: FPUB, ...extra,
+  });
+  const events = [ // 按重要性降序（processItems 调用前已排序，测试同口径）
+    mk('evt_stale', 4.5, 'grid', 'S5', { publishedAt: '2026-08-01T00:00:00Z' }), // 超时效 → stale
+    mk('evt_a', 4, 'grid', 'S1'),
+    mk('evt_b', 3.5, 'grid', 'S2'),
+    mk('evt_c', 3.5, 'grid', 'S3'),   // 同主题第 3 条 → topic-quota
+    mk('evt_d', 2, 'grid', 'S4'),     // 低于门槛 → below-threshold
+  ];
+  const { trace } = selectFeatured(events, enums, FSELECT);
+  assert.equal(trace.length, events.length, '全部候选都有轨迹');
+  const by = Object.fromEntries(trace.map(t => [t.eventId, t]));
+  assert.equal(by.evt_a.selected, true);
+  assert.equal(by.evt_a.selectionStage, 'main');
+  assert.equal(by.evt_a.signals.topic, 'grid');
+  assert.equal(by.evt_d.selected, false);
+  assert.equal(by.evt_d.rejectReason, 'below-threshold');
+  assert.equal(by.evt_c.rejectReason, 'topic-quota');
+  assert.equal(by.evt_stale.rejectReason, 'stale');
+  assert.equal(typeof by.evt_a.signals.priorityTopic, 'boolean');
+  assert.equal(typeof by.evt_a.signals.ageH, 'number');
+});
+
+test('selectFeatured：不可上榜事件记 unlistable，曝光回填记 exposure-backfill', () => {
+  const mk = (id, url, extra = {}) => ({
+    id, url, region: '中国', importance: 4, topic: 'energy-storage',
+    source: { name: 'S' + id }, publishedAt: FPUB, ...extra,
+  });
+  const blocked = mk('evt_blk', 'https://www.energynow.com/2026/08/fresh-item/');
+  const fresh = mk('evt_ok', 'https://www.energy-storage.news/a/');
+  const exposed = mk('evt_exp', 'https://www.energy-storage.news/b');
+  const trace = selectFeatured([blocked, fresh, exposed], enums, {
+    ...FSELECT,
+    exposedUrls: new Set(['https://www.energy-storage.news/b']), // canonicalUrl 归一后无尾斜杠
+  }).trace;
+  const by = Object.fromEntries(trace.map(t => [t.eventId, t]));
+  assert.equal(by.evt_blk.rejectReason, 'unlistable');
+  assert.equal(by.evt_blk.selected, false);
+  assert.equal(by.evt_exp.selected, true);
+  assert.equal(by.evt_exp.selectionStage, 'exposure-backfill');
+  assert.equal(by.evt_exp.signals.recentlyExposed, true);
+  assert.equal(by.evt_ok.signals.recentlyExposed, false);
+});
+
+test('summarizeSelectionTrace：落选原因分布 + 最高分落选清单', async () => {
+  const { summarizeSelectionTrace } = await import('../scripts/build-daily-v2.mjs');
+  const trace = [
+    { eventId: 'a', title: 'A', ruleScore: 5, selected: true, selectionStage: 'main' },
+    { eventId: 'b', title: 'B', ruleScore: 4.5, selected: false, selectionStage: 'not-selected', rejectReason: 'topic-quota' },
+    { eventId: 'c', title: 'C', ruleScore: 4.2, selected: false, selectionStage: 'not-selected', rejectReason: 'stale' },
+    { eventId: 'd', title: 'D', ruleScore: 2, selected: false, selectionStage: 'not-selected', rejectReason: 'below-threshold' },
+  ];
+  const s = summarizeSelectionTrace(trace);
+  assert.equal(s.total, 4);
+  assert.equal(s.selected, 1);
+  assert.equal(s.byReason['topic-quota'], 1);
+  assert.equal(s.topRejected[0].eventId, 'b');
+  assert.equal(s.topRejected.length, 3);
+});
