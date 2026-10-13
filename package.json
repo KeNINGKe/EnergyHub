@@ -14,6 +14,7 @@
     "baseline": "node scripts/build-baseline.mjs",
     "baseline:upgrade": "node scripts/build-quality-baseline.mjs",
     "eval:filter": "node scripts/eval-filter.mjs",
+    "eval:selection": "node scripts/eval-selection.mjs",
     "build:v2": "node scripts/build-daily-v2.mjs",
     "build:v2:replay": "node scripts/build-daily-v2.mjs --replay",
     "validate": "node scripts/validate-data.mjs",

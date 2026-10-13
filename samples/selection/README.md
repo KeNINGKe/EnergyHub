@@ -53,11 +53,19 @@ reject 的负向理由（符合任一基本 reject）：
 4. 点「导出标注 JSON」，用导出文件覆盖 `samples/selection/labels.json`（或复制粘贴）。
 5. 提交时连同 `set.json` 一起入库。
 
-## 标注完成之后（C-01 后续，另行实施）
+## 标注完成之后（C-01，评测框架已实现）
 
-- 按事件组 70%/30% 划分开发集/留出集，同一事件的转载/中英文版本不得跨集合；
-- `scripts/eval-selection.mjs` 输出查准/查全、Top-5 认可率、重要事件漏选数；
-- 达到方案 §C-01 冻结门槛后新评分才从影子转正式。
+- `npm run eval:selection`：dev 集指标（查准/查全、Top-5 认可率、重要事件漏选、
+  主题分组、误选/漏选错例）；`npm run eval:selection -- --holdout` 看留出集
+  （仅版本验收用，不用于反复调提示词）。报告落 `eval-report.json`。
+- dev/holdout 按事件组 70%/30% 确定性划分（种子 20261013），同一事件的转载/
+  中英文版本不跨集合；`eventGroupId` 为空的样本各自单独成组。
+- 口径：「未进精选」= 被过滤/未聚类/落选的合并视角（评测回答「管线给对了吗」，
+  分层定位用基线报告的 selectionTrace）。
+- 影子业务价值评分（规则分 vs LLM 价值分对比）见
+  `samples/baseline/quality-upgrade/_shadow/`（`--shadow-value` 回放产出）。
+- 达到方案 §C-01 冻结门槛（基线测得后冻结）后，新评分才从影子转正式
+  （editorial-policy.json 的 selectionMode: legacy→shadow→active）。
 
 ## 与旧标注（samples/annotations/）的关系
 
