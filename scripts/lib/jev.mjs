@@ -27,6 +27,10 @@
  *                       夹具 header 的 source 字段标注来源（jev-direct / fallback:<模型>）。
  *                       key = canonicalJson(payload) 的 sha256 前 16 位，payload 变
  *                       （提示词/enums/输入）即失效需重录。
+ *   AI_RECEIPTS=off    统一回执层旁路（阶段 C-02，lib/ai-receipts.mjs）。live 调用
+ *                       默认经回执缓存（同输入版本 0 付费重调）与额度守卫
+ *                       （AI_BUDGET_* 上限，超额逐条降级不阻断构建）；夹具模式
+ *                       （REPLAY/RECORD 任一设置）自动旁路，离线回放保持纯净。
  *
  * 传输（2026-09-21 由 Vercel AI Gateway 免费档切换为直连）：
  *   - 免费档网关对该模型限流极紧（并发 3 连发约 4 条即封、封锁数分钟），
@@ -44,7 +48,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { pathToFileURL, fileURLToPath } from 'node:url';
-import { canonicalJson } from './digest.mjs';
+import { canonicalJson, sha256String } from './digest.mjs';
+import { withReceipts, receiptsEnabled, defaultStoreInstance, defaultGuardInstance } from './ai-receipts.mjs';
 
 const API_URL = 'https://api.typesafe.ai/v1/systemone';
 const MODEL = 'jev-latest';
@@ -193,8 +198,8 @@ export function parseFallbackContent(content, payload) {
   return { answers };
 }
 
-/** 调备胎网关（OpenAI 兼容 chat/completions），返回 Jev 同构 result 或抛错。 */
-async function callFallback(payload, cfg) {
+/** 调备胎网关（OpenAI 兼容 chat/completions），返回 { value, usage } 或抛错。 */
+async function callFallbackWithUsage(payload, cfg) {
   // 上游瞬时不可用短退避重试：聚合网关（如 OpenRouter）对同一模型的路由会
   // 间歇 404/5xx 抖动，连发时更明显（2026-10-12 夹具录制实测 404 率可爬到
   // 大半）。重试成功的不记 error——避免夹具被瞬时抖动污染成失败回执。
@@ -277,7 +282,11 @@ async function callFallbackOnce(payload, cfg) {
       const hint = choice?.finish_reason === 'length' ? '（finish_reason=length：输出被 max_tokens 截断）' : '';
       throw new Error(`fallback 应答无法解析${hint}: ${String(content).slice(0, 120)}`);
     }
-    return parsed;
+    // usage 透传给回执层记账（C-02 用量账本；直连 Jev 不返回 usage 记 null）
+    const usage = json?.usage && Number.isFinite(json.usage.prompt_tokens)
+      ? { promptTokens: json.usage.prompt_tokens, completionTokens: json.usage.completion_tokens ?? null }
+      : null;
+    return { value: parsed, usage };
   } finally {
     clearTimeout(timer);
   }
@@ -400,8 +409,10 @@ function recordFixture(recordFile, payload, outcome) {
  * （限流/欠费/服务不可用/超时）。备胎同样失败则抛出，由 runPool 按既有容错处理。
  * 录制（JEV_RECORD_FILE）记录的是本次实际使用的回执——配置了备胎且直连无 key
  * 时直接走备胎（直连必 401 没必要白打），夹具 header 的 source 字段标注来源。
+ * @param {object} payload 判定问题结构
+ * @param {{task?: string}} [meta] 回执层任务标签（jev:review / jev:topic / jev:merge）
  */
-async function callJudge(payload) {
+async function callJudge(payload, meta = {}) {
   const replayFile = process.env.JEV_REPLAY_FILE;
   const recordFile = process.env.JEV_RECORD_FILE;
   if (replayFile && recordFile) {
@@ -430,30 +441,70 @@ async function callJudge(payload) {
       if (hit && !hit.error) return structuredClone(hit.result);
     } catch { /* 夹具文件不存在/不可读：正常全新录制 */ }
   }
-  try {
-    // 无直连 key 且备胎已配置：跳过注定 401 的直连，直接备胎（录制备胎回执场景）
-    const result = (process.env.TYPESAFE_API_KEY || !fallbackConfigured())
-      ? await callJev(payload)
-      : await callFallback(payload, fallbackConfig());
-    if (recordFile) await recordFixture(recordFile, payload, { result });
+  // C-02 统一回执层：live 且未旁路（AI_RECEIPTS=off / 夹具模式）时经缓存/额度包装。
+  // 缓存命中 → 0 付费调用；额度耗尽抛 BudgetExhaustedError → runPool 逐条降级
+  // （不阻断构建）。备胎中途接盘时 respondedBy 如实标注实际应答方，缓存键仍按
+  // 发起方口径（直连/备胎的应答按设计同构，跨 provider 复用是预期语义）。
+  if (receiptsEnabled()) {
+    const provider = process.env.TYPESAFE_API_KEY ? 'jev-direct' : 'fallback';
+    const model = provider === 'jev-direct' ? MODEL : fallbackConfig().model;
+    const promptHash = provider === 'jev-direct'
+      ? fixtureKey(payload)
+      : sha256String(buildFallbackPrompt(payload));
+    const inputHash = fixtureKey(payload);
+    // 影响判定结果的运行时开关快照（救援阈值/合并上限；备胎模型切换已由
+    // provider/model/promptHash 覆盖，不在此重复）
+    const configHash = sha256String(canonicalJson({
+      rescueThreshold: rescueThreshold(),
+      mergePairs: process.env.JEV_MERGE_PAIRS || null,
+    }));
+    const { result } = await withReceipts(
+      {
+        task: meta.task || 'jev:judge', provider, model, promptHash, configHash, inputHash,
+        store: defaultStoreInstance(), guard: defaultGuardInstance(),
+      },
+      async () => {
+        const r = await callLiveWithUsage(payload);
+        return { ...r, respondedBy: r.respondedBy || provider };
+      },
+    );
     return result;
-  } catch (e) {
-    if (!fallbackConfigured()) {
-      if (recordFile) await recordFixture(recordFile, payload, { error: String(e?.message || e) });
-      throw e;
-    }
-    if (!fallbackWarned) {
-      fallbackWarned = true;
-      console.warn(`Jev 调用失败，本次构建降级 Plan B 备胎（${fallbackConfig().model}）：${String(e?.message || e).slice(0, 150)}`);
-    }
+  }
+  const { value } = await callLiveWithUsage(payload);
+  return value;
+}
+
+/**
+ * live 调用（直连 → 失败降级备胎），返回 { value, usage, respondedBy }。
+ * 与原 callJudge 内联逻辑等价：无直连 key 且备胎已配置时跳过注定 401 的直连；
+ * 直连失败且备胎在位时降级（只警告一次）；录制模式沿用 recordFixture 落盘。
+ */
+async function callLiveWithUsage(payload) {
+  const recordFile = process.env.JEV_RECORD_FILE;
+  const tryDirect = process.env.TYPESAFE_API_KEY || !fallbackConfigured();
+  if (tryDirect) {
     try {
-      const fbResult = await callFallback(payload, fallbackConfig());
-      if (recordFile) await recordFixture(recordFile, payload, { result: fbResult });
-      return fbResult;
-    } catch (e2) {
-      if (recordFile) await recordFixture(recordFile, payload, { error: String(e2?.message || e2) });
-      throw e2;
+      const value = await callJev(payload);
+      if (recordFile) await recordFixture(recordFile, payload, { result: value });
+      return { value, usage: null, respondedBy: 'jev-direct' };
+    } catch (e) {
+      if (!fallbackConfigured()) {
+        if (recordFile) await recordFixture(recordFile, payload, { error: String(e?.message || e) });
+        throw e;
+      }
+      if (!fallbackWarned) {
+        fallbackWarned = true;
+        console.warn(`Jev 调用失败，本次构建降级 Plan B 备胎（${fallbackConfig().model}）：${String(e?.message || e).slice(0, 150)}`);
+      }
     }
+  }
+  try {
+    const fb = await callFallbackWithUsage(payload, fallbackConfig());
+    if (recordFile) await recordFixture(recordFile, payload, { result: fb.value });
+    return { ...fb, respondedBy: `fallback:${fallbackConfig().model}` };
+  } catch (e2) {
+    if (recordFile) await recordFixture(recordFile, payload, { error: String(e2?.message || e2) });
+    throw e2;
   }
 }
 
@@ -492,7 +543,7 @@ export async function reviewOne(item, enums) {
         criteria: topicCriteria(enums),
       },
     },
-  });
+  }, { task: 'jev:review' });
   if (!result?.answers?.relevant) return null;
 
   const rel = result.answers.relevant;
@@ -599,7 +650,7 @@ export async function reviewTopic(item, enums) {
         criteria: topicCriteria(enums),
       },
     },
-  });
+  }, { task: 'jev:topic' });
   const choice = result?.answers?.topic?.choice;
   return enums.topics?.some(t => t.id === choice) ? choice : null;
 }
@@ -650,7 +701,7 @@ export function pairJudgePayload(a, b) {
 }
 
 export async function reviewPair(a, b) {
-  const result = await callJudge(pairJudgePayload(a, b));
+  const result = await callJudge(pairJudgePayload(a, b), { task: 'jev:merge' });
   const n = result?.answers?.same?.noul;
   return typeof n === 'number' ? n : null;
 }
