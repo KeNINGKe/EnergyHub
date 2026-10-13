@@ -19,7 +19,8 @@ import zlib from 'node:zlib';
 import { fileURLToPath } from 'node:url';
 import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
-import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration } from './lib/jev.mjs';
+import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration, fallbackConfigured } from './lib/jev.mjs';
+import { runShadowScoring } from './lib/selection-score.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
 import { resolveSourceId, loadSourceAliases, articleId } from './lib/identity.mjs';
 import { extractItem } from './lib/extract.mjs';
@@ -432,7 +433,7 @@ export function ensureNonEmptyBuild(stats, { dryRun = false } = {}) {
 }
 
 export async function processItems(rawItems, ctx) {
-  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls, exposedAges } = ctx;
+  const { date, now, filters, enums, sourceTypes, sourceMap, overridesForDate, globalHiddenIds, exposedUrls, exposedAges, editorialPolicy } = ctx;
   const stats = { raw: rawItems.length, staleFiltered: 0, duplicatesRemoved: 0, filteredOut: 0, events: 0, featured: 0, hot: 0 };
   // B-03 来源身份解析上下文：ctx.identityCtx 可注入（回放/测试），否则现加载别名表
   const identityCtx = ctx.identityCtx || { sourceMap, aliases: await loadSourceAliases() };
@@ -734,6 +735,30 @@ export async function processItems(rawItems, ctx) {
     items: capped
   };
 
+  // 7b. C-01 影子业务价值评分（selectionMode=shadow）：只写 .state/shadow/
+  //     （或调用方指定 outDir），不进 feeds、不改榜单、不动曝光、不推钉钉。
+  //     夹具模式（SHADOW_REPLAY/RECORD_FILE，基线 --shadow-value）优先；
+  //     无备胎网关且非夹具模式时跳过（影子是增益，不阻断构建）。
+  let shadowReport = null;
+  if (editorialPolicy?.selectionMode === 'shadow') {
+    const shadowFixtures = process.env.SHADOW_REPLAY_FILE || process.env.SHADOW_RECORD_FILE;
+    if (shadowFixtures || fallbackConfigured()) {
+      const outDir = process.env.SHADOW_DIR
+        ? path.join(process.env.SHADOW_DIR, `selection-${date}.json`)
+        : path.join(ROOT, '.state', 'shadow', `selection-${date}.json`);
+      shadowReport = await runShadowScoring({
+        date, events: capped, featuredEventIds,
+        policy: editorialPolicy, outDir, now: now.toISOString(),
+      });
+      stats.shadowScored = shadowReport.counts.scored;
+      stats.shadowFailed = shadowReport.counts.failed;
+      console.log(`  [影子评分] scored ${shadowReport.counts.scored} failed ${shadowReport.counts.failed}（分歧 ${shadowReport.disagreements.length}）→ ${path.relative(ROOT, outDir)}`);
+    } else {
+      console.warn('  [影子评分] selectionMode=shadow 但备胎网关未配置（JEV_FALLBACK_*），本次跳过');
+      stats.shadowSkipped = true;
+    }
+  }
+
   const featured = {
     schemaVersion: 1,
     date,
@@ -753,7 +778,7 @@ export async function processItems(rawItems, ctx) {
     stats.overrideErrors = errors.length;
   }
 
-  return { daily, featured, stats, selectionTrace };
+  return { daily, featured, stats, selectionTrace, shadowReport };
 }
 
 /** 原子写：先写 .tmp，校验通过后 rename 覆盖；失败则删除临时文件。 */
@@ -811,8 +836,10 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const activate = args.includes('--activate');
 
-  const [enums, filters, sourceTypes, sourceMapData, overrides, eventOverridesDoc] = await Promise.all([
-    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides(), loadEventOverrides()
+  const [enums, filters, sourceTypes, sourceMapData, overrides, eventOverridesDoc, editorialPolicy] = await Promise.all([
+    loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides(), loadEventOverrides(),
+    // C-01 编辑政策（selectionMode 等）；文件缺失按 legacy（纯规则，行为不变）
+    fs.readFile(path.join(ROOT, 'data', 'editorial-policy.json'), 'utf8').then(s => JSON.parse(s), () => null)
   ]);
   const sourceMap = sourceMapData.byName;
   // 事件级人工约束（B-02）：跨日 articleId 级 mustLink/cannotLink，注入合并判定
@@ -837,7 +864,8 @@ async function main() {
         overridesForDate: overrides.byDate?.[date],
         globalHiddenIds: overrides.globalHiddenIds || [],
         eventLinks,
-        sourcesTotal, sourcesSucceeded
+        sourcesTotal, sourcesSucceeded,
+        editorialPolicy
       });
       await logStats(date, stats, daily, featured);
       const outDir = path.join(ROOT, 'feeds', 'dry-run', date);
@@ -908,7 +936,8 @@ async function main() {
     eventLinks,
     sourcesTotal, sourcesSucceeded,
     exposedUrls,
-    exposedAges
+    exposedAges,
+    editorialPolicy
   });
   await logStats(date, stats, daily, featured);
 

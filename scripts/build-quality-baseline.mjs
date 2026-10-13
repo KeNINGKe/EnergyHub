@@ -34,12 +34,14 @@ import { exposedUrlSet, exposedUrlAgeMap, eventFingerprint } from './lib/exposur
 import { canonicalUrl } from './lib/compat.mjs';
 import { collectVersionManifest, sha256File, sha256String, canonicalJson } from './lib/digest.mjs';
 import { _resetFixtureState, _fixtureWriteStatus, loadFixtureEntries } from './lib/jev.mjs';
+import { _resetShadowFixtureState, _shadowWriteStatus } from './lib/selection-score.mjs';
 import { loadReplayItems, resolveReplayNow, processItems, atomicWrite, summarizeSelectionTrace } from './build-daily-v2.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const SAMPLES_DAILY = path.join(ROOT, 'samples', 'daily');
 const FIXTURE_DIR = path.join(ROOT, 'samples', 'jev-fixtures');
+const SHADOW_FIXTURE_DIR = path.join(ROOT, 'samples', 'selection-value-fixtures');
 const RAW_SNAPSHOT_DIR = path.join(ROOT, 'samples', 'raw');
 const OUT_DIR = path.join(ROOT, 'samples', 'baseline', 'quality-upgrade');
 const ANNOTATIONS_DIR = path.join(ROOT, 'samples', 'annotations');
@@ -172,6 +174,7 @@ function titleOf(daily, id) {
 async function main() {
   const args = process.argv.slice(2);
   const record = args.includes('--record');
+  const shadowValue = args.includes('--shadow-value');
   const dateIdx = args.indexOf('--date');
   const onlyDate = dateIdx >= 0 ? args[dateIdx + 1] : null;
 
@@ -183,6 +186,19 @@ async function main() {
   }
   if (!record && process.env.TYPESAFE_API_KEY) {
     throw new Error('离线回放（默认模式）不能设置 TYPESAFE_API_KEY：请 unset 后重试，或用 --record');
+  }
+  // --shadow-value：影子价值评分的录制/回放（语义与 jev 夹具一致）。录制需备胎
+  // 网关（价值评分只走 OpenAI 兼容网关，Jev 直连协议不适配自由 JSON 输出）。
+  let shadowPolicy = null;
+  if (shadowValue) {
+    if (record && !(process.env.JEV_FALLBACK_BASE_URL && process.env.JEV_FALLBACK_API_KEY)) {
+      throw new Error('--shadow-value --record 需要 JEV_FALLBACK_BASE_URL+JEV_FALLBACK_API_KEY（价值评分走备胎网关）');
+    }
+    // 基线运行不管 editorial-policy.json 的 selectionMode（正式默认 legacy）——
+    // 显式开关即意图：本轮按 shadow 口径评分。参数（门槛/带宽/抽样）仍取政策文件。
+    const policyDoc = await fs.readFile(path.join(ROOT, 'data', 'editorial-policy.json'), 'utf8')
+      .then(s => JSON.parse(s), () => ({}));
+    shadowPolicy = { ...policyDoc, selectionMode: 'shadow' };
   }
 
   const dates = onlyDate ? [onlyDate] : await listDates();
@@ -210,12 +226,29 @@ async function main() {
   for (const date of dates) {
     const fixtureFile = path.join(FIXTURE_DIR, `${date}.json`);
     _resetFixtureState();
+    _resetShadowFixtureState();
     if (record) {
       process.env.JEV_RECORD_FILE = fixtureFile;
       delete process.env.JEV_REPLAY_FILE;
     } else {
       process.env.JEV_REPLAY_FILE = fixtureFile;
       delete process.env.JEV_RECORD_FILE;
+    }
+    if (shadowValue) {
+      const shadowFixture = path.join(SHADOW_FIXTURE_DIR, `${date}.json`);
+      if (record) {
+        process.env.SHADOW_RECORD_FILE = shadowFixture;
+        delete process.env.SHADOW_REPLAY_FILE;
+      } else {
+        process.env.SHADOW_REPLAY_FILE = shadowFixture;
+        delete process.env.SHADOW_RECORD_FILE;
+      }
+      // 影子报告写基线目录（进 git，供评测与人工评审），不写 .state/
+      process.env.SHADOW_DIR = path.join(OUT_DIR, '_shadow');
+    } else {
+      delete process.env.SHADOW_RECORD_FILE;
+      delete process.env.SHADOW_REPLAY_FILE;
+      delete process.env.SHADOW_DIR;
     }
 
     // 输入来源：samples/daily 优先（带 generatedAt）；缺席时读 samples/raw 快照
@@ -233,13 +266,14 @@ async function main() {
     const exposedAges = exposureHistory ? exposedUrlAgeMap(exposureHistory, date, exposureDays) : new Map();
 
     const startedAt = Date.now();
-    const { daily, featured, stats, selectionTrace } = await processItems(replayData.items, {
+    const { daily, featured, stats, selectionTrace, shadowReport } = await processItems(replayData.items, {
       date, now: replayNow, filters, enums, sourceTypes, sourceMap,
       overridesForDate: overrides.byDate?.[date],
       globalHiddenIds: overrides.globalHiddenIds || [],
       eventLinks,
       sourcesTotal: 0, sourcesSucceeded: 0,
-      exposedUrls, exposedAges
+      exposedUrls, exposedAges,
+      editorialPolicy: shadowPolicy
     });
     const runtimeMs = Date.now() - startedAt;
 
@@ -247,6 +281,10 @@ async function main() {
     const vf = await validateFeatured(featured, daily, enums);
     if (!vd.valid || !vf.valid) {
       throw new Error(`${date} 回放产物校验失败：daily ${vd.errors.join('; ')} | featured ${vf.errors.join('; ')}`);
+    }
+    // 影子夹具回放失败（未命中/条目 error）按基线语义硬失败，不静默记 0 分
+    if (shadowValue && shadowReport && shadowReport.counts.failed > 0) {
+      throw new Error(`${date} 影子评分回放失败 ${shadowReport.counts.failed} 条（夹具未命中或条目 error）：需 --shadow-value --record 重录`);
     }
 
     if (record) {
@@ -268,6 +306,21 @@ async function main() {
         throw new Error(`${date} 夹具 ${entries} 条全部失败（如 401 认证错误）：key 或网络问题，录制的全是 error 无基线价值，已中止`);
       }
       console.log(`  校验通过，夹具已写入 ${path.relative(ROOT, fixtureFile)}（${entries} 条回执，来源 ${source}，其中 ${errors} 条失败重放）`);
+      if (shadowValue) {
+        const { writeError: shadowWriteError } = _shadowWriteStatus();
+        const sf = path.join(SHADOW_FIXTURE_DIR, `${date}.json`);
+        let sEntries = 0, sErrors = 0;
+        try {
+          const doc = JSON.parse(await fs.readFile(sf, 'utf8'));
+          sEntries = Object.keys(doc.entries || {}).length;
+          sErrors = Object.values(doc.entries || {}).filter(e => e.error).length;
+        } catch (e) {
+          throw new Error(`${date} 影子评分夹具未落盘（${e.message}）${shadowWriteError ? `；写入错误：${shadowWriteError}` : ''}`);
+        }
+        if (sEntries === 0) throw new Error(`${date} 影子评分夹具 0 条目：--shadow-value 但没有任何评分被记录`);
+        if (sErrors === sEntries) throw new Error(`${date} 影子评分夹具 ${sEntries} 条全部失败：网关或解析问题，已中止`);
+        console.log(`  影子评分夹具已写入 ${path.relative(ROOT, sf)}（${sEntries} 条，其中 ${sErrors} 条失败）`);
+      }
       manifestPerDate.push({ date, runtimeMs, fixture: path.relative(ROOT, fixtureFile), entries, errors, source });
       continue;
     }
@@ -306,6 +359,11 @@ async function main() {
       // 人工抽查误合素材，仅记有相关报道的事件）
       mergeDecisions: stats.mergeLog ?? null,
       mergeMembers: mergeDecisionLog(daily),
+      // C-01 影子价值评分（--shadow-value 时非空）：计数 + 规则/价值分歧清单；
+      // 逐条明细在 <OUT>/_shadow/selection-<date>.json
+      shadow: shadowReport
+        ? { counts: shadowReport.counts, disagreements: shadowReport.disagreements, weights: shadowReport.weights }
+        : null,
     });
     manifestPerDate.push({
       date,
