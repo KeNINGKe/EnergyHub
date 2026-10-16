@@ -243,4 +243,23 @@ TYPESAFE_API_KEY=<key> node scripts/build-quality-baseline.mjs --record
 
 误合/漏合口径：漏合由 `samples/annotations` 的 duplicateOf 标注对按 URL 指纹（主 URL + relatedSources，canonical 归一）推导，覆盖面限于已标注样本；误合无负例标签，`report.json` 的 `mergeDecisionLog` 只供人工抽查，不给计数。
 
+## 12. 阶段 C 字段与机制（2026-10）
+
+### 12.1 AI 调用回执与额度（C-02，已落地）
+
+- **`.state/ai/`**（不进 git、不进部署包）：`receipts-<yyyyMM>.json` 按月分片回执（超 2000 条按 updatedAt 淘汰）+ `usage.json` 滚动账本（保留 7 天）。线上经 fetch-feeds.yml 的 `ai-state` artifact 跨运行恢复（`always()` 上传、下载缺失按冷启动；并发组 `fetch-feeds` 串行排队防交叉覆盖）。artifact 方案不承诺严格「只计费一次」——进程强杀前的最后一次响应不保证落地。
+- **缓存键六元组**：`{task, provider, model, promptHash, configHash, inputHash}`（`lib/ai-receipts.mjs` `receiptKey`）。成功回执跨构建复用；输入/提示词/模型变化自动换键失效。
+- **状态机**：pending → received（响应先落盘再交业务解析）→ completed（可复用）/ failed（可重试）；发送后超时记 **unknown**——本构建不重发（防重复计费），跨构建允许恢复。
+- **额度守卫**：每次构建调用数 / 滚动 24h 调用数 / 24h token / 24h 估算费用 / 总耗时五重上限（env `AI_BUDGET_*`，默认宽松；无单价时费用项空转由调用数硬上限保护）。超额抛 `BudgetExhaustedError` → 逐条确定性降级，不阻断日报。
+- **`AI_RECEIPTS=off`** 或夹具模式（`JEV_REPLAY_FILE`/`JEV_RECORD_FILE` 任一设置）整体旁路——离线回放保持纯净。jev 三处调用点带 task 标签（`jev:review`/`jev:topic`/`jev:merge`）。
+- 回执不保存密钥（key 只在 HTTP header），落盘前脱敏断言兜底。
+
+### 12.2 编辑政策与影子评分（C-01，已落地）
+
+- **`data/editorial-policy.json`**：`selectionMode: legacy|shadow|active`（默认 legacy=纯规则分，行为不变）；四维权重初值 30/25/25/20（校准前不动）；`thresholds.valueScoreSelect=null` 表示门槛未冻结——**active 模式在门槛冻结前不可启用**（`validateEditorialPolicy` 强制，防影子直接转正式）。
+- **selectionTrace**（内部，不进公开协议）：`processItems` 返回值携带，逐事件记录 `{ruleScore, selected, selectionStage: wechat-quota|priority-quota|main|exposure-backfill|not-selected, rejectReason: below-threshold|stale|topic-quota|source-quota|unlistable|quota-full, signals{...}}`。人工覆盖前的自动口径；`SELECTION_TRACE_DIR` 可选落盘；基线 report 每日带摘要（落选原因分布 + 最高分落选 top10）。
+- **影子评分**（`lib/selection-score.mjs`）：四维业务价值分（提示词内嵌，版本随文件 sha256；细则 `data/prompts/selection-value.md`）。目标三层：已选 + 近门槛带（importance ≥ ruleThreshold−nearBand）+ 日期种子截断审计抽样。结果只写 `.state/shadow/`（基线 `--shadow-value` 写 `samples/baseline/quality-upgrade/_shadow/`）——**不碰 feeds、不改榜单、不动曝光、不推钉钉**。
+- **影子夹具**：`samples/selection-value-fixtures/<date>.json`（`SHADOW_REPLAY_FILE`/`SHADOW_RECORD_FILE`，语义同 jev 夹具：回放未命中硬失败、录制增量复用）。
+- **评测**（`npm run eval:selection`）：`samples/selection/` 人工标注 → 查准/查全（either 不入分母）、Top-5 认可率、重要事件漏选、主题分组、错例清单；dev/holdout 按事件组 70/30 确定性划分（同事件不跨集合）。0 标注只出框架自检。「未进精选」= 被过滤/未聚类/落选的合并视角。
+
 > **公众号名册（2026-08-07 收集，未进 `data/sources.json`）**：公众号无公开主页可跳转，卡片无法直达，故不在信息源页展示，仅作种子文件抓取。名单：电网头条、能源新磁场、新能源产业家、创客能源、电气时代、能源新媒、蓝色碳能（电力/新能源）；SST渗透率、燃气轮机聚焦（发电）；储能与电力市场、储能头条、储能100人、兰木达电力现货、蓝海经研、阳光电源、光储星球、储能日参（储能）；AIDC储能、IDC Energy（AIDC）；华为数字能源（AI/云计算）。抓取某公众号文章时，将文章链接按本文件格式填入 `articles` 即可，`sourceName` 用上表名称。

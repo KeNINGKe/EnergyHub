@@ -282,8 +282,10 @@ async function main() {
     if (!vd.valid || !vf.valid) {
       throw new Error(`${date} 回放产物校验失败：daily ${vd.errors.join('; ')} | featured ${vf.errors.join('; ')}`);
     }
-    // 影子夹具回放失败（未命中/条目 error）按基线语义硬失败，不静默记 0 分
-    if (shadowValue && shadowReport && shadowReport.counts.failed > 0) {
+    // 影子夹具回放失败（未命中/条目 error）按基线语义硬失败，不静默记 0 分。
+    // 录制模式不在此拦截——瞬时网络错误重试后仍失败的条目留给录制末尾的
+    // 夹具落盘核验（0 条目/全失败才中止），下次 --record 增量补齐。
+    if (!record && shadowValue && shadowReport && shadowReport.counts.failed > 0) {
       throw new Error(`${date} 影子评分回放失败 ${shadowReport.counts.failed} 条（夹具未命中或条目 error）：需 --shadow-value --record 重录`);
     }
 

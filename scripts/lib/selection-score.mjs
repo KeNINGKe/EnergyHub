@@ -183,38 +183,55 @@ function shadowKey(event, weights) {
   })).slice(0, 16);
 }
 
-/** 单次 chat/completions 调用（超时 20s；返回 { value: content, usage }）。 */
+const TRANSIENT_RETRIES = 2;    // 上游瞬时不可用（404/408/429/5xx）重试（同 jev callFallback）
+const TRANSIENT_WAIT_MS = 1_500;
+const isTransientUpstream = (e) => [404, 408, 429, 500, 502, 503, 504].includes(e?.statusCode);
+
+/**
+ * 单次 chat/completions 调用（超时 20s；瞬时错误短退避重试——聚合网关对同一
+ * 模型的路由会间歇 404/5xx 抖动，2026-10-12 备胎录制实测过；返回
+ * { value: content, usage }）。
+ */
 async function callValueOnce(prompt, cfg) {
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
-  try {
-    const res = await fetch(fallbackEndpoint(cfg.baseUrl), {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${cfg.apiKey}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: cfg.model,
-        messages: [{ role: 'user', content: prompt }],
-        temperature: 0,
-        max_tokens: 2000,
-      }),
-      signal: ctrl.signal,
-    });
-    if (!res.ok) {
-      const body = await res.text().catch(() => '');
-      const e = new Error(`value-score api ${res.status}: ${body.slice(0, 200)}`);
-      e.statusCode = res.status;
-      throw e;
+  let lastErr;
+  for (let attempt = 0; ; attempt++) {
+    if (attempt) await new Promise(r => setTimeout(r, TRANSIENT_WAIT_MS * attempt));
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+    try {
+      const res = await fetch(fallbackEndpoint(cfg.baseUrl), {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${cfg.apiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: cfg.model,
+          messages: [{ role: 'user', content: prompt }],
+          temperature: 0,
+          max_tokens: 2000,
+        }),
+        signal: ctrl.signal,
+      });
+      if (!res.ok) {
+        const body = await res.text().catch(() => '');
+        const e = new Error(`value-score api ${res.status}: ${body.slice(0, 200)}`);
+        e.statusCode = res.status;
+        throw e;
+      }
+      const json = await res.json();
+      const content = json?.choices?.[0]?.message?.content;
+      if (typeof content !== 'string' || !content) throw new Error('value-score 应答无 content');
+      const usage = json?.usage && Number.isFinite(json.usage.prompt_tokens)
+        ? { promptTokens: json.usage.prompt_tokens, completionTokens: json.usage.completion_tokens ?? null }
+        : null;
+      return { value: content, usage };
+    } catch (e) {
+      lastErr = e;
+      if (!isTransientUpstream(e) || attempt >= TRANSIENT_RETRIES) throw e;
+      console.warn(`value-score 瞬时错误（${e.statusCode}），退避重试 ${attempt + 1}/${TRANSIENT_RETRIES}`);
+    } finally {
+      clearTimeout(timer);
     }
-    const json = await res.json();
-    const content = json?.choices?.[0]?.message?.content;
-    if (typeof content !== 'string' || !content) throw new Error('value-score 应答无 content');
-    const usage = json?.usage && Number.isFinite(json.usage.prompt_tokens)
-      ? { promptTokens: json.usage.prompt_tokens, completionTokens: json.usage.completion_tokens ?? null }
-      : null;
-    return { value: content, usage };
-  } finally {
-    clearTimeout(timer);
   }
+  throw lastErr; // 不可达（throw 在循环内），兜底保形
 }
 
 /**
