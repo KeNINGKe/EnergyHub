@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Check daily report pushed, dispatch fetch-feeds if not
         run: node scripts/guard-daily-report.mjs
