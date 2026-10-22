@@ -13,7 +13,15 @@ Thumbs.db
 
 # 临时
 *.tmp
+.tmp*
+.work-log-tmp*
+# 百度云同步盘的传输标记文件（同步中产生，完成后自清理）
+*.baiduyun.uploading.cfg
 scripts/check-results.json
+
+# CDN/Workers CLI 本地状态（EdgeOne / wrangler 部署测试残留，会再生）
+.edgeone/
+.wrangler/
 
 # 本地 wrangler dev 的 worker secrets（guard worker 本地验证用，勿提交）
 .dev.vars

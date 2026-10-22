@@ -1,0 +1,108 @@
+========================================
+Energy Info Hub — 能源/储能/AIDC 信息聚合导航站
+========================================
+（更新日期：2026-09-28）
+
+【项目简介】
+一个纯静态、零服务器成本的信息聚合导航站，聚焦能源、储能、电力电子与
+AI 数据中心（AIDC）交叉领域。
+
+核心能力：
+1. 综合导航页 —— 按 13 个分类展示 230+ 国内外信息源，点击直达；
+2. 自动日报 —— GitHub Actions 定时抓取各源 RSS/页面，生成 JSON 静态数据，
+   北京时间每天 05:00 / 12:00 各构建一次；
+3. 热点榜 + 精选 —— 构建端自动产出热点榜（规模分/软曝光惩罚/跨日曝光记忆），
+   精选 12 条；每天 08:00 推送钉钉群；
+4. 深研区 —— 手动/AI 辅助填充的精选长文。
+
+【技术栈】
+- 前端：原生 HTML + CSS + JS，无框架无构建
+- 数据：data/sources.json 驱动导航；feeds/*.json 由脚本生成
+- 自动化：scripts/ 管线 + GitHub Actions cron
+- 托管：GitHub Pages（大陆主入口）+ Cloudflare Workers 备份
+- 智能：接入 TypeSafe/Jev 做捞回校准、主题仲裁与语义合并
+
+【信息源清单】（共 234 个，按分类）
+
+一、电力/新能源综合（20）
+  官方/协会：国家能源局、国家发改委、中电联
+  国内媒体：北极星电力网、中国能源报、财新能源、澎湃能源、界面新闻能源
+  国际机构/媒体：IEA、BloombergNEF、Wood Mackenzie、S&P Global、Reuters Energy、
+  Bloomberg Green、Canary Media、Utility Dive、Latitude Media、Heatmap News、
+  CleanTechnica、Electrek
+
+二、发电（20）
+  核电：国家核安全局、中国核能行业协会、World Nuclear Association、IAEA PRIS、NEI
+  风电：CWEA 中国风能专委会、GWEC、WindEurope、Recharge News、4C Offshore
+  光伏：CPIA、InfoLink、TrendForce 集邦、pv magazine、PV-Tech、SolarPower Europe、索比光伏网
+  水电/氢能：中国水电学会、国际水电协会、Hydrogen Council
+
+三、电力设备/SST·PCS（37）
+  行业媒体：Power Electronics News、ESS News、Transformer Technology/Magazine、
+  POWER Magazine、T&D World、电子工程专辑、EEWorld、行家说三代半
+  学会/标准：CPSS、CSEE、IEEE PELS/PES/Xplore、CIGRE、IEEE Standards、IEC、全国标准平台
+  研究机构：NREL、Fraunhofer ISE、EPRI StorageWiki
+  招投标：国家电网 ECP、南方电网供应链平台
+  厂商：阳光电源、华为数字能源、上能电气、科华数据、盛弘股份、Hitachi Energy、
+  Eaton、Infineon、Wolfspeed、特变电工、中国西电、DG Matrix、中国储能网、时代储能网
+
+四、能量管理系统 EMS（19）
+  媒体/咨询：Energy Central、Microgrid Knowledge、Smart Energy International、
+  Energy Manager Today、Energy Storage Journal、Guidehouse Insights、
+  OFweek 储能网、国际能源网、能源界
+  厂商：国电南瑞、国能日新、海博思创、智光电气、远景智能、安科瑞、Stem、
+  AutoGrid、Fluence、Tesla Energy
+
+五、储能（19）
+  协会/数据：CNESA、储能专委会、鑫椤锂电、SMM 上海有色网、Mysteel、DOE 储能数据库、
+  国网能源研究院
+  媒体：北极星储能网、电池网、Energy Storage News、Modo Energy、BNEF、IEA、EASE、CESA、
+  Volta Foundation
+  电力市场：EPEX SPOT、Nord Pool、EIA
+
+六、AIDC（18）
+  中国信通院、中国 IDC 圈、Uptime Institute、Data Center Dynamics、Vertiv、
+  Data Center Frontier、Data Center Knowledge、The Register、DGtl Infra、Baxtel、
+  DC Byte、Data Center Map、CBRE、JLL、Cushman & Wakefield、Synergy Research、
+  Structure Research
+
+七、芯片与算力（14）
+  国内：老石谈芯、智东西、量子位、机器之心、国家超算互联网平台
+  国际：Semianalysis、The Information、The Next Platform、HPCwire、SemiWiki、
+  Chip Letter、SemiEngineering、Tom's Hardware、Fabricated Knowledge
+
+八、AI/云计算—电力与基础设施（25）
+  云厂商/AI 公司：OpenAI、Microsoft/Azure、AWS、NVIDIA、Meta、Google、Anthropic、xAI、
+  智谱、豆包、通义、Moonshot、DeepSeek、腾讯混元
+  电力研究：国家能源局绿证平台、中国电科院、电力规划总院、EPRI、LBNL、
+  Grid Strategies、Latitude Media Catalyst、Wood Mackenzie、DOE OE
+
+九、综合数据平台/项目库/招投标（17）
+  金融数据：Wind、iFinD 同花顺、CEIC、S&P Market Intelligence
+  招投标：中国招标投标公共服务平台、中国政府采购网、千里马招标网
+  数据平台：中电联统计、Ember、Our World in Data、EIA、Global Energy Monitor、
+  IRENA、IEA Data、ENTSO-E、Electricity Maps、上海环交所
+
+十、社区/论坛/播客（4）
+  Volts、Catalyst (Latitude Media)、The Interchange Recharged、The Energy Gang
+
+十一、重点公司情报（21）
+  宁德时代、比亚迪储能、阳光电源、华为数字能源、上能电气、科华数据、盛弘股份、
+  英维克、台达、特变电工、远景能源、南瑞继保、曙光数创、固德威、Fluence、
+  Wärtsilä、Tesla Energy、LG 新能源、安克创新、ACWA Power、Masdar
+
+十二、事件情报检索（11）—— Google News 7 天滚动检索
+  国内：AIDC 项目动态、AIDC 政策标准、数据中心储能备电、数据中心供电招标
+  海外：Hyperscale Projects、DC Power Standards、DC Energy Storage、DC Power Infra
+  中东：沙特储能与AIDC、阿联酋储能与AIDC、中东新能源项目
+
+十三、科研前沿检索（9）
+  arXiv（SST/构网型预印本）、IEEE Spectrum、SST 科研/机构/中文动态、
+  构网型 PCS 科研、储能变流器技术动态、SiC 宽禁带器件
+
+【已知死角】
+OCP（开放计算）与中东本地 RSS 暂无稳定抓取源，仍靠 Google News 检索覆盖。
+
+【线上入口】
+- GitHub Pages（主）：https://keningke.github.io/EnergyHub
+- 钉钉群：每日 08:00 自动推送热点榜 + 今日观察
