@@ -207,6 +207,40 @@ test('额度守卫: 24h token / 费用上限与账本聚合', async () => {
   await assert.rejects(() => mk(false).beforeCall(), e => e.reason === 'cost-24h');
 });
 
+test('budgetFromEnv: 空串/未设用默认，显式 0 仍是 0（CI 空串事故回归）', () => {
+  // fetch-feeds.yml 把未配置的 vars.AI_BUDGET_* 以空串传入 env——
+  // 曾被解析成上限 0，线上所有 LLM 调用发出前即被拦（且不落回执，无迹可查）
+  const names = ['AI_BUDGET_CALLS_PER_BUILD', 'AI_BUDGET_CALLS_24H', 'AI_BUDGET_TOKENS_24H', 'AI_BUDGET_COST_24H', 'AI_BUDGET_WALL_MS'];
+  const saved = Object.fromEntries(names.map(n => [n, process.env[n]]));
+  try {
+    for (const n of names) process.env[n] = '';
+    let b = budgetFromEnv();
+    assert.equal(b.maxCallsPerBuild, 800);
+    assert.equal(b.maxCalls24h, 1600);
+    assert.equal(b.maxTokens24h, 4_000_000);
+    assert.equal(b.maxCost24h, 2);
+    assert.equal(b.maxWallMs, 12 * 60_000);
+
+    for (const n of names) delete process.env[n];
+    b = budgetFromEnv();
+    assert.equal(b.maxCallsPerBuild, 800);
+
+    // 显式 0 是合法配置（想彻底关掉），不能被空串规则吞掉
+    process.env.AI_BUDGET_CALLS_PER_BUILD = '0';
+    b = budgetFromEnv();
+    assert.equal(b.maxCallsPerBuild, 0);
+
+    // 非法值仍回落默认
+    process.env.AI_BUDGET_CALLS_PER_BUILD = 'abc';
+    b = budgetFromEnv();
+    assert.equal(b.maxCallsPerBuild, 800);
+  } finally {
+    for (const [n, v] of Object.entries(saved)) {
+      if (v === undefined) delete process.env[n]; else process.env[n] = v;
+    }
+  }
+});
+
 test('分片: 按月分片写入，跨月仍能命中上月回执', async () => {
   const dir = await tempDir();
   const store = createReceiptStore(dir);

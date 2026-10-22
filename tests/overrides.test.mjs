@@ -66,6 +66,16 @@ test('overrides：覆盖今日观察', () => {
   assert.deepEqual(f.observations, ['观察一', '观察二']);
 });
 
+test('overrides：人工观察生效时清空 observationDetails（阶段 D 人工优先）', () => {
+  const daily = mkDaily(['evt_a']);
+  const f = featured([]);
+  // 先有 active 模式生成的结构化观察（钉钉/网站优先渲染 details）
+  f.observationDetails = [{ eventId: 'evt_a', fact: '自动生成的观察', mode: 'generated', evidenceUrls: [] }];
+  applyOverrides(daily, f, { observations: ['人工观察一'] }, enums);
+  assert.deepEqual(f.observations, ['人工观察一']);
+  assert.deepEqual(f.observationDetails, [], '人工字符串生效时须置空 details，否则被生成的盖住（方案 §7）');
+});
+
 test('overrides：合并事件', () => {
   const daily = mkDaily(['evt_a', 'evt_b', 'evt_c']);
   const f = featured(['evt_a', 'evt_b']);

@@ -244,8 +244,12 @@ export function createUsageLedger(dir = process.env.AI_STATE_DIR || DEFAULT_STAT
 
 /** 额度配置（env 覆盖，默认宽松——当前用量 ~350 调用/天 + 影子评分余量）。 */
 export function budgetFromEnv() {
+  // 空串当默认而非 0：CI 把未配置的 vars.AI_BUDGET_* 以空串传入 env，
+  // Number('')===0 且 0>=0 会把上限解析成 0——线上 LLM 全灭 3 周的根因之一。
   const num = (name, d) => {
-    const v = Number(process.env[name]);
+    const raw = process.env[name];
+    if (raw == null || String(raw).trim() === '') return d;
+    const v = Number(raw);
     return Number.isFinite(v) && v >= 0 ? v : d;
   };
   return {

@@ -50,14 +50,15 @@ jobs:
         run: npm run verify
 
       # AI 回执缓存/用量账本恢复（阶段 C-02）：上一次 run 上传的 ai-state
-      # artifact 下载回 .state/ai——同输入的调用命中缓存不再付费重调。
+      # artifact 下载回 .state——同输入的调用命中缓存不再付费重调；2026-10-22
+      # 起范围扩到 .state/shadow（影子评分/影子观察报告，阶段 C-01/D 跨运行积累）。
       # artifact 不存在（首次运行/已过期）按无缓存冷启动，不报错。
       - name: Restore AI receipts state
         continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           name: ai-state
-          path: .state/ai
+          path: .state
 
       - name: Build V2 daily feed
         run: npm run build:v2
@@ -66,16 +67,19 @@ jobs:
           # Settings → Secrets → Actions 配置 MYMEMORY_EMAIL；未配置时
           # 退回匿名 5000 字符/天，批量新标题可能漏翻。
           MYMEMORY_EMAIL: ${{ secrets.MYMEMORY_EMAIL }}
-          # Jev 复审（TypeSafe AI 决策模型，直连 api.typesafe.ai）。配置后自动
-          # 启用关键词误杀捞回；未配置或 JEV_REVIEW=off 时跳过，行为同旧版。
-          # 2026-09-21 由 Vercel AI Gateway 免费档（限流极紧）切换为直连
-          # （实测 4 并发无 429），代码按并发池+退避+8min 预算处理。
+          # Jev 复审（TypeSafe AI 决策模型，直连 api.typesafe.ai）。2026-10-22 起
+          # CI 设 JEV_REVIEW=off 显式关闭捞回/仲裁/语义合并：直连 key 09-30 已失效、
+          # 内部 LiteLLM 备胎 runner 不可达（内网域名），三件套实际已停 3 周——
+          # 本次只上 AIHOT 影子+观察（它们直读备胎网关，不受此开关影响），
+          # jev 复活待 0.75 阈值按 glm 校准后单独上线。
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
-          # Jev 备胎（Plan B，OpenAI 兼容网关）：Jev 失败（限流/欠费/不可用）时
-          # 自动降级，问题结构翻译成提示词、应答解析回同构格式。不配置则
-          # 备胎关闭，行为不变。URL 也是内部服务地址，一并放 secret。
+          JEV_REVIEW: 'off'
+          # 备胎网关（OpenAI 兼容）现指 OpenRouter（公开可达；内部 litellm.jereh.cn
+          # 仅公司网络可解析，runner 连不上）。影子评分（C-01）与结构化观察（D）
+          # 直读该网关；模型 z-ai/glm-5.3-flash 与影子夹具录制同源。
           JEV_FALLBACK_BASE_URL: ${{ secrets.JEV_FALLBACK_BASE_URL }}
           JEV_FALLBACK_API_KEY: ${{ secrets.JEV_FALLBACK_API_KEY }}
+          JEV_FALLBACK_MODEL: z-ai/glm-5.3-flash
           # 阶段 C-02：AI 回执层（缓存/额度守卫）构建标识与预算。buildId 用
           # run_id 归一；预算默认值见 lib/ai-receipts.mjs，未配 vars 时留空走默认。
           AI_BUILD_ID: gh-run-${{ github.run_id }}
@@ -101,7 +105,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ai-state
-          path: .state/ai
+          path: .state
           retention-days: 30
           if-no-files-found: ignore
 

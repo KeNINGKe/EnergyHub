@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-13T00:00:00.000Z",
+  "updatedAt": "2026-10-22T00:00:00.000Z",
   "updatedBy": "dev",
-  "note": "编辑政策（阶段 C-01/D，AIHOT_IMPLEMENTATION_PLAN §6/§7）。selectionMode: legacy=纯规则分（现行，行为不变）| shadow=影子评分（LLM 业务价值分只写 .state/shadow/，不碰 feeds/榜单/钉钉）| active=正式启用（须通过留出集门槛后方可设置）。observationMode: title=纯标题摘录（现行，行为不变）| shadow=影子观察（LLM 观察只写 .state/shadow/，不碰 feeds/钉钉）| active=正式启用结构化观察（建议先人工核查 30 条，方案 §7）。weights 是价值评分四维的初始设计，须用 dev 集校准后才能动门槛，不是既定有效权重。",
-  "selectionMode": "legacy",
-  "observationMode": "title",
+  "note": "编辑政策（阶段 C-01/D，AIHOT_IMPLEMENTATION_PLAN §6/§7）。selectionMode: legacy=纯规则分 | shadow=影子评分（LLM 业务价值分只写 .state/shadow/，不碰 feeds/榜单/钉钉；2026-10-22 起 CI 线上开跑，≥7 天后走标注→冻结→active）| active=正式启用（须通过留出集门槛后方可设置）。observationMode: title=纯标题摘录 | shadow=影子观察（LLM 观察只写 .state/shadow/，不碰 feeds/钉钉；2026-10-22 起 CI 线上开跑攒核查材料）| active=正式启用结构化观察（建议先人工核查 30 条，方案 §7）。weights 是价值评分四维的初始设计，须用 dev 集校准后才能动门槛，不是既定有效权重。",
+  "selectionMode": "shadow",
+  "observationMode": "shadow",
   "weights": {
     "businessRelevance": 30,
     "factualIncrement": 25,
