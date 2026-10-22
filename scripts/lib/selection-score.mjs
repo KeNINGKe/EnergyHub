@@ -325,34 +325,49 @@ export function mulberry32(seed) {
 }
 
 /**
- * 影子评分目标：已选 + 近门槛带（importance ≥ ruleThreshold-nearBand 未选）+
- * 截断审计抽样（其余未选事件按日期种子抽 auditSample 条——方案 §6：防候选
- * 截断导致重要事件永远看不见）。
+ * 影子评分目标：已选 + 近门槛带（importance ≥ ruleThreshold-nearBand 未选，
+ * 按规则分降序截前 maxNearBand 条）+ 截断审计抽样（其余未选事件按日期种子抽
+ * auditSample 条——方案 §6：防候选截断导致重要事件永远看不见）。
  */
 export function pickShadowTargets(events, featuredEventIds, policy = {}) {
   const ruleThreshold = Number.isFinite(policy.ruleThreshold) ? policy.ruleThreshold : 3;
   const nearBand = Number.isFinite(policy.nearBand) ? policy.nearBand : 1;
   const auditSample = Number.isFinite(policy.auditSample) ? policy.auditSample : 5;
+  const maxNearBand = Number.isFinite(policy.maxNearBand) ? policy.maxNearBand : 40;
   const featured = new Set(featuredEventIds || []);
   const selected = [];
-  const nearBandOut = [];
+  const nearBandAll = [];
   const rest = [];
   for (const ev of events || []) {
     if (featured.has(ev.id)) selected.push(ev);
-    else if (Number.isFinite(ev.importance) && ev.importance >= ruleThreshold - nearBand) nearBandOut.push(ev);
+    else if (Number.isFinite(ev.importance) && ev.importance >= ruleThreshold - nearBand) nearBandAll.push(ev);
     else rest.push(ev);
   }
+  // 大事件量日（2026-10-22 线上实测 283 事件 → 近门槛带 274 条）会把串行
+  // 评分撑爆 12min 额度墙——按规则分降序截前 maxNearBand（门槛校准只关心
+  // 最接近入选的候选；被截的照常落入审计池的随机抽样范围）。默认 40 盖住
+  // 全部基线日（最大 ~31），保证回放目标集与夹具一致。
+  const nearBandOut = [...nearBandAll]
+    .sort((a, b) => (b.importance - a.importance) || String(a.id).localeCompare(String(b.id)))
+    .slice(0, Math.max(0, maxNearBand));
   const rng = mulberry32([...(selected[0]?.id || 'seed')].reduce((a, c) => a + c.charCodeAt(0), 0) + rest.length);
   const audit = rest
     .map(ev => ({ ev, r: rng() }))
     .sort((a, b) => a.r - b.r)
     .slice(0, auditSample)
     .map(v => v.ev);
-  return { selected, nearBand: nearBandOut, audit };
+  return { selected, nearBand: nearBandOut, audit, nearBandCapped: Math.max(0, nearBandAll.length - nearBandOut.length) };
+}
+
+/** 影子评分并发（env 运行时读取，同 fallbackConfig 惯例；1~8 钳位，默认 3）。 */
+export function shadowConcurrency() {
+  const n = Number(process.env.SHADOW_CONCURRENCY);
+  return Number.isFinite(n) && n >= 1 ? Math.min(8, Math.floor(n)) : 3;
 }
 
 /**
- * 影子评分主入口（串行执行，逐条失败不阻断）。
+ * 影子评分主入口（小并发池执行，逐条失败不阻断；报告 items 保持
+ * 已选→近门槛带→审计 的分组顺序，与串行版逐字段一致）。
  * @param {object} opts { date, events, featuredEventIds, policy, outDir, now }
  * @returns {{ scored: number, failed: number, items: Array, summary: object }}
  */
@@ -360,11 +375,16 @@ export async function runShadowScoring(opts) {
   const { date, events, featuredEventIds, policy = {}, outDir, now = new Date().toISOString() } = opts;
   const weights = policy.weights || DEFAULT_WEIGHTS;
   const targets = pickShadowTargets(events, featuredEventIds, policy.shadow || policy);
-  const items = [];
   let failed = 0;
   const groups = [['selected', targets.selected], ['near-band', targets.nearBand], ['audit', targets.audit]];
-  for (const [group, list] of groups) {
-    for (const ev of list) {
+  const tasks = [];
+  for (const [group, list] of groups) for (const ev of list) tasks.push({ group, ev });
+  const items = new Array(tasks.length);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < tasks.length) {
+      const idx = cursor++;
+      const { group, ev } = tasks[idx];
       let entry = { group, eventId: ev.id, title: String(ev.title || '').slice(0, 120), ruleScore: ev.importance };
       try {
         const v = await scoreBusinessValue(ev, { weights });
@@ -373,9 +393,11 @@ export async function runShadowScoring(opts) {
         failed++;
         entry = { ...entry, error: String(e?.message || e).slice(0, 200) };
       }
-      items.push(entry);
+      items[idx] = entry;
     }
-  }
+  };
+  const workers = Math.max(1, Math.min(tasks.length || 1, shadowConcurrency()));
+  await Promise.all(Array.from({ length: workers }, () => worker()));
   const scored = items.length - failed;
   // 分歧清单：已选但价值分垫底 / 未选但价值分突出（人工评审第一入口）
   const ok = items.filter(i => !i.error);
@@ -399,7 +421,7 @@ export async function runShadowScoring(opts) {
     generatedAt: now,
     mode: 'shadow',
     weights,
-    counts: { selected: targets.selected.length, nearBand: targets.nearBand.length, audit: targets.audit.length, scored, failed },
+    counts: { selected: targets.selected.length, nearBand: targets.nearBand.length, nearBandCapped: targets.nearBandCapped || 0, audit: targets.audit.length, scored, failed },
     items,
     disagreements,
   };

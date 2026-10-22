@@ -17,9 +17,10 @@
     "conflictReviewBand": 0.5
   },
   "shadow": {
-    "note": "影子模式参数：对已选 12 条 + 近门槛带（importance ≥ ruleThreshold-1）评分；另按日期种子抽 auditSample 条未入候选事件做截断审计（方案 §6：防候选截断导致重要事件永远看不见）。",
+    "note": "影子模式参数：对已选 12 条 + 近门槛带（importance ≥ ruleThreshold-nearBand，按规则分降序截前 maxNearBand 条——2026-10-22 线上 283 事件把近门槛带撑到 274 条，串行评分撞 12min 额度墙）评分；另按日期种子抽 auditSample 条未入候选事件做截断审计（方案 §6：防候选截断导致重要事件永远看不见）。maxNearBand=40 盖住全部基线日（最大 ~31），保证回放目标集与夹具一致。",
     "ruleThreshold": 3,
     "nearBand": 1,
+    "maxNearBand": 40,
     "auditSample": 5
   }
 }

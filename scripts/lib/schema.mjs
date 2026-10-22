@@ -688,7 +688,7 @@ export function validateEditorialPolicy(doc) {
       errors.push(`editorial-policy.weights.${k}: 应为 ≥0 的数值（初值 ${k === 'businessRelevance' ? 30 : k === 'evidence' ? 20 : 25}，校准前不动门槛）`);
     }
   }
-  for (const k of ['ruleThreshold', 'nearBand', 'auditSample']) {
+  for (const k of ['ruleThreshold', 'nearBand', 'maxNearBand', 'auditSample']) {
     const v = doc.shadow?.[k];
     if (v != null && (!Number.isFinite(v) || v < 0)) {
       errors.push(`editorial-policy.shadow.${k}: 应为 ≥0 的数值`);

@@ -334,8 +334,16 @@ export function pickObservationTargets(events, featuredEventIds, max = 3) {
     .slice(0, max);
 }
 
+/** 观察生成并发（env 运行时读取；1~8 钳位，默认 3——串行 12 条 × ~18s/条
+ *  会挤占共享的 12min AI 额度墙，2026-10-22 线上实测观察被评分挤到全回退）。 */
+export function observationConcurrency() {
+  const n = Number(process.env.OBSERVATION_CONCURRENCY);
+  return Number.isFinite(n) && n >= 1 ? Math.min(8, Math.floor(n)) : 3;
+}
+
 /**
- * 生成入选集的观察（串行，逐条失败回退 fallback，不阻断）。
+ * 生成入选集的观察（小并发池，逐条失败回退 fallback，不阻断；输出顺序
+ * 与目标顺序一致，和串行版逐字段相同）。
  * @param {object[]} events 构建事件列表
  * @param {string[]} featuredEventIds 精选事件 ID
  * @param {object} opts 透传给 observeEvent
@@ -343,21 +351,28 @@ export function pickObservationTargets(events, featuredEventIds, max = 3) {
  */
 export async function generateObservations(events, featuredEventIds, opts = {}) {
   const targets = pickObservationTargets(events, featuredEventIds);
-  const observations = [];
   let generated = 0, fallback = 0, failed = 0;
-  for (const ev of targets) {
-    let entry = { eventId: ev.id, title: String(ev.title || '').slice(0, 120), topic: ev.topic || 'other-energy' };
-    try {
-      const r = await observeEvent(ev, opts);
-      entry = { ...entry, ...r };
-      if (r.mode === 'fallback') fallback++; else generated++;
-    } catch (e) {
-      failed++;
-      entry = { ...entry, ...fallbackObservation(ev), error: String(e?.message || e).slice(0, 200) };
-      fallback++;
+  const observations = new Array(targets.length);
+  let cursor = 0;
+  const worker = async () => {
+    while (cursor < targets.length) {
+      const idx = cursor++;
+      const ev = targets[idx];
+      let entry = { eventId: ev.id, title: String(ev.title || '').slice(0, 120), topic: ev.topic || 'other-energy' };
+      try {
+        const r = await observeEvent(ev, opts);
+        entry = { ...entry, ...r };
+        if (r.mode === 'fallback') fallback++; else generated++;
+      } catch (e) {
+        failed++;
+        entry = { ...entry, ...fallbackObservation(ev), error: String(e?.message || e).slice(0, 200) };
+        fallback++;
+      }
+      observations[idx] = entry;
     }
-    observations.push(entry);
-  }
+  };
+  const workers = Math.max(1, Math.min(targets.length || 1, observationConcurrency()));
+  await Promise.all(Array.from({ length: workers }, () => worker()));
   return { observations, counts: { targeted: targets.length, generated, fallback, failed } };
 }
 

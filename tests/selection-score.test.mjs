@@ -77,6 +77,30 @@ test('pickShadowTargets：已选 + 近门槛带 + 截断审计抽样', () => {
   assert.deepEqual(t.audit.map(e => e.id), t2.audit.map(e => e.id));
 });
 
+test('pickShadowTargets：近门槛带上限——大事件量日按规则分降序截前 maxNearBand 条', () => {
+  const mk = (id, imp) => ({ id, importance: imp, title: `t-${id}` });
+  // 2026-10-22 线上事故回归：283 事件 → 近门槛带 274 条，串行评分撞 12min 额度墙
+  const events = [
+    ...Array.from({ length: 50 }, (_, i) => mk(`nb-${String(i).padStart(2, '0')}`, 2 + (i % 10) / 10)),
+    mk('low-1', 0.5), mk('low-2', 0.2),
+  ];
+  const t = pickShadowTargets(events, [], { ruleThreshold: 3, nearBand: 1, auditSample: 2, maxNearBand: 40 });
+  assert.equal(t.nearBand.length, 40, '截到 maxNearBand');
+  assert.equal(t.nearBandCapped, 10, '被截条数如实记录');
+  // 保留的是规则分最高的 40 条（2.9 ~ 2.0 前 40 个）
+  const imps = t.nearBand.map(e => e.importance);
+  assert.ok(imps.every(v => v >= 2.1), '低分被截');
+  assert.deepEqual(imps, [...imps].sort((a, b) => b - a), '降序排列');
+  // 默认值 40：不传 maxNearBand 同样生效
+  const t2 = pickShadowTargets(events, [], { ruleThreshold: 3, nearBand: 1, auditSample: 2 });
+  assert.equal(t2.nearBand.length, 40);
+  // 基线日规模（≤31 条）不受影响——回放目标集与夹具一致
+  const base = Array.from({ length: 31 }, (_, i) => mk(`b-${i}`, 2.5));
+  const t3 = pickShadowTargets(base, [], { ruleThreshold: 3, nearBand: 1, auditSample: 5, maxNearBand: 40 });
+  assert.equal(t3.nearBand.length, 31);
+  assert.equal(t3.nearBandCapped, 0);
+});
+
 test('夹具录制-回放：record 落盘、replay 命中、未命中硬失败', async () => {
   const saved = { ...process.env };
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'shadow-fx-'));

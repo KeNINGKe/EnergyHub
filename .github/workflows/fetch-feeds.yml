@@ -108,6 +108,10 @@ jobs:
           path: .state
           retention-days: 30
           if-no-files-found: ignore
+          # .state 是点开头的隐藏目录——upload-artifact@v4 默认
+          # include-hidden-files: false，即使显式指定路径也一个文件都不传
+          # （C-02 上线起工件一直为空的第二个根因，2026-10-22 修复）。
+          include-hidden-files: true
 
       - name: Commit and push
         id: commit
