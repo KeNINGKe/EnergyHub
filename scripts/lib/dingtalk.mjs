@@ -115,7 +115,13 @@ export function buildHotMessage(featured, daily, opts = {}) {
     .sort((a, b) => (b.importance || 0) - (a.importance || 0))
     .slice(0, 3);
 
-  const headerLines = [`## EnergyHub 热点（${date}）`, '', '**热点榜**'];
+  // 今日观察（阶段 D）：优先 observationDetails（fact/implication/watchNext），
+  // 缺失回退旧 observations 字符串数组。观察是头条，置于热点榜前，且作为 header
+  // 常驻（不随预算丢弃）——热点/科研条目仍是 entryLines，超预算时从尾部减。
+  const obsLines = observationLines(featured);
+  const headerLines = [`## EnergyHub 热点（${date}）`, ''];
+  if (obsLines.length) headerLines.push('**今日观察**', ...obsLines, '', '**热点榜**');
+  else headerLines.push('**热点榜**');
   const entryLines = [...hot, ...research].map((it, i) => {
     const src = it.source?.name ? `｜${it.source.name}` : '';
     return `${i + 1}. [${it.title}](${it.url})${src}`;
@@ -124,4 +130,27 @@ export function buildHotMessage(featured, daily, opts = {}) {
 
   const lines = fitLines(headerLines, entryLines, tailLines, maxBytes);
   return { title: `EnergyHub · ${date} 热点`, text: lines.join('\n') };
+}
+
+/**
+ * 组装「今日观察」段（阶段 D）：返回钉钉 markdown 行数组，无观察时返回空数组。
+ * 结构化 observationDetails 渲染为 fact + 可选「影响/待跟踪」子行；旧字符串
+ * observations 原样编号渲染。
+ */
+function observationLines(featured) {
+  const details = featured?.observationDetails;
+  if (Array.isArray(details) && details.length) {
+    const lines = [];
+    details.forEach((o, i) => {
+      lines.push(`${i + 1}. ${o.fact || o.title || ''}`);
+      if (o.implication) lines.push(`   影响：${o.implication}`);
+      if (o.watchNext) lines.push(`   待跟踪：${o.watchNext}`);
+    });
+    return lines;
+  }
+  const obs = featured?.observations;
+  if (Array.isArray(obs) && obs.length) {
+    return obs.map((s, i) => `${i + 1}. ${s}`);
+  }
+  return [];
 }

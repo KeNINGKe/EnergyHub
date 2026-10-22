@@ -21,6 +21,7 @@ import { loadEnums, validateDailyV2, validateFeatured } from './lib/schema.mjs';
 import { loadFilters, classifyItem, keywordHit } from './lib/filter.mjs';
 import { jevConfigured, reviewRejected, shouldRescue, reviewTopics, reviewPairs, needsTopicArbitration, fallbackConfigured } from './lib/jev.mjs';
 import { runShadowScoring } from './lib/selection-score.mjs';
+import { generateObservations, runShadowObservation } from './lib/observe.mjs';
 import { loadSourceTypes, loadSourceMap, classifySourceType } from './lib/source.mjs';
 import { resolveSourceId, loadSourceAliases, articleId } from './lib/identity.mjs';
 import { extractItem } from './lib/extract.mjs';
@@ -207,6 +208,19 @@ export function selectFeatured(events, enums, opts = {}) {
   // keywordHit 语义重查），保证「为什么这条没进精选」可回答。
   const companies = Array.isArray(enums.priorityCompanies) ? enums.priorityCompanies : [];
   const pb = enums.policyBoost;
+  const boosts = enums.importanceBoosts || null;
+  const sourceBoostOf = (ev) => {
+    const v = ev.source?.name ? boosts?.sources?.[ev.source.name] : undefined;
+    return Number.isFinite(v) ? v : 0;
+  };
+  const companyBoostOf = (ev) => {
+    let m = 0;
+    for (const e of ev.entities || []) {
+      const v = boosts?.companies?.[e];
+      if (Number.isFinite(v) && v > m) m = v;
+    }
+    return m;
+  };
   const regionGroups = enums?.hot?.regionGroups || {};
   const regionGroupOf = (region) => {
     for (const [g, names] of Object.entries(regionGroups)) {
@@ -236,6 +250,8 @@ export function selectFeatured(events, enums, opts = {}) {
         regionGroup: regionGroupOf(ev.region),
         priorityTopic: priorityTopics.includes(ev.topic),
         priorityCompany: companies.length > 0 && (ev.entities || []).some(e => companies.includes(e)),
+        sourceBoost: sourceBoostOf(ev),
+        companyBoost: companyBoostOf(ev),
         policyBoost: Boolean(pb && Array.isArray(pb.actions) && Array.isArray(pb.techs)
           && pb.actions.some(k => keywordHit(text, k)) && pb.techs.some(k => keywordHit(text, k))),
         independentSourceCount: Number.isFinite(ev.independentSourceCount) ? ev.independentSourceCount : null,
@@ -298,7 +314,8 @@ export function summarizeSelectionTrace(trace) {
  *      全球/未知一律不入候选，候选不足 maxItems 就少展示、不用其他地区回填；
  *      单一媒体最多 2 席不包场，源配额导致不满时第二轮忽略源配额回填。
  * 配置取 data/enums.json 的 hot 段；topics=最高优先档，exclude 排除核电。
- * regionBoost 命中的地区（北美）加 regionBoostScore 软加分（保留：产品决策的北美倾向）。
+ * regionBoostTiers 地区分档软加分（用户决策 2026-10-21 定稿：美国 1.5 > 中国 1.0 >
+ * 中东/加拿大 0.5，先命中先得；旧扁平 regionBoost+regionBoostScore 兼容为单档）。
  * 人工可通过 editorial-overrides 的 hotEventIds 整体替换。
  * @returns {string[]} 事件 id 列表（≤ hot.maxItems）
  */
@@ -341,9 +358,23 @@ export function selectHot(events, enums, opts = {}) {
   if (!topics.size) return [];
   const exclTopics = new Set(cfg.exclude?.topics || []);
   const exclKws = cfg.exclude?.keywords || [];
-  const regionRe = (cfg.regionBoost || []).length
-    ? new RegExp(cfg.regionBoost.join('|'), 'i') : null;
-  const boostScore = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
+  // 地区加分档：regionBoostTiers 先命中先得；未配置时回退旧扁平 regionBoost（单档 0.5）。
+  const flatBoost = (cfg.regionBoost || []).length
+    ? [{
+        regions: cfg.regionBoost,
+        score: typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5
+      }]
+    : [];
+  const boostTiers = (Array.isArray(cfg.regionBoostTiers) ? cfg.regionBoostTiers : [])
+    .filter(t => t && Array.isArray(t.regions) && t.regions.length && typeof t.score === 'number');
+  const tiersInUse = boostTiers.length ? boostTiers : flatBoost;
+  const regionBoostOf = (region) => {
+    const r = String(region || '');
+    for (const t of tiersInUse) {
+      if (t.regions.some(name => r.includes(name))) return t.score;
+    }
+    return 0;
+  };
   const maxItems = cfg.maxItems ?? 5;
   const penalties = Array.isArray(cfg.exposurePenaltyByAge) ? cfg.exposurePenaltyByAge : [];
   const groups = cfg.regionGroups && Object.keys(cfg.regionGroups).length ? cfg.regionGroups : null;
@@ -371,7 +402,7 @@ export function selectHot(events, enums, opts = {}) {
     const hay = [ev.title, ev.originalTitle, ev.summary, (ev.entities || []).join(' ')]
       .filter(Boolean).join(' ');
     if (exclKws.some(k => keywordHit(hay, k))) continue;
-    const boost = regionRe && regionRe.test(ev.region || '') ? boostScore : 0;
+    const boost = regionBoostOf(ev.region);
     const age = ageOf(ev);
     const penalty = age >= 0 && penalties.length ? penalties[Math.min(age, penalties.length - 1)] : 0;
     candidates.push({ ev, score: (ev.importance || 0) + scaleScore(ev, cfg.scaleTiers) + boost - penalty });
@@ -695,6 +726,7 @@ export async function processItems(rawItems, ctx) {
     now: now.toISOString(),
     priorityTopics: enums.priorityTopics || [],
     priorityCompanies: enums.priorityCompanies || [],
+    importanceBoosts: enums.importanceBoosts || null,
     policyBoost: enums.policyBoost || null,
     // B-03 开关：false 回退 relatedSources 条目数旧口径（回滚/新旧对比）
     independentSources: enums.features?.independentSources !== false
@@ -706,7 +738,7 @@ export async function processItems(rawItems, ctx) {
   // 7. 今日观察 + 精选候选 + 今日热点榜（时效窗口相对本次构建时间 now；
   //    exposedUrls/exposedAges 为跨日曝光记忆：精选用布尔视角靠后/回填，
   //    热点榜用天龄视角做衰减软惩罚，均可为空）
-  const { featuredEventIds, observations, trace: selectionTrace } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls, exposedAges });
+  let { featuredEventIds, observations, trace: selectionTrace } = selectFeatured(capped, enums, { now: now.toISOString(), exposedUrls, exposedAges });
   const hotEventIds = selectHot(capped, enums, { exposedAges });
   // C-01 selectionTrace 可选落盘（内部诊断，不进 feeds；人工覆盖前的自动口径）
   if (process.env.SELECTION_TRACE_DIR && selectionTrace?.length) {
@@ -759,13 +791,53 @@ export async function processItems(rawItems, ctx) {
     }
   }
 
+  // 7c. 阶段 D 观察生成（observationMode）：
+  //   title（默认）= 纯标题摘录（selectFeatured 已产出 observations，行为不变）；
+  //   shadow = LLM 结构化观察只写 .state/shadow/observation-*.json，不碰 feeds/钉钉；
+  //   active = LLM 结构化观察替换 observations 并写 observationDetails。
+  //   夹具模式（OBSERVATION_REPLAY/RECORD_FILE）优先；无备胎网关且非夹具模式跳过。
+  let observationDetails = null;
+  const observationMode = editorialPolicy?.observationMode || 'title';
+  if (observationMode === 'shadow' || observationMode === 'active') {
+    const obsFixtures = process.env.OBSERVATION_REPLAY_FILE || process.env.OBSERVATION_RECORD_FILE;
+    if (obsFixtures || fallbackConfigured()) {
+      if (observationMode === 'shadow') {
+        const outDir = process.env.SHADOW_DIR
+          ? path.join(process.env.SHADOW_DIR, `observation-${date}.json`)
+          : path.join(ROOT, '.state', 'shadow', `observation-${date}.json`);
+        const obsReport = await runShadowObservation({
+          date, events: capped, featuredEventIds, outDir, now: now.toISOString(),
+        });
+        stats.observationTargeted = obsReport.counts.targeted;
+        stats.observationFallback = obsReport.counts.fallback;
+        console.log(`  [影子观察] generated ${obsReport.counts.generated} fallback ${obsReport.counts.fallback} failed ${obsReport.counts.failed} → ${path.relative(ROOT, outDir)}`);
+      } else { // active
+        const { observations: obsList, counts } = await generateObservations(capped, featuredEventIds);
+        observationDetails = obsList;
+        // 派生 observations 字符串（旧前端/校验兼容）：【主题】fact（回退则 fact=标题）
+        observations = obsList.map((o) => {
+          const t = o.topic || 'other-energy';
+          const topicLabel = enums.topics.find((x) => x.id === t)?.label || t;
+          const body = o.fact || o.title || '';
+          return `【${topicLabel}】${body}`;
+        });
+        stats.observationGenerated = counts.generated;
+        stats.observationFallback = counts.fallback;
+      }
+    } else {
+      console.warn(`  [观察] observationMode=${observationMode} 但备胎网关未配置（JEV_FALLBACK_*），本次回退标题摘录`);
+      stats.observationSkipped = true;
+    }
+  }
+
   const featured = {
     schemaVersion: 1,
     date,
     generatedAt: now.toISOString(),
     observations,
     featuredEventIds,
-    hotEventIds
+    hotEventIds,
+    ...(observationDetails ? { observationDetails } : {})
   };
   stats.featured = featuredEventIds.length;
   stats.hot = hotEventIds.length;

@@ -10,6 +10,8 @@
  *     （合并聚类给出的 relatedSources 是「事件重要性」最可靠的免费代理指标）
  *   - 政策标准落地（policyBoost）：政策动作词与供电技术词同时命中 +score，
  *     让不挂重点公司的政策文（「七部门 800V 高压直流」）不被媒体分埋没
+ *   - 定向加权（importanceBoosts）：按来源名/公司名额外加分（用户点名提权），
+ *     公司别名同时命中取最大值，不重复叠加
  *
  * 用法：
  *   import { importance, capPerSource } from './score.mjs';
@@ -43,6 +45,21 @@ export function importance(item, ctx = {}) {
   // 让宁德时代/Fluence/Vertiv 等重点跟踪对象不被普通媒体分埋没（中英实体名都算命中）
   if (Array.isArray(ctx.priorityCompanies) && ctx.priorityCompanies.length &&
       (item.entities || []).some(e => ctx.priorityCompanies.includes(e))) s += 1;
+  // 定向加权（enums.importanceBoosts，2026-10-19）：按来源名/公司名额外加分。
+  // 来源名兼容 item.source 为字符串或 { name } 对象；公司命中多个别名时取最大值，
+  // 避免「英伟达 + NVIDIA」同现把分加两遍。
+  const boosts = ctx.importanceBoosts;
+  if (boosts) {
+    const sourceName = typeof item.source === 'string' ? item.source : item.source?.name;
+    const srcBoost = sourceName ? boosts.sources?.[sourceName] : undefined;
+    if (Number.isFinite(srcBoost)) s += srcBoost;
+    let companyBoost = 0;
+    for (const e of item.entities || []) {
+      const v = boosts.companies?.[e];
+      if (Number.isFinite(v) && v > companyBoost) companyBoost = v;
+    }
+    s += companyBoost;
+  }
   // 政策标准落地信号（enums.policyBoost，匹配沿用 filter 的中英语义：中文子串/英文整词）：
   // 政策动作词（发布/标准/征求意见…）与供电技术词（800V/HVDC/PUE…）在
   // 标题+原标题+摘要里同时命中才 +score——单命中「发布」或单命中「储能」都不算。

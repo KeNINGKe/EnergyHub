@@ -964,6 +964,104 @@ code {
   color: var(--text-faint);
 }
 
+/* ===== 今日观察（阶段 D：事实/影响/待跟踪） ===== */
+.obs-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px 14px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+.obs-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.obs-card-title {
+  font-family: var(--font-heading-news);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+}
+.obs-card-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 2px;
+  background: var(--accent);
+  vertical-align: -2px;
+}
+.obs-card-meta {
+  font-size: 12px;
+  color: var(--text-faint);
+}
+.obs-card-list {
+  display: grid;
+  gap: 8px;
+}
+.obs-item {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-soft);
+}
+.obs-fact {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text);
+}
+.obs-idx {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(2px);
+}
+.obs-imp,
+.obs-next {
+  margin-top: 6px;
+  padding-left: 32px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-faint);
+}
+.obs-imp::before {
+  content: '→ ';
+  color: var(--accent);
+}
+.obs-next::before {
+  content: '◷ ';
+  color: var(--accent);
+}
+.obs-ev {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 6px;
+  line-height: 1.6;
+}
+.obs-ev:hover {
+  color: var(--accent-hover);
+  border-color: var(--accent);
+}
+
 /* ===== 时间线排布（参考 aihot.virxact.com） ===== */
 .timeline-day {
   margin-bottom: 28px;
@@ -1178,6 +1276,12 @@ code {
     padding: 14px 14px 10px;
   }
   .hot-card-meta {
+    display: none;
+  }
+  .obs-card {
+    padding: 14px 14px 10px;
+  }
+  .obs-card-meta {
     display: none;
   }
 }

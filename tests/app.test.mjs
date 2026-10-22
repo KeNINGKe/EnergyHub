@@ -37,33 +37,37 @@ test('isValidFeatured：拒绝缺失、结构错误和跨日期数据', () => {
   assert.equal(t.isValidFeatured({ schemaVersion: 1, date: '2026-08-10', observations: null, featuredEventIds: [] }, daily), false);
 });
 
-test('getPriority：rank 只表达主题档位，北美是标注/软加分而非硬分档', () => {
+test('getPriority：rank 只表达主题档位，地区档是标注/软加分而非硬分档', () => {
   const t = loadPriority();
-  // rank 现在等于主题档位：0=热点主题 1=次级 2=其他（北美不再单独分档）
+  // rank 现在等于主题档位：0=热点主题 1=次级 2=其他（地区不再单独分档）
   assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '美国' })).rank, 0);
   assert.equal(t.getPriority(ev({ topic: 'energy-storage', region: '中国' })).rank, 0);
   assert.equal(t.getPriority(ev({ topic: 'gas-backup' })).rank, 1);
   assert.equal(t.getPriority(ev({ topic: 'solar-wind' })).rank, 2);
-  // na 标记 + 徽章文案
-  const na = t.getPriority(ev({ topic: 'energy-storage', region: '美国' }));
-  assert.equal(na.na, true);
-  assert.equal(na.label, '储能·北美');
+  // 地区加分档 + 徽章文案（2026-10-21 定稿：美国 1.5 > 中国 1.0 > 中东/加拿大 0.5；中国不加徽章）
+  const us = t.getPriority(ev({ topic: 'energy-storage', region: '美国' }));
+  assert.equal(us.boost, 1.5);
+  assert.equal(us.label, '储能·北美');
   const cn = t.getPriority(ev({ topic: 'energy-storage', region: '中国' }));
-  assert.equal(cn.na, false);
+  assert.equal(cn.boost, 1);
   assert.equal(cn.label, '储能');
+  const me = t.getPriority(ev({ topic: 'energy-storage', region: '沙特' }));
+  assert.equal(me.boost, 0.5);
+  assert.equal(me.label, '储能·中东');
   assert.equal(t.getPriority(ev({ topic: 'aidc-project', region: '加拿大' })).label, 'AIDC·北美');
 });
 
-test('sortForTimeline：内容分为主，北美 +0.5 软加分不硬置顶', () => {
+test('sortForTimeline：内容分为主，地区档软加分（中国 +1.0 压过 4 分美国，美国不无限置顶）', () => {
   const t = loadPriority();
   const mk = (over) => ev({ publishedAt: '2026-09-04T02:00:00Z', ...over });
   const sorted = t.sortForTimeline([
-    mk({ id: 'cn5', topic: 'energy-storage', region: '中国', importance: 5 }),
-    mk({ id: 'us4', topic: 'energy-storage', region: '美国', importance: 4 }),   // 4+0.5
-    mk({ id: 'eu4', topic: 'energy-storage', region: '德国', importance: 4 }),
+    mk({ id: 'cn5', topic: 'energy-storage', region: '中国', importance: 5 }),   // 5+1.0=6.0 → 榜首
+    mk({ id: 'us4', topic: 'energy-storage', region: '美国', importance: 4 }),   // 4+1.5=5.5 → 压过无档地区
+    mk({ id: 'eu4', topic: 'energy-storage', region: '德国', importance: 4 }),   // 4.0（无地区档）
+    mk({ id: 'us2', topic: 'energy-storage', region: '美国', importance: 2 }),   // 2+1.5=3.5 < 4 → 内容差距大时不硬置顶
     mk({ id: 'gas', topic: 'gas-backup', region: '美国', importance: 9 })        // 次级主题仍在热点主题之后
   ]);
-  assert.deepEqual([...sorted.map(x => x.id)], ['cn5', 'us4', 'eu4', 'gas']);
+  assert.deepEqual([...sorted.map(x => x.id)], ['cn5', 'us4', 'eu4', 'us2', 'gas']);
 });
 
 test('renderHotList：按构建端 featured.hotEventIds 渲染，空/缺失时返回空串', () => {

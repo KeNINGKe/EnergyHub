@@ -41,6 +41,28 @@ test('selectHot：地区白名单——欧洲/亚太/全球/未知高分不入�
   assert.ok(ids.every(id => !id.startsWith('eu-') && id !== 'ap-1' && id !== 'global-1' && id !== 'unknown-1'));
 });
 
+test('selectHot：地区加分档——同分时 美国 > 中国 > 中东/加拿大（regionBoostTiers，2026-10-21 用户决策定稿）', () => {
+  const events = [
+    ev({ id: 'ca-0', region: '加拿大', importance: 4 }),
+    ev({ id: 'me-0', region: '阿联酋', importance: 4,  // 中东组别名命中中东档；同档平局由多源裁决
+      relatedSources: [{ name: 'x', url: 'u1' }] }),
+    ev({ id: 'cn-0', region: '中国', importance: 4 }),
+    ev({ id: 'us-0', region: '美国', importance: 4 })
+  ];
+  const ids = selectHot(events, enums, {});
+  assert.deepEqual(ids, ['us-0', 'cn-0', 'me-0', 'ca-0'],
+    '4+1.5 / 4+1.0 / 4+0.5（中东=加拿大同档，档内按多源裁决）先命中先得');
+});
+
+test('selectHot：内容分仍为主——加分不足以撼动 1.5 以上的 importance 差距', () => {
+  const events = [
+    ev({ id: 'cn-big', region: '中国', importance: 5 }),  // 5 + 1.0 = 6.0
+    ev({ id: 'us-small', region: '美国', importance: 3 }) // 3 + 1.5 = 4.5
+  ];
+  const ids = selectHot(events, enums, {});
+  assert.equal(ids[0], 'cn-big', '美国档不硬置顶：内容差距 > 1.5 时高分优先');
+});
+
 test('selectHot：单源上限——同一来源最多 2 席', () => {
   const events = [
     ...Array.from({ length: 5 }, (_, i) =>
@@ -85,10 +107,10 @@ test('selectHot：软曝光惩罚——昨日上榜 -1.5 仍可凭高分入选�
   const fresh = ev({ id: 'fresh-cn', region: '中国', importance: 3.5, url: 'https://example.com/b' });
   // 键为 canonical URL（eventFingerprint 产出 https:// 全格式）；b 未上榜
   const ages = new Map([['https://example.com/a', 1]]);
-  // 老事件 5 + 1.5(规模) - 1.5(昨日上榜) = 5 仍应排在新事件 3.5 之前
+  // 老事件 5 + 1.5(美国档) + 1.5(规模) - 1.5(昨日上榜) = 6.5 仍应排在新事件 3.5+1.0(中国档)=4.5 之前
   const ids = selectHot([fresh, yesterday], enums, { exposedAges: ages });
   assert.equal(ids[0], 'big-old');
-  // 第 3 天惩罚仅 0.75：5 + 1.5 - 0.75 = 5.75 仍在榜首
+  // 第 3 天惩罚仅 0.75：5 + 1.5 + 1.5 - 0.75 = 7.25 仍在榜首
   const ids3 = selectHot([fresh, yesterday], enums, { exposedAges: new Map([['https://example.com/a', 2]]) });
   assert.equal(ids3[0], 'big-old');
 });
@@ -110,8 +132,9 @@ test('selectHot：data-center-power 进入候选（topics 扩展生效）', () =
 });
 
 test('selectHot：确定性平局裁决——同分时多源多的在前，与输入序无关', () => {
+  // 两个美国事件同档同分（+1.5），保证测的是多源裁决本身而非地区分差
   const a = ev({ id: 'single', region: '美国', importance: 4, relatedSources: [] });
-  const b = ev({ id: 'multi', region: '加拿大', importance: 4,
+  const b = ev({ id: 'multi', region: '美国', importance: 4,
     relatedSources: [{ name: 'x', url: 'u1' }, { name: 'y', url: 'u2' }] });
   const ids = selectHot([a, b], enums, {});
   assert.equal(ids[0], 'multi');

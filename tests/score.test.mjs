@@ -63,6 +63,34 @@ test('importance：重点公司命中 +1（叠加实体在场 +0.5），未命�
   assert.equal(importance({ ...base, entities: ['宁德时代'] }, { now: NOW }) - noBoost, 0.5);
 });
 
+test('importance：来源定向加权 +1，其他来源不加，字符串/对象来源都支持', () => {
+  const base = item({ sourceType: 'research', source: 'Semianalysis', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
+  const boosts = { sources: { Semianalysis: 1 } };
+  const noBoost = importance(base, { now: NOW });
+  const boosted = importance(base, { now: NOW, importanceBoosts: boosts });
+  assert.equal(boosted - noBoost, 1);
+  const other = importance({ ...base, source: '其他媒体' }, { now: NOW, importanceBoosts: boosts });
+  assert.equal(other, noBoost, '未配置来源不加分');
+  const objSrc = importance({ ...base, source: { name: 'Semianalysis' } }, { now: NOW, importanceBoosts: boosts });
+  assert.equal(objSrc - noBoost, 1, 'source 为 { name } 对象时同样命中');
+  // 未传 importanceBoosts 时向后兼容
+  assert.equal(importance(base, { now: NOW }), noBoost);
+});
+
+test('importance：公司定向加权叠加 priorityCompanies，多别名命中只算一次', () => {
+  const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z', entities: ['NVIDIA'] });
+  const boosts = { companies: { '英伟达': 1, 'NVIDIA': 1 } };
+  const noBoost = importance(base, { now: NOW });
+  const withCompanyBoost = importance(base, { now: NOW, importanceBoosts: boosts });
+  assert.equal(withCompanyBoost - noBoost, 1);
+  const bothAliases = importance({ ...base, entities: ['NVIDIA', '英伟达'] }, { now: NOW, importanceBoosts: boosts });
+  assert.equal(bothAliases - noBoost, 1, '多别名命中取最大值，不重复叠加');
+  const withPriority = importance({ ...base, entities: ['NVIDIA'] }, {
+    now: NOW, priorityCompanies: ['NVIDIA'], importanceBoosts: boosts
+  });
+  assert.equal(withPriority - noBoost, 2, '与 priorityCompanies +1 叠加，共 +2');
+});
+
 test('importance：多源报道加分，封顶 +1.5', () => {
   const base = item({ sourceType: 'media', summary: 's', publishedAt: '2026-08-05T00:00:00Z' });
   const solo = importance(base, { now: NOW });

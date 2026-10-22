@@ -31,6 +31,7 @@ export async function loadEnums() {
     regions: data.regions || {},
     priorityTopics: data.priorityTopics || [],
     priorityCompanies: data.priorityCompanies || [], // 重点公司名单（与 entities.json 实体名对齐），评分端命中 +1
+    importanceBoosts: data.importanceBoosts || null, // 定向加权（来源/公司名 → 额外分），见 enums.importanceBoosts
     policyBoost: data.policyBoost || null, // 政策标准落地信号（动作词×技术词双命中 +score），见 enums.policyBoost
     hot: data.hot || null,             // 今日热点榜配置（构建端 selectHot / 前端徽章共用）
     features: data.features || null,   // 阶段 B 功能开关（mergeV2/independentSources，false 回退旧行为）
@@ -367,6 +368,28 @@ export async function validateFeatured(featured, daily, enums) {
     }
   }
 
+  // observationDetails：可选（阶段 D 生成的结构化观察；缺失时旧版 observations 字符串仍可用）。
+  // 与 observations 并存：observations 由 observationDetails 派生供旧界面/校验兼容。
+  if (featured.observationDetails != null) {
+    if (!Array.isArray(featured.observationDetails)) {
+      push(errors, `observationDetails 应为数组`);
+    } else {
+      for (const o of featured.observationDetails) {
+        if (!o || typeof o !== 'object' || typeof o.eventId !== 'string' || !o.eventId) {
+          push(errors, `observationDetails 元素应含字符串 eventId`);
+          continue;
+        }
+        if (typeof o.fact !== 'string') push(errors, `observationDetails "${o.eventId}" 的 fact 应为字符串`);
+        if (o.mode != null && !['generated', 'fallback'].includes(o.mode)) {
+          push(errors, `observationDetails "${o.eventId}" 的 mode 应为 generated|fallback`);
+        }
+        if (o.evidenceUrls != null && (!Array.isArray(o.evidenceUrls) || o.evidenceUrls.some(u => typeof u !== 'string'))) {
+          push(errors, `observationDetails "${o.eventId}" 的 evidenceUrls 应为字符串数组`);
+        }
+      }
+    }
+  }
+
   return { valid: errors.length === 0, errors, warnings };
 }
 
@@ -652,6 +675,11 @@ export function validateEditorialPolicy(doc) {
     if (!Number.isFinite(t)) {
       errors.push('selectionMode=active 但 thresholds.valueScoreSelect 未冻结（须先通过留出集门槛，方案 §6）');
     }
+  }
+  // observationMode（阶段 D）：title|shadow|active；默认 title=纯标题摘录（行为不变）。
+  // active 无硬门槛（观察的事实验收是人工核查 30 条，非配置阈值），只校验枚举合法。
+  if (doc.observationMode != null && !['title', 'shadow', 'active'].includes(doc.observationMode)) {
+    errors.push(`editorial-policy.observationMode 应为 title|shadow|active 之一，实际为 ${JSON.stringify(doc.observationMode)}`);
   }
   const weightKeys = ['businessRelevance', 'factualIncrement', 'impact', 'evidence'];
   const w = doc.weights || {};

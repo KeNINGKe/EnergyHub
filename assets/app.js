@@ -38,8 +38,12 @@ const FALLBACK_HOT = {
     { pattern: '\\bPCS\\b|储能变流器|变流器', label: '发电' },
     { pattern: '\\bSST\\b|固态变压器|solid\\s*state\\s*transformer', label: '发电' },
   ],
-  regionBoost: ['美国', '加拿大', '北美'],
-  regionBoostScore: 0.5,
+  regionBoostTiers: [
+    { regions: ['美国', '北美'], score: 1.5, badge: '北美' },
+    { regions: ['中国'], score: 1 },
+    { regions: ['中东', '沙特', '阿联酋', '卡塔尔', '科威特', '阿曼', '巴林', '埃及', '土耳其'], score: 0.5, badge: '中东' },
+    { regions: ['加拿大'], score: 0.5, badge: '北美' },
+  ],
 };
 
 const RE_CACHE = new Map();
@@ -53,6 +57,14 @@ function getCategories() {
   return Array.isArray(cats) && cats.length ? cats : FALLBACK_CATEGORIES;
 }
 function getHotCfg() { return (state.enums && state.enums.hot) || FALLBACK_HOT; }
+/** 地区加分档：regionBoostTiers 优先，未配置时回退旧扁平 regionBoost（单档 0.5）。 */
+function regionBoostTiersOf(cfg) {
+  const tiers = Array.isArray(cfg.regionBoostTiers) ? cfg.regionBoostTiers : [];
+  if (tiers.length) return tiers.filter(t => t && Array.isArray(t.regions) && t.regions.length);
+  return (cfg.regionBoost || []).length
+    ? [{ regions: cfg.regionBoost, score: typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5, badge: '北美' }]
+    : [];
+}
 
 const VALID_TABS = ['featured', 'all', 'sources'];
 
@@ -282,10 +294,14 @@ function getPriority(ev) {
       if (compileRe(k.pattern).test(hay)) { label = k.label; tier = 1; break; }
     }
   }
-  // 北美命中：只做徽章标注（·北美）与时间线软加分，不再硬分档置顶——
-  // 内容分（importance）为主，北美同分/近分时靠前（见 sortForTimeline）。
-  const na = tier === 0 && (cfg.regionBoost || []).some(r => String(ev.region || '').includes(r));
-  return { rank: tier, label: na ? `${label}·北美` : label, tier, na };
+  // 地区加分档（2026-10-21 定稿：美国 1.5 > 中国 1.0 > 中东/加拿大 0.5）：只做徽章标注
+  // （·北美/·中东，中国不加徽章）与时间线软加分，不硬分档置顶——内容分（importance）
+  // 为主，同分/近分时美国靠前、中国次之（见 sortForTimeline）。旧扁平 regionBoost 仍兼容。
+  const tiers = regionBoostTiersOf(cfg);
+  const region = String((ev && ev.region) || '');
+  const hitTier = tier === 0 ? tiers.find(t => t.regions.some(r => region.includes(r))) : null;
+  const boost = hitTier ? hitTier.score : 0;
+  return { rank: tier, label: hitTier?.badge ? `${label}·${hitTier.badge}` : label, tier, boost };
 }
 
 function formatScore(imp) {
@@ -295,16 +311,14 @@ function formatScore(imp) {
 
 /* ===== 时间线排布（参考 aihot.virxact.com，保留本站视觉） ===== */
 function sortForTimeline(events) {
-  const cfg = getHotCfg();
-  const boost = typeof cfg.regionBoostScore === 'number' ? cfg.regionBoostScore : 0.5;
-  const adjScore = (ev, p) => (ev.importance || 0) + (p.na ? boost : 0);
+  const adjScore = (ev, p) => (ev.importance || 0) + (p.boost || 0);
   return [...(events || [])].sort((a, b) => {
     const pa = getPriority(a);
     const pb = getPriority(b);
     if (pa.tier !== pb.tier) return pa.tier - pb.tier;   // 主题档位仍是第一排序键（储能/AIDC 最上）
     const sa = adjScore(a, pa);
     const sb = adjScore(b, pb);
-    if (sa !== sb) return sb - sa;                        // 内容分为主，北美软加分
+    if (sa !== sb) return sb - sa;                        // 内容分为主，地区档软加分（美国>中国>中东/加拿大）
     const ta = new Date(a.publishedAt || a.pubDate || a.isoDate || a.date).getTime() || 0;
     const tb = new Date(b.publishedAt || b.pubDate || b.isoDate || b.date).getTime() || 0;
     return tb - ta;
@@ -414,6 +428,29 @@ function renderHotList() {
       </li>`).join('');
 }
 
+/* ===== 今日观察（阶段 D：featured.observationDetails 结构化渲染，回退旧 observations 字符串） ===== */
+function renderObservationCard() {
+  const details = state.featured && state.featured.observationDetails;
+  if (Array.isArray(details) && details.length) {
+    return details.map((o, i) => {
+      const imp = o.implication ? `<div class="obs-imp">影响：${escapeHtml(o.implication)}</div>` : '';
+      const next = o.watchNext ? `<div class="obs-next">待跟踪：${escapeHtml(o.watchNext)}</div>` : '';
+      const links = (o.evidenceUrls || []).filter(u => u).map(u =>
+        `<a class="obs-ev" href="${escapeHtml(u)}" target="_blank" rel="noopener">原文</a>`).join(' ');
+      return `<div class="obs-item">
+        <div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${escapeHtml(o.fact || o.title || '')}</span>${links ? ' ' + links : ''}</div>
+        ${imp}${next}
+      </div>`;
+    }).join('');
+  }
+  const obs = state.featured && state.featured.observations;
+  if (Array.isArray(obs) && obs.length) {
+    return obs.map((s, i) =>
+      `<div class="obs-item"><div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${escapeHtml(s)}</span></div></div>`).join('');
+  }
+  return '';
+}
+
 /* ===== 分类过滤（PCS / SST / EMS / 储能 / AIDC，精选 + 全部动态共用；配置见 enums.json categories） ===== */
 function eventInCategory(ev, catId) {
   if (!catId || catId === 'all') return true;
@@ -464,6 +501,16 @@ function renderFeatured() {
   meta.innerHTML = escapeHtml(parts.join(' · ')) + (state.stale ? ' <span class="stale-badge">数据已过期</span>' : '');
 
   const cat = state.category || 'all';
+
+  // 今日观察（阶段 D）：结构化 observationDetails，回退旧 observations；仅在「全部」分类下显示
+  const obsCard = $('#obsCard');
+  const obsHtml = (cat === 'all') ? renderObservationCard() : '';
+  if (obsHtml) {
+    obsCard.hidden = false;
+    $('#obsList').innerHTML = obsHtml;
+  } else {
+    obsCard.hidden = true;
+  }
 
   // 今日热点榜：构建端产出的 hotEventIds（储能/AIDC 北美优先）；仅在「全部」分类下显示
   const hotBlock = $('#hotListBlock');

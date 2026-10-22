@@ -187,24 +187,26 @@ test('selectFeatured：默认收紧到 12 条、门槛 3', () => {
   assert.ok(!featuredEventIds.includes('evt_low'), '低于门槛 3 不入选');
 });
 
-test('selectHot：地区白名单（北美/中国/中东）、北美软加分、核电排除、上限生效', () => {
+test('selectHot：地区白名单（北美/中国/中东）、地区分档加分（美国>中国>中东/加拿大）、核电排除、上限生效', () => {
   const mk = (id, importance, topic, region, over = {}) => ({
     id, importance, topic, region,
     title: '', originalTitle: '', summary: '', entities: [],
     source: { name: 'S' + id }, publishedAt: FPUB, ...over
   });
   const events = [
-    mk('evt_cn', 5, 'energy-storage', '中国'),                                 // 内容分最高 → 榜首
-    mk('evt_us', 4, 'energy-storage', '美国'),                                 // 4 + 0.5 软加分
+    mk('evt_cn', 5, 'energy-storage', '中国'),                                 // 5 + 1.0（中国档）= 6.0 → 榜首
+    mk('evt_us', 4, 'energy-storage', '美国'),                                 // 4 + 1.5（美国档）= 5.5
+    mk('evt_me', 3.6, 'energy-storage', '沙特'),                               // 3.6 + 0.5（中东档）= 4.1
     mk('evt_eu', 4, 'energy-storage', '德国'),                                 // 欧洲不在白名单 → 不入候选
     mk('evt_global', 5, 'energy-storage', '全球'),                             // 全球同样排除
     mk('evt_nuke', 5, 'energy-storage', '美国', { title: '核电储能混合项目 nuclear' }),
-    mk('evt_aidc', 3, 'aidc-project', '中国'),
+    mk('evt_aidc', 3, 'aidc-project', '中国'),                                 // 3 + 1.0 = 4.0
     mk('evt_grid', 9, 'grid', '美国') // 非热点主题，不入榜
   ];
   const ids = selectHot(events, enums);
-  assert.equal(ids[0], 'evt_cn', '高分中国事件压过低分北美事件（内容为主）');
-  assert.equal(ids[1], 'evt_us', '同基础分时北美软加分靠前');
+  assert.equal(ids[0], 'evt_cn', '中国 +1.0 档登顶：5 分中国压过 4 分美国（2026-10-21 用户决策定稿）');
+  assert.equal(ids[1], 'evt_us', '美国 +1.5 档仅能跨 1 分内容差，压不过 5 分中国');
+  assert.equal(ids[2], 'evt_me', '中东 0.5 档排在美国/中国之后');
   assert.ok(!ids.includes('evt_eu'), '欧洲事件被地区白名单排除');
   assert.ok(!ids.includes('evt_global'), '全球事件被地区白名单排除');
   assert.ok(ids.includes('evt_aidc'));

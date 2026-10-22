@@ -214,6 +214,29 @@ test('hotEventIds：合法引用通过，悬空引用报错，缺失字段不报
   assert.equal(legacy.valid, true, '无 hotEventIds 的旧版 featured 应兼容');
 });
 
+test('observationDetails：合法通过，缺 fact/mode 非法/evidenceUrls 非字符串报错，缺失字段兼容', async () => {
+  const daily = makeValidDaily();
+  const base = { schemaVersion: 1, date: '2026-08-05', generatedAt: '2026-08-05T04:00:00.000Z', observations: [], featuredEventIds: ['evt_abcdef123456'] };
+  const ok = await validateFeatured({
+    ...base,
+    observationDetails: [
+      { eventId: 'evt_abcdef123456', fact: '事实', implication: '', watchNext: '', evidenceUrls: ['https://a.com'], mode: 'generated' }
+    ]
+  }, daily);
+  assert.equal(ok.valid, true, JSON.stringify(ok.errors));
+
+  const badMode = await validateFeatured({ ...base, observationDetails: [{ eventId: 'e', fact: 'f', mode: 'yolo' }] }, daily);
+  assert.equal(badMode.valid, false);
+  assert.ok(badMode.errors.some(e => e.includes('mode')));
+
+  const badEv = await validateFeatured({ ...base, observationDetails: [{ eventId: 'e', fact: 'f', evidenceUrls: [1] }] }, daily);
+  assert.equal(badEv.valid, false);
+  assert.ok(badEv.errors.some(e => e.includes('evidenceUrls')));
+
+  const noDetails = await validateFeatured(base, daily);
+  assert.equal(noDetails.valid, true, '无 observationDetails 的旧版 featured 应兼容');
+});
+
 /* ===== editorial-overrides.json ===== */
 
 test('合法 overrides 通过校验', async () => {
@@ -352,4 +375,22 @@ test('validateEditorialPolicy：非法 mode / 权重 / shadow 参数报错', () 
   assert.ok(!validateEditorialPolicy({ ...base, shadow: { auditSample: 'many' } }).valid);
   assert.ok(!validateEditorialPolicy(null).valid);
   assert.ok(!validateEditorialPolicy({ schemaVersion: 2, selectionMode: 'legacy' }).valid);
+});
+
+test('validateEditorialPolicy：observationMode 枚举校验（title/shadow/active，缺失兼容）', () => {
+  const base = {
+    schemaVersion: 1, selectionMode: 'legacy',
+    weights: { businessRelevance: 30, factualIncrement: 25, impact: 25, evidence: 20 },
+  };
+  // 缺失 observationMode（旧政策）合法；显式合法值合法
+  assert.ok(validateEditorialPolicy(base).valid);
+  for (const m of ['title', 'shadow', 'active']) {
+    assert.ok(validateEditorialPolicy({ ...base, observationMode: m }).valid, `observationMode=${m} 应合法`);
+  }
+  // active 观察无硬门槛（观察事实验收是人工核查，非配置阈值），不依赖 valueScoreSelect
+  assert.ok(validateEditorialPolicy({ ...base, observationMode: 'active' }).valid);
+  // 非法枚举报错
+  const bad = validateEditorialPolicy({ ...base, observationMode: 'yolo' });
+  assert.equal(bad.valid, false);
+  assert.ok(bad.errors.some(e => e.includes('observationMode')));
 });
