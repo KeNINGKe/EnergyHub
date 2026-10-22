@@ -52,13 +52,30 @@ jobs:
       # AI 回执缓存/用量账本恢复（阶段 C-02）：上一次 run 上传的 ai-state
       # artifact 下载回 .state——同输入的调用命中缓存不再付费重调；2026-10-22
       # 起范围扩到 .state/shadow（影子评分/影子观察报告，阶段 C-01/D 跨运行积累）。
-      # artifact 不存在（首次运行/已过期）按无缓存冷启动，不报错。
+      # 关键：download-artifact@v4 不传 run-id 时只认「当前 run」，而构建阶段
+      # 本 run 的工件要等结束才上传——2026-10-22 实测恢复步骤一直报 artifact
+      # not found，回执/影子/24h 额度账本从未跨运行生效。先按名字查最近一份
+      # 未过期工件的 run-id，再显式下载；查不到（首次运行/已过期/API 抖动）
+      # 按无缓存冷启动，不报错。
+      - name: Locate previous ai-state artifact
+        id: prev_state
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          run_id=$(gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=ai-state&per_page=10" \
+            --jq '[.artifacts[] | select(.expired == false and .workflow_run.id != ${{ github.run_id }})][0].workflow_run.id // empty')
+          echo "run_id=${run_id}" >> "$GITHUB_OUTPUT"
+
       - name: Restore AI receipts state
+        if: steps.prev_state.outputs.run_id != ''
         continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           name: ai-state
           path: .state
+          run-id: ${{ steps.prev_state.outputs.run_id }}
+          github-token: ${{ github.token }}
 
       - name: Build V2 daily feed
         run: npm run build:v2
