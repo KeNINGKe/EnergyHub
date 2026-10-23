@@ -10,7 +10,7 @@
  *
  * 用法:
  *   node scripts/build-quality-baseline.mjs                        # 离线回放（无网络、无 key）
- *   node scripts/build-quality-baseline.mjs --date 2026-08-02       # 只跑一天
+ *   node scripts/build-quality-baseline.mjs --date 2026-08-02       # 只跑一天（不写 report/manifest）
  *   node scripts/build-quality-baseline.mjs --dates 2026-10-09,2026-10-10
  *                                                                  # 显式指定日期集（扩展基线）
  *   TYPESAFE_API_KEY=... node scripts/build-quality-baseline.mjs --record
@@ -428,6 +428,12 @@ async function main() {
   if (record) {
     console.log(`\n录制完成：${dates.length} 天夹具已写入 ${path.relative(ROOT, FIXTURE_DIR)}。`);
     console.log('下一步：unset TYPESAFE_API_KEY 后运行 npm run baseline:upgrade 离线产出基线。');
+    return;
+  }
+
+  // 单日模式只写当日产物：汇总文件是完整基线的一部分，不能被单日调试覆盖
+  if (onlyDate) {
+    console.log(`\n单日模式（--date ${onlyDate}）：当日产物已写入，跳过 report/manifest`);
     return;
   }
 
