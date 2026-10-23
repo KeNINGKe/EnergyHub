@@ -104,7 +104,7 @@ function summarize(files) {
     summary.push(`| ${r.date} | ${r.scored} | **${r.miss}** | ${r.falsePos} |`);
   }
   summary.push('');
-  summary.push(`> 4 日合计：漏选 **${totalMiss}** 条、误选 **${totalFalse}** 条——规则分与价值分确有系统性分歧，影子对比方向成立。\n`);
+  summary.push(`> ${summaryRows.length} 日合计：漏选 **${totalMiss}** 条、误选 **${totalFalse}** 条——规则分与价值分确有系统性分歧，影子对比方向成立。\n`);
 
   return [...header, ...summary, ...days].join('\n');
 }

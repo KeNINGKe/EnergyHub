@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-04",
+  "generatedAt": "2026-08-04T06:21:30.063Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_2811af0012c4",
+      "title": "一个令人不安的迹象是， Nvidia RTX 50系列的价格在韩国上涨了30 ％ —台积电晶圆上涨和20 $ GDDR7模块推动RTX 5090超过$ 5,100",
+      "topic": "solar-wind",
+      "fact": "据Tom's Hardware 2026年8月3日报道，受台积电晶圆涨价及单价约20美元的GDDR7显存模块推动，NVIDIA RTX 50系列显卡在韩国价格上涨最高达30%，RTX 5090突破5,100美元。",
+      "implication": "AI算力硬件成本上行可能传导至AIDC供电侧的设备预算与采购节奏，但材料未披露具体供电项目信息，推断有限。",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://www.tomshardware.com/pc-components/gpus/in-a-troubling-sign-nvidia-rtx-50-series-prices-jump-up-to-30-percent-in-south-korea-tsmc-wafer-hikes-and-usd20-gddr7-modules-push-rtx-5090-past-usd5-100"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_caa8ea6afef1",
+      "title": "施耐德电气研究提供管理800 VDC电弧闪光安全的框架",
+      "topic": "sst",
+      "fact": "2026年8月3日，施耐德电气（Schneider Electric，总部位于法国吕埃-马尔迈松）宣布发布一项首创性分析，为管理800 VDC直流系统的电弧闪光安全提供框架，消息经HPCwire刊发。",
+      "implication": "800 VDC是SST/AIDC供电架构向高压直流演进的关键电压等级，该框架若落地为可执行的安全设计或认证依据，将影响800 VDC配电设备（含SST、直流断路/保护器件）的选型、测试与项目交付规范。",
+      "watchNext": "需持续核对该框架的完整报告发布时间、是否被标准组织或客户项目采纳，以及施耐德是否推出对应的800 VDC产品或认证方案。",
+      "evidenceUrls": [
+        "https://www.hpcwire.com/off-the-wire/schneider-electric-research-offers-framework-for-managing-800-vdc-arc-flash-safety/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_5e0c79ed0192",
+      "title": "ERCOT每小时峰值负荷创下新纪录， 7月22日超过91吉瓦",
+      "topic": "grid",
+      "fact": "据EIA Electricity Data，德州主要区域输电组织ERCOT于7月22日的小时级峰值负荷创下新纪录，超过91吉瓦。",
+      "implication": "峰值负荷持续刷新对电网灵活性资源（储能、快速调频PCS等）的需求形成支撑，但材料未披露具体项目或采购信息，设备侧影响需进一步核实。",
+      "watchNext": "持续跟踪ERCOT今夏后续峰值负荷数据及EIA后续披露，确认峰值是否继续刷新及电网侧灵活性资源的调用情况。",
+      "evidenceUrls": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=67906"
+      ],
+      "mode": "generated"
+    }
+  ]
+}

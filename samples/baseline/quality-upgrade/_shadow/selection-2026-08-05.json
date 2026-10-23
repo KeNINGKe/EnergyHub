@@ -1,0 +1,1062 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-05",
+  "generatedAt": "2026-08-04T22:02:50.407Z",
+  "mode": "shadow",
+  "weights": {
+    "businessRelevance": 30,
+    "factualIncrement": 25,
+    "impact": 25,
+    "evidence": 20
+  },
+  "counts": {
+    "selected": 11,
+    "nearBand": 39,
+    "nearBandCapped": 0,
+    "audit": 0,
+    "scored": 50,
+    "failed": 0
+  },
+  "items": [
+    {
+      "group": "selected",
+      "eventId": "evt_c797cba4897f",
+      "title": "随着人工智能对内存的需求增加，存储也随之增加",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 10,
+      "keyFact": "",
+      "rationale": "NVIDIA 博客谈 AI 内存/存储需求，属芯片算力侧背景话题，与储能/PCS/AIDC 供电架构无直接传导，且为厂商观点性内容、无具体数字或新事实，证据为一手但属营销性博客。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_9d6ccbf191e2",
+      "title": "南非：将总计2.7GWh的Deye家用电池系统纳入虚拟发电厂",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 21,
+        "impact": 14,
+        "evidence": 16
+      },
+      "total": 77,
+      "keyFact": "Plentify将南非超16万台Deye家用电池系统（合计2.7GWh）聚合为虚拟电厂",
+      "rationale": "直接命中储能系统与EMS/VPP聚合赛道且涉及头部家用储能厂商Deye，2.7GWh/16万台为新增量数字，两家独立来源交叉印证；但属南非户储场景、影响限于VPP聚合单一环节，对读者核心市场格局冲击有限，值得占位但非头条。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_be59365f6fda",
+      "title": "赛格威Max G3 Plus电动滑板车350 $折扣预订优惠、Beatbot iSkim太阳能泳池撇水器319 $、Jackery 72小时闪购、工具等",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 2,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 10,
+      "keyFact": "Segway Max G3 Plus 电动滑板车预订立减350美元、Beatbot 太阳能泳池撇水器319美元、Jackery 72小时闪购等消费级促销汇总",
+      "rationale": "本质是 Electrek 促销导购汇总（滑板车/泳池机器人/便携电源折扣），仅消费级背景擦边储能，无行业供需、格局、项目或政策信息，属营销类内容，证据为单家媒体且摘要残缺、指标解析混乱，不值得占用日报12条中的任一位置。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_1876e6ec057f",
+      "title": "谷歌，俄克拉荷马州RWE INK 155MW太阳能光伏PPA",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 16,
+        "factualIncrement": 21,
+        "impact": 12,
+        "evidence": 16
+      },
+      "total": 65,
+      "keyFact": "RWE与谷歌签署155MW俄克拉荷马州光伏PPA，为谷歌数据中心供电",
+      "rationale": "属光伏/PPA外围传导：超大规模厂商为AIDC采购绿电对读者有间接信号价值，但核心是光伏PPA而非储能/PCS/SST供电架构；新签约含具体规模与当事方属新事实，然单笔155MW不改格局，双源可信，总量边缘、12条额度紧张时可不占位"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_94208a1e9f0c",
+      "title": "铠侠和桑迪斯克推出具有更高密度和效率的下一代QLC闪光灯",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 10,
+        "impact": 4,
+        "evidence": 8
+      },
+      "total": 27,
+      "keyFact": "铠侠与Sandisk发布新一代QLC闪存，称密度与效率最高提升60%",
+      "rationale": "QLC闪存属数据中心IT存储器件而非供电链路（PCS/SST/800VDC/储能均不沾边），对AIDC供电读者仅背景相关；有新品与60%指标这一新事实但摘要残缺、单家媒体转述，对12条版面无增量价值。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_83b60519144c",
+      "title": "捷克共和国最大的BESS调试，由CATL支持的CNTE提供",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 18,
+        "impact": 15,
+        "evidence": 13
+      },
+      "total": 72,
+      "keyFact": "捷克最大电网级BESS项目投运，由CATL参投的CNTE供货",
+      "rationale": "直接命中储能系统与重点公司（CATL/CNTE）动态且投运属关键节点，但材料未给出容量规模、项目名等具体数字，单家行业媒体来源，属欧洲单国市场事件而非改变格局，对跟踪中国储能厂商出海的读者值得占一个位置。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_5a34f170e2e1",
+      "title": "2025年，分布式太阳能供应了巴基斯坦27%的电力",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 14,
+        "factualIncrement": 16,
+        "impact": 9,
+        "evidence": 13
+      },
+      "total": 52,
+      "keyFact": "巴基斯坦太阳能协会分析：2025年分布式光伏发电约51 TWh、占全国电量27%，且未体现在电网侧数据中",
+      "rationale": "巴基斯坦表后光伏高占比对储能/PCS厂商是新兴市场需求侧信号，属有传导的外围光风消息；27%与51 TWh为新增量化数据有一定增量，但系协会估算、不改变格局且未触及储能本身，12条名额下优先级偏低。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_cfc260d3c786",
+      "title": "南方公司收缩大负荷上升至17吉瓦",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 23,
+        "factualIncrement": 21,
+        "impact": 17,
+        "evidence": 14
+      },
+      "total": 75,
+      "keyFact": "南方公司签约大负荷升至17GW，新披露项目包括萨凡纳附近3.2GW OpenAI数据中心，其中1GW为灵活需求响应。",
+      "rationale": "电网侧消息但直接量化AIDC用电需求（OpenAI 3.2GW落地+17GW签约负荷），对储能/PCS/AIDC供电读者是重要需求侧信号，数字具体、单家可信行业媒体，值得占位但非格局级变动。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_ae42bb335b3c",
+      "title": "澳大利亚偏远矿业公司转向可再生混合动力系统",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 8,
+        "impact": 6,
+        "evidence": 12
+      },
+      "total": 38,
+      "keyFact": "澳大利亚偏远矿山高比例可再生混合供电系统渗透率超80%",
+      "rationale": "离网矿山光储混合系统对PCS/储能厂商有外围传导意义，但仅单一媒体概述性报道，无具体项目、当事方或订单，信息增量有限，12条额度下优先级低。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_53719d23274b",
+      "title": "亿级日活App的“算力生死劫”：推理成本倒挂，他们靠跨云架构砍掉75% GPU集群",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 6,
+        "impact": 4,
+        "evidence": 6
+      },
+      "total": 21,
+      "keyFact": "某未具名亿级日活App称通过跨云架构砍掉75% GPU集群以缓解推理成本倒挂",
+      "rationale": "主题是GPU算力成本与跨云调度，未触及AIDC供电架构（HVDC/800VDC）、储能或PCS/SST环节，对电力设备读者仅是背景级关联；无具名当事方、无时间点，仅一个75%数字支撑的案例分析，单家媒体且要素残缺，对供需与格局判断无实质增量，不值得占用12条名额。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_ffc241d6922c",
+      "title": "联想LOQ Essentials 15 Gen 11回顾：出色的显示屏与低功耗RTX 5060相得益彰",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 8,
+      "keyFact": "",
+      "rationale": "消费级笔记本评测（联想游戏本RTX 5060），与储能/PCS/SST/AIDC供电无任何业务关联，命中负向清单'消费级评测'，无能源行业信息增量，不占版面；证据维度仅按单一可信科技媒体中低段计。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_25e7f6277d1f",
+      "title": "Habitat Energy被任命为Octopus Australia优化直流耦合614MWh太阳能+储能产品组合",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 14,
+        "factualIncrement": 15,
+        "impact": 8,
+        "evidence": 14
+      },
+      "total": 51,
+      "keyFact": "Octopus Australia 任命 Habitat Energy 为其两个直流耦合光储站点（合计614MWh）提供优化服务",
+      "rationale": "有具体容量、当事方与双独立来源的真实签约，但属澳洲光储资产优化服务类外围消息，不触及PCS/SST/AIDC硬件与格局，单项目影响有限，12条额度下属可舍弃的边缘项"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_e5d9bd8bf706",
+      "title": "负载平滑、冷启动备份和电源速度： Fluence绘制了澳大利亚数据中心的电池存储机会图",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 22,
+        "factualIncrement": 0,
+        "impact": 4,
+        "evidence": 11
+      },
+      "total": 37,
+      "keyFact": "",
+      "rationale": "储能龙头谈澳洲数据中心储能机会，题材与读者画像高度契合，但内容为媒体访谈式机会展望，无新数字、新订单或新项目节点，属观点预测类报道，12 条额度下信息增量不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_05d750c9c523",
+      "title": "使用国产电池的T1 Energy、Clearway墨水641MW模块供应交易",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 15,
+        "impact": 9,
+        "evidence": 11
+      },
+      "total": 45,
+      "keyFact": "T1 Energy与Clearway签订641MW光伏组件供应协议，组件采用T1奥斯汀工厂生产的美国本土电芯。",
+      "rationale": "属光伏组件供应链签约，对储能/PCS/AIDC供电读者仅有美国制造本土化政策的弱传导；有新规模与新当事方但缺交付节点等细节，单家行业媒体报道，规模中等不改格局，信息增量不足以挤占12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_08d20ba9a847",
+      "title": "Prosalia和EDP在葡萄牙、西班牙将太阳能光伏/风能项目与电池相结合",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 24,
+        "factualIncrement": 21,
+        "impact": 13,
+        "evidence": 14
+      },
+      "total": 72,
+      "keyFact": "Prosalia在葡萄牙光伏电站投运15MW/60MWh电池储能系统，EDP同步在西班牙为风光项目加装电池实现混合化。",
+      "rationale": "储能项目投运属读者核心关注且含具体规模/当事方/节点等新事实，但15MW/60MWh规模有限、未披露PCS等设备商、不改变格局，单家行业媒体来源可信但摘要残缺，属可占位但非必读的边缘案例。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_2c338daf6d1a",
+      "title": "清洁能源为满足美国电力需求提供了成本最低的途径",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 5,
+        "impact": 4,
+        "evidence": 7
+      },
+      "total": 26,
+      "keyFact": "有研究称选择清洁能源路径是满足美国2030年电力需求的最低成本方案，但摘要未给出任何具体数据或情景结果",
+      "rationale": "单一媒体转述的研究结论类内容，无新数字/新当事方/新节点，属宏观观点性背景信息，对储能/PCS/AIDC供电从业者仅有间接传导，12条额度下信息增量不足以占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3e804c4244d0",
+      "title": "随着日本分销商警告新的增长，亚洲的GPU价格将进一步上涨—差价合约销售表明从本月开始， Gigabyte显卡订单的价格将上涨20 ％至40 ％",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 13,
+        "impact": 4,
+        "evidence": 11
+      },
+      "total": 33,
+      "keyFact": "日本经销商CFD Sales信号显示技嘉显卡订单价格自本月起上涨20%–40%",
+      "rationale": "消费级GPU零售涨价属芯片/算力外围背景信息，与储能/PCS/SST/AIDC供电无直接传导，影响限于日本零售渠道且仅单家媒体转述，在每日12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_51cd4c159dc6",
+      "title": "7月光伏为德国公共电网注入创纪录的12太瓦时",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 13,
+        "impact": 5,
+        "evidence": 11
+      },
+      "total": 39,
+      "keyFact": "德国7月光伏向公共电网输送电量创纪录达12 TWh，超过6月的11 TWh以上。",
+      "rationale": "月度发电量创纪录属常规统计更新，对储能/PCS/AIDC从业者是光风外围的间接传导信号，无项目、订单或政策变化，单家媒体来源，信息增量与影响有限，难以在12条名额中占据一席。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_7042db42bd35",
+      "title": "IRENA呼吁为中美洲和加勒比地区的可再生能源项目提供资金",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 8,
+        "impact": 4,
+        "evidence": 9
+      },
+      "total": 26,
+      "keyFact": "IRENA面向中美洲和加勒比地区开放可再生能源项目融资申请，提案需在9月前提交",
+      "rationale": "拉美光伏风电融资征集属外围背景消息，与读者核心的储能/PCS/SST/AIDC供电无传导路径，且无金额、无项目名单、无当事方，仅单家媒体转述机构公告，信息增量稀薄，不值得占用12条中的位置"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_de1108643a48",
+      "title": "马萨诸塞州发布征求1000兆瓦BESS的建议书",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 19,
+        "impact": 15,
+        "evidence": 14
+      },
+      "total": 74,
+      "keyFact": "马萨诸塞州能源资源部（DOER）发布1000MW电池储能系统采购RFP",
+      "rationale": "直接命中储能系统需求侧：美国州级1GW级采购招标是可跟踪的落地节点，对储能从业者有明确信息增量；但仅为RFP发布而非授标，材料未含截止时间、时长要求等细节，且仅Energy Storage News单家来源，故事实增量与影响居中、证据取中段。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_021b36c656b0",
+      "title": "NIST加入DOE的Genesis使命，加速人工智能创新",
+      "ruleScore": 3,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 8,
+        "impact": 4,
+        "evidence": 7
+      },
+      "total": 24,
+      "keyFact": "美国标准与技术研究院（NIST）加入能源部 Genesis Mission 以加速 AI 创新",
+      "rationale": "政府机构间的 AI 科研协作消息，仅与 AIDC 算力叙事有极弱的背景关联，无供电架构、储能供需或政策传导的实质增量，摘要截断且仅单家媒体转述，在 12 条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_5bbad6afa3e5",
+      "title": "SK海力士在FMS 2026上与Sandisk推出首个HBF标准规格",
+      "ruleScore": 3,
+      "scores": {
+        "businessRelevance": 4,
+        "factualIncrement": 12,
+        "impact": 3,
+        "evidence": 10
+      },
+      "total": 29,
+      "keyFact": "SK海力士与Sandisk在FMS 2026上推出首个HBF标准规格",
+      "rationale": "属存储芯片/计算侧标准进展，对跟踪储能/PCS/SST/AIDC供电的读者仅背景相关，向供电侧的传导链条过长；'首个HBF标准规格'是具体新节点但摘要截断、无规格细节与数字，单家行业媒体来源，对能源格局无实质影响，不值得占用12条席位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_01989ca438ff",
+      "title": "如何让地热井复活",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 5,
+        "impact": 4,
+        "evidence": 7
+      },
+      "total": 22,
+      "keyFact": "",
+      "rationale": "地热井修复属外围能源特稿，与储能/PCS/AIDC 供电仅背景相关；摘要残缺、无实体/数字/时间点等可核事实，系 Wired 内容转载复述，对目标读者信息增量低，不值得占用 12 条席位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_128c6a7fd6ad",
+      "title": "Marvell推进AI内存基础设施组合以加速Agentic AI推理",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 4,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 17,
+      "keyFact": "",
+      "rationale": "Marvell芯片侧AI内存产品通稿，摘要无具体数字/时间点/当事方，与AIDC供电架构（800VDC/HVDC）、储能/PCS/SST无直接命中，属厂商营销发布，按负向清单影响维度记0，12条名额下无信息增量。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_16c375375ed6",
+      "title": "Kosol Energie推出抗冰雹模块",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 8,
+        "impact": 3,
+        "evidence": 8
+      },
+      "total": 24,
+      "keyFact": "印度组件厂商Kosol Energie发布n型双玻抗冰雹组件",
+      "rationale": "光伏组件厂商的产品发布，对储能/PCS/AIDC供电读者仅背景相关，无任何功率、效率、产能等量化要素，单家媒体转述且不改变竞争格局，在12条限额下无信息增量，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_21741c20f540",
+      "title": "随着股市飙升，欧洲央行警告气候变化威胁全球经济",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 4,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 3
+      },
+      "total": 7,
+      "keyFact": "",
+      "rationale": "CleanTechnica观点评论（'投资者都疯了'式专栏），无任何新数字/新政策/新当事方，命中负向清单'无新事实支撑的观点预测'，与储能/PCS/SST/AIDC供电仅气候宏观背景沾边，事实增量与影响记0，不值得占用每日12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_28131f615158",
+      "title": "PJM “饥饿游戏”储能、太阳能与天然气、核能",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 12,
+        "impact": 10,
+        "evidence": 8
+      },
+      "total": 45,
+      "keyFact": "PJM 正就 715 个新电厂提案索取更多信息，太阳能与储能在数量上领先于天然气与核电。",
+      "rationale": "PJM 队列中储能提案领先对北美储能需求有信号意义，但属电网/政策外围传导而非 PCS/系统级直接动态；715 这一数字有一定增量，然而单家媒体转述、摘要残缺且无当事方与时间细节，12 条额度下属边缘偏弱。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3bab6ce91b41",
+      "title": "PC冷却设备Arctic在美国政府退款后扭转了关税时代的价格上涨—降低了整个阵容的价格，包括冷却器和表壳风扇",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 15,
+      "keyFact": "PC散热厂商Arctic在美国政府退款后兑现承诺，逆转关税期涨价并下调全系产品价格",
+      "rationale": "消费级PC散热配件的零售调价，与储能/PCS/SST/AIDC供电行业无业务关联，属负向清单中的消费级资讯，即便事实真实、来源可信也不值得占用12条名额之一"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3c72a3397409",
+      "title": "斯巴鲁新款Trailseeker电动汽车的销量已经超过了其他电动汽车",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 5,
+        "impact": 2,
+        "evidence": 6
+      },
+      "total": 16,
+      "keyFact": "斯巴鲁Trailseeker上市数月销量已超过Solterra等旗下其他电动车型",
+      "rationale": "消费级电动车单一车型销量比较，与储能/PCS/SST/AIDC供电无传导路径，且无具体销量数字、无独立交叉来源，对目标读者无信息增量，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_40c7e46c2573",
+      "title": "SOCAMM2如何为AI重塑服务器内存",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 4,
+        "impact": 0,
+        "evidence": 6
+      },
+      "total": 15,
+      "keyFact": "",
+      "rationale": "服务器内存（SOCAMM2）属芯片侧话题，与读者关注的AIDC供电架构/SST/储能仅背景级关联；标题为'could reshape'式前瞻分析，无任何新数字、新当事方或时间点，命中负向清单'无新事实支撑的观点预测'故影响维度记0；单一行业博客来源且要素残缺，在12条版面中不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_45a0eac3da4f",
+      "title": "到目前为止， 2026年至少有37人因抗议数据中心而被捕，其中大多数是因为违反了“小规则” --大多数被拘留者是和平行动的",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 8,
+        "impact": 3,
+        "evidence": 8
+      },
+      "total": 24,
+      "keyFact": "2026年至今至少37人因抗议数据中心项目被捕，多数仅因轻微违规且系和平行动",
+      "rationale": "属数据中心社会阻力侧写：与AIDC供电架构、储能供需或项目落地无直接传导，37人为媒体汇总统计而非新事件进展，未点名任何项目/政策变化，单一媒体来源且要素残缺（地区未知、无当事方），对12条日报位而言信息增量不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_5402513ee71a",
+      "title": "芯片行业技术论文综述： 8月4日",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 7
+      },
+      "total": 13,
+      "keyFact": "",
+      "rationale": "内容为芯片学术技术论文综述（存储/神经形态/氧化合物电子学等器件层研究），与储能/PCS/SST/AIDC供电架构仅存最外围背景关联，无任何商业、项目或政策影响，且为单家媒体文摘、无实体与数据要素，对目标读者无信息增量，不值得占用12条席位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_66102efc9892",
+      "title": "数据中心在威斯康星州州长竞选中占据中心位置",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 5,
+        "impact": 4,
+        "evidence": 8
+      },
+      "total": 27,
+      "keyFact": "数据中心议题成为威斯康星州州长竞选的焦点政治话题",
+      "rationale": "选举政治观察类报道，无具体项目、政策落地或公司动态，对AIDC供电从业者仅是需求侧情绪背景，单家媒体且摘要无数字无当事方，信息增量低，12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_6aaa8af56fff",
+      "title": "塞拉俱乐部回应总检察长罗基塔阻止罗克波特煤电厂退休的诉讼",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 8,
+        "impact": 5,
+        "evidence": 6
+      },
+      "total": 27,
+      "keyFact": "印第安纳州总检察长Rokita在一桩长期搁置案件中介入诉讼，试图阻止Rockport燃煤电厂退役，塞拉俱乐部对此作出回应",
+      "rationale": "美国煤电退役争议属电力政策外围新闻，对储能/PCS/AIDC供电读者仅有间接传导且无具体数字或当事方细节，内容以环保组织回应声明为主、单一媒体来源无交叉印证，在12条版面中信息增量不足"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_7413181ab2c5",
+      "title": "符合电池条件的新泽西州VPP计划开始成形",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 16,
+        "factualIncrement": 6,
+        "impact": 5,
+        "evidence": 7
+      },
+      "total": 34,
+      "keyFact": "新泽西州允许电池参与的VPP计划仍处早期成形阶段，7月利益相关方会议上公用事业方讨论自有储能缓解电网拥堵的可能性",
+      "rationale": "储能政策类选题与读者相关，但计划仅处征询成形阶段，摘要只有高管观点、无数字/当事方/规模等具体事实，单家媒体且要素残缺，在12条额度下信息增量不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_8b46ec31271a",
+      "title": "保时捷新老板表示，电动718仍在到来， Taycan不会去任何地方",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 7
+      },
+      "total": 13,
+      "keyFact": "保时捷新CEO Michael Leiters 首次专访确认电动718项目继续推进、Taycan不会停产",
+      "rationale": "车企电动化产品口径表态属无新数字/新时间点的观点确认，命中负向清单，与储能/PCS/SST/AIDC供电读者无传导路径，且仅单家媒体转述、摘要残缺，不值得占用12条席位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_8dcd7af9b9bb",
+      "title": "投资初级工程师",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 4,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 4
+      },
+      "total": 8,
+      "keyFact": "",
+      "rationale": "SemiEngineering 的观点评论文章，讨论应投资培养初级工程师而非用 AI 取代，属芯片行业人才话题；与储能/PCS/SST/AIDC 供电仅存极外围背景关联，无任何新事实、数字或当事方，触发负向清单「无新事实支撑的观点」，不值得占用 12 条版面之一。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_8ef97505a230",
+      "title": "EVgo正在为美国人购物提供500多个快速充电器",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 8,
+        "impact": 3,
+        "evidence": 6
+      },
+      "total": 23,
+      "keyFact": "EVgo 宣布在美国各地购物中心新增 500+ 个直流快充桩位",
+      "rationale": "面向消费者的美国充电桩扩张属储能/PCS/SST/AIDC 读者的外围背景信息，单家媒体转述公司宣传口径、无时间表/合作方/具体场址等要素，对行业供需与格局无实质增量，不值得占用 12 条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_8f3f9d8b2047",
+      "title": "为什么模拟速度会阻碍小芯片的发展",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 4,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 9,
+      "keyFact": "",
+      "rationale": "主题为芯片设计仿真工具链的产业分析，与储能/PCS/SST/AIDC供电的供需、格局、项目、政策均无关联，属无关项记0；内容为无新数字/新当事方的观点类分析，事实增量低；单一媒体且摘要残缺、无实体无指标，证据不足；不值得占用12条中的位置。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_9f54e554b2f0",
+      "title": "美国的许可危机发生在市政厅",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 5,
+        "impact": 5,
+        "evidence": 8
+      },
+      "total": 33,
+      "keyFact": "",
+      "rationale": "Utility Dive 观点评论，主题（市政对已认证电池重复审查拖慢储能部署）与读者有传导相关，但无任何新数字、当事方或政策变动，属观点类低增量内容，单家媒体且要素残缺，12 条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_a997601b8824",
+      "title": "美国正在考虑禁止中国关键网络技术打击数据中心组件--白宫希望在2026年施加限制，中国表示将在必要时做出回应",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 13,
+        "impact": 13,
+        "evidence": 10
+      },
+      "total": 51,
+      "keyFact": "FCC 正在起草禁止数据中心使用中国光模块（光收发器）的限制措施，白宫拟2026年实施，中方称必要时将回应。",
+      "rationale": "对AIDC供电读者属外围传导：限制对象是光模块等网络组件而非供电设备（SST/HVDC），且尚处'考虑/起草'阶段未落地；有新时间点（2026）和FCC起草这一动作，但仅单一媒体转述匿名信源、摘要要素不全，四维均处中低段，12条额度下属边缘可选。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_a9bda65013eb",
+      "title": "德克萨斯州为1800个数据中心踩刹车，电网需求是峰值记录需求的五倍— 474千兆瓦的电力请求现在受到新的暂停",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 23,
+        "factualIncrement": 21,
+        "impact": 21,
+        "evidence": 12
+      },
+      "total": 77,
+      "keyFact": "德州州长Abbott要求PUCT与ERCOT暂停全部数据中心并网申请直至完成审计，涉及1800个数据中心、474GW电力请求（约为电网峰值纪录的5倍）",
+      "rationale": "针对北美最大数据中心市场并网准入的重点政策急刹车，直接牵动AIDC供电需求预期与项目落地节奏，新数字与新政策动作明确，但仅Tom's Hardware单一媒体来源且摘要截断、要素不全，证据维度受限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_adb7c7ae838e",
+      "title": "在原子旋转中探索能量",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 3,
+        "impact": 2,
+        "evidence": 5
+      },
+      "total": 16,
+      "keyFact": "落基山国家实验室研究人员用核磁共振技术研究电池与半导体材料，无具体进展细节",
+      "rationale": "基础科研科普稿，仅背景性触及电池/半导体材料，无数字、无当事方、无时间点，对储能/PCS/AIDC 供电从业者无信息增量，单家媒体转述且摘要残缺，不值得占用 12 条名额之一。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_c05f18dc4213",
+      "title": "$ 700M微电网账单有国家能源办公室、电气制造商支持",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 11,
+        "impact": 8,
+        "evidence": 10
+      },
+      "total": 44,
+      "keyFact": "一项规模7亿美元、获州能源办公室与电气制造商支持的微电网法案，拟将微电网和分布式能源纳入州能源项目拨款资格",
+      "rationale": "微电网/DER拨款政策对储能与PCS需求有传导意义，但材料未披露具体州名与当事制造商、立法尚处早期且仅单一媒体来源，信息增量与影响均有限，12条额度下属可舍弃的边缘项。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_c4a3795b981b",
+      "title": "华信瞄准澳大利亚“缺失的中间环节” ，提供1亿澳元用于混合太阳能+储能项目（ AU $ 100 million for hybrid solar-plus-st",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 16,
+        "factualIncrement": 19,
+        "impact": 13,
+        "evidence": 13
+      },
+      "total": 61,
+      "keyFact": "澳大利亚清洁能源金融公司（CEFC）设立新计划，投入1亿澳元（约6580万美元）支持中等规模光伏+储能混合项目，瞄准“缺失的中间环节”。",
+      "rationale": "属储能需求的政策性融资催化，有新数字和新计划，但金额体量有限、仅覆盖澳洲中型光储单一环节、无具体项目或厂商落地，对PCS/储能系统厂商只是外围传导信号，且为PV-Tech单源报道，在12条额度下属边缘可舍案例。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_d06175e4a711",
+      "title": "研究人员设计了带有单个集成蒸发器的PVT热泵",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 8,
+        "impact": 3,
+        "evidence": 8
+      },
+      "total": 25,
+      "keyFact": "研究人员设计出将太阳能集热与环境空气集热合并于单个翅片蒸发器的双源PVT热泵",
+      "rationale": "实验室阶段的光伏热泵设计，与读者核心跟踪的储能/PCS/SST/AIDC供电仅背景相关，无数字、无当事方、无商业化节点，单一媒体来源且摘要要素残缺，对12条版面而言信息增量不足"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_d8183b908f8c",
+      "title": "Tandem PV收购nexTC ，在内部引入钙钛矿金属氧化物涂层工艺",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 12,
+        "impact": 5,
+        "evidence": 11
+      },
+      "total": 33,
+      "keyFact": "Tandem PV 收购 nexTC，将用于叠层太阳能组件的薄膜金属氧化物涂层工艺转为内部自研。",
+      "rationale": "光伏叠层电池领域的小型并购，对储能/PCS/SST/AIDC 读者仅属外围背景，无交易金额与时间线等关键要素，不改变任何环节格局，12 条名额下不值得占用。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_d945f4477927",
+      "title": "Eversource第二季度收入在输电净回报率、海上风电费用上大幅下降",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 10,
+        "impact": 5,
+        "evidence": 10
+      },
+      "total": 33,
+      "keyFact": "Eversource二季度利润因输电ROE下降和海上风电减记大幅下滑，Jefferies质疑其康州10亿美元AMI提案的经济性",
+      "rationale": "美国地方公用事业财报属电网外围背景信息，对储能/PCS/AIDC供电读者无直接传导；增量仅为单家媒体转述的分析师观点与财报概述，缺乏具体数字与一手来源，在12条限额下不值得占位"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_e8d22cfd2e6b",
+      "title": "欧洲正在大举押注一款运行四天的电池",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 15,
+        "impact": 12,
+        "evidence": 10
+      },
+      "total": 63,
+      "keyFact": "长时储能初创公司 Ore Energy 宣称签下欧洲大陆迄今最大的铁-空气电池订单（规模与交易对手未披露）",
+      "rationale": "铁-空气长时储能订单属储能系统直接动态且为新事件，但摘要截断、无规模数字与对手方，仅 Electrek 单家转述且'最大'为公司自述，对格局影响限于 LDES 单一环节，属可占位但非必读的边缘条目。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_f137b5ff01af",
+      "title": "赛格威全新MAX G3 Plus电动滑板车更进一步，动力更强，安全性更高",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 20,
+      "keyFact": "",
+      "rationale": "消费级电动滑板车产品升级属于终端消费品营销类消息，与储能/PCS/AIDC供电行业无实质供需、格局或政策传导，仅电池话题背景相关，不占12条名额。"
+    }
+  ],
+  "disagreements": [
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_25e7f6277d1f",
+      "title": "Habitat Energy被任命为Octopus Australia优化直流耦合614MWh太阳能+储能产品组合",
+      "valueScore": 51,
+      "selectedFloor": 10,
+      "rationale": "有具体容量、当事方与双独立来源的真实签约，但属澳洲光储资产优化服务类外围消息，不触及PCS/SST/AIDC硬件与格局，单项目影响有限，12条额度下属可舍弃的边缘项"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_e5d9bd8bf706",
+      "title": "负载平滑、冷启动备份和电源速度： Fluence绘制了澳大利亚数据中心的电池存储机会图",
+      "valueScore": 37,
+      "selectedFloor": 10,
+      "rationale": "储能龙头谈澳洲数据中心储能机会，题材与读者画像高度契合，但内容为媒体访谈式机会展望，无新数字、新订单或新项目节点，属观点预测类报道，12 条额度下信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_05d750c9c523",
+      "title": "使用国产电池的T1 Energy、Clearway墨水641MW模块供应交易",
+      "valueScore": 45,
+      "selectedFloor": 10,
+      "rationale": "属光伏组件供应链签约，对储能/PCS/AIDC供电读者仅有美国制造本土化政策的弱传导；有新规模与新当事方但缺交付节点等细节，单家行业媒体报道，规模中等不改格局，信息增量不足以挤占12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_08d20ba9a847",
+      "title": "Prosalia和EDP在葡萄牙、西班牙将太阳能光伏/风能项目与电池相结合",
+      "valueScore": 72,
+      "selectedFloor": 10,
+      "rationale": "储能项目投运属读者核心关注且含具体规模/当事方/节点等新事实，但15MW/60MWh规模有限、未披露PCS等设备商、不改变格局，单家行业媒体来源可信但摘要残缺，属可占位但非必读的边缘案例。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_2c338daf6d1a",
+      "title": "清洁能源为满足美国电力需求提供了成本最低的途径",
+      "valueScore": 26,
+      "selectedFloor": 10,
+      "rationale": "单一媒体转述的研究结论类内容，无新数字/新当事方/新节点，属宏观观点性背景信息，对储能/PCS/AIDC供电从业者仅有间接传导，12条额度下信息增量不足以占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3e804c4244d0",
+      "title": "随着日本分销商警告新的增长，亚洲的GPU价格将进一步上涨—差价合约销售表明从本月开始， Gigabyte显卡订单的价格将上涨20 ％至40 ％",
+      "valueScore": 33,
+      "selectedFloor": 10,
+      "rationale": "消费级GPU零售涨价属芯片/算力外围背景信息，与储能/PCS/SST/AIDC供电无直接传导，影响限于日本零售渠道且仅单家媒体转述，在每日12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_51cd4c159dc6",
+      "title": "7月光伏为德国公共电网注入创纪录的12太瓦时",
+      "valueScore": 39,
+      "selectedFloor": 10,
+      "rationale": "月度发电量创纪录属常规统计更新，对储能/PCS/AIDC从业者是光风外围的间接传导信号，无项目、订单或政策变化，单家媒体来源，信息增量与影响有限，难以在12条名额中占据一席。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_7042db42bd35",
+      "title": "IRENA呼吁为中美洲和加勒比地区的可再生能源项目提供资金",
+      "valueScore": 26,
+      "selectedFloor": 10,
+      "rationale": "拉美光伏风电融资征集属外围背景消息，与读者核心的储能/PCS/SST/AIDC供电无传导路径，且无金额、无项目名单、无当事方，仅单家媒体转述机构公告，信息增量稀薄，不值得占用12条中的位置"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_de1108643a48",
+      "title": "马萨诸塞州发布征求1000兆瓦BESS的建议书",
+      "valueScore": 74,
+      "selectedFloor": 10,
+      "rationale": "直接命中储能系统需求侧：美国州级1GW级采购招标是可跟踪的落地节点，对储能从业者有明确信息增量；但仅为RFP发布而非授标，材料未含截止时间、时长要求等细节，且仅Energy Storage News单家来源，故事实增量与影响居中、证据取中段。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_021b36c656b0",
+      "title": "NIST加入DOE的Genesis使命，加速人工智能创新",
+      "valueScore": 24,
+      "selectedFloor": 10,
+      "rationale": "政府机构间的 AI 科研协作消息，仅与 AIDC 算力叙事有极弱的背景关联，无供电架构、储能供需或政策传导的实质增量，摘要截断且仅单家媒体转述，在 12 条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_5bbad6afa3e5",
+      "title": "SK海力士在FMS 2026上与Sandisk推出首个HBF标准规格",
+      "valueScore": 29,
+      "selectedFloor": 10,
+      "rationale": "属存储芯片/计算侧标准进展，对跟踪储能/PCS/SST/AIDC供电的读者仅背景相关，向供电侧的传导链条过长；'首个HBF标准规格'是具体新节点但摘要截断、无规格细节与数字，单家行业媒体来源，对能源格局无实质影响，不值得占用12条席位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_01989ca438ff",
+      "title": "如何让地热井复活",
+      "valueScore": 22,
+      "selectedFloor": 10,
+      "rationale": "地热井修复属外围能源特稿，与储能/PCS/AIDC 供电仅背景相关；摘要残缺、无实体/数字/时间点等可核事实，系 Wired 内容转载复述，对目标读者信息增量低，不值得占用 12 条席位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_128c6a7fd6ad",
+      "title": "Marvell推进AI内存基础设施组合以加速Agentic AI推理",
+      "valueScore": 17,
+      "selectedFloor": 10,
+      "rationale": "Marvell芯片侧AI内存产品通稿，摘要无具体数字/时间点/当事方，与AIDC供电架构（800VDC/HVDC）、储能/PCS/SST无直接命中，属厂商营销发布，按负向清单影响维度记0，12条名额下无信息增量。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_16c375375ed6",
+      "title": "Kosol Energie推出抗冰雹模块",
+      "valueScore": 24,
+      "selectedFloor": 10,
+      "rationale": "光伏组件厂商的产品发布，对储能/PCS/AIDC供电读者仅背景相关，无任何功率、效率、产能等量化要素，单家媒体转述且不改变竞争格局，在12条限额下无信息增量，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_28131f615158",
+      "title": "PJM “饥饿游戏”储能、太阳能与天然气、核能",
+      "valueScore": 45,
+      "selectedFloor": 10,
+      "rationale": "PJM 队列中储能提案领先对北美储能需求有信号意义，但属电网/政策外围传导而非 PCS/系统级直接动态；715 这一数字有一定增量，然而单家媒体转述、摘要残缺且无当事方与时间细节，12 条额度下属边缘偏弱。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3bab6ce91b41",
+      "title": "PC冷却设备Arctic在美国政府退款后扭转了关税时代的价格上涨—降低了整个阵容的价格，包括冷却器和表壳风扇",
+      "valueScore": 15,
+      "selectedFloor": 10,
+      "rationale": "消费级PC散热配件的零售调价，与储能/PCS/SST/AIDC供电行业无业务关联，属负向清单中的消费级资讯，即便事实真实、来源可信也不值得占用12条名额之一"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3c72a3397409",
+      "title": "斯巴鲁新款Trailseeker电动汽车的销量已经超过了其他电动汽车",
+      "valueScore": 16,
+      "selectedFloor": 10,
+      "rationale": "消费级电动车单一车型销量比较，与储能/PCS/SST/AIDC供电无传导路径，且无具体销量数字、无独立交叉来源，对目标读者无信息增量，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_40c7e46c2573",
+      "title": "SOCAMM2如何为AI重塑服务器内存",
+      "valueScore": 15,
+      "selectedFloor": 10,
+      "rationale": "服务器内存（SOCAMM2）属芯片侧话题，与读者关注的AIDC供电架构/SST/储能仅背景级关联；标题为'could reshape'式前瞻分析，无任何新数字、新当事方或时间点，命中负向清单'无新事实支撑的观点预测'故影响维度记0；单一行业博客来源且要素残缺，在12条版面中不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_45a0eac3da4f",
+      "title": "到目前为止， 2026年至少有37人因抗议数据中心而被捕，其中大多数是因为违反了“小规则” --大多数被拘留者是和平行动的",
+      "valueScore": 24,
+      "selectedFloor": 10,
+      "rationale": "属数据中心社会阻力侧写：与AIDC供电架构、储能供需或项目落地无直接传导，37人为媒体汇总统计而非新事件进展，未点名任何项目/政策变化，单一媒体来源且要素残缺（地区未知、无当事方），对12条日报位而言信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_5402513ee71a",
+      "title": "芯片行业技术论文综述： 8月4日",
+      "valueScore": 13,
+      "selectedFloor": 10,
+      "rationale": "内容为芯片学术技术论文综述（存储/神经形态/氧化合物电子学等器件层研究），与储能/PCS/SST/AIDC供电架构仅存最外围背景关联，无任何商业、项目或政策影响，且为单家媒体文摘、无实体与数据要素，对目标读者无信息增量，不值得占用12条席位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_66102efc9892",
+      "title": "数据中心在威斯康星州州长竞选中占据中心位置",
+      "valueScore": 27,
+      "selectedFloor": 10,
+      "rationale": "选举政治观察类报道，无具体项目、政策落地或公司动态，对AIDC供电从业者仅是需求侧情绪背景，单家媒体且摘要无数字无当事方，信息增量低，12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_6aaa8af56fff",
+      "title": "塞拉俱乐部回应总检察长罗基塔阻止罗克波特煤电厂退休的诉讼",
+      "valueScore": 27,
+      "selectedFloor": 10,
+      "rationale": "美国煤电退役争议属电力政策外围新闻，对储能/PCS/AIDC供电读者仅有间接传导且无具体数字或当事方细节，内容以环保组织回应声明为主、单一媒体来源无交叉印证，在12条版面中信息增量不足"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_7413181ab2c5",
+      "title": "符合电池条件的新泽西州VPP计划开始成形",
+      "valueScore": 34,
+      "selectedFloor": 10,
+      "rationale": "储能政策类选题与读者相关，但计划仅处征询成形阶段，摘要只有高管观点、无数字/当事方/规模等具体事实，单家媒体且要素残缺，在12条额度下信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_8b46ec31271a",
+      "title": "保时捷新老板表示，电动718仍在到来， Taycan不会去任何地方",
+      "valueScore": 13,
+      "selectedFloor": 10,
+      "rationale": "车企电动化产品口径表态属无新数字/新时间点的观点确认，命中负向清单，与储能/PCS/SST/AIDC供电读者无传导路径，且仅单家媒体转述、摘要残缺，不值得占用12条席位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_8ef97505a230",
+      "title": "EVgo正在为美国人购物提供500多个快速充电器",
+      "valueScore": 23,
+      "selectedFloor": 10,
+      "rationale": "面向消费者的美国充电桩扩张属储能/PCS/SST/AIDC 读者的外围背景信息，单家媒体转述公司宣传口径、无时间表/合作方/具体场址等要素，对行业供需与格局无实质增量，不值得占用 12 条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_9f54e554b2f0",
+      "title": "美国的许可危机发生在市政厅",
+      "valueScore": 33,
+      "selectedFloor": 10,
+      "rationale": "Utility Dive 观点评论，主题（市政对已认证电池重复审查拖慢储能部署）与读者有传导相关，但无任何新数字、当事方或政策变动，属观点类低增量内容，单家媒体且要素残缺，12 条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_a997601b8824",
+      "title": "美国正在考虑禁止中国关键网络技术打击数据中心组件--白宫希望在2026年施加限制，中国表示将在必要时做出回应",
+      "valueScore": 51,
+      "selectedFloor": 10,
+      "rationale": "对AIDC供电读者属外围传导：限制对象是光模块等网络组件而非供电设备（SST/HVDC），且尚处'考虑/起草'阶段未落地；有新时间点（2026）和FCC起草这一动作，但仅单一媒体转述匿名信源、摘要要素不全，四维均处中低段，12条额度下属边缘可选。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_a9bda65013eb",
+      "title": "德克萨斯州为1800个数据中心踩刹车，电网需求是峰值记录需求的五倍— 474千兆瓦的电力请求现在受到新的暂停",
+      "valueScore": 77,
+      "selectedFloor": 10,
+      "rationale": "针对北美最大数据中心市场并网准入的重点政策急刹车，直接牵动AIDC供电需求预期与项目落地节奏，新数字与新政策动作明确，但仅Tom's Hardware单一媒体来源且摘要截断、要素不全，证据维度受限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_adb7c7ae838e",
+      "title": "在原子旋转中探索能量",
+      "valueScore": 16,
+      "selectedFloor": 10,
+      "rationale": "基础科研科普稿，仅背景性触及电池/半导体材料，无数字、无当事方、无时间点，对储能/PCS/AIDC 供电从业者无信息增量，单家媒体转述且摘要残缺，不值得占用 12 条名额之一。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_c05f18dc4213",
+      "title": "$ 700M微电网账单有国家能源办公室、电气制造商支持",
+      "valueScore": 44,
+      "selectedFloor": 10,
+      "rationale": "微电网/DER拨款政策对储能与PCS需求有传导意义，但材料未披露具体州名与当事制造商、立法尚处早期且仅单一媒体来源，信息增量与影响均有限，12条额度下属可舍弃的边缘项。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_c4a3795b981b",
+      "title": "华信瞄准澳大利亚“缺失的中间环节” ，提供1亿澳元用于混合太阳能+储能项目（ AU $ 100 million for hybrid solar-plus-st",
+      "valueScore": 61,
+      "selectedFloor": 10,
+      "rationale": "属储能需求的政策性融资催化，有新数字和新计划，但金额体量有限、仅覆盖澳洲中型光储单一环节、无具体项目或厂商落地，对PCS/储能系统厂商只是外围传导信号，且为PV-Tech单源报道，在12条额度下属边缘可舍案例。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d06175e4a711",
+      "title": "研究人员设计了带有单个集成蒸发器的PVT热泵",
+      "valueScore": 25,
+      "selectedFloor": 10,
+      "rationale": "实验室阶段的光伏热泵设计，与读者核心跟踪的储能/PCS/SST/AIDC供电仅背景相关，无数字、无当事方、无商业化节点，单一媒体来源且摘要要素残缺，对12条版面而言信息增量不足"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d8183b908f8c",
+      "title": "Tandem PV收购nexTC ，在内部引入钙钛矿金属氧化物涂层工艺",
+      "valueScore": 33,
+      "selectedFloor": 10,
+      "rationale": "光伏叠层电池领域的小型并购，对储能/PCS/SST/AIDC 读者仅属外围背景，无交易金额与时间线等关键要素，不改变任何环节格局，12 条名额下不值得占用。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d945f4477927",
+      "title": "Eversource第二季度收入在输电净回报率、海上风电费用上大幅下降",
+      "valueScore": 33,
+      "selectedFloor": 10,
+      "rationale": "美国地方公用事业财报属电网外围背景信息，对储能/PCS/AIDC供电读者无直接传导；增量仅为单家媒体转述的分析师观点与财报概述，缺乏具体数字与一手来源，在12条限额下不值得占位"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_e8d22cfd2e6b",
+      "title": "欧洲正在大举押注一款运行四天的电池",
+      "valueScore": 63,
+      "selectedFloor": 10,
+      "rationale": "铁-空气长时储能订单属储能系统直接动态且为新事件，但摘要截断、无规模数字与对手方，仅 Electrek 单家转述且'最大'为公司自述，对格局影响限于 LDES 单一环节，属可占位但非必读的边缘条目。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_f137b5ff01af",
+      "title": "赛格威全新MAX G3 Plus电动滑板车更进一步，动力更强，安全性更高",
+      "valueScore": 20,
+      "selectedFloor": 10,
+      "rationale": "消费级电动滑板车产品升级属于终端消费品营销类消息，与储能/PCS/AIDC供电行业无实质供需、格局或政策传导，仅电池话题背景相关，不占12条名额。"
+    }
+  ]
+}

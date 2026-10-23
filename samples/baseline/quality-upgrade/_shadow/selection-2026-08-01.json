@@ -12,6 +12,7 @@
   "counts": {
     "selected": 9,
     "nearBand": 21,
+    "nearBandCapped": 0,
     "audit": 0,
     "scored": 30,
     "failed": 0
@@ -184,21 +185,6 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_a4a7fda5e351",
-      "title": "随着大学比赛激增，水电赢家涌现",
-      "ruleScore": 3.5,
-      "scores": {
-        "businessRelevance": 4,
-        "factualIncrement": 6,
-        "impact": 2,
-        "evidence": 9
-      },
-      "total": 21,
-      "keyFact": "2026年水电与海洋能高校竞赛决赛颁奖，DOE迎来创纪录的45支参赛队伍",
-      "rationale": "高校学生竞赛属人才培育/机构宣传类消息，与储能/PCS/SST/AIDC供电的供需、格局、项目落地均无传导关系，虽有具体新事实（45队创纪录）且来源可信，但对目标读者无信息增量，不值得占位。"
-    },
-    {
-      "group": "near-band",
       "eventId": "evt_708bb4bdd529",
       "title": "Lumentum首席执行官警告用于硅光子学的关键材料即将出现瓶颈—由于联合包装光学器件需求飙升，晶圆厂和材料短缺已经低于客户需求的30 ％",
       "ruleScore": 3.5,
@@ -211,6 +197,21 @@
       "total": 38,
       "keyFact": "Lumentum CEO在RAISE Summit警告磷化铟供应缺口已达客户需求的30%，CPO需求激增将引发硅光子关键材料瓶颈。",
       "rationale": "属光互连/芯片供应链消息，与读者跟踪的储能/PCS/SST/AIDC供电仅有AI算力扩张的间接传导，30%缺口数字有增量但系单家媒体转述高管峰会预警，对供电行业读者占位价值低。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_a4a7fda5e351",
+      "title": "随着大学比赛激增，水电赢家涌现",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 4,
+        "factualIncrement": 6,
+        "impact": 2,
+        "evidence": 9
+      },
+      "total": 21,
+      "keyFact": "2026年水电与海洋能高校竞赛决赛颁奖，DOE迎来创纪录的45支参赛队伍",
+      "rationale": "高校学生竞赛属人才培育/机构宣传类消息，与储能/PCS/SST/AIDC供电的供需、格局、项目落地均无传导关系，虽有具体新事实（45队创纪录）且来源可信，但对目标读者无信息增量，不值得占位。"
     },
     {
       "group": "near-band",
@@ -244,21 +245,6 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_a7d0c75a436c",
-      "title": "当人工智能电力行业崩溃时会发生什么？",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 12,
-        "factualIncrement": 0,
-        "impact": 0,
-        "evidence": 5
-      },
-      "total": 17,
-      "keyFact": "",
-      "rationale": "CleanTechnica 个人博客式观点评论，探讨'AI 电力行业若崩溃会怎样'的假设性猜想，无任何数字、公司、项目或政策等新事实，命中负向清单'无新事实支撑的观点预测'，事实增量与影响记 0；仅主题上沾边 AIDC 供电需求叙事（中低段背景相关），单家媒体且摘要残缺、无实体无数据，17 分在 12 条日报额度中不值得占位。"
-    },
-    {
-      "group": "near-band",
       "eventId": "evt_0f1d73d0ba50",
       "title": "胜利：法院裁决支持Sierra Club ，批准FERC加快清洁能源项目的命令",
       "ruleScore": 2.5,
@@ -271,6 +257,21 @@
       "total": 52,
       "keyFact": "哥伦比亚特区巡回上诉法院裁定支持Sierra Club，认定FERC 2023号令（加快清洁能源并网排队改革）合法有效",
       "rationale": "并网改革判决对美国储能项目落地有传导意义，但属外围政策确认而非格局改变，且摘要残缺、仅单一媒体转述环保组织口径，证据与细节均不足，在12条额度下优先级偏低。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_16c64045900f",
+      "title": "芯片行业周回顾",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 4,
+        "impact": 2,
+        "evidence": 7
+      },
+      "total": 18,
+      "keyFact": "",
+      "rationale": "芯片行业综合周报属聚合式回顾，对储能/PCS/AIDC供电读者仅是上游背景话题，摘要无任何具体数字、当事方或可评估的项目/政策影响，12条名额下信息增量不足。"
     },
     {
       "group": "near-band",
@@ -289,36 +290,6 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_ba258baf311a",
-      "title": "Supermicro通过精密工程AI机架系列扩展DCBBS ，以加速部署和上线时间",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 10,
-        "factualIncrement": 8,
-        "impact": 5,
-        "evidence": 6
-      },
-      "total": 29,
-      "keyFact": "Supermicro于2026-07-31宣布扩展DCBBS，推出面向AI部署的精密工程机架系列以缩短上线时间",
-      "rationale": "属服务器厂商机架产品发布通稿，落在IT机架/散热外围而非AIDC供电架构（800VDC/HVDC、SST/PCS）核心，摘要截断且无任何参数、订单或交付节点等具体事实，单一媒体转述厂商PR，对供电链读者格局与供需判断无增量，不值得占位。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_f892adaf771f",
-      "title": "纽约接受了太阳能吞噬农田的神话",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 9,
-        "factualIncrement": 4,
-        "impact": 5,
-        "evidence": 7
-      },
-      "total": 25,
-      "keyFact": "",
-      "rationale": "Canary Media 周报性质的观点分析稿，讨论美国光伏占用农田的舆论争议，材料中无任何新数字、新项目或新政策节点，对储能/PCS/AIDC 供电读者仅属弱传导的背景话题，单家媒体且要素残缺，在 12 条名额竞争中无信息增量，不值得占用。"
-    },
-    {
-      "group": "near-band",
       "eventId": "evt_20019d2368b2",
       "title": "氢气流：中国公司创下绿色氨出口纪录",
       "ruleScore": 2.5,
@@ -331,6 +302,36 @@
       "total": 43,
       "keyFact": "国家电投单批出口3,750吨绿色氨，创全球最大单批绿氨出口纪录",
       "rationale": "绿氨出口纪录有具体新数字、属已落地事实，但属氢能/其他能源赛道，对储能/PCS/SST/AIDC供电读者仅为背景性外围信息，且仅pv magazine单家媒体报道，在12条日报额度中优先级偏低。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_23815c80cf81",
+      "title": "电气化行动计划对交通运输意味着什么",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 4,
+        "impact": 6,
+        "evidence": 6
+      },
+      "total": 26,
+      "keyFact": "",
+      "rationale": "T&E 对欧盟电气化行动计划的观点性解读，聚焦交通电气化，对储能/PCS/SST/AIDC 读者仅属外围政策传导；摘要无任何新数字、时间点或当事方，属复述/解读类低增量内容，且仅单家媒体来源、要素残缺，在每天 12 条的额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_31a780d71f21",
+      "title": "小米Sky Nomad获得技术实用性，失去激情",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 4,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 9,
+      "keyFact": "",
+      "rationale": "消费级电动车评测（观点类内容），与储能/PCS/SST/AIDC供电仅背景级沾边，摘要无任何新数字/新事件，对供需、格局、项目、政策零影响，单一媒体评论源，不占12条名额。"
     },
     {
       "group": "near-band",
@@ -364,6 +365,51 @@
     },
     {
       "group": "near-band",
+      "eventId": "evt_96e9087575da",
+      "title": "DAC 2026 ： John Cooley的麻烦制造者小组的麻烦",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 2,
+        "impact": 0,
+        "evidence": 4
+      },
+      "total": 9,
+      "keyFact": "",
+      "rationale": "SemiWiki对DAC 2026 EDA高管小组的评论性文章，属无新事实支撑的观点内容（触发负向清单），与储能/PCS/SST/AIDC供电仅芯片生态背景级关联，单源且要素残缺，不值得占12条中的位置。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_a7d0c75a436c",
+      "title": "当人工智能电力行业崩溃时会发生什么？",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 17,
+      "keyFact": "",
+      "rationale": "CleanTechnica 个人博客式观点评论，探讨'AI 电力行业若崩溃会怎样'的假设性猜想，无任何数字、公司、项目或政策等新事实，命中负向清单'无新事实支撑的观点预测'，事实增量与影响记 0；仅主题上沾边 AIDC 供电需求叙事（中低段背景相关），单家媒体且摘要残缺、无实体无数据，17 分在 12 条日报额度中不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_ba258baf311a",
+      "title": "Supermicro通过精密工程AI机架系列扩展DCBBS ，以加速部署和上线时间",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 8,
+        "impact": 5,
+        "evidence": 6
+      },
+      "total": 29,
+      "keyFact": "Supermicro于2026-07-31宣布扩展DCBBS，推出面向AI部署的精密工程机架系列以缩短上线时间",
+      "rationale": "属服务器厂商机架产品发布通稿，落在IT机架/散热外围而非AIDC供电架构（800VDC/HVDC、SST/PCS）核心，摘要截断且无任何参数、订单或交付节点等具体事实，单一媒体转述厂商PR，对供电链读者格局与供需判断无增量，不值得占位。"
+    },
+    {
+      "group": "near-band",
       "eventId": "evt_c2f16f133af1",
       "title": "欧洲的热浪带来了高辐射，因为烟雾、灰尘影响了南方光伏系统",
       "ruleScore": 2.5,
@@ -376,51 +422,6 @@
       "total": 28,
       "keyFact": "Solcast（DNV 旗下）周报称欧洲 7 月热浪带来辐照度正异常，同时烟雾与沙尘影响南欧光伏系统出力",
       "rationale": "对储能/PCS/AIDC 读者仅是光伏气象面的外围背景：例行周报、摘要截断无具体数字、无项目/政策/格局影响，单家可信媒体但信息增量不足，难以挤进 12 条名额。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_f597bb5e413c",
-      "title": "德国正在用氢气重建其失败的俄罗斯天然气战略",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 5,
-        "factualIncrement": 0,
-        "impact": 0,
-        "evidence": 5
-      },
-      "total": 10,
-      "keyFact": "",
-      "rationale": "CleanTechnica 观点评论稿，质疑德国氢能补贴结构但无新数字、新当事方或新政策节点（触发负向清单'无新事实支撑的观点'），对储能/PCS/AIDC 读者仅属氢能/燃气背景话题，单家评论源且要素残缺，无信息增量不值得占位。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_16c64045900f",
-      "title": "芯片行业周回顾",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 5,
-        "factualIncrement": 4,
-        "impact": 2,
-        "evidence": 7
-      },
-      "total": 18,
-      "keyFact": "",
-      "rationale": "芯片行业综合周报属聚合式回顾，对储能/PCS/AIDC供电读者仅是上游背景话题，摘要无任何具体数字、当事方或可评估的项目/政策影响，12条名额下信息增量不足。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_23815c80cf81",
-      "title": "电气化行动计划对交通运输意味着什么",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 10,
-        "factualIncrement": 4,
-        "impact": 6,
-        "evidence": 6
-      },
-      "total": 26,
-      "keyFact": "",
-      "rationale": "T&E 对欧盟电气化行动计划的观点性解读，聚焦交通电气化，对储能/PCS/SST/AIDC 读者仅属外围政策传导；摘要无任何新数字、时间点或当事方，属复述/解读类低增量内容，且仅单家媒体来源、要素残缺，在每天 12 条的额度下不值得占位。"
     },
     {
       "group": "near-band",
@@ -439,33 +440,33 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_31a780d71f21",
-      "title": "小米Sky Nomad获得技术实用性，失去激情",
+      "eventId": "evt_f597bb5e413c",
+      "title": "德国正在用氢气重建其失败的俄罗斯天然气战略",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 4,
+        "businessRelevance": 5,
         "factualIncrement": 0,
         "impact": 0,
         "evidence": 5
       },
-      "total": 9,
+      "total": 10,
       "keyFact": "",
-      "rationale": "消费级电动车评测（观点类内容），与储能/PCS/SST/AIDC供电仅背景级沾边，摘要无任何新数字/新事件，对供需、格局、项目、政策零影响，单一媒体评论源，不占12条名额。"
+      "rationale": "CleanTechnica 观点评论稿，质疑德国氢能补贴结构但无新数字、新当事方或新政策节点（触发负向清单'无新事实支撑的观点'），对储能/PCS/AIDC 读者仅属氢能/燃气背景话题，单家评论源且要素残缺，无信息增量不值得占位。"
     },
     {
       "group": "near-band",
-      "eventId": "evt_96e9087575da",
-      "title": "DAC 2026 ： John Cooley的麻烦制造者小组的麻烦",
+      "eventId": "evt_f892adaf771f",
+      "title": "纽约接受了太阳能吞噬农田的神话",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 3,
-        "factualIncrement": 2,
-        "impact": 0,
-        "evidence": 4
+        "businessRelevance": 9,
+        "factualIncrement": 4,
+        "impact": 5,
+        "evidence": 7
       },
-      "total": 9,
+      "total": 25,
       "keyFact": "",
-      "rationale": "SemiWiki对DAC 2026 EDA高管小组的评论性文章，属无新事实支撑的观点内容（触发负向清单），与储能/PCS/SST/AIDC供电仅芯片生态背景级关联，单源且要素残缺，不值得占12条中的位置。"
+      "rationale": "Canary Media 周报性质的观点分析稿，讨论美国光伏占用农田的舆论争议，材料中无任何新数字、新项目或新政策节点，对储能/PCS/AIDC 供电读者仅属弱传导的背景话题，单家媒体且要素残缺，在 12 条名额竞争中无信息增量，不值得占用。"
     }
   ],
   "disagreements": [
@@ -487,19 +488,19 @@
     },
     {
       "kind": "outside-over-selected-floor",
-      "eventId": "evt_a4a7fda5e351",
-      "title": "随着大学比赛激增，水电赢家涌现",
-      "valueScore": 21,
-      "selectedFloor": 18,
-      "rationale": "高校学生竞赛属人才培育/机构宣传类消息，与储能/PCS/SST/AIDC供电的供需、格局、项目落地均无传导关系，虽有具体新事实（45队创纪录）且来源可信，但对目标读者无信息增量，不值得占位。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
       "eventId": "evt_708bb4bdd529",
       "title": "Lumentum首席执行官警告用于硅光子学的关键材料即将出现瓶颈—由于联合包装光学器件需求飙升，晶圆厂和材料短缺已经低于客户需求的30 ％",
       "valueScore": 38,
       "selectedFloor": 18,
       "rationale": "属光互连/芯片供应链消息，与读者跟踪的储能/PCS/SST/AIDC供电仅有AI算力扩张的间接传导，30%缺口数字有增量但系单家媒体转述高管峰会预警，对供电行业读者占位价值低。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_a4a7fda5e351",
+      "title": "随着大学比赛激增，水电赢家涌现",
+      "valueScore": 21,
+      "selectedFloor": 18,
+      "rationale": "高校学生竞赛属人才培育/机构宣传类消息，与储能/PCS/SST/AIDC供电的供需、格局、项目落地均无传导关系，虽有具体新事实（45队创纪录）且来源可信，但对目标读者无信息增量，不值得占位。"
     },
     {
       "kind": "outside-over-selected-floor",
@@ -535,27 +536,19 @@
     },
     {
       "kind": "outside-over-selected-floor",
-      "eventId": "evt_ba258baf311a",
-      "title": "Supermicro通过精密工程AI机架系列扩展DCBBS ，以加速部署和上线时间",
-      "valueScore": 29,
-      "selectedFloor": 18,
-      "rationale": "属服务器厂商机架产品发布通稿，落在IT机架/散热外围而非AIDC供电架构（800VDC/HVDC、SST/PCS）核心，摘要截断且无任何参数、订单或交付节点等具体事实，单一媒体转述厂商PR，对供电链读者格局与供需判断无增量，不值得占位。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_f892adaf771f",
-      "title": "纽约接受了太阳能吞噬农田的神话",
-      "valueScore": 25,
-      "selectedFloor": 18,
-      "rationale": "Canary Media 周报性质的观点分析稿，讨论美国光伏占用农田的舆论争议，材料中无任何新数字、新项目或新政策节点，对储能/PCS/AIDC 供电读者仅属弱传导的背景话题，单家媒体且要素残缺，在 12 条名额竞争中无信息增量，不值得占用。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
       "eventId": "evt_20019d2368b2",
       "title": "氢气流：中国公司创下绿色氨出口纪录",
       "valueScore": 43,
       "selectedFloor": 18,
       "rationale": "绿氨出口纪录有具体新数字、属已落地事实，但属氢能/其他能源赛道，对储能/PCS/SST/AIDC供电读者仅为背景性外围信息，且仅pv magazine单家媒体报道，在12条日报额度中优先级偏低。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_23815c80cf81",
+      "title": "电气化行动计划对交通运输意味着什么",
+      "valueScore": 26,
+      "selectedFloor": 18,
+      "rationale": "T&E 对欧盟电气化行动计划的观点性解读，聚焦交通电气化，对储能/PCS/SST/AIDC 读者仅属外围政策传导；摘要无任何新数字、时间点或当事方，属复述/解读类低增量内容，且仅单家媒体来源、要素残缺，在每天 12 条的额度下不值得占位。"
     },
     {
       "kind": "outside-over-selected-floor",
@@ -575,6 +568,14 @@
     },
     {
       "kind": "outside-over-selected-floor",
+      "eventId": "evt_ba258baf311a",
+      "title": "Supermicro通过精密工程AI机架系列扩展DCBBS ，以加速部署和上线时间",
+      "valueScore": 29,
+      "selectedFloor": 18,
+      "rationale": "属服务器厂商机架产品发布通稿，落在IT机架/散热外围而非AIDC供电架构（800VDC/HVDC、SST/PCS）核心，摘要截断且无任何参数、订单或交付节点等具体事实，单一媒体转述厂商PR，对供电链读者格局与供需判断无增量，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
       "eventId": "evt_c2f16f133af1",
       "title": "欧洲的热浪带来了高辐射，因为烟雾、灰尘影响了南方光伏系统",
       "valueScore": 28,
@@ -583,19 +584,19 @@
     },
     {
       "kind": "outside-over-selected-floor",
-      "eventId": "evt_23815c80cf81",
-      "title": "电气化行动计划对交通运输意味着什么",
-      "valueScore": 26,
-      "selectedFloor": 18,
-      "rationale": "T&E 对欧盟电气化行动计划的观点性解读，聚焦交通电气化，对储能/PCS/SST/AIDC 读者仅属外围政策传导；摘要无任何新数字、时间点或当事方，属复述/解读类低增量内容，且仅单家媒体来源、要素残缺，在每天 12 条的额度下不值得占位。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
       "eventId": "evt_c3d242be266f",
       "title": "网格利用率：有用的政策工具还是分心？ ",
       "valueScore": 40,
       "selectedFloor": 18,
       "rationale": "美国州级电网利用率政策属对储能/AIDC供电仅有传导影响的外围议题，正文以分析师观点辩论为主、无具体数字或当事方，单一媒体且摘要残缺，12条额度下信息增量不足以占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_f892adaf771f",
+      "title": "纽约接受了太阳能吞噬农田的神话",
+      "valueScore": 25,
+      "selectedFloor": 18,
+      "rationale": "Canary Media 周报性质的观点分析稿，讨论美国光伏占用农田的舆论争议，材料中无任何新数字、新项目或新政策节点，对储能/PCS/AIDC 供电读者仅属弱传导的背景话题，单家媒体且要素残缺，在 12 条名额竞争中无信息增量，不值得占用。"
     }
   ]
 }

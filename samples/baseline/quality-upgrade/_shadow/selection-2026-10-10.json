@@ -1,0 +1,1207 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "generatedAt": "2026-10-10T15:59:59.000Z",
+  "mode": "shadow",
+  "weights": {
+    "businessRelevance": 30,
+    "factualIncrement": 25,
+    "impact": 25,
+    "evidence": 20
+  },
+  "counts": {
+    "selected": 12,
+    "nearBand": 40,
+    "nearBandCapped": 236,
+    "audit": 5,
+    "scored": 57,
+    "failed": 0
+  },
+  "items": [
+    {
+      "group": "selected",
+      "eventId": "evt_e27d704e7edb",
+      "title": "英伟达、微软借助RTX Spark和人工智能代理为Windows PC开启新的起点",
+      "ruleScore": 6.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 15,
+      "keyFact": "",
+      "rationale": "英伟达与微软发布面向Windows PC的消费级AI产品（RTX Spark/AI代理），属消费电子营销事件，与储能/PCS/AIDC供电无业务关联，无增量信息，不占日报位置。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_b1b370aadb8b",
+      "title": "进入Omniverse ：开发人员如何通过前沿人工智能代理将创意转化为模拟",
+      "ruleScore": 5.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 2,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 5,
+      "keyFact": "",
+      "rationale": "NVIDIA Omniverse 开发者教程式博客，仅借 NVIDIA 实体与 AIDC 生态有微弱背景关联，无任何新数字/新节点/新当事方，属厂商营销内容，按负向清单影响与证据记 0，不值得占用日报版面。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_c5178782ece4",
+      "title": "特斯拉的下一个大型清洁能源正在亚利桑那州的沙漠中崛起",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 20,
+        "factualIncrement": 14,
+        "impact": 14,
+        "evidence": 12
+      },
+      "total": 60,
+      "keyFact": "特斯拉在亚利桑那州开建450MW光伏+大型储能项目，约90%产能已锁定",
+      "rationale": "特斯拉储能业务实质项目动态，与储能行业直接相关且含具体规模数字，但仅Electrek单家媒体、摘要信息残缺（90%指向不明），影响限于单个项目，属可占位但非必选的中段消息。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_b00cf96e7fc9",
+      "title": "山西再废止458.3MW风、光项目：涉及特变电工、晋能控股集团等",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 18,
+        "impact": 10,
+        "evidence": 12
+      },
+      "total": 52,
+      "keyFact": "山西再废止458.3MW风光项目，涉及特变电工、晋能控股等",
+      "rationale": "风光项目废止属储能/AIDC供电的外围传导信息，有具体规模与当事方的新事实，但对目标读者格局影响有限，且摘要仅复述标题、来源细节不足。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_e24eff348619",
+      "title": "Bluetti Na （ Sodium ） 900瓦时发电站，独家低价665 $ ， Anker太阳能多摄像头套件优惠310 $ ， Navee电动汽车，更多",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 5,
+      "keyFact": "",
+      "rationale": "Electrek消费级促销导购（Green Deals），仅零售折扣信息，属软文/营销类负向清单，对储能行业供需、格局、项目落地无信息增量。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_2b5a364b8b3d",
+      "title": "聚焦AI算力供电新命题，牵头推进固态变压器标准化落地",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 23,
+        "factualIncrement": 4,
+        "impact": 5,
+        "evidence": 5
+      },
+      "total": 37,
+      "keyFact": "",
+      "rationale": "SST标准化+AIDC供电方向与读者核心关注直接相关，但全文仅标题级表述：无牵头方、无标准名称、无时间节点、无任何数字，摘要为标题复述，单一非权威媒体来源且要素残缺，既无新事实也无可评估的格局影响，不值得占用每日12条席位。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_950092a83454",
+      "title": "随着人工智能数据中心动力总成上线，英伟达SolarEdge发布800 VDC安全框架",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 12,
+        "impact": 13,
+        "evidence": 8
+      },
+      "total": 59,
+      "keyFact": "SolarEdge与英伟达联合发布800VDC安全框架，AI数据中心动力总成宣布上线",
+      "rationale": "直接命中800VDC AIDC供电架构且涉及英伟达生态与SolarEdge，属读者核心赛道；但摘要仅为标题复述、无任何数字/时间/技术细节，单一行业媒体来源且要素残缺，事实增量与证据受限，属边缘可占位的条目。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_aa2480244bb0",
+      "title": "清华具身模型登顶全球第一！突围GPT-6、英伟达，不靠外挂和额外数据",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 10,
+      "keyFact": "清华系星动纪元具身智能模型登顶全球第一，采用视频预测与动作学习分阶段解耦训练",
+      "rationale": "具身智能/AI模型进展与储能、PCS、SST、AIDC供电均无业务关联，摘要无具体数字或当事方细节，单一媒体来源，对目标读者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_28c3289d0995",
+      "title": "Sophos借助OpenAI Daybreak将威胁调查时间缩短96%",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 5,
+      "keyFact": "Sophos称借助OpenAI Daybreak将威胁调查时间缩短96%、自动化52%的MDR案例",
+      "rationale": "网络安全SaaS厂商与OpenAI的营销案例，与储能/PCS/SST/AIDC供电行业无任何业务关联；内容为厂商通稿式宣传，无独立来源印证，对读者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_07f981d53f39",
+      "title": "3.6GWh构网型储能PCS采购成交结果公示！",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 27,
+        "factualIncrement": 13,
+        "impact": 11,
+        "evidence": 8
+      },
+      "total": 59,
+      "keyFact": "某3.6GWh构网型储能PCS采购成交结果公示，但材料未披露买方、中标方与单价",
+      "rationale": "直接命中PCS且构网型+3.6GWh规模对目标读者有吸引力，但仅有标题级转述：无买方/中标方/价格等关键要素，无法判断格局影响，单家行业号信源要素残缺，增量与证据均只能给中低段。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_670d24e6dc11",
+      "title": "盛弘股份（300693.SZ）新增一起对外投资，被投资公司为北京隆森微网科技有限公司_公司新闻",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 18,
+        "factualIncrement": 8,
+        "impact": 4,
+        "evidence": 6
+      },
+      "total": 36,
+      "keyFact": "盛弘股份新增对外投资北京隆森微网科技有限公司，无金额、股比及战略细节披露。",
+      "rationale": "盛弘属读者重点跟踪的PCS/储能公司，但本条仅为工商变动式的投资披露，摘要即标题、无任何数字与目的，信息增量和格局影响均不足以在12条额度中占位。"
+    },
+    {
+      "group": "selected",
+      "eventId": "evt_89152ca461fe",
+      "title": "芬兰Truman Data推出AI虚拟电厂平台",
+      "ruleScore": 3,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 5,
+        "impact": 3,
+        "evidence": 4
+      },
+      "total": 22,
+      "keyFact": "",
+      "rationale": "仅一条标题式转述（来源为科华数据转载），无任何数字、当事方细节或独立来源，属产品发布类营销信息，EMS/VPP话题有外围关联但无信息增量，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_66eabe8e1cea",
+      "title": "电信运营商为何在开放模型上构建人工智能战略",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 5,
+      "keyFact": "",
+      "rationale": "NVIDIA 官方博客软文性质的观点文章，讲电信运营商 AI 战略，与储能/PCS/AIDC 供电仅背景相关，无任何新数字或事实，负向清单命中软文与无事实支撑的观点，各维度记低分或 0。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_d7c1b411df91",
+      "title": "美国核电站车队正在倾向于人工智能",
+      "ruleScore": 5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 6,
+        "impact": 6,
+        "evidence": 14
+      },
+      "total": 38,
+      "keyFact": "",
+      "rationale": "IEEE Spectrum 对核电与AI结合的行业趋势综述，与AIDC供电有外围传导关联但无具体项目、数字或新事实，属观点性背景报道，12条名额下信息增量不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_11392037d727",
+      "title": "科华数据：10月8日融资买入4602.26万元，融资融券余额11.5亿元",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 20,
+      "keyFact": "",
+      "rationale": "科华数据属储能/PCS相关公司，但内容仅为单日融资融券余额的股价类资金面数据，无业务事实增量，属负向清单中的股价日常波动，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_2124aa97ae70",
+      "title": "比亚迪供货！波兰2.4GWh储能项目开工",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 27,
+        "factualIncrement": 19,
+        "impact": 14,
+        "evidence": 13
+      },
+      "total": 73,
+      "keyFact": "比亚迪供货的波兰2.4GWh储能项目开工",
+      "rationale": "头部厂商海外储能大单进入开工节点，直接命中储能系统与重点公司实质动态，值得占位；但摘要仅复述标题、缺业主与交付时间等要素，且来源疑似厂商自发声道，影响限于单一项目而非改变格局。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_225995ca8b85",
+      "title": "資料中心儲能熱潮助攻 LG新能源獲利衝上市場預期兩倍 股價飆7%",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 22,
+        "factualIncrement": 10,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 40,
+      "keyFact": "LG新能源因数据中心储能需求旺盛，获利达市场预期两倍，股价上涨7%",
+      "rationale": "储能头部公司业绩超预期与AIDC储能需求直接相关，但报道核心是股价日常波动且命中负向清单，摘要仅为标题复述、无具体财务数字与独立来源，信息增量与证据均不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_24d1cab338b2",
+      "title": "四方股份跌2.64%，成交额6.19亿元，今日主力净流入-5043.69万",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 6,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 11,
+      "keyFact": "",
+      "rationale": "纯股价日常波动行情稿，命中负向清单（股价变动记0），无公司实质动态、无行业信息增量，摘要仅为标题复述且未说明变动原因，单源转载，不值得占用12条席位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3a78f323dfd6",
+      "title": "英维克：10月8日融券卖出2.29万股，融资融券余额37.89亿元",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 23,
+      "keyFact": "英维克10月8日融券卖出2.29万股，融资融券余额37.89亿元",
+      "rationale": "英维克属液冷温控供应商，与AIDC供电仅外围相关，且内容为股价融资融券日常波动，无业务增量，负向清单命中股价变动，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3c6d9e89c527",
+      "title": "600MW/2.4GWh！比亚迪储能拿下欧洲波兰标杆大储项目",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 27,
+        "factualIncrement": 18,
+        "impact": 21,
+        "evidence": 13
+      },
+      "total": 79,
+      "keyFact": "比亚迪储能拿下波兰600MW/2.4GWh大储项目，为其在欧洲的标杆性大储订单",
+      "rationale": "直接命中储能系统与头部厂商实质动态，2.4GWh级欧洲大单对竞争格局有指标意义；但仅单家行业媒体转述、摘要除标题外无业主/交付节点等增量细节，事实增量与证据充分度受限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3cbb8f16b8f8",
+      "title": "Anker Solix宣布推出输出功率为4.5千瓦的S5000电站",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 10,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 26,
+      "keyFact": "Anker Solix发布S5000移动电站：4.5kW输出、44kg、120V模式待机功耗低于9W",
+      "rationale": "消费级便携储能新品发布，属产品营销性质，对跟踪PCS/SST/AIDC供电格局的读者无格局或供应链影响，仅品牌动态有微弱背景价值；单一媒体报道且无独立印证，按负向清单影响维度记0。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_40054e1b21b9",
+      "title": "阳光电源600MWh储能系统落地芬兰，两座电站同期开工",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 27,
+        "factualIncrement": 19,
+        "impact": 14,
+        "evidence": 10
+      },
+      "total": 70,
+      "keyFact": "阳光电源600MWh储能系统落地芬兰，两座电站同期开工",
+      "rationale": "头部储能厂商海外项目落地，规模（600MWh）、地点与阶段（开工）要素具体，直接命中储能系统与重点公司动态；但单家媒体转述、摘要仅为标题复述且无业主/并网等细节，订单量级属常规出货而非改变格局，可占一席但非必读。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_b616557ba2ad",
+      "title": "特斯拉在亚特兰大和萨凡纳之间开设14个Semi Megacharger摊位",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 15,
+        "impact": 8,
+        "evidence": 12
+      },
+      "total": 45,
+      "keyFact": "特斯拉在亚特兰大与萨凡纳之间投运首批Semi Megacharger站点（8桩+6桩，单桩最高1.2MW）",
+      "rationale": "重卡兆瓦级充电桩涉及大功率电力电子与供电架构，与PCS/SST读者有外围传导关联，但属单一公司充电网络扩张，不改变供需格局，单家媒体来源，12条额度下优先级偏低。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_ed8c13fa469d",
+      "title": "Vertiv宣布北美合作伙伴奖的获奖者，以实现人工智能就绪的基础设施和客户成功",
+      "ruleScore": 4.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 25,
+      "keyFact": "Vertiv公布2025年北美合作伙伴奖获奖名单，主题为AI就绪基础设施与客户成功",
+      "rationale": "Vertiv虽属AIDC供电核心厂商，但本条为其自家新闻room发布的合作伙伴奖项通稿，属营销性质，无订单、扩产、技术或政策等实质增量，对供需与格局无影响，按负向清单影响维度记0，12条席位不值得占用"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_008806abafaf",
+      "title": "所有数字： Amazon Prime Day 2026 ，由AWS提供支持",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 5,
+      "keyFact": "",
+      "rationale": "AWS官方博客的Prime Day营销通稿，无供电架构、储能或AIDC电力供需的实质信息，属消费级营销内容，四维均无增量。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_39bd27d02d9a",
+      "title": "LG向特斯拉供应43亿美元电池",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 18,
+        "impact": 20,
+        "evidence": 10
+      },
+      "total": 74,
+      "keyFact": "LG将向特斯拉供应价值43亿美元的电池",
+      "rationale": "头部储能厂商间的大额电池供应订单直接命中储能供应链格局，43亿美元为新披露数字，但仅单家媒体转述、无时间点/交付细节/独立来源交叉印证，证据与增量受限，仍值得占一个位置。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3f27c0dcb748",
+      "title": "Vertiv任命Michael Resha领导全球制造和卓越运营",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 8,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 30,
+      "keyFact": "Vertiv任命Michael Resha负责全球制造与卓越运营",
+      "rationale": "Vertiv是AIDC供电重点公司，但高管人事任命属日常动态，无产能、订单或战略实质信息，负向清单中招聘/人事类影响记0，不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_489d477a6a96",
+      "title": "LegalOn在保持开发速度的同时将Codex成本减半",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 13,
+      "keyFact": "LegalOn通过任务匹配将Codex预估日成本降低65%且保持开发速度",
+      "rationale": "内容为AI编程工具成本优化案例，与储能/PCS/AIDC供电行业无业务关联，属OpenAI客户案例通稿，对目标读者无信息增量，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_4cc2005c155f",
+      "title": "IPS收购Belyea ，提供变压器服务",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 15,
+        "impact": 8,
+        "evidence": 10
+      },
+      "total": 45,
+      "keyFact": "IPS收购Belyea公司，扩充69–230kV翻新高压变压器库存以应对供货周期延长",
+      "rationale": "传统变压器翻新服务的中小型并购，与读者跟踪的SST/AIDC供电架构仅外围传导相关，无格局影响，且仅单家行业媒体、要素残缺（无当事方细节、区域未知），在12条限额下信息增量不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_6434e5b77238",
+      "title": "2.98GWh！中核储能集采落定，六企入围-招投标",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 28,
+        "factualIncrement": 20,
+        "impact": 18,
+        "evidence": 10
+      },
+      "total": 76,
+      "keyFact": "中核2.98GWh储能集采结果落定，六家企业入围",
+      "rationale": "央企大额储能集采开标直接命中储能系统供需格局，规模与入围家数为新事实，但仅单一媒体来源、摘要无正文细节且未列明入围厂商，证据与影响维度受限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_70d9a06704b3",
+      "title": "大洗牌！宁德时代登顶，中国企业“梯队化”赶超",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 18,
+        "factualIncrement": 4,
+        "impact": 4,
+        "evidence": 6
+      },
+      "total": 32,
+      "keyFact": "",
+      "rationale": "标题党式行业综述，摘要仅复述标题，无任何具体数字、时间点或当事方细节，属观点/盘点类内容，对储能从业者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_77b17c0f3378",
+      "title": "威胜控股附属惟远能源2026年截至公告日新增中标海外合约超40亿元",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 12,
+        "impact": 10,
+        "evidence": 8
+      },
+      "total": 45,
+      "keyFact": "威胜控股附属惟远能源2026年新增中标海外合约超40亿元",
+      "rationale": "电力设备公司大额海外订单对行业格局有一定参考，但摘要无项目细节、客户与产品线信息，来源为转载媒体且要素残缺，信息增量有限，难以挤进12条限额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_95014fb2fe66",
+      "title": "股票行情快报：盛弘股份（300693）10月8日主力资金净卖出96.62万元",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 0
+      },
+      "total": 0,
+      "keyFact": "",
+      "rationale": "个股主力资金净卖出96.62万元属股价日常波动，命中负向清单，四维均记0，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_d7e3e10ac941",
+      "title": "英飞凌给伊顿供 SiC打造MVSST固态变压器，一路改到电网！",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 7,
+        "impact": 6,
+        "evidence": 5
+      },
+      "total": 44,
+      "keyFact": "英飞凌向伊顿供应SiC器件用于其中压固态变压器（MVSST）开发，瞄准电网应用",
+      "rationale": "直接命中SST主题且涉及英飞凌/伊顿两家重点厂商，业务关联高；但摘要仅为标题复述，无任何数字、时间点、项目规模等细节，单一转载源（SST中文科研/搜狐）要素残缺，信息增量与格局影响均有限，属边缘案例——若后续出现订单规模或交付节点等一手细节才值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_e3b3327e0ff3",
+      "title": "RWE将在德克萨斯州试行Heron Power固态变压器",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 15,
+        "impact": 10,
+        "evidence": 9
+      },
+      "total": 60,
+      "keyFact": "Heron Power 与 RWE Americas 签署试点协议，将在德克萨斯州部署 Heron Link 固态变压器功率转换系统",
+      "rationale": "直接命中 SST 赛道且为头部电力公司 RWE 的落地试点，属新签约事件有信息增量；但摘要要素残缺（无规模/时间/电压等级，metrics 字段疑似 60Hz 解析错误）、仅单家行业媒体转述，试点阶段对格局影响有限，值得占位但非头条。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_ef40eddc2de1",
+      "title": "中煤拟收购阳光新能源、特变电工250MW风、光电站",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 8,
+        "impact": 8,
+        "evidence": 6
+      },
+      "total": 34,
+      "keyFact": "中煤拟收购阳光新能源及特变电工250MW风、光电站",
+      "rationale": "央企收购新能源电站资产属光伏风电外围消息，对储能/PCS/AIDC供电读者仅有间接传导；标题级信息无细节、单来源转载、要素残缺，信息增量有限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_f19a8754853a",
+      "title": "瓦锡兰将为美国数据中心提供282兆瓦的现场电力解决方案，因为人工智能的增长加剧了对可靠电力的需求",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 23,
+        "factualIncrement": 18,
+        "impact": 15,
+        "evidence": 11
+      },
+      "total": 67,
+      "keyFact": "瓦锡兰将为美国某数据中心供应282 MW现场电力解决方案，AI增长推高对可靠电力的需求。",
+      "rationale": "AIDC供电直接相关且带具体规模的新订单，对跟踪数据中心供电格局的读者有信息增量；但材料未说明技术路线与具体项目方，仅单家行业媒体转述、细节单薄，属边缘可保留条目。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_fbfa23236533",
+      "title": "特斯拉（ TSLA ） 2026年第三季度汽车交付量环比增长1.3% ，同比下降2.1% ，能源业务也放缓",
+      "ruleScore": 4,
+      "scores": {
+        "businessRelevance": 18,
+        "factualIncrement": 10,
+        "impact": 8,
+        "evidence": 8
+      },
+      "total": 44,
+      "keyFact": "特斯拉2026年Q3汽车交付量环比+1.3%、同比-2.1%，能源业务放缓（无具体储能部署数字）",
+      "rationale": "特斯拉是储能重点公司，能源业务放缓对读者有传导意义，但正文只给了汽车交付数据，储能/Megapack无任何具体数字，属单家非权威媒体转述的季度例行数据，信息增量与格局影响有限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_00a55083cd54",
+      "title": "瓦锡兰将其仓储业务移交给新的合资企业Valo",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 26,
+        "factualIncrement": 14,
+        "impact": 16,
+        "evidence": 13
+      },
+      "total": 69,
+      "keyFact": "瓦锡兰将其储能（ES&O）业务移交给新成立的合资企业 Valo。",
+      "rationale": "头部系统集成商瓦锡兰剥离储能业务组建合资公司属直接命中储能格局的实质公司动态，值得占位；但摘要仅复述标题、无交易结构/合资方/规模等细节，且仅单一来源，事实增量与证据充分度受限。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_094134fce8cb",
+      "title": "谷歌支持11座PJM反应堆的890兆瓦Constellation核事故",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 20,
+        "factualIncrement": 20,
+        "impact": 18,
+        "evidence": 14
+      },
+      "total": 72,
+      "keyFact": "谷歌与Constellation签署20年PPA，支持PJM区域11座反应堆共890MW的核电机组增容（uprate）。",
+      "rationale": "超大规模云厂商锁定核电增容以支撑AIDC负荷，对PJM区域电力供需与核电-数据中心供电格局有实质传导影响，新数字（890MW/11座/20年）构成事实增量；但仅单家媒体报道且摘要要素不完整，证据充分度中等。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_0bdbc273aba4",
+      "title": "阳光电源修复iSolarCloud身份验证绕过漏洞 | Jakkura研究 - 新闻和统计",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 6,
+        "impact": 4,
+        "evidence": 4
+      },
+      "total": 29,
+      "keyFact": "阳光电源修复了iSolarCloud平台的身份验证绕过漏洞",
+      "rationale": "阳光电源属PCS/储能重点公司且iSolarCloud涉及其监控/EMS平台，安全事件有一定关联，但摘要仅为标题复述，无CVE编号、严重等级、影响范围或时间线等任何具体细节，来源为单一聚合站（IndexBox/Jakkura）且要素残缺，对供需、格局、项目落地无实质影响，12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_120d567c2412",
+      "title": "1-8月全球动力电池成绩单出炉：宁德时代份额抬升，瑞浦兰钧增速领跑前十|比亚迪|装车|市场份额|储能|松下",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 10,
+        "impact": 5,
+        "evidence": 8
+      },
+      "total": 35,
+      "keyFact": "1-8月全球动力电池装车份额：宁德时代份额抬升，瑞浦兰钧增速居前十之首",
+      "rationale": "动力电池装车份额月度榜单对储能/AIDC供电从业者仅属厂商背景性外围信息，且为SNE类月度常规数据披露、无格局改变，来源标注为'比亚迪储能'公众号转载、证据链弱，12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_133e029cd144",
+      "title": "宁德时代挂出电芯，也挂出了全行业的焦虑",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 22,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 4
+      },
+      "total": 26,
+      "keyFact": "",
+      "rationale": "题材（宁德时代电芯/储能）直接命中读者领域，但摘要仅为标题复述，无任何数字、时间点或事件细节，属无新事实支撑的行业情绪评论，触发负向清单，且单源、来源标注混乱（sourceName 与正文媒体不一致），信息增量不足，12 条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_17c9503ac86e",
+      "title": "野生动物种群平均减少73% ： 2026年地球生命力指数报告概述",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 8
+      },
+      "total": 13,
+      "keyFact": "2026年地球生命力指数报告概述称野生动物种群平均减少73%",
+      "rationale": "内容为生物多样性指数的科普性概述，与储能/PCS/SST/AIDC供电行业的供需、格局、项目与政策均无关联（业务关联0分）；虽含73%这一具体数字，但本质是解释性指南而非行业新事实，单家二手来源且指标字段残缺，对目标读者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_25cd293bc080",
+      "title": "电池巨头″追″AI：宁德时代为何煞费苦心绑上DeepSeek",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 17,
+      "keyFact": "",
+      "rationale": "宁德时代属重点公司但内容是'绑定DeepSeek'的分析/观点类报道，摘要仅为标题复述，无任何新数字、新节点或当事方细节，属无新事实支撑的观点解读，对供需/项目落地无增量，不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_265a6da883db",
+      "title": "曙光数创(920808):独立董事专门会议关于公司2026年股权激励计划预留部分权益授予的激励对象名单的核查意见及公示情况说明- CFi.CN 中财网",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 10,
+      "keyFact": "",
+      "rationale": "公司治理类例行公告（股权激励预留权益授予名单核查），无业务实质、无新事实增量，不占日报版面。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_2b3731d0af16",
+      "title": "新闻：美国能源部正在发放1亿美元，以加强公用事业网络安全。",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 9,
+        "factualIncrement": 12,
+        "impact": 5,
+        "evidence": 8
+      },
+      "total": 34,
+      "keyFact": "美国能源部宣布发放1亿美元用于加强公用事业网络安全（技术援助计划）。",
+      "rationale": "电网网络安全资助属外围政策，对储能/PCS/SST/AIDC 供电传导极弱，且仅单一行业媒体转述、摘要残缺、无交叉印证，1亿美元规模对格局影响有限，在12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_3212fb5010d8",
+      "title": "資料中心帶動儲能需求激增 LG新能源獲利暴衝",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 22,
+        "factualIncrement": 4,
+        "impact": 5,
+        "evidence": 5
+      },
+      "total": 36,
+      "keyFact": "LG新能源称数据中心带动储能需求激增、获利大增，但无任何具体数字或时间点",
+      "rationale": "主题命中储能+AIDC需求主线，但内容仅为标题式财报转述：无数字、无订单/扩产细节、单一媒体且摘要与标题重复，属无增量的泛化利好消息，12条额度下不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_45f2f42087ae",
+      "title": "花旗研判电池材料第二轮产能周期：价值为王，首选宁德时代、中创新航、湖南裕能等",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 20,
+      "keyFact": "",
+      "rationale": "券商对电池材料产能周期的观点研判，属无新事实支撑的预测类内容，且摘要仅复述标题、无具体数据，对储能/PCS/AIDC从业者信息增量有限，不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_4dd2d6f44b9e",
+      "title": "颠覆人工智能的“虚假前沿”运营",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 0,
+        "evidence": 10
+      },
+      "total": 15,
+      "keyFact": "OpenAI 打掉了两个利用虚假记者和智库进行地缘政治宣传的 AI 影响力行动",
+      "rationale": "OpenAI 打击 AI 影响力行动与储能/PCS/AIDC 供电行业无业务关联，不占日报版面；仅作为科技安全资讯有少量事实增量，一手来源可信但与读者画像完全脱节。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_545f80a13238",
+      "title": "9月以来37家锂电产业链公司披露投资者关系记录 比亚迪聚焦储能",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 23,
+      "keyFact": "",
+      "rationale": "仅是投资者关系活动记录的统计性转述，无具体数字、订单或项目事实，摘要与标题重复无增量，来源单一且疑似公司自媒体，对储能从业者信息价值低，不值得占12条之一。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_5604e00367ff",
+      "title": "固德威近几年离职的高管现状，离职、换届、内部调岗？",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 18,
+        "factualIncrement": 5,
+        "impact": 3,
+        "evidence": 5
+      },
+      "total": 31,
+      "keyFact": "",
+      "rationale": "固德威属逆变器/储能相关重点公司，但摘要仅为高管离职话题性盘点，无具体新事实、无业务影响数据，且单来源转述，信息增量不足，不值得占位。"
+    },
+    {
+      "group": "audit",
+      "eventId": "evt_e7767d551b15",
+      "title": "为通过《减少通货膨胀法》而进行的艰苦斗争",
+      "ruleScore": 1,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 3,
+        "impact": 0,
+        "evidence": 4
+      },
+      "total": 15,
+      "keyFact": "",
+      "rationale": "对IRA立法过程的回顾性访谈，无新事实、无当事方与数字，属政策背景类内容，对储能/PCS/AIDC从业者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "group": "audit",
+      "eventId": "evt_11060b99d44b",
+      "title": "国庆首日高速公路充电量创历史新高，假日前三日同比增近5成，机构称政策支持下充电桩市场份额有望进一步扩大",
+      "ruleScore": 1.5,
+      "scores": {
+        "businessRelevance": 13,
+        "factualIncrement": 10,
+        "impact": 6,
+        "evidence": 8
+      },
+      "total": 37,
+      "keyFact": "国庆首日高速公路充电量创历史新高，假日前三日同比增近5成",
+      "rationale": "充电量属充电桩外围需求信号，与储能/PCS/SST/AIDC主业仅间接传导；数字模糊（仅'近5成'无绝对值与数据来源），后半段为机构观点无新事实支撑，且为节假日周期性报道，单家媒体转述，12条额度下信息增量不足。"
+    },
+    {
+      "group": "audit",
+      "eventId": "evt_8704d257d891",
+      "title": "2026-2033年Solar-Plus-Storage市场规模和份额报告",
+      "ruleScore": 1.5,
+      "scores": {
+        "businessRelevance": 10,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 3
+      },
+      "total": 13,
+      "keyFact": "",
+      "rationale": "仅为一份市场研究报告的标题转述，无任何具体数字、当事方或新事实，属预测类营销内容，对跟踪供需与项目落地的从业者无信息增量，不值得占位。"
+    },
+    {
+      "group": "audit",
+      "eventId": "evt_332b3f1efbc4",
+      "title": "HVDC换流器市场展望2035：海上风电与电网互联驱动扩张 - 新闻和统计",
+      "ruleScore": 1.5,
+      "scores": {
+        "businessRelevance": 14,
+        "factualIncrement": 4,
+        "impact": 0,
+        "evidence": 5
+      },
+      "total": 23,
+      "keyFact": "",
+      "rationale": "IndexBox式2035年市场展望属无新事实支撑的观点预测，摘要无任何数字、当事方或时间节点，且由南瑞继保渠道转载单一来源，命中负向清单，对跟踪PCS/SST/AIDC供电的读者无信息增量，不值得占12条之一。"
+    },
+    {
+      "group": "audit",
+      "eventId": "evt_8d4a27cf7b0c",
+      "title": "美国在中国对古巴的太阳能出口中扮演越来越重要的角色",
+      "ruleScore": 1.5,
+      "scores": {
+        "businessRelevance": 5,
+        "factualIncrement": 3,
+        "impact": 3,
+        "evidence": 4
+      },
+      "total": 15,
+      "keyFact": "",
+      "rationale": "对储能/PCS/AIDC读者而言，中国经美国渠道对古巴的光伏出口属贸易地缘背景消息，不触及供需格局或供电架构；摘要仅为标题复述，无任何数字、当事方、时间点等具体事实，单一转载源且要素残缺，12条名额下无信息增量。"
+    }
+  ],
+  "disagreements": [
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d7c1b411df91",
+      "title": "美国核电站车队正在倾向于人工智能",
+      "valueScore": 38,
+      "selectedFloor": 10,
+      "rationale": "IEEE Spectrum 对核电与AI结合的行业趋势综述，与AIDC供电有外围传导关联但无具体项目、数字或新事实，属观点性背景报道，12条名额下信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_11392037d727",
+      "title": "科华数据：10月8日融资买入4602.26万元，融资融券余额11.5亿元",
+      "valueScore": 20,
+      "selectedFloor": 10,
+      "rationale": "科华数据属储能/PCS相关公司，但内容仅为单日融资融券余额的股价类资金面数据，无业务事实增量，属负向清单中的股价日常波动，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_2124aa97ae70",
+      "title": "比亚迪供货！波兰2.4GWh储能项目开工",
+      "valueScore": 73,
+      "selectedFloor": 10,
+      "rationale": "头部厂商海外储能大单进入开工节点，直接命中储能系统与重点公司实质动态，值得占位；但摘要仅复述标题、缺业主与交付时间等要素，且来源疑似厂商自发声道，影响限于单一项目而非改变格局。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_225995ca8b85",
+      "title": "資料中心儲能熱潮助攻 LG新能源獲利衝上市場預期兩倍 股價飆7%",
+      "valueScore": 40,
+      "selectedFloor": 10,
+      "rationale": "储能头部公司业绩超预期与AIDC储能需求直接相关，但报道核心是股价日常波动且命中负向清单，摘要仅为标题复述、无具体财务数字与独立来源，信息增量与证据均不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_24d1cab338b2",
+      "title": "四方股份跌2.64%，成交额6.19亿元，今日主力净流入-5043.69万",
+      "valueScore": 11,
+      "selectedFloor": 10,
+      "rationale": "纯股价日常波动行情稿，命中负向清单（股价变动记0），无公司实质动态、无行业信息增量，摘要仅为标题复述且未说明变动原因，单源转载，不值得占用12条席位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3a78f323dfd6",
+      "title": "英维克：10月8日融券卖出2.29万股，融资融券余额37.89亿元",
+      "valueScore": 23,
+      "selectedFloor": 10,
+      "rationale": "英维克属液冷温控供应商，与AIDC供电仅外围相关，且内容为股价融资融券日常波动，无业务增量，负向清单命中股价变动，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3c6d9e89c527",
+      "title": "600MW/2.4GWh！比亚迪储能拿下欧洲波兰标杆大储项目",
+      "valueScore": 79,
+      "selectedFloor": 10,
+      "rationale": "直接命中储能系统与头部厂商实质动态，2.4GWh级欧洲大单对竞争格局有指标意义；但仅单家行业媒体转述、摘要除标题外无业主/交付节点等增量细节，事实增量与证据充分度受限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3cbb8f16b8f8",
+      "title": "Anker Solix宣布推出输出功率为4.5千瓦的S5000电站",
+      "valueScore": 26,
+      "selectedFloor": 10,
+      "rationale": "消费级便携储能新品发布，属产品营销性质，对跟踪PCS/SST/AIDC供电格局的读者无格局或供应链影响，仅品牌动态有微弱背景价值；单一媒体报道且无独立印证，按负向清单影响维度记0。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_40054e1b21b9",
+      "title": "阳光电源600MWh储能系统落地芬兰，两座电站同期开工",
+      "valueScore": 70,
+      "selectedFloor": 10,
+      "rationale": "头部储能厂商海外项目落地，规模（600MWh）、地点与阶段（开工）要素具体，直接命中储能系统与重点公司动态；但单家媒体转述、摘要仅为标题复述且无业主/并网等细节，订单量级属常规出货而非改变格局，可占一席但非必读。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_b616557ba2ad",
+      "title": "特斯拉在亚特兰大和萨凡纳之间开设14个Semi Megacharger摊位",
+      "valueScore": 45,
+      "selectedFloor": 10,
+      "rationale": "重卡兆瓦级充电桩涉及大功率电力电子与供电架构，与PCS/SST读者有外围传导关联，但属单一公司充电网络扩张，不改变供需格局，单家媒体来源，12条额度下优先级偏低。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_ed8c13fa469d",
+      "title": "Vertiv宣布北美合作伙伴奖的获奖者，以实现人工智能就绪的基础设施和客户成功",
+      "valueScore": 25,
+      "selectedFloor": 10,
+      "rationale": "Vertiv虽属AIDC供电核心厂商，但本条为其自家新闻room发布的合作伙伴奖项通稿，属营销性质，无订单、扩产、技术或政策等实质增量，对供需与格局无影响，按负向清单影响维度记0，12条席位不值得占用"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_39bd27d02d9a",
+      "title": "LG向特斯拉供应43亿美元电池",
+      "valueScore": 74,
+      "selectedFloor": 10,
+      "rationale": "头部储能厂商间的大额电池供应订单直接命中储能供应链格局，43亿美元为新披露数字，但仅单家媒体转述、无时间点/交付细节/独立来源交叉印证，证据与增量受限，仍值得占一个位置。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3f27c0dcb748",
+      "title": "Vertiv任命Michael Resha领导全球制造和卓越运营",
+      "valueScore": 30,
+      "selectedFloor": 10,
+      "rationale": "Vertiv是AIDC供电重点公司，但高管人事任命属日常动态，无产能、订单或战略实质信息，负向清单中招聘/人事类影响记0，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_489d477a6a96",
+      "title": "LegalOn在保持开发速度的同时将Codex成本减半",
+      "valueScore": 13,
+      "selectedFloor": 10,
+      "rationale": "内容为AI编程工具成本优化案例，与储能/PCS/AIDC供电行业无业务关联，属OpenAI客户案例通稿，对目标读者无信息增量，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_4cc2005c155f",
+      "title": "IPS收购Belyea ，提供变压器服务",
+      "valueScore": 45,
+      "selectedFloor": 10,
+      "rationale": "传统变压器翻新服务的中小型并购，与读者跟踪的SST/AIDC供电架构仅外围传导相关，无格局影响，且仅单家行业媒体、要素残缺（无当事方细节、区域未知），在12条限额下信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_6434e5b77238",
+      "title": "2.98GWh！中核储能集采落定，六企入围-招投标",
+      "valueScore": 76,
+      "selectedFloor": 10,
+      "rationale": "央企大额储能集采开标直接命中储能系统供需格局，规模与入围家数为新事实，但仅单一媒体来源、摘要无正文细节且未列明入围厂商，证据与影响维度受限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_70d9a06704b3",
+      "title": "大洗牌！宁德时代登顶，中国企业“梯队化”赶超",
+      "valueScore": 32,
+      "selectedFloor": 10,
+      "rationale": "标题党式行业综述，摘要仅复述标题，无任何具体数字、时间点或当事方细节，属观点/盘点类内容，对储能从业者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_77b17c0f3378",
+      "title": "威胜控股附属惟远能源2026年截至公告日新增中标海外合约超40亿元",
+      "valueScore": 45,
+      "selectedFloor": 10,
+      "rationale": "电力设备公司大额海外订单对行业格局有一定参考，但摘要无项目细节、客户与产品线信息，来源为转载媒体且要素残缺，信息增量有限，难以挤进12条限额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d7e3e10ac941",
+      "title": "英飞凌给伊顿供 SiC打造MVSST固态变压器，一路改到电网！",
+      "valueScore": 44,
+      "selectedFloor": 10,
+      "rationale": "直接命中SST主题且涉及英飞凌/伊顿两家重点厂商，业务关联高；但摘要仅为标题复述，无任何数字、时间点、项目规模等细节，单一转载源（SST中文科研/搜狐）要素残缺，信息增量与格局影响均有限，属边缘案例——若后续出现订单规模或交付节点等一手细节才值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_e3b3327e0ff3",
+      "title": "RWE将在德克萨斯州试行Heron Power固态变压器",
+      "valueScore": 60,
+      "selectedFloor": 10,
+      "rationale": "直接命中 SST 赛道且为头部电力公司 RWE 的落地试点，属新签约事件有信息增量；但摘要要素残缺（无规模/时间/电压等级，metrics 字段疑似 60Hz 解析错误）、仅单家行业媒体转述，试点阶段对格局影响有限，值得占位但非头条。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_ef40eddc2de1",
+      "title": "中煤拟收购阳光新能源、特变电工250MW风、光电站",
+      "valueScore": 34,
+      "selectedFloor": 10,
+      "rationale": "央企收购新能源电站资产属光伏风电外围消息，对储能/PCS/AIDC供电读者仅有间接传导；标题级信息无细节、单来源转载、要素残缺，信息增量有限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_f19a8754853a",
+      "title": "瓦锡兰将为美国数据中心提供282兆瓦的现场电力解决方案，因为人工智能的增长加剧了对可靠电力的需求",
+      "valueScore": 67,
+      "selectedFloor": 10,
+      "rationale": "AIDC供电直接相关且带具体规模的新订单，对跟踪数据中心供电格局的读者有信息增量；但材料未说明技术路线与具体项目方，仅单家行业媒体转述、细节单薄，属边缘可保留条目。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_fbfa23236533",
+      "title": "特斯拉（ TSLA ） 2026年第三季度汽车交付量环比增长1.3% ，同比下降2.1% ，能源业务也放缓",
+      "valueScore": 44,
+      "selectedFloor": 10,
+      "rationale": "特斯拉是储能重点公司，能源业务放缓对读者有传导意义，但正文只给了汽车交付数据，储能/Megapack无任何具体数字，属单家非权威媒体转述的季度例行数据，信息增量与格局影响有限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_00a55083cd54",
+      "title": "瓦锡兰将其仓储业务移交给新的合资企业Valo",
+      "valueScore": 69,
+      "selectedFloor": 10,
+      "rationale": "头部系统集成商瓦锡兰剥离储能业务组建合资公司属直接命中储能格局的实质公司动态，值得占位；但摘要仅复述标题、无交易结构/合资方/规模等细节，且仅单一来源，事实增量与证据充分度受限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_094134fce8cb",
+      "title": "谷歌支持11座PJM反应堆的890兆瓦Constellation核事故",
+      "valueScore": 72,
+      "selectedFloor": 10,
+      "rationale": "超大规模云厂商锁定核电增容以支撑AIDC负荷，对PJM区域电力供需与核电-数据中心供电格局有实质传导影响，新数字（890MW/11座/20年）构成事实增量；但仅单家媒体报道且摘要要素不完整，证据充分度中等。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_0bdbc273aba4",
+      "title": "阳光电源修复iSolarCloud身份验证绕过漏洞 | Jakkura研究 - 新闻和统计",
+      "valueScore": 29,
+      "selectedFloor": 10,
+      "rationale": "阳光电源属PCS/储能重点公司且iSolarCloud涉及其监控/EMS平台，安全事件有一定关联，但摘要仅为标题复述，无CVE编号、严重等级、影响范围或时间线等任何具体细节，来源为单一聚合站（IndexBox/Jakkura）且要素残缺，对供需、格局、项目落地无实质影响，12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_120d567c2412",
+      "title": "1-8月全球动力电池成绩单出炉：宁德时代份额抬升，瑞浦兰钧增速领跑前十|比亚迪|装车|市场份额|储能|松下",
+      "valueScore": 35,
+      "selectedFloor": 10,
+      "rationale": "动力电池装车份额月度榜单对储能/AIDC供电从业者仅属厂商背景性外围信息，且为SNE类月度常规数据披露、无格局改变，来源标注为'比亚迪储能'公众号转载、证据链弱，12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_133e029cd144",
+      "title": "宁德时代挂出电芯，也挂出了全行业的焦虑",
+      "valueScore": 26,
+      "selectedFloor": 10,
+      "rationale": "题材（宁德时代电芯/储能）直接命中读者领域，但摘要仅为标题复述，无任何数字、时间点或事件细节，属无新事实支撑的行业情绪评论，触发负向清单，且单源、来源标注混乱（sourceName 与正文媒体不一致），信息增量不足，12 条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_17c9503ac86e",
+      "title": "野生动物种群平均减少73% ： 2026年地球生命力指数报告概述",
+      "valueScore": 13,
+      "selectedFloor": 10,
+      "rationale": "内容为生物多样性指数的科普性概述，与储能/PCS/SST/AIDC供电行业的供需、格局、项目与政策均无关联（业务关联0分）；虽含73%这一具体数字，但本质是解释性指南而非行业新事实，单家二手来源且指标字段残缺，对目标读者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_25cd293bc080",
+      "title": "电池巨头″追″AI：宁德时代为何煞费苦心绑上DeepSeek",
+      "valueScore": 17,
+      "selectedFloor": 10,
+      "rationale": "宁德时代属重点公司但内容是'绑定DeepSeek'的分析/观点类报道，摘要仅为标题复述，无任何新数字、新节点或当事方细节，属无新事实支撑的观点解读，对供需/项目落地无增量，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_2b3731d0af16",
+      "title": "新闻：美国能源部正在发放1亿美元，以加强公用事业网络安全。",
+      "valueScore": 34,
+      "selectedFloor": 10,
+      "rationale": "电网网络安全资助属外围政策，对储能/PCS/SST/AIDC 供电传导极弱，且仅单一行业媒体转述、摘要残缺、无交叉印证，1亿美元规模对格局影响有限，在12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_3212fb5010d8",
+      "title": "資料中心帶動儲能需求激增 LG新能源獲利暴衝",
+      "valueScore": 36,
+      "selectedFloor": 10,
+      "rationale": "主题命中储能+AIDC需求主线，但内容仅为标题式财报转述：无数字、无订单/扩产细节、单一媒体且摘要与标题重复，属无增量的泛化利好消息，12条额度下不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_45f2f42087ae",
+      "title": "花旗研判电池材料第二轮产能周期：价值为王，首选宁德时代、中创新航、湖南裕能等",
+      "valueScore": 20,
+      "selectedFloor": 10,
+      "rationale": "券商对电池材料产能周期的观点研判，属无新事实支撑的预测类内容，且摘要仅复述标题、无具体数据，对储能/PCS/AIDC从业者信息增量有限，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_4dd2d6f44b9e",
+      "title": "颠覆人工智能的“虚假前沿”运营",
+      "valueScore": 15,
+      "selectedFloor": 10,
+      "rationale": "OpenAI 打击 AI 影响力行动与储能/PCS/AIDC 供电行业无业务关联，不占日报版面；仅作为科技安全资讯有少量事实增量，一手来源可信但与读者画像完全脱节。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_545f80a13238",
+      "title": "9月以来37家锂电产业链公司披露投资者关系记录 比亚迪聚焦储能",
+      "valueScore": 23,
+      "selectedFloor": 10,
+      "rationale": "仅是投资者关系活动记录的统计性转述，无具体数字、订单或项目事实，摘要与标题重复无增量，来源单一且疑似公司自媒体，对储能从业者信息价值低，不值得占12条之一。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_5604e00367ff",
+      "title": "固德威近几年离职的高管现状，离职、换届、内部调岗？",
+      "valueScore": 31,
+      "selectedFloor": 10,
+      "rationale": "固德威属逆变器/储能相关重点公司，但摘要仅为高管离职话题性盘点，无具体新事实、无业务影响数据，且单来源转述，信息增量不足，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_e7767d551b15",
+      "title": "为通过《减少通货膨胀法》而进行的艰苦斗争",
+      "valueScore": 15,
+      "selectedFloor": 10,
+      "rationale": "对IRA立法过程的回顾性访谈，无新事实、无当事方与数字，属政策背景类内容，对储能/PCS/AIDC从业者无信息增量，不值得占用12条名额。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_11060b99d44b",
+      "title": "国庆首日高速公路充电量创历史新高，假日前三日同比增近5成，机构称政策支持下充电桩市场份额有望进一步扩大",
+      "valueScore": 37,
+      "selectedFloor": 10,
+      "rationale": "充电量属充电桩外围需求信号，与储能/PCS/SST/AIDC主业仅间接传导；数字模糊（仅'近5成'无绝对值与数据来源），后半段为机构观点无新事实支撑，且为节假日周期性报道，单家媒体转述，12条额度下信息增量不足。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_8704d257d891",
+      "title": "2026-2033年Solar-Plus-Storage市场规模和份额报告",
+      "valueScore": 13,
+      "selectedFloor": 10,
+      "rationale": "仅为一份市场研究报告的标题转述，无任何具体数字、当事方或新事实，属预测类营销内容，对跟踪供需与项目落地的从业者无信息增量，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_332b3f1efbc4",
+      "title": "HVDC换流器市场展望2035：海上风电与电网互联驱动扩张 - 新闻和统计",
+      "valueScore": 23,
+      "selectedFloor": 10,
+      "rationale": "IndexBox式2035年市场展望属无新事实支撑的观点预测，摘要无任何数字、当事方或时间节点，且由南瑞继保渠道转载单一来源，命中负向清单，对跟踪PCS/SST/AIDC供电的读者无信息增量，不值得占12条之一。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_8d4a27cf7b0c",
+      "title": "美国在中国对古巴的太阳能出口中扮演越来越重要的角色",
+      "valueScore": 15,
+      "selectedFloor": 10,
+      "rationale": "对储能/PCS/AIDC读者而言，中国经美国渠道对古巴的光伏出口属贸易地缘背景消息，不触及供需格局或供电架构；摘要仅为标题复述，无任何数字、当事方、时间点等具体事实，单一转载源且要素残缺，12条名额下无信息增量。"
+    }
+  ]
+}

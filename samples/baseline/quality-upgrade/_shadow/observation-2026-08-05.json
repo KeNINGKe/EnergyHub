@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-05",
+  "generatedAt": "2026-08-04T22:02:50.407Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_c797cba4897f",
+      "title": "随着人工智能对内存的需求增加，存储也随之增加",
+      "topic": "chips-compute",
+      "fact": "NVIDIA 博客发文指出，AI 对大规模数据集与超出系统内存容量的上下文窗口的需求激增，正在推动存储层级的升级以补充内存容量。",
+      "implication": "AI 训练/推理中内存墙问题凸显，CXL 内存池化、高性能 AI 存储等方案可能带动 AIDC 供电架构中存储与内存设备的功率与配电需求变化。",
+      "watchNext": "关注 NVIDIA 相关存储方案（如 AI 存储参考架构）的落地部署与 CXL 内存池化项目（如 PNNL Abaco 系统）的实际交付进展。",
+      "evidenceUrls": [
+        "https://blogs.nvidia.com/blog/ai-storage-fms/",
+        "https://www.hpcwire.com/off-the-wire/liqid-powers-pnnls-abaco-system-with-cxl-memory-pooling-for-ai-science/",
+        "https://www.hpcwire.com/off-the-wire/vdura-and-wasabi-unite-high-performance-ai-storage-with-cloud-economics/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_9d6ccbf191e2",
+      "title": "南非：将总计2.7GWh的Deye家用电池系统纳入虚拟发电厂",
+      "topic": "ems",
+      "fact": "南非家庭能源管理公司Plentify将超过16万套已联网的Deye家用电池储能系统（总计2.7GWh）聚合纳入虚拟发电厂（VPP）。",
+      "implication": "该模式表明户用储能正从单一备电设备转向可被聚合调度的分布式资源，对EMS/聚合平台软件及电池系统的通信、可控接口能力提出要求，PCS与BMS厂商需支持远程调度协议以参与此类VPP。",
+      "watchNext": "需持续核对Plentify与Deye合作的商业化落地节点，包括聚合系统的调度接入进度、与电网/监管机构的并网或市场准入安排及后续扩容计划。",
+      "evidenceUrls": [
+        "https://www.energy-storage.news/south-africa-plentify-aggregates-2-7gwh-of-deye-home-battery-systems-into-virtual-power-plant/",
+        "https://cleantechnica.com/2026/08/04/south-african-energy-tech-company-plentify-partners-with-deye-to-build-africas-largest-residential-virtual-power-plant/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_be59365f6fda",
+      "title": "赛格威Max G3 Plus电动滑板车350 $折扣预订优惠、Beatbot iSkim太阳能泳池撇水器319 $、Jackery 72小时闪购、工具等",
+      "topic": "other-energy",
+      "fact": "Electrek 2026-08-04「Green Deals」汇总：Segway 最新 Max G3 Plus 电动滑板车推出 350 美元预订折扣，Beatbot iSkim 太阳能泳池撇水器售价 319 美元，Jackery 启动 72 小时闪购（涉及 3584 W 套装与 500 W 电站等产品），另有工具类优惠。",
+      "implication": "Jackery 以 72 小时限时闪购推动 3584 W 级套装与 500 W 级电站的零售去化，反映便携储能厂商正通过促销加速渠道出货，可作为消费级储能需求与库存水位的一个观察信号。",
+      "watchNext": "关注 Jackery 闪购结束后的价格回落情况及 Segway Max G3 Plus 预订订单的交付节奏披露。",
+      "evidenceUrls": [
+        "https://electrek.co/2026/08/04/segway-max-g3-plus-e-scooter-pre-order-beatbot-iskim-solar-pool-skimmer-jackery-tools-more/"
+      ],
+      "mode": "generated"
+    }
+  ]
+}

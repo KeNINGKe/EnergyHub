@@ -329,7 +329,17 @@
       }
     },
     "cb9624ee0e66802e": {
-      "error": "value-score 应答无法解析: {\"scores\": {\"businessRelevance\": 18, \"factualIncrement\": 15"
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 10,
+          "impact": 8,
+          "evidence": 8
+        },
+        "total": 44,
+        "keyFact": "Meta称电工短缺是其美国数据中心扩建的头号障碍，并自行办学培训电工",
+        "rationale": "对AIDC供电读者有传导意义（电工短缺是数据中心扩建的供给侧瓶颈），但材料无具体数字/时间点/项目细节，仅单家媒体转述，属外围动态，12条额度下优先级偏低。"
+      }
     },
     "8f5c3055d662ac80": {
       "result": {
@@ -358,7 +368,17 @@
       }
     },
     "0a280df560eeabf3": {
-      "error": "value-score 应答无法解析: {\"scores\": {\"businessRelevance\": 22, \"factualIncrement\": 20, \"impact\": 13, \"evidence\": 12}, \"keyFact\": \"Base Power 融资 10"
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 18,
+          "impact": 12,
+          "evidence": 12
+        },
+        "total": 57,
+        "keyFact": "Base Power 融资 10 亿美元并发布 39.2 kWh 家用电池 Core，宣称可供电最长 36 小时",
+        "rationale": "融资规模与产品参数具体、有事实增量，但属美国家用消费级储能赛道，对跟踪 PCS/SST/AIDC 供电格局的读者传导有限，且仅 Electrek 单家媒体报道，12 条额度下优先级偏低。"
+      }
     },
     "440c5a3d7d6808ba": {
       "result": {
@@ -488,6 +508,32 @@
         "total": 28,
         "keyFact": "印第安纳州总检察长罗基塔在陈年旧案中提交干预诉讼试图阻止罗克波特煤电厂退役，塞拉俱乐部对此作出回应。",
         "rationale": "美国地方煤电退役的环保诉讼表态，对储能/PCS/AIDC 读者仅属电力市场外围背景，无数字、无格局影响，且系单家媒体转述的 advocacy 回应、要素残缺，在 12 条额度下不值得占位。"
+      }
+    },
+    "7a952c989fd1cc66": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 8,
+          "impact": 3,
+          "evidence": 10
+        },
+        "total": 26,
+        "keyFact": "拉美首个以太阳能为主的客运列车 Tren Solar de la Quebrada 投运",
+        "rationale": "太阳能客运列车属光储应用的花边新闻，与读者关注的储能/PCS/AIDC 供电业务几乎无传导影响，单家媒体转述、无具体数字，12 条额度下不值得占位。"
+      }
+    },
+    "3994a19654e6cfe4": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "消费级GPU零售价格与VRAM成本属PC终端市场话题，与读者关注的SST/PCS/AIDC供电架构无直接传导，摘要无任何具体数字、当事方或时间点，单家媒体转述，12条额度下无占位价值。"
       }
     }
   }

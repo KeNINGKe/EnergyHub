@@ -12,6 +12,7 @@
   "counts": {
     "selected": 9,
     "nearBand": 28,
+    "nearBandCapped": 0,
     "audit": 0,
     "scored": 37,
     "failed": 0
@@ -169,36 +170,6 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_b4f5d9ea74c9",
-      "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
-      "ruleScore": 3.5,
-      "scores": {
-        "businessRelevance": 24,
-        "factualIncrement": 21,
-        "impact": 11,
-        "evidence": 13
-      },
-      "total": 69,
-      "keyFact": "Quinbrook向澳大利亚EPBC法案提交ACT地区520MW独立储能(Flat Rock BESS)项目申请",
-      "rationale": "储能赛道直接相关且有新项目新数字的具体事实增量，但仅为环评提交的早期审批节点、单一项目对格局影响有限，单家媒体报道，在12条额度下属可舍弃的边缘消息。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_f5dd6becf11b",
-      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
-      "ruleScore": 3.5,
-      "scores": {
-        "businessRelevance": 26,
-        "factualIncrement": 21,
-        "impact": 21,
-        "evidence": 16
-      },
-      "total": 84,
-      "keyFact": "美国能源部2026-07-29宣布选定Brookfield与NextEra（联合Big Rivers电力）开发肯塔基州1000亿美元AI数据中心项目",
-      "rationale": "直接命中AIDC供电赛道：联邦DOE背书的超大规模数据中心落地，NextEra入选属重点公司实质动态，$1000亿规模/当事方/地点为新披露具体事实，对北美AIDC供电格局有标志性影响，两家独立来源交叉印证，值得占一个位置。"
-    },
-    {
-      "group": "near-band",
       "eventId": "evt_068f6899fd11",
       "title": "希捷将于2027年开始创纪录的50TB硬盘—到2028年，大多数硬盘都已售罄",
       "ruleScore": 3.5,
@@ -229,18 +200,33 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_d23cdc276c88",
-      "title": "美国禁止国外生产的太阳能逆变器",
-      "ruleScore": 3,
+      "eventId": "evt_b4f5d9ea74c9",
+      "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
+      "ruleScore": 3.5,
+      "scores": {
+        "businessRelevance": 24,
+        "factualIncrement": 21,
+        "impact": 11,
+        "evidence": 13
+      },
+      "total": 69,
+      "keyFact": "Quinbrook向澳大利亚EPBC法案提交ACT地区520MW独立储能(Flat Rock BESS)项目申请",
+      "rationale": "储能赛道直接相关且有新项目新数字的具体事实增量，但仅为环评提交的早期审批节点、单一项目对格局影响有限，单家媒体报道，在12条额度下属可舍弃的边缘消息。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_f5dd6becf11b",
+      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
+      "ruleScore": 3.5,
       "scores": {
         "businessRelevance": 26,
-        "factualIncrement": 19,
+        "factualIncrement": 21,
         "impact": 21,
-        "evidence": 15
+        "evidence": 16
       },
-      "total": 81,
-      "keyFact": "美国FCC公共安全与国土安全局将外国生产的电力/太阳能逆变器列入禁止清单，外国产太阳能逆变器被禁入美国市场。",
-      "rationale": "FCC对外国产逆变器的禁令直接命中逆变器/PCS品类的美国市场准入，属影响北美格局的重点政策，值得占位；但摘要残缺、无受影响企业与生效细节，事实增量与证据分受限。"
+      "total": 84,
+      "keyFact": "美国能源部2026-07-29宣布选定Brookfield与NextEra（联合Big Rivers电力）开发肯塔基州1000亿美元AI数据中心项目",
+      "rationale": "直接命中AIDC供电赛道：联邦DOE背书的超大规模数据中心落地，NextEra入选属重点公司实质动态，$1000亿规模/当事方/地点为新披露具体事实，对北美AIDC供电格局有标志性影响，两家独立来源交叉印证，值得占一个位置。"
     },
     {
       "group": "near-band",
@@ -274,33 +260,18 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_6a2ffc02b8c2",
-      "title": "AirTrunk表示，澳大利亚应将数据中心视为清洁能源基础设施的“主要租户”",
-      "ruleScore": 2.5,
+      "eventId": "evt_d23cdc276c88",
+      "title": "美国禁止国外生产的太阳能逆变器",
+      "ruleScore": 3,
       "scores": {
-        "businessRelevance": 15,
-        "factualIncrement": 0,
-        "impact": 5,
-        "evidence": 10
+        "businessRelevance": 26,
+        "factualIncrement": 19,
+        "impact": 21,
+        "evidence": 15
       },
-      "total": 30,
-      "keyFact": "AirTrunk呼吁澳大利亚将大型数据中心视为可再生能源、储能与输电投资的“锚定租户”",
-      "rationale": "属头部数据中心运营商的政策倡导观点，与AIDC用电-储能/电网投资联动有传导关联（业务关联中段），但通篇为立场表态，无新数字、时间点或项目等事实支撑，触发负向清单“无新事实支撑的观点预测”故事实增量记0，且为单家媒体转述、摘要残缺，在12条额度下优先级不足。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_2118b0e039fd",
-      "title": "问答：欧盟的碳市场审查对气候行动意味着什么",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 9,
-        "factualIncrement": 8,
-        "impact": 7,
-        "evidence": 9
-      },
-      "total": 33,
-      "keyFact": "欧盟委员会提出放缓欧盟碳市场（EU ETS）减排节奏的新方案，Carbon Brief 以问答形式解读其对气候行动的影响",
-      "rationale": "欧盟碳市场政策对储能/PCS/SST/AIDC 供电读者仅存在间接传导（影响欧洲电价与储能经济性），且为问答解读型报道、摘要无具体数字或时间点，单一转载来源，在 12 条版面中信息增量不足以占位"
+      "total": 81,
+      "keyFact": "美国FCC公共安全与国土安全局将外国生产的电力/太阳能逆变器列入禁止清单，外国产太阳能逆变器被禁入美国市场。",
+      "rationale": "FCC对外国产逆变器的禁令直接命中逆变器/PCS品类的美国市场准入，属影响北美格局的重点政策，值得占位；但摘要残缺、无受影响企业与生效细节，事实增量与证据分受限。"
     },
     {
       "group": "near-band",
@@ -319,93 +290,18 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_752bee0d81b9",
-      "title": "用于互补BEOL CMOS的带氧化物N沟道晶体管的2D P型半导体（斯坦福，汉阳）",
+      "eventId": "evt_1506e68a88cf",
+      "title": "煤炭行业给了特朗普一份愿望清单。他正在检查物品。",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 3,
-        "factualIncrement": 5,
-        "impact": 2,
-        "evidence": 6
-      },
-      "total": 16,
-      "keyFact": "斯坦福与汉阳大学发表关于2D P型半导体搭配氧化物N沟道晶体管用于互补BEOL CMOS的技术论文",
-      "rationale": "属芯片器件层学术研究，对储能/PCS/SST/AIDC供电读者仅剩背景级关联，无商业或政策影响，摘要残缺且仅单家媒体转述，在12条配额下无信息增量不值得占位。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_400dfcbc6a18",
-      "title": "来自晶圆制造前体的可部署3D结构（休斯顿大学、丰田、伦敦帝国理工学院）",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 0,
-        "factualIncrement": 5,
-        "impact": 2,
-        "evidence": 5
-      },
-      "total": 12,
-      "keyFact": "休斯顿大学、丰田与帝国理工学院在SemiEngineering发表一篇关于晶圆制造前体制备可展开3D结构的技术论文。",
-      "rationale": "属芯片材料学学术论文，与储能/PCS/SST/AIDC供电的供需、格局、项目、政策均无传导路径，摘要截断且无任何数字或商业要素，单一媒体转述，对12条版面而言无信息增量。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_ac632c0bdf05",
-      "title": "特朗普联邦调查局利用太阳能审查批准了公共土地上的第一个人工智能数据中心",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 12,
-        "factualIncrement": 13,
-        "impact": 10,
+        "businessRelevance": 10,
+        "factualIncrement": 6,
+        "impact": 8,
         "evidence": 8
       },
-      "total": 43,
-      "keyFact": "特朗普政府以光伏审查口径认定19MW光伏与167MW AI数据中心'实质相同'，批准公共土地上的首个AI数据中心",
-      "rationale": "美国联邦土地审批的'首个AIDC'里程碑对AIDC建设有政策传导意义，但属外围土地/审批政策而非供电架构或储能环节直接动态，且仅Electrek单一带立场媒体、缺项目方/地点/时间线等要素，信息增量与证据均偏薄，12条额度下属边缘偏不值得占位。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_463f1c86cccc",
-      "title": "预览FMS 2026 ：企业内存、CXL和人工智能时代存储的下一个前沿",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 4,
-        "factualIncrement": 3,
-        "impact": 0,
-        "evidence": 5
-      },
-      "total": 12,
+      "total": 32,
       "keyFact": "",
-      "rationale": "内容为 SemiWiki 对 FMS 2026 存储芯片会议的前瞻预告，属算力/内存侧背景话题而非 AIDC 供电（800VDC/HVDC）或储能环节，无任何数字、当事方或新事实，符合『无新事实支撑的观点/预告』负向项故影响记 0，12 条额度内不值得占用。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_c7f412789ec4",
-      "title": "2100年预测排在第一位。然后，客户询问了2050年路线图。",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 8,
-        "factualIncrement": 0,
-        "impact": 0,
-        "evidence": 6
-      },
-      "total": 14,
-      "keyFact": "",
-      "rationale": "CleanTechnica 观点评论文章，讨论脱碳情景为何止步于2050年，无新数字、新当事方、新政策节点，属无新事实支撑的观点预测（负向清单命中，事实增量与影响记0），对储能/PCS/SST/AIDC从业者仅为背景性长期能源转型讨论，单一媒体来源且要素残缺，不值得占用12条席位。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_c434b85db545",
-      "title": "CMS Energy计划出售可再生资产，专注于受监管的公用事业",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 8,
-        "factualIncrement": 12,
-        "impact": 6,
-        "evidence": 12
-      },
-      "total": 38,
-      "keyFact": "CMS Energy计划出售可再生资产，预计净得约5亿美元，以简化结构、聚焦受监管公用事业业务",
-      "rationale": "美国区域公用事业的资产组合调整，虽有5亿美元这一新数字且来自可信行业媒体，但与储能/PCS/SST/AIDC供电读者仅背景相关、不改变任何环节格局，12席中优先级低。"
+      "rationale": "美国煤炭政策属电力市场外围话题，对储能/PCS/AIDC供电仅有间接传导；摘要为观点性综述、无具体新事实或政策条款，单家媒体转述，12条名额下信息增量不足。"
     },
     {
       "group": "near-band",
@@ -424,33 +320,33 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_90cc8fc875fa",
-      "title": "“极其重要的存储市场” ：美国BESS集成商FlexGen开始在欧洲开展业务",
+      "eventId": "evt_1dbdbf3dfc0a",
+      "title": "博客回顾： 7月29日",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 23,
-        "factualIncrement": 12,
-        "impact": 8,
-        "evidence": 10
+        "businessRelevance": 4,
+        "factualIncrement": 2,
+        "impact": 0,
+        "evidence": 4
       },
-      "total": 53,
-      "keyFact": "美国BESS集成商FlexGen开始在欧洲开展业务（ESN专访披露，无具体规模/时间/项目细节）",
-      "rationale": "储能集成商动态与读者直接相关，但内容为付费专访且摘要截断，无数字、时间点或项目等具体增量，单一媒体来源，FlexGen非头部厂商、其进入欧洲不改行业格局，属边缘偏弱消息，通常不值得占用12条名额。"
+      "total": 10,
+      "keyFact": "",
+      "rationale": "SemiEngineering 的半导体博客聚合帖（AI compute/3D-IC/DFI 等），与储能/PCS/AIDC 供电仅背景级沾边，无任何新事实、当事方或可落地影响，属无增量转述，不值得占用 12 条席位。"
     },
     {
       "group": "near-band",
-      "eventId": "evt_2c834426e95a",
-      "title": "美国的清洁能源热潮将持续到2030年。然后事情变得朦胧。",
+      "eventId": "evt_2118b0e039fd",
+      "title": "问答：欧盟的碳市场审查对气候行动意味着什么",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 13,
-        "factualIncrement": 0,
-        "impact": 0,
-        "evidence": 7
+        "businessRelevance": 9,
+        "factualIncrement": 8,
+        "impact": 7,
+        "evidence": 9
       },
-      "total": 20,
-      "keyFact": "",
-      "rationale": "Canary Media 的宏观展望评论（'热潮持续到2030年后变朦胧'），无任何具体数字、当事方或政策条款，属无新事实支撑的观点预测触发负向清单，对储能/AIDC读者仅是背景性传导话题，不值得占用12条席位之一。"
+      "total": 33,
+      "keyFact": "欧盟委员会提出放缓欧盟碳市场（EU ETS）减排节奏的新方案，Carbon Brief 以问答形式解读其对气候行动的影响",
+      "rationale": "欧盟碳市场政策对储能/PCS/SST/AIDC 供电读者仅存在间接传导（影响欧洲电价与储能经济性），且为问答解读型报道、摘要无具体数字或时间点，单一转载来源，在 12 条版面中信息增量不足以占位"
     },
     {
       "group": "near-band",
@@ -469,18 +365,63 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_1dbdbf3dfc0a",
-      "title": "博客回顾： 7月29日",
+      "eventId": "evt_2c834426e95a",
+      "title": "美国的清洁能源热潮将持续到2030年。然后事情变得朦胧。",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 13,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 7
+      },
+      "total": 20,
+      "keyFact": "",
+      "rationale": "Canary Media 的宏观展望评论（'热潮持续到2030年后变朦胧'），无任何具体数字、当事方或政策条款，属无新事实支撑的观点预测触发负向清单，对储能/AIDC读者仅是背景性传导话题，不值得占用12条席位之一。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_33874721251b",
+      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 12,
+        "factualIncrement": 9,
+        "impact": 6,
+        "evidence": 8
+      },
+      "total": 35,
+      "keyFact": "SK On 与 Factorial Energy 宣布结盟，共同推动固态电池（面向电动车）规模化落地",
+      "rationale": "固态电池联盟属电动车电池而非储能/PCS/AIDC供电主线，仅外围传导；摘要无投资额、产能、时间表等具体要素，单一媒体转述且实体/区域/指标全缺，对12条位的读者信息增量不足，不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_400dfcbc6a18",
+      "title": "来自晶圆制造前体的可部署3D结构（休斯顿大学、丰田、伦敦帝国理工学院）",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 0,
+        "factualIncrement": 5,
+        "impact": 2,
+        "evidence": 5
+      },
+      "total": 12,
+      "keyFact": "休斯顿大学、丰田与帝国理工学院在SemiEngineering发表一篇关于晶圆制造前体制备可展开3D结构的技术论文。",
+      "rationale": "属芯片材料学学术论文，与储能/PCS/SST/AIDC供电的供需、格局、项目、政策均无传导路径，摘要截断且无任何数字或商业要素，单一媒体转述，对12条版面而言无信息增量。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_463f1c86cccc",
+      "title": "预览FMS 2026 ：企业内存、CXL和人工智能时代存储的下一个前沿",
       "ruleScore": 2.5,
       "scores": {
         "businessRelevance": 4,
-        "factualIncrement": 2,
+        "factualIncrement": 3,
         "impact": 0,
-        "evidence": 4
+        "evidence": 5
       },
-      "total": 10,
+      "total": 12,
       "keyFact": "",
-      "rationale": "SemiEngineering 的半导体博客聚合帖（AI compute/3D-IC/DFI 等），与储能/PCS/AIDC 供电仅背景级沾边，无任何新事实、当事方或可落地影响，属无增量转述，不值得占用 12 条席位。"
+      "rationale": "内容为 SemiWiki 对 FMS 2026 存储芯片会议的前瞻预告，属算力/内存侧背景话题而非 AIDC 供电（800VDC/HVDC）或储能环节，无任何数字、当事方或新事实，符合『无新事实支撑的观点/预告』负向项故影响记 0，12 条额度内不值得占用。"
     },
     {
       "group": "near-band",
@@ -514,18 +455,93 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_33874721251b",
-      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
+      "eventId": "evt_6a2ffc02b8c2",
+      "title": "AirTrunk表示，澳大利亚应将数据中心视为清洁能源基础设施的“主要租户”",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 15,
+        "factualIncrement": 0,
+        "impact": 5,
+        "evidence": 10
+      },
+      "total": 30,
+      "keyFact": "AirTrunk呼吁澳大利亚将大型数据中心视为可再生能源、储能与输电投资的“锚定租户”",
+      "rationale": "属头部数据中心运营商的政策倡导观点，与AIDC用电-储能/电网投资联动有传导关联（业务关联中段），但通篇为立场表态，无新数字、时间点或项目等事实支撑，触发负向清单“无新事实支撑的观点预测”故事实增量记0，且为单家媒体转述、摘要残缺，在12条额度下优先级不足。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_752bee0d81b9",
+      "title": "用于互补BEOL CMOS的带氧化物N沟道晶体管的2D P型半导体（斯坦福，汉阳）",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 3,
+        "factualIncrement": 5,
+        "impact": 2,
+        "evidence": 6
+      },
+      "total": 16,
+      "keyFact": "斯坦福与汉阳大学发表关于2D P型半导体搭配氧化物N沟道晶体管用于互补BEOL CMOS的技术论文",
+      "rationale": "属芯片器件层学术研究，对储能/PCS/SST/AIDC供电读者仅剩背景级关联，无商业或政策影响，摘要残缺且仅单家媒体转述，在12条配额下无信息增量不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_90cc8fc875fa",
+      "title": "“极其重要的存储市场” ：美国BESS集成商FlexGen开始在欧洲开展业务",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 23,
+        "factualIncrement": 12,
+        "impact": 8,
+        "evidence": 10
+      },
+      "total": 53,
+      "keyFact": "美国BESS集成商FlexGen开始在欧洲开展业务（ESN专访披露，无具体规模/时间/项目细节）",
+      "rationale": "储能集成商动态与读者直接相关，但内容为付费专访且摘要截断，无数字、时间点或项目等具体增量，单一媒体来源，FlexGen非头部厂商、其进入欧洲不改行业格局，属边缘偏弱消息，通常不值得占用12条名额。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_ac632c0bdf05",
+      "title": "特朗普联邦调查局利用太阳能审查批准了公共土地上的第一个人工智能数据中心",
       "ruleScore": 2.5,
       "scores": {
         "businessRelevance": 12,
-        "factualIncrement": 9,
-        "impact": 6,
+        "factualIncrement": 13,
+        "impact": 10,
         "evidence": 8
       },
-      "total": 35,
-      "keyFact": "SK On 与 Factorial Energy 宣布结盟，共同推动固态电池（面向电动车）规模化落地",
-      "rationale": "固态电池联盟属电动车电池而非储能/PCS/AIDC供电主线，仅外围传导；摘要无投资额、产能、时间表等具体要素，单一媒体转述且实体/区域/指标全缺，对12条位的读者信息增量不足，不值得占位。"
+      "total": 43,
+      "keyFact": "特朗普政府以光伏审查口径认定19MW光伏与167MW AI数据中心'实质相同'，批准公共土地上的首个AI数据中心",
+      "rationale": "美国联邦土地审批的'首个AIDC'里程碑对AIDC建设有政策传导意义，但属外围土地/审批政策而非供电架构或储能环节直接动态，且仅Electrek单一带立场媒体、缺项目方/地点/时间线等要素，信息增量与证据均偏薄，12条额度下属边缘偏不值得占位。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_c434b85db545",
+      "title": "CMS Energy计划出售可再生资产，专注于受监管的公用事业",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 12,
+        "impact": 6,
+        "evidence": 12
+      },
+      "total": 38,
+      "keyFact": "CMS Energy计划出售可再生资产，预计净得约5亿美元，以简化结构、聚焦受监管公用事业业务",
+      "rationale": "美国区域公用事业的资产组合调整，虽有5亿美元这一新数字且来自可信行业媒体，但与储能/PCS/SST/AIDC供电读者仅背景相关、不改变任何环节格局，12席中优先级低。"
+    },
+    {
+      "group": "near-band",
+      "eventId": "evt_c7f412789ec4",
+      "title": "2100年预测排在第一位。然后，客户询问了2050年路线图。",
+      "ruleScore": 2.5,
+      "scores": {
+        "businessRelevance": 8,
+        "factualIncrement": 0,
+        "impact": 0,
+        "evidence": 6
+      },
+      "total": 14,
+      "keyFact": "",
+      "rationale": "CleanTechnica 观点评论文章，讨论脱碳情景为何止步于2050年，无新数字、新当事方、新政策节点，属无新事实支撑的观点预测（负向清单命中，事实增量与影响记0），对储能/PCS/SST/AIDC从业者仅为背景性长期能源转型讨论，单一媒体来源且要素残缺，不值得占用12条席位。"
     },
     {
       "group": "near-band",
@@ -541,21 +557,6 @@
       "total": 0,
       "keyFact": "",
       "rationale": "消费级儿童电动自行车评测，与储能/PCS/AIDC供电无业务关联，且属负向清单中的消费评测，各维度记0。"
-    },
-    {
-      "group": "near-band",
-      "eventId": "evt_1506e68a88cf",
-      "title": "煤炭行业给了特朗普一份愿望清单。他正在检查物品。",
-      "ruleScore": 2.5,
-      "scores": {
-        "businessRelevance": 10,
-        "factualIncrement": 6,
-        "impact": 8,
-        "evidence": 8
-      },
-      "total": 32,
-      "keyFact": "",
-      "rationale": "美国煤炭政策属电力市场外围话题，对储能/PCS/AIDC供电仅有间接传导；摘要为观点性综述、无具体新事实或政策条款，单家媒体转述，12条名额下信息增量不足。"
     },
     {
       "group": "near-band",
@@ -584,22 +585,6 @@
     },
     {
       "kind": "outside-over-selected-floor",
-      "eventId": "evt_b4f5d9ea74c9",
-      "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
-      "valueScore": 69,
-      "selectedFloor": 33,
-      "rationale": "储能赛道直接相关且有新项目新数字的具体事实增量，但仅为环评提交的早期审批节点、单一项目对格局影响有限，单家媒体报道，在12条额度下属可舍弃的边缘消息。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_f5dd6becf11b",
-      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
-      "valueScore": 84,
-      "selectedFloor": 33,
-      "rationale": "直接命中AIDC供电赛道：联邦DOE背书的超大规模数据中心落地，NextEra入选属重点公司实质动态，$1000亿规模/当事方/地点为新披露具体事实，对北美AIDC供电格局有标志性影响，两家独立来源交叉印证，值得占一个位置。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
       "eventId": "evt_068f6899fd11",
       "title": "希捷将于2027年开始创纪录的50TB硬盘—到2028年，大多数硬盘都已售罄",
       "valueScore": 37,
@@ -616,11 +601,19 @@
     },
     {
       "kind": "outside-over-selected-floor",
-      "eventId": "evt_d23cdc276c88",
-      "title": "美国禁止国外生产的太阳能逆变器",
-      "valueScore": 81,
+      "eventId": "evt_b4f5d9ea74c9",
+      "title": "Quinbrook向EPBC法案提交澳大利亚法案中的520MW Flat Rock BESS",
+      "valueScore": 69,
       "selectedFloor": 33,
-      "rationale": "FCC对外国产逆变器的禁令直接命中逆变器/PCS品类的美国市场准入，属影响北美格局的重点政策，值得占位；但摘要残缺、无受影响企业与生效细节，事实增量与证据分受限。"
+      "rationale": "储能赛道直接相关且有新项目新数字的具体事实增量，但仅为环评提交的早期审批节点、单一项目对格局影响有限，单家媒体报道，在12条额度下属可舍弃的边缘消息。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_f5dd6becf11b",
+      "title": "DOE选择Brookfield和NextEra进行$ 1000亿肯塔基州人工智能数据中心项目",
+      "valueScore": 84,
+      "selectedFloor": 33,
+      "rationale": "直接命中AIDC供电赛道：联邦DOE背书的超大规模数据中心落地，NextEra入选属重点公司实质动态，$1000亿规模/当事方/地点为新披露具体事实，对北美AIDC供电格局有标志性影响，两家独立来源交叉印证，值得占一个位置。"
     },
     {
       "kind": "outside-over-selected-floor",
@@ -629,6 +622,38 @@
       "valueScore": 48,
       "selectedFloor": 33,
       "rationale": "有具体金额与当事方的融资落地新事实、pv magazine单家可信来源，但项目位于微小市场、无PCS/储能系统厂商或供应链传导信息，对读者格局与供需判断增量有限，属边缘可舍弃条目。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_d23cdc276c88",
+      "title": "美国禁止国外生产的太阳能逆变器",
+      "valueScore": 81,
+      "selectedFloor": 33,
+      "rationale": "FCC对外国产逆变器的禁令直接命中逆变器/PCS品类的美国市场准入，属影响北美格局的重点政策，值得占位；但摘要残缺、无受影响企业与生效细节，事实增量与证据分受限。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_33874721251b",
+      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
+      "valueScore": 35,
+      "selectedFloor": 33,
+      "rationale": "固态电池联盟属电动车电池而非储能/PCS/AIDC供电主线，仅外围传导；摘要无投资额、产能、时间表等具体要素，单一媒体转述且实体/区域/指标全缺，对12条位的读者信息增量不足，不值得占位。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_4c9802d984e0",
+      "title": "“还需要更多” ： CFS再投入10亿$追逐核聚变梦想",
+      "valueScore": 37,
+      "selectedFloor": 33,
+      "rationale": "核聚变融资对储能/PCS/AIDC供电读者仅属外围背景，10亿美元金额具体但投资方、估值、资金用途等细节缺失，单家媒体报道且短期无格局传导，12条额度下优先级低。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_90cc8fc875fa",
+      "title": "“极其重要的存储市场” ：美国BESS集成商FlexGen开始在欧洲开展业务",
+      "valueScore": 53,
+      "selectedFloor": 33,
+      "rationale": "储能集成商动态与读者直接相关，但内容为付费专访且摘要截断，无数字、时间点或项目等具体增量，单一媒体来源，FlexGen非头部厂商、其进入欧洲不改行业格局，属边缘偏弱消息，通常不值得占用12条名额。"
     },
     {
       "kind": "outside-over-selected-floor",
@@ -645,30 +670,6 @@
       "valueScore": 38,
       "selectedFloor": 33,
       "rationale": "美国区域公用事业的资产组合调整，虽有5亿美元这一新数字且来自可信行业媒体，但与储能/PCS/SST/AIDC供电读者仅背景相关、不改变任何环节格局，12席中优先级低。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_90cc8fc875fa",
-      "title": "“极其重要的存储市场” ：美国BESS集成商FlexGen开始在欧洲开展业务",
-      "valueScore": 53,
-      "selectedFloor": 33,
-      "rationale": "储能集成商动态与读者直接相关，但内容为付费专访且摘要截断，无数字、时间点或项目等具体增量，单一媒体来源，FlexGen非头部厂商、其进入欧洲不改行业格局，属边缘偏弱消息，通常不值得占用12条名额。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_4c9802d984e0",
-      "title": "“还需要更多” ： CFS再投入10亿$追逐核聚变梦想",
-      "valueScore": 37,
-      "selectedFloor": 33,
-      "rationale": "核聚变融资对储能/PCS/AIDC供电读者仅属外围背景，10亿美元金额具体但投资方、估值、资金用途等细节缺失，单家媒体报道且短期无格局传导，12条额度下优先级低。"
-    },
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_33874721251b",
-      "title": "两家固态电动汽车电池领导者正在联手扩展“突破性”技术",
-      "valueScore": 35,
-      "selectedFloor": 33,
-      "rationale": "固态电池联盟属电动车电池而非储能/PCS/AIDC供电主线，仅外围传导；摘要无投资额、产能、时间表等具体要素，单一媒体转述且实体/区域/指标全缺，对12条位的读者信息增量不足，不值得占位。"
     }
   ]
 }

@@ -11,8 +11,15 @@
  * 用法:
  *   node scripts/build-quality-baseline.mjs                        # 离线回放（无网络、无 key）
  *   node scripts/build-quality-baseline.mjs --date 2026-08-02       # 只跑一天
+ *   node scripts/build-quality-baseline.mjs --dates 2026-10-09,2026-10-10
+ *                                                                  # 显式指定日期集（扩展基线）
  *   TYPESAFE_API_KEY=... node scripts/build-quality-baseline.mjs --record
  *                                                                  # 逐日真实调用录制夹具（一次性）
+ *
+ * 日期集（基线冻结）：默认只回放 BASELINE_DATES 中的固定日期，**不再自动
+ * 并入 samples/raw 的新快照**——CI 每天新增一天，自动并集会让基线变成永远
+ * 追不完的移动靶（每个新日期都需要先录 Jev + 影子夹具）。扩展基线必须显式
+ * 改 BASELINE_DATES 或传 --dates，并先完成对应的夹具录制。
  *
  * 语义：任一日校验失败或夹具未命中 → 整体退出非零，不写 report/manifest。
  * 误合无负例标签，报告只给合并决策日志供人工抽查，不伪造计数；
@@ -45,6 +52,23 @@ const SHADOW_FIXTURE_DIR = path.join(ROOT, 'samples', 'selection-value-fixtures'
 const RAW_SNAPSHOT_DIR = path.join(ROOT, 'samples', 'raw');
 const OUT_DIR = path.join(ROOT, 'samples', 'baseline', 'quality-upgrade');
 const ANNOTATIONS_DIR = path.join(ROOT, 'samples', 'annotations');
+
+/**
+ * 冻结的基线日期集：V1 时代 7 天（samples/daily）+ V2 上线首两日（samples/raw）。
+ * 这是评估口径的一部分，变动需要同步重录夹具并重跑 report/manifest；
+ * 不要改成扫描 samples/raw（原因见文件头注释）。
+ */
+export const BASELINE_DATES = [
+  '2026-07-30',
+  '2026-07-31',
+  '2026-08-01',
+  '2026-08-02',
+  '2026-08-03',
+  '2026-08-04',
+  '2026-08-05',
+  '2026-10-09',
+  '2026-10-10',
+];
 
 /**
  * 漏合推导（纯函数，便于测试）：duplicateOf 标注的同事件组，按 URL 指纹
@@ -149,7 +173,8 @@ async function loadRawSnapshotItems(date) {
   return { items, generatedAt: null };
 }
 
-/** 基线日期 = samples/daily（V1 时代 7 天）∪ samples/raw（CI 积累的 V2 时代）。 */
+/** 可用输入日期 = samples/daily（V1 时代）∪ samples/raw（CI 积累的 V2 时代）。
+ *  仅用于校验基线日期集的输入快照是否存在，不再直接当作基线日期集。 */
 async function listDates() {
   const dates = new Set();
   try {
@@ -169,6 +194,21 @@ async function listDates() {
 function titleOf(daily, id) {
   const ev = daily.items.find(it => it.id === id);
   return ev ? String(ev.title).slice(0, 80) : null;
+}
+
+function parseDatesArg(args) {
+  const idx = args.indexOf('--dates');
+  if (idx < 0) return null;
+  const raw = args[idx + 1];
+  if (!raw || raw.startsWith('--')) {
+    throw new Error('--dates 需要逗号分隔的日期列表，如 2026-10-09,2026-10-10');
+  }
+  const dates = [...new Set(raw.split(',').map(s => s.trim()).filter(Boolean))];
+  if (!dates.length) throw new Error('--dates 日期列表为空');
+  for (const d of dates) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(d)) throw new Error(`--dates 日期格式非法：${d}`);
+  }
+  return dates;
 }
 
 async function main() {
@@ -201,8 +241,14 @@ async function main() {
     shadowPolicy = { ...policyDoc, selectionMode: 'shadow' };
   }
 
-  const dates = onlyDate ? [onlyDate] : await listDates();
-  if (!dates.length) throw new Error(`samples/daily/ 下没有快照日期`);
+  const datesArg = parseDatesArg(args);
+  if (onlyDate && datesArg) throw new Error('--date 与 --dates 不能同时使用');
+  const dates = onlyDate ? [onlyDate] : (datesArg ?? BASELINE_DATES);
+  const available = new Set(await listDates());
+  const missing = dates.filter(d => !available.has(d));
+  if (missing.length) {
+    throw new Error(`日期缺少输入快照（samples/daily/<date>.json 或 samples/raw/<date>/items.json.gz）：${missing.join(', ')}`);
+  }
 
   const [enums, filters, sourceTypes, sourceMapData, overrides, eventOverridesDoc] = await Promise.all([
     loadEnums(), loadFilters(), loadSourceTypes(), loadSourceMap(), loadOverrides(), loadEventOverrides()

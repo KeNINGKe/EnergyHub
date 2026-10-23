@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-01",
+  "generatedAt": "2026-08-01T06:22:16.655Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_4075a2c4fffa",
+      "title": "哥伦比亚在绿色能源拍卖的第二天授予725兆瓦的太阳能",
+      "topic": "energy-storage",
+      "fact": "哥伦比亚清洁能源采购拍卖两日累计授予约995 MW太阳能及近100 MW电池储能系统，其中第二天授予725 MW太阳能。",
+      "implication": "拍卖中明确包含近100 MW电池储能中标容量，意味着储能系统（含PCS）将进入哥伦比亚电网采购交付周期，可能带动拉美市场对直流侧集成与并网变流设备的需求。",
+      "watchNext": "需跟踪中标项目的并网时间表、储能系统技术规格与本地认证要求，以及后续拍卖轮次中储能配额是否扩大。",
+      "evidenceUrls": [
+        "https://www.pv-magazine.com/2026/07/31/colombia-awards-725-mw-of-solar-on-second-day-of-green-energy-auction/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_a3e90d74154c",
+      "title": "施耐德电气和AMD发布首个Helios平台参考设计以加速人工智能工厂部署",
+      "topic": "chips-compute",
+      "fact": "2026年7月31日，施耐德电气与AMD宣布联合开发并验证的首个Helios平台参考设计发布，旨在加速AI工厂部署。",
+      "implication": "该参考设计面向AI工厂整体供电与散热集成，可能为PCS/SST厂商及数据中心配电设备进入AMD Helios生态提供标准化接口与选型依据。",
+      "watchNext": "需跟踪参考设计文档中具体的供电架构规格、认证合作伙伴名单及首批落地AI工厂项目的交付节点。",
+      "evidenceUrls": [
+        "https://www.hpcwire.com/off-the-wire/schneider-electric-and-amd-release-1st-helios-platform-reference-design-to-accelerate-ai-factory-deployment/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_4b9a10a29f80",
+      "title": "单DIMM DDR5游戏的效果比您想象的要好—一个DDR5 DIMM优于双通道DDR4 RAM ， AMD的3D V-Cache芯片使用单棒时下降不到3%",
+      "topic": "other-energy",
+      "fact": "据Tom's Hardware 2026-07-31报道，为规避内存涨价，部分PC整机厂与OEM转向单条DDR5内存的游戏PC方案，测试显示单条DDR5性能优于双通道DDR4，AMD 3D V-Cache芯片在单条内存下性能下降不到3%。",
+      "implication": "内存涨价正在改变PC/工作站整机BOM配置，对AIDC及边缘计算设备的内存选型与供电负载设计或有一定参考意义，但该测试针对游戏场景，与数据中心供电架构的直接关联有限。",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://www.tomshardware.com/pc-components/ddr5/single-dimm-ddr5-gaming-works-better-than-you-probably-think-amds-3d-v-cache-chips-drop-less-than-3-percent-one-ddr5-dimm-beats-dual-channel-ddr4-ram"
+      ],
+      "mode": "generated"
+    }
+  ]
+}

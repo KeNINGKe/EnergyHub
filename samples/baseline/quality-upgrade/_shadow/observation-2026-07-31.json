@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-07-31",
+  "generatedAt": "2026-07-31T06:38:01.315Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_ef415876b502",
+      "title": "特斯拉、ContourGlobal进入亚利桑那州1 TWh太阳能储能PPA",
+      "topic": "solar-wind",
+      "fact": "据pv magazine 2026-07-30报道，特斯拉与ContourGlobal签署购电协议（PPA），特斯拉将从后者位于美国亚利桑那州的光储混合项目每年采购约1 TWh电力。",
+      "implication": "1 TWh/年规模的光储混合长协指向项目侧需配套大规模储能与并网集成能力，对PCS/储能系统集成需求构成信号；材料未披露储能供应商与项目容量，是否涉及特斯拉自供设备尚无法确认。",
+      "watchNext": "待继续核对项目装机与储能容量、储能设备供应商、并网及投运时间表等交付节点披露。",
+      "evidenceUrls": [
+        "https://www.pv-magazine.com/2026/07/30/tesla-contourglobal-enter-1-twh-solar-storage-ppa-in-arizona/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_10c14d017ac9",
+      "title": "ScaleFlux推出专为NVIDIA CMX和KV缓存卸载而设计的人工智能优化SSD平台",
+      "topic": "chips-compute",
+      "fact": "2026年7月30日，ScaleFlux宣布推出一款AI优化的SSD平台，专为NVIDIA CMX和KV缓存卸载（KV Cache Offload）场景设计，消息由HPCwire发布。",
+      "implication": "将KV缓存卸载至SSD层级，意味着AI推理服务器的存储/内存分层架构中SSD角色加重，可能带动AIDC供电链路中存储设备相关的高性能SSD及配套供电需求，但材料未披露具体产品规格或出货计划，推断有限。",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://www.hpcwire.com/off-the-wire/scaleflux-introduces-ai-optimized-ssd-platform-designed-for-nvidia-cmx-and-kv-cache-offload/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_15c6f6615820",
+      "title": "DDN与NVIDIA合作支持海军研究生院的人工智能研究",
+      "topic": "chips-compute",
+      "fact": "2026年7月30日，DDN宣布与NVIDIA合作，为海军研究生院（Naval Postgraduate School）的人工智能研究提供支持，面向政府/公共部门的AI战略能力建设。",
+      "implication": "政府/国防类AI研究集群的落地通常伴随高密度GPU机柜部署，可能带动对高性能存储与配套供电架构的需求，但材料未披露具体规模与设备清单。",
+      "watchNext": "需跟踪该合作披露的集群规模、部署时间表及DDN存储与NVIDIA计算平台的具体交付节点，材料中暂无明确节点。",
+      "evidenceUrls": [
+        "https://www.hpcwire.com/off-the-wire/ddn-backs-ai-research-at-naval-postgraduate-school-with-nvidia-partnership/"
+      ],
+      "mode": "generated"
+    }
+  ]
+}

@@ -12,6 +12,7 @@
   "counts": {
     "selected": 4,
     "nearBand": 3,
+    "nearBandCapped": 0,
     "audit": 0,
     "scored": 7,
     "failed": 0
@@ -79,18 +80,18 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_93af9dc8ee9e",
-      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "eventId": "evt_41d096d339fb",
+      "title": "Lattrex Inc.首席执行官Chuck McClish访谈",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 15,
-        "factualIncrement": 6,
-        "impact": 4,
-        "evidence": 10
+        "businessRelevance": 2,
+        "factualIncrement": 5,
+        "impact": 2,
+        "evidence": 6
       },
-      "total": 35,
-      "keyFact": "BESS与光伏推动澳大利亚NEM可再生能源渗透率过半，Squadron Energy CEO警告仅靠光伏混合无法支撑整个电力系统",
-      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
+      "total": 15,
+      "keyFact": "无时钟异步可重构处理器创业公司Lattrex创始人Chuck McClish接受SemiWiki访谈，介绍其Kyttar架构",
+      "rationale": "芯片架构创业公司访谈与储能/PCS/SST/AIDC供电无实质关联，摘要无任何数字、时间点或当事方进展，属观点性推广内容且仅单一行业媒体来源，对12条版面而言无信息增量。"
     },
     {
       "group": "near-band",
@@ -109,29 +110,21 @@
     },
     {
       "group": "near-band",
-      "eventId": "evt_41d096d339fb",
-      "title": "Lattrex Inc.首席执行官Chuck McClish访谈",
+      "eventId": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
       "ruleScore": 2.5,
       "scores": {
-        "businessRelevance": 2,
-        "factualIncrement": 5,
-        "impact": 2,
-        "evidence": 6
+        "businessRelevance": 15,
+        "factualIncrement": 6,
+        "impact": 4,
+        "evidence": 10
       },
-      "total": 15,
-      "keyFact": "无时钟异步可重构处理器创业公司Lattrex创始人Chuck McClish接受SemiWiki访谈，介绍其Kyttar架构",
-      "rationale": "芯片架构创业公司访谈与储能/PCS/SST/AIDC供电无实质关联，摘要无任何数字、时间点或当事方进展，属观点性推广内容且仅单一行业媒体来源，对12条版面而言无信息增量。"
+      "total": 35,
+      "keyFact": "BESS与光伏推动澳大利亚NEM可再生能源渗透率过半，Squadron Energy CEO警告仅靠光伏混合无法支撑整个电力系统",
+      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
     }
   ],
   "disagreements": [
-    {
-      "kind": "outside-over-selected-floor",
-      "eventId": "evt_93af9dc8ee9e",
-      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
-      "valueScore": 35,
-      "selectedFloor": 17,
-      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
-    },
     {
       "kind": "outside-over-selected-floor",
       "eventId": "evt_79eff84dbe8c",
@@ -139,6 +132,14 @@
       "valueScore": 65,
       "selectedFloor": 17,
       "rationale": "构网型BESS的系统强度认定直接关系PCS/储能厂商在澳价值空间，属核心读者议题；但仅为试验启动与'尚未确认'的阶段性状态，无数字、无项目、无结论，单一行业媒体来源，信息增量与格局影响有限，属版面有余才保留的边缘条目。"
+    },
+    {
+      "kind": "outside-over-selected-floor",
+      "eventId": "evt_93af9dc8ee9e",
+      "title": "“你不能纯粹依靠太阳能混合动力车建造整个电力系统” ： Squadron Energy首席执行官警告说",
+      "valueScore": 35,
+      "selectedFloor": 17,
+      "rationale": "观点类访谈：唯一事实（NEM渗透率过半）属渐进里程碑且无具体数字/时间点，无项目、订单或政策增量，单一媒体来源，12条额度下信息增量不足可舍弃"
     }
   ]
 }

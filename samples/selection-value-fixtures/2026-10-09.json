@@ -860,6 +860,1715 @@
         "keyFact": "阳光电源修复了iSolarCloud平台的身份验证绕过漏洞",
         "rationale": "阳光电源属重点公司且iSolarCloud涉及电站/储能监控运维，但安全补丁事件对供需、格局、项目落地传导有限；摘要仅为标题复述，无CVE编号、时间线、影响范围等细节，单家聚合源无一手公告或独立印证，12条名额下信息增量不足。"
       }
+    },
+    "899537e771eeb443": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 8,
+          "impact": 0,
+          "evidence": 8
+        },
+        "total": 36,
+        "keyFact": "LG新能源因数据中心储能需求旺盛，业绩超市场预期约两倍，股价大涨7%",
+        "rationale": "储能头部公司业绩与AIDC储能需求相关，但本质是财报+股价波动类消息，触发负向清单（股价变动），且摘要仅复述标题、无具体利润数字与一手细节，单家媒体来源，信息增量有限。"
+      }
+    },
+    "022db519b36eaf67": {
+      "result": {
+        "scores": {
+          "businessRelevance": 27,
+          "factualIncrement": 15,
+          "impact": 17,
+          "evidence": 12
+        },
+        "total": 71,
+        "keyFact": "瓦锡兰完成将其全球储能业务与RCT Solutions合资交易的交割。",
+        "rationale": "头部储能系统集成商的全球业务重组直接命中读者核心关注，交割本身是新节点且可能改变竞争格局，但摘要无交易结构、股比、规模等细节，且仅单家媒体转述公司通稿，证据与增量受限。"
+      }
+    },
+    "e2cf8e86aaa49c29": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 16,
+          "impact": 14,
+          "evidence": 8
+        },
+        "total": 62,
+        "keyFact": "台湾阿波罗电力拟投入130亿新台币采购特斯拉储能，到2028年部署于西部工业走廊",
+        "rationale": "储能大额采购+明确金额与时间节点，对储能供应链有传导价值，但仅单一媒体来源、无独立交叉印证且要素（区域、项目细节）残缺，影响限于单一项目层面。"
+      }
+    },
+    "da4966561c1f5938": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 26,
+        "keyFact": "",
+        "rationale": "题材命中储能龙头与电芯价格议题，但摘要仅为标题复述，无任何数字/时间点/当事方等新事实，属无事实支撑的行业情绪评论，触发负向清单，单一来源且 sourceName 与实际出处矛盾，不值得占用 12 条之一。"
+      }
+    },
+    "a041870ac142e07e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 10,
+        "keyFact": "",
+        "rationale": "个股主力资金净卖出属股价日常波动，命中负向清单，无事实增量与商业影响，证据仅为单一行情快报转载。"
+      }
+    },
+    "442ca661acc8776b": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 15,
+        "keyFact": "",
+        "rationale": "仅为Yahoo Finance的FLNC股价/报价页面，无任何新闻事实或增量信息，属股价日常波动类，负向清单命中，不值得占位。"
+      }
+    },
+    "45d9cf5ff177bd99": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 4,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 18,
+        "keyFact": "",
+        "rationale": "Fluence虽是储能头部公司，但本条仅为律所Levi & Korsinsky的证券集体诉讼招揽通稿，无诉讼细节、无新数字或时间点，对供需/格局/项目落地无实质影响，属投资者招揽类营销内容，不值得占用12条名额。"
+      }
+    },
+    "db8c033943bb703e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 3
+        },
+        "total": 13,
+        "keyFact": "",
+        "rationale": "仅为一篇多只股票上涨的行情盘点，涉及Fluence等储能相关公司但无任何实质业务动态、数字或细节，属负向清单中的股价日常波动，无信息增量，不值得占12条名额之一。"
+      }
+    },
+    "91d71ebc21bfefc0": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 12,
+          "impact": 12,
+          "evidence": 10
+        },
+        "total": 54,
+        "keyFact": "特斯拉宣布其最畅销车型现已支持向家庭反向供电（V2H），但材料未给出具体车型、功率或时间细节",
+        "rationale": "特斯拉作为储能/PCS重点公司，车到家双向供电是PCS双向化的实质产品节点，业务关联中上；但摘要仅为标题复述、无任何数字或落地细节，属单家媒体转述，事实增量与影响有限，12条额度下属边缘可选。"
+      }
+    },
+    "3230273ad9eeebd5": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 15,
+        "keyFact": "特斯拉通过 Gerben IP 为“TESLA CYBERCENTER”申请商标",
+        "rationale": "仅为商标注册类品牌动作，无任何业务实质（无订单、产能、项目或技术信息），对储能/AIDC 供电从业者无信息增量，且单来源、要素残缺，属营销性质消息，不值得占用 12 条名额。"
+      }
+    },
+    "4c9b9a36e155fb6a": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 5,
+          "impact": 8,
+          "evidence": 5
+        },
+        "total": 30,
+        "keyFact": "LG新能源与一家加拿大公司签署长期锂精矿供应协议，但协议规模、期限、对方公司名均未披露。",
+        "rationale": "锂精矿长协对储能电池成本有间接传导意义，但摘要仅为标题复述，无供应量、期限、对手方等任何具体要素，单家转述来源，12条额度下信息增量不足。"
+      }
+    },
+    "b7e3288072263aa2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 18,
+          "impact": 15,
+          "evidence": 12
+        },
+        "total": 65,
+        "keyFact": "LG新能源与加拿大方面签订24万吨锂精矿长期供应协议，加码北美本土供应链。",
+        "rationale": "储能头部电池厂商的上游锂资源锁定，数字与当事方具体、有供应链格局传导意义，但属电池原材料外围而非PCS/SST/AIDC直接动态，且仅单家媒体转述、细节（对手方、期限、价格机制）缺失，属可占位但非必读的边缘条目。"
+      }
+    },
+    "7019f2026526a71a": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 21,
+          "impact": 16,
+          "evidence": 13
+        },
+        "total": 76,
+        "keyFact": "马里兰州Next Generation Energy Act首轮大容量储能采购授出440 MW/1,760 MWh，未达800 MW目标，主因涉及PJM互联约束",
+        "rationale": "直接命中储能系统的政策性采购落地，首次授标带具体规模与未达标原因属新事实；但属美国州级单环节事件、不改行业格局，且仅Utility Dive单家媒体、摘要截断且无当事方明细，证据与影响均为中段。"
+      }
+    },
+    "efa56abc1fed9d68": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 12,
+          "impact": 12,
+          "evidence": 10
+        },
+        "total": 52,
+        "keyFact": "南非拟采购4.6吉瓦电池储能（并配套燃气电站）以缓解弃电",
+        "rationale": "海外储能大额采购对国内PCS/系统集成商有潜在订单传导意义，但摘要仅给出总量数字，无招标时间表、当事方与项目细节，单家媒体转述，信息增量与证据均有限。"
+      }
+    },
+    "c11ef5f778c14319": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 15,
+          "impact": 5,
+          "evidence": 14
+        },
+        "total": 39,
+        "keyFact": "意大利初创公司Syntropia推出535W光伏热一体化组件，热输出1.4kW，综合效率66.8%",
+        "rationale": "PVT组件新品与储能/PCS/AIDC供电主业关联弱，属外围光伏技术；有具体参数但仅单家媒体报道、无商业落地信息，对行业格局影响有限，12条额度下不值得占位。"
+      }
+    },
+    "c869135bb88520e3": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 15,
+          "impact": 10,
+          "evidence": 12
+        },
+        "total": 49,
+        "keyFact": "Toyo 在德州 Humble 的光伏组件工厂扩建至 2GW 并举行剪彩",
+        "rationale": "光伏组件制造属储能/AIDC 供电核心关注的外围，单一厂商 2GW 扩产不改行业格局，仅 PV-Tech 单一来源且要素（当事方细节、区域标签）不全，12 条额度下信息增量不足。"
+      }
+    },
+    "df977fc9d4380038": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 8,
+          "impact": 6,
+          "evidence": 11
+        },
+        "total": 33,
+        "keyFact": "SolarPower Europe 报告预测，因部署增长停滞，欧盟太阳能行业就业人数到2030年将下降12%",
+        "rationale": "欧盟光伏就业属读者核心赛道（储能/PCS/SST/AIDC）的外围背景信息，且本质是带单一数字的行业预测而非新落地事实，单家媒体转述、无报告细节数据，对供需格局与项目落地影响有限，在12条限额下不值得占位。"
+      }
+    },
+    "3a142facfb333191": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 15,
+          "impact": 6,
+          "evidence": 12
+        },
+        "total": 41,
+        "keyFact": "UNSW与UtmoLight实现大面积钙钛矿太阳能子模块23.5%认证稳定效率纪录",
+        "rationale": "钙钛矿组件效率纪录是真实新事实且经认证，但属光伏电池技术进展，与储能/PCS/AIDC供电读者仅弱传导相关，短期内不改变行业格局，12条额度下优先级低。"
+      }
+    },
+    "57389df879683ff6": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 0,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "供应商访谈式观点文（EBOS厂商谈2kV布线前瞻），属光伏安装环节的外围背景话题，无任何新订单/新数据/新时间点等事实增量，命中负向清单'无新事实支撑的观点预测'，对储能/PCS/AIDC读者不具占位价值。"
+      }
+    },
+    "597f9353b4dabcff": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 12,
+          "impact": 4,
+          "evidence": 8
+        },
+        "total": 34,
+        "keyFact": "Skyworks宣布Si829x车规级隔离栅极驱动器通过认证，采用15A三相可变电流控制并支持SiC/IGBT可配置设计",
+        "rationale": "车规栅极驱动器属功率半导体元器件层新品发布，与PCS/SST/AIDC仅为间接传导关联，无订单、格局或成本曲线影响，且单一行业媒体转述、摘要残缺无当事方与量化要素，12条额度下信息增量不足以占位。"
+      }
+    },
+    "6dad3ae9322a0753": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 18,
+          "impact": 10,
+          "evidence": 12
+        },
+        "total": 60,
+        "keyFact": "Rabobank 支持的 Nala Renewables 250 MWh 芬兰电池储能项目获 NTP 后进入建设阶段",
+        "rationale": "储能项目开工属行业实质动态且有明确规模与节点，但单一中型项目、无 PCS/集成商等当事方信息、单家媒体来源且区域标注缺失，对供需格局影响有限，在 12 条额度下属可占位但非必选的边缘案例。"
+      }
+    },
+    "4435a4f0b08a4663": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 18,
+          "impact": 12,
+          "evidence": 14
+        },
+        "total": 68,
+        "keyFact": "智利环境评估批准Sidon Solar项目：158MW光伏配套1.3GWh（1296MWh）储能",
+        "rationale": "储能项目环评获批是具体新节点，规模明确且对拉美储能市场有参考意义，但单一媒体来源、项目方信息缺失，对国内产业链格局影响有限。"
+      }
+    },
+    "61abcd9edb5cf0b2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 18,
+          "impact": 9,
+          "evidence": 13
+        },
+        "total": 55,
+        "keyFact": "澳大利亚9月家用电池安装量达966.5 MWh，同期小型光伏新增311.8 MW、环比增超7%。",
+        "rationale": "属储能需求侧的例行月度统计，数字具体且新披露，但不涉及公司、项目或政策变化，对格局无影响，单家行业媒体来源，在12条版面中属可舍弃的边缘消息。"
+      }
+    },
+    "2288e6427cad5e4c": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 17,
+          "impact": 12,
+          "evidence": 13
+        },
+        "total": 68,
+        "keyFact": "Linea Energy 为其德州 250MW/500MWh BESS 项目完成建设债务融资并获优先股投资承诺",
+        "rationale": "直接命中储能赛道且融资关闭是项目落地的关键节点，对跟踪储能项目的读者有实质信息增量；但当事方非头部厂商、单家行业媒体且贷款方/投运时间等细节残缺，属常规项目动态，不改变化格局，处于是否占位的边缘。"
+      }
+    },
+    "7a71c1b964aeddbb": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 12,
+          "impact": 4,
+          "evidence": 8
+        },
+        "total": 44,
+        "keyFact": "AuroraCell发布9.7 kWh钠离子NCO化学家用储能电池，宣称2万次循环",
+        "rationale": "储能产品发布有一定行业关联和具体参数，但厂商为不知名小公司、仅厂商宣称数据且单一媒体来源，对供需格局无实质影响，属边缘可舍弃的营销性新品消息"
+      }
+    },
+    "d2c3729dfd9c9cff": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 18,
+          "impact": 10,
+          "evidence": 11
+        },
+        "total": 61,
+        "keyFact": "英国 Hams Hall 350MW/1.22GWh 储能项目两台 400kV/220MVA 超级电网变压器已通电并网",
+        "rationale": "大型英国 BESS 项目并网通电是储能从业者关心的实质落地节点，事实具体（电压等级、容量、时间点），但属单一项目进展、不改行业格局，且仅一家行业媒体、摘要与指标字段残缺，证据强度中等。"
+      }
+    },
+    "a36763d6ceaea85e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 12,
+          "impact": 8,
+          "evidence": 10
+        },
+        "total": 42,
+        "keyFact": "50Hertz在德国Wustermark变电站启动380千伏扩建，以容纳300MW并网",
+        "rationale": "德国输电网变电站扩建属电网外围消息，对储能/PCS/AIDC读者仅有间接传导意义，单一媒体来源且摘要截断、细节有限，在12条限额下竞争力弱。"
+      }
+    },
+    "07269c7afe499695": {
+      "result": {
+        "scores": {
+          "businessRelevance": 23,
+          "factualIncrement": 15,
+          "impact": 11,
+          "evidence": 8
+        },
+        "total": 57,
+        "keyFact": "SMA America 扩大采购 Westrafo 俄亥俄州 Dayton 工厂生产的中压变压器，推进其美国本土化供应链布局",
+        "rationale": "头部 PCS 厂商在美国的变压器本土化采购属行业相关实质动态，但无数量/时间等硬指标、单一行业媒体且摘要残缺，影响仅限单一供应链环节，属边缘可选的版面条目"
+      }
+    },
+    "cb8b0aea2d360338": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 10,
+          "impact": 3,
+          "evidence": 10
+        },
+        "total": 38,
+        "keyFact": "Ajay Jain 将于2026年10月5日起出任西门子能源印度 Grid Technologies–Transformers 执行单元负责人",
+        "rationale": "变压器属读者跟踪的 SST 范畴且公司为头部厂商，但内容仅是高管人事任命，无订单、产能、供需或格局变化，单一媒体来源，12 条额度下信息增量不足。"
+      }
+    },
+    "579da39081a12a92": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 14,
+          "impact": 10,
+          "evidence": 12
+        },
+        "total": 48,
+        "keyFact": "LS Power 完成 60 亿美元能源基础设施基金（Fund VI）募集",
+        "rationale": "60 亿美元基金关闭是具体新事实，但属于 PE 募资层面的资本动态，与储能/PCS/AIDC 供电无直接业务命中，仅通过 LS Power 未来开发投资间接传导，且摘要残缺、仅单家媒体来源，12 条额度下优先级偏低。"
+      }
+    },
+    "0c7f4d4f7c64eb00": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 18,
+          "impact": 8,
+          "evidence": 14
+        },
+        "total": 50,
+        "keyFact": "Clearway 获得融资并开工密苏里州 650MW Swan 太阳能中心",
+        "rationale": "纯光伏电站开工新闻，与储能/PCS/AIDC 供电读者仅外围相关，有具体规模和开工节点但单家媒体来源、对行业格局影响有限，12 条额度下优先级低。"
+      }
+    },
+    "69232342bead783e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 8,
+          "impact": 3,
+          "evidence": 0
+        },
+        "total": 19,
+        "keyFact": "",
+        "rationale": "Natural Power 为 Valorem 法国 192MW 光风组合 2.2 亿欧元再融资提供技术尽调，属咨询公司服务性通稿，与储能/PCS/AIDC 供电仅间接相关，无格局影响，且为软文性质证据记 0，不值得占位。"
+      }
+    },
+    "c12be0af4efc7e86": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 15,
+          "impact": 18,
+          "evidence": 10
+        },
+        "total": 65,
+        "keyFact": "今年迄今超2600亿美元数据中心项目被取消，其中约一半集中在7-9月",
+        "rationale": "AIDC项目大规模取消对供电/储能需求预期有直接传导意义，但摘要残缺、无具体项目方与明细，仅单家媒体转述，证据与增量受限。"
+      }
+    },
+    "349cef51d9fe63e5": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 8,
+          "impact": 8,
+          "evidence": 8
+        },
+        "total": 34,
+        "keyFact": "2026年上半年全球清洁能源投资同比下降17%，被美国市场拒之门外的印度太阳能制造商转向供应链缺失环节",
+        "rationale": "太阳能制造属储能/PCS/AIDC供电主业的外围传导题材，摘要截断仅暴露一个投资降幅数字，无具体厂商、产能或订单事实，单家媒体来源且要素不全，12条额度下信息增量不足。"
+      }
+    },
+    "e43e3e2e2dc33c92": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 4,
+          "impact": 0,
+          "evidence": 12
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "EIA 对美国冬季能源支出的宏观预测，属观点/展望类内容，摘要无具体数字或当事方，与储能/PCS/AIDC 供电仅背景相关；命中负向清单'无新事实支撑的观点预测'故影响维度记 0，EIA 一手来源可信但内容要素残缺，证据仅给中段。"
+      }
+    },
+    "fe6abd1b5798c041": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "美国能源部量子计算科学应用属于计算/芯片领域，与储能/PCS/AIDC供电架构无直接传导路径，摘要截断且无具体数字、时间点或当事方，单家媒体转述，12条额度下不值得占位。"
+      }
+    },
+    "66a43edf60147096": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 5,
+          "impact": 5,
+          "evidence": 8
+        },
+        "total": 33,
+        "keyFact": "Intel Foundry 发布两篇关于 AI 数据中心能源趋势下芯片功率传输的文章",
+        "rationale": "芯片级功率传输与 AIDC 供电架构有传导关联但非直接命中 SST/PCS/800VDC 实质动态，摘要仅为'值得阅读'的转述导读，无任何新数字、时间点或当事方进展，单家媒体且要素残缺，信息增量不足以在 12 条额度中占位。"
+      }
+    },
+    "e6ef7b48bcf2b703": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 10
+        },
+        "total": 15,
+        "keyFact": "OpenAI 在 ChatGPT 青少年版中推出 College Planner 及闪卡、测验等学习功能",
+        "rationale": "OpenAI 面向青少年的教育产品发布，与储能/PCS/SST/AIDC 供电行业无任何业务关联或传导路径，属消费级产品营销消息，对目标读者零信息增量，不值得占用 12 条名额之一；仅因有一手来源且要素齐全给证据中低分。"
+      }
+    },
+    "d68b1075607deb42": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 8
+        },
+        "total": 13,
+        "keyFact": "",
+        "rationale": "OpenAI 数学进展与储能/PCS/SST/AIDC 供电行业无任何业务关联，摘要亦无具体新事实，不占 12 条名额。"
+      }
+    },
+    "b5b1b37d03902488": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 5,
+        "keyFact": "",
+        "rationale": "内容为气候变化与疟疾的公共卫生科普话题，与储能/PCS/AIDC供电业务无任何关联，无新事实与商业影响，不占日报版面。"
+      }
+    },
+    "f671692ced22f372": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 20,
+          "impact": 18,
+          "evidence": 12
+        },
+        "total": 76,
+        "keyFact": "集邦咨询：Q3中国储能订单总量约94GWh，其中中企海外订单占比超九成",
+        "rationale": "直接命中储能行业且给出季度订单总量与海外占比两个新数据点，对判断供需与出海格局有参考价值；但摘要仅复述标题、无订单结构/当事方细节，且为第三方咨询机构数据经媒体转述，证据强度中等。"
+      }
+    },
+    "8dfdb6ba39db0bc0": {
+      "result": {
+        "scores": {
+          "businessRelevance": 27,
+          "factualIncrement": 20,
+          "impact": 18,
+          "evidence": 10
+        },
+        "total": 75,
+        "keyFact": "中核2.98GWh储能集采开标，六家入围，最低报价0.499元/Wh",
+        "rationale": "央企大规模储能集采与0.499元/Wh的最低价是储能从业者关心的价格信号与订单格局信息，但仅单一转载来源（gessey.com，标注来源与内容不符），证据链弱，需谨慎采用。"
+      }
+    },
+    "1685d74e1b8a6bf5": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 16,
+        "keyFact": "",
+        "rationale": "仅是一条研报标题转述，主题（AI基建/液冷）与SST/AIDC供电有外围传导关联，但无任何数字、当事方或新事实，属无事实支撑的观点预测，且疑似公司相关研报通稿，不值得占用12条名额。"
+      }
+    },
+    "38c213bd00a678be": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 5
+        },
+        "total": 31,
+        "keyFact": "",
+        "rationale": "媒体综述式全景观察，涉及SST/800V等主题但无具体新事实、数字或当事方，更像技术趋势汇总，信息增量低，难以在12条配额中占位。"
+      }
+    },
+    "a8ada88568c0cac2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 5
+        },
+        "total": 23,
+        "keyFact": "",
+        "rationale": "IndexBox市场预测类通稿，仅给出8.5%复合增速的笼统预测，无具体公司、订单、项目或政策事实，连接器属储能外围部件，对跟踪PCS/SST/AIDC供电的读者无信息增量，且来源单一、要素残缺（无区域、无当事方），不值得占用12条名额。"
+      }
+    },
+    "fb913056bb0177aa": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 29,
+        "keyFact": "",
+        "rationale": "题材直接命中AIDC 800VDC供电架构与SST，业务关联高；但内容为厂商（台达）来源的'为何是刚需'观点分析，无任何新数字、新当事方或新进展，属无新事实支撑的观点预测且疑似软文，事实增量与影响记0，单一厂商来源证据薄弱。"
+      }
+    },
+    "265e8bc4b2718472": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 5,
+          "impact": 5,
+          "evidence": 5
+        },
+        "total": 25,
+        "keyFact": "",
+        "rationale": "实为壳式（shell-type）变压器市场预测报告被误读为壳牌公司动态，属第三方市场展望类内容，无具体新数字或事件，单一来源转述，对12条版面而言信息增量不足。"
+      }
+    },
+    "7a714e15e1f0e825": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 15,
+          "impact": 10,
+          "evidence": 10
+        },
+        "total": 47,
+        "keyFact": "山西再公示458.3MW风光项目废止清单，年内累计清理指标达5.64GW",
+        "rationale": "风光指标清理属储能/PCS读者的外围传导信息（影响电网消纳与项目管道），数字具体但为常规性废止公示、单家媒体转载且来源标注可疑（特变电工），对12条版面而言信息增量偏弱，属边缘可舍弃项。"
+      }
+    },
+    "dfc6346b9fb0b3d9": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 19,
+          "impact": 13,
+          "evidence": 9
+        },
+        "total": 67,
+        "keyFact": "远景Gen 8储能系统完成64MWh火烧测试，自称行业最大规模、最严工况",
+        "rationale": "头部集成商的大容量火烧测试属储能安全验证关键节点，对跟踪储能系统的读者有保留价值；但信息仅来自厂商通稿且摘要仅为标题复述，缺测试时间、标准与第三方认证等要素，增量与格局影响有限。"
+      }
+    },
+    "528fd60fed546512": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 10,
+          "impact": 6,
+          "evidence": 8
+        },
+        "total": 32,
+        "keyFact": "中老500千伏联网工程累计送电量突破10亿千瓦时",
+        "rationale": "跨国电网输电里程碑对储能/PCS/AIDC供电读者仅属外围背景，摘要无细节、单一来源且要素残缺，信息增量有限，不值得占用12条名额。"
+      }
+    },
+    "ac0f17a49e685c1d": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 12,
+          "impact": 14,
+          "evidence": 9
+        },
+        "total": 61,
+        "keyFact": "瓦锡兰将其储能业务转移至与RCT Solutions合资成立的Valo合资企业。",
+        "rationale": "头部储能系统集成商的业务架构重组对行业格局有实质影响，值得占位；但摘要仅复述标题、无交易细节（股权比例、资产范围、时间表），且仅单一来源，事实增量与证据充分度受限。"
+      }
+    },
+    "dd4c2282a3bb7b20": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 8,
+          "impact": 5,
+          "evidence": 8
+        },
+        "total": 39,
+        "keyFact": "瓦锡兰与RCT Solutions联合推出储能集成商Valo",
+        "rationale": "储能系统集成商新公司成立与读者行业相关，但摘要无任何规模、产品或市场细节，来源单一且疑似企业通稿，信息增量与格局影响有限，难以在12条中占位。"
+      }
+    },
+    "4346fae1aebcfffb": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 3,
+          "impact": 3,
+          "evidence": 5
+        },
+        "total": 26,
+        "keyFact": "",
+        "rationale": "主题（数据中心电力/电网约束）与读者相关，但摘要仅为标题复述，无任何具体交易细节、数字或当事方，属无事实增量的观点性报道，且来源单一、要素残缺，不值得占用 12 条名额。"
+      }
+    },
+    "dd0cb16e14880d12": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 18,
+          "impact": 14,
+          "evidence": 13
+        },
+        "total": 67,
+        "keyFact": "Eku Energy为昆士兰两个BESS项目锁定2.76GWh社区交易，Valo赢得1.6GWh合同",
+        "rationale": "储能项目实质签约动态、有具体规模和当事方，但仅单家媒体转述、摘要要素单薄，且属澳洲区域项目交易，不改行业格局，在12条额度内属边缘可选。"
+      }
+    },
+    "5a5da21403e16c33": {
+      "result": {
+        "scores": {
+          "businessRelevance": 11,
+          "factualIncrement": 7,
+          "impact": 8,
+          "evidence": 7
+        },
+        "total": 33,
+        "keyFact": "瓦锡兰获选为澳大利亚有史以来最大的发动机发电厂供应发动机，但材料未给出容量、时间线或业主等任何具体参数",
+        "rationale": "燃气调峰/备电属储能从业者的外围传导信息，事件本身真实但摘要仅为标题复述、零数字零当事方细节，且唯一来源为公司自发声经航运媒体转载、要素残缺，单一项目订单不改格局，在12条版面额度下信息增量不足，不值得占位。"
+      }
+    },
+    "f40672baebeb33a9": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 10,
+        "keyFact": "",
+        "rationale": "这是一条大盘午间行情综述，仅提及固态电池概念和算力硬件股的股价波动，无任何公司、项目、政策或供需层面的具体新事实，属于负向清单中的股价日常波动类，对储能/PCS/AIDC 供电从业者无信息增量，不值得占用 12 条消息中的一个位置。"
+      }
+    },
+    "bb3d14eab37eab38": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 5,
+          "impact": 8,
+          "evidence": 5
+        },
+        "total": 33,
+        "keyFact": "中国提出2030年全固态电池规模化应用目标，CATL对量产前景仍持审慎态度",
+        "rationale": "固态电池属电池技术路线而非PCS/SST/AIDC核心环节，对储能从业者仅间接相关；摘要仅为标题复述，无政策文件名、数字或CATL具体表态等新事实，疑似已知路线图与曾毓群既有观点的重述，且仅单一韩媒来源、sourceName与内容错配，证据薄弱，信息增量不足以占用12条席位。"
+      }
+    },
+    "be51bfa7a8544802": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 8,
+          "impact": 5,
+          "evidence": 6
+        },
+        "total": 29,
+        "keyFact": "马斯达尔在乌兹别克斯坦可再生能源投资组合累计达42亿美元、装机4.8吉瓦",
+        "rationale": "光风累计投资里程碑对储能/PCS/AIDC供电读者仅外围传导，且为公司口径的累计数字汇总、无新项目节点，单一来源交叉验证不足，12条额度下信息增量偏低。"
+      }
+    },
+    "9e68e8266e1bbd24": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 5,
+          "impact": 6,
+          "evidence": 6
+        },
+        "total": 29,
+        "keyFact": "",
+        "rationale": "AI 算力芯片供应扩张对 AIDC 供电需求仅是外围传导信号，且无任何具体数字、时间点或产品细节，属单源转述的模糊表态，信息增量不足。"
+      }
+    },
+    "5e05722904c6f3d3": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 16,
+          "impact": 16,
+          "evidence": 10
+        },
+        "total": 60,
+        "keyFact": "LG拿下北美5GW数据中心冷却订单，并将合作模式从逐单投标改为3-5年长约",
+        "rationale": "液冷属AIDC供电链外围但有直接传导影响，5GW规模加长约模式转变对冷却环节格局有实质意义，值得占位；但仅单家媒体转述、无当事方确认或合同细节，证据与增量上限受限。"
+      }
+    },
+    "411c73bd6e4cfc58": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 8,
+          "impact": 6,
+          "evidence": 6
+        },
+        "total": 32,
+        "keyFact": "哈萨克斯坦数据中心容量预计2027年达186兆瓦",
+        "rationale": "仅一条媒体转述的国家层面容量预测，无具体项目、当事方或供电架构细节，对储能/PCS/SST从业者只有宏观背景意义，单一来源且要素残缺，12条额度下不值得占位。"
+      }
+    },
+    "6a04ed5312040fe0": {
+      "result": {
+        "scores": {
+          "businessRelevance": 25,
+          "factualIncrement": 11,
+          "impact": 7,
+          "evidence": 8
+        },
+        "total": 51,
+        "keyFact": "QuantumScape发布QS PowerBlock，切入AI数据中心机架内储能场景",
+        "rationale": "直接命中AIDC储能赛道且是固态电池厂商向该场景延伸的信号，但通稿式发布无规格、订单、客户或时间点等任何细节，来源单薄，属12条额度下的边缘可选。"
+      }
+    },
+    "52f7e9f5dfc5198b": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 10,
+          "impact": 10,
+          "evidence": 8
+        },
+        "total": 50,
+        "keyFact": "Project Gravity 项目将为数据中心配套使用 430MW 电池储能。",
+        "rationale": "数据中心配储直接命中读者关注的储能×AIDC 供电交叉点，430MW 规模不小，但摘要仅为标题复述，无当事方、时间点、供应商等要素，单一媒体来源且区域未知，信息增量与证据均偏弱，属边缘可占位消息。"
+      }
+    },
+    "c4db3020d1320843": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 6,
+          "impact": 4,
+          "evidence": 5
+        },
+        "total": 37,
+        "keyFact": "MarketsandMarkets预测数据中心储能系统市场2032年达104.8亿美元，CAGR 12.5%",
+        "rationale": "主题直接命中数据中心储能（读者核心赛道），但本质是第三方研究机构的市场规模预测通稿，无新当事方、订单、项目或政策等可验证事实，单一来源转载，对格局和供需无实际改变，12条额度下信息增量不足。"
+      }
+    },
+    "d8070e1cdfd1316e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 5,
+          "impact": 5,
+          "evidence": 6
+        },
+        "total": 34,
+        "keyFact": "",
+        "rationale": "施耐德面向AIDC的软件定义开关设备与供电架构有中段关联，但摘要仅为标题复述，无任何数字、时间点或当事方细节，属产品营销类预告，无信息增量，不值得占12条中的位置。"
+      }
+    },
+    "ff89d61111ae761c": {
+      "result": {
+        "scores": {
+          "businessRelevance": 14,
+          "factualIncrement": 13,
+          "impact": 13,
+          "evidence": 12
+        },
+        "total": 52,
+        "keyFact": "LG电子在美国获得5GW规模的AI数据中心冷却合同",
+        "rationale": "液冷属AIDC供电的外围传导环节，5GW订单规模可观且为头部厂商动态，但摘要仅复述标题、缺客户/金额/交付节点等细节，对储能/PCS/SST读者只是间接需求信号，属边缘占位案例。"
+      }
+    },
+    "07d7caba2f0c2978": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 3,
+          "impact": 3,
+          "evidence": 4
+        },
+        "total": 18,
+        "keyFact": "",
+        "rationale": "仅复述MENA 2030年18GW可再生能源目标这一广为人知的区域规划，无新项目、新当事方、新时间点，来源为单一低权威媒体且摘要只是标题重复，对储能/PCS/AIDC读者无信息增量，不值得占12条之一。"
+      }
+    },
+    "dffc2eeaf8ee7336": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 8
+        },
+        "total": 13,
+        "keyFact": "印度团队研发大蒜皮基传感器，功率密度达2.16W，用于低成本家庭安防供电",
+        "rationale": "大蒜皮摩擦纳米发电机属消费级科研趣闻，与储能/PCS/SST/AIDC供电无任何传导路径，不占12条名额；仅IEEE Spectrum单一来源且摘要残缺，证据与增量均低。"
+      }
+    },
+    "cb98fb8c9e30702f": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 0,
+          "impact": 2,
+          "evidence": 4
+        },
+        "total": 32,
+        "keyFact": "",
+        "rationale": "主题直接命中 SST×AIDC 供电架构，但内容为电子工程专辑观点/科普文的转述转载，摘要仅标题、无任何新数字、新时间点或当事方，属无新事实支撑的观点类内容且单源要素残缺，对跟踪供需/项目/政策的从业者无信息增量，12 条额度下不值得占位。"
+      }
+    },
+    "cefda66d0e79278a": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 0,
+          "impact": 2,
+          "evidence": 2
+        },
+        "total": 12,
+        "keyFact": "",
+        "rationale": "IndexBox 式 2035 市场预测通稿，摘要仅重复标题，无任何数字、公司、时间点等新事实，属'无新事实支撑的观点预测'故事实增量记 0；内容为传统绿色电力变压器并网题材，对 SST/PCS/AIDC 读者仅背景相关；单家转载源、要素残缺（无实体/无指标/地区未知），不占每日 12 条名额。"
+      }
+    },
+    "7f9cce204e6fe58a": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 8,
+        "keyFact": "",
+        "rationale": "openPR第三方市场预测通稿，仅给出远期市场规模与CAGR预测，无新事实、无当事方、无项目/政策落地，属无新事实支撑的观点预测，事实增量与影响记0，证据为营销通稿记0；逆变器市场与PCS从业者仅弱背景相关。"
+      }
+    },
+    "7817717b233d5b4c": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 16,
+        "keyFact": "",
+        "rationale": "标题残缺且无任何具体事实（无产品名、数字、时间点），疑似 openPR 通稿式营销内容，对电网外围话题仅有背景关联，无信息增量，不值得占用 12 条名额。"
+      }
+    },
+    "8ac71cbe08fd0a10": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 3
+        },
+        "total": 13,
+        "keyFact": "",
+        "rationale": "openPR 通稿式市场预测标题，无任何具体数字、时间点或当事方动态，属无新事实支撑的观点预测，对储能/PCS/AIDC 读者仅有电网侧背景关联，不占 12 条名额。"
+      }
+    },
+    "9e1a939809813613": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 12,
+          "impact": 8,
+          "evidence": 8
+        },
+        "total": 52,
+        "keyFact": "博州博乐市200MW/800MWh储能项目发布储能系统设备采购公告",
+        "rationale": "储能系统设备采购属行业核心环节，但仅为采购公告转述，无中标方、金额等细节，单一媒体来源且要素残缺，对格局影响有限。"
+      }
+    },
+    "2380f098418edc05": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 14,
+          "impact": 10,
+          "evidence": 10
+        },
+        "total": 56,
+        "keyFact": "华能蒙东牙克石25万千瓦风储共构并网友好型项目开工",
+        "rationale": "风储一体化项目开工对储能从业者有直接关联且含新规模数字，但属常规央企项目开工通稿，单一转载来源、无技术或格局层面增量，12条额度下优先级偏低。"
+      }
+    },
+    "752a1d7744260723": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 3,
+          "impact": 2,
+          "evidence": 5
+        },
+        "total": 22,
+        "keyFact": "",
+        "rationale": "V2G双向充电桩科普视频，仅与PCS双向变流应用背景相关，无新数字/当事方/项目节点，摘要仅为标题复述且单源转载，信息增量不足以占用12条名额。"
+      }
+    },
+    "ce6755cab601e4a0": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 15,
+          "impact": 10,
+          "evidence": 8
+        },
+        "total": 57,
+        "keyFact": "新疆一300MW/1.2GWh构网型储能电站正式启动",
+        "rationale": "构网型大储项目启动对PCS/储能从业者有直接关联且含具体规模数字，但材料无当事方、无地点与时间细节，仅单家媒体转述，属单项目动态不改格局，证据链薄弱，处于12条名额的边缘可留可弃。"
+      }
+    },
+    "561a5ff6f65fd2ad": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 16,
+          "impact": 9,
+          "evidence": 11
+        },
+        "total": 62,
+        "keyFact": "果下在喀什疏附县启动20万千瓦/80万千瓦时构网型电化学独立储能电站项目招标",
+        "rationale": "直接命中储能系统且为具体项目落地节点（招标），规模与地点要素齐全，但属单县单一项目例行招标、单家二手媒体转述且摘要无增量信息，对格局影响有限，12条额度下属边缘可选。"
+      }
+    },
+    "0b58ae2796adbbdb": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 10,
+        "keyFact": "Manus重启北京办公室大举招聘并获5亿美元新融资",
+        "rationale": "AI公司抢人与融资动态，与储能/PCS/SST/AIDC供电无业务关联亦无传导路径，且属负向清单招聘类（影响记0），单家媒体转述要素残缺，不值得占位。"
+      }
+    },
+    "aeda7db822c209f5": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 8
+        },
+        "total": 13,
+        "keyFact": "",
+        "rationale": "AI科研能力评测话题与储能/PCS/AIDC供电业务无关联，属消费级科技媒体内容，无行业增量，不值得占位。"
+      }
+    },
+    "5182f5e63b75180b": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 14,
+          "impact": 3,
+          "evidence": 10
+        },
+        "total": 27,
+        "keyFact": "美国因涉嫌欺诈暂停微软、Adobe等公司的H-1B员工PERM劳工认证绿卡通道",
+        "rationale": "新闻本身有具体新事实且来源要素齐全，但内容是科技行业移民劳工政策，与储能/PCS/SST/AIDC供电的供需、格局、项目、政策均无传导路径，对目标读者无信息增量，不值得占位。"
+      }
+    },
+    "fa873116de4525c6": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "AWS云服务周报（Bedrock代理、服务可用性、Kiro工作流），与储能/PCS/SST/AIDC供电行业无业务关联，不占版面。"
+      }
+    },
+    "47647f608fd47f8f": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 3,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 20,
+        "keyFact": "",
+        "rationale": "V2H双向放电与PCS技术相关、对日本市场有一定传导意义，但内容为无数字、无时间点、无当事方细节的软文式转述，属营销性质且无新事实，不值得占用12条席位。"
+      }
+    },
+    "b1447e9c5442d282": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 12,
+          "impact": 5,
+          "evidence": 8
+        },
+        "total": 35,
+        "keyFact": "国庆假期全国高速公路新能源汽车日均充电量同比增长51.42%",
+        "rationale": "高速公路充电量数据对储能/PCS/AIDC从业者仅属充电基础设施外围背景，无格局性影响；来源标注为公司号（盛弘股份）单一转载，证据弱，12条额度下信息增量不足。"
+      }
+    },
+    "6ba7d258826a7ead": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 4,
+        "keyFact": "",
+        "rationale": "中证1000增强ETF的半日涨跌幅与成交额属日常股价波动，负向清单明确记0，与储能/PCS/SST/AIDC供电业务无实质关联，无任何行业信息增量，不值得占位。"
+      }
+    },
+    "80fae920164f4caf": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "纯ETF盘中股价波动，属负向清单的股价日常变动，无任何新事实、无业务传导影响，且数据要素残缺（指标解析错误、来源标注异常），不值得占位。"
+      }
+    },
+    "a8965a99c141afa2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "ETF单日涨跌幅属股价日常波动，命中负向清单，且无任何实质供需/项目/政策信息，不值得占位。"
+      }
+    },
+    "37ddfd2c09bb2565": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 23,
+        "keyFact": "",
+        "rationale": "户储行业增速与利润分化话题与储能从业者相关，但摘要无任何具体数字、公司或事件，来源为固德威自媒体观点稿，疑似软文/观点预测，无新事实支撑，不值得占位。"
+      }
+    },
+    "ff8d4ca690bae611": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 5,
+        "keyFact": "",
+        "rationale": "律所证券维权征集类通稿，仅出现Fluence公司名，无任何业务事实、数字或进展，摘要为标题复述，触发负向清单（通稿/无新事实），对储能从业者无信息增量，不值得占位。"
+      }
+    },
+    "71050af06b62e8c1": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 5,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 22,
+        "keyFact": "",
+        "rationale": "Fluence 是储能集成头部公司故业务关联中等，但内容仅为 PR Newswire 集体诉讼征集通稿，无任何业务事实、数字或进展，属投资者诉讼营销类信息，对供需/格局/项目落地无增量，不值得占位。"
+      }
+    },
+    "0dc4489606e19eab": {
+      "result": {
+        "scores": {
+          "businessRelevance": 2,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 2,
+        "keyFact": "",
+        "rationale": "黄金日户外装备促销汇总（含 Anker Solix 便携电源折扣），属消费级营销内容，无供需/格局/项目/政策信息增量，来源为促销通稿，四维均无入选价值。"
+      }
+    },
+    "980c2b234a9974a7": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "股价日常波动属负向清单，且摘要无具体事实、来源单一残缺，对储能/AIDC供电读者无信息增量。"
+      }
+    },
+    "1005ac5d42d95eac": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 5,
+          "impact": 11,
+          "evidence": 8
+        },
+        "total": 46,
+        "keyFact": "特斯拉财报会表示大举押注机器人、自动驾驶与储能，资本开支持续扩张（无具体金额与储能装机数字）",
+        "rationale": "特斯拉属储能重点公司、主题直接相关，但摘要仅为标题复述：无资本开支数字、无储能出货/装机数据、无时间点，实录内容未落地为可引用事实，且财报会属全网密集覆盖事件、单一转述来源，四项合计信息增量不足以在 12 条名额中占位。"
+      }
+    },
+    "938c6e1718ea1f39": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 5,
+        "keyFact": "",
+        "rationale": "论坛式讨论帖，仅泛谈电力电子硕士薪资，无具体公司/数字/事实，属招聘话题且无信息增量，四维均低或记零。"
+      }
+    },
+    "73dcba63fd2fb8f6": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 10,
+          "impact": 8,
+          "evidence": 10
+        },
+        "total": 36,
+        "keyFact": "马萨诸塞州州长下令将替代合规付款（ACP）资金转用于今冬中低收入家庭取暖补贴",
+        "rationale": "美国州级取暖补贴政策，与储能/PCS/AIDC供电主业无直接传导，摘要截断且无实体、无数字，仅单家媒体报道，属12条名额中可舍弃的外围消息。"
+      }
+    },
+    "fe22f8f359b6df78": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 24,
+        "keyFact": "混合晶闸管/SiC JFET模块方案可承受电机启动过载并提升固态接触器部分负载效率",
+        "rationale": "器件级技术科普文，仅与PCS/SST外围相关，无任何数字、公司、项目等新事实，单家媒体且摘要残缺，对供需格局无影响，12条额度下不值得占位。"
+      }
+    },
+    "7207ad38449c6e60": {
+      "result": {
+        "scores": {
+          "businessRelevance": 6,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 11,
+        "keyFact": "",
+        "rationale": "这是一篇关于变压器油成分的杂志科普/技术综述，无任何具体事实、数字、当事方或时间点，且变压器油与固态变压器（SST，无油绝缘）关联薄弱，对跟踪供需、格局、项目落地的读者无信息增量，不值得占用12条名额。"
+      }
+    },
+    "8704e11933f2311d": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 4,
+          "impact": 0,
+          "evidence": 6
+        },
+        "total": 20,
+        "keyFact": "",
+        "rationale": "行业协会负责人在会议上的观点交流，主题（数据中心用电成本分摊）与读者有外围关联，但摘要无任何具体数字、当事方或新事实，属无新事实支撑的观点讨论，触发负向清单，不值得占用12条名额之一。"
+      }
+    },
+    "ec897f79c581dfd9": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 15,
+          "impact": 5,
+          "evidence": 10
+        },
+        "total": 35,
+        "keyFact": "丹佛聚变公司Xcimer Energy与DOE敲定最高3050万美元的额外联邦资助协议",
+        "rationale": "聚变能源对储能/PCS/SST/AIDC供电读者仅属远期背景题材，无传导路径；金额与当事方是具体新事实但仅单家媒体报道，且只是单一初创公司的研发资助，不改变任何环节格局，在12条版面中信息增量不足"
+      }
+    },
+    "a0ba4a93b5e614ad": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "抓取失败页面（'Just a moment...'），仅有机构部门名称，无任何新闻事实、时间点或当事方动态，且地区标注（美国）与来源（德国Fraunhofer ISE）矛盾，不具备占位价值。"
+      }
+    },
+    "aea7ae1b346d984b": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 0,
+          "impact": 4,
+          "evidence": 5
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "核电与AIDC供电竞争属读者关注的外围传导话题，但这是Energy Central转载的观点评论，无任何新数字、当事方或政策节点，属'无新事实支撑的观点预测'，事实增量为0，不值得占用12条名额。"
+      }
+    },
+    "0883a09aa8c3a6d2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 6,
+          "impact": 0,
+          "evidence": 5
+        },
+        "total": 16,
+        "keyFact": "Astera Labs宣布扩展ARIES 7产品组合，面向多机架AI连接（算力互联芯片侧，非供电侧）",
+        "rationale": "芯片互联厂商的产品线扩展通稿，属算力IT侧营销信息，未触及AIDC供电架构（800VDC/HVDC）、SST/PCS或储能任何环节，摘要残缺无数字无当事方细节，对供电从业者无信息增量，不值得占用12条中的位置。"
+      }
+    },
+    "bfb4e3d28a28b47f": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 8,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 24,
+        "keyFact": "Pasqal推出AI辅助工作流程以降低云QPU实验的工程门槛",
+        "rationale": "量子计算厂商的软件工作流发布，与储能/PCS/AIDC供电无直接关联，仅作为算力需求的极外围背景；摘要无具体数字、当事方或时间节点，属产品营销类消息，12条额度下不值得占位。"
+      }
+    },
+    "9e71e856937e2f3c": {
+      "result": {
+        "scores": {
+          "businessRelevance": 5,
+          "factualIncrement": 5,
+          "impact": 3,
+          "evidence": 8
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "半导体设计服务与台积电工艺接入话题，与储能/PCS/AIDC供电仅背景级关联，摘要无具体数字或新事件，单家媒体观点性文章，12条名额下无信息增量。"
+      }
+    },
+    "5d5604feecbe8036": {
+      "result": {
+        "scores": {
+          "businessRelevance": 0,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 0,
+        "keyFact": "",
+        "rationale": "乳腺癌AI医疗内容与储能/PCS/AIDC供电行业完全无关，属NVIDIA博客营销性质文章，四维均记0。"
+      }
+    },
+    "23887e98440c8614": {
+      "result": {
+        "scores": {
+          "businessRelevance": 6,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 10,
+        "keyFact": "",
+        "rationale": "主体是消费级多孔插排的市场规模预测，仅借数据中心需求叙事与读者领域擦边，属无新事实支撑的观点预测（负向清单），无格局影响，且为单一统计聚合源、区域与当事方要素残缺，不值得占用12条版面。"
+      }
+    },
+    "3ab53c3f8427bd31": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 3,
+          "impact": 3,
+          "evidence": 5
+        },
+        "total": 19,
+        "keyFact": "",
+        "rationale": "沙特能源影响力转型的宏观叙事评论，无具体数字、项目或当事方，摘要仅为标题复述，对储能/AIDC供电从业者无信息增量，不值得占用12条名额。"
+      }
+    },
+    "6ac604a3df9a6871": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 5,
+          "impact": 5,
+          "evidence": 5
+        },
+        "total": 23,
+        "keyFact": "ACWA Power称其在乌兹别克斯坦的30亿美元可再生能源项目取得推进，但无具体节点、时间或当事方细节。",
+        "rationale": "仅标题级复述'推进'一词，无新披露的节点/数字/当事方，且为乌兹别克斯坦光风项目、材料未涉及储能或AIDC供电环节，单源且要素残缺（地区未知、指标标签残缺），在12条额度下不占位。"
+      }
+    },
+    "ca89bf25851496a7": {
+      "result": {
+        "scores": {
+          "businessRelevance": 6,
+          "factualIncrement": 8,
+          "impact": 6,
+          "evidence": 6
+        },
+        "total": 26,
+        "keyFact": "麦加30亿美元电厂项目完成融资",
+        "rationale": "燃气发电厂融资落地属能源外围消息，与储能/PCS/AIDC供电无传导路径；摘要仅复述标题，无当事方、融资方、技术路线等要素，单家媒体且信息残缺，12条额度下不值得占位。"
+      }
+    },
+    "89ea9d9a88eae027": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 10,
+          "impact": 6,
+          "evidence": 7
+        },
+        "total": 35,
+        "keyFact": "受AI热潮推动，芬兰数据中心项目总投资超670亿欧元",
+        "rationale": "AIDC宏观投资动向对供电产业链有外围传导意义，但仅有单一媒体转述的总量数字，无当事方、时间点或项目细节，不改变任何环节格局，12条额度下信息增量不足。"
+      }
+    },
+    "641607a2a6528877": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 2,
+          "impact": 3,
+          "evidence": 4
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "电网主题属外围传导，但内容仅为标题式转述，'六张网'无任何具体事实、数字或当事方，摘要纯复述标题，单源且要素残缺，对储能/AIDC 读者无信息增量，不值得占位。"
+      }
+    },
+    "b0987bd7e07c1ac1": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 15,
+          "impact": 14,
+          "evidence": 10
+        },
+        "total": 57,
+        "keyFact": "蒙西电网直供制度使乌兰察布数据中心电价低至0.358元/度",
+        "rationale": "对AIDC供电读者有传导价值——具体电价数字0.358元/度是新的量化事实，直供制度影响数据中心选址与用电成本格局；但仅单家媒体转述、摘要无细节无当事方，证据与增量受限，属值得占位的边缘案例。"
+      }
+    },
+    "bde6da5d40c59b05": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 10,
+          "impact": 8,
+          "evidence": 6
+        },
+        "total": 39,
+        "keyFact": "一个投资108亿元的大型数据中心项目落地安徽芜湖",
+        "rationale": "数据中心落地对AIDC供电链有需求传导意义，但仅有投资额和地点两个要素，无当事方、无时间节点、无供电架构信息，且为单家媒体转述，信息增量不足以在12条限额中占位。"
+      }
+    },
+    "f22fde036f06dd8f": {
+      "result": {
+        "scores": {
+          "businessRelevance": 21,
+          "factualIncrement": 19,
+          "impact": 13,
+          "evidence": 10
+        },
+        "total": 63,
+        "keyFact": "韩国国会质询指出2035年AI数据中心用电需求或达18.4GW，而现行PPA准入上限仅40MW，供需与规则严重错配",
+        "rationale": "AIDC供电供需+PPA政策题材与读者核心关注直接相关且数字具体，但仅限韩国单一市场、停留在国会质询阶段尚未成政策，且单家转述来源、无当事方与细节要素，证据与影响均偏薄，属12条名额下的边缘可选项目。"
+      }
+    },
+    "c28b2651988ca3e2": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 16,
+          "impact": 14,
+          "evidence": 10
+        },
+        "total": 64,
+        "keyFact": "Applied Digital在芬兰获得高达1 GW潜在电力容量，为其在北欧的首次国际化布局",
+        "rationale": "AIDC供电相关且1GW容量规模可观、属公司首次出海的关键节点，但仅单家媒体来源、摘要残缺且为'潜在容量'而非落地签约，影响与证据均受限。"
+      }
+    },
+    "13e8e1390d119ab9": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 8,
+          "impact": 12,
+          "evidence": 8
+        },
+        "total": 43,
+        "keyFact": "纽约州长Hochul与众议员Ocasio-Cortez共同公开推动州级数据中心建设暂停",
+        "rationale": "数据中心暂停政策对AIDC供电有传导影响，但摘要无具体暂停范围、时间点或法案细节，仅单家媒体转述，属值得关注的政策动向但信息增量不足。"
+      }
+    },
+    "b449aacd99cb11a4": {
+      "result": {
+        "scores": {
+          "businessRelevance": 20,
+          "factualIncrement": 12,
+          "impact": 10,
+          "evidence": 8
+        },
+        "total": 50,
+        "keyFact": "Applied Digital 将在芬兰开发 1GW 数据中心园区",
+        "rationale": "AIDC 项目落地对供电产业链有传导价值，但材料仅一条媒体转述、无时间点/当事方细节/区域信息，证据残缺且增量有限，属边缘可占位消息。"
+      }
+    },
+    "f57485368f1c8e72": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 14,
+          "impact": 13,
+          "evidence": 9
+        },
+        "total": 60,
+        "keyFact": "Applied Digital为芬兰AI数据中心扩建获得高达1 GW的电力协议",
+        "rationale": "AIDC供电需求侧的项目落地且1 GW规模可观，属读者核心跟踪范畴；但仅单家媒体、无交易对手方与时间点等要素，证据偏薄，属可占位的边缘条目。"
+      }
+    },
+    "35653afe11118208": {
+      "result": {
+        "scores": {
+          "businessRelevance": 24,
+          "factualIncrement": 5,
+          "impact": 8,
+          "evidence": 6
+        },
+        "total": 43,
+        "keyFact": "",
+        "rationale": "主题命中AIDC 800VDC供电架构与SST高度相关，但摘要仅复述标题趋势观点，无新数字/当事方/时间点，单一来源且要素残缺，属趋势转述而非可占位新闻。"
+      }
+    },
+    "9414d647794428d7": {
+      "result": {
+        "scores": {
+          "businessRelevance": 15,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 0
+        },
+        "total": 15,
+        "keyFact": "",
+        "rationale": "PR Newswire展会营销通稿，主题涉及AIDC供电/SST外围但无任何具体数字、当事方或新事实，属负向清单软文，事实增量与影响记0，证据为单一通稿记0。"
+      }
+    },
+    "cb4a5a15544fccbb": {
+      "result": {
+        "scores": {
+          "businessRelevance": 22,
+          "factualIncrement": 8,
+          "impact": 13,
+          "evidence": 9
+        },
+        "total": 52,
+        "keyFact": "美国行政命令瞄准中国电网硬件，Rystad认为服务AI数据中心的电池储能暴露度更高",
+        "rationale": "政策方向与储能/AIDC供电读者高度相关且可能影响北美供应链格局，但材料仅转述Rystad观点标题，无行政命令具体条款、数字或当事方，属观点预测型外围报道，证据仅单家媒体转述。"
+      }
+    },
+    "cd82a2ae75147ff1": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 3,
+          "impact": 5,
+          "evidence": 5
+        },
+        "total": 25,
+        "keyFact": "",
+        "rationale": "谷歌与DTE的数据中心电力交易主题与AIDC供电相关，但摘要无任何具体事实、数字或细节，仅标题复述，信息增量不足，不值得占12条之一。"
+      }
+    },
+    "462eb7b82f16070e": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 14,
+        "keyFact": "",
+        "rationale": "Substack 个人观点文，标题即预测（AI 将耗尽电力），摘要仅复述标题，无任何数字、当事方、时间点等新事实，触发负向清单『无新事实支撑的观点预测』，事实增量与影响记 0；主题虽触及 AIDC 电力需求这一 SST 行业核心驱动，但纯背景评论无信息增量，单一自媒体来源且要素残缺，不值得占用 12 条席位。"
+      }
+    },
+    "8ad7d050f4082184": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 3,
+          "impact": 5,
+          "evidence": 5
+        },
+        "total": 25,
+        "keyFact": "",
+        "rationale": "谷歌数据中心暂停对AIDC供电需求有外围传导意义，但摘要无任何具体事实（无时间、地点、原因细节、规模），仅单家媒体转述标题，信息增量几乎为零，不值得占位。"
+      }
+    },
+    "f3a221699eb2ddf0": {
+      "result": {
+        "scores": {
+          "businessRelevance": 26,
+          "factualIncrement": 18,
+          "impact": 20,
+          "evidence": 10
+        },
+        "total": 74,
+        "keyFact": "Gotion获得沙特6 GWh电池储能订单",
+        "rationale": "头部电池厂商在中东市场的大额储能订单，直接命中储能系统供需与格局，6 GWh为具体新数字；但摘要仅复述标题、无细节（项目方/交付节点），且仅单一媒体来源无交叉印证，证据与增量受限。"
+      }
+    },
+    "ad75bbd7e4e82d9c": {
+      "error": "value-score 应答无法解析: {\"scores\": {\"businessRelevance\": 15, \" factualIncrement\": 0, \"impact\": 5, \"evidence\": 6}, \"keyFact\": \"\", \"rationale\": \"储"
+    },
+    "c658bbdf5fa73ee2": {
+      "error": "value-score 应答无法解析: {\"scores\": {\"businessRelevance\": 14, \"factualIncrement\": 9, \"impact\": 6, \"evidence\": 5}, \"keyFact\": \"KAPSARC 称沙特核电度电成本比\""
+    },
+    "2f363cd16900a81d": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 12,
+          "impact": 10,
+          "evidence": 8
+        },
+        "total": 42,
+        "keyFact": "阿联酋计划到2030年在14个项目中建设17.98吉瓦可再生能源管道。",
+        "rationale": "光风管道总量对储能/AIDC供电读者仅是外围传导信息，虽有具体数字但无项目明细、当事方或设备厂商动态，且仅单家媒体转述、要素残缺，在12条限额下信息增量不足以占位。"
+      }
+    },
+    "ae12734369ec2897": {
+      "result": {
+        "scores": {
+          "businessRelevance": 8,
+          "factualIncrement": 3,
+          "impact": 3,
+          "evidence": 5
+        },
+        "total": 19,
+        "keyFact": "",
+        "rationale": "美国能源部 SBIR/STTR 太阳能资助主题的通稿式转述，无具体金额、时间点或当事方，对储能/PCS/AIDC 供电读者仅属光伏政策背景，12 条额度下无信息增量。"
+      }
+    },
+    "b1bdc7d165ddb95c": {
+      "result": {
+        "scores": {
+          "businessRelevance": 12,
+          "factualIncrement": 4,
+          "impact": 4,
+          "evidence": 5
+        },
+        "total": 25,
+        "keyFact": "",
+        "rationale": "主题（新加坡为扩展AI升级电力系统）与AIDC供电相关，但摘要仅复述标题，无任何具体数字、当事方、项目或政策细节，属无事实增量的泛化预告，单一来源且要素残缺，不值得占用12条名额。"
+      }
+    },
+    "e8a0d26e743c66bb": {
+      "result": {
+        "scores": {
+          "businessRelevance": 18,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 3
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "主题（800VDC机架预充电模块）落在AIDC供电架构相关赛道，但内容只是Future Market Insights付费报告的SEO式预告摘要，无任何数字、当事方或时间点，属无新事实支撑的市场预测营销内容，不占12条名额。"
+      }
+    },
+    "f92576e39fbf6dcf": {
+      "result": {
+        "scores": {
+          "businessRelevance": 6,
+          "factualIncrement": 0,
+          "impact": 0,
+          "evidence": 4
+        },
+        "total": 10,
+        "keyFact": "",
+        "rationale": "负极材料2035年市场展望属无新事实支撑的观点预测（触发负向清单），摘要仅为标题复述、无任何数字/当事方/时间点，且负极材料属电池上游背景话题，与读者核心关注的PCS/SST/AIDC供电仅外围关联，单一来源且要素残缺，不值得占用12条中的位置。"
+      }
+    },
+    "33376fa1c143412d": {
+      "result": {
+        "scores": {
+          "businessRelevance": 10,
+          "factualIncrement": 4,
+          "impact": 3,
+          "evidence": 4
+        },
+        "total": 21,
+        "keyFact": "",
+        "rationale": "IndexBox统计类通稿，摘要仅复述标题，无任何数字、时间点或当事方，对AIDC供电仅属宏观需求背景传导；单源转载且要素残缺，'机遇'式观点无事实支撑，在12条额度下无信息增量，不值得占位。"
+      }
     }
   }
 }

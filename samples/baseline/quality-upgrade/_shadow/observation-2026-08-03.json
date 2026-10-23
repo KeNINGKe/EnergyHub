@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-08-03",
+  "generatedAt": "2026-08-03T06:53:25.107Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_2d308675cb25",
+      "title": "AMD即将推出的Zen 6处理器可以修复微口吃并改善游戏中1%的低点—下一代CPU具有针对热和功耗预算的每核优化功能",
+      "topic": "chips-compute",
+      "fact": "据Tom's Hardware报道，有消息称AMD即将推出的Zen 6处理器将针对热与功耗预算引入每核优化功能，有望修复游戏中的微口吃并改善1%低帧表现。",
+      "implication": "",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://www.tomshardware.com/pc-components/cpus/amds-upcoming-zen-6-processors-could-fix-microstutters-and-improve-1-percent-lows-in-games-next-gen-cpus-tipped-to-feature-per-core-optimizations-for-thermal-and-power-budgets"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_bdac6bd2c718",
+      "title": "Ember的电动客车展示城际公交电气化已经到来",
+      "topic": "other-energy",
+      "fact": "据CleanTechnica 2026-08-02报道，苏格兰Ember的电动城际客车在爱丁堡投入运营，与当地已电气化的区域铁路、有轨电车及不断增长的电动公交共同展示城际客运电气化已落地。",
+      "implication": "城际长途电动客车对单次充电续航和高压快充功率要求高于城市公交，可能带动大功率直流充电桩与大电量电池包需求，但材料未披露具体车型、电池容量或充电设施参数，推断有限。",
+      "watchNext": "需继续核对Ember车队规模、投放线路数量、充电基础设施配置及后续扩张计划的公开披露。",
+      "evidenceUrls": [
+        "https://cleantechnica.com/2026/08/02/ember-electric-intercity-coaches-scotland/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_a99839b0a9b4",
+      "title": "SpaceXAI表示，它将移除所有69台未经许可的涡轮发电机，但预计该过程将需要一年的时间—拖车式发电机将被1.2GW发电厂取代",
+      "topic": "solar-wind",
+      "fact": "SpaceXAI宣布将移除其全部69台未经许可的拖车式涡轮发电机，预计该过程需一年时间，并将以一座1.2GW发电厂替代；这些涡轮机此前因许可与污染问题引发诉讼。",
+      "implication": "AIDC级算力负载的临时柴油/燃气发电方案正被合规性压力推向正式大容量电源替代，1.2GW级电厂的并网与供电架构落地节奏将直接影响其数据中心扩容交付。",
+      "watchNext": "需持续核对1.2GW发电厂的审批、建设与投运时间表，以及69台涡轮机的实际退役进度是否与一年周期一致。",
+      "evidenceUrls": [
+        "https://www.tomshardware.com/tech-industry/big-tech/spacexai-says-it-will-remove-all-69-of-its-unpermitted-turbine-power-generators-but-expects-process-to-take-a-year-trailer-mounted-generators-to-be-replaced-by-1-2gw-power-plant"
+      ],
+      "mode": "generated"
+    }
+  ]
+}

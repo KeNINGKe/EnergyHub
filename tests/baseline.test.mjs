@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { computeMissedMerges, independentSourceProxy, mergeDecisionLog } from '../scripts/build-quality-baseline.mjs';
+import { BASELINE_DATES, computeMissedMerges, independentSourceProxy, mergeDecisionLog } from '../scripts/build-quality-baseline.mjs';
 import { writeRawSnapshot } from '../scripts/build-daily-v2.mjs';
 import { expiredDates } from '../scripts/prune-raw-snapshots.mjs';
 import { loadEnums, validateDailyV2, validateFeatured } from '../scripts/lib/schema.mjs';
@@ -91,6 +91,22 @@ test('expiredDates: 保留窗口外的日期目录名、非法名忽略', () => 
   assert.deepEqual(expiredDates(names, 29, '2026-09-30'), ['2026-09-01'], '差 29 天 ≥ keep=29 即过期');
   assert.deepEqual(expiredDates(names, 30, '2026-09-30'), [], '差 29 天 < keep=30 未过期');
   assert.deepEqual(expiredDates(names, 1, '2026-09-30'), ['2026-09-01', '2026-09-29'], 'keep=1：昨天也过期');
+});
+
+// ---- 基线日期集冻结（防止 samples/raw 逐日增长把基线变成移动靶）----
+
+test('基线日期集冻结：与 report.json 一致且输入/夹具齐全', async () => {
+  const report = JSON.parse(
+    await fs.readFile(path.join(ROOT, 'samples', 'baseline', 'quality-upgrade', 'report.json'), 'utf8')
+  );
+  assert.deepEqual(BASELINE_DATES, report.dates, 'BASELINE_DATES 必须与 report.json 的 dates 同步（改日期集需重跑基线）');
+  for (const date of BASELINE_DATES) {
+    const hasDaily = await fs.access(path.join(ROOT, 'samples', 'daily', `${date}.json`)).then(() => true, () => false);
+    const hasRaw = await fs.access(path.join(ROOT, 'samples', 'raw', date, 'items.json.gz')).then(() => true, () => false);
+    assert.ok(hasDaily || hasRaw, `${date} 缺少输入快照`);
+    await fs.access(path.join(ROOT, 'samples', 'jev-fixtures', `${date}.json`));
+    await fs.access(path.join(ROOT, 'samples', 'selection-value-fixtures', `${date}.json`));
+  }
 });
 
 // ---- 端到端：单日回放确定性（阶段 A 验收核心）----

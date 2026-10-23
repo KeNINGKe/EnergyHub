@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-07-30",
+  "generatedAt": "2026-07-30T06:21:07.937Z",
+  "mode": "shadow",
+  "counts": {
+    "targeted": 3,
+    "generated": 3,
+    "fallback": 0,
+    "failed": 0
+  },
+  "observations": [
+    {
+      "eventId": "evt_862a73dd86dc",
+      "title": "RWE在德国建造470MWh BESS ； Kallista在法国注册Envision建造386MWh",
+      "topic": "energy-storage",
+      "fact": "RWE已在德国开工建设236MW/470MWh电池储能系统，IPP Kallista同日在法国开工193MW/386MWh系统并选用远景能源（Envision Energy）作为设备方。",
+      "implication": "两个欧洲大储项目同日开工，显示德国、法国电网侧储能需求持续放量；Kallista选择Envision供货，意味着中国系集成商在欧洲大储设备供应链中的份额进一步扩大，对PCS及系统集成商的欧洲订单节奏是正面信号。",
+      "watchNext": "需继续核对两个项目的并网时间表、Envision对Kallista项目的设备供货与交付节点，以及RWE项目所用系统集成商与PCS供应商的披露信息。",
+      "evidenceUrls": [
+        "https://www.energy-storage.news/rwe-building-470mwh-bess-in-germany-kallista-enlists-envision-for-386mwh-in-france/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_d4e2521249b2",
+      "title": "特斯拉与ContourGlobal签署涵盖1太瓦时/年英镑可再生能源项目的长期电力协议",
+      "topic": "energy-storage",
+      "fact": "特斯拉与ContourGlobal签署长期电力协议，涵盖美国Sterling可再生能源项目每年1太瓦时的供电量，该项目为美国单一场站规模最大的光伏+储能企业购电协议之一，配套储能超过1.4 GWh。",
+      "implication": "超过1.4 GWh的储能配套规模意味着大型电池系统集成与PCS设备的批量采购需求，且企业级PPA结构下对储能系统的可用率与交付确定性要求较高。",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://cleantechnica.com/2026/07/29/tesla-contourglobal-sign-long-term-power-agreement-covering-1-terawatt-hour-year-for-sterling-renewable-project/"
+      ],
+      "mode": "generated"
+    },
+    {
+      "eventId": "evt_5e0c79ed0192",
+      "title": "原油价格下跌导致2025年美加能源贸易额下降",
+      "topic": "power-market-policy",
+      "fact": "据EIA数据，2025年美加能源贸易额因原油价格下跌同比下降11%至约1370亿美元，其中原油占该贸易额的69%。",
+      "implication": "",
+      "watchNext": "",
+      "evidenceUrls": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=67904"
+      ],
+      "mode": "generated"
+    }
+  ]
+}
