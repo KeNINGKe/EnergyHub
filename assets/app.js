@@ -429,16 +429,36 @@ function renderHotList() {
 }
 
 /* ===== 今日观察（阶段 D：featured.observationDetails 结构化渲染，回退旧 observations 字符串） ===== */
+/** 把观察文案（"【主题】标题"）解析回当日事件，用于挂原文链接。 */
+function observationEvent(text) {
+  const m = String(text || '').match(/^【[^】]*】\s*(.*)$/);
+  const title = (m ? m[1] : String(text || '')).trim();
+  if (!title) return null;
+  const hit = state.byTitle.get(title);
+  if (hit) return hit;
+  return state.allEvents.find(ev => String(ev.title || '').trim() === title) || null;
+}
+
+/** 观察正文：能解析到事件就渲染成原文链接，解析不到保持纯文本（人工覆盖等）。 */
+function observationText(text, ev) {
+  const url = ev && (ev.url || ev.link);
+  const html = escapeHtml(text);
+  return url
+    ? `<a class="obs-fact-link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${html}</a>`
+    : html;
+}
+
 function renderObservationCard() {
   const details = state.featured && state.featured.observationDetails;
   if (Array.isArray(details) && details.length) {
     return details.map((o, i) => {
+      const ev = o.eventId ? state.eventMap.get(o.eventId) : null;
       const imp = o.implication ? `<div class="obs-imp">影响：${escapeHtml(o.implication)}</div>` : '';
       const next = o.watchNext ? `<div class="obs-next">待跟踪：${escapeHtml(o.watchNext)}</div>` : '';
       const links = (o.evidenceUrls || []).filter(u => u).map(u =>
         `<a class="obs-ev" href="${escapeHtml(u)}" target="_blank" rel="noopener">原文</a>`).join(' ');
       return `<div class="obs-item">
-        <div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${escapeHtml(o.fact || o.title || '')}</span>${links ? ' ' + links : ''}</div>
+        <div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${observationText(o.fact || o.title || '', ev)}</span>${links ? ' ' + links : ''}</div>
         ${imp}${next}
       </div>`;
     }).join('');
@@ -446,7 +466,7 @@ function renderObservationCard() {
   const obs = state.featured && state.featured.observations;
   if (Array.isArray(obs) && obs.length) {
     return obs.map((s, i) =>
-      `<div class="obs-item"><div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${escapeHtml(s)}</span></div></div>`).join('');
+      `<div class="obs-item"><div class="obs-fact"><span class="obs-idx">${i + 1}</span><span>${observationText(s, observationEvent(s))}</span></div></div>`).join('');
   }
   return '';
 }
