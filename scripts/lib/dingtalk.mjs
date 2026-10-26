@@ -77,8 +77,9 @@ export function fitLines(headerLines, entryLines, tailLines, maxBytes = MAX_TEXT
 
 /**
  * 句边界截取：超长文本按 。！？；.!?; 回退到最后一个完整句边界，保留结尾标点；
- * 找不到任何句边界（首个边界就超限）时硬截。供阶段 D 观察详情复用；热点榜
- * 条目只有标题链接，不走此函数（减条目优先于截断）。
+ * 找不到任何句边界（首个边界就超限）时硬截。2026-10-26 群推送下线今日观察后
+ * 暂无调用方，留作通用工具；热点榜条目只有标题链接，不走此函数（减条目优先
+ * 于截断）。
  * @param {string} text 原文
  * @param {number} max 最大字符数
  * @returns {string}
@@ -97,7 +98,9 @@ export function truncateAtSentence(text, max) {
  * 接续编号（每日 5~8 条，整体仍是一张榜，不单列科研小节）。
  * 沿革：2026-09-17 科研内容曾单列「科研速递」一节（当时热点榜只收储能/AIDC
  * 主题，sst/pcs 科研动态进不了榜）；2026-09-21 用户反馈改为融合进热点榜、
- * 去掉「科研速递」标题——前 5 条不变，科研条目排在其后。
+ * 去掉「科研速递」标题——前 5 条不变，科研条目排在其后；2026-10-26 群推送
+ * 去掉「今日观察」段（observationDetails/observations 均不进群消息，网站端
+ * 照常渲染）。
  * B-04：整体消息加字节预算——超限时从尾部减条目（research 尾 → hot 倒序，
  * 保底榜单第 1 条），不在句中截断数字与单位。
  * @param {object} featured feeds/featured.json（date/hotEventIds/featuredEventIds）
@@ -115,13 +118,8 @@ export function buildHotMessage(featured, daily, opts = {}) {
     .sort((a, b) => (b.importance || 0) - (a.importance || 0))
     .slice(0, 3);
 
-  // 今日观察（阶段 D）：优先 observationDetails（fact/implication/watchNext），
-  // 缺失回退旧 observations 字符串数组。观察是头条，置于热点榜前，且作为 header
-  // 常驻（不随预算丢弃）——热点/科研条目仍是 entryLines，超预算时从尾部减。
-  const obsLines = observationLines(featured);
-  const headerLines = [`## EnergyHub 热点（${date}）`, ''];
-  if (obsLines.length) headerLines.push('**今日观察**', ...obsLines, '', '**热点榜**');
-  else headerLines.push('**热点榜**');
+  // 2026-10-26 群推送不再渲染今日观察（观察仍产出并在网站端展示）
+  const headerLines = [`## EnergyHub 热点（${date}）`, '', '**热点榜**'];
   const entryLines = [...hot, ...research].map((it, i) => {
     const src = it.source?.name ? `｜${it.source.name}` : '';
     return `${i + 1}. [${it.title}](${it.url})${src}`;
@@ -130,27 +128,4 @@ export function buildHotMessage(featured, daily, opts = {}) {
 
   const lines = fitLines(headerLines, entryLines, tailLines, maxBytes);
   return { title: `EnergyHub · ${date} 热点`, text: lines.join('\n') };
-}
-
-/**
- * 组装「今日观察」段（阶段 D）：返回钉钉 markdown 行数组，无观察时返回空数组。
- * 结构化 observationDetails 渲染为 fact + 可选「影响/待跟踪」子行；旧字符串
- * observations 原样编号渲染。
- */
-function observationLines(featured) {
-  const details = featured?.observationDetails;
-  if (Array.isArray(details) && details.length) {
-    const lines = [];
-    details.forEach((o, i) => {
-      lines.push(`${i + 1}. ${o.fact || o.title || ''}`);
-      if (o.implication) lines.push(`   影响：${o.implication}`);
-      if (o.watchNext) lines.push(`   待跟踪：${o.watchNext}`);
-    });
-    return lines;
-  }
-  const obs = featured?.observations;
-  if (Array.isArray(obs) && obs.length) {
-    return obs.map((s, i) => `${i + 1}. ${s}`);
-  }
-  return [];
 }

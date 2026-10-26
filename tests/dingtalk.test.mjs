@@ -47,7 +47,7 @@ test('resolveHotItems：跳过 daily 中不存在的陈旧 id', () => {
   assert.deepEqual(resolveHotItems(featured, daily).map(x => x.id), ['a']);
 });
 
-test('buildHotMessage：含标题链接、来源、站点链接；旧 observations 字符串回退为今日观察段', () => {
+test('buildHotMessage：含标题链接、来源、站点链接；observations 字符串不进群推送', () => {
   const featured = {
     date: '2026-09-01',
     observations: ['【储能】观察A'],
@@ -59,14 +59,13 @@ test('buildHotMessage：含标题链接、来源、站点链接；旧 observatio
   assert.ok(text.includes('2026-09-01'));
   assert.ok(text.includes('[热点标题](https://x.com/a)'));
   assert.ok(text.includes('｜pv magazine'));
-  // 阶段 D：观察置热点榜前，旧 observations 字符串原样编号渲染
-  assert.ok(text.includes('**今日观察**'));
-  assert.ok(text.includes('1. 【储能】观察A'));
-  assert.ok(text.indexOf('今日观察') < text.indexOf('热点榜'));
+  // 2026-10-26：群推送去掉今日观察段，observations 字符串不渲染
+  assert.ok(!text.includes('今日观察'));
+  assert.ok(!text.includes('观察A'));
   assert.ok(text.includes('[查看完整日报 →](https://site.example)'));
 });
 
-test('buildHotMessage：今日观察优先渲染 observationDetails（fact/影响/待跟踪）', () => {
+test('buildHotMessage：observationDetails 不进群推送（今日观察段已下线）', () => {
   const featured = {
     date: '2026-09-02',
     observationDetails: [
@@ -78,20 +77,12 @@ test('buildHotMessage：今日观察优先渲染 observationDetails（fact/影�
   };
   const daily = { items: [{ id: 'a', title: '热点标题', url: 'https://x.com/a' }] };
   const { text } = buildHotMessage(featured, daily, {});
-  assert.ok(text.includes('1. 上能电气 1.1GW 构网型储能 PCS 发货'));
-  assert.ok(text.includes('影响：构网型 PCS 出海放量'));
-  assert.ok(text.includes('待跟踪：交付节点'));
-  assert.ok(text.includes('2. 某项目开工'));
-  // observationDetails 优先，旧 observations 字符串不渲染
-  assert.ok(!text.includes('旧字符串'));
-});
-
-test('buildHotMessage：无观察字段时不输出今日观察段', () => {
-  const featured = { date: '2026-09-03', hotEventIds: ['a'] };
-  const daily = { items: [{ id: 'a', title: 'T', url: 'https://x.com/a' }] };
-  const { text } = buildHotMessage(featured, daily, {});
   assert.ok(!text.includes('今日观察'));
-  assert.ok(text.includes('[T](https://x.com/a)'));
+  assert.ok(!text.includes('上能电气'));
+  assert.ok(!text.includes('影响：'));
+  assert.ok(!text.includes('待跟踪：'));
+  assert.ok(!text.includes('旧字符串'));
+  assert.ok(text.includes('[热点标题](https://x.com/a)'), '热点榜本身不受影响');
 });
 
 test('buildHotMessage：无站点链接时不输出站点链接', () => {

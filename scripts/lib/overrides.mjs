@@ -148,8 +148,8 @@ export function applyOverrides(daily, featured, config, enums, globalHiddenIds =
 
   // 6. 今日观察覆盖（阶段 D）：人工字符串生效时置空自动结构化结果——
   //    方案 §7「人工字符串观察生效时，不展示与其不一致的自动结构化结果」。
-  //    钉钉 observationLines / 网站 renderObservationCard 均优先渲染
-  //    observationDetails，不清空会把人工观察盖掉。
+  //    网站 renderObservationCard 优先渲染 observationDetails，不清空会把
+  //    人工观察盖掉（钉钉推送已不渲染观察，2026-10-26）。
   if (Array.isArray(config.observations) && config.observations.length) {
     featured.observations = config.observations.slice(0, 5);
     featured.observationDetails = [];
