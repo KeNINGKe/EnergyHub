@@ -29,10 +29,11 @@ import { fileURLToPath } from 'node:url';
 import {
   PUSH_STEP_NAME, FETCH_WORKFLOW_FILE,
   morningWindowStartUtc, pushStepSucceeded, decideGuardAction, decidePushGate,
+  decidePrimaryTrigger,
 } from './lib/guard-logic.mjs';
 
 // 供 tests/guard-daily-report.test.mjs 沿用本文件导入路径
-export { morningWindowStartUtc, pushStepSucceeded, decideGuardAction, decidePushGate };
+export { morningWindowStartUtc, pushStepSucceeded, decideGuardAction, decidePushGate, decidePrimaryTrigger };
 
 async function api(url, token, init = {}) {
   const res = await fetch(url, {

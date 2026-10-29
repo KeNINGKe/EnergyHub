@@ -12,6 +12,8 @@
 const BEIJING_OFFSET_MIN = 8 * 60; // UTC+8，无夏令时
 export const PUSH_STEP_NAME = 'Push daily hot list to DingTalk';
 export const FETCH_WORKFLOW_FILE = 'fetch-feeds.yml';
+/** 主调度 cron（UTC 20:37 = 北京 04:37），由 Cloudflare Workers Cron 触发。 */
+export const PRIMARY_TRIGGER_CRON = '37 20 * * *';
 
 /**
  * 当天早晨窗口的起点：北京时间今天 04:00（= 通常情况下的前一天 UTC 20:00）。
@@ -32,6 +34,24 @@ export function pushStepSucceeded(job) {
     job && Array.isArray(job.steps)
     && job.steps.some(s => s.name === PUSH_STEP_NAME && s.conclusion === 'success'),
   );
+}
+
+/**
+ * 主触发判定（北京 04:37，Cloudflare Workers cron，2026-10-29 起接替 GitHub
+ * schedule）。GitHub 免费 runner 的 schedule 高峰期延迟持续恶化（10-29 实测
+ * 迟 3h42m，「构建完睡到 08:00 准点推」连环失效），而 Cloudflare cron 实测
+ * 秒级准点——主调度迁过去：本触发带 wait_for_push_time dispatch fetch-feeds，
+ * 构建（约 6 分钟）完成后由 workflow 自己睡到 08:00 准点推送。
+ *
+ * 幂等：当天窗口内已有任何 run（含失败/在跑）→ skip。cron 重试、手动抢先、
+ * 守卫补发都只算一次；skip 是安全的——漏掉的场景由 08:07/08:41 两轮 rescue
+ * 和 GitHub 内置守卫兜底，本触发不负责重试。
+ *
+ * @param {Array<object>} runs 早晨窗口内（北京 04:00 起）的 fetch-feeds runs
+ * @returns {'dispatch'|'skip'}
+ */
+export function decidePrimaryTrigger(runs) {
+  return Array.isArray(runs) && runs.length > 0 ? 'skip' : 'dispatch';
 }
 
 /**

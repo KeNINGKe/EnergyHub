@@ -5,6 +5,7 @@ import {
   pushStepSucceeded,
   decideGuardAction,
   decidePushGate,
+  decidePrimaryTrigger,
 } from '../scripts/guard-daily-report.mjs';
 
 const utc = s => new Date(s);
@@ -100,4 +101,16 @@ test('decidePushGate：其他 run 未推送（含失败/在跑）→ push', asyn
   ];
   assert.equal(await decidePushGate(runs, async () => false, 200), 'push');
   assert.equal(await decidePushGate([], async () => true, 200), 'push');
+});
+
+test('decidePrimaryTrigger：当天窗口无 run → dispatch（主构建，睡到 08:00 推）', () => {
+  assert.equal(decidePrimaryTrigger([]), 'dispatch');
+  assert.equal(decidePrimaryTrigger(undefined), 'dispatch'); // API 异常按可触发处理
+});
+
+test('decidePrimaryTrigger：已有 run → skip（幂等；失败重试交 08:07/08:41 rescue）', () => {
+  assert.equal(decidePrimaryTrigger([{ status: 'completed' }]), 'skip');
+  assert.equal(decidePrimaryTrigger([{ status: 'completed', conclusion: 'failure' }]), 'skip');
+  assert.equal(decidePrimaryTrigger([{ status: 'in_progress' }]), 'skip');
+  assert.equal(decidePrimaryTrigger([{ status: 'queued' }]), 'skip');
 });

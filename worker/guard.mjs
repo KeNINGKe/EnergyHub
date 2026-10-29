@@ -7,7 +7,12 @@
  * 等于单点。本 worker 部署在 Cloudflare 上，cron 与 GitHub 完全独立，
  * 是第三道防线。
  *
- * 两轮 cron（UTC，= 北京时间）：
+ * 三轮 cron（UTC，= 北京时间）：
+ *   20:37（04:37）—— 主调度（2026-10-29 起接替 GitHub schedule）：dispatch
+ *     fetch-feeds（带 wait_for_push_time，构建完睡到 08:00 准点推）。GitHub
+ *     免费 runner 的 schedule 高峰延迟持续恶化（10-29 实测迟 3h42m，准点推
+ *     送连环失效），Cloudflare cron 实测秒级准点。当天窗口内已有 run 则跳过
+ *     （幂等）；正常触发不发告警，失败才告警。
  *   00:07（08:07）—— 早于内置守卫 08:13，"调度被整体丢弃"当天能更早补发；
  *   00:41（08:41）—— 兜住内置守卫 08:13/08:33 两轮都没跑 / 没起作用的情况。
  *
@@ -27,9 +32,11 @@
  */
 import {
   FETCH_WORKFLOW_FILE,
+  PRIMARY_TRIGGER_CRON,
   morningWindowStartUtc,
   pushStepSucceeded,
   decideGuardAction,
+  decidePrimaryTrigger,
 } from '../scripts/lib/guard-logic.mjs';
 
 async function gh(url, token, init = {}) {
@@ -45,20 +52,57 @@ async function gh(url, token, init = {}) {
   });
 }
 
+/** 拉早晨窗口内的 fetch-feeds runs（守卫与主触发共用）。 */
+async function listMorningRuns(env, log) {
+  const since = morningWindowStartUtc().toISOString();
+  const listRes = await gh(
+    `https://api.github.com/repos/${env.GH_REPO}/actions/workflows/${FETCH_WORKFLOW_FILE}/runs?per_page=20&created=>=${since}`,
+    env.GH_PAT,
+  );
+  if (!listRes.ok) throw new Error(`查询 workflow runs 失败：HTTP ${listRes.status}`);
+  const { workflow_runs: runs } = await listRes.json();
+  log(`早晨窗口（北京 04:00 起）fetch-feeds runs：${runs.length} 个`);
+  return runs;
+}
+
+async function dispatchFetch(env, inputs = {}) {
+  const dispatchRes = await gh(
+    `https://api.github.com/repos/${env.GH_REPO}/actions/workflows/${FETCH_WORKFLOW_FILE}/dispatches`,
+    env.GH_PAT,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ref: 'main', inputs }),
+    },
+  );
+  if (dispatchRes.status !== 204) throw new Error(`dispatch 失败：HTTP ${dispatchRes.status}`);
+}
+
+/**
+ * 主调度（北京 04:37）：当天窗口内无任何 run 才 dispatch（带
+ * wait_for_push_time，构建完睡到 08:00 推送）；已有 run 说明 cron 重试或
+ * 手动/守卫已抢先，跳过。正常触发静默（每日例行动作，不进群告警）。
+ * @returns {Promise<'dispatched'|'skip'>}
+ */
+async function runPrimaryTrigger(env, log) {
+  const runs = await listMorningRuns(env, log);
+  if (decidePrimaryTrigger(runs) === 'skip') {
+    log('当天已有 fetch-feeds run，主触发跳过（幂等）。');
+    return 'skip';
+  }
+  log('dispatch fetch-feeds 主构建（wait_for_push_time，构建完睡到 08:00 准点推）……');
+  await dispatchFetch(env, { wait_for_push_time: true });
+  log('已触发（约 6 分钟构建，08:00 准点推送）。');
+  return 'dispatched';
+}
+
 /**
  * 检查当天日报并按需补发。
  * @returns {Promise<'ok'|'wait'|'dispatched'>}
  */
 async function checkAndRescue(env, log) {
   const repo = env.GH_REPO;
-  const since = morningWindowStartUtc().toISOString();
-  const listRes = await gh(
-    `https://api.github.com/repos/${repo}/actions/workflows/${FETCH_WORKFLOW_FILE}/runs?per_page=20&created=>=${since}`,
-    env.GH_PAT,
-  );
-  if (!listRes.ok) throw new Error(`查询 workflow runs 失败：HTTP ${listRes.status}`);
-  const { workflow_runs: runs } = await listRes.json();
-  log(`早晨窗口（北京 04:00 起）fetch-feeds runs：${runs.length} 个`);
+  const runs = await listMorningRuns(env, log);
 
   const hasPushed = async (run) => {
     const jobsRes = await gh(`https://api.github.com/repos/${repo}/actions/runs/${run.id}/jobs`, env.GH_PAT);
@@ -78,12 +122,7 @@ async function checkAndRescue(env, log) {
   }
 
   log('今日日报尚未推送且无在跑构建，dispatch fetch-feeds 补发……');
-  const dispatchRes = await gh(
-    `https://api.github.com/repos/${repo}/actions/workflows/${FETCH_WORKFLOW_FILE}/dispatches`,
-    env.GH_PAT,
-    { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ref: 'main' }) },
-  );
-  if (dispatchRes.status !== 204) throw new Error(`dispatch 失败：HTTP ${dispatchRes.status}`);
+  await dispatchFetch(env);
   log('已触发补发（约 5 分钟后推送）。');
   return 'dispatched';
 }
@@ -124,6 +163,10 @@ export default {
     const bjTime = new Date(Date.now() + 8 * 60 * 60 * 1000)
       .toISOString().replace('T', ' ').slice(0, 19);
     try {
+      if (event.cron === PRIMARY_TRIGGER_CRON) {
+        await runPrimaryTrigger(env, m => console.log(m));
+        return; // 主触发正常时静默；失败走下方 catch 告警
+      }
       const result = await checkAndRescue(env, m => console.log(m));
       if (result === 'dispatched') {
         await alert(env, `⚠️ EnergyHub 外部守卫（Workers Cron）于北京 ${bjTime} 触发补发：未检出今日钉钉推送，已 dispatch fetch-feeds。`);

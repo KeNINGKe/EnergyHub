@@ -1,17 +1,24 @@
 name: Fetch RSS Feeds
 
 on:
-  schedule:
-    # 北京时间每天 04:37 = UTC 20:37（前一天）。故意避开整点：GitHub 免费
-    # runner 在整点/高峰时段拥堵严重，09-28 的 UTC 21:00 定时 run 直接被
-    # 丢弃导致当日日报未发。构建完成后仍会睡到北京 08:00 准点推送。
-    # 2026-09-29 起每天只构建一次（原中午 11:43 的第二次已去掉）：内容更新
-    # 频率对读者无感，却省一半 Jev API 调用/翻译配额/Actions 时长。
-    - cron: '37 20 * * *'
+  # 主调度是 Cloudflare Workers Cron（worker/guard.mjs，北京 04:37 准点）dispatch
+  # 本 workflow 并带 wait_for_push_time=true：构建（约 6 分钟）完成后睡到北京
+  # 08:00 准点推钉钉。2026-10-29 起接替 GitHub schedule——免费 runner 的
+  # schedule 高峰延迟持续恶化（09-28 的 21:00 run 被直接丢弃致缺报；10-25 起
+  # 实际启动迟 2h→3h42m 一路恶化，「睡到 08:00 准点推」连环失效，10-29 靠
+  # 外部守卫 08:07 补发才没缺报）。
+  # 兜底链（当天没推送时按序补发，推送防重闸门保证每天最多推一次）：
+  #   Cloudflare 守卫 08:07/08:41 检查补发（不等待，立即推）；
+  #   GitHub 内置守卫 report-guard.yml 08:13/08:33（实际常被拖到午后，末位兜底）。
+  # 手动 dispatch 默认不等待（便于测试）；force_push 可跳过防重闸门。
   workflow_dispatch:
     inputs:
       force_push:
         description: '跳过推送防重闸门强制推送（测试/补发用）'
+        type: boolean
+        default: false
+      wait_for_push_time:
+        description: '构建完成后睡到北京 08:00 再推钉钉（Cloudflare 主调度用）'
         type: boolean
         default: false
 
@@ -171,17 +178,16 @@ jobs:
             -d '{"ref":"main"}' -w "pages trigger: %{http_code}\n"
 
       - name: Wait until 08:00 Beijing time
-        # 早晨构建受 GitHub 免费 runner 排队影响，实际在北京 06:00~08:00 之间
-        # 完成。推送定在 08:00 整：构建早于 08:00 完成就在此睡到准点，晚于
-        # 08:00 完成则脚本直接放行。仅早晨窗口等待；手动 dispatch 不等待，
-        # 便于随时测试。等待失败也放行（后面照常推送）。
-        if: github.event.schedule == '37 20 * * *'
+        # 主调度（Cloudflare 04:37 dispatch，带 wait_for_push_time）构建完成早于
+        # 08:00 时在此睡到准点；已过 08:00 则脚本直接放行。仅主调度等待；
+        # 守卫补发/手动 dispatch 不等待，便于随时测试。等待失败也放行。
+        if: github.event.schedule == '37 20 * * *' || inputs.wait_for_push_time == true
         continue-on-error: true
         run: node scripts/lib/wait-until.mjs 08:00
 
       - name: Push daily hot list to DingTalk
-        # 每天只推一次：早晨构建窗口（UTC 20:37）之后、北京时间 08:00 准点
-        # 推送当天最新数据；手动 workflow_dispatch 也推送（不等待），便于测试。
+        # 主调度（Cloudflare dispatch + wait_for_push_time）睡到 08:00 准点推；
+        # 守卫补发/手动 dispatch 也推送（不等待），便于测试。
         # 2026-10-10 双推事故（守卫补发 08:10 推过、迟到主调度 08:18 又推）后
         # 加防重闸门：推送前查早晨窗口内是否已有其他 run 推送成功，有则跳过。
         # 闸门查询失败按可推送处理（宁可重复，不可缺报）；dispatch 传
